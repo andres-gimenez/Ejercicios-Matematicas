@@ -9,6 +9,7 @@
 \input{./include/configuration} 
 
 % \renewcommand{\thepartno}{\arabic{partno}}
+\usepackage{yhmath}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Exam configuration
@@ -68,9 +69,79 @@ Propiedades de los logaritmos
 \begin{questions}
     \question
     Calcula los siguientes logaritmos
-    \begin{parts}
-        \part $\log_2 32$
-    \end{parts}
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log_2 8$
+            \part $\log_2 32$
+            \part $\log_2 \frac{1}{16}$
+            \part $\log_3 81$
+            \part $\log_3 729$
+            \part $\log_3 \frac{1}{81}$
+            \part $\log_3 \sqrt[3]{3}$
+            \part $\log_3 \left(\frac{\sqrt[4]{3}}{9}\right)$
+            \part $\log_{81} 3$
+            \part $\log_{81} \left(\frac{\sqrt{3}}{3}\right)$
+
+            \part $\log 100000000$
+            \part $\log \frac{1}{10000}$
+            \part $\log \sqrt{8}$
+            \part $\log_{\frac{1}{2}} 8$
+            \part $\log_3 \sqrt[3]{243}$
+        \end{parts}
+    \end{multicols}
+
+    \question
+    Halla el valor de $x$ en cada caso:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log_x 16 = -4$
+            \part $\log_x \frac{1}{16} = -8$
+            \part $\log_{\frac{1}{7}} x = -3$
+            \part $\log_{11} 1331 = x$
+            \part $\log_x 125 = 3$
+            \part $\log_x 24 = 4$
+        \end{parts}
+    \end{multicols}
+
+    \question
+    Conociendo el valor de $\log 2 \approx 0,3010$, calcula los siguientes logaritmos:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log 0,0002$
+            \part $\log \sqrt[5]{16}$
+            \part $\log \frac{\sqrt[7]{2^5}}{2}$
+            \part $\log 0,0125$
+            \part $\log \frac{0,64^3 \cdot \sqrt[3]{0,32}}{80 \cdot \sqrt{6,25}}$
+        \end{parts}
+    \end{multicols}
+
+    \question
+    Conociendo el valor de $\log 2 \approx 0,3010$, y el de $\log 3 \approx 0,4771$, calcula:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log 12$
+            \part $\log \sqrt[5]{4,8}$
+            \part $\log \sqrt[3]{0,6}$
+            \part $\log 3,\wideparen{3}$
+            \part $\log 40,5$
+            \part $\log \frac{\left(0,027\right)^3 \cdot \sqrt[4]{540}}{96 \cdot \sqrt[5]{51,84}}$
+        \end{parts}
+    \end{multicols}
+
+    \question 
+    Si $\log 8 \approx 0,9031$, halla:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log 800$
+            \part $\log 2$
+            \part $\log 0,64$
+            \part $\log 40$
+            \part $\log 5$
+            \part $\log \sqrt[5]{8}$
+        \end{parts}
+    \end{multicols}
+
+
 
     %% 4º ESO Editorial SM.
     \question La relación entre el número de decibelios, n, y la intensidad del sonido, I, en voltios por centímetro cuadrado $(V/cm^2)$ viene dada por:
