@@ -1,28 +1,187 @@
-\documentclass{article}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Logaritmos }
+\newcommand{\documentContent} { Propiedades y ejercicios } 
+\newcommand{\waterMark} {  } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+% \renewcommand{\thepartno}{\arabic{partno}}
+
+\usepackage{yhmath}
 
 \usepackage{amsthm}
-
-
-\theoremstyle{theorem}
+\theoremstyle{definition}
 \newtheorem*{theorem}{Theorem}
-\newtheorem*{definition}{Definición}
-% \theoremstyle{remark}
-% \newtheorem*{remark}{Remark}
+\newtheorem{definition}{Definición}
+\newtheorem{property}{Propiedad}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+% \printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-\section{Logaritmos}
+% \StudentData{}
+% \GradeTableHeader{}
 
-\begin{definition}[Logaritmo]
-    Logaritmo en base $a$ de un número $x$ es el exponente al que hay que elevar la base $a$ para obtener el número $x$, o sea:
-    \\
+\justifying{}
+
+\begin{center}
+    \fbox{\parbox{6.5in}{
+        \vspace{3mm}
+            {\Large
+                \centerline{\textbf{Definión de logaritmo}}
+            }
+        \vspace{5mm}
+
+    Si \textbf{a} es un número positivo y distinto de 1, el \textbf{logaritmo en base a de un número positivo N}
+    es el exponente al que hay que elvar la base a para obtener N. 
+    
     \center
     $\log_a N =x \Leftrightarrow a^x=N$
-\end{definition}
 
-% \begin{equation}
-%     \log_a N =x \Leftrightarrow a^x=N
-% \end{equation}
+    \vspace{5mm}
+    }}
+\end{center}
+
+{\Large
+    % \centerline{
+        \textbf{Propiedades de los logaritmos:}
+    % }
+}
+
+\vspace{5mm}
+
+\begin{enumerate}
+
+\item El logaritmo de la base es simpre igual a 1:
+
+\begin{equation*}
+    \log_a a = 1
+\end{equation*}
+
+\item El logaritmo de cualquier base de 1 es igual a 0:
+
+\begin{equation*}
+    \log_a 1 = 0
+\end{equation*}
+
+\item El logaritmo del producto es igual a la suma de los logaritmos:
+
+\begin{equation*}
+    \log_a (N \cdot M) =\log_a (N)+\log_a (M)
+\end{equation*}
+
+\item El logaritmo del cociente es igual a la diferencia de los logaritmos:
+
+\begin{equation*}
+    \log_a (\dfrac {N}{M}) = \log_a (N)-\log_a (M)
+\end{equation*}
+
+\item El logaritmo de una potencia es igual al producto del exponente por el logaritmo de la base:
+
+\begin{equation*}
+    \log_a (N^r) =r\log_a (N)
+\end{equation*}
+
+\item Si no se especifica la base de un logaritmo, se sobreentiende que es base 10.
+
+\begin{equation*}
+    \log_{10} (N) =\log (N)
+\end{equation*}
+
+\end{enumerate}
+
+\newpage
+\textbf{Ejercicios}
+
+\begin{questions}
+    \question
+    Calcula los siguientes logaritmos
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log_2 8$
+            \part $\log_2 32$
+            \part $\log_2 \frac{1}{16}$
+            \part $\log_3 81$
+            \part $\log_3 729$
+            \part $\log_3 \frac{1}{81}$
+            \part $\log_4 (8) + \log_4(8)$ 
+            \part $\log_4 4^4$
+            \part $\log_5 (100) + \log_5(4)$ 
+            \part $\log_6 36^2$
+            \part $\log_{17} {17} $
+            \part $\log_8 1$
+            \part $\log_5 10$
+            \part $\log 100000000$
+            \part $\log \frac{1}{10000}$
+        \end{parts}
+    \end{multicols}
+
+    \question
+    Conociendo el valor de $\log 2 \approx 0,3010$, calcula los siguientes logaritmos:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log 0,0002$
+            \part $\log 16$
+            \part $\log 32^4$
+            \part $\log 4^5$
+            \part $\log 0,0125$
+            \part $\log \frac{0,64^3 \cdot 0,32}{80 \cdot 6,25}$
+        \end{parts}
+    \end{multicols}
+
+    \question
+    Conociendo el valor de $\log 2 \approx 0,3010$, y el de $\log 3 \approx 0,4771$, calcula:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log 12$
+            \part $\log (4,8)^2$
+            \part $\log (0,6)^3$
+            \part $\log 3,\wideparen{3}$
+            \part $\log 40,5$
+            \part $\log 5000$
+            \part $\log \frac{\left(0,027\right)^3 \cdot 540}{96 \cdot 51,84}$
+        \end{parts}
+    \end{multicols}
+
+    \question 
+    Si $\log 8 \approx 0,9031$, halla:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log 800$
+            \part $\log 2$
+            \part $\log 0,64$
+            \part $\log 40$
+            \part $\log 5$
+            \part $\log 64^4$
+        \end{parts}
+    \end{multicols}
+
+    \question 
+    Resuelve las siguientes ecuaciones
+        \begin{parts}
+            \part $12^{x-2} = 4^x$
+            \part $2^{2x+2} = 9 \cdot 2^x - 2$
+            \part $\left(8^{x+2}\right)\left(4^{x-6}\right) = 16$
+        \end{parts}
+
+\end{questions}
 
 \end{document}
