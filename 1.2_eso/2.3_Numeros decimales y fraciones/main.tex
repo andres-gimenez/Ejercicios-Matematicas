@@ -1,0 +1,260 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Números decimales }
+\newcommand{\documentContent} { Decimales y fracciones } 
+\newcommand{\waterMark} {  } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+% \renewcommand{\thepartno}{\arabic{partno}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+% \printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% \StudentData{}
+% \GradeTableHeader{}
+
+\justifying{}
+
+\begin{questions}
+    
+    \begin{minipage}{\linewidth} 
+        \begin{wrapfigure}{r}{5cm}
+            \vspace{-0.2cm} 
+            \includegraphics[width=5cm]{Rhind_Mathematical_Papyrus}
+            \captionsetup{labelformat=empty}
+            \caption{\footnotesize {Papiro de Ahmes o papiro Rhind}}
+        \end{wrapfigure}
+        \question El papiro de Ahmes, es un texto redactado en escritura hierática, 
+        fechado en el siglo XVI a.C copia de un texto de trescientos años de antigüedad, según el propio escriba Ahmes cuenta al principio del texto.
+        Se trata de un texto con 87 problemas matemáticos, en el que se puede ver en el problema 50 como calcular el área del círculo, 
+        haciendo una aproximacío del número $\pi$ con:
+
+        \begin{equation*}
+        \pi = 3 + \frac{1}{9} + \frac{1}{27} + \frac{1}{81}
+        \end{equation*}
+
+        \begin{parts}
+            \part Calcula la aproximación egipcia en números decimales.
+            \part Es un número decimal periódico, ¿Cuál es el periodo?
+        \end{parts}
+    \end{minipage}
+
+
+    % \question
+    % En el ciclismo de persecución en pista, uno de los corredores da 
+    % una vuelta al circuito cada 54 segundos, y el otro cada 72 segundos. Parten 
+    % juntos de la línea de salida. ¿Cuánto tiempo tardarán en volverse a encontrar 
+    % por primera vez en la línea de salida? ¿Cuántas vueltas habrá dado cada 
+    % ciclista en ese tiempo?
+
+    % \begin{solution}
+    %     Para calcular el tiempo que tardan en coincidir habrá que calcular el mínimo común múltiplo: 
+
+    %     \begin{align*}
+    %         54 &= 2 \cdot 3^3 \\
+    %         72 &= 2^3 \cdot 3^2
+    %     \end{align*}
+
+    %     \begin{equation*}
+    %         mcm(54,72) = 2^3 \cdot 3^3 = 8 \cdot 27 = 216
+    %     \end{equation*}
+
+    %     Volverán a coincidir en \textbf{216 segundos}, que son 3 minutos y 36 segundos. \\
+
+    %     \begin{itemize}
+    %         \item Primer ciclista: $ 216 : 54 = \textbf{4 vueltas} $
+    %         \item Segundo ciclista: $ 216 : 72 = \textbf{3 vuletas} $
+    %     \end{itemize}
+
+    % \end{solution}
+    
+    % \question Un grupo de 60 niños, acompañados de 36 padres, acude a un 
+    % campamento en la montaña. Para dormir ocupan cabañas todas iguales, 
+    % pero sin mezclarse los padres con los niños. Cuantas menos cabañas ocupen, 
+    % menos pagan. ¿Cuántas personas dormirán en cada cabaña? 
+
+    % \begin{solution}
+    %     Para calcular el mínimo número de personas que pueden entrar en cada cabaña, sin mezclarse, se busca el máximo común divisor: 
+
+    %     \begin{align*}
+    %         60 &= 2^2 \cdot 3 \cdot 5 \\
+    %         36 &= 2 \cdot 3^2
+    %     \end{align*}
+
+    %     \begin{equation*}
+    %         MCD(36,60) = 2^2 \cdot 3 = 4 \cdot 3 = 12
+    %     \end{equation*}
+
+    %     Dormirán \textbf{12 personas} en cada cabaña.\\
+
+    % \end{solution}
+
+    % \question Deseamos partir 2 cuerdas de 20 y 30 metros en trozos iguales lo 
+    % más grandes posible y sin desperdiciar ningún cabo. ¿Cuánto medirá cada 
+    % trozo? ¿Cuántos trozos habrá? 
+
+    % \begin{solution}
+    %     Para calcular la longitud de cada trozo habrá que calcular el máximo común divisor: 
+
+    %     \begin{align*}
+    %         20 &= 2^2 \cdot 5 \\
+    %         30 &= 2 \cdot 3 \cdot 5
+    %     \end{align*}
+
+    %     \begin{equation*}
+    %         MCD(20,30) = 2 \cdot 5 = 10
+    %     \end{equation*}
+
+    %     Cada toroz medrirá \textbf{10 metros}. \\
+
+    %     \begin{itemize}
+    %         \item De la primera cuerda se obtendrán: $ 20 : 10 = 2 trozos $
+    %         \item De la segunda cuerda se obtendrán: $ 30 : 10 = 3 trozos $
+    %     \end{itemize}
+
+    %     Por tanto se obtendrán en total \textbf{5 trozos}.
+
+    % \end{solution}
+
+    % \question Un panadero necesita envases para colocar 250 magdalenas y 75 
+    % mantecados en cajas, lo más grandes que sean posible, pero sin mezclar 
+    % ambos productos en la misma caja. ¿Cuántas cajas harán falta, y cuántos 
+    % bollos irán en cada caja? 
+
+    % \begin{solution}
+    %     Para calcular los bollos que irán en cada caja hay que calcular el máximo común divisor: 
+
+    %     \begin{align*}
+    %         250 &= 2 \cdot 5^3 \\
+    %         75 &= 3 \cdot 5^2
+    %     \end{align*}
+
+    %     \begin{equation*}
+    %         MCD(250,75) = 5^2 = 25
+    %     \end{equation*}
+
+    %     Irán \textbf{25 bollos} en cada caja. \\
+
+    %     \begin{itemize}
+    %         \item Cajas de magdalenas: $ 250 : 25 = 10 cajas $
+    %         \item Cajas de mantecados: $ 75 : 25 = 3 cajas $
+    %     \end{itemize}
+
+    %     Por tanto habrá un total de \textbf{13 cajas}.
+
+    % \end{solution}
+
+    % \question El mayor de los 3 hijos de una familia visita a sus padres cada 15 
+    % días, el mediano cada 10, y la menor cada 12. La cena de Nochebuena se 
+    % reúne toda la familia. ¿Cuándo volverán a encontrarse los tres juntos?
+
+    % \begin{solution}
+    %     Para calcular cuándo coinciden los tres juntos de nuevo habrá que calcular el mínimo común múltiplo:
+
+    %     \begin{align*}
+    %         15 &= 3 \cdot 5 \\
+    %         10 &= 2 \cdot 5 \\
+    %         12 &= 2^2 \cdot 3  
+    %     \end{align*}
+
+    %     \begin{equation*}
+    %         mcm(10,12,15) = 2^2 \cdot 3 \cdot 5 = 4 \cdot 3 \cdot 5 = 60
+    %     \end{equation*}
+
+    %     Volverán a encontrarse en \textbf{60 días}. Es decir, Nochebuena, como es el 24 de diciembre, más 60 días, el 22 de febrero.
+
+    % \end{solution}
+
+    % \question Alan y Pedro comen en la misma taquería, pero Alan asiste cada 20 días y Pedro cada 38. ¿Cuánto volverán a encontrarse?
+
+    % \question David tiene 24 dulces para repartir y Fernando tiene 18. 
+    % Si desean regalar los dulces a sus respectivos familiares de modo que todos tengan la misma cantidad y que sea la mayor posible, 
+    % ¿cuántos dulces repartirán a cada persona? ¿A cuántos familiares regalará dulces cada uno de ellos?
+
+    % \question Andrés tiene una cuerda de 120 metros y otra de 96 metros.
+    % Desea cortarlas de modo que todos los trozos sean iguales pero lo más largos posibles.
+    % ¿Cuántos trozos de cuerda obtendrá?
+
+    % \question En un vecindario, un camión de helados pasa cada 8 días y un food truck pasa cada dos semanas.
+    % Se sabe que 15 días atrás ambos vehículos pasaron en el mismo días. \\
+
+    % Raúl cree que dentro de un mes los vehículos volverán a encontrarse y Oscar cree esto ocurrirá dentro de dos semanas.
+    % ¿Quién está en lo cierto?
+
+    % \question En una banda compuesta por un baterista, un guitarrista, un bajista y un saxofonista, el baterista toca en lapsos de 8 tiempos, 
+    % el guitarrista en 12 tiempos, el bajista en 6 tiempos y el saxofonista en 16 tiempos.
+    % Si todos empiezas al mismo tiempo, ¿en cuántos tiempos sus periodos volverán a iniciar al mismo tiempo?
+
+    % \question Un granjero ha recogido de sus gallinas 24 huevos morenos y 36 huevos blancos. 
+    % Quiere envasarlos en cajas con la mayor capacidad posible y con el mismo número de huevos (sin mezclar los blancos con los morenos).
+
+    % \question Realiza las siguientes operaciones combinadas:
+    % \begin{parts}
+    %     \part ¿Cuántos huevos debe poner en cada caja?
+    %     \part ¿Cuántas cajas se llenarán con huevos blancos y cuántas con huevos morenos?
+    % \end{parts}
+
+    % \question En un albergue coinciden tres grupos de excursión de 40, 56 y 72 personas cada grupo.
+    % El camarero quiere organizar el comedor de forma que en cada mesa haya igual número de comensales y se reúna el mayor 
+    % número de personas posibles sin mezclar los grupos.
+    % \begin{parts}
+    %     \part ¿Cuántos comensales sentará en cada mesa?
+    %     \part ¿Cuántas mesas habrá de cada grupo?
+    % \end{parts}
+
+    % \question El dependiente de una papelería tiene que organizar, en botes, 
+    % 36 bolígrafos rojos, 60 bolígrafos azules y 48 bolígrafos negros. 
+    % Todos los botes han de ser iguales y con el mayor número de bolígrafos, sin mezclar los colores.
+    % \begin{parts}
+    %     \part ¿Cuántos pondrá en cada bote?
+    %     \part ¿Cuántos botes habrá de bolígrafos rojos? ¿Y de bolígrafos azules? ¿Y de negros?
+    % \end{parts}
+
+    % \question Un electricista tiene tres rollos de cable de 96, 120 y 144 metros de longitud.
+    % Desea cortarlos en trozos iguales de la mayor longitud posible, sin que quede ningún trozo sobrante.
+    % \begin{parts}
+    %     \part ¿Qué longitud deberá tener cada trozo?
+    %     \part ¿Cuántos trozos habrá en total?
+    % \end{parts}
+
+    % \question Una rana corre dando saltos de 30cm, perseguida por un gato que da saltos de 45 cm. 
+    % ¿Cada cuántos centímetros coinciden las huellas del gato y las de la rana?
+
+    % \question Un cometa es visible desde la Tierra cada 24 años y otro, cada 36 años.
+    % El último año que fueron visibles conjuntamente fue en 1944. 
+    % ¿En qué año volverán a coincidir?
+
+    % \question El autobús de la linea A pasa por cierta parada cada 12 minutos, 
+    % el de la linea B pasa cada 18 minutos y el de la linea C, cada 24 minutos.
+    % Si todos coinciden a las 10 de la mañana,
+    % ¿a qué hora vuelven a coincidir?
+
+    % \question Un carpintero dispone de tres listones de madera de 30, 45 y 60 cm de longitud, respectivamente.
+    % Desea dividirlos en trozos y de la mayor longitud posible sin desperdiciar nada.
+    % \begin{parts}
+    %     \part ¿Qué longitud deberá tener cada trozo?
+    %     \part ¿Cuántos trozos habrá en total?
+    % \end{parts}
+
+\end{questions}
+
+\end{document}
