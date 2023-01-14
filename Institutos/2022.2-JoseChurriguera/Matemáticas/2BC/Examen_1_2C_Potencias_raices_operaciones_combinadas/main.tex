@@ -1,0 +1,94 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \newcommand{\documentName} { 1ª evaluación }
+ \newcommand{\documentContent} {Expresiones combinadas y divisibilidad} 
+ \newcommand{\waterMark} { Modelo C } 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ % Configuración del documento.
+ \input{./include/configurationCurso} 
+ \input{./include/configuration} 
+ 
+ % \renewcommand{\thepartno}{\arabic{partno}}
+ \usepackage{xfrac}
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % Exam configuration
+ %\pointsdroppedatright   %% No mostrar la puntuación
+ \pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+ \extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+ \marginpointname{ \emph{\points}}
+ 
+ %% Si se comenta no aparecerán los espacios de la solución.
+ %\nocancelspace
+ 
+ %% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+ %% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+ % \printanswers
+ %\noprintanswers
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \begin{document}
+ 
+ \StudentData{}
+ \GradeTableHeader{}
+ 
+ \justifying{}
+ 
+ \begin{questions}
+    \question[2]
+    Resuelve las siguientes operaciones combinadas
+    \begin{parts}
+      \part
+      $6 + 2 \cdot \left(-2\right) - 4 + 8:\left(-6\right)$
+      \vspace{\stretch{5}}
+      \part
+      $\left( -6 -3 \right) \cdot \left[-2 + 4 : \left(-8 + 7\right) \right] $
+      \vspace{\stretch{5}}
+    \end{parts}
+
+    \question[2] Completa
+    \begin{parts}
+      \part Todos los divisores de 7 = $\left\{ \phantom{--------------------} \right\}$
+      \vspace{\stretch{1}}
+      \part Todos los divisores de 40 = $\left\{ \phantom{--------------------} \right\}$
+      \vspace{\stretch{1}}
+      \part 5 primeros múltiplos de 5 = $\left\{ \phantom{--------------------} \right\}$
+      \vspace{\stretch{1}}
+      \part 5 primeros múltiplos de 9 = $\left\{ \phantom{--------------------} \right\}$
+      \vspace{\stretch{1}}
+    \end{parts}
+
+    \newpage{}
+
+    \question[2] Calcula el máximo común divisor y el mínimo como un múltiplo de las siguientes cantidades:
+    \begin{parts}
+      \part 3, 5 y 7
+      \vspace{\stretch{1}}
+      \part 10 y 100 
+      \vspace{\stretch{1}}
+      \part 20, 30 y 90
+      \vspace{\stretch{1}}
+      \part 33, 77 y 231
+      \vspace{\stretch{1}}
+    \end{parts}
+
+    \question[2]
+    Desde una ventana vemos pasar trenes de mercancías de larga distancia. 
+    Cada 18 días pasa uno que transporta trigo,
+    cada 27 uno que transporta materiales de construcción y cada 115 uno que transporta ordenadores. 
+    Si hace 1000 días que pasaron los tres a la vez por la ventana,
+    ¿en cuánto tiempo volverá a repetirse la misma imagen?
+
+    \vspace{\stretch{5}}
+
+    \newpage{}
+
+    \question[2] En una frutería quieren colocar 48 aguacates y 60 caquis en bandejas iguales, 
+    sin mezclar las frutas y sin que sobre ninguna. 
+    ¿Cuál es el mayor tamaño que pueden tener las bandejas?
+
+    \vspace{\stretch{1}}
+ \end{questions}
+ 
+ \end{document}

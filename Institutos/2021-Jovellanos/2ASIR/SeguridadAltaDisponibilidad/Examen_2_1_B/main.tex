@@ -1,0 +1,497 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Examen 2ª evaluación }
+\newcommand{\documentContent} { Examen conocimientos } 
+\newcommand{\waterMark} { Modelo B } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StudentData{}
+\GradeTableHeader{}
+
+\justifying{}
+
+\begin{questions}
+    \setcounter{question}{0}
+
+    \question[7]
+    Indica la respuesta más adecuada.
+    \begin{center}
+        \fbox{\fbox{\parbox{6.5in}{
+                    La forma de valor el resultado las preguntas tipo test será:
+
+                    \begin{equation*} \label{eqn}
+                        Nota = \left( correctas - \frac{incorrecta}{2} \right) \cdot \left( \frac{nota\:máxima}{preguntas}  \right)
+                    \end{equation*}
+
+                    \vspace{0.2cm}
+                    \par
+                    Cuando contestes a cada pregunta del cuestionario ten presente:
+                    \begin{itemize}
+                        \item Lee atentamente las preguntas y las contestaciones, tienes tiempo de sobra para resolver el examen.
+                        \item Los fallos restan puntos, si no estás seguro de la respuesta no la contestes.
+                        \item Aunque en algunas preguntas pueda parecer que existe más de una respuesta correcta, tienes que dar una respuesta profesional que indique que dominas los conceptos teóricos.
+                    \end{itemize}
+                }}}
+    \end{center}
+
+    \begin{parts}
+        \PartNoBreak{
+            Containerd se puede definir como \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice{}
+                \dots un comando que muestra todos contenedores en ejecución.
+                \newline
+                \CorrectChoice{}
+                \dots el motor de ejecución de contenedores. Utilizado en diversas herramientas de contenedores como docker ó kubernetes.
+                \newline
+                \choice{}
+                \dots un sistema de virtualización de contenedores en remoto.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Los contenedores los podemos ver como \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice{}
+                \dots una máquina virtual de bajo consumo.
+                \newline
+                \CorrectChoice{}
+                \dots un mecanismo para empaquetar y distribuir una aplicación y todas sus dependencias.
+                \newline
+                \choice{}
+                \dots un instalador de aplicaciones Web.
+                \newline
+            \end{oneparcheckboxes}
+        }
+        
+        \PartNoBreak{
+            La relación entre docker e imágenes es \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice{}
+                \dots podemos tener varios docker de una imagen.
+                \newline
+                \choice{}
+                \dots podemos tener varias imágenes de un cocker.
+                \newline
+                \choice{}
+                \dots de uno a uno, cada docker tiene su imagen.
+                \newline{}
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Un ataque de denegación de servicio o DoS consiste en\dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice{}
+                \dots causar un error de un servicio denegando le el acceso a los recursos que necesita dicho servicio.
+                \newline{}
+                \CorrectChoice{}
+                \dots{} causar que un servicio deje de estar accesible a los usuarios legítimos.
+                \newline{}
+                \choice{}
+                \dots cortando el acceso de un sistema informático a los recursos necesarios para su correcto funcionamiento.
+                \newline{}
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            El realizar gran cantidad de peticiones a un servicio, para que no pueda atender a sus usuarios legítimos se considera \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice{}
+                \dots{} un ataque DDoS o denegación de servicio distribuido.
+                \newline{}
+                \choice{}
+                \dots{} ataque por colapso del servicio.
+                \newline{}
+                \choice{}
+                \dots ataque por redundancia de peticiones.
+                \newline{}
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+        El Sniffing es \dots
+        \newline
+            \begin{oneparcheckboxes}
+                \choice{}
+                \dots el rastrear todos los posibles fallos de seguridad de una red informática, el término viene del inglés \emph{sniff} que significa husmear.
+                \newline
+                \choice{}
+                \dots escuchar las conversaciones de las posibles víctimas de un ataque, intentando conocer sus hábitos para deducir las contraseñas de acceso a los servicios que usa.
+                \newline
+                \CorrectChoice{}
+                \dots una técnica consistente en monitorizar el tráfico de red.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            El sppofing es \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice{}
+                \dots suplantación de la identidad falsificando la documentación de una persona.
+                \newline
+                \choice{}
+                \dots suplantar un servicio de Internet, para que los usuarios introduzcan la contraseña en el sistema del suplantador.
+                \newline
+                \CorrectChoice{}
+                \dots una técnica de suplantación de identidad falsificando la IP, MAC, web o mail.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            El modificar el fichero \emph{host} fraudulentamente \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots no tiene efectos, ya que el fichero \emph{host} solo afecta a direcciones locales.
+                \newline
+                \choice
+                \dots el fichero \emph{host} no se puede modificar.
+                \newline
+                \CorrectChoice
+                \dots es una técnica de ataque denominada \emph{pharming}.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Los firewall o cortafuegos se encargan de \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots coordinar las medidas de seguridad antincendios.
+                \newline
+                \choice
+                \dots redireccionar el tráfico de red, cuando detecta una amenaza.
+                \newline
+                \CorrectChoice
+                \dots controlar el acceso a una red, un host o un proceso.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            El introducir las contraseñas de acceso a servicios, en ficheros de configuración, \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice
+                \dots es un fallo de seguridad.
+                \newline
+                \choice
+                \dots es un fallo de seguridad, solo si las claves están accesibles a personal ajeno a la organización.
+                \newline
+                \choice
+                \dots es una práctica imprescindible, ya que los servidores las necesitan para acceder a dichos servicios. Para que esta información no sea accesible, se puede proteger los ficheros de seguridad ante amenazas.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Los firewall o cortafuegos puede filtrar la información por  \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots IP ó puerto de origen y destino, la MAC no pueden filtrarla por pertenecer a la capa de enlace.
+                \newline
+                \choice
+                \dots el puerto de destino, ya que, solo está destinado a controlar que recursos están disponibles para los usuarios.
+                \newline
+                \CorrectChoice
+                \dots la MAC, IP ó puerto de origen y de destino.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Una DMZ \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots un término que se usan solo en redes de uso militar.
+                \newline
+                \CorrectChoice
+                \dots consiste en una zona de una red en la que se aplica menores medidas de seguridad.
+                \newline
+                \choice
+                \dots una zona de la red con acceso libre a cualquier usuario ajeno a la corporación.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Un Proxy es \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots un tipo especial de cortafuegos.
+                \newline
+                \choice
+                \dots un elemento de red que nos permite conectarnos a servidores remotos.
+                \newline
+                \CorrectChoice
+                \dots una aplicación o sistema que hace de intermediario ente el host cliente y el host servidor.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Los sistemas de redundancia en la distribución de procesos \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots se denominan multiproceso.
+                \newline
+                \choice
+                \dots es un sistema consistente en disponer de varias máquinas en reserva para utilizarlas en el supuesto de que falle una de ellas.
+                \newline
+                \CorrectChoice
+                \dots se denomina clustering.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Un sistema de RAID de discos en el que se duplica toda la información en dos discos se denomina \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots RAID 0.
+                \newline
+                \CorrectChoice
+                \dots RAID 1.
+                \newline
+                \choice
+                \dots RAID 2.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            La jerarquía de las normas jurídicas en España sigue el siguiente orden\dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice{}
+                \dots Constitución, tratados internacionales, leyes orgánicas leyes ordinarias, decretos legislativos.
+                \newline
+                \choice{}
+                \dots Constitución, leyes orgánicas, tratados internacionales, leyes ordinarias, decretos legislativos.
+                \newline
+                \choice{}
+                \dots Constitución, tratados internacionales, leyes ordinarias, leyes orgánicas, decretos legislativos.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            La LOPD o Ley Orgánica de Protección de Datos protege los datos referentes\dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots a las personas y asociaciones.
+                \newline
+                \choice
+                \dots a las personas y asociaciones empresariales.
+                \newline
+                \CorrectChoice
+                \dots únicamente a las personas físicas.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            La LOPD o Ley Orgánica de Protección de Datos establece derechos fundamentales, \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots a los cuales, solo se puede renunciar por consentimiento explícito.
+                \newline
+                \choice
+                \dots a los cuales, solo se puede renunciar parcialmente mediante un consentimiento por escrito.
+                \newline
+                \CorrectChoice
+                \dots a los cuales no se puede renunciar.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            En la LOPD o Ley Orgánica de Protección de Datos cuando habla de un fichero se refiere \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots tanto a un fichero de ordenador como un documento físico guardado en un archivador.
+                \newline
+                \choice
+                \dots a ficheros informático, pudiendo se almacenar en un ordenador personal, en un servidor o en la nube.
+                \newline
+                \CorrectChoice
+                \dots a cualquier información concerniente a personas físicas, identificadas o identificables.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            La LOPD o Ley Orgánica de Protección de Datos establece que si se produce un robo de información de un fichero se debe comunicar a la Agencia de Protección de Datos \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice
+                \dots siempre.
+                \newline
+                \choice
+                \dots únicamente cuando el propietario del fichero es responsable de la filtración.
+                \newline
+                \choice
+                \dots únicamente cuando el propietario del fichero no es responsable de la filtración.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Según la LOPD o Ley Orgánica de Protección de Datos, los datos referentes a información financiero son datos de seguridad de nivel\dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots básico.
+                \newline
+                \CorrectChoice
+                \dots medio.
+                \newline
+                \choice
+                \dots alto.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Según la LOPD o Ley Orgánica de Protección de Datos, los datos referentes a información médica son datos de seguridad de nivel\dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots básico.
+                \newline
+                \choice
+                \dots medio.
+                \newline
+                \CorrectChoice
+                \dots alto.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+        Mara modificar una imagen de un docker se utiliza el comando \dots
+        \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice{}
+                \dots{} la imágenes de docker no se pueden modificar. 
+                \newline
+                \choice{}
+                \dots docker image push
+                \newline
+                \choice{}
+                \dots{} docker image update.
+                \newline
+            \end{oneparcheckboxes}
+        }
+    
+        \PartNoBreak{
+        DevOps se refiere a \dots
+        \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots una metodología que define como implantar docker en una corporación.
+                \newline
+                \choice
+                \dots un software orientado al control de cambios en la configuración de servidores.
+                \newline
+                \CorrectChoice
+                \dots un conjunto de prácticas que agrupa a desarrolladores y operaciones TI utilizado para controlar el ciclo de vida del desarrollo de software. 
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Según la LOPD o Ley Orgánica de Protección de Datos, el registro de incidencias es requerido para archivos con nivel de seguridad básico.
+            Si somos responsable de un archivo en el que se guarda información de ideología y creencias religiosas las cuales requieren seguridad de nivel alto \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice
+                \dots también debemos mantener un registro de incidencias, ya que los requisitos de nivel de seguridad básico, también han de ser cumplidos en los niveles de seguridad medio y alto.
+                \newline
+                \choice
+                \dots no en necesario mantener un registro de incidencias, ya que el nivel de seguridad alto dispone de otros mecanismos que lo suplementan.
+                \newline
+                \choice
+                \dots no podemos guardar un registro de incidencia porque eso vulnera los derechos de la persona a la que se refieren los datos.
+                \newline
+            \end{oneparcheckboxes}
+        }
+    \end{parts}
+
+    \newpage
+    \question[3]
+    En los Anexo I y II, puedes encontrar los ficheros \emph{docker-compose.yaml} y \emph{WorkpressDockerfile}, los cuales se utilizan para 
+    ejecutar ciertos servicios sobre docker-compose. Explica lo que hacen, los servicios que utiliza, las conexiones entre los servicios,
+    las redes virtuales y volúmenes que genera y los puertos que utiliza. 
+    Realiza un esquema en el que se pueda apreciar todas las conexiones entre los servicios. 
+    \\ \\
+    \footnotesize{(*) Recuerda que debes demostrar tus conocimientos y no limitarte a enumerar lo que hace cada línea.}
+
+    \newpage
+    \newpage 
+    \begin{center}
+        Anexo I:  docker-compose.yaml
+    \end{center}
+    \begin{figure}[htbp!]
+        \centering
+            \includegraphics[width=.9\textwidth]{./docker-compose.1.png} 
+     \end{figure}
+
+     \newpage 
+     \begin{figure}[htbp!]
+        \centering
+            \includegraphics[width=.9\textwidth]{./docker-compose.2.png} 
+     \end{figure}
+
+     \begin{center}
+        Anexo II: WorkpressDockerfile
+     \end{center}
+     \begin{figure}[htbp!]
+        \centering
+            \includegraphics[width=.9\textwidth]{./WorkpressDockerfile.png} 
+     \end{figure}
+
+\end{questions}
+
+\end{document}

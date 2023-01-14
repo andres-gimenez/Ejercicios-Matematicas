@@ -1,0 +1,187 @@
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\numeroHoja} { 2º Evaluación }
+\renewcommand{\nombreHoja} { Expresiones algebraicas y polinomios } 
+\renewcommand{\waterMark} { Modelo B } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage{tikz}
+% \usetikzlibrary{arrows}
+
+\begin{document}
+
+	\StudentData
+	\GradeTableHeader
+
+    \justifying
+
+	\begin{questions}
+		\setcounter{question}{0}
+
+		\question[1]
+        Indica la expresión algebraica que corresponda a las siguientes frases.
+        \begin{parts}
+            \part
+            La suma de dos números consecutivos: \\
+            \begin{oneparcheckboxes}
+                \choice $n + 2$
+                \CorrectChoice $n + (n + 1)$
+                \choice $n + n$
+                \choice $2n + 1$
+            \end{oneparcheckboxes}
+            \part
+            Un número par: \\
+            \begin{oneparcheckboxes}
+                \choice $3n$
+                \choice $n^2$
+                \CorrectChoice $2n$
+                \choice $n^2 - 2$
+            \end{oneparcheckboxes}
+            \part
+            Un número impar: \\
+            \begin{oneparcheckboxes}
+                \choice $2n$
+                \choice $3n$
+                \CorrectChoice $2n - 1 $
+                \choice $(n-1)^2$
+            \end{oneparcheckboxes}
+            \part 
+            Un número entero, el anterior y el siguiente:
+            \ifprintanswers
+                $\boxed{n, n-1, n+1}$
+            \else
+                \vspace{\stretch{1}}
+            \fi
+            \part 
+            El tercio de un número:
+            \ifprintanswers
+                $\boxed{\frac{n}{2}}$
+            \else
+                \vspace{\stretch{1}}
+            \fi
+            \part
+            El triple de un número más tres unidades:
+            \ifprintanswers
+                $\boxed{3(n+3)}$
+            \else
+                \vspace{\stretch{1}}
+            \fi
+        \end{parts}
+
+        \question[1]
+        Calcula las siguientes operaciones con monomios.
+        \begin{parts}
+            \part
+                $-\frac{2}{5}x^4 + x^4$
+                \vspace{\stretch{1}}
+            \part
+                $\frac{3}{7}x^{256} + \frac{4}{7}x^{256}$
+                \vspace{\stretch{1}}
+            \part
+                $x - 3x + 5x$
+                \vspace{\stretch{1}}
+            \part
+                $\frac{2x}{3} - \frac{4x}{5}$
+                \vspace{\stretch{1}}
+            \part
+                $-\frac{3x^2}{5} \cdot \frac{2x^3}{3}$
+                \vspace{\stretch{1}}
+            \part
+                $\left(-x^3\right)^6$
+                \vspace{\stretch{1}}
+        \end{parts}
+
+        \newpage
+
+        \question[1]
+        Si $P(x)=x^4 - x^3 + 2x^2 -x -5$, evalúa.
+        \begin{parts}
+            \part
+                $P\left(-1\right)$
+                \vspace{\stretch{1}}
+            \part
+                $P\left(0\right)$
+                \vspace{\stretch{1}}
+            \part
+                $P\left(\frac{1}{2}\right)$
+                \vspace{\stretch{1}}                
+        \end{parts}
+
+        \question[2]
+        Sea $P(x)=x^5+3x^3-2x+3$, $Q(x)=3x^4+3x^2+2x+1$, $R(x)=x^2 +2x -2$ calcula.
+        \begin{parts}
+            \part
+                $P(x) - Q(X)$
+                \vspace{\stretch{3}}
+            % \part
+            %     $4 Q(x)$
+            %     \vspace{\stretch{2}}
+
+            % \part
+            %     $P(x) + 4 Q(x)$
+            %     \vspace{\stretch{2}}
+
+            \part
+                $Q(x) \cdot R(x)$
+                \vspace{\stretch{3}}
+            % \part
+            %     $P(x) \cdot 2 Q(x)$
+            %     \vspace{\stretch{4}}
+        \end{parts}
+
+        \newpage
+        \StudentData
+        \question[2]
+            Resuelve las siguientes ecuaciones.
+            \begin{parts}
+                \part
+                    $3x-1 = 2$
+                    \vspace{\stretch{2}}
+                \part 
+                    $2x = 3+3x$
+                    \vspace{\stretch{2}}
+                \part
+                    $x+2(x+1) = 2(4x+1)$
+                    \vspace{\stretch{2}}
+                \part
+                    $(x+5)(x-2) = 60$
+                    \vspace{\stretch{3}}
+            \end{parts}
+
+        \newpage
+        \question[3]
+        En una casa unifamiliar se quiere hacer un porche en la parte más cercana a la vivienda dejando el resto del patio como jardín.
+        \\
+        \vspace{0.3cm}
+        \begin{minipage}{\linewidth}
+            \centering
+            \includegraphics[width=12cm]{Plano02}
+        \end{minipage}
+        \begin{parts}
+            \part
+            Halla el polinomio que nos permita calcular el área del porche en función del tamaño de este.
+            \part
+            Si se ha comprado $15m^2$ de baldosas para solar el porche, ¿cuantos metros cuadrados de jardín nos quedan? 
+        \end{parts}
+	\end{questions}
+\end{document}

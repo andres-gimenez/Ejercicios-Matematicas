@@ -1,0 +1,53 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Hoja 3.06 }
+\newcommand{\documentContent} { Probabilidad } 
+\newcommand{\waterMark} { } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+\pointsdroppedatright   %% No mostrar la puntuación
+%\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+%\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+%\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage{tikz}
+% \usetikzlibrary{arrows}
+
+\begin{document}
+
+	%\StudentData
+	%\GradeTableHeader
+
+    \justifying
+
+	\begin{questions}
+		\setcounter{question}{0}
+
+		\question
+        En una rifa con números del 001 al 500 se sortean tres premios distintos. 
+        Luisa ha comprado 10 boletos. Calcula las probabilidades de que:
+        \begin{parts}
+            \part
+            No le toque ningún premio.
+            \part
+            Al menos uno de sus boletos tenga premio.            
+        \end{parts}
+        
+
+	\end{questions}
+\end{document}

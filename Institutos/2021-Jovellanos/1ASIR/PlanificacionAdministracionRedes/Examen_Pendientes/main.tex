@@ -1,0 +1,614 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Examen Global }
+\newcommand{\documentContent} { Recuperación, pendientes 1º} 
+\newcommand{\waterMark} { } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StudentData
+\GradeTableHeader
+
+\justifying
+
+\begin{questions}
+    \setcounter{question}{0}
+
+    \question[4]
+    Indica las afirmaciones más apropiadas
+    \begin{center}
+        \fbox{\fbox{\parbox{6.5in}{
+                    La forma de valor el resultado las preguntas tipo test será:
+
+                    \begin{equation*} \label{eqn}
+                        Nota = \left( correctas - \frac{incorrecta}{2} \right) \cdot \left( \frac{nota\:máxima}{preguntas}  \right)
+                    \end{equation*}
+
+                    \vspace{0.2cm}
+                    \par
+                    Cuando contestes a cada pregunta del cuestionario ten presente:
+                    \begin{itemize}
+                        \item Lee atentamente las preguntas y las contestaciones, tienes tiempo de sobra para resolver el examen.
+                        \item Los fallos restan puntos, si no estás seguro de la respuesta no la contestes.
+                        \item Aunque en algunas preguntas pueda parecer que existe más de una respuesta correcta, tienes que dar una respuesta profesional que indique que dominas los conceptos teóricos.
+                    \end{itemize}
+                }}}
+    \end{center}
+
+    \begin{parts}
+        \PartNoBreak{
+            Un conmutador o switch es un elemento de red perteneciente a \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice
+                \dots la capa de enlace a datos.
+                \newline
+                \choice
+                \dots la capa de red.
+                \newline
+                \choice
+                \dots la capa de transporte.
+                \newline
+            \end{oneparcheckboxes}
+        }
+        
+        \PartNoBreak{
+            Entendemos por Hosts como \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots los nodos de origen y de destino dentro de un canal de comunicación.
+                \newline
+                \choice 
+                \dots cada dispositivo electrónico de una red de telecomunicaciones.
+                \newline
+                \choice 
+                \dots cada elemento de interconexión de una red de comunicaciones.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Un enlace punto a punto puede ser denominado dúplex si \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots puede trasmitir y recibir información en ambas direcciones simultáneamente.
+                \newline
+                \choice 
+                \dots envía información por un canal y lo recibe por otro.
+                \newline
+                \CorrectChoice 
+                \dots puede transmitir y recibir información simultáneamente
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Un proveedor de servicios de Internet, llamado ISP (Internet service provide) es una empresa que brinda conexión a Internet a sus clientes. 
+            En la actualidad para ofrecer conexión de fibra óptica a sus clientes instalan \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots un ONT (optical network terminal) en sus instalaciones y un  en el OLT (Optical line terminal) en el cliente,
+                conectándolos por el protocolo PPPoE (Point-To-Point over ethernet). 
+                \newline
+                \choice \dots un router de fibra que permite conectar los dispositivos tanto por ethernet como redes WiFi mediante protocolo TCP/IP. 
+                \newline
+                \CorrectChoice 
+                \dots un OLT (Optical line terminal) en sus instalaciones y un ONT (optical network terminal) en el cliente,
+                conectándolos por el protocolo PPPoE (Point-To-Point over ethernet).  
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            El canal de comunicación es \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots una numeración que se utiliza para dividir la comunicación en diversos contenidos.
+                \newline
+                \CorrectChoice 
+                \dots el medio por el que circula la información.
+                \newline
+                \choice 
+                \dots un conjunto de frecuencias por las que se trasmite datos.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            El ruido es \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots perturbaciones sonoras que interrumpen la comunicación.
+                \newline
+                \choice 
+                \dots es la sensación auditiva y molesta.
+                \newline
+                \CorrectChoice 
+                \dots cualquier perturbación que dificulte la comunicación.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Dentro del modelo OSI el protocolo IP pertenece a \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots la capa de trasporte.
+                \newline
+                \CorrectChoice 
+                \dots la capa de red.
+                \newline
+                \choice 
+                \dots la capa de enlace de datos.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Dentro del modelo OSI el protocolo ethernet pertenece a \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots la capa de enlace de datos.
+                \newline
+                \choice 
+                \dots la capa de trasporte.
+                \newline
+                \choice 
+                \dots la capa de red.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            La multiplexación es un mecanismo por el que \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots nos permite utilizar varios circuitos de comunicación para formar una sola línea.
+                \newline
+                \CorrectChoice 
+                \dots nos permite dirigir dos o más señales por el mismo medio.  
+                \newline
+                \choice 
+                \dots nos permite encaminar la comunicación en la dirección que deseamos.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            ¿Qué función realiza la ICANN en la asignación de direcciones IP?
+            \newline
+            \begin{oneparcheckboxes}
+                \choice La ICANN concede rangos de direcciones IP a los proveedores de servicios de Internet,
+                que a su vez estos los reparten entre sus clientes.
+                \newline
+                \CorrectChoice La ICANN delega los recursos de Internet a los RIRs,
+                y a su vez los RIRs siguen sus políticas regionales para una
+                posterior subdelegación de recursos a sus clientes, que
+                incluyen Proveedores de servicios y organizaciones para uso
+                propio. 
+                \newline
+                \choice La ICANN es una organización privada, sin ánimo de lucro que, entre otras competencias,
+                se encarga de mantener y gestionar los servidores troncales DHCP que reparten de forma automática las direcciones IP públicas.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Un puente o bridge es un \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots un dispositivo de red que permite conectar redes a gran distancia.
+                \newline
+                \CorrectChoice 
+                \dots un dispositivo de red que opera en la capa de enlace a datos conectando dos segmentos de red.
+                \newline
+                \choice 
+                \dots un dispositivo de red que permite pasar sobre un protocolo no acto para la comunicación
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Un enrutador o router es un elemento de red perteneciente a \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots la capa de transporte.
+                \newline
+                \CorrectChoice 
+                \dots la capa de red.
+                \newline
+                \choice 
+                \dots la capa de enlace a datos.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Entendemos por dirección MAC a \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots una dirección única para cada Host.
+                \newline
+                \CorrectChoice 
+                \dots una dirección única para cada interfaz de red.
+                \newline
+                \choice 
+                \dots una dirección que debemos configurar para acceder a la red.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            El protocolo IP \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots no tiene un control de errores, con lo que se puede considerar no fiable.
+                \newline
+                \choice 
+                \dots mantiene un control de errores.
+                \newline
+                \choice 
+                \dots nos asegura que toda la información que enviamos llegará a su destinatario.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Una dirección IP pública \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots es visible desde cualquier Host conectado a Internet.
+                \newline
+                \choice 
+                \dots es visibles solamente desde otra dirección pública.
+                \newline
+                \choice 
+                \dots son direcciones que se pueden usar libremente por cualquier usuario.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Una dirección IP privada \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots solo se puede utilizar por organizaciones autorizadas para utilizarlas.
+                \newline
+                \CorrectChoice 
+                \dots solo es visible desde su red local.
+                \newline
+                \choice 
+                \dots son direcciones internas de Internet utilizadas para los routers.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Los conectores de los cables de par trenzados utilizados por Ethernet se denominan \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                    RJ-11
+                \newline
+                \choice 
+                    RJ-12
+                \newline
+                \CorrectChoice 
+                    RJ-45
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak {
+            Mediante el comando REGEDT32.EXE accedemos al registro de Windows, en el cual \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                    \dots podemos acceder a la configuración del sistema.
+                \newline
+                \choice 
+                    \dots podemos visualizar las incidencias del sistema.
+                \newline
+                \choice 
+                    \dots podemos visualizar las entradas y acciones de cada usuario.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak {
+            El modo seguro de Windows se refiere \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                    \dots a un modo de arranque en el que utiliza los drivers mínimos, como ratón, monitor (VGA), teclado, unidad de disco y servicios predeterminado.
+                \newline
+                \choice 
+                    \dots a un modo de arranque en el que configura el firewall de Windows, no permitiendo ninguna conexión ni de entrada ni de salida.
+                \newline
+                \choice 
+                    \dots a un modo de arranque en el que solo permite acceder a Windows con el usuario de administrador.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak {
+            El arranque de Linux  \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                    \dots se controla mediante la configuración del proceso init, que es el primero que se inicia y el encargado de ejecutar el resto.
+                \newline
+                \choice 
+                    \dots se produce una carga simultánea de procesos y es el kernel quien se encarga que procesos se deben iniciar.
+                \newline
+                \CorrectChoice 
+                    \dots no se puede modificar, ya que esto afectaría a la estabilidad del sistema.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak {
+            \dots Cuando un equipo tiene un problema de acceso a la red, recomienda hacer las comprobaciones en el orden \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                    \dots conflicto entre adaptador de red y equipo, conexión física del adaptador con la red, configuración de los parámetros de la arquitectura de red.
+                \newline
+                \choice 
+                    \dots conexión física del adaptador con la red, configuración de los parámetros de la arquitectura de red, conflicto entre adaptador de red y equipo
+                \newline
+                \CorrectChoice 
+                \dots configuración de los parámetros de la arquitectura de red, conflicto entre adaptador de red y equipo, conexión física del adaptador con la red.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak {
+            En el sistema Windows, son comandos de red válidos \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                    \dots nslookup, netstat, ping.
+                \newline
+                \choice 
+                    \dots ipconfig, netconfig, netstart.
+                \newline
+                \choice 
+                    \dots tcpconfig, netui, ping.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak {
+            Las VLAN nos sirven \dots 
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                    \dots para separa voz y datos.
+                \newline
+                \choice 
+                    \dots como sistema de enrutamiento en redes locales.
+                \newline
+                \choice 
+                    \dots como mecanismo de seguridad, ya que podemos control que puertos son admitidos por cada VLAN.
+                \newline
+            \end{oneparcheckboxes}
+        }
+    \end{parts}
+
+    \newpage{}
+    \question[1] 
+        Calcula la dirección de red y broadcast para las siguientes configuraciones de red. \\
+        {\small Muestra los cálculos que has realizado.}
+    \begin{parts}
+        \part
+        IP: 82.213.249.244 \\
+        Mask: 255.255.255.252 
+        \begin{solution}[2cm]
+            Red: 82.213.249.244 / 30 \\
+            Broadcas: 82.213.249.247 \\
+        \end{solution}
+        \vspace{\stretch{1}}
+
+        \part
+        IP: 82.213.249.244 \\
+        Mask: 255.255.252.0
+        \begin{solution}[2cm]
+            Red: 82.213.248.00 / 22 \\
+            Broadcas: 82.213.251.255
+        \end{solution}
+        \vspace{\stretch{1}}
+        
+        \part
+        IP: 16.35.23.12 \\
+        Mask: 255.255.255.248
+        \begin{solution}[2cm]
+            Red: 16.35.23.8 / 29 \\
+            Broadcas: 16.35.23.15
+        \end{solution}
+        \vspace{\stretch{1}}
+
+        \part
+        IP: 16.35.23.12 \\
+        Mask: 255.255.192.0
+        \begin{solution}[2cm]
+            Red: 16.35.0.0 / 18 \\
+            Broadcas: 16.35.63.255
+        \end{solution}
+        \vspace{\stretch{1}}
+
+        \part
+        IP: 1200:235:43::325a / 64 
+        \begin{solution}[0cm]
+            Red: 1200:235:43:: / 64 \\
+            Rango de hosts:  1200:235:43::1 \\ - 1200:235:43::ffff:ffff:ffff:ffff \\
+        \end{solution}
+        \vspace{\stretch{2}}
+
+    \end{parts}
+
+    \newpage
+
+    \question[1] 
+    Indica si los siguientes IPs perteneces a la misma red.\\
+    {\small Muestra los cálculos que has realizado.}
+
+    \begin{parts}
+        \part
+        IP1: 192.168.0.25 \\
+        IP2: 192.168.0.38 \\
+        Mask: 255.255.255.0
+        \begin{solution}[0cm]
+            Son válidas y perteneces a la misma red.
+        \end{solution}
+        \vspace{\stretch{1}}
+
+        \part
+        IP1: 25.12.23.60 \\
+        IP2: 25.12.23.70 \\
+        Mask: 255.255.255.224
+        \begin{solution}[0cm]
+            Son válidas y perteneces a redes distintas.
+        \end{solution}
+        \vspace{\stretch{1}}
+
+        \part
+        IP1: 2000::32ed / 125 \\
+        IP2: 2000::32fd / 125 \\
+        \begin{solution}[0cm]
+            Son válidas y perteneces a redes distintas.
+        \end{solution}
+        \vspace{\stretch{1}}
+   
+    \end{parts}
+
+    \newpage
+    \question[2] Configura el siguiente esquema de red, para que puedan conectarse todos los hosts.
+
+    \begin{center}
+        \centering
+        \includegraphics[width=1\textwidth]{red03}
+    \end{center}
+
+    \begin{center}
+        \begin{tabular}{|l|l|l|l|}
+            \hline
+            \multirow{7}{*}{Router01} & \multicolumn{3}{l|}{\phantom{00000.00000.00000.00000}\phantom{00000.00000.00000.00000}\phantom{00000.0000.00000.00000}} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\  \hline
+            \multirow{7}{*}{Router02} & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ \hline
+            \multirow{7}{*}{Router03} & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\ 
+                                    & \multicolumn{3}{l|}{} \\  \hline
+        \end{tabular}
+    \end{center}
+    \begin{center}
+        \begin{tabular}{|l|l|l|l|}
+            \hline
+            Host                       & IP                 & Mask            & Gateway       \\ \hline
+            \hline
+            Server01                   & \phantom{0000.0000.0000.0000}     &  \phantom{0000.0000.0000.0000}  & \phantom{0000.0000.0000.0000}  \\ \hline
+            PC01                       &      &                 &                \\ \hline
+            PC02                       &      &                 &                \\ \hline
+            PC03                       &      &                 &                \\ \hline
+            PC04                       &      &                 &                \\ \hline
+            PC05                       &      &                 &                \\ \hline
+            PC06                       &      &                 &                \\ \hline
+            Destop02                   &      &                 &                \\ \hline
+            Printer02                  &      &                 &                \\ \hline
+            \end{tabular}
+        \end{center}
+    \newpage
+
+    \question[2] De acuerdo a la siguiente configuración de red, 
+        recibes una incidencia en la que desde contabilidad pueden imprimir, 
+        pero desde el almacén no, busca cuál es el problema y propón una solución (modificando lo menos posible).
+        Identifica cuantas redes lógicas hay y cuáles son. 
+
+    \begin{center}
+        \centering
+        \includegraphics[width=1\textwidth]{red04}
+    \end{center}
+
+    \begin{center}
+        \begin{tabular}{|l|l|l|l|}
+        
+        \hline
+        \multirow{2}{*}{Router01} & Interface 1 & \multicolumn{2}{l|}{ 192.168.56.128/29 } \\ \cline{2-4}
+                                  & Interface 2 & \multicolumn{2}{l|}{ 192.168.56.137/29 } \\ \cline{2-4}
+        \hline
+        \hline
+        Host                       & IP                 & Mask            & Gateway       \\ \hline
+        \hline
+        Server01                   & 192.168.56.129 & 255.255.255.248 & 192.168.56.128 \\ \hline
+        Destop01                   & 192.168.56.130 & 255.255.255.248 & 192.168.56.128 \\ \hline
+        PC01                       & 192.168.56.131 & 255.255.255.248 & 192.168.56.128 \\ \hline
+        PC02                       & 192.168.56.132 & 255.255.255.248 & 192.168.56.128 \\ \hline
+        PC03                       & 192.168.56.133 & 255.255.255.248 & 192.168.56.128 \\ \hline
+        PC04                       & 192.168.56.134 & 255.255.255.248 & 192.168.56.128 \\ \hline
+        \hline
+        Destop02                   & 192.168.56.138 & 255.255.255.248 & 192.168.56.137 \\ \hline
+        PC05                       & 192.168.56.139 & 255.255.255.248 & 192.168.56.137 \\ \hline
+        PC06                       & 192.168.56.140 & 255.255.255.248 & 192.168.56.137 \\ \hline
+        PC07                       & 192.168.56.141 & 255.255.255.248 & 192.168.56.137 \\ \hline
+        Printer02                  & 192.168.56.142 & 255.255.255.248 & 192.168.56.137 \\ \hline
+        \end{tabular}
+    \end{center}
+
+    \begin{solution}[2cm]
+        La IP de Router01-Inteface 1  es una dirección de red, con lo que no se puede usar.
+    \end{solution}
+    \newpage
+    \phantom{00}
+\end{questions}
+
+\end{document}

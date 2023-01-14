@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Examen Recuperación - 3ª Evaluación}
+\newcommand{\documentContent} { Convocatoria ordinaria } 
+\newcommand{\waterMark} { 3ª Evaluación  } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage{tikz}
+% \usetikzlibrary{arrows}
+
+% \useslantedhalf
+
+% \usepackage{titling}
+% \usepackage{float}
+
+\begin{document}
+
+\StudentData
+% \GradeTableHeader
+
+\setcounter{question}{0}
+
+\center{3ª Evaluación}
+\begin{center}
+    \partialgradetable{Evaluacion3}[h][questions]
+\end{center}
+% \vspace{0.1in}
+
+\justifying
+
+\begin{questions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 3ª Evaluación  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begingradingrange{Evaluacion3}
+
+\question[2]
+Resuelve el siguiente sistema de ecuaciones por el método gráfico.
+\begin{flushleft}
+    $\begin{cases}
+            \nonumber
+            x + y  = 2 \\
+            \nonumber
+            3x - y = 2
+        \end{cases}$
+\end{flushleft}
+
+\begin{figure}[h]
+    \begin{tikzpicture}[scale=1]
+        \tkzInit[xmax=6,ymax=6,xmin=-6,ymin=-6]
+        \tkzGrid
+        \tkzAxeXY
+    \end{tikzpicture}
+\end{figure}
+
+\newpage
+\question[3]
+    Siete chocolatinas y cinco refrescos cuestan 30\euro{}. Tres chocolatinas y un refresco valen 10,80\euro{}.
+    ¿Cuánto costarán once chocolatinas y nueve refrescos?
+    \vspace{\stretch{1}}
+
+\newpage
+\question[5]
+El número de libros solicitados en una biblioteca ha sido:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \cellcolor[gray]{0.8}Libros ($x_i$)   & 1 & 2  & 3 & 4 & 5 & 6 \\
+        \hline
+        \cellcolor[gray]{0.8}Usuarios ($f_i$) & 8 & 12 & 9 & 6 & 3 & 2 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{parts}
+    \part
+    Calcula la tabla de frecuencias relativas y acumuladas.
+    \vspace{\stretch{2}}
+
+    \part
+    %Media = 2,75
+    Calcula la media, la mediana y moda.
+    \begin{equation*}
+        \bar{x}=\frac{\sum{x_i f_i}}{N} = \sum{x_i h_i}
+    \end{equation*}
+    \begin{equation*}
+        N = \sum{f_i}
+    \end{equation*}
+    \vspace{\stretch{1}}
+
+    \newpage
+    \part
+    %Varianza = 1,9375, Desviación típica = 1,39
+    Calcula la varianza y la desviación típica.
+    \begin{equation*}
+        s^2=\frac{\sum{({x_i - \bar{x}})^2} f_i}{N} = \frac{\sum{{x_i}^2 f_i}}{N} - \bar{x}^2 = \sum{{x_i}^2 h_i} - \bar{x}^2
+    \end{equation*}
+
+    \begin{equation*}
+        s=\sqrt{\frac{\sum{({x_i - \bar{x}})^2} f_i}{N}} = \sqrt{\frac{\sum{{x_i}^2 f_i}}{N} - \bar{x}^2} = \sqrt{\sum{{x_i}^2 h_i} - \bar{x}^2}
+    \end{equation*}
+    \vspace{\stretch{1}}
+
+    \part
+    Calcula el coeficiente de variación.
+    % CV = 0,506
+    \begin{equation*}
+        CV = \frac{s}{\bar{x}}
+    \end{equation*}
+    \vspace{\stretch{1}}
+
+    \part
+    El año anterior se solicitaron una media de $2,4$ libros con una desviación típica de $1,5$.
+    Indica, justificando la respuesta, que año se han solicitados más libros, en cual ha se ha producido más diferencia de solicitudes entre solicitantes y que media es más representativa sobre el número de libros que se solicitan en la biblioteca.
+    \vspace{\stretch{1}}
+\end{parts}
+\endgradingrange{Evaluacion3}
+
+\end{questions}
+\end{document}

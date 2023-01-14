@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { Hoja 2.10 }
+\newcommand{\nombreHoja} { Problemas con polinomios y ecuaciones }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration}
+\input{./include/configurationCurso}
+
+%\usepackage{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+\pointsdroppedatright   %% No mostrar la puntuación
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+    %%\StudentData
+
+    \begin{questions}
+        \question 
+        Un campo de fútbol mide 30 metros más de largo que de ancho y su área es de $7.000 m^2$, halla sus dimensiones.
+
+        \question
+        Una cancha de baloncesto mide 13 metros más de largo que de ancho y su área es de $420 m^2$, halla sus dimensiones.
+
+        \question
+        Una piscina olímpica mide 50 metros de larga por 25 metros de ancha y 3 metros de profundidad. 
+        \begin{parts}
+            \part
+            Calcula el polinomio que representa el volumen de agua de la piscina en función del nivel de esta.
+            \part
+            Calcula el volumen de agua cuando tenemos medio metro de profundidad.
+            \part
+            Calcula el volumen de agua cuando tenemos dos metros de profundidad.
+            \part
+            Calcula el volumen de agua cuando la piscina está llena.
+        \end{parts}
+
+        \question
+        Un depósito de agua con base circular tiene un diámetro de 14 metros, sabemos que se ha estado vertiendo agua durante 25 horas a razón de $5 m^3/h$.
+        \begin{parts}
+            \part
+            ¿Qué profundidad tiene? \\
+            \begin{minipage}[t]{\linewidth}
+                \centering
+                \includegraphics[width=7cm]{DepositoAgua}
+                %\captionof{figure}{Figure of Q.\ref{label:a}}
+                \label{label:q1}
+            \end{minipage}
+
+            \part
+            Mientras se estaba llenando el depósito, llego un camión de bomberos y se llevó 5.000 litros de agua. 
+            Corrige las cuentas del apartado anterior para saber la profundidad del depósito.\\
+            {\footnotesize (*) $1 m^3$ = $1.000$ litros} \\
+            \begin{minipage}[t]{\linewidth}
+                \centering
+                \includegraphics[width=7cm]{CamionBomberos}
+                %\captionof{figure}{Figure of Q.\ref{label:a}}
+                \label{label:q1}
+            \end{minipage}
+        \end{parts}
+
+        \newpage
+        \question
+        Para operar con el IVA podemos utilizar los polinomios, en función del precio del producto:
+        \begin{enumerate} [label=(\roman*)]
+            \item
+            Calcular el IVA, $P(x) = \frac{21}{100}x$.
+            \item
+            Precio más IVA, $Q(x) = \left(1 + \frac{21}{100}\right)x$
+            \item
+            Precio menos el IVA, $R(x) = \left(1 - \frac{21}{100}\right)x$
+        \end{enumerate}
+        \begin{parts}
+            \part
+            Obtén los polinomios para dado el precio de venta final obtener el precio del producto.
+            \part
+            Obtén los polinomios que nos del IVA y el precio más IVA de un producto al que se le ha rebajado 2\euro{} antes de aplicarle el IVA.
+        \end{parts}
+    \end{questions}
+\end{document}

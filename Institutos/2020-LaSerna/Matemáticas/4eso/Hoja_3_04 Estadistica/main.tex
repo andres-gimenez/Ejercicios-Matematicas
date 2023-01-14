@@ -1,0 +1,65 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { Hoja 3.04 }
+\newcommand{\nombreHoja} { Estadística }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+\pointsdroppedatright   %% No mostrar la puntuación
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tkz-euclide}
+
+\begin{document} 
+    \begin{questions}
+        \question
+        En una encuesta realizada entre adolescentes de 15 años sobre sus hábitos en el uso de Internet 
+        se les pregunto el número de horas que pasan conectados a estas, obteniendo los siguientes datos para España y para toda la OCDE.
+    
+        \begin{table}[ht]
+            \centering
+            \begin{tabular}{|l|l|l|}
+            \hline
+                                        & España & OCDE \\ \hline
+            \hline                  
+            Nada en absoluto            & 2 \%     & 3 \%   \\ \hline
+            Menos de 1 hora             & 13 \%    & 16 \%  \\ \hline
+            Entre 1 y 2 hora            & 18 \%    & 21 \%  \\ \hline
+            Entre 2 y 4 horas           & 26 \%    & 27 \%  \\ \hline
+            Entre 4 y 6 horas           & 18 \%    & 16 \%  \\ \hline
+            Más de 6 horas              & 22 \%    & 16 \%  \\ \hline
+            \end{tabular}
+        \end{table}
+
+        \begin{parts}
+            
+            \part
+            Dibuja los histogramas comparando ambas muestras.
+
+            \part
+            Calcula la media de las dos muestras.
+           
+            \part
+            Calcula la varianza y desviación típica de ambas muestras.
+
+            \part
+            Expón las conclusiones que has obtenido del análisis estadístico de las dos muestras.
+
+        \end{parts}
+
+    \end{questions}    
+
+\end{document}

@@ -1,0 +1,191 @@
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { 2º Evaluación }
+\newcommand{\nombreHoja} { Expresiones algebraicas y polinomios } 
+\renewcommand{\waterMark} { Modelo: A } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage{tikz}
+% \usetikzlibrary{arrows}
+
+\begin{document}
+
+	\StudentData
+	\GradeTableHeader
+
+    \justifying
+
+	\begin{questions}
+		\setcounter{question}{0}
+
+		\question[1]
+        Indica la expresión algebraica que corresponda a las siguientes frases
+        \begin{parts}
+            \part
+            Un número par: \\ \\
+            \begin{oneparcheckboxes}
+                \CorrectChoice $2n$
+                \choice $3n$
+                \choice $n^2$
+                \choice $n^2 - 2$
+            \end{oneparcheckboxes}
+            \\
+            \part
+            Un número impar: \\ \\
+            \begin{oneparcheckboxes}
+                \choice $2n$
+                \choice $3n$
+                \choice $(n-1)^2$
+                \CorrectChoice $2n - 1 $
+            \end{oneparcheckboxes}
+            \\
+            \part
+            La suma de dos números consecutivos: \\ \\
+            \begin{oneparcheckboxes}
+                \choice $n + 2$
+                \choice $n + n$
+                \choice $n + (n + 1)$
+                \CorrectChoice $2n + 1$
+            \end{oneparcheckboxes}
+            \\
+            \part 
+            La mitad de un número:
+            \vspace{\stretch{1}}
+            \part
+            El triple de un número más dos unidades:
+            \vspace{\stretch{1}}
+            \part 
+            Un número entero, el anterior y el siguiente:
+            \vspace{\stretch{1}}
+        \end{parts}
+
+        \question[1]
+        Calcula las siguientes operaciones con monomios
+        \begin{parts}
+            \part
+                $-\frac{3}{5}x^4 + x^4$
+                \vspace{\stretch{1}}
+            \part
+                $\frac{2}{5}x^{256} + \frac{3}{5}x^{256}$
+                \vspace{\stretch{1}}
+            \part
+                $x + 5x - 3x$
+                \vspace{\stretch{1}}
+            \part
+                $\frac{2x}{3} - \frac{1x}{4}$
+                \vspace{\stretch{1}}
+
+            \part
+                $-\frac{3x^2}{5} \cdot \frac{2x^3}{3}$
+                \vspace{\stretch{1}}
+            \part
+                $\left(-x^3\right)^4 $
+                \vspace{\stretch{1}}
+        \end{parts}
+
+        \newpage
+
+        \question[2]
+        Si $P(x)=x^4 + x^3 - 2x^2 -x-5$, evalúa.
+        \begin{parts}
+            \part
+                $P\left(-1\right)$
+                \vspace{\stretch{1}}
+            \part
+                $P\left(0\right)$
+                \vspace{\stretch{1}}
+            \part
+                $P\left(\frac{1}{2}\right)$
+                \vspace{\stretch{1}}                
+        \end{parts}
+
+        \question[2]
+        Sea $P(x)=x^5+3x^3-2x+2$, $Q(x)=3x^4-3x^2-2x+1$, $R(x)=x^2 -2x +2$ calcula.
+        \begin{parts}
+            \part
+                $P(x) - Q(x)$
+                \vspace{\stretch{3}}
+            % \part
+            %     $4 Q(x)$
+            %     \vspace{\stretch{2}}
+
+            % \part
+            %     $P(x) + 4 Q(x)$
+            %     \vspace{\stretch{2}}
+
+            \part
+                $Q(x) \cdot R(x)$
+                \vspace{\stretch{3}}
+            % \part
+            %     $P(x) \cdot 2 Q(x)$
+            %     \vspace{\stretch{4}}
+        \end{parts}
+
+        \newpage
+        \StudentData
+        \question[2]
+            Realiza la siguiente división \\
+            $\left(\polynomial[reciprocal]{6,-1,-25,15}\right) : \left( \polynomial[reciprocal]{2,3,-4} \right)$
+
+            \vspace{\stretch{3}}
+
+            \begin{solution}
+                \nopagebreak
+                $$\polylongdiv[style=D]{6x^3-x^2-25x+15}{2x^2+3x-4}$$
+                $$\boxed{\polynomial[reciprocal]{6,-1,-25,15} = \left( \polynomial[reciprocal]{2,3,-4} \right) \left( \polynomial[reciprocal]{3,-5} \right) + \left( \polynomial[reciprocal]{2,-5} \right)}$$
+            \end{solution}
+
+        \question[2]
+            Realiza la siguiente división por el método de Ruffini \\
+            $\left(\polynomial[reciprocal]{2,-3,2,-3}\right) : \left( \polynomial[reciprocal]{1, 2} \right)$
+            
+            \vspace{\stretch{3}}
+
+            \begin{solution}
+                $$\polyhornerscheme[x=1,resultbottomrule=true,resultleftrule=true]{2x^3-3x^2+2x-3}$$
+
+                $$\boxed{\polynomial[reciprocal]{2,-3,2,-3} = \left( \polynomial[reciprocal]{1,2} \right) \left( \polynomial[reciprocal]{2, -1, 1} \right) - 2}$$
+            \end{solution}
+        
+        \newpage
+        \question[2]
+        Una casa está rodeada por un jardín de acuerdo al siguiente plano.
+        \\
+        \vspace{0.3cm}
+        \begin{minipage}{\linewidth}
+            \centering
+            \includegraphics[width=9cm]{Plano01}
+        \end{minipage}
+        \begin{parts}
+            \part
+            Halla un polinomio que nos permita calcular el área del jardín.
+            \vspace{\stretch{5}}
+            \part
+            Calcula el área del jardín para $x = 50$
+            \vspace{\stretch{2}}
+            \part
+            Tiene sentido calcular el área para $x = 10$ ¿Por qué?
+            \vspace{\stretch{3}}
+        \end{parts} 
+	\end{questions}
+\end{document}

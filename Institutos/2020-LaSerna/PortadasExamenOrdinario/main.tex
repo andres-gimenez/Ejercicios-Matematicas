@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt,final]{report}
+\usepackage{graphicx}
+\usepackage{anysize}
+\usepackage{geometry}
+\usepackage{textmerg}
+
+% \graphicspath{ {images/} }
+% \geometry{margin=1cm}
+
+
+\Fields{\Apellido\Nombre\Grupo\Evaluaciones}
+
+\begin{document}
+\pagestyle{empty}
+
+\Merge{alumnos3Rec.txt}
+{
+    \begin{center}
+        \Large
+        \vspace{5cm}
+        Examen Recuperación - Ordinario
+
+        \vspace{5cm}
+        \Huge
+        \textbf{\Nombre \\ \Apellido}
+
+        \vspace{5mm}
+        \Large
+        \textbf{\Grupo}
+
+        \vspace{5cm}
+
+        3º Matemáticas - Recuperación 
+        %3º Matemáticas Académicas
+        %4º Matemáticas Aplicadas
+
+        \vspace{1cm}
+
+        \Evaluaciones
+
+
+    \end{center}
+    \newpage
+    % \par
+}
+
+
+\end{document}

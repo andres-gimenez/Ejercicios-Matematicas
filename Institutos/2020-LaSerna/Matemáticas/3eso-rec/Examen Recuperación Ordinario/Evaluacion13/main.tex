@@ -1,0 +1,248 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Examen Recuperación - 1ª y 3ª evaluación }
+\newcommand{\documentContent} { Convocatoria ordinaria } 
+\newcommand{\waterMark} { 1ª y 3ª evaluación } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StudentData
+% \GradeTableHeader
+
+\setcounter{question}{0}
+
+\vspace{0.1cm}
+\center{1ª Evaluación}
+\begin{center}
+    \partialgradetable{Evaluacion1}[h][questions]
+\end{center}
+
+\center{3ª Evaluación}
+\begin{center}
+    \partialgradetable{Evaluacion3}[h][questions]
+\end{center}
+
+\justifying
+
+\begin{questions}
+\setcounter{question}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  1ª Evaluación  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{1ª Evaluación}
+
+\begingradingrange{Evaluacion1}
+
+\question[2]
+Calcula el valor de las siguientes potencias de fracciones y expresa el resultado en forma de fracción irreducible.
+\begin{parts}
+    \part
+    $\left( \frac{1}{9} \right)^{-1}$
+    \vspace{\stretch{1}}
+
+    % \part
+    % $\left( - \frac{3}{4} \right)^{-4}$
+    % \vspace{\stretch{1}}
+
+    % \part
+    % $\left( - \frac{5}{8} \right)^{-3}$
+    % \vspace{\stretch{1}}
+    
+    \part
+    $\left( \frac{3}{5} \right)^{4}$
+    \vspace{\stretch{1}}
+\end{parts}
+
+\question[2]
+Realiza las siguientes operaciones y expresa el resultado en forma de fracción irreducible.
+\begin{parts}
+    \part
+    $\frac{3}{5} \cdot \frac{5}{4} \cdot \frac{4}{12} \cdot \frac{12}{3} \cdot \frac{3}{2} \cdot \frac{2}{7} : \frac{3}{7} $
+    \vspace{\stretch{1}}
+    % \part
+    % 	$\frac{1}{25} + \frac{3}{5} - \frac{6}{9} : \frac{14}{12}$
+    % 	\vspace{\stretch{1}}
+    % \part
+    % 	$\left( \frac{3}{5} \cdot \frac{1}{2} - \frac{5}{6} \right) : \frac{1}{3}$
+    % 	\vspace{\stretch{1}}
+
+    \part
+    $\frac{3}{5} \cdot \left( \frac{1}{2} + \frac{5}{15} \right) : \frac{1}{5}$
+    \vspace{\stretch{1}}
+
+    % \part
+    % $2 + \frac{3}{3} - \left( \frac{5}{6} + \frac{7}{12} \right) - \frac{1}{3}$
+    % \vspace{\stretch{1}}
+    % \part 
+    % 	$\left( \frac{2}{3} \right)^3 - \left( \frac{2}{3} \right)^{-1}$
+    % \part 
+    % 	$\frac{40}{18} \cdot \frac{9}{30} - \left( 2 - \frac{3}{2} \right)^{2}$
+    % \part 
+    % 	$\frac{3}{10} \cdot \left(\frac{1}{7} - \frac{5}{12} \right)^{-1} : \frac{1}{4} \cdot \frac{2}{5}$
+\end{parts}
+
+\newpage
+\question[2]
+Completa la siguiente tabla. \\
+
+\begin{table}[h!]
+    \centering
+    %\caption{}
+    %\label{tab:my-table}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \rowcolor[gray]{.9}
+        \textbf{Escritura decimal} & \textbf{Escritura P10} & \textbf{Notación científica} \\ \hline
+        $25.000.000$               &                        &                              \\ \hline
+        % $0,0000043$                &                        &                              \\ \hline
+                                %    & $29 \cdot 10^{-3}$     &                              \\ \hline
+                                   & $438 \cdot 10^{5}$     &                              \\ \hline
+                                   &                        & $3,48 \cdot 10^{-4}$         \\ \hline
+                                %    &                        & $1,3 \cdot 10^{5}$           \\ \hline
+    \end{tabular}
+\end{table}
+
+% \question[2]
+% Reduce a índice común y ordena de mayor a menor.
+% \begin{parts}
+%     \part
+%     $\sqrt[4]{4}, \sqrt[8]{8}, \sqrt[6]{6}$
+%     \vspace{\stretch{1}}
+%     \part
+%     $\sqrt[5]{5}, \sqrt{2}, \sqrt[10]{20}$
+%     \vspace{\stretch{1}}
+% \end{parts}
+% \question[3\half]
+% Pregunta 2
+
+\question[2]
+Tres personas se han repartido una cantidad de dinero directamente proporcional a los números 6, 3 y 2.
+Si la que menos recibe ha recibido 900\euro{}. ¿qué cantidad total se repartió?
+\vspace{\stretch{1}}
+
+% \question[2]
+% Juan, Olivia y Rafa tienen un bar y se reparten las ganancias del mes de forma inversamente proporcional al número de días que han descansado este mes.
+% Las ganancias del mes fueron de 4.230\euro{} y los socios descansaron 8, 6 y 10 días respectivamente. ¿Cuánto dinero le corresponde a cada uno?
+% \vspace{\stretch{1}}
+
+\question[2]
+A tres amigos les han tocado el segundo premio de la lotería de navidad valorado en $125.000\euro{}$
+por un décimo que costó $20\euro{}$ al que aportaron 8\euro{}, 7\euro{} y 5\euro{} respectivamente,
+¿cómo han de repartir el premio?
+\vspace{\stretch{1}}
+
+\endgradingrange{Evaluacion1}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 3ª Evaluación  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{3ª Evaluación}
+
+\begingradingrange{Evaluacion3}
+
+\question[2]
+Resuelve el siguiente sistema de ecuaciones por el método gráfico.
+\begin{flushleft}
+    $\begin{cases}
+            \nonumber
+            x + y  = 2 \\
+            \nonumber
+            3x - y = 2
+        \end{cases}$
+\end{flushleft}
+
+\begin{figure}[h]
+    \begin{tikzpicture}[scale=1]
+        \tkzInit[xmax=6,ymax=6,xmin=-6,ymin=-6]
+        \tkzGrid
+        \tkzAxeXY
+    \end{tikzpicture}
+\end{figure}
+
+\newpage
+\question[3]
+    Siete chocolatinas y cinco refrescos cuestan 30\euro{}. Tres chocolatinas y un refresco valen 10,80\euro{}.
+    ¿Cuánto costarán once chocolatinas y nueve refrescos?
+    \vspace{\stretch{1}}
+
+\newpage
+\question[5]
+El número de libros solicitados en una biblioteca ha sido:
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \cellcolor[gray]{0.8}Libros ($x_i$)   & 1 & 2  & 3 & 4 & 5 & 6 \\
+        \hline
+        \cellcolor[gray]{0.8}Usuarios ($f_i$) & 8 & 12 & 9 & 6 & 3 & 2 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{parts}
+    \part
+    Calcula la tabla de frecuencias relativas y acumuladas.
+    \vspace{\stretch{2}}
+
+    \part
+    %Media = 2,75
+    Calcula la media, la mediana y moda.
+    \begin{equation*}
+        \bar{x}=\frac{\sum{x_i f_i}}{N} = \sum{x_i h_i}
+    \end{equation*}
+    \begin{equation*}
+        N = \sum{f_i}
+    \end{equation*}
+    \vspace{\stretch{1}}
+
+    \newpage
+    \part
+    %Varianza = 1,9375, Desviación típica = 1,39
+    Calcula la varianza y la desviación típica.
+    \begin{equation*}
+        s^2=\frac{\sum{({x_i - \bar{x}})^2} f_i}{N} = \frac{\sum{{x_i}^2 f_i}}{N} - \bar{x}^2 = \sum{{x_i}^2 h_i} - \bar{x}^2
+    \end{equation*}
+
+    \begin{equation*}
+        s=\sqrt{\frac{\sum{({x_i - \bar{x}})^2} f_i}{N}} = \sqrt{\frac{\sum{{x_i}^2 f_i}}{N} - \bar{x}^2} = \sqrt{\sum{{x_i}^2 h_i} - \bar{x}^2}
+    \end{equation*}
+    \vspace{\stretch{1}}
+
+    \part
+    Calcula el coeficiente de variación.
+    % CV = 0,506
+    \begin{equation*}
+        CV = \frac{s}{\bar{x}}
+    \end{equation*}
+    \vspace{\stretch{1}}
+
+    \part
+    El año anterior se solicitaron una media de $2,4$ libros con una desviación típica de $1,5$.
+    Indica, justificando la respuesta, que año se han solicitados más libros, en cual ha se ha producido más diferencia de solicitudes entre solicitantes y que media es más representativa sobre el número de libros que se solicitan en la biblioteca.
+    \vspace{\stretch{1}}
+\end{parts}
+\endgradingrange{Evaluacion3}
+
+\end{questions}
+\end{document}

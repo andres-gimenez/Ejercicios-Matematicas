@@ -1,0 +1,346 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { Hoja 2.4 }
+\newcommand{\nombreHoja} { Raíces 2 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+\pointsdroppedatright   %% No mostrar la puntuación
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+    %%\StudentData
+
+    \begin{center}
+		\fbox{\fbox{\parbox{5.5in}{\centering
+		Estos ejercicios están destinados a ejercitar la destreza en la aritmética. No uséis la calculadora para realizarlos. En ninguno de ellos debéis obtener decimales.}}}
+	\end{center}
+
+    \begin{questions}
+        \question
+        Extrae factores de los radicales.
+        \begin{parts}
+            \part
+                $\sqrt{3^4 \cdot 5^7}$
+                \begin{solution}
+                    \begin{multline*}
+                        \sqrt{3^4 \cdot 5^7} = \sqrt{2^4} \cdot \sqrt{5^7} = \sqrt{2^4} \cdot \sqrt{5^6 \cdot 5} = \dots \\
+                        \dots = \sqrt{(2^2)^2} \cdot \sqrt{(5^3)^2} \cdot \sqrt{5} = 3^2 \cdot 5^3 \cdot \sqrt{5} = \boxed{1125 \sqrt{5}}
+                    \end{multline*}
+				\end{solution}
+            \part
+                $\sqrt{25^4 \cdot 81^3}$
+                \begin{solution}
+                    \begin{equation*}
+                        \sqrt{25^4 \cdot 81^3} = \sqrt{25^4} \cdot \sqrt{(9^2)^3} = \sqrt{(25^2)^2} \cdot \sqrt{(9^3)^2} = \boxed{25^2 \cdot 9^3}
+                    \end{equation*}
+                \end{solution}
+            \part
+                $\sqrt[4]{6^7 \cdot 3^9}$
+                \begin{solution}
+                    \begin{multline*}
+                        \sqrt[4]{6^7 \cdot 3^9} = \sqrt[4]{(2 \cdot 3)^7 \cdot 3^9} = \sqrt[4]{2 ^7 \cdot 3^7 \cdot 3^9} =
+                        \sqrt[4]{2^7 \cdot 3^{16}} = \dots \\
+                        \dots = \sqrt[4]{2^4 \cdot 2^3 \cdot (3^4)^4} = \sqrt[4]{2^4} \cdot \sqrt[4]{2^3} \cdot \sqrt[4]{(3^4)^4} =
+                        2 \cdot \sqrt[4]{2^3} \cdot 3^4 = \dots \\
+                        \dots = \boxed{2 \cdot 3^4 \cdot \sqrt[4]{2^3}} = 162 \sqrt[4]{2^3}
+                    \end{multline*}
+                \end{solution}
+            \part
+                $\sqrt[4]{11^5 \cdot 7^7}$
+                \begin{solution}
+                    \begin{multline*}
+                        \sqrt[4]{11^5 \cdot 7^7} = \sqrt[4]{11^4 \cdot 11 \cdot 7^4 \cdot 7^3} = \sqrt[4]{11^4} \cdot \sqrt[4]{11} \cdot \sqrt[4]{7^4} \cdot \sqrt[4]{7^3} = \dots \\
+                        \cdots = 11 \cdot \sqrt[4]{11} \cdot 7 \cdot \sqrt[4]{7^3} = 11 \cdot 7 \cdot \sqrt[4]{11} \cdot \sqrt[4]{7^3}
+                        = \boxed{11 \cdot 7 \cdot \sqrt[4]{11 \cdot 7^3}}
+                    \end{multline*}
+                \end{solution}
+        \end{parts}
+
+        \question
+        Factoriza y extrae factores de los radicales.
+        \begin{parts}
+            \part
+                $\sqrt{3087}$
+                \begin{solution}
+                    \begin{multline*}
+                        \sqrt{3087} = \sqrt{3^2 \cdot 7^3} = \sqrt{3^2} \cdot \sqrt{7^3} = \sqrt{3^2} \cdot \sqrt{7^2 \cdot 7} = \dots \\
+                        \cdots = \sqrt{3^2} \cdot \sqrt{7^2} \cdot \sqrt{7} = 3 \cdot 7 \cdot \sqrt{7} = \boxed{21 \sqrt{7}}
+                    \end{multline*}
+                \end{solution}
+            \part
+                $\sqrt[5]{0,00224}$
+                \begin{solution}
+                    \begin{multline*}
+                        \sqrt[5]{0,00224} = \sqrt[5]{224 \cdot 10^{-5}} = \sqrt[5]{2^5 \cdot 7 \cdot 10^{-5}} = \sqrt[5]{2^5} \cdot \sqrt[5]{7} \cdot \sqrt[5]{10^{-5}} = \dots \\
+                        \cdots = 2 \cdot 10^{-1} \cdot \sqrt[5]{7} = \boxed{0,2 \cdot \sqrt[5]{7}}
+                    \end{multline*}
+                \end{solution}
+            \part
+                $\sqrt[6]{15.625}$
+                \begin{solution}
+                    \\
+                    $\sqrt[6]{15.625} = \sqrt[6]{5^6} = \boxed{5}$
+                    \\
+                \end{solution}
+            \part
+                $\sqrt[5]{22.400.000}$
+                \begin{solution}
+                    \begin{multline*}
+                        \sqrt[5]{22.400.000} = \sqrt[5]{224 \cdot 10^{5}} = \sqrt[5]{2^5 \cdot 7 \cdot 10^{5}} = \sqrt[5]{2^5} \cdot \sqrt[5]{7} \cdot \sqrt[5]{10^{5}} = \dots \\
+                        \cdots = 2 \cdot 10 \cdot \sqrt[5]{7} = \boxed{20 \cdot \sqrt[5]{7}}
+                    \end{multline*}
+                \end{solution}
+        \end{parts}
+
+        \question
+        Realiza estas operaciones expresando el resultado de la forma más sencilla posible.
+        \begin{parts}
+            \part
+                $\sqrt{2} \cdot \sqrt[3]{5}$
+                \begin{solution}
+                  No se puede simplificar. \\
+                  \boxed{\sqrt{2} \cdot \sqrt[3]{5}}
+                \end{solution}
+            \part
+                $\sqrt[5]{0,00224}$
+                \begin{solution}
+                    \begin{multline*}
+                        \sqrt[5]{0,00224} = \sqrt[5]{224 \cdot 10^{-5}} = \sqrt[5]{2^5 \cdot 7 \cdot 10^{-5}} = \sqrt[5]{2^5} \cdot \sqrt[5]{7} \cdot \sqrt[5]{10^{-5}} = \dots \\
+                        \cdots = 2 \cdot 10^{-1} \cdot \sqrt[5]{7} = \boxed{0,2 \cdot \sqrt[5]{7}}
+                    \end{multline*}
+                \end{solution}
+            \part
+                $\sqrt[6]{15.625}$
+                \begin{solution}
+                    \\
+                    $\sqrt[6]{15.625} = \sqrt[6]{5^6} = \boxed{5}$
+                    \\
+                \end{solution}
+            \part
+                $\sqrt[5]{22.400.000}$
+                \begin{solution}
+                    \begin{multline*}
+                        \sqrt[5]{22.400.000} = \sqrt[5]{224 \cdot 10^{5}} = \sqrt[5]{2^5 \cdot 7 \cdot 10^{5}} = \sqrt[5]{2^5} \cdot \sqrt[5]{7} \cdot \sqrt[5]{10^{5}} = \dots \\
+                        \cdots = 2 \cdot 10 \cdot \sqrt[5]{7} = \boxed{20 \cdot \sqrt[5]{7}}
+                    \end{multline*}
+                \end{solution}
+        \end{parts}
+
+        \question
+        Expresa como potencia de exponente fraccionario si es posible
+        \begin{parts}
+            \part
+                $\sqrt[5]{3}$
+                \begin{solution}
+                    \\
+                    $\sqrt[5]{3} = 3^{\frac{1}{5}}$
+                    \\
+                \end{solution}
+            \part
+                $\sqrt[4]{-2^3}$
+                \begin{solution}
+                    \\
+                    $\sqrt[4]{-2^3} = -2^{\frac{3}{4}}$
+                    \\
+                \end{solution}
+            \part
+                $\sqrt{2^5}$
+                \begin{solution}
+                    \\
+                    $\sqrt{2^5} = 2^{\frac{5}{2}}$
+                    \\
+                \end{solution}
+            \part
+                $\sqrt[5]{2^{-4}}$
+                \begin{solution}
+                    \\
+                    $\sqrt[5]{2^{-4}} = 2^{-\frac{4}{5}}$
+                    \\
+                \end{solution}
+            \part
+                $\sqrt[3]{7^9}$
+                \begin{solution}
+                    \\
+                    $\sqrt[3]{7^9} = 7^{\frac{9}{3}} = \boxed{7^3}$
+                    \\
+                \end{solution}
+            \part
+                $\left(\sqrt[4]{7^3}\right)^6$
+                \begin{solution}
+                    \\
+                    $\left(\sqrt[4]{7^3}\right)^6 = \boxed{\left(7^{\frac{3}{4}}\right)^6} = 7^{\left(\frac{3}{4} \cdot 6\right)} = 7^{\frac{18}{4}} = 7^{\frac{9}{2}} $
+                    \\
+                \end{solution}
+        \end{parts}
+        \question
+        Escribe las siguientes potencias de exponente fraccionario como radicales.
+        \begin{parts}
+            \part
+                $7^{\frac{2}{3}}$
+                \begin{solution}
+                    \\
+                    $7^{\frac{2}{3}} = \sqrt[3]{7^2}$
+                    \\
+                \end{solution}
+            \part
+                $\left(5^{\frac{1}{3}} \right)^{\frac{3}{2}}$
+                \begin{solution}
+                    \\
+                    $\left(5^{\frac{1}{3}} \right)^{\frac{3}{2}} = \sqrt{{\left(5^{\frac{1}{3}} \right)}^3} = \boxed{\sqrt{\left(\sqrt[3]{5}\right)^3}} = \sqrt{5} $
+                    \\
+                \end{solution}
+            \part
+                $\left( 5^2 \right)^{\frac{3}{7}}$
+                \begin{solution}
+                    \\
+                    $\left( 5^2 \right)^{\frac{3}{7}} = \boxed{\sqrt[7]{\left(5^2\right)^3}} = \sqrt[7]{5^6}$
+                    \\
+                \end{solution}
+            \part
+                $3^{- \frac{2}{5}}$
+                \begin{solution}
+                    \\
+                    $3^{- \frac{2}{5}} = \boxed{\sqrt[5]{3^{-2}}} = \sqrt[5]{\frac{1}{3^{2}}} = \frac{1}{\sqrt[5]{3^2}} = \frac{\sqrt[5]{3^3}}{\sqrt[5]{3^2} \cdot \sqrt[5]{3^3}} = \frac{\sqrt[5]{3^3}}{3} $
+                    \\
+                \end{solution}
+            \part
+                $3^{\frac{5}{3}}$
+                \begin{solution}
+                    \\
+                    $3^{\frac{5}{3}} = \sqrt[3]{3^5}$
+                    \\
+                \end{solution}
+            \part
+                $\left( 3^{\frac{1}{15}} \right)^{10}$
+                \begin{solution}
+                    \\
+                    $\left( 3^{\frac{1}{15}} \right)^{10} = \boxed{\left(\sqrt[15]{3}\right)^{10}} = \sqrt[15]{3^{10}} = \sqrt[3]{3^2}$
+                    \\
+                \end{solution}
+        \end{parts}
+
+        %\newpage
+
+        \question
+        Escribe como un único radical.
+        \begin{parts}
+            \part
+                $2^{\frac{2}{4}} \cdot 2^{\frac{3}{2}} $
+                \begin{solution}
+                    \\
+                    $2^{\frac{2}{4}} \cdot 2^{\frac{3}{2}} = 2^{\left(\frac{2}{4} + \frac{3}{2}\right)} = 2^{\left(\frac{2}{4} + \frac{3}{2}\right)} = 2^{\frac{8}{4}} = \boxed{2^2} = 4$
+                    \\
+                \end{solution}
+            \part
+                $\sqrt[3]{3} : 3 $
+                \begin{solution}
+                    \\
+                    $\sqrt[3]{3} : 3 = 3^{\frac{1}{3}} : 3 = 3^{\left(\frac{1}{3} - 1\right)} = 3^{-\frac{2}{3}} = \sqrt[3]{3^{-2}} = \boxed{\sqrt[3]{\frac{1}{3^2}}} = \frac{1}{\sqrt[3]{3^2}} 
+                    = \frac{\sqrt[3]{3}}{\sqrt[3]{3^2} \cdot \sqrt[3]{3}} = \frac{\sqrt[3]{3}}{3} $
+                    \\
+                \end{solution}
+            \part
+                $\sqrt[4]{3} \cdot 2^{\frac{1}{2}}$
+                \begin{solution}
+                    \\
+                    $\sqrt[4]{3} \cdot 2^{\frac{1}{2}} = \sqrt[4]{3} \cdot 2^{\frac{2}{4}} = \sqrt[4]{3} \cdot \sqrt[4]{2^2} =  \boxed{\sqrt[4]{3 \cdot 2^2}} $
+                    \\
+                \end{solution}
+            \part
+                $\sqrt[3]{45} : (\sqrt{3})^2$
+                \begin{solution}
+                    \\
+                    $\sqrt[3]{45} : (\sqrt{3})^2 = \sqrt[3]{45} : 3 = \sqrt[3]{45} : \sqrt[3]{3^3} = \boxed{\sqrt[3]{\frac{45}{3^3}}} = \sqrt[3]{\frac{45}{27}} $
+                    \\
+                \end{solution}
+            \part
+                $3^{\frac{2}{3}} \cdot 9$
+                \begin{solution}
+                    \\
+                    $3^{\frac{2}{3}} \cdot 9 = 3^{\frac{2}{3}} \cdot 3^2 = 3^{\left(\frac{2}{3} + 2\right)} = 3^{\frac{8}{3}} = \boxed{\sqrt[3]{3^8}} $
+                    \\
+                \end{solution}
+            \part
+                $7^{\frac{1}{5}} \cdot \left(6^{\frac{2}{10}} \right)^{\frac{1}{2}}$
+                \begin{solution}
+                    \\
+                    $7^{\frac{1}{5}} \cdot 6^{\left(\frac{2}{10} \cdot \frac{1}{2}\right)} = 7^{\frac{1}{5}} \cdot 6^{\frac{1}{10}} =
+                    7^{\frac{2}{10}} \cdot 6^{\frac{1}{10}} = {\left(7^2 \cdot 6\right)}^{\frac{1}{10}} = \boxed{\sqrt[10]{7^2 \cdot 6}} $
+                    \\
+                \end{solution}
+        \end{parts}
+
+        \question
+        Realiza estas operaciones expresando el resultado de la forma más sencilla posible.
+        \begin{parts}
+            \part
+                $\sqrt[5]{\sqrt[4]{\sqrt[3]{\sqrt[3]{16^6}}}}$
+                \begin{solution}
+                    \\
+                    $\sqrt[5]{\sqrt[4]{\sqrt[3]{\sqrt[3]{16^6}}}} = \sqrt[{5 \cdot 4 \cdot 3 \cdot 3}]{16^6} = \sqrt[180]{16^6} = \sqrt[30]{16} = \sqrt[30]{2^4} = \boxed{\sqrt[15]{2^2}} $
+                    \\
+                \end{solution}
+            \part
+                $\sqrt{32 \cdot \sqrt{2^7}}$
+                \begin{solution}
+                    \begin{multline*}
+                        \sqrt{32 \cdot \sqrt{2^7}} = \sqrt{16} \cdot \sqrt{\sqrt{2^7}} = 4 \sqrt[4]{2^7} = \cdots \\
+                        \cdots = 4 \sqrt[4]{2^4 \cdot 2^3} = 4 \cdot \sqrt[4]{2^7} = 4 \cdot \sqrt[4]{2^4 \cdot 2^3} = 4 \cdot 2 \cdot \sqrt[4]{2^3} =  \boxed{8 \sqrt[4]{2^3}}
+                    \end{multline*}
+                \end{solution}
+        \end{parts}
+
+        \question
+        Extrae factores de los radicales y expresa de forma más sencilla posible.
+        \begin{parts}
+            \part
+                $8 \sqrt{2} - {\sqrt{32}}$
+                \begin{solution}
+                    \begin{multline*}
+                        8 \sqrt{2} - {\sqrt{32}} = 8 \sqrt{2} - {\sqrt{2^5}} = 8 \sqrt{2} - {\sqrt{2^4 \cdot 2}} = \dots \\
+                        \cdots = 8 \sqrt{2} - {\sqrt{2^4} \cdot \sqrt{2}} = 
+                        8 \sqrt{2} - 2^2 \sqrt{2} = 8 \sqrt{2} - 4 \sqrt{2} = \boxed{4 \sqrt{2}}
+                    \end{multline*}
+                \end{solution}
+            \part
+                $\sqrt{27} - \sqrt{12} + \sqrt{75}$
+                \begin{solution}
+                    \\
+                    $\sqrt{27} - \sqrt{12} + \sqrt{75} = \sqrt{3^3} - \sqrt{2^2 \cdot 3} + \sqrt{5^2 \cdot 3} = 3\sqrt{3} - 2 \sqrt{3} + 5\sqrt{3} = \boxed{6 \sqrt{3}}$
+                    \\
+                \end{solution}
+            \part
+                $2 \sqrt{48} - 3 \sqrt{675} + \sqrt{588}$
+                \begin{solution}
+                    \begin{multline*}
+                        2 \sqrt{48} - 3 \sqrt{675} + \sqrt{588} = 2 \sqrt{2^4 \cdot 3} - 3 \sqrt{3^3 \cdot 5^2} + \sqrt{2^2 \cdot 3 \cdot 7^2} = \dots \\
+                        \cdots = 2 \cdot 2^2 \cdot \sqrt{3} - 3 \cdot 3 \cdot 5 \cdot \sqrt{3} + 2 \cdot 7 \cdot \sqrt{3} = \dots \\
+                        \cdots = 8\sqrt{3} - 45 \sqrt{3} + 14 \sqrt{3} = \boxed{-23 \sqrt{3}}
+                    \end{multline*}
+                \end{solution}
+            \part
+                $\sqrt[3]{375} + \sqrt[3]{81}$
+                \begin{solution}
+                    \\
+                    $\sqrt[3]{375} + \sqrt[3]{81} = \sqrt[3]{3 \cdot 5^3} + \sqrt[3]{3^4} = 5 \sqrt[3]{3} + 3 \sqrt[3]{3} = \boxed{8 \sqrt[3]{3}}$
+                    \\
+                \end{solution}
+        \end{parts}
+
+    \end{questions}
+\end{document}

@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Examen 3ª evaluación }
+\newcommand{\documentContent} { Ecuaciones, sistemas de ecuaciones y funciones } 
+\newcommand{\waterMark} { Modelo A} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eqparbox}
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.16}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=red,only marks,mark=*}} \pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
+
+\pgfplotsset{
+    % Global Styles
+    % axis lines = middle,
+    % xlabel = $x$,
+    % ylabel = $y$,
+    % no markers,
+    % samples=50,
+    % grid = both,
+    trig format plots=rad,
+    grid style={dashed, gray!30},
+    %enlargelimits = false,
+    %axis line style = {line width=0.5pt},
+    % every axis plot/.append style={
+    %     line width = 1.25pt,
+    %     smooth,
+    %     },
+    % Label every pi
+    halves/.style={
+    xtick = {-12.5664, -10.9956, -9.42478, -7.85398, -6.28319, -4.71239, -3.14159, -1.5708, 0, 1.5708, 3.14159, 4.71239, 6.28319, 7.85398, 9.42478, 10.9956, 12.5664, 14.1372, 15.708, 17.2788, 18.8496, 20.4204, 21.9911, 23.5619, 25.1327},
+    xticklabels = {$-4\pi$,$-\frac{7\pi}{2}$,$-3\pi$,$-\frac{5\pi}{2}$,$-2\pi$,$-\frac{3\pi}{2}$,$-\pi$,$-\frac{\pi}{2}$,$0$,$\frac{\pi}{2}$,$\pi$,$\frac{3\pi}{2}$,$2\pi$,$\frac{5\pi}{2}$,$3\pi$,$\frac{7\pi}{2}$,$4\pi$,$\frac{9\pi}{2}$,$5\pi$,$\frac{11\pi}{2}$,$6\pi$,$\frac{13\pi}{2}$,$7\pi$,$\frac{15\pi}{2}$,$8\pi$}
+    },
+    % Label every pi
+    wholes/.style={
+    xtick = {-12.5664, -9.42478, -6.28319, -3.14159, 0., 3.14159, 6.28319, 9.42478, 12.5664, 15.708, 18.8496, 21.9911, 25.1327},
+    xticklabels = {$-4\pi$,$-3\pi$,$-2\pi$,$-\pi$,$0$,$\pi$,$2\pi$,$3\pi$,$4\pi$,$5\pi$,$6\pi$,$7\pi$,$8\pi$}
+    },
+    soldot/.style={color=red,only marks,mark=*},
+    holdot/.style={color=red,fill=white,only marks,mark=*},
+    soldotBlack/.style={color=black,only marks,mark=*},
+    holdotBlack/.style={color=black,fill=white,only marks,mark=*},
+}
+
+\begin{document}
+
+\justifying
+
+ \phantom{ }\\
+
+ \vspace{1cm}
+
+    \begin{figure}[h]
+        \begin{tikzpicture}[scale=0.8]
+            \tkzInit[xmax=10,ymax=10,xmin=-10,ymin=-10]
+            \tkzGrid[color=black!50]
+            \tkzAxeXY
+        \end{tikzpicture}
+    \end{figure}
+
+    
+\end{document}

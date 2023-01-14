@@ -1,0 +1,203 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { Hoja 2.6 }
+\newcommand{\nombreHoja} { Polinomios }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+\pointsdroppedatright   %% No mostrar la puntuación
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+\printanswers
+%\SolutionEmphasis{\color{red}}        %color font solutions
+%\unframedsolutions                    %Not necessary for table environment
+%\shadedsolutions                      %gives backgroundcolor to solutions
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+    %%\StudentData
+
+    \begin{questions}
+        \question
+        Un polinomio es una expresión algebraica formada por la suma de un número finito de monomios, de la forma:
+
+        \begin{equation*} 
+            P(x) = a_n x^n + a_{n-1} x^{n-1} + a_{n-2} x^{n-2} + \cdots + a_2 x^2 + a_x x + a_0 \in P[x]
+        \end{equation*}
+
+        donde, $n \in \mathbb{N}$ ($n$ es un numero natural ó n pertenece a los número naturales).
+        Se denomina:
+
+        \begin{itemize}
+            \item \textbf{Coeficientes:} $a_n, a_{n-1}, a_{n-2}, \cdots, a_2, a_1, a_0$. 
+            \item \textbf{Variable:} La parte literal ($x$).
+            \item \textbf{Coeficiente principal:} $a_n$.
+            \item \textbf{Término independiente:} $a_0$.
+            \item \textbf{Grado:} El mayor de los exponentes de las variables ($n$).
+        \end{itemize}
+
+        Completa la tabla
+
+        \begin{table}[h]
+            \begin{tabular}{|p{3cm}|c|c|c|c|}
+            \hline
+            \rowcolor[gray]{.9} 
+            Polinomio              & Grado                     & Variable                 & Termimo principal        & Término independiente    \\ \hline
+            $x^2 + x + 2$          & $2$                       & $x$                      & $1$                      &       $2$                \\ \hline
+            $2x^2 + 2x - 1$        & \ifprintanswers $2$ \fi   & \ifprintanswers $x$ \fi  & \ifprintanswers $2$ \fi  & \ifprintanswers $-1$ \fi  \\ \hline
+            $2 + 3x - 3x^2$        & \ifprintanswers $2$ \fi   & \ifprintanswers $x$ \fi  & $-3$                     & \ifprintanswers $2$ \fi  \\ \hline
+            $y^3 - 2y$             & \ifprintanswers $3$ \fi   & \ifprintanswers $y$ \fi  & $1$                      & \ifprintanswers $0$ \fi \\ \hline
+            $x y^3 - 2x$           & $4$                       & $x$ é $y$                & \ifprintanswers $1$ \fi  & \ifprintanswers $0$ \fi \\ \hline
+            $2 x^2 y^3 - 2x$       & \ifprintanswers $5$ \fi   & $x$ é $y$                & \ifprintanswers $2$ \fi  & \ifprintanswers $0$ \fi \\ \hline
+            $x^{23} - 1 $          & \ifprintanswers $23$ \fi  & \ifprintanswers $x$ \fi  & \ifprintanswers $1$ \fi  & \ifprintanswers $-1$ \fi \\ \hline
+            \end{tabular}
+        \end{table}
+
+        \question
+        Calcula las siguientes operaciones con monomios
+        \begin{parts}
+            \part
+                $3x^2+4x^2$ \ifprintanswers $=7x^2$ \fi 
+            \part
+                $5x^2 + \frac{1}{2}x^2$ \ifprintanswers $=\left(5+\frac{1}{2}\right) x^2 = \frac{11}{2} x^2$ \fi
+            \part
+                $x - 5x + 3x$ \ifprintanswers $= \left(1-5+3\right) x^2 = -1 \cdot x^2 = -x^2$ \fi
+            \part
+                $2x^2 \cdot 3x^5$ \ifprintanswers $= \left(2\cdot3\right) x^{2+5} = 6x^7 $ \fi
+            \part
+                $2x^2 \cdot \frac{1}{2}x^2$ \ifprintanswers $= \left(2 \cdot \frac{1}{2}\right) x^{2+2} = 1\cdot x^4 = x^4$ \fi
+            \part 
+                ${(-x^3)}^4$ \ifprintanswers $=\left(-1\right)^4 \left(x^3\right)^4 = +1 \cdot x^{12} = x^{12}$ \fi
+            \part 
+                $-{(x^3)}^4$ \ifprintanswers $=\left(-1\right) x^{3\cdot4} = -x^{12}$ \fi
+        \end{parts}
+
+        \newpage
+
+        \question
+        Si $P(x)=x^5 - 2x^3 + 2 x^2 - 3x - 5$, evalua.
+        \begin{parts}
+            \part
+                $P(-2)$ \ifprintanswers $=(-2)^5 - 2(-2)^3 + 2 (-2)^2 - 3(-2) - 5 = -32 - 2\cdot (-8) + 2 \cdot4 -3 (-2) - 5 = -32 +16+8 +6-5= -7$ \fi 
+            \part
+                $P(-1)$ \ifprintanswers $=(-1)^5 - 2(-1)^3 + 2 (-1)^2 - 3(-1) - 5 = -1 - 2 \cdot (-1) + 2 \cdot 1 - 3 \cdot (-1) -5 = -1 +2 +2 +3 -5 = 1$ \fi 
+            \part
+                $P(0)$ \ifprintanswers $=(0)^5 - 2(0)^3 + 2 (0)^2 - 3(0) - 5 = 0 - 0 + 0 - 0 -5 = -5$ \fi 
+            \part
+                $P(1)$ \ifprintanswers $=(1)^5 - 2(1)^3 + 2 (1)^2 - 3(1) - 5 = 1 - 2 + 2 - 3 - 5 = -7$ \fi 
+            \part
+                $P(2)$ \ifprintanswers $=(2)^5 - 2(2)^3 + 2 (2)^2 - 3(2) - 5 = 32 - 2\cdot 8 + 2 \cdot 4 - 3 \cdot 2 - 5 = 32 - 16 +8-6 -5 = 13$ \fi 
+        \end{parts}
+
+        \question
+        Si $P(x)=x^3 - x^2 -2x +2$, $Q(x)=2x^3-3x^2+x-1$, calcula.
+        \begin{parts}
+            \part
+                $P(x) + Q(X)$
+                \begin{solution}
+                    \[
+                        \begin{array}{@{} r *{12}{ @{}>{{}}r<{{}} } @{}}
+                           & x^3  & - & x^2  & - & 2x & + & 2 \\
+                        + \\
+                           & 2x^2 & - & 3x^2 & + & x & - & 1 \\
+                         \midrule
+                           & 3 x^3 & - & 4x^2 & - & x & + & 1\\
+                         \end{array}
+                    \]
+                \end{solution}
+            \part
+                $2 P(x) + 4 Q(x)$
+                \begin{solution}
+                    \begin{multline*}
+                        2 P(x) + 4 Q(x) = 2 \left(x^3 - x^2 -2x +2\right) + 4 \left(2x^3-3x^2+x-1\right) = \dots \\
+                        \dots = 2x^3 - 2x^2 -4x +4 + 8x^3-12x^2+4x-4 = \boxed{10x^3 -14x^2}
+                    \end{multline*}
+                \end{solution}
+            \part
+                $P(x) - 3 Q(x)$
+                \begin{solution}
+                    \nopagebreak
+                    \begin{multline*}
+                        P(x) - 3 Q(x) = \left(x^3 - x^2 -2x +2\right) - 3 \left(2x^3-3x^2+x-1\right) = \dots \\
+                        \dots = x^3 - x^2 -2x +2 - 6x^3 + 9x^2 + 3x + 3 = \boxed{-5x^3 + 8x^2 - 5x + 5}
+                    \end{multline*}
+                \end{solution}
+        \end{parts}
+
+        \question
+        Si $P(x)=2x-1$, $Q(x)=x^2 + x - 3$, calcula.
+        \begin{parts}
+            \part
+               \nopagebreak
+                $P(x) \cdot Q(X)$
+                \begin{solution}
+                    \nopagebreak
+                    \[
+                        \begin{array}{@{} r *{12}{ @{}>{{}}r<{{}} } @{}}
+                            & & & x^2 & + & x & - & 3 \\
+                            \times \\
+                            & & & & & 2 x^{\phantom{2}} & - & 1 \\
+                            \midrule
+                               &      & - & x^2 & - & x & + & 3\\
+                               & 2x^3 & + & 2x^2 & - &  6x\\
+                            \midrule
+                               & 2x^3 & + & x^2 & - &  7x & + & 3\\
+                        \end{array}
+                    \]
+                \end{solution}
+            \part
+                $P(x) \cdot 2 Q(x)$
+                \begin{solution}
+                \nopagebreak
+                    \begin{multline*}
+                        P(x) \cdot 2 Q(x) = \left(2x-1\right) \cdot 2 \left(x^2 + x - 3\right) = \left(2x-1\right) \left(2x^2 + 2x - 6\right) = \dots \\
+                        4x^3 +4x^2-12x-2x^2-2x+6 = \boxed{4x^3+2x^2-14x+6}
+                    \end{multline*}
+                \end{solution}
+        \end{parts}
+
+        \question
+        Si $P(x)=2x-3x^2$, $Q(x)=2x^2 - 3$, calcula.
+        \begin{parts}
+            \part
+                $P(x) \cdot Q(X)$
+                \begin{solution}
+                    \nopagebreak
+                    \[
+                        \begin{array}{@{} r *{12}{ @{}>{{}}r<{{}} } @{}}
+                            && && & -& 3x^2 & + & 2x  \\
+                            \times \\
+                            && && & & 2 x^2 & & & - & 3 \\
+                            \midrule
+                               && && & + & 9x^2 & - & 6x \\
+                               & - & 6x^4 & + & 4x^3 \\
+                            \midrule
+                            & - & 6x^4 & + & 4x^3 & + & 9x^2 & - & 6x\\
+                        \end{array}
+                    \]
+                \end{solution}
+            \part
+                $2 P(x) \cdot 4 Q(x)$
+                \begin{solution}
+                \nopagebreak
+                    \begin{multline*}
+                        2 P(x) \cdot 4 Q(x) = 2\left(2x-3x^2\right) \cdot 4 \left(2x^2 - 3\right) = \left(4x-6x^2\right) \left(8x^2-12\right) = \dots \\
+                        32x^3 -48x - 48x^4 + 72x^2 = \boxed{-48x^4+32x^3+72x^2-48x}
+                    \end{multline*}
+                \end{solution}
+        \end{parts}
+    \end{questions}
+\end{document}

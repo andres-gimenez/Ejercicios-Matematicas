@@ -1,0 +1,101 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { 1ª evaluación }
+\newcommand{\documentContent} {Expresiones combinadas y divisibilidad} 
+\newcommand{\waterMark} {  } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+% \renewcommand{\thepartno}{\arabic{partno}}
+\usepackage{xfrac}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+% \printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StudentData{}
+\GradeTableHeader{}
+
+\justifying{}
+
+\begin{questions}
+    \question[2]
+    Resuelve las siguientes operaciones combinadas
+    \begin{parts}
+      \part
+      $3+5 \cdot \left(-2\right) - 4 +12:\left(-6\right)$
+      \vspace{\stretch{5}}
+      \part
+      $\left( -6 -3 \right) \cdot \left[-4 + 2 : \left(-8 + 7\right) \right] $
+      \vspace{\stretch{5}}
+    \end{parts}
+
+    \question[2] Completa
+    \begin{parts}
+      \part Todos los divisores de 12 = $\left\{ \phantom{--------------------} \right\}$
+      \vspace{\stretch{1}}
+      \part Todos los divisores de 30 = $\left\{ \phantom{--------------------} \right\}$
+      \vspace{\stretch{1}}
+      \part 5 primeros múltiplos de 3 = $\left\{ \phantom{--------------------} \right\}$
+      \vspace{\stretch{1}}
+      \part 5 primeros múltiplos de 6 = $\left\{ \phantom{--------------------} \right\}$
+      \vspace{\stretch{1}}
+    \end{parts}
+
+    \newpage{}
+
+    \question[2] Calcula el máximo común divisor y el mínimo como un múltiplo de las siguientes cantidades:
+    \begin{parts}
+      \part 3, 5 y 7
+      \vspace{\stretch{1}}
+      \part 10 y 100 
+      \vspace{\stretch{1}}
+      \part 20, 30 y 90
+      \vspace{\stretch{1}}
+      \part 33, 77 y 231
+      \vspace{\stretch{1}}
+    \end{parts}
+
+    \question[2]
+    A Eva le encantan las manualidades y esta tarde ha decidido hacer pulseras con su madre. 
+    Quiere adornarlas con perlas. Si tiene 24 perlas blancas y 36 azules, 
+    y quiere hacer el máximo número de pulseras posibles de manera que haya la misma cantidad de cada color de perla en cada una de ellas 
+    ¿cuántas pulseras podrá hacer como máximo?
+
+    \vspace{\stretch{5}}
+
+    \newpage{}
+
+    \question[2] En la estación de trenes de cercanías de Fuenlabrada, 
+    salen un tren cada 20 minutos hacia Humanes y un tren cada 24 minutos hacia Leganés.
+    \begin{parts}
+      \part ¿Cada cuánto tiempo ha de estar más atento el jefe de estación, porque coinciden la salida de los dos trenes a la vez?
+      \vspace{\stretch{1}}
+
+      \part Le han pedido al jefe de estación que permita cruzar las vías del tren a peatones a una hora determinada. 
+      Si los dos primeros trenes por cada sentido salen a las 8 en punto de la mañana, 
+      ¿a qué hora debería permitir el paso? ¿a las 12:00 o a las 12:30?.\\
+      \footnotesize{(*)Justifica tu respuesta en función de múltiplos o divisores.}
+      \vspace{\stretch{1}}
+    \end{parts}
+
+\end{questions}
+
+\end{document}

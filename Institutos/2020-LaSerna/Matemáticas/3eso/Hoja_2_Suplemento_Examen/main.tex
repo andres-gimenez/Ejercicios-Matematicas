@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { 2º Evaluación }
+\newcommand{\nombreHoja} { Exponencial } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+\pointsdroppedatright   %% No mostrar la puntuación
+% \pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+% \extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+% \marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+% \usetikzlibrary{positioning,decorations.pathmorphing}
+% \newcommand{\Interval}[4]{%
+%     \tikz{%
+%         \coordinate [label={center:$#1$},label=below:$\rule{0pt}{.35cm}#2$] (a) at (0,0); 
+%         \coordinate [label={center:$#3$},label=below:$\rule{0pt}{.35cm}#4$] (b) at (1.6,0); 
+%         \draw[-{latex},] decorate {(a)--(b)} (-.4,0)--(2,0);
+%     }
+% }
+% \newcommand{\insertinterval}[1]{\rule{0in}{.7cm}\parbox{2.5cm}{#1}}
+
+% \usepackage{pst-plot}
+% \newcommand{\Intervala}{
+% 	\begin{pspicture}(-3,-.5)(3,.5)
+% 		\psaxes[yAxis=false,ticksize=0 -4pt]{<->}(0,0)(-3,-1)(3,1)
+% 		\psline[linecolor=blue,arrowscale=1.25]{o-*}(.5,0)(2,0)
+% 	\end{pspicture}
+% }
+
+\begin{document}
+
+	\StudentData
+	%\GradeTableHeader
+	
+	\justifying
+
+	\begin{questions}
+		\setcounter{question}{0}
+        \question
+        Si doblamos sucesivas veces una hoja de papel por la mitad, el número de capas que obtenemos viene dado como $2^n$ siendo $n$ el número de dobleces.
+        Doblar una hoja de papel, como las que utilizas sueles utilizar es imposible doblarla más de 8 veces. 
+        Sin embargo, se han conseguido doblar 12 veces una hoja de papel estramadamente fina, la cual tenia más de $1km$ de longitud.
+        Vamos a realizar el esperimento mental de suponer que podemos doblar una hoja las veces que haga falta y ver hasta donde llegaria. 
+        Suponiendo que el grosor medio de una hoja de papel es de $0,1mm$, rellena los huecos de la siguiente tabla. 
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{|l|r||c|c|c|}
+            \hline
+            \rowcolor[gray]{0.8}
+            Objeto                                    & altura     & Dobleces         & Capas                      & Grosor                              \\ \hline
+            Grosor de una hoja                        & $0,1mm$    & 0                & $2^{0} = 1$              & $1 \cdot 0{,}1mm = 0{,}1mm$         \\ \hline
+                                                      &            & 1                & $2^{1} = 2$                & $2 \cdot 0{,}1mm = 0{,}2mm$         \\ \hline
+            Un piso                                   & $3 m$      & 15               & $2^{15} = 32.768$        & $ 4.096 \cdot 0{,}1mm = 3{,}27m$    \\ \hline
+            {Edificio de 3 plantas (colegio)}         & $12 m$     & 17               & $2^{17} = 131.072$       & $ 131.072 \cdot 0{,}1mm = 13{,}10m$ \\ \hline
+            {Edificio de 10 plantas}                  & $40 m$     & 19               & $2^{19} = 524.288$       &  \\ \hline
+            Teide                                     & $3.718 m$  & 25               &                          &  \\ \hline
+            Everest                                   & $8.848 m$  & 27               & $2^{27} = 134.217.728$   & $13421{,}77 m$ \\ \hline
+            Salimos al espacio                        & $1 \cdot 10^5 m$ & 30         &                            &  \\ \hline
+            Estación Espacial Internacional           & $4,08 \cdot 10^5 m$ & 32    &                            &  \\ \hline
+            Luna                                      & $3,84 \cdot 10^8 m$ & 40    & $2^{40} = 1,0995 \cdot 10^{12} $  & $ 109.951.163 m$  \\ \hline
+            Sol                                       & $1,5 \cdot 10^{11} m$ & 51    &                          &  \\ \hline
+            \end{tabular}
+        \end{table}
+    
+        \question
+        La tasa media de contagio de una epidemia, tambien llamada R0, se mide como el número de personas al que puede contagiar un contagiado.
+        Para medir 
+        \begin{figure}[h!]
+            \includegraphics[scale=1]{img/contagios}
+            \centering
+        \end{figure}
+        Si la tasa de contagio del COVID-19 en la comunidad de Madrid ha sido de media 18,6 infectados por contagiado. 
+        Calcula el número de contagiados en sucesivas generaciones.
+        \begin{table}[h!]
+            \centering
+            \begin{tabular}{|l|r||c|c|c|}
+            \hline
+            \rowcolor[gray]{0.8}
+            Objeto                                    & altura     & Dobleces         & Capas                    & Grosor                              \\ \hline
+            Grosor de una hoja                        & $0,1mm$    & 0                & $2^{0} = 1$              & $1 \cdot 0{,}1mm = 0{,}1mm$         \\ \hline
+                                                      &            & 1                & $2^{1} = 2$              & $2 \cdot 0{,}1mm = 0{,}2mm$         \\ \hline
+            \end{tabular}
+        \end{table}
+	\end{questions}
+\end{document}

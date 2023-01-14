@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { 3º Evaluación }
+\newcommand{\nombreHoja} { Ecuaciones de 1º y 2º grado } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage{tikz}
+% \usetikzlibrary{arrows}
+
+\begin{document}
+
+	\StudentData
+	\GradeTableHeader
+
+    \justifying
+
+	\begin{questions}
+		\setcounter{question}{0}
+
+        \question[1]
+        Comprueba si la solución de cada ecuación es correcta.
+        \begin{parts}
+            \part
+            $\frac{x-3}{2}-\frac{5x-10}{7} = \frac{-1}{2}$, $\boxed{x=2}$
+            \vspace{\stretch{1}}
+            
+            \part
+            $x^2-x-2 = 0$, $\boxed{x=-1}$ y $\boxed{x=2}$
+            \vspace{\stretch{1}}
+		\end{parts}
+
+		\question[2]
+        Resuelve las siguientes ecuaciones de 1º grado
+        \begin{parts}
+            \part
+            $2x-3 = 8x+21$
+            \vspace{\stretch{1}}
+            
+            \part
+            $16x-9-41x=13-15x+34$
+            \vspace{\stretch{1}}
+
+            % \part
+            % $2(x-1)+3 = 9$
+            % \vspace{\stretch{1}}
+
+            \part
+            $6(2x-3) = 10(2x-5)$
+            \vspace{\stretch{1}}
+		\end{parts}
+
+        \newpage
+		\question[2]
+        Resuelve las siguientes ecuaciones de 2º grado
+        \begin{parts}
+            \part
+            $x^2-5x+4=0$
+            \vspace{\stretch{1}}
+            
+            \part
+            $-x^2-7x-10=0$
+            \vspace{\stretch{1}}
+
+            % \part
+            % $5x^2-7x-6=0$
+            % \vspace{\stretch{1}}
+		\end{parts}
+
+        \question[2]
+        Resuelve las ecuaciones de 2º grados incompletas, sin utilizar la formula
+        \begin{parts}
+            % \part
+            % $x^2-7x=0$
+            % \vspace{\stretch{1}}
+
+            \part
+            $8x-4x^2=0$
+            \vspace{\stretch{1}}
+            
+            % \part
+            % $5x^2-80=0$
+            % \vspace{\stretch{1}}
+
+            \part
+            $5+2x^2=3x^2-11$
+            \vspace{\stretch{1}}
+		\end{parts}
+        
+        \newpage
+        \question[3]
+        Resuelve las siguientes ecuaciones
+        \begin{parts}
+            \part
+            $\frac{(2x-8)}{3}-\frac{x+2}{3}=2$
+            \vspace{\stretch{3}}
+
+            \part
+            $\frac{(2x-8)}{5}-\frac{3(x+2)}{6}=2$
+            \vspace{\stretch{3}}
+		\end{parts}
+	\end{questions}
+\end{document}

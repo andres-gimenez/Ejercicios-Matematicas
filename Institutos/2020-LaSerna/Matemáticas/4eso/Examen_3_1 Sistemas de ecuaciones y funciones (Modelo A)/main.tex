@@ -1,0 +1,147 @@
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\numeroHoja} { 3º Evaluación }
+\renewcommand{\nombreHoja} { Sistemas de ecuaciones y funciones } 
+\renewcommand{\waterMark} { Modelo A } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage{tikz}
+% \usetikzlibrary{arrows}
+
+\begin{document}
+
+	\StudentData
+	\GradeTableHeader
+
+    \justifying
+
+	\begin{questions}
+		\setcounter{question}{0}
+
+		\question[2]
+        Resuelve el siguiente sistema de ecuaciones por el método gráfico.
+            \begin{flushleft}
+                $\begin{cases}
+                    \nonumber
+                    x + y  = 2 \\
+                    \nonumber
+                    3x - y = 2 
+                \end{cases}$
+            \end{flushleft}
+
+            \begin{figure}[h]
+                \begin{tikzpicture}[scale=1]
+                    \tkzInit[xmax=6,ymax=6,xmin=-6,ymin=-6]
+                    \tkzGrid
+                    \tkzAxeXY
+                \end{tikzpicture}
+            \end{figure}
+
+        \newpage
+        \question[3]
+        Resuelve los siguientes sistemas de ecuaciones
+        \begin{parts}
+            \part
+            \begin{flushleft}
+                $\begin{cases}
+                    \nonumber
+                    x - 5y  = -8 \\
+                    \nonumber
+                    x + 3y = 0 
+                \end{cases}$
+            \end{flushleft}
+            \vspace{\stretch{1}}
+
+            \part
+            \begin{flushleft}
+                $\begin{cases}
+                    \nonumber
+                    3x - 4y = -5 \\
+                    \nonumber
+                    5x - 2y = 9 
+                \end{cases}$
+            \end{flushleft}
+            \vspace{\stretch{1}}
+
+            \part
+            \begin{flushleft}
+                $\begin{cases}
+                    \nonumber
+                    -2(3x+2)-4y+6=0 \\
+                    \nonumber
+                    4(x-2)-6y=2
+                \end{cases}$
+            \end{flushleft}
+            \vspace{\stretch{1}}
+        \end{parts}
+
+        \newpage
+        \question[2]
+        En un espectáculo, las entradas de dos adultos y tres niños cuestan 16 \euro{}, y las de cuatro adultos y cinco niños, 30 \euro{}.
+        ¿Cuánto vale una entrada de adulto?
+        \vspace{\stretch{1}}
+
+        \newpage
+        \question[3]
+            Un banco lanza al mercado un plan de inversión cuya rentabilidad R(x), en euros, 
+            viene dada en función de la cantidad invertida, x en euros, por medio de la expresión: \\
+            $R(x) = -0,001x^2 + 0,4x + 3,5 $ \\
+
+            \begin{parts}
+                \part
+                    Completa la tabla de rentabilidad
+                \begin{table}[h]
+                    \centering
+                    \begin{tabular}{|
+                    >{\columncolor[HTML]{CBCEFB}}c |c|c|c|c|c|c|c|}
+                    \hline
+                    Inversión    & 50 & 100 & 150 & 200 & 250 \\ \hline
+                    Rentabilidad &    &    &    &     &       \\ \hline
+                    \end{tabular}
+                \end{table}
+                \vspace{\stretch{1}}
+
+                \part
+                Dibuja la función de rentabilidad en función de la inversión de acuerdo a los valores obtenidos en el apartado anterior.                    
+                    \begin{figure}[h]
+                        \begin{tikzpicture}[scale=0.8]
+                            \begin{axis}[
+                                axis lines=middle,
+                                axis line style={->},
+                                x label style={at={(axis description cs:0.5,-0.01)},anchor=north},
+                                y label style={at={(axis description cs:-0.06,.5)},rotate=90,anchor=south},
+                                xlabel={Inversión},ylabel={Rentabilidad},
+                                grid, width=17cm, xmax=300,ymax=50,xmin=0,ymin=-20,
+                                %axis lines=middle
+                                ]
+                            \end{axis}
+                        \end{tikzpicture}
+                    \end{figure}
+                    
+                \part
+                ¿Qué cantidad interesa invertir para que la rentabilidad sea máxima?
+                \vspace{\stretch{1}}
+            \end{parts}
+
+	\end{questions}
+\end{document}

@@ -1,0 +1,590 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Examen recuperación }
+\newcommand{\documentContent} { Convocatoria extraordinaria } 
+\newcommand{\waterMark} { } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+% \renewcommand{\thepartno}{\roman{partno}}
+\renewcommand{\thepartno}{\arabic{partno}}
+% \renewcommand{\thepartno}{\thesubpart}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+% \printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StudentData
+% \GradeTableHeader
+
+\justifying
+
+\begin{center}
+    \fbox{\fbox{\parbox{6.5in}{
+                La forma de valor el resultado del examen será:
+
+                \begin{equation*} \label{eqn}
+                    \text{Nota} = \left( \text{correctas} - \frac{\text{incorrecta}}{2} \right) \cdot \left( \frac{\text{nota máxima}}{\text{preguntas}}  \right)
+                \end{equation*}
+
+                \vspace{0.2cm}
+                \par
+                Cuando contestes a cada pregunta del cuestionario ten presente:
+                \begin{itemize}
+                    \item Lee atentamente las preguntas y las contestaciones, tienes tiempo de sobra para resolver el examen.
+                    \item Los fallos restan puntos, si no estás seguro de la respuesta no la contestes.
+                    \item Aunque en algunas preguntas pueda parecer que existe más de una respuesta correcta, tienes que dar una respuesta profesional que indique que dominas los conceptos teóricos.
+                \end{itemize}
+            }}}
+\end{center}
+
+
+% \begin{center}
+%     \textbf {"2ª evaluación"}
+% \end{center}
+
+\begin{questions}
+    \setcounter{question}{0}
+    
+    \QuestionNoBreak{}
+    El formato svg es un formato \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \CorrectChoice{}
+            \dots vectorial de imágenes, utilizado en aplicaciones responsive (aquellas que se adaptan al tamaño del dispositivo).
+            \newline
+            \choice{}
+            \dots formato de video sin perdida, muy utilizado para componer video.
+            \newline
+            \choice{}
+            \dots un formato de codificación de audio, ya en desuso.
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    Si hablamos de fps, estamos hablando de \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots un formato de audio sin perdida.
+            \newline
+            \choice{}
+            \dots un formato de video, ya en desuso.
+            \newline
+            \CorrectChoice{}
+            \dots los fotogramas (o frames) por segundo a la que se ha de reproducir un video.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    El TFTP se refiere a\dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots una variante de FTP que implementa seguridad mediante formato SSL.
+            \newline
+            \choice{}
+            \dots una variante de FTP para trasmitir grandes volúmenes de datos.
+            \newline
+            \CorrectChoice{}
+            \dots una variante más simple de FTP, sin seguridad.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    El protocolo FTP \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots no permite crear directorios en el servidor remoto.
+            \newline
+            \choice{}
+            \dots permite crear directorios en el servidor remoto, solo si nos conectamos en modo activo.
+            \newline
+            \CorrectChoice{}
+            \dots permite crear directorios en el servidor remoto.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    Si una conexión HTTP devuelve un código 400 \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots el servidor no está bien configurado, por ejemplo, podría deberse a un error de acceso a la base de datos.
+            \newline
+            \choice{}
+            \dots es un código que utiliza el programador para comunicar el navegador con el servidor.
+            \newline
+            \CorrectChoice{}
+            \dots indica que el cliente ha cometido un error.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{
+		En el cuerpo de un correo electrónico podemos encontrar los campos \dots
+		\newline
+		\nolinebreak{
+			\begin{oneparcheckboxes}
+				\CorrectChoice
+				\dots FROM que identifica él creó el correo,
+				TO que identifica a los destinatarios,
+				CC que identifica a destinatario que recibirá una copia y
+				CCO que identifica a destinatario que recibirá una copia de forma oculta.
+				\newline
+				\choice
+				\dots FROM que identifica él creó el correo,
+				TO que identifica a los destinatarios,
+				CC que identifica a destinatario que recibirá una copia y
+				RETURN que identifica el nombre de usuario al que se le debe contestar.
+				\newline
+				\choice
+				\dots FROM que identifica él creó el correo,
+				TO que identifica a los destinatarios,
+				RETURN que identifica el nombre de usuario al que se le debe contestar y
+				HOST que identifica el nombre de la máquina de origen del correo.
+				\newline
+			\end{oneparcheckboxes}
+		}
+	}
+
+	\QuestionNoBreak{
+		El motivo por el que los editores de correo electrónico no descarga las imágenes por defecto es \dots
+		\newline
+		\nolinebreak{
+			\begin{oneparcheckboxes}
+				\choice
+				\dots por motivos de reducir el tráfico de red.
+				\newline
+                \CorrectChoice
+				\dots por motivos de privacidad.
+				\newline
+				\choice
+				\dots para desmotivar a los usuarios a que muestren imágenes en sus correos.
+				\newline
+			\end{oneparcheckboxes}
+		}
+	}
+
+	\QuestionNoBreak{
+		El protocolo IMAP \dots
+		\newline
+		\nolinebreak{
+			\begin{oneparcheckboxes}
+				\CorrectChoice
+				\dots nos permite consultar el correo del servidor, manteniéndolo en este.
+				\newline
+				\choice
+				\dots nos permite descargar el correo del servidor, borrándolo de este.
+				\newline
+				\choice
+				\dots nos permite enviar correo a un cliente.
+				\newline
+			\end{oneparcheckboxes}
+		}
+	}
+
+	\QuestionNoBreak{
+		El protocolo SMTP
+		\newline
+		\nolinebreak{
+			\begin{oneparcheckboxes}
+				\choice
+				\dots nos permite enviar y recibir correos electrónicos
+				\newline
+                \CorrectChoice
+				\dots utiliza los registros MX del servidor DNS
+				\newline
+				\choice
+				\dots está obsoleto, ya que no mantiene los correos en el servidor.
+				\newline
+			\end{oneparcheckboxes}
+		}
+	}
+    
+    \QuestionNoBreak{}
+    Cuando se realiza una petición a un servidor HTTP \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \CorrectChoice{}
+            \dots podemos utilizar los métodos GET, HEAD, POST y PUT, entre otros.
+            \newline
+            \choice{}
+            \dots hay que preceder la llamada con http.
+            \newline
+            \choice{}
+            \dots tenemos que utilizar un navegador o browser.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    Si una conexión HTTP devuelve un código 200 podemos interpretar que\dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots se ha utilizado el puerto 200.
+            \newline
+            \CorrectChoice{}
+            \dots la conexión se ha realizado con éxito.
+            \newline
+            \choice{}
+            \dots debemos revisar el fichero de log para ver a que tipo de error se refiere.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    Si una conexión HTTP devuelve un código 301\dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots indica que el servidor no está bien configurado, por ejemplo, podría deberse a un error de acceso a la base de datos.
+            \newline
+            \CorrectChoice{}
+            \dots indica que la información ha sido movida a otro lugar.
+            \newline
+            \choice{}
+            \dots indica que la comunicación se ha realizado correctamente.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    Cuando proporcionamos un certificado digital a un servidor Web \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \CorrectChoice{}
+            \dots nos estamos identificando, para que el cliente pueda tener certeza de quien sirve esos datos.
+            \newline
+            \choice{}
+            \dots evitamos que el navegador o browser nos bloquee la página.
+            \newline
+            \choice{}
+            \dots evitamos que personas no autorizadas puedan ver el contenido de nuestra Web.
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    Con un proxy inverso\dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots podemos navegar en Internet sin una conexión directa.
+            \newline
+            \choice{}
+            \dots podemos acceder de forma inversa a un servidor HTTP.
+            \newline
+            \CorrectChoice{}
+            \dots podemos disponer de varios servidores HTTP, con tecnologías distintas y los clientes los interpreten como un único servidor.
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    En una conexión FTP\dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots con el modo pasivo, al copiar un fichero en modo texto entre una máquina Unix y otra Windows cambiará los saltos de línea.
+            \newline
+            \CorrectChoice{}
+            \dots el modo activo utiliza los puertos 21 para conexión de control y 20 para transmitir datos, mientras que en modo pasivo utiliza el 21 para conexión de control y se negocia un puerto distinto entre cliente y servidor.
+            \newline
+            \choice{}
+            \dots el modo pasivo utiliza los puertos 21 para conexión de control y 20 para transmitir datos, mientras que en modo activo utiliza el 21 para conexión de control y se negocia un puerto distinto entre cliente y servidor.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    Un navegador identifica el tipo de archivo que se ha descargado \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots analizando el contenido.
+            \newline
+            \CorrectChoice{}
+            \dots por su tipo MIME.
+            \newline
+            \choice{}
+            \dots por la extensión del nombre del archivo.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    Para conocer el tipo MIME de un fichero\dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \CorrectChoice{}
+            \dots debemos buscar el campo \emph{content-type} de la cabecera que devuelve el protocolo HTTP.
+            \newline
+            \choice{}
+            \dots debemos buscarlo en una lista de referencias dentro del navegador o browser.
+            \newline
+            \choice{}
+            \dots debemos mirar la extensión del nombre del fichero.
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    El protocolo HTTP \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots no permite requerir autentificación por parte del servidor al cliente.
+            \newline
+            \CorrectChoice{}
+            \dots permite requerir autentificación por parte del servidor al cliente.
+            \newline
+            \choice{}
+            \dots no permite requerir autentificación, la identificación hay que realizar la a través de otros mecanismos ajenos al protocolo.
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    El protocolo HTTP \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \CorrectChoice{}
+            \dots utiliza los puertos 80 y 443 por defecto, aunque se puede utilizar otro puerto.
+            \newline
+            \choice{}
+            \dots solo puede utilizar los puertos 80 y 443.
+            \newline
+            \choice{}
+            \dots utiliza los puertos que son negociados entre el cliente y servidor, no obstante, se puede indicar que puerto se quiere que utilice indicándolo en la URL.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    El protocolo HTTP fue creado para \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots crear páginas en Internet, para la difusión de noticias.
+            \newline
+            \choice{}
+            \dots crear aplicaciones que funcionen en un navegador, también llamados browser.
+            \newline
+            \CorrectChoice{}
+            \dots facilitar el acceso a ficheros a través de una red de internet.
+            \newline
+        \end{oneparcheckboxes}
+    }
+   
+    \QuestionNoBreak{}
+    HTML es \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \CorrectChoice{}
+            \dots un lenguaje de marcas que nos permite dar formato a documentos y enlazarlos a través de hipervínculos.
+            \newline
+            \choice{}
+            \dots la extensión que ha de tener una página Web para que la pueda interpretar el navegador, también llamdo browser.
+            \newline
+            \choice{}
+            \dots el lenguaje de Internet.
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    Con un proxy inverso\dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots podemos controlar mejor los accesos a base de datos.
+            \newline
+            \CorrectChoice{}
+            \dots podemos distribuir la carga de un servidor Web y controla ataques DDoS.
+            \newline
+            \choice{}
+            \dots podemos liberar espacio en memoria.
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    El protocolo FTP utiliza \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \CorrectChoice{}
+            \dots los puertos 20 y 21 por defecto.
+            \newline
+            \choice{}
+            \dots los puertos 80 y 433 por defecto.
+            \newline
+            \choice{}
+            \dots los puertos 30 y 31 por defecto.
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    Podemos acceder a un servidor ftp por medio de\dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \CorrectChoice{}
+            \dots línea de comando con comandos ftp o wget, aplicaciones específicas de ftp como filezilla o winscp y navegadores como Crome o Edge.
+            \newline
+            \choice{}
+            \dots línea de comando con comandos ftp o wget, aplicaciones específicas de ftp como filezilla.
+            \newline
+            \choice{}
+            \dots línea de comando con comandos ftp o wget.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    El protocolo FTP \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots es un sistema de almacenamiento de información.
+            \newline
+            \choice{}
+            \dots utiliza el puerto 31 por defecto.
+            \newline
+            \CorrectChoice{}
+            \dots esta basado en arquitectura cliente-servidor.
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    El encargado de codificar las señales de video y audio \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots es el driver de audio y video.
+            \newline
+            \choice{}
+            \dots es el software de visualización de audio o vídeo, pudiendo ser aplicaciones independientes o embebidas en un navegador o browser.
+            \newline
+            \CorrectChoice{}
+            \dots es un software denominado códec. 
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    Cuando hablamos de un formato de video o audio con perdida nos referimos \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots en que no nos garantiza la integridad de la trasmisión.
+            \newline
+            \CorrectChoice{}
+            \dots en que el video o audio reproducido no mantienen la misma calidad que el original.
+            \newline
+            \choice{}
+            \dots en que no nos garantiza la integridad de los datos en el tiempo y por eso debemos tener backup de estos ficheros.
+            \newline
+        \end{oneparcheckboxes}
+    }
+    
+    \QuestionNoBreak{}
+    El objetivo de utilizar formatos de imagen, video o audio con pérdida es \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \CorrectChoice{}
+            \dots reducir el tamaño de los ficheros y el tiempo de descodificación.
+            \newline
+            \choice{}
+            \dots reducir el tamaño de los ficheros.
+            \newline
+            \choice{}
+            \dots reducir el tiempo de descodificación.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    La profundidad de pixel en un formato de imagen o video se refiere\dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots al número de pixel que componen una imagen.
+            \newline
+            \CorrectChoice{}
+            \dots al número de colores que se pueden definir por pixel.
+            \newline
+            \choice{}
+            \dots al tamaño del pixel medido en puntos por pulgas.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \QuestionNoBreak{}
+    Cuando hablamos de los ppp de una imagen nos referimos a \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \choice{}
+            \dots la perdida que tiene al ser comprimida, expresada en partes por puntos.
+            \newline
+            \CorrectChoice{}
+            \dots la densidad de puntos de la imagen, expresada en puntos por pulgada.
+            \newline
+            \choice{}
+            \dots las partes en las que está descompuesta, expresada en pulgadas por partes.
+            \newline
+        \end{oneparcheckboxes}
+    }
+\end{questions}
+
+\end{document}

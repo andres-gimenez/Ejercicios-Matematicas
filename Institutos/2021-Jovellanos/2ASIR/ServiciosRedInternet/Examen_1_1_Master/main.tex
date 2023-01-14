@@ -1,0 +1,486 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Examen 1ª evaluación }
+\newcommand{\documentContent} { Examen ordinario } 
+\newcommand{\waterMark} { Modelo Master } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\StudentData
+% \GradeTableHeader
+
+\justifying
+
+\begin{center}
+    \fbox{\fbox{\parbox{6.5in}{
+                La forma de valor el resultado del examen será:
+
+                \begin{equation*} \label{eqn}
+                    Nota = \left( correctas - \frac{incorrecta}{2} \right) \cdot \left( \frac{nota\:máxima}{preguntas}  \right)
+                \end{equation*}
+
+                \vspace{0.2cm}
+                \par
+                Cuando contestes a cada pregunta del cuestionario ten presente:
+                \begin{itemize}
+                    \item Lee atentamente las preguntas y las contestaciones, tienes tiempo de sobra para resolver el examen.
+                    \item Los fallos restan puntos, si no estás seguro de la respuesta no la contestes.
+                    \item Aunque en algunas preguntas pueda parecer que existe más de una respuesta correcta, tienes que dar una respuesta profesional que indique que dominas los conceptos teóricos.
+                \end{itemize}
+            }}}
+\end{center}
+
+\begin{questions}
+    \setcounter{question}{0}
+
+    \question
+    La arquitectura cliente servidor es \dots
+    \newline
+    \nolinebreak{
+        \begin{oneparcheckboxes}
+            \CorrectChoice
+            \dots un modelo de aplicación distribuida en el que las tareas se reparten entre los proveedores de recursos o servicios, llamados servidores, y los demandantes, llamados clientes.
+            \newline
+            \choice
+            \dots la estructura de aplicación distribuida en la que un host único da servicio a diversos hosts llamados clientes.
+            \newline
+            \choice
+            \dots la estructura que se utiliza en Internet, en la que se centralizan todos los datos en un único servidor, por ejemplo, una base de datos y todos los clientes llaman al servidor para acceder a dichos datos.
+            \newline
+        \end{oneparcheckboxes}
+    }
+
+    \question ¿En el modelo de capas en la que se descompone el protocolo TCP/IP el protocolo DHCP se encuentra en la capa?
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        Capa de aplicación.
+        \newline
+        \choice
+        Capa de transporte.
+        \newline
+        \choice
+        Capa de red.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question ¿En el modelo de capas en la que se descompone el protocolo TCP/IP el protocolo DNS se encuentra en la capa?
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        Capa de aplicación.
+        \newline
+        \choice
+        Capa de transporte.
+        \newline
+        \choice
+        Capa de red.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question ¿En el modelo de capas en la que se descompone el protocolo TCP/IP el protocolo IP se encuentra en la capa?
+    \newline
+    \begin{oneparcheckboxes}
+        \choice
+        Capa de aplicación.
+        \newline
+        \choice
+        Capa de transporte.
+        \newline
+        \CorrectChoice
+        Capa de red.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question El protocolo DHCP \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots nos facilita gestionar las direcciones IP de una red, al incluir nuevos equipos en ella.
+        \newline
+        \choice
+        \dots nos facilita gestionar las direcciones IP de una red, dándonos más flexibilidad antes cambios de configuración y aportándonos una mayor seguridad.
+        \newline
+        \choice
+        \dots nos permite asignar direcciones IP de forma centralizada, impidiendo que estas direcciones se introduzcan de forma manual en la red y ocasionen duplicidad de direcciones IP,
+        lo que es un problema serio en la gestión de redes de área local.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question El protocolo DHCP \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots funciona a través de broadcast, en el que un host envía una petición a la red y se asigna la primera dirección IP que le envía un servidor DHCP.
+        \newline
+        \choice
+        \dots es el único mecanismo por el que se pueden asignar direcciones IP de forma automática.
+        \newline
+        \choice
+        \dots impide que se produzcan duplicidad de direcciones IP en una red, ya que no permite que un host se asigne una dirección IP que ya existe.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question El protocolo DHCP \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots proporciona información de la configuración de red, como nombre de dominio o subred a la que pertenece el host.
+        \newline
+        \choice
+        \dots únicamente proporciona la dirección IP al host que se lo solicita.
+        \newline
+        \choice
+        \dots proporciona solo los cuatro parámetros fundamentales de la configuración de red necesaria, que son dirección IP, mascara de red, puerta de enlace y servidor DNS.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question DHCP Relay es \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots un mecanismo que permite configurar un agente que actúa como intermediario para asignar las direcciones IP en distintas redes.
+        \newline
+        \choice
+        \dots es un protocolo que permite sincronizar dos servidores DHCP con el fin de tener redundancia antes fallos en el mecanismo de asignar direcciones IP.
+        \newline
+        \choice
+        \dots es un mecanismo que nos permite encender y apagar el servicio de asignación de direcciones IP en función de la carga de red.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question DHCP Failover es \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \choice
+        \dots un mecanismo que permite configurar un agente que actúa como intermediario para asignar las direcciones IP en distintas redes.
+        \newline
+        \CorrectChoice
+        \dots es un protocolo que permite sincronizar dos servidores DHCP con el fin de tener redundancia antes fallos en el mecanismo de asignar direcciones IP.
+        \newline
+        \choice
+        \dots es un mecanismo que nos permite asignar direcciones IP a traves de una conexión WiFi.
+        \newline
+    \end{oneparcheckboxes}
+
+    % \penalty -10000
+    \question El DNS se puede definir como \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots una base de datos distribuida y jerárquica que almacena información asociada a nombres de dominio en redes como Internet.
+        \newline
+        \choice
+        \dots un sistema de nombres para que funcionen las páginas web.
+        \newline
+        \choice
+        \dots un traductor para convertir las direcciones de Internet a direcciones más legibles de manera única.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question El nombre del dominio correcto se denomina FQDN (Fully Qualified Domain Name), indica cual de estos corresponde a un FQDN
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        iesjovellanos.com.
+        \newline
+        \choice
+        iesjovellanos.com
+        \newline
+        \choice
+        https://iesjovellanos.com/
+        \newline
+    \end{oneparcheckboxes}
+
+    \question Cuando una estación desea establecer una conexión con una dirección DNS, \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots siempre llama a un servidor DNS para que resuelva la dirección.
+        \newline
+        \choice
+        \dots primero busca la dirección en un registro local, normalmente un fichero llamado hosts.
+        \newline
+        \choice
+        \dots llama de forma secuencial a todos los servidores DNS de una jerarquía, empezando desde el más próximo y terminando por el servidor raíz.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question Las transferencias de zona incrementales, es un mecanismo que utiliza los servidores DNS para \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots delegar la administración de dominios y reducir la carga de trabajo de los servidores DNS.
+        \newline
+        \choice
+        \dots distribuir la carga de trabajo de los servidores DNS.
+        \newline
+        \choice
+        \dots permitir que se pueda incrementar el número de dominios de Internet de una forma gradual.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question Un servidor DNS secundario \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots se encarga de tener copias actualizadas de la información de la zona del DNS.
+        \newline
+        \choice
+        \dots es el segundo servidor DNS que se configura en una máquina, junto a la dirección IP y la máscara de red.
+        \newline
+        \choice
+        \dots es el segundo servidor DNS dentro de la jerarquía de delegación de zonas.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question Sobre el dominio madread.educa.madrid.org. podemos afirmar que \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots org es el segundo nivel de dominio de Internet denominado TDL (Top Level Domain) y madrid es una zona cedida por la entidad que gestiona los dominios org.
+        \newline
+        \choice
+        \dots cada palabra separada por puntos representa una zona de un servidor DNS. Tenemos cuatro zonas de forma jerárquica, org, madrid, educa, madread.
+        \newline
+        \choice
+        \dots que la forma correcta es https://madread.educa.madrid.org/
+        \newline
+    \end{oneparcheckboxes}
+
+    \question Un servidor DNS primario o maestro es el encargado de \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots gestionar una o varias zonas almacenando la base de datos original de las zonas.
+        \newline
+        \choice
+        \dots es el primer servidor DNS que se ha de poner en la configuración de red de una máquina cliente.
+        \newline
+        \choice
+        \dots es el servidor que se encarga de gestionar el dominio raíz «.» y el primero que se ha de crear en un árbol de dominios nuevo.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question La búsqueda directa dentro de un servidor DNS es \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots la que se basa en el nombre de un registro DNS la cual espera como respuesta, por lo general, una dirección IP.
+        \newline
+        \choice
+        \dots la que se produce directamente en la caché de la máquina cliente.
+        \newline
+        \choice
+        \dots la que se produce directamente en la caché del servidor sin necesidad de que consulte a un servidor secundario.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question En un servidor DNS un registro A \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots asocia un dominio con una dirección IP.
+        \newline
+        \choice
+        \dots indica la dirección que ha de tomar la consulta hacia otras zonas del árbol del DNS.
+        \newline
+        \choice
+        \dots asocia un dominio con un servidor de Internet.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question En un servidor DNS un registro AAAA \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots asocia un dominio a una dirección IPv6.
+        \newline
+        \choice
+        \dots permite asociar varios dominios a una dirección IP.
+        \newline
+        \choice
+        \dots permite asociar varias direcciones de Internet a un dominio.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question En un servidor DNS un registro MX \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots indica que es un dominio destinado a un servidor de correo electrónico.
+        \newline
+        \choice
+        \dots indica que el dominio está gestionado por México.
+        \newline
+        \choice
+        \dots indica que es un dominio de máxima prioridad.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question En un servidor DNS un registro TXT \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots es un registro donde se puede meter texto libre.
+        \newline
+        \choice
+        \dots no están permitidos.
+        \newline
+        \choice
+        \dots es un registro donde se introducen las direcciones de red en formato de texto.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question Para obtener información sobre un registro de un dominio DNS, el comando más adecuado es \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        nslookup
+        \newline
+        \choice
+        ping
+        \newline
+        \choice
+        ipconfig
+        \newline
+    \end{oneparcheckboxes}
+
+    \question
+    Un DNS dinámico es \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots un servicio que permite la actualización en tiempo real de la información sobre nombres de dominio situada en un servidor de nombres.
+        \newline
+        \choice
+        \dots un protocolo de sincronización de zonas, consistente en balancear la carga del servidor de zona de forma dinámica.
+        \newline
+        \choice
+        \dots un servicio de asignación de zonas la cual nos permite adquirir un dominio de segundo nivel de forma dinámica.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question Una máquina Windows \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots dispone de un nombre host que se utiliza como prefijo de dirección DNS y nombre NetBIOS, pudiendo especificar un sufijo DNS.
+        \newline
+        \choice
+        \dots el nombre NetBIOS ya no se utiliza.
+        \newline
+        \choice
+        \dots si no pertenece a un dominio, utiliza el nombre de grupo de trabajo como sufijo de DNS.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question LDAP es \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots un protocolo basado en la conexión entre cliente y servidor, costa de una base de datos jerárquica, la cual se utiliza como almacén de directorio y la autenticación de usuarios.
+        \newline
+        \choice
+        \dots un protocolo de seguridad destinado a la autenticación de usuarios.
+        \newline
+        \choice
+        \dots un sistema de base de datos en estructura de árbol.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question Algunas diferencias entre LDAP y OAuth2.0 son \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots LDAP está orientada a ser gestionada por un administrador de sistemas, mientras que OAuth2.0, aunque puede ser gestionada por un administrador de sistema, fue diseñada para que el usuario pueda acceder en servicios de terceros.
+        \newline
+        \choice
+        \dots OAuth2.0 es un protocolo más moderno y está mejor optimizado para grandes bases de datos.
+        \newline
+        \choice
+        \dots OAuth2.0 está distribuido en diversos servidores de forma jerárquica, mientras LDAP se almacena todo en una única base de datos.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question Kerberos es un protocolo \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots de seguridad que nos permite identificar a un usuario y autorizar al uso de servicios de red.
+        \newline
+        \choice
+        \dots de seguridad que nos permite limitar el uso de entradas y salidas a los servicios de red.
+        \newline
+        \choice
+        \dots que fue creado específicamente para gestionar la seguridad de un Directorio Activo.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question En un Directorio Activo una Unidad Organizativa es \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots un contenedor de objetos como impresoras, usuarios, grupos etc., organizados mediante subconjuntos estableciendo así una jerarquía.
+        \newline
+        \choice
+        \dots una forma de agrupar usuarios y computadoras.
+        \newline
+        \choice
+        \dots un grupo de servidores de dominio que nos permite organizar la forma en que se replican estos.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question En un directorio activo, la jerarquía de objetos de menor a mayor es \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots objeto, unidad organizativa, dominio, árbol, bosque.
+        \newline
+        \choice
+        \dots usuario, computadora, impresora.
+        \newline
+        \choice
+        \dots dominio, árbol, bosque.
+        \newline
+    \end{oneparcheckboxes}
+
+    \question Un Directorio Activo se basa en \dots
+    \newline
+    \begin{oneparcheckboxes}
+        \CorrectChoice
+        \dots LDAP, DNS y Kerberos.
+        \newline
+        \choice
+        \dots Windows y protocolo cliente servidor.
+        \newline
+        \choice
+        \dots Un conjunto de servidores que forman un bosque.
+        \newline
+    \end{oneparcheckboxes}
+
+\end{questions}
+
+\end{document}

@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { Hoja 3.06 }
+\newcommand{\nombreHoja} { Repaso ecuaciones de 1º y 2º grado }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+\pointsdroppedatright   %% No mostrar la puntuación
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+    %%\StudentData
+
+    \begin{questions}
+        \question
+        Resuelve las siguientes ecuaciones de 1º grado.
+        \begin{parts}
+            \part
+            $3x+\frac{1}{2}x+6=2x$
+            \part
+            $\frac{3}{2}+8=\frac{3}{5}x-1$
+            \part
+            $\frac{4}{3}(x+1)=2x-1$
+            \part
+            $\frac{x}{2}+\frac{2x}{3}-\frac{5x}{6}=5x-14$
+            \part
+            $\frac{x-2}{4}-\frac{2x+6}{3}=0$
+            \part
+            $\frac{x+1}{5}+\frac{x-2}{6}=1$
+            \part
+            $\frac{-1}{2}\left(1-\frac{3x}{2}\right)+\frac{6x}{2}=\frac{-3}{2}\left(\frac{6+x}{2}\right)$
+        \end{parts}
+
+        \question
+        Resuelve las siguientes ecuaciones de 2º grado.
+        \begin{parts}
+            \part
+            $x^2-5x+6=0$
+            \part
+            $x^2+x-6=0$
+            \part
+            $2x^2-7x+3=0$
+        \end{parts}
+
+        \question
+        Resuelve sin utilizar la formula de ecuaciones de 2º grado.
+        \begin{parts}
+            \part
+            $(x+3)(x-5)=0$
+            \begin{sample} Si tenemos la ecuación factorizada la pondemos resolver facilmente. \\
+                $\begin{array}{ccc} 
+                    & & x+3 = 0 \Rightarrow \boxed{x= -3}\\ 
+                    & \nearrow &\\ 
+                    (x+3)(x-5)=0
+                    & &\\ 
+                    & \searrow &\\
+                    & & x-5 = 0 \Rightarrow \boxed{x= 5}\\ 
+                \end{array}$
+             \end{sample}
+            \part
+            $(x+3)(x-5)=0$
+            \part
+            $(x+4)^2=0$
+            \part
+            $(x-5)^5-9=0$
+            \part
+            $x^2=10x$
+            \part
+            $2x^2-18=0$
+            \part
+            $16x+4x^2=0$
+        \end{parts}
+    \end{questions}
+\end{document}

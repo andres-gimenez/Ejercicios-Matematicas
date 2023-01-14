@@ -1,0 +1,80 @@
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { 2º Evaluación }
+\newcommand{\nombreHoja} { Recuperación }
+\renewcommand{\waterMark} { Modelo B } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+	\StudentData
+	\GradeTableHeader
+
+	\begin{questions}
+
+		\question[2]
+		Si 3 obreros colocan 100 metros cuadrados de suelo en 2 días. ¿Cuántos días tardarán 4 obreros en colocar 1.000 metros cuadrados de suelo?
+		\vspace{\stretch{1}}
+
+		\question[2]
+		Cuatro empleados de una tienda de moda tardan 8 días en coser 6 vestidos.
+		¿Cuánto tiempo tardarían en coser 24 vestidos si se duplica la plantilla?
+		\vspace{\stretch{1}}
+
+		\newpage
+
+		\question[1]
+		Calcula el 6\% de 100\euro{}, 1.200\euro{} y 354,07\euro{}.
+		\vspace{\stretch{1}}
+
+		\question[2]
+		¿Qué interés producen 14.000\euro{} al 3 \% anual durante 5 años?
+		\vspace{\stretch{1}}
+
+		\newpage
+        \StudentData
+        \question[3]
+            Resuelve las siguientes ecuaciones.
+            \begin{parts}
+                \part
+                    $3x-1 = 2$
+                    \vspace{\stretch{2}}
+                \part 
+                    $2x = 3-3x$
+                    \vspace{\stretch{2}}
+                \part
+                    $x+2(x+1) = 2(3x-1)$
+                    \vspace{\stretch{2}}
+
+			\newpage
+
+				\part
+                    $x^2-7x+6=0$
+                    \vspace{\stretch{3}}
+
+                \part
+                    $(x-2)^2 = 81$
+                    \vspace{\stretch{3}}
+            \end{parts}
+
+	\end{questions}
+\end{document}

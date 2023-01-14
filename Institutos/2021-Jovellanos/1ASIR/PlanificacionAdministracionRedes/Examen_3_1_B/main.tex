@@ -1,0 +1,598 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Examen 3ª evaluación }
+\newcommand{\documentContent} { Examen conocimientos } 
+\newcommand{\waterMark} { Modelo B } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+% \renewcommand{\thepartno}{\roman{partno}}
+\renewcommand{\thepartno}{\arabic{partno}}
+% \renewcommand{\thepartno}{\thesubpart}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StudentData{}
+\GradeTableHeader{}
+
+\justifying{}
+
+\begin{questions}
+    \setcounter{question}{0}
+
+    \question[4]
+    Indica las afirmaciones más apropiadas
+    \begin{center}
+        \fbox{\fbox{\parbox{6.5in}{
+                    La forma de valor el resultado las preguntas tipo test será:
+
+                    \begin{equation*} \label{eqn}
+                        Nota = \left( correctas - \frac{incorrecta}{2} \right) \cdot \left( \frac{nota\:máxima}{preguntas}  \right)
+                    \end{equation*}
+
+                    \vspace{0.2cm}
+                    \par
+                    Cuando contestes a cada pregunta del cuestionario ten presente:
+                    \begin{itemize}
+                        \item Lee atentamente las preguntas y las contestaciones, tienes tiempo de sobra para resolver el examen.
+                        \item Los fallos restan puntos, si no estás seguro de la respuesta no la contestes.
+                        \item Aunque en algunas preguntas pueda parecer que existe más de una respuesta correcta, tienes que dar una respuesta profesional que indique que dominas los conceptos teóricos.
+                    \end{itemize}
+                }}}
+    \end{center}
+
+        \begin{parts}
+
+            % \PartNoBreak {
+            %     Mediante el comando REGEDT32.EXE accedemos al registro de Windows, en el cual \dots
+            %     \newline
+            %     \begin{oneparcheckboxes}
+            %         \CorrectChoice 
+            %             \dots podemos acceder a la configuración del sistema.
+            %         \newline
+            %         \choice 
+            %             \dots podemos visualizar las incidencias del sistema.
+            %         \newline
+            %         \choice 
+            %             \dots podemos visualizar las entradas y acciones de cada usuario.
+            %         \newline
+            %     \end{oneparcheckboxes}
+            % }
+    
+            % \PartNoBreak {
+            %     El modo seguro de Windows se refiere \dots
+            %     \newline
+            %     \begin{oneparcheckboxes}
+            %         \CorrectChoice 
+            %             \dots a un modo de arranque en el que utiliza los drivers mínimos, como ratón, monitor (VGA), teclado, unidad de disco y servicios predeterminado.
+            %         \newline
+            %         \choice 
+            %             \dots a un modo de arranque en el que configura el firewall de Windows, no permitiendo ninguna conexión ni de entrada ni de salida.
+            %         \newline
+            %         \choice 
+            %             \dots a un modo de arranque en el que solo permite acceder a Windows con el usuario de administrador.
+            %         \newline
+            %     \end{oneparcheckboxes}
+            % }
+    
+            % \PartNoBreak {
+            %     El arranque de Linux  \dots
+            %     \newline
+            %     \begin{oneparcheckboxes}
+            %         \choice 
+            %             \dots se controla mediante la configuración del proceso init, que es el primero que se inicia y el encargado de ejecutar el resto.
+            %         \newline
+            %         \choice 
+            %             \dots se produce una carga simultánea de procesos y es el kernel quien se encarga que procesos se deben iniciar.
+            %         \newline
+            %         \CorrectChoice 
+            %             \dots no se puede modificar, ya que esto afectaría a la estabilidad del sistema.
+            %         \newline
+            %     \end{oneparcheckboxes}
+            % }
+    
+           
+
+            \PartNoBreak{
+                Los posibles colisiones que se producen entre paquetes dentro de un dominio de colisiones se solucionan en \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \CorrectChoice{}
+                        \dots la capa de enlace.
+                    \newline
+                    \choice{}
+                        \dots la capa de red.
+                    \newline
+                    \choice{}
+                        \dots la capa de transporte.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                Las VLAN separan \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                    \dots segmentos de red.
+                \newline
+                    \CorrectChoice{}
+                        \dots dominios de brodcast.
+                    \newline
+                    \choice{}
+                        \dots dominios de colisiones.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                Un router \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \CorrectChoice{}
+                        \dots separa dominios de brodcast.
+                    \newline
+                    \choice{}
+                        \dots no separa dominios de brodcast.
+                    \newline
+                    \choice{}
+                        \dots separa dominios de brodcast solo cuando se encapsula su salida en diferentes VLAN.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                Las VLAN \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots se comunican directamente entre ellas, siempre que se utilicen diferentes switchs.
+                    \newline
+                    \CorrectChoice{}
+                        \dots definen redes distintas y se necesita enrutar para comunicarse entre ellas.
+                    \newline
+                    \choice{}
+                        \dots definen redes totalmente distintas y no se puede conectar entre ellas de ninguna forma.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                Cuando un equipo tiene un problema de acceso a la red, recomienda hacer las comprobaciones en el orden \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots conexión física del adaptador con la red, configuración de los parámetros de la arquitectura de red, conflicto entre adaptador de red y equipo
+                    \newline
+                    \choice{}
+                    \dots conflicto entre adaptador de red y equipo, conexión física del adaptador con la red, configuración de los parámetros de la arquitectura de red.
+                    \newline
+                    \CorrectChoice{}
+                    \dots configuración de los parámetros de la arquitectura de red, conflicto entre adaptador de red y equipo, conexión física del adaptador con la red.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+    
+            \PartNoBreak{
+                En el sistema Windows, son comandos de red válidos \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots ipconfig, netconfig, netstart.
+                    \newline
+                    \choice{}
+                        \dots tcpconfig, netui, ping.
+                    \newline
+                    \CorrectChoice{}
+                    \dots nslookup, netstat, ping.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+    
+            \PartNoBreak{
+                Las VLAN nos sirven \dots 
+                \newline
+                \begin{oneparcheckboxes}
+                    \CorrectChoice{}
+                        \dots para separa voz y datos.
+                    \newline
+                    \choice{}
+                        \dots como sistema de enrutamiento en redes locales.
+                    \newline
+                    \choice{}
+                        \dots como mecanismo de seguridad, ya que podemos control que puertos son admitidos por cada VLAN.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                Un dominio de colisiones es una parte de la red donde ocurren colisiones entre dispositivos, 
+                    para evitar colisiones y separar dominio de colisiones se utilizan dispositivos de tipo \dots 
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots hub, switch, bridge y router.
+                    \newline
+                    \CorrectChoice{}
+                        \dots switch, bridge y router.
+                    \newline
+                    \choice{}
+                        \dots bridge y routers.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                Se considera un enlace troncal \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                    \dots aquel enlace central dentro de una LAN corporativa.
+                    \newline
+                    \choice{}
+                        \dots el enlace que transporta un mayor número de paquetes dentro de una red LAN.
+                    \newline
+                    \CorrectChoice{}
+                        \dots aquel enlace entre switch por el que se comunican varias VLAN.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+            
+            \PartNoBreak{
+                Para instalar telefonía VoIP \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots se conecta el teléfono a un PC con soporte de red IP.
+                    \newline
+                    \choice{}
+                        \dots se ha de crear una doble red de cableado, una para voz y otra para.
+                    \newline
+                    \CorrectChoice{}
+                        \dots se conecta el ordenador a un teléfono VoIP.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                Un switch de capa 3 \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \CorrectChoice{}
+                        \dots permite enrutar.
+                    \newline
+                    \choice{}
+                        \dots no permite enrutar, ya que los switch solo reconocen la MAC de los dispositivos.
+                    \newline
+                    \choice{}
+                        \dots permiten separar la voz de los datos, gracias a poseer varias capas de abstracción en su arquitectura de hardware.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+            
+            \PartNoBreak{
+                En un switch de capa 3 \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots se puede utilizar tanto las direcciones MAC como las direcciones IP para enrutar.
+                    \newline
+                    \CorrectChoice{}
+                        \dots se puede configurar para que un interface físico actúe como un interface físico de un router.
+                    \newline
+                    \choice{}
+                        \dots se puede utilizar únicamente las direcciones MAC para enrutar.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                Una VLAN es un mecanismo de \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \CorrectChoice{}
+                        \dots la capa de enlace.
+                    \newline
+                    \choice{}
+                        \dots la capa de red.
+                    \newline
+                    \choice{}
+                        \dots la capa física.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+            
+            \PartNoBreak{
+                El comando route de Linux \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots no existe, ya que solo pueden enrutar los dispositivos de red denominados router.
+                    \newline
+                    \CorrectChoice{}
+                        \dots nos permite enrutar entre las interface de red de nuestro PC.
+                    \newline
+                    \choice{}
+                        \dots permite listar las IP de los router por los que atraviesa un paquete para llegar a un destino indicado, pudiendo ver las direcciones IP de todos los roters intermedios.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+            
+            \PartNoBreak {
+                La información de los propietarios de los dominios con extensión .com y .org que adjudica la IANA \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice 
+                        \dots es privada y no se puede acceder a ella.
+                    \newline
+                    \CorrectChoice 
+                        \dots es pública y se puede acceder a ella mediante el comando whois.
+                    \newline
+                    \choice 
+                        \dots solo se puede acceder a ella mediante una orden judicial.
+                        \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                La distribución de Linux más recomendada para hacer auditorias de red es \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots Ubuntu Linux.
+                    \newline
+                    \CorrectChoice{}
+                        \dots Kali Linux.
+                    \newline
+                    \choice{}
+                        \dots Handy Linux.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+            
+            \PartNoBreak {
+                La información del propietario de una dirección IP que ha adjudicado RIPE \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \CorrectChoice 
+                        \dots está en una base de datos pública y se puede acceder a ella mediante el comando whois.
+                    \newline
+                    \choice 
+                        \dots es privada y no se puede acceder a ella.
+                    \newline
+                    \choice 
+                        \dots solo se puede acceder a ella mediante una orden judicial.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                Si queremos obtener una lista de servicios disponibles en los dispositivos de una red, podemos usar el comando \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots netstat.
+                    \newline
+                    \CorrectChoice{}
+                        \dots nmap.
+                    \newline
+                    \choice{}
+                        \dots services.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+            
+            \PartNoBreak{
+                Si queremos obtener una lista de puertos abiertos en dispositivos de una red, podemos usar el comando \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots ports.
+                    \newline
+                    \CorrectChoice{}
+                        \dots nmap.
+                    \newline
+                    \choice{}
+                        \dots netstat.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+            
+            \PartNoBreak{
+                Si queremos obtener una lista de puertos abiertos en nuestro PC podemos usar el comadno \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots nslookup.
+                    \newline
+                    \choice{}
+                        \dots ports.
+                    \newline
+                    \CorrectChoice{}
+                        \dots netstat.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+            
+            \PartNoBreak{
+                Para obtener información de un registro MX en un servidor DNS \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots debemos introducir la dirección IP del servidor DNS en la configuración de red de nuestro dispositivo y hacer un ping al dominio requerido.
+                    \newline
+                    \choice{}
+                        \dots podemos utilizar el comando maildomain para obtener la información del registro, ya que el registro MX se utiliza para acceder al servidor de correo electrónico.
+                    \newline
+                    \CorrectChoice{}
+                        \dots podemos utilizar el comando nslookup.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+            
+            \PartNoBreak{
+                El comando \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots tracert está obsoleto.
+                    \newline
+                    \CorrectChoice{}
+                        \dots tracert está disponible en Windows y traceroute en Linux.
+                    \newline
+                    \choice{}
+                        \dots tracert está disponible en Linux y traceroute en Window.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                El protocolo STP (Spanning Tree Protocol) \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \CorrectChoice{}
+                        \dots actua en cada VLAN de forma independiente, bloqueando un interface, si procede, solo para una VLAN.
+                    \newline
+                    \choice{}
+                        \dots actua en cada VLAN de forma independiente, bloqueando un interface, si procede, para todas las VLAN.
+                    \newline
+                    \choice{}
+                        \dots actua conjuntamente en todas las VLAN, bloqueando un interface, si procede, en todas las VLAN.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+            
+            \PartNoBreak{
+                STP (Spanning Tree Protocol) es un protocolo que \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots evita los bucles dentro de una red IP.
+                    \newline
+                    \CorrectChoice{}
+                        \dots evita los bucles dentro de una red Ethernet.
+                    \newline
+                    \choice{}
+                        \dots evita los bucles dentro de una red WAN con múltiples routers.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                Si usamos un sniffer en nuestro PC \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \CorrectChoice{}
+                        \dots debemos activar el modo promiscuo para poder ver el tráfico de toda la red.
+                    \newline
+                    \choice{}
+                        \dots debemos activar el modo promiscuo para poder ver el tráfico de otras redes.
+                    \newline
+                    \choice{}
+                        \dots siempre podemos ver todo el tráfico de la red. 
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+            \PartNoBreak{
+                El modo promiscuo de un interface de red, nos permite \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots nos permite enviar paquetes a cualquier dispositivo de otra red, incluso si las IPs de origen y de destino no están correctamente enrutadas. 
+                    \newline
+                    \CorrectChoice{}
+                        \dots recibir todo el tráfico de la capa de enlace, independiente mente de nuestra dirección MAC.
+                    \newline
+                    \choice{}
+                        \dots recibir todo el tráfico de la capa de red, independiente mente de nuestra dirección IP.
+                    \newline
+
+                \end{oneparcheckboxes}
+            }
+
+            
+
+            \PartNoBreak{
+                El protocolo STP (Spanning Tree Protocol) \dots
+                \newline
+                \begin{oneparcheckboxes}
+                    \choice{}
+                        \dots puede modificar las tablas de enrutamiento para evitar bucles en la red.
+                    \newline
+                    \CorrectChoice{}
+                        \dots puede bloquear un puerto de switch si se producen bucles.
+                    \newline
+                    \choice{}
+                        \dots puede anular una dirección IP si se producen conflictos de red.
+                    \newline
+                \end{oneparcheckboxes}
+            }
+
+        \end{parts}
+
+    \newpage
+
+    % Red      217.9.26.48 / 29
+    % Rango    217.9.26.49 - 217.9.26.54
+    % brodcast 217.9.26.55
+    \question En un edificio de oficinas en la que ya está instalada un sistema de cableado estructural según el esquema de la imagen en la que el ISP nos ha proporcionado un router con acceso a Internet y el rango de IPs publicas 217.9.26.49 a 217.9.26.54.  Nos piden que configuremos la red con las siguientes especificaciones:
+    \begin{itemize}
+        \item Se dispone de un router proporcionado por el ISP, un switch capa 3 y 4 switch cada 2 montados como aparece en la imagen.
+        \item Un CPD con cuatro servidores con IPs públicas.
+        \item La configuración de los PCs e impresoras han de realizarse a través de DHCP, con IP privada tras un NAT y capacidad para 2000 dispositivos.
+        \item Se dispone de un router Wifi, el cual ha de tener su propia red, con acceso a Internet y a las impresoras.
+        \item Se han de poder montar teléfonos VoIP en cualquier puesto de trabajo, cuando se nos solicite. 
+        \item En el sótano se instalará un centro de seguridad para monitorizar el acceso y las cámaras IP de seguridad, en el cual habrá dos PC’s sin acceso a Internet. La red de seguridad para las cámaras ha de estar aislada del resto de dispositivos.
+        \item En la 2ª planta existe un despacho que se va a ceder a una empresa externa, desde el cual se ha de poder montar 5 ordenadores con salida a Internet, sin acceso a la red principal. Pero se tendrá que seguir dando servicio a los PC's propios.
+    \end{itemize}
+
+    \begin{center}
+        \centering
+        \includegraphics[width=1\textwidth]{red01}
+    \end{center}
+
+    \newpage
+
+    \begin{parts}
+        \part[3]
+            Indica la configuración de todos los dispositivos de red que la precisen. Se puede utilizar NAT, DHCP, VLAN y enrutamiento estático (no usar enrutamiento dinámico).
+            Indica con claridad la configuración de cada protocolo en cada dispositivo, con sus IP's, máscara, puerta de enlace, DNS y tablas de rutas.
+            \newpage
+            \phantom{new page}
+            \newpage
+            \phantom{new page}
+            \newpage
+            \phantom{new page}
+
+        \part[3]
+            Explica la finalidad y los efectos de la configuración del apartado anterior, haciendo referencia a la configuración de los dispositivos de la red y conexión entre ellos.
+            \newpage
+            \phantom{new page}
+    \end{parts}
+
+   
+
+    
+\end{questions}
+
+\end{document}

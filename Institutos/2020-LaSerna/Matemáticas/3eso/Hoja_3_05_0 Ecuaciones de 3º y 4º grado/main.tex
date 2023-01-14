@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { Hoja 3.05 }
+\newcommand{\nombreHoja} { Ecuaciones de 2º grado }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+\pointsdroppedatright   %% No mostrar la puntuación
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+    %%\StudentData
+
+    \begin{questions}
+        \question
+        Resuelve las siguientes ecuaciones.
+        \scriptsize{*{Este tipo de ecuaciones se hacen igual que las raices de la hoja 3.02}}
+        \normalsize
+        \begin{parts}
+            \part
+            %  Copiada del libro.
+                $x^3-2x^2-x+2=0$
+            \part
+            %  Copiada del libro.
+                $x^4+7x^3-x^2-7x=0$
+        \end{parts}
+
+        \question
+        Resuelve las siguientes ecuaciones bicuadradas.
+        \scriptsize{*{Cuando una ecuación solo tiene monomios de 4º y 2º grado se puede resolver como una ecuación de 2º grado.}}
+        \normalsize
+        \begin{parts}
+            \part
+            %  Copiada del libro.
+                $x^4-5x^2+4=0$
+                \begin{sample} Calculamos el valor de $x^2$. \\
+                    \begin{equation*}
+                        x^2=\frac{5 \pm \sqrt{(-5)^2-4 \cdot4 }}{2} = \frac{5 \pm \sqrt{25-16}}{2} = \frac{5 \pm \sqrt{9}}{2} = \\
+                            = \frac{5 \pm 3}{2} 
+                    \end{equation*}
+
+                    $\begin{array}{ccc} 
+                        & & x_1 = \frac{7+5}{2}=1\\ 
+                        & \nearrow &\\ 
+                        x=\frac{7\pm \sqrt{7^2 - 4 \cdot 1 \cdot 6}}{2 \cdot1}= \frac{7\pm \sqrt{25}}{2}
+                        & &\\ 
+                        & \searrow &\\
+                        & &x_2 = \frac{7-5}{2}=6
+                    \end{array}$
+                 \end{sample}
+            \part
+            %  Copiada del libro.
+                $x^4-5x^2+6=0$
+        \end{parts}
+    \end{questions}
+\end{document}

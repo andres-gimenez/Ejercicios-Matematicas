@@ -1,0 +1,242 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Hoja 1 }
+\newcommand{\documentContent} { Cálculo de redes } 
+\newcommand{\waterMark} {  } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+
+% \printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%\StudentData
+%\GradeTableHeader
+
+\justifying
+
+\begin{questions}
+    \setcounter{question}{0}
+
+    \question Calcula la dirección de red, rango de host y broadcast (si procede), para las siguientes configuraciones de red.
+    \begin{parts}
+        \part
+        IP: 32.18.32.244 \\
+        Mask: 255.255.255.252 
+        \begin{solution}[0cm]
+            Red: 32.18.32.244 / 30 \\
+            Rango de hosts: 32.18.32.245 - 32.18.32.246 \\
+            Broadcas: 16.35.23.15
+        \end{solution}
+
+        \part
+        IP: 32.18.32.244 \\
+        Mask: 255.255.252.0
+        \begin{solution}[0cm]
+            Red: 32.18.32.00 / 22 \\
+            Rango de hosts: 32.18.32.1 - 32.18.32.254 \\
+            Broadcas: 32.18.35.255
+        \end{solution}
+
+        \part
+        IP: 1.1.1.1 \\
+        Mask: 255.255.255.128
+        \begin{solution}[0cm]
+            Red: 1.1.1.1 / 25 \\
+            Rango de hosts: 1.1.1.1 - 1.1.1.126  \\
+            Broadcas: 1.1.1.127
+        \end{solution}
+
+        \part
+        IP: 1.1.1.1 \\
+        Mask: 255.255.255.0
+        \begin{solution}[0cm]
+            Red: 1.1.1.0 / 24 \\
+            Rango de hosts: 1.1.1.1 - 1.1.1.254  \\
+            Broadcas: 1.1.1.255
+        \end{solution}
+
+        \part
+        IP: 203.210.252.32 \\
+        Mask: 255.255.255.240
+        \begin{solution}[0cm]
+            Red: 203.210.252.32 / 28 \\
+            Rango de hosts: 203.210.252.33 - 203.210.252.46  \\
+            Broadcas: 203.210.25.47
+        \end{solution}
+
+        \part
+        IP: 203.210.252.32 \\
+        Mask: 255.255.128.0
+        \begin{solution}[0cm]
+            Red: 203.210.128.0 / 17 \\
+            Rango de hosts: 203.210.128.1 - 203.210.255.254  \\
+            Broadcas: 203.210.255.254
+        \end{solution}
+
+        \part
+        IP: 100.64.0.32 \\
+        Mask: 255.255.255.254
+        \begin{solution}[0cm]
+            Red: 100.64.0.32 / 31 \\
+            Broadcas: 100.64.0.33
+        \end{solution}
+
+        \part
+        IP: 100.64.0.32 \\
+        Mask: 255.255.255.252
+        \begin{solution}[0cm]
+            Red: 100.64.0.32 / 30 \\
+            Rango de hosts:  100.64.0.33 - 100.64.0.34 \\
+            Broadcas: 100.64.0.35
+        \end{solution}
+
+        \part
+        IP: 2000::236:023C / 64
+        \begin{solution}[0cm]
+            Red: 2000:: /64 \\
+            Rango de hosts:  2000::1 \\ - 2000::ffff:ffff:ffff:ffff  \\
+        \end{solution}
+
+        \part
+        IP: 1200:235:1255:5dee:569:15:12:325a / 64
+        \begin{solution}[0cm]
+            Red: 1200:235:1255:5dee:: / 64 \\
+            Rango de hosts:  1200:235:1255:5dee::1 \\ - 1200:235:1255:5dee:ffff:ffff:ffff:ffff \\
+        \end{solution}
+
+        \part
+        IP: 1200:235:1255:5dee:569:15:12:325a / 72
+        \begin{solution}[0cm]
+            Red: 1200:235:1255:5dee:500:: / 64 \\
+            Rango de hosts: 1200:235:1255:5dee:500::1  \\ - 1200:235:1255:5dee:5ff:ffff:ffff:ffff \\
+        \end{solution}
+
+        \part
+        IP: 1200:235:1255:5dee:569:15:12:325a / 122
+        \begin{solution}[0cm]
+            Red: 1200:235:1255:5dee:569:15:12:3240 / 122 \\
+            Rango de hosts: 1200:235:1255:5dee:569:15:12:3241 \\ - 1200:235:1255:5dee:569:15:12:327f \\
+        \end{solution}
+
+        \part
+        IP: 1200:235:1255:5dee:569:15:12:325a / 126
+        \begin{solution}[0cm]
+            Red: 1200:235:1255:5dee:569:15:12:3258 / 126 \\
+            Rango de hosts: 1200:235:1255:5dee:569:15:12:3259 \\ - 1200:235:1255:5dee:569:15:12:325b \\
+        \end{solution}
+    \end{parts}
+
+    \question Indica si los siguientes host son válidos y si pertenecen a la misma red.
+    \begin{parts}
+        \part
+            IP1: 192.168.0.25 \\
+            IP2: 192.168.0.38 \\
+            Mask: 255.255.255.0
+            \begin{solution}[0cm]
+                Son válidas y perteneces a la misma red.
+            \end{solution}
+
+        \part
+            IP1: 192.168.0.25 \\
+            IP2: 192.168.1.38 \\
+            Mask: 255.255.255.0
+            \begin{solution}[0cm]
+                Son válidas y no perteneces a la misma red.
+            \end{solution}
+
+        \part
+            IP1: 192.168.0.25 \\
+            IP2: 192.168.1.38 \\
+            Mask: 255.255.254.0
+            \begin{solution}[0cm]
+                Son válidas y perteneces a la misma red.
+            \end{solution}
+
+        \part
+            IP1: 192.168.0.25 \\
+            IP2: 192.168.0.255 \\
+            IP3: 192.168.1.0 \\
+            IP4: 192.168.2.38 \\
+            Mask: 255.255.252.0
+            \begin{solution}[0cm]
+                Son válidas y perteneces a la misma red.
+            \end{solution}
+
+        \part
+            IP1: 18.25.2.30 \\
+            IP2: 18.25.2.32 \\
+            Mask: 255.255.255.224
+            \begin{solution}[0cm]
+                Son válidas, pero perteneces a redes distintas.
+            \end{solution}
+
+        \part
+            IP1: 18.25.223.224 \\
+            IP2: 18.25.223.254 \\
+            Mask: 255.255.255.224
+            \begin{solution}[0cm]
+                No son válidas, dirección de red y de host.
+            \end{solution}
+
+        \part
+            IP1: 18.25.220.0 \\
+            IP2: 18.25.223.255 \\
+            Mask: 255.255.252.0
+            \begin{solution}[0cm]
+                No son válidas, dirección de red y de host.
+            \end{solution}
+
+        \part
+            IP1: 18.25.21.0 \\
+            IP2: 18.25.21.255 \\
+            Mask: 255.255.252.0
+            \begin{solution}[0cm]
+                Si son válidas, la dirección de red es 18.25.20.0 / 22 y la de broadcast 18.25.23.255.
+            \end{solution}
+
+        \part
+            IP1: 2000::2 / 64 \\
+            IP2: 2000::2213 / 64 \\
+            IP2: 2000::ffff:ffff:ffff:ffff /64
+            \begin{solution}[0cm]
+                Son válidas y perteneces a la misma red.
+            \end{solution}
+        \part
+            IP1: 2000::2 / 3 \\
+            IP2: 2001::2213 / 3 
+            \begin{solution}[0cm]
+                Son válidas y perteneces a la misma red.
+            \end{solution}
+
+        \part
+            IP1: 2000::2332 / 125 \\
+            IP2: 2000::2333 / 125 \\
+            IP3: 2000::2337 / 125 \\
+            IP3: 2000::2338 / 125
+            \begin{solution}[0cm]
+                La 2000:2332 /125 es una dirección de red, la 2000::2338 es una dirección de red de otra red distinta.
+            \end{solution}
+    \end{parts}
+   
+\end{questions}
+
+\end{document}

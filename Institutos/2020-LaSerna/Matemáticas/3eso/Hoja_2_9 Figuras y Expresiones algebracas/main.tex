@@ -1,0 +1,96 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { Hoja 2.9 }
+\newcommand{\nombreHoja} { Expresiones algebraicas y figuras }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+\pointsdroppedatright   %% No mostrar la puntuación
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+    %%\StudentData
+
+    \begin{questions}
+        % \question 
+        % Un campo de fútbol mide 30 metros más de largo que de ancho y su área es de $7.000 m^2$, halla sus dimensiones.
+
+        \question
+            Expresa algebraicamente el área y el perímetro de la siguiente figura.
+
+            \begin{minipage}[t]{\linewidth}
+                \centering
+                \includegraphics[width=7cm]{figura1}
+                %\captionof{figure}{Figure of Q.\ref{label:a}}
+                \label{label:q1}
+            \end{minipage}
+
+            \begin{solution}
+                \begin{minipage}[t]{0.95\linewidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{sol11}
+                \end{minipage}
+            \end{solution}
+
+            \begin{parts}
+                \part
+                Calcula el aria y el perímetro para x = 5 e y = 2.
+                \begin{solution}
+                    \begin{minipage}[t]{\linewidth}
+                        \centering
+                        \includegraphics[width=\textwidth]{sol12}
+                    \end{minipage}
+                \end{solution}
+                \part
+                Calcula el aria y el perímetro para x = 10 e y = 5.
+                \begin{solution}
+                    \begin{minipage}[t]{\linewidth}
+                        \centering
+                        \includegraphics[width=\textwidth]{sol13}
+                    \end{minipage}
+                \end{solution}
+            \end{parts}
+
+            \newpage
+            \question
+            Expresa algebraicamente el área de y el perímetro de la siguiente figura y calcula los para x = 5 e x = 10. 
+            \begin{minipage}[t]{\linewidth}
+                \centering
+                \includegraphics[width=7cm]{figura2}
+                %\captionof{figure}{Figure of Q.\ref{label:a}}
+                \label{label:q1}
+            \end{minipage}
+            \begin{solution}
+                \begin{minipage}[t]{0.85\linewidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{sol21}
+                \end{minipage}
+            \end{solution}
+
+            \begin{solution}
+                \begin{minipage}[t]{0.95\linewidth}
+                    \centering
+                    \includegraphics[width=\textwidth]{sol22}
+                \end{minipage}
+            \end{solution}
+
+            %¿Tiene sentido calcular el área y el perímetro para x = 1? ¿Por qué?
+            
+        % \question
+        %     Invéntate una figura geométrica y indica la expresión algebraica que representa su área y su perímetro.
+    \end{questions}
+\end{document}

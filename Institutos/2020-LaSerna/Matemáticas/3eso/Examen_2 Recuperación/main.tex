@@ -1,0 +1,146 @@
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\numeroHoja} { 2º Evaluación }
+\newcommand{\nombreHoja} { Recuperación } 
+\renewcommand{\waterMark} { Modelo: B } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \usepackage{tikz}
+% \usetikzlibrary{arrows}
+
+\begin{document}
+
+	\StudentData
+	\GradeTableHeader
+
+    \justifying
+
+	\begin{questions}
+		\setcounter{question}{0}
+
+        \question[2]
+        Simplifica desarrollando. \\   
+        \tiny{*{No abuses de la calculadora, no pongas la solución directamente, no utilices decimales.}}
+        \normalsize
+        
+        \begin{parts}
+            \part
+				$\frac{(4^2 + 3^2) \cdot 2^6}{(5-1)^3 \cdot (4+1)} = $
+				\vspace{\stretch{5}}
+            \part
+				$\left(\frac{3}{4} \right)^4 \cdot \left(\frac{9}{25}\right)^{-2} = $
+				\vspace{\stretch{5}}
+			\part
+				$\left(\frac{5}{2} + \frac{3}{4} \right)^2 - \left(\frac{1}{4}\right)^2 = $
+				\vspace{\stretch{5}}
+        \end{parts}
+
+        \newpage
+        \question[2]
+		Simplifica los siguientes radicales, extrayendo fuera lo que se pueda. \\
+        \tiny{*{No abuses de la calculadora, no pongas la solución directamente, no utilices decimales.}}
+        \normalsize
+		\begin{parts}
+			\begin{multicols}{2}
+			\part
+				$\sqrt{a^4} = $ \\
+            \part
+				$\sqrt[3]{a^{12}} = $  \\
+            \part
+				$\sqrt[3]{64} = $ \\
+	        \part
+				$\sqrt{128} = $ \\
+	        \part
+				$\sqrt{-1} = $ \\
+	        \part
+				$\sqrt{1} = $ \\
+			\part
+				$1^{23} = $ \\
+            \part
+				$\sqrt[5]{0} = $ \\
+            \part
+				$\sqrt[5]{-1024} = $ \\
+            \part
+				$\sqrt[3]{\frac{1}{216}} = $ \\
+            \part
+				$\sqrt[n]{b^{2n}} = $ \\
+			\part
+				$\sqrt{4a^2} = $ \\
+			\end{multicols}
+		\end{parts}
+
+        \question[2]
+        Si $P(x)=x^4 + 2x^3 - 1x^2 + x +2$, evalúa.
+        \begin{parts}
+            \part
+                $P\left(-1\right)$
+                \vspace{\stretch{5}}
+            \part
+                $P\left(0\right)$
+                \vspace{\stretch{5}}
+            \part
+                $P\left(\frac{1}{2}\right)$
+                \vspace{\stretch{5}}                
+        \end{parts}
+
+        \newpage
+        \question[2]
+        Sea $P(x)=x^5+2x^3-3x+2$, $Q(x)=3x^4-2x^2-3x+1$, $R(x)=x^2 -3x + 1$ calcula.
+        \begin{parts}
+            \part
+                $P(x) - Q(x)$
+                \vspace{\stretch{3}}
+            % \part
+            %     $4 Q(x)$
+            %     \vspace{\stretch{2}}
+
+            % \part
+            %     $P(x) + 4 Q(x)$
+            %     \vspace{\stretch{2}}
+
+            \part
+                $Q(x) \cdot R(x)$
+                \vspace{\stretch{3}}
+            % \part
+            %     $P(x) \cdot 2 Q(x)$
+            %     \vspace{\stretch{4}}
+        \end{parts}
+
+        \newpage
+
+        \question[2]
+            Realiza la siguiente división por el método de Ruffini \\
+            $\left(\polynomial[reciprocal]{4,-8,-9,7}\right) : \left( \polynomial[reciprocal]{1, -3} \right)$
+            
+            \ifprintanswers
+                \begin{solution}
+                    $$\polyhornerscheme[x=3,resultbottomrule=true,resultleftrule=true]{4x^3-8x^2-9x+7}$$
+
+                    $$\boxed{\polynomial[reciprocal]{4,-8,-9,7} = \left( \polynomial[reciprocal]{1,-3} \right) \left( \polynomial[reciprocal]{4, 4, 3} \right) + 16}$$
+                \end{solution}
+            \else
+                \vspace{\stretch{3}}
+            \fi
+
+	\end{questions}
+\end{document}

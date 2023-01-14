@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\numeroHoja} { Hoja 2.2 Recuperación }
+\newcommand{\nombreHoja} { 2º Evaluación }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration} 
+\input{./include/configurationCurso} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+\pointsdroppedatright   %% No mostrar la puntuación
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+    \begin{questions}
+        \question
+        Si $P(x)=x^5 + 2x^3 - 3 x^2 - 5$, evalua.
+        \begin{parts}
+            \part
+                $P(-2)$
+            \part
+                $P(0)$
+            \part
+                $P\left(\frac{1}{3}\right)$
+            \part
+            $P\left(\frac{2}{5}\right)$
+        \end{parts}
+       
+        \question
+        Si $P(x)=x^3 - 2$, $Q(x)=2x^3-3x^2+x-1$, calcula.
+        \begin{parts}
+            \part
+                $P(x) + Q(X)$
+            \part
+                $2 P(x) + 3 Q(x)$
+        \end{parts}
+
+        \question
+        Si $P(x)=2x-3x^2$, $Q(x)=2x^2 - 3$, calcula.
+        \begin{parts}
+            \part
+                $P(x) \cdot Q(X)$
+            \part
+                $2 P(x) \cdot 4 Q(x)$
+        \end{parts}
+
+        \question
+        Realiza las siguientes divisiones de polinomios
+
+        \begin{parts}
+            \part
+            $\left(\polynomial[reciprocal]{3,-4,5}\right) : \left( \polynomial[reciprocal]{1,-1} \right)$
+
+            \part 
+            $\left(\polynomial[reciprocal]{4,0,-10,3,-1,6}\right) : \left( \polynomial[reciprocal]{1,-2+1} \right)$
+
+        \end{parts}
+
+        \question
+        Realiza las siguientes divisiones de polinomios por el método de Ruffini
+        \begin{parts}
+            \part
+                $\left(\polynomial[reciprocal]{4,0,-10,3}\right) : \left( \polynomial[reciprocal]{1,-3} \right)$
+            \part
+                $\left(\polynomial[reciprocal]{1,0,0,0,0,-32}\right) : \left( \polynomial[reciprocal]{1,-2} \right)$
+        \end{parts}
+    \end{questions}
+\end{document}

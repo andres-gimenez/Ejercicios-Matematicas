@@ -1,0 +1,747 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Examen extraordinario }
+\newcommand{\documentContent} { 2ª evaluación } 
+\newcommand{\waterMark} { } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+% \renewcommand{\thepartno}{\roman{partno}}
+\renewcommand{\thepartno}{\arabic{partno}}
+% \renewcommand{\thepartno}{\thesubpart}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+% \printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StudentData
+\GradeTableHeader
+
+\justifying
+
+\begin{questions}
+    \setcounter{question}{0}
+
+    \question[4]
+    Indica las afirmaciones más apropiadas
+    \ifprintanswers
+    \else
+    \begin{center}
+        \fbox{\fbox{\parbox{6.5in}{
+                    La forma de valor el resultado las preguntas tipo test será:
+
+                    \begin{equation*} \label{eqn}
+                        \text{Nota} = \left( \text{correctas} - \frac{\text{incorrecta}}{2} \right) \cdot \left( \frac{\text{nota máxima}}{\text{número de preguntas}}  \right)
+                    \end{equation*}
+
+                    \vspace{0.2cm}
+                    \par
+                    Cuando contestes a cada pregunta del cuestionario ten presente:
+                    \begin{itemize}
+                        \item Lee atentamente las preguntas y las contestaciones, tienes tiempo de sobra para resolver el examen.
+                        \item Los fallos restan puntos, si no estás seguro de la respuesta no la contestes.
+                        \item Aunque en algunas preguntas pueda parecer que existe más de una respuesta correcta, tienes que dar una respuesta profesional que indique que dominas los conceptos teóricos.
+                    \end{itemize}
+                }}}
+    \end{center}
+    \fi
+
+    \begin{parts}
+  
+        \PartNoBreak{
+            En el protocolo IP, los valores indispensables de configuración que ha de tener un Host para tener acceso a una red local son,  \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots dirección IP y máscara.
+                \newline
+                \choice 
+                \dots dirección IP, máscara y puerta de enlace.
+                \newline
+                \choice 
+                \dots dirección IP, máscara, puerta de enlace y dirección de servidor DNS.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        % \PartNoBreak{
+        %     En el protocolo IP, los valores indispensables de configuración que ha de tener un Host para tener acceso a Internet son,  \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots dirección IP, máscara y puerta de enlace.
+        %         \newline
+        %         \choice 
+        %         \dots dirección IP y máscara.
+        %         \newline
+        %         \choice 
+        %         \dots dirección IP, máscara, puerta de enlace y dirección de servidor DNS.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        \PartNoBreak{
+            En la configuración de un HOST con protocolo IP,  \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots la dirección IP, la dirección del DNS y la puerta de enlace han de pertenecer a la misma red, determinada por la máscara.
+                \newline
+                \CorrectChoice 
+                \dots la dirección IP y la puerta de enlace han de pertenecer a la misma red, determinada por la máscara.
+                \newline
+                \choice 
+                \dots dirección IP y la puerta de enlace pueden pertenecer a redes distintas, determinada por la máscara. 
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+           Un router es \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots un dispositivo de conexión de redes destinado a conectar múltiples redes.
+                \newline
+                \choice 
+                \dots un dispositivo de conexión de redes destinado a conectar una oficina o domicilio a Internet.
+                \newline
+                \choice 
+                \dots un dispositivo de conexión de redes que busca el camino más corto al destino. 
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        % \PartNoBreak{
+        % El termino LAN se refiere a  \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots una red de área local, generalmente utilizada en entornos domésticos o empresariales.
+        %         \newline
+        %         \choice 
+        %         \dots una red con IP privadas conectadas a internet mediante un router.
+        %         \newline
+        %         \choice 
+        %         \dots una red que solo utiliza dispositivos de conexión de redes de tipo Hub o Switch.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        \PartNoBreak{
+            El tamaño de una red lógica con protocolo IP está determinada por \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots el número de dispositivos de interconexión de redes.
+                \newline
+                \CorrectChoice 
+                \dots el valor de la máscara.
+                \newline
+                \choice 
+                \dots los tres primeros valores de la dirección IP.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Si tenemos una red Ethernet para la red local y salimos a internet mediante un router IP,  \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots solo se utiliza las direcciones IP.
+                \newline
+                \choice 
+                \dots se utilizan las direcciones MAC para conectarse a direcciones remotas.
+                \newline
+                \CorrectChoice 
+                \dots se utilizan las direcciones MAC, para los enlaces locales.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+
+        \PartNoBreak{
+            Las interfaces de un router\dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots pueden utilizar diferentes protocolos de la capa de enlace.
+                \newline
+                \choice 
+                \dots deben utilizar todas el mismo protocolo de la capa de enlace.
+                \newline
+                \choice 
+                \dots pueden utilizar fibra óptica o Ethernet.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Las IP privadas son\dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots las que se utilizan en una red de área local.
+                \newline
+                \CorrectChoice 
+                \dots aquellas que están traducidas mediante el protocolo NAT.
+                \newline
+                \choice 
+                \dots aquellas que tienen en propiedad una persona u organización.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        % \PartNoBreak{
+        %     En las tablas de enrutamiento de varios router interconectados, \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots pueden tener información diferente.
+        %         \newline
+        %         \choice 
+        %         \dots todas han de tener la misma información.
+        %         \newline
+        %         \choice 
+        %         \dots pueden tener información complementaria.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        % \PartNoBreak{
+        %     Un Host,\dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots puede tener varias direcciones IP conectadas y se denomina Multihomed.
+        %         \newline
+        %         \choice 
+        %         \dots solo puede tener una dirección IP asignada.
+        %         \newline
+        %         \choice 
+        %         \dots solo puede tener una dirección MAC asignada.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        \PartNoBreak{
+            La tabla de rutas, \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots es característico de la interfaz de red.
+                \newline
+                \CorrectChoice 
+                \dots es común para todas las interfaces de un Host.
+                \newline
+                \choice 
+                \dots es solo característico de los routers.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            En una tabla de rutas, \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots cada ruta solo pueden especificar un destino.
+                \newline
+                \choice 
+                \dots cada ruta especifica una ruta única para la red de destino.
+                \newline
+                \CorrectChoice 
+                \dots pueden aparecer diferentes rutas con el mismo destino.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        % \PartNoBreak{
+        %     Las rutas por defecto, \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots se indican con la dirección de red 0.0.0.0/0.
+        %         \newline
+        %         \choice 
+        %         \dots se indican con la dirección de red 255.255.255.255/32.
+        %         \newline
+        %         \choice 
+        %         \dots se configuran de forma automática al configurar las interfaces de un router.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        \PartNoBreak{
+            Se denomina ruta host, \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots aquella que se dirige a un solo host y se indica con la dirección de red 255.255.255.255/32.
+                \newline
+                \choice 
+                \dots aquella que se dirige a un solo host y se indica con la dirección de red 0.0.0.0/0.
+                \newline
+                \choice 
+                \dots las rutas definidas en un host, las cuales se pueden listar con el comando tracert.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        % \PartNoBreak{
+        %     Un protocolo de encaminamiento, \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots se encarga de definir las tablas de enrutamiento.
+        %         \newline
+        %         \choice 
+        %         \dots se encarga de redirigir los paquetes por el camino más corto.
+        %         \newline
+        %         \choice 
+        %         \dots se encarga de enviar paquetes de forma dinámica.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        % \PartNoBreak{
+        %     En un protocolo de encaminamiento, las métricas\dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots indican de una forma cuantitativa el coste de enviar paquetes por diferentes caminos.
+        %         \newline
+        %         \choice 
+        %         \dots miden el tiempo que tardan los paquetes en llegar por los diferentes caminos.
+        %         \newline
+        %         \choice 
+        %         \dots no aplican, porque el protocolo se encarga de buscar la mejor ruta.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+        % \newpage{}
+
+        \PartNoBreak{
+            Ejemplos de protocolos de encaminamiento son\dots
+            \newline
+            \begin{oneparcheckboxes}              
+                \choice 
+                \dots IPv4, IPv6 y IPX.
+                \newline
+                \choice 
+                \dots TCP y UPD.
+                \newline
+                \CorrectChoice 
+                \dots RIP, IGRP y OSPF.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Un dominio de enrutamiento es\dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots un registro de DNS destinado a nombres de routes.
+                \newline
+                \CorrectChoice 
+                \dots un conjunto de routers que se encuentran bajo una administración común.
+                \newline
+                \choice 
+                \dots un protocolo para enrutar direcciones DNS.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            Si hablamos de encaminamiento estático, \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots nos definimos a definir las rutas de enrutamiento de manera manual.
+                \newline
+                \choice 
+                \dots una serie de protocolos de encaminamiento que mantiene las rutas de enrutamiento de forma estáticas.
+                \newline
+                \choice 
+                \dots mantener la configuración de los encaminadores de forma estática.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        % \PartNoBreak{
+        %     La capa de trasporte \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots nos permite enviar múltiples conexiones de trasporte por una sola conexión de red.
+        %         \newline
+        %         \choice 
+        %         \dots nos permite enviar paquetes mediante en una conexión de red.
+        %         \newline
+        %         \choice 
+        %         \dots se refiere a la forma de enviar los paquetes por una red.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        % \PartNoBreak{
+        %     La capa de trasporte \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots nos permite indicar con que proceso de aplicación nos queremos conectar.
+        %         \newline
+        %         \choice 
+        %         \dots nos permite indicar con que Host nos queremos comunicar al final del transporte.
+        %         \newline
+        %         \choice 
+        %         \dots nos permite indicar la ruta por la que se transportan los datos.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        \PartNoBreak{
+            Ejemplos de protocolos de la capa de transporte son \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots IPv4, IPv6, IPX.
+                \newline
+                \CorrectChoice 
+                \dots TCP y UDP.
+                \newline
+                \choice 
+                \dots ftp, telnet, http.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            El puerto 23 corresponde al protocolo \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots telnet.
+                \newline
+                \choice 
+                \dots ssh.
+                \newline
+                \choice 
+                \dots http.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            El puerto 20 corresponde al protocolo \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice 
+                \dots ftp.
+                \newline
+                \choice 
+                \dots ssh.
+                \newline
+                \choice 
+                \dots telnet.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        % \PartNoBreak{
+        %     Se denomina puerto bien conocido \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots a los puertos por defecto para ciertos protocolos, que ha definido la ICANN.
+        %         \newline
+        %         \choice 
+        %         \dots a los puertos que tiene abiertos un host.
+        %         \newline
+        %         \choice 
+        %         \dots a los puertos que están habilitados en el router.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        % \PartNoBreak{
+        %     Se denomina puerto registrado \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots a los puertos utilizados por ciertos programas, registrados por terceros, ajenos a la ICANN.
+        %         \newline
+        %         \choice 
+        %         \dots a los puertos registrados por terceros a través de la ICANN.
+        %         \newline
+        %         \choice 
+        %         \dots a los puertos que están abiertos en un host.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        % \PartNoBreak{
+        %     Se denomina puerto dinámicos o privados \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice 
+        %         \dots a aquellos que abre una aplicación de forma temporal para establecer una conexión.
+        %         \newline
+        %         \choice 
+        %         \dots a aquellos que asigna un router NAS junto a la IP privada.
+        %         \newline
+        %         \choice 
+        %         \dots a los puertos que están abiertos en un host.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        \PartNoBreak{
+            Para el envío de correo electrónico se utiliza el protocolo\dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice 
+                \dots ftp.
+                \newline
+                \choice 
+                \dots http.
+                \newline
+                \CorrectChoice 
+                \dots smtp.
+                \newline                
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            El DNS se puede definir como \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots un sistema de nombres para que funcionen las páginas web.
+                \newline
+                \CorrectChoice
+                \dots una base de datos distribuida y jerárquica que almacena información asociada a nombres de dominio en redes como Internet.
+                \newline
+                \choice
+                \dots un traductor para convertir las direcciones de Internet a direcciones más legibles de manera única.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{
+            En un servidor DNS un registro A \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots indica la dirección que ha de tomar la consulta hacia otras zonas del árbol del DNS.
+                \newline
+                \choice
+                \dots asocia un dominio con un servidor de Internet.
+                \newline
+                \CorrectChoice
+                \dots asocia un dominio con una dirección IP.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        % \PartNoBreak{
+        %    El protocolo BOOTP \dots
+        %    \newline
+        %    \begin{oneparcheckboxes}
+        %        \CorrectChoice 
+        %        \dots nos permite realizar instalaciones remotas del sistema operativo.
+        %        \newline
+        %        \choice 
+        %        \dots es un protocolo de enrutamiento dinámico para grandes redes.
+        %        \newline
+        %        \choice 
+        %        \dots es un protocolo de enrutamiento estático para grandes redes. 
+        %        \newline
+        %    \end{oneparcheckboxes}
+        % }
+       
+        \PartNoBreak{ 
+            ¿En el modelo de capas en la que se descompone el protocolo TCP/IP el protocolo DHCP se encuentra en la capa?
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                Capa de transporte.
+                \newline
+                \choice
+                Capa de red.
+                \newline
+                \CorrectChoice
+                Capa de aplicación.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{ 
+            Si nos encontramos un host con la dirección IP 169.254.2.6/16 que podemos interpretar que \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots que se trata de una IP pública.
+                \newline
+                \CorrectChoice
+                \dots que no se le ha asignado una IP fija al host y que no hay ningún servidor DHCP en la red.
+                \newline
+                \choice
+                \dots que se trata de una IP privada.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        % \PartNoBreak{ 
+        %     Una dirección IP asignada por el protocolo DHCP se denomina \dots
+        %     \newline
+        %     \begin{oneparcheckboxes}
+        %         \CorrectChoice
+        %         \dots IP dinámica.
+        %         \newline
+        %         \choice
+        %         \dots IP estática.
+        %         \newline
+        %         \choice
+        %         \dots IP enrutable.
+        %         \newline
+        %     \end{oneparcheckboxes}
+        % }
+
+        \PartNoBreak{ 
+            En la configuración IP de un HOST los parámetros que intervienen en el enrutamiento de los paquetes son \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots IP, mascara y puerta de enlace.
+                \newline
+                \CorrectChoice
+                \dots IP y puerta de enlace.
+                \newline
+                \choice
+                \dots IP, MAC, mascara y puerta de enlace.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{ 
+            El protocolo DHCP \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots solo asigna direcciones variables, a partir de un rango dado.
+                \newline
+                \CorrectChoice
+                \dots puede asignar direcciones fijas, en función de la MAC.
+                \newline
+                \choice
+                \dots solo asigna direcciones IP y la máscara.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{ 
+            El protocolo NAT sustituye direcciones privadas por públicas de manera que\dots
+            \newline
+            \begin{oneparcheckboxes}
+                \CorrectChoice
+                \dots por la red pública no aparecen direcciones privadas.
+                \newline
+                \choice
+                \dots por la red privada no aparecen direcciones públicas.
+                \newline
+                \choice
+                \dots no se mezclan direcciones públicas con privadas.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{ 
+            Cuando un paquete con IP pública llega a un router NAT \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots el paquete se enruta en función de las tablas de enrutamiento.
+                \newline
+                \choice
+                \dots el paquete siempre es rechazado.
+                \newline
+                \CorrectChoice
+                \dots el paquete se enruta en función de las tablas NAT.
+                \newline
+            \end{oneparcheckboxes}
+        }
+
+        \PartNoBreak{ 
+            El despliegue del protocolo IPv6 se está centrando en \dots
+            \newline
+            \begin{oneparcheckboxes}
+                \choice
+                \dots aumentar al máximo posible el número de dispositivos que se pueden conectar a Internet.
+                \newline
+                \CorrectChoice
+                \dots realizar subneting para reducir las tablas de enrutamiento y optimizar el funcionamiento de los routers.
+                \newline
+                \choice
+                \dots protocolos de enrutamiento dinámico para conseguir que las rutas en Internet estén lo más optimizadas posibles.
+                \newline
+            \end{oneparcheckboxes}
+        }
+    \end{parts}
+
+    \newpage
+
+    \question[4] En un instituto se quiere ampliar el sistema informático y te han pedido que reconfigures los dispositivos de red para dar soporte a los nuevos equipos.
+    El instituto consta de dos secciones, que por su distancia no es posible conectarlos a una misma red local y se ha optado por contratar dos conexiones a Internet con el ISP. 
+    En la sección principal, hay una secretaria en la que disponen de un servidor y una fotocopiadora en la que se quiere tener capacidad para 20 ordenadores, 
+    20 aulas en la que se quieren poner entre 20 y 40 PC’s por aula y en la sección delegada 4 aulas con el mismo número de PC’s por aula. 
+    Los routers que nos ha proporcionado el ISP ya están preconfigurados con las IP’s públicas 83.26.36.45 (R1) y 72.26.89.80 (R2) y en ambos IP privada 192.168.0.1/24. 
+    Nos han pedido expresamente que se pueda acceder desde todos los PC’s a la impresora y al servidor ya que allí tienen alojado el aula virtual y necesitan que todos
+    los profesores y alumnos tengan acceso a ello. También disponen de un servidor DNS en la nube con IP 201.65.23.9 al que podemos agregar los registros necesarios.
+ 
+    \begin{center}
+        \centering
+        \includegraphics[width=1\textwidth]{red02}
+    \end{center}
+
+    Configura detalladamente cada dispositivo de red, indicando la configuración de los protocolos DHCP, NAT, DNS y enrutamiento estático. 
+
+    % \begin{parts}
+    %     \part[2]
+            % Configura los protocolos NAT y DHCP para los router R1 y R2 para la interface privada de estos, así como los registros del servidor DNS.
+
+    \newpage
+    \phantom{new page}
+        
+    \newpage
+    \phantom{new page}
+
+    \newpage
+    \phantom{new page}
+
+    \question[2] Explica haciendo referencia al ejercicio anterior, 
+    el funcionamiento y finalidad de los protocolos IP, NAT, DHCP y DNS.
+    Haciendo referencia a parámetros de configuración de cada protocolo y mecanismos de enrutamiento.
+
+\end{questions}
+
+\end{document}
