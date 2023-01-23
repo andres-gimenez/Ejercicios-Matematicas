@@ -1,0 +1,111 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \newcommand{\documentName} { 2ª evaluación }
+ \newcommand{\documentContent} { Ecuaciones } 
+ \newcommand{\waterMark} { Modelo B } 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ % Configuración del documento.
+ \input{./include/configurationCurso} 
+ \input{./include/configuration} 
+ 
+ % \renewcommand{\thepartno}{\arabic{partno}}
+ \usepackage{nicefrac, xfrac}
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % Exam configuration
+ %\pointsdroppedatright   %% No mostrar la puntuación
+ \pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+ \extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+ \marginpointname{ \emph{\points}}
+ 
+ %% Si se comenta no aparecerán los espacios de la solución.
+ %\nocancelspace
+ 
+ %% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+ %% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+ % \printanswers
+ %\noprintanswers
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \begin{document}
+ 
+ \StudentData{}
+ \GradeTableHeader{}
+ 
+ \justifying{}
+ 
+ \begin{questions}
+    \question[1]
+    Comprueba, sin resolver, si la solución de cada ecuación es correcta.
+    \begin{parts}
+        \part
+        $2x^2-3x-2 = 0$, $\boxed{x=-\frac{1}{2}}$ y $\boxed{x=2}$
+        \vspace{\stretch{1}}
+
+        \part
+        $x^2+\frac{5}{2}x+1 = 0$, $\boxed{x=-\frac{1}{2}}$ y $\boxed{x=-2}$
+        \vspace{\stretch{1}}
+    \end{parts}
+
+    \newpage
+    \question[2]
+    Resuelve las siguientes ecuaciones.
+    \begin{parts}
+        \part
+        $(5x-2x)(x+4)=6x-2x^2$
+        \vspace{\stretch{1}}
+
+        \part
+        $\left(x-\frac{1}{2}\right)-3\left(x+1\right)=2\left(x+\frac{1}{4}\right)$
+        \vspace{\stretch{1}}
+        \part
+        $x-\frac{6(1-x)+3(4-2x)}{5}=3\left(x+\frac{1}{6}\right)-2$
+        \vspace{\stretch{1}}
+    \end{parts} 
+
+    \question[2]
+    Resuelve las siguientes ecuaciones de 2º grado.
+    \begin{parts}
+        \part
+        % Solución x=-2;x=7
+        $x^2 = 5 x + 14$
+        \vspace{\stretch{1}}
+
+        \part
+        % Solución x=7;x=1
+        $(x-4)^2-9 =0$
+        \vspace{\stretch{1}}
+    \end{parts}
+
+    \newpage
+        \question[3]
+		Resuelve las siguientes ecuaciones utilizando la regla de Ruffini.
+        \begin{parts}
+            \part
+            % Solucion x = -1, 1, 2 
+            $x^3-2 x^2-x+2=0$
+            \vspace{\stretch{1}}
+
+            \part
+            % Solución: x = 1, 2, 2
+            $ x^3 - 5 x^2 + 8 x - 4=0$
+            \vspace{\stretch{1}}
+
+            % \part
+            % % Solución: x = 2, 2, 3 
+            % $ x^3 - 7 x^2 + 16 x - 12=0$
+            % % \vspace{\stretch{1}}
+
+            \part
+            $x^4-29x^2+100=0$
+            \vspace{\stretch{1}}
+
+            \part
+            $(x+3)(x-2)(x-52)(x^2+7x+30)=0$
+            \vspace{\stretch{2}}
+	    \end{parts}
+
+ \end{questions}
+ 
+ \end{document}
