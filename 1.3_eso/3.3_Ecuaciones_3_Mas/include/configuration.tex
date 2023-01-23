@@ -75,6 +75,10 @@
     contents={ \autorSing \phantom{123456789} \waterMark}
 }
 
+\newtheorem*{sample1}{Ejemplo:}
+\newenvironment{sample}
+    {\begin{mdframed}\begin{sample1}}
+    {\end{sample1}\end{mdframed}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
