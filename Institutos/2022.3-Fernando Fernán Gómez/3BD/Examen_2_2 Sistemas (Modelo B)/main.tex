@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Examen 3ª evaluación }
+\newcommand{\documentContent} { Sistemas de ecuaciones } 
+\newcommand{\waterMark} { Modelo B } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StudentData
+\GradeTableHeader
+
+\justifying
+
+\begin{questions}
+    \setcounter{question}{0}
+
+    \question[2]
+    Resuelve el siguiente sistema de ecuaciones por el método gráfico.
+    \begin{flushleft}
+        $\begin{cases}
+                \nonumber
+                -2x + y = 0 \\
+                \nonumber
+                3x + 2y  = 14
+            \end{cases}$
+    \end{flushleft}
+
+    \begin{figure}[h]
+        \begin{tikzpicture}[scale=1]
+            \tkzInit[xmax=7,ymax=7,xmin=-7,ymin=-7]
+            \tkzGrid[color=black!50]
+            \tkzAxeXY
+        \end{tikzpicture}
+    \end{figure}
+
+    \newpage
+    \question[3]
+    Resuelve los siguientes sistemas de ecuaciones:
+    \begin{parts}
+        \part
+        Por el método de sustitución:
+        \begin{flushleft}
+            $\begin{cases}
+                    \nonumber
+                    2x - 3y  = -4 \\
+                    \nonumber
+                    3x +2y = 7
+                \end{cases}$
+        \end{flushleft}
+        \vspace{\stretch{1}}
+
+        \part
+        Por el método de igualación.
+        \begin{flushleft}
+            $\begin{cases}
+                    \nonumber
+                    2x + y = 10 \\
+                    \nonumber
+                    -3x - 2y = -16
+                \end{cases}$
+        \end{flushleft}
+        \vspace{\stretch{1}}
+
+        \part
+        Por el método de reducción.
+        \begin{flushleft}
+            $\begin{cases}
+                    \nonumber
+                    x + 2y = 6 \\
+                    \nonumber
+                    x + 3y = 7
+                \end{cases}$
+        \end{flushleft}
+        \vspace{\stretch{1}}
+    \end{parts}
+
+    \newpage
+    \question[3]
+   
+
+    \newpage
+    \question[2]
+    
+\end{questions}
+\end{document}
