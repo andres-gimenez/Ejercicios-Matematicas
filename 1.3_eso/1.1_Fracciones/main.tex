@@ -1,0 +1,142 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Fracciones }
+\newcommand{\documentContent} { \phantom{ } } 
+\newcommand{\waterMark} {  } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+\renewcommand{\thepartno}{\arabic{partno}}
+
+\usepackage{xfrac}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+% \printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% \StudentData{}
+% \GradeTableHeader{}
+
+\justifying{}
+
+    \begin{questions}
+        \question Realizar las siguientes operaciones con fracciones simplificando en todo momento los pasos intermedios y el resultado.
+        
+        \begin{parts}
+            \begin{multicols}{2}
+                \part
+                    $\frac{5}{6} \cdot \frac{2}{3} $
+                \part
+                    $\frac{2}{15} : \frac{2}{3} $
+                    
+                \part
+                $\frac{3}{4} - \frac{1}{3} - \frac{2}{12} + \frac{5}{6}$
+                \begin{solution}
+                    $m.c.m(3, 4,6,12) = 2^2 \cdot 3$ \\ \\
+                    $\frac{3}{4} - \frac{1}{3} - \frac{2}{12} + \frac{5}{6} = \frac{9}{12} - \frac{4}{12} - \frac{2}{12} + \frac{10}{12}$ 
+                \end{solution}
+                
+                \part $-\frac{2}{5}+\frac{1}{3}\cdot\frac{4}{5} - \frac{1}{3} \cdot \frac{6}{5}$           
+
+                \part $\frac{1}{4} + \frac{1}{3} \cdot \frac{6}{5}$
+                
+                \part $\left(\frac{1}{4} + \frac{1}{3}\right) \cdot \frac{6}{5}$
+                
+                \part $1-\frac{2}{3}\cdot\frac{1}{5}$
+                
+                \part $\left(1-\frac{2}{3}\right) \cdot \frac{1}{5}$
+                
+                \part $-\frac{2}{3}+\frac{4}{3}\cdot\frac{1}{2}$
+
+                \part
+                $\left( 4 + \frac{3}{4}\right) - \left(3 + \frac{2}{3} \right)$
+                \begin{solution}
+                    $m.c.m(3, 4) = 12$ \\ \\
+                    $\left( 4 + \frac{3}{4}\right) - \left(3 + \frac{2}{3} \right) = \left( \frac{48}{12} + \frac{9}{12} \right) - \left( \frac{36}{12} + \frac{8}{12} \right) = \frac{57}{12} + \frac{44}{12} = \frac{13}{12}$        
+                \end{solution}
+
+                \part
+                    $\left( \frac{7}{5} - \frac{1}{2} \right) : \left( 1 - \frac{3}{10} \right) $
+                \part
+                    $\frac{5}{8} \cdot \left[ \frac{17}{4} - 3 \cdot \left( 2 -  \frac{2}{3} \right) \right] $
+                
+                \part $\left(-1+\frac{1}{2}-\frac{1}{3}\right) \cdot \frac{6}{5}$
+
+                \part $\left(-\frac{2}{5}+\frac{1}{3}\right)\cdot \frac{4}{5} - \frac{1}{3} \cdot \frac{6}{5}$
+                
+                \part $\frac{1}{2}- \frac{1}{3} \cdot \frac{4}{3} - \frac{1}{12} + \frac{5}{4} \cdot \frac{8}{3}$
+                
+                \part $\left(\frac{1}{2} + \frac{1}{3}\right) \cdot \frac{4}{3} - \frac{1}{12} + \frac{5}{4} \cdot \frac{8}{3}$
+                
+                \part $\left(1 - \frac{1}{2} + \frac{1}{3}\right) \cdot \frac{2}{5}$
+
+                \part $1- \frac{1}{2} + \frac{1}{3} \cdot \frac{2}{5}$
+
+                \part $- \frac{1}{2} \cdot \frac{4}{7} - \frac{2}{14} + \frac{1}{2} \cdot \frac{5}{7}$
+
+                \part $-\frac{1}{2} \cdot \left( \frac{4}{7} - \frac{2}{14} \right) + \frac{1}{2} \cdot \frac{5}{7}$
+
+                \part $\frac{17}{9} - \frac{15}{5} + \frac{4}{3} : \left(\frac{1}{5} + \frac{2}{3} - \frac{1}{15}\right) + \frac{14}{3} : \frac{16}{8}$
+
+                \part $\frac{1}{3} + \frac{4}{3} : \frac{5}{6} \cdot \left(\frac{1}{2} - \frac{3}{2} \cdot \frac{10}{9} + 4\right)$
+
+                \part $\frac{4}{5} - \frac{7}{3} \cdot \frac{3}{7} + \frac{1}{5} \left(2 + \frac{1}{2}\right) - \frac{7}{3} + 4: \frac{6}{5}$
+
+                \part $\frac{2}{3} + \frac{5}{4} \left(\frac{3}{5} + \frac{4}{10}\right) - \frac{5}{4} + \left(\frac{3}{5} : 4\right) + \frac{12}{5}$
+
+                \part $2 + \frac{1}{5} : \left(2 + \frac{7}{3} - \frac{2}{4} + \frac{5}{3} \right)$
+
+                \part $\left(\frac{2}{7} - \frac{4}{5} + \frac{2}{8}\right) \cdot \frac{3}{2} - \frac{7}{5} : \frac{4}{7}$
+
+                \part $\frac{2}{3} + \left[1 - \left(\frac{3}{4} - \frac{1}{6}\right)\right]$
+
+            \end{multicols}
+        \end{parts}
+
+        \newpage 
+
+        \question Realizar las siguientes operaciones con fracciones simplificando en todo momento los pasos intermedios y el resultado.
+        \begin{parts}
+            \part $\frac{17}{9} - \frac{15}{5} + \frac{4}{3} : \left(\frac{1}{5} + \frac{2}{3} - \frac{1}{15}\right) + \frac{14}{3} : \frac{16}{8}$
+
+            \part $\frac{2}{3}- \left[\frac{3}{2} - \frac{1}{5} - \left(\frac{2}{5} - \frac{1}{3}\right) + \left(- \frac{6}{5} - \frac{1}{2}\right) \right] - \frac{3}{4} + \left(\frac{1}{2} - \frac{1}{3} \right)$
+
+            \part $2+\left(\frac{5}{2} - 3\right) - \left[\frac{7}{10} - \left( \frac{2}{5} + \frac{1}{4} \right)\right] $
+
+            \part $2 - \left[\frac{4}{3} - \left(\frac{1}{2} + \frac{2}{5}\right) - \frac{1}{3}\right] - \left(\frac{4}{3} + 2 \right) - \frac{1}{2}$
+
+            \part $\left(\frac{4}{3} - \frac{-1}{9}\right) + \left[2 - \left(- \frac{5}{4} + \frac{2}{3} \right)\right] - \frac{7}{2}$
+
+            \part $\left[\left(\frac{4}{6} + \frac{\sfrac{1}{7}}{2} \right) : \left(\frac{4}{3} - \frac{5}{12} \right)\right] \cdot \left(\frac{1}{6} + \frac{1}{15}\right)$
+
+            \part $\left[-\frac{3}{8} + \left(4 - \frac{1}{2} \right)\right] - \left[\left(2 - \frac{5}{4}\right) + \left(\frac{7}{2} - \frac{1}{8}\right) \right]$
+
+            \part $\left(\frac{1}{3} - \frac{4}{5}\right) \cdot \left[\left(\frac{1}{3} - 1\right) \cdot 3 - \frac{1 + \sfrac{2}{5}}{3}\right]$
+
+            \part $\frac{4}{5} : \left[\frac{12}{16} \left(\frac{1}{6} + \frac{2}{3}\right) - \frac{3}{8} \right] - 3 \left[\frac{1}{6} : \left(1 - \frac {2}{5}\right) \right]$
+
+            \part $\frac{3}{2} - \frac{1}{2}\cdot \frac{4}{3} : \left(\frac{4}{3} - \frac{2}{3} \cdot \frac{15}{8} + 1\right)$
+            
+            \part $\left[\frac{\frac{5}{3}}{3 - \frac{1}{2}} \cdot \left(\frac{6}{4} - \frac{3}{2} \cdot \frac{1}{3}\right)\right] \cdot \left( \frac{1 + \frac{1}{2} - \frac{1}{3}}{\frac{1}{4} - \frac{2}{3} \cdot \frac{5}{2}} + 1\right)$ 
+        \end{parts}
+        
+    \end{questions}
+
+\end{document}
