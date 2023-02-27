@@ -9,6 +9,14 @@
  \input{./include/configuration} 
  
  % \renewcommand{\thepartno}{\arabic{partno}}
+%  \renewcommand{\thepartno}{\thecurrentpartno.\arabic{partno}}
+
+% \renewcommand{\partlabel}{(\thequestion.\arabic{partno})}
+% \renewcommand{\subpartlabel}{(\thepart.\arabic{subpartno})}
+
+\renewcommand\subpartlabel{(\thesubpart)}
+\renewcommand\subpartshook{\renewcommand\makelabel[1]{##1\hfil }}
+
  \usepackage{nicefrac, xfrac}
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -21,6 +29,9 @@
  %% Si se comenta no aparecerán los espacios de la solución.
  %\nocancelspace
  
+ %% Puntuación a la izquierda.
+%  \nopointsinrightmargin 
+
  %% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
  %% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
  % \printanswers
@@ -48,25 +59,29 @@
 \end{center}
  
  \begin{questions}
-    \question[1] Realiza las siguientes operaciones con números decimales:
-    \begin {parts}
-        \part $2,003 + 24,69 + 525,7$
-        \vspace{\stretch{1}}
-
-        \part $32,95 - 9,871$
-        \vspace{\stretch{1}}
-
-        \part $(5,2 - 6) \cdot 6$
-        \vspace{\stretch{1}}
-    \end{parts} 
     
-    \question Divisiones 
+    \question
     \begin {parts}
-        \part [0\half] Realiza la siguiente división $34,95:3,1$ obteniendo dos decimales.
-        \vspace{\stretch{2}} 
+        \part[1] Realiza las siguientes operaciones con números decimales:
+        \begin {subparts}
+            \subpart $2,003 + 24,69 + 525,7$
+            \vspace{\stretch{1}}
 
-        \part [0\half] Haz la prueba de la división anterior.
-        \vspace{\stretch{2}}
+            \subpart $32,95 - 9,871$
+            \vspace{\stretch{1}}
+
+            \subpart $(5,2 - 6) \cdot 6$
+            \vspace{\stretch{1}}
+        \end{subparts} 
+        
+        \part Divisiones 
+        \begin {subparts}
+            \subpart [0\half] Realiza la siguiente división $34,95:3,1$ obteniendo dos decimales.
+            \vspace{\stretch{2}} 
+
+            \subpart [0\half] Haz la prueba de la división anterior.
+            \vspace{\stretch{2}}
+        \end{subparts} 
     \end{parts} 
 
     \newpage
