@@ -154,16 +154,19 @@
                 %axis lines=middle
                 % restrict y to domain=-20:20
             ]
-            \addplot[domain=-15:-5,black] {-x-10};
+            \addplot[domain=-15:-10,black] {x+10};
             \addplot[domain=-5:0,black] {x*x+6*x};
-            \addplot[domain=0:6,black] {x};
-            \addplot[domain=6:15,black] {-5};
-            \draw[dashed] (axis cs:6,6) -- (axis cs:6,-5);
-            \addplot[holdotBlack] coordinates{(-15,5)(6,-5)};
-            \addplot[soldotBlack] coordinates{(6,6)(15,-5)};
+            \addplot[domain=0:5,black] {x};
+            \addplot[domain=5:9,black] {x*x-15*x+55};
+            
+            % \addplot[domain=6:15,black] {-5};
+            % \draw[dashed] (axis cs:6,6) -- (axis cs:6,-5);
+            \addplot[holdotBlack] coordinates{(-15,-5)(-5,-5)(9,1)};
+            \addplot[soldotBlack] coordinates{(-10,0)(5,5)};
         \end{axis}
     \end{tikzpicture}
     \\
+    \renewcommand{\arraystretch}{1.5}
     \begin{table}[h]
         \begin{tabular}{|l|p{10cm}|}   
             \hline
