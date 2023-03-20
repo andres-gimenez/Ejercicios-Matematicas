@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\documentName} { Examen recuperación 2ª evaluación }
 \newcommand{\documentContent} { Ecuaciones, sistemas de ecuaciones y funciones } 
-\newcommand{\waterMark} { Modelo B } 
+\newcommand{\waterMark} { Modelo A } 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Configuración del documento.
@@ -40,7 +40,7 @@
     \begin{flushleft}
         $\begin{cases}
             \nonumber
-            2x - y = 2 \\
+            x - 2y = 2 \\
             \nonumber
             x - y = 0
         \end{cases}$
@@ -63,9 +63,9 @@
         \begin{flushleft}
             $\begin{cases}
                     \nonumber
-                    5x - 3y  = 4 \\
+                    3x - 5y  = 4 \\
                     \nonumber
-                    2x + 3y = 5
+                    2x + y = 7
                 \end{cases}$
         \end{flushleft}
         \vspace{\stretch{1}}
@@ -87,9 +87,9 @@
         \begin{flushleft}
             $\begin{cases}
                     \nonumber
-                    x + 2y = 9 \\
+                    2x + y = 9 \\
                     \nonumber
-                    x - 2y = 1
+                    x - 3y = 1
                 \end{cases}$
         \end{flushleft}
         \vspace{\stretch{1}}
@@ -101,7 +101,7 @@
     \begin{parts}
         \part
         % $5 \left(x-3\right) - 2 \left(x-1\right) = 3x - 13$
-        $x - 12 = 2x - 4 \left(x - 3\right)$
+        $x - 11 = 3x - 5 \left(x - 2\right)$
         \vspace{\stretch{1}}
 
         \part
@@ -109,7 +109,7 @@
         \vspace{\stretch{1}}
 
         \part
-        $8x-6=2\left[x+6\left(x-1\right)\right]$
+        $8x-6=2\left[x+4\left(x-1\right)\right]$
         \vspace{\stretch{1}}
     \end{parts}
 
@@ -119,7 +119,7 @@
     Resuelve las siguientes ecuaciones de segundo grado
     \begin{parts}
         \part 
-        $2x^2 - 3x + 1 = 0$
+        $-2x^2 + 15x - 7 = 0$
         \vspace{\stretch{1}}
 
         \part 
@@ -127,8 +127,9 @@
         \vspace{\stretch{1}}
 
         \part 
-        $-2x^2 + 15x - 7 = 0$
+        $2x^2 - 3x + 1 = 0$
         \vspace{\stretch{1}}
+
     \end{parts}
 
 
@@ -153,19 +154,15 @@
                 %axis lines=middle
                 % restrict y to domain=-20:20
             ]
-
-            \addplot[domain=10:15,black] {x-10};
-
-            % \addplot[domain=-5:0,black] {x*x+6*x};
-            \addplot[domain=0:5,black] {x*x-6*x};
-
-            \addplot[domain=-5:0,black] {-x};
-            \addplot[domain=-9:-5,black] {x*x+15*x+55};
+            \addplot[domain=-15:-10,black] {x+10};
+            \addplot[domain=-5:0,black] {x*x+6*x};
+            \addplot[domain=0:5,black] {x};
+            \addplot[domain=5:9,black] {x*x-15*x+55};
             
             % \addplot[domain=6:15,black] {-5};
             % \draw[dashed] (axis cs:6,6) -- (axis cs:6,-5);
-            \addplot[holdotBlack] coordinates{(-9,1)(5,-5)(15,5)};
-            \addplot[soldotBlack] coordinates{(10,0)};
+            \addplot[holdotBlack] coordinates{(-15,-5)(-5,-5)(9,1)};
+            \addplot[soldotBlack] coordinates{(-10,0)};
         \end{axis}
     \end{tikzpicture}
     \\
@@ -182,7 +179,7 @@
             Máximos relativos:           &  \\ \hline
             Mínimos relativos:           &  \\ \hline
             Máximo absoluto:             &  \\ \hline
-            Máximo relativo:             &  \\ \hline
+            Mínimo absoluto:             &  \\ \hline
         \end{tabular}
     \end{table}
 \end{questions}
