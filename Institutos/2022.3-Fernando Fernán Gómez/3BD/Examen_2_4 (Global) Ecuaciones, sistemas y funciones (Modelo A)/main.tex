@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\documentName} { Examen recuperación 2ª evaluación }
+\newcommand{\documentName} { Examen global 3ª evaluación }
 \newcommand{\documentContent} { Ecuaciones, sistemas de ecuaciones y funciones } 
-\newcommand{\waterMark} { Modelo B } 
+\newcommand{\waterMark} { Modelo A} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Configuración del documento.
@@ -40,9 +40,9 @@
     \begin{flushleft}
         $\begin{cases}
             \nonumber
-            2x - y = 2 \\
+            2x - y  = - 2 \\
             \nonumber
-            x - y = 0
+            x = 3
         \end{cases}$
     \end{flushleft}
 
@@ -59,13 +59,13 @@
     Resuelve los siguientes sistemas de ecuaciones:
     \begin{parts}
         \part
-        % Por el método de sustitución:
+        Por el método de sustitución:
         \begin{flushleft}
             $\begin{cases}
                     \nonumber
-                    5x - 3y  = 4 \\
+                    2x - y  = 1 \\
                     \nonumber
-                    2x + 3y = 5
+                    -4x + y = 25
                 \end{cases}$
         \end{flushleft}
         \vspace{\stretch{1}}
@@ -83,13 +83,13 @@
         % \vspace{\stretch{1}}
 
         \part
-        % Por el método de reducción.
+        Por el método de reducción.
         \begin{flushleft}
             $\begin{cases}
                     \nonumber
-                    x + 2y = 9 \\
+                    2x + 3y = 1 \\
                     \nonumber
-                    x - 2y = 1
+                    x + y = -2
                 \end{cases}$
         \end{flushleft}
         \vspace{\stretch{1}}
@@ -100,41 +100,41 @@
     Resuelve las siguientes ecuaciones:
     \begin{parts}
         \part
-        % $5 \left(x-3\right) - 2 \left(x-1\right) = 3x - 13$
-        $x - 12 = 2x - 4 \left(x - 3\right)$
+        $-(-2x-1)-3(x+5)=x+12$
         \vspace{\stretch{1}}
 
         \part
-        $\frac{x-2}{3}-\frac{3x-5}{3} = -1$
+        $\frac{x-3}{2}-\frac{3x-5}{2} = -1$
         \vspace{\stretch{1}}
 
         \part
-        $8x-6=2\left[x+6\left(x-1\right)\right]$
+        $x-13=4\left[3x-4\left(x-2\right)\right]$
         \vspace{\stretch{1}}
     \end{parts}
 
     \newpage
 
     \question[2]
-    Resuelve las siguientes ecuaciones de segundo grado
+    Resuelve las siguientes ecuaciones de segundo y tercer grado
     \begin{parts}
         \part 
-        $2x^2 - 3x + 1 = 0$
+        $(x-2) (x+2) (x-3) = 0$
         \vspace{\stretch{1}}
 
         \part 
-        $25 - x^2 = 0$
+        $3x^2+3x=2x^2$
         \vspace{\stretch{1}}
 
         \part 
-        $-2x^2 + 15x - 7 = 0$
+        $x^2+x-6=0$
         \vspace{\stretch{1}}
+
     \end{parts}
 
 
     \newpage
     \question[2]
-    Dada la función de la gráfica, identifica el dominio, la imagen o recorrido, continuidad y puntos de discontinuidad, intervalos de crecimiento y decrecimiento, máximos y mínimos relativos y absolutos.
+    Dada la función de la gráfica, identifica el dominio, la imagen, continuidad y puntos de discontinuidad, intervalos de crecimiento y decrecimiento, máximos y mínimos relativos y absolutos.
 
     \begin{tikzpicture}[scale=1]
         \begin{axis}[
@@ -153,19 +153,13 @@
                 %axis lines=middle
                 % restrict y to domain=-20:20
             ]
-
-            \addplot[domain=10:15,black] {x-10};
-
-            % \addplot[domain=-5:0,black] {x*x+6*x};
-            \addplot[domain=0:5,black] {x*x-6*x};
-
-            \addplot[domain=-5:0,black] {-x};
-            \addplot[domain=-9:-5,black] {x*x+15*x+55};
-            
-            % \addplot[domain=6:15,black] {-5};
-            % \draw[dashed] (axis cs:6,6) -- (axis cs:6,-5);
-            \addplot[holdotBlack] coordinates{(-9,1)(5,-5)(15,5)};
-            \addplot[soldotBlack] coordinates{(10,0)};
+            \addplot[domain=-15:-5,black] {-x-10};
+            \addplot[domain=-5:0,black] {x*x+6*x};
+            \addplot[domain=0:6,black] {x};
+            \addplot[domain=6:15,black] {-5};
+            \draw[dashed] (axis cs:6,6) -- (axis cs:6,-5);
+            \addplot[holdotBlack] coordinates{(-15,5)(6,-5)};
+            \addplot[soldotBlack] coordinates{(6,6)(15,-5)};
         \end{axis}
     \end{tikzpicture}
     \\
@@ -182,7 +176,7 @@
             Máximos relativos:           &  \\ \hline
             Mínimos relativos:           &  \\ \hline
             Máximo absoluto:             &  \\ \hline
-            Máximo relativo:             &  \\ \hline
+            Mínimo absoluto:             &  \\ \hline
         \end{tabular}
     \end{table}
 \end{questions}

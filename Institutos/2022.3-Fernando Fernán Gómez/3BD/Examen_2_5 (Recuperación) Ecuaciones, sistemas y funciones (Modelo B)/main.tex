@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\documentName} { Examen global 2ª evaluación }
+\newcommand{\documentName} { Examen recuperación 2ª evaluación }
 \newcommand{\documentContent} { Ecuaciones, sistemas de ecuaciones y funciones } 
-\newcommand{\waterMark} { \phantom{Modelo B} } 
+\newcommand{\waterMark} { Modelo B } 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Configuración del documento.
@@ -35,20 +35,20 @@
     \setcounter{question}{0}
 
     \question[2]
-    % x = 4 y = 1
+    % x = - 3; Y = -4
     Resuelve el siguiente sistema de ecuaciones por el método gráfico.
     \begin{flushleft}
         $\begin{cases}
-                \nonumber
-                x - 2y = 2 \\
-                \nonumber
-                x = 4
-            \end{cases}$
+            \nonumber
+            2x - y = 2 \\
+            \nonumber
+            x - y = 0
+        \end{cases}$
     \end{flushleft}
 
     \begin{figure}[h]
         \begin{tikzpicture}[scale=1]
-            \tkzInit[xmax=6,ymax=6,xmin=-6,ymin=-6]
+            \tkzInit[xmax=7,ymax=7,xmin=-7, ymin=-7]
             \tkzGrid[color=black!50]
             \tkzAxeXY
         \end{tikzpicture}
@@ -59,13 +59,14 @@
     Resuelve los siguientes sistemas de ecuaciones:
     \begin{parts}
         \part
-        Por el método de sustitución:
+        % Por el método de sustitución:
+        % x= - 27; y = -17
         \begin{flushleft}
             $\begin{cases}
                     \nonumber
-                    -3x + y = 2 \\
+                    3x - 5y  = 4 \\
                     \nonumber
-                    6x - y = -11
+                    x - 2y = 7
                 \end{cases}$
         \end{flushleft}
         \vspace{\stretch{1}}
@@ -75,21 +76,22 @@
         % \begin{flushleft}
         %     $\begin{cases}
         %             \nonumber
-        %             2x + y = 10 \\
+        %             -3x - 4y = 5 \\
         %             \nonumber
-        %             -3x - 2y = -16
+        %             -2x + 3y = 9
         %         \end{cases}$
         % \end{flushleft}
         % \vspace{\stretch{1}}
 
         \part
-        Por el método de reducción.
+        % Por el método de reducción.
+        % x=5; y = 2
         \begin{flushleft}
             $\begin{cases}
                     \nonumber
-                    x + 2y = 6 \\
+                    x + 2y = 9 \\
                     \nonumber
-                    x + 3y = 7
+                    x - 2y = 1
                 \end{cases}$
         \end{flushleft}
         \vspace{\stretch{1}}
@@ -100,15 +102,16 @@
     Resuelve las siguientes ecuaciones:
     \begin{parts}
         \part
-        $-(-3x-2)-2(x+5)=2x+9$
+        % $5 \left(x-3\right) - 2 \left(x-1\right) = 3x - 13$
+        $x - 12 = 2x - 4 \left(x - 3\right)$
         \vspace{\stretch{1}}
 
         \part
-        $\frac{x-5}{3}-\frac{2x-7}{3} = -1$
+        $\frac{x-2}{3}-\frac{3x-5}{3} = -1$
         \vspace{\stretch{1}}
 
         \part
-        $5\left[2x-4\left(3x+1\right)\right] = -10x+20$
+        $8x-6=2\left[x+6\left(x-1\right)\right]$
         \vspace{\stretch{1}}
     \end{parts}
 
@@ -118,48 +121,71 @@
     Resuelve las siguientes ecuaciones de segundo grado
     \begin{parts}
         \part 
-        $(x-3)(x+3)(x+7) = 0$
+        $2x^2 - 3x + 1 = 0$
         \vspace{\stretch{1}}
 
         \part 
-        $2x^2 + 12x= -4 x^2$
+        $25 - x^2 = 0$
         \vspace{\stretch{1}}
 
         \part 
-        $x^2-4x-12=0$
+        $-2x^2 + 15x - 7 = 0$
         \vspace{\stretch{1}}
     \end{parts}
 
 
     \newpage
     \question[2]
-    Dada la función de la gráfica, identifica el dominio, la imagen, continuidad y puntos de discontinuidad, intervalos de crecimiento y decrecimiento, máximos y mínimos relativos y absolutos.
+    Dada la función de la gráfica, identifica el dominio, la imagen o recorrido, continuidad y puntos de discontinuidad, intervalos de crecimiento y decrecimiento, máximos y mínimos relativos y absolutos.
 
     \begin{tikzpicture}[scale=1]
         \begin{axis}[
                 %title={$f(x)=x^2-10$},
                 axis lines=middle,
-                axis line style={->},
+                axis line style={<->},
                 legend style={inner ysep=7pt},
                 %x label style={at={(axis description cs:0.5,-0.06)},anchor=north},
                 %y label style={at={(axis description cs:-0.06,.5)},rotate=90,anchor=south},
                 %xlabel={Nº de bombillas},ylabel={Vida en horas},
-                black!50,
                 no markers,
+                black!50,
                 grid,
                 width=15cm,
                 xmax=20,ymax=20,xmin=-20,ymin=-20,
                 %axis lines=middle
                 % restrict y to domain=-20:20
             ]
-            \addplot[domain=-15:-5,black] {x+10};
-            \addplot[domain=-5:0,black] {-x*x-6*x};
-            \addplot[domain=0:6,black] {-x};
-            \addplot[domain=6:15,black] {5};
-            \draw[dashed] (axis cs:6,-6) -- (axis cs:6,5);
-            \addplot[holdotBlack] coordinates{(-15,-5)(6,5)};
-            \addplot[soldotBlack] coordinates{(6,-6)(15,5)};
+
+            \addplot[domain=10:15,black] {x-10};
+
+            % \addplot[domain=-5:0,black] {x*x+6*x};
+            \addplot[domain=0:5,black] {x*x-6*x};
+
+            \addplot[domain=-5:0,black] {-x};
+            \addplot[domain=-9:-5,black] {x*x+15*x+55};
+            
+            % \addplot[domain=6:15,black] {-5};
+            % \draw[dashed] (axis cs:6,6) -- (axis cs:6,-5);
+            \addplot[holdotBlack] coordinates{(-9,1)(5,-5)(15,5)};
+            \addplot[soldotBlack] coordinates{(10,0)};
         \end{axis}
     \end{tikzpicture}
+    \\
+    \renewcommand{\arraystretch}{1.8}
+    \begin{table}[h]
+        \begin{tabular}{|l|p{10cm}|}   
+            \hline
+            Dominio:                     &  \\ \hline
+            Imagen o recorrido:          &  \\ \hline
+            Continuidad:                 &  \\ \hline
+            Puntos de discontinuidad:    &  \\ \hline
+            Intervalos de crecimiento:   &  \\ \hline
+            Intervalos de decrecimiento: &  \\ \hline
+            Máximos relativos:           &  \\ \hline
+            Mínimos relativos:           &  \\ \hline
+            Máximo absoluto:             &  \\ \hline
+            Mínimo absoluto:             &  \\ \hline
+        \end{tabular}
+    \end{table}
 \end{questions}
 \end{document}
