@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\documentName} { Lógica }
+\newcommand{\documentContent} { \phantom{ } } 
+\newcommand{\waterMark} {  } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configurationCurso} 
+\input{./include/configuration} 
+
+\renewcommand{\thepartno}{\arabic{partno}}
+
+\usepackage{xfrac}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+% \printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% \StudentData{}
+% \GradeTableHeader{}
+
+\justifying{}
+
+    % https://www.brain-training.org/problemas-de-logica/
+
+    \begin{questions}
+        \question 
+
+        \question EL PASTOR Un pastor tiene que pasar un lobo, una cabra y una lechuga a la otra orilla de un río, dispone de una barca en la que solo caben el y una de las otras tres cosas.
+        Si el lobo se queda solo con la cabra se la come, si la cabra se queda sola con la lechuga se la come.
+        
+        \question EL CONDENADO A MUERTE. En los tiempos de la antigüedad la gracia o el castigo se dejaban frecuentemente al azar.
+        Así, éste es el caso de un reo al que un sultán decidió que se salvase o muriese sacando al azar una papeleta de entre dos posibles: una con la sentencia «muerte», la otra con la palabra «vida», indicando gracia.     
+        Lo malo es que el Gran Visir, que deseaba que el acusado muriese, hizo que en las dos papeletas se escribiese la palabra «muerte».      
+        ¿Cómo se las arregló el reo, enterado de la trama del Gran Visir, para estar seguro de salvarse?
+        Al reo no le estaba permitido hablar y descubrir así el enredo del Visir.
+
+        \question LAS DEPORTISTAS. Ana, Beatriz y Carmen. Una es tenista, otra gimnasta y otra nadadora.
+        La gimnasta, la más baja de las tres, es soltera. Ana, que es suegra de Beatriz, es más alta que la tenista.
+        ¿Qué deporte practica cada una?
+
+        \question SILOGISMOS. Ejemplo que está en todos los manuales de lógica elemental. El silogismo: «Los hombres son mortales, Sócrates es hombre.
+        Luego, Sócrates es mortal».
+
+        Los gatos son seres vivos, Sócrates está vivo, luego Sócrates es un gato.
+
+        \question EL TORNEO DE AJEDREZ. En un torneo de ajedrez participaron 30 concursantes que fueron divididos, de acuerdo con su categoría, en dos grupos.
+        En cada grupo los participantes jugaron una partida contra todos los demás.
+        En total se jugaron 87 partidas más en el segundo grupo que en el primero.
+        El ganador del primer grupo no perdió ninguna partida y totalizó 7’5 puntos.
+        ¿En cuántas partidas hizo tablas el ganador?
+
+        \question LAS TRES CARTAS. Tres naipes, sacados de una baraja francesa, yacen boca arriba en una fila horizontal.
+        A la derecha de un Rey hay una o dos Damas. A la izquierda de una Dama hay una o dos Damas.
+        A la izquierda de un corazón hay una o dos picas.
+        A la derecha de una pica hay una o dos picas. Dígase de qué tres cartas se trata.
+
+    \end{questions}
+
+\end{document}
