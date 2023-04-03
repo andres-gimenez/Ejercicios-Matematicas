@@ -53,7 +53,21 @@
 % \usepackage{markdown}
 \usepackage{blindtext}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\schoolSubject} {  }
+\newcommand{\school} {  }
+\newcommand{\academicPeriod} { \phantom{ } }
+
+\newcommand{\autor} { }
+\newcommand{\emailAuthor} { }
+\newcommand{\autorSing}{ }
+
+\newcommand{\documentName} { }
+\newcommand{\documentContent} { } 
+\newcommand{\waterMark} {  } 
+
 \author{\autor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[pdfborder={0 0 0}, colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black, pdfpagemode=UseNone]{hyperref}
 \hypersetup{

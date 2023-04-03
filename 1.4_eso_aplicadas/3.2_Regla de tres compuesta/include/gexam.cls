@@ -49,15 +49,29 @@
 % \usepackage{markdown}
 \usepackage{blindtext}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\schoolSubject} {  }
+\newcommand{\school} {  }
+\newcommand{\academicPeriod} { \phantom{ } }
+
+\newcommand{\autor} { }
+\newcommand{\emailAuthor} { }
+\newcommand{\autorSing}{ }
+
+\newcommand{\documentName} { }
+\newcommand{\documentContent} { } 
+\newcommand{\waterMark} {  } 
+
 \author{\autor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[pdfborder={0 0 0}, colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black, pdfpagemode=UseNone]{hyperref}
-% \hypersetup{
-%     pdfauthor = \autor~(\emailAuthor),
-%     pdftitle = {\documentName \documentContent \schoolSubject},
-%     pdfsubject= {\documentName \documentContent \schoolSubject},
-%     pdfkeywords = {\schoolSubject \documentName \autor \school \academicPeriod \autorSing \waterMark}
-% }
+\hypersetup{
+    pdfauthor = \autor~(\emailAuthor),
+    pdftitle = {\documentName \documentContent \schoolSubject},
+    pdfsubject= {\documentName \documentContent \schoolSubject},
+    pdfkeywords = {\schoolSubject \documentName \autor \school \academicPeriod \autorSing \waterMark}
+}
 
 \usepackage{background}
 \backgroundsetup{
