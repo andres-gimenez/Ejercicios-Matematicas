@@ -27,6 +27,7 @@
 \usepackage{amssymb}
 \usepackage{lmodern}
 \usepackage{mathtools, nccmath}
+\usepackage{nicefrac, xfrac}
 \usepackage{polynom}
 \usepackage{polynomial}
 \usepackage{array,booktabs}
