@@ -146,6 +146,7 @@
 \firstpagefooter{}{}{\small Página \thepage\ de \numpages}
 \runningfooter{}{}{\small Página \thepage\ de \numpages}
 
+\renewcommand*\half{\!\hspace{0.6mm},5}
 \pointpoints{punto}{puntos}
 \bonuspointpoints{punto extra}{puntos extra}
 \hqword{Pregunta}
@@ -156,7 +157,7 @@
 \bonuspointformat{(\emph{\thepoints})}
 %\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.   
 
-%\extrawidth{-1.8cm} %Un poquito más de margen por si ponemos textos largos.
+\extrawidth{-1.0cm} %Un poco más de margen.
 \marginpointname{ \emph{\points}}
 %\bracketedpoints
 

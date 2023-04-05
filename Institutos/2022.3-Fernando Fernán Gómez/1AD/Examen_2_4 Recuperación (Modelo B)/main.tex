@@ -1,14 +1,15 @@
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexam}
+
  %%%%%%%%%%%%%%%%%%%%%%%%%%%
- \newcommand{\documentName} { 2ª evaluación }
- \newcommand{\documentContent} { Recuperación } 
- \newcommand{\waterMark} { Modelo B } 
- %%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
+ \renewcommand{\documentName} { 2ª evaluación }
+ \renewcommand{\documentContent} { Recuperación } 
+ \renewcommand{\waterMark} { Modelo B } 
+
  % Configuración del documento.
- \input{./include/configurationCurso} 
  \input{./include/configuration} 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
  
- % \renewcommand{\thepartno}{\arabic{partno}}
+% \renewcommand{\thepartno}{\arabic{partno}}
 %  \renewcommand{\thepartno}{\thecurrentpartno.\arabic{partno}}
 
 % \renewcommand{\partlabel}{(\thequestion.\arabic{partno})}
@@ -17,8 +18,6 @@
 \renewcommand\subpartlabel{(\thesubpart)}
 \renewcommand\subpartshook{\renewcommand\makelabel[1]{##1\hfil }}
 
- \usepackage{nicefrac, xfrac}
- 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%
  % Exam configuration
  %\pointsdroppedatright   %% No mostrar la puntuación

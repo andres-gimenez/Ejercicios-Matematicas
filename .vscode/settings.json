@@ -2,8 +2,9 @@
     "files.autoSave": "afterDelay",
     "cSpell.language": "es-ES,en-UK",
     "cSpell.words": [
-        "browser"
-    ],
+		"browser",
+		"IES"
+	],
     // "go.formatTool": "goimports",
 	// "go.docsTool": "guru",
 	// "editor.largeFileOptimizations": false,

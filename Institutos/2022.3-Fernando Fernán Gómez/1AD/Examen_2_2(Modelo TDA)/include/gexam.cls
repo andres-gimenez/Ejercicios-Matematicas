@@ -155,8 +155,10 @@
 \pointformat{(\emph{\thepoints})}
 \bonuspointformat{(\emph{\thepoints})}
 %\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.   
+% \nopointsinrightmargin 
+\pointsinrightmargin 
 
-%\extrawidth{-1.8cm} %Un poquito más de margen por si ponemos textos largos.
+\extrawidth{-1.0cm} %Un poco más de margen.
 \marginpointname{ \emph{\points}}
 %\bracketedpoints
 
