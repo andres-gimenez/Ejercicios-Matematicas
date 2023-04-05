@@ -1,4 +1,6 @@
-\LoadClass{exam}
+\LoadClass[addpoints]{exam}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{gexam}[Examenes]
 
 %\usepackage[paperheight=5.8in,paperwidth=8.27in,bindingoffset=0in,left=0.8in,right=1in, top=0.7in,bottom=1in,headsep=.5\baselineskip]{geometry}
 %\usepackage[bindingoffset=0in,left=0.8in,right=0.8in, top=0.7in,bottom=1in,headsep=.5\baselineskip]{geometry}
