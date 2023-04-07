@@ -1,5 +1,10 @@
 \LoadClass{exam}
 
+\NeedsTeXFormat{LaTeX2e}
+% \ProvidesClass{gexercises}[Ejercicios]
+
+% \usepackage{./include/configDocument}
+
 \usepackage[left=1.2cm, right=2.5cm, bottom=2cm, top=2cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -47,8 +52,8 @@
 \usepackage{blindtext}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\schoolSubject} {  }
-\newcommand{\school} {  }
+\newcommand{\schoolSubject} { \phantom{ schoolSubject } }
+\newcommand{\school} { \phantom{ school } }
 \newcommand{\academicPeriod} { \phantom{ } }
 
 \newcommand{\autor} { }
@@ -63,11 +68,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[pdfborder={0 0 0}, colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black, pdfpagemode=UseNone]{hyperref}
-\hypersetup{
-    pdfauthor = \autor~(\emailAuthor),
-    pdftitle = {\documentName \documentContent \schoolSubject},
-    pdfsubject= {\documentName \documentContent \schoolSubject},
-    pdfkeywords = {\schoolSubject \documentName \autor \school \academicPeriod \autorSing \waterMark}
+
+\AtBeginDocument
+{ 
+    \hypersetup{
+        pdfauthor = \autor~(\emailAuthor),
+        pdftitle = {\documentName \documentContent \schoolSubject},
+        pdfsubject= {\documentName \documentContent \schoolSubject},
+        pdfkeywords = {\schoolSubject \documentName \autor \school \academicPeriod \autorSing \waterMark}
+    }
 }
 
 \usepackage{background}
