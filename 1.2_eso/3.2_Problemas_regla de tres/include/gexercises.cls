@@ -1,7 +1,5 @@
 \LoadClass{exam}
 
-%\usepackage[paperheight=5.8in,paperwidth=8.27in,bindingoffset=0in,left=0.8in,right=1in, top=0.7in,bottom=1in,headsep=.5\baselineskip]{geometry}
-%\usepackage[bindingoffset=0in,left=0.8in,right=0.8in, top=0.7in,bottom=1in,headsep=.5\baselineskip]{geometry}
 \usepackage[left=1.2cm, right=2.5cm, bottom=2cm, top=2cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -9,6 +7,8 @@
 \usepackage[gen]{eurosym}
 \usepackage{xcolor}
 \usepackage{multicol}
+\usepackage{amsthm}
+\usepackage{mdframed}
 
 \usepackage[normalem]{ulem}
 \renewcommand\ULthickness{0.5pt}   %%---> For changing thickness of underline
@@ -19,6 +19,8 @@
 \graphicspath{ {img/} }
 \usepackage{enumitem} % Para poder configurar las listas
 \everymath{\displaystyle} % Esto es para que las expresiones se vean... grandes, que resulta diferente de si las queremos entre líneas.
+\usepackage{nicefrac, xfrac}
+\usepackage{yhmath}
 
 \usepackage{colortbl}
 \definecolor{azul}{rgb}{0.17,0.40, 0.68}
@@ -27,6 +29,8 @@
 \usepackage{amssymb}
 \usepackage{lmodern}
 \usepackage{mathtools, nccmath}
+\usepackage{yhmath}
+\usepackage{amsthm}
 \usepackage{polynom}
 \usepackage{polynomial}
 \usepackage{array,booktabs}
@@ -115,6 +119,23 @@
                 \flushright Grupo: \underline{\hspace{0.7cm}} \hspace{0.1cm} Fecha: \underline{\hspace{2.1cm}}  \\
             \end{minipage}
         \end{tabular}
+    \fi
+}
+
+\newcommand{\GradeTableHeader}{
+    \ifprintanswers
+        %Examen resulto
+    \else
+        %\StudentData
+
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % Tabla para anotar la calificación
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        \begin{center}
+            %\resizebox{\textwidth}{!}{\gradetable[h][questions]} % Esto es por si la tabla sale muy grande, para ajustarla al ancho
+            \gradetable[h][questions]
+        \end{center}
+        \vspace{0.1in} % Espacio vertical
     \fi
 }
 

@@ -1,7 +1,5 @@
 \LoadClass{exam}
 
-%\usepackage[paperheight=5.8in,paperwidth=8.27in,bindingoffset=0in,left=0.8in,right=1in, top=0.7in,bottom=1in,headsep=.5\baselineskip]{geometry}
-%\usepackage[bindingoffset=0in,left=0.8in,right=0.8in, top=0.7in,bottom=1in,headsep=.5\baselineskip]{geometry}
 \usepackage[left=1.2cm, right=2.5cm, bottom=2cm, top=2cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}

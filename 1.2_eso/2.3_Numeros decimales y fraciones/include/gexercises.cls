@@ -9,12 +9,14 @@
 \usepackage[gen]{eurosym}
 \usepackage{xcolor}
 \usepackage{multicol}
+\usepackage{caption}
 
 \usepackage[normalem]{ulem}
 \renewcommand\ULthickness{0.5pt}   %%---> For changing thickness of underline
 \setlength\ULdepth{1.5ex}          %\maxdimen ---> For changing depth of underline
 \renewcommand{\baselinestretch}{1}
 \usepackage{fancybox} % 
+\usepackage{wrapfig}
 \usepackage{graphicx} % Paquete necesario para incluir imágenes, cambiarles el tamaño, etc.
 \graphicspath{ {img/} }
 \usepackage{enumitem} % Para poder configurar las listas
