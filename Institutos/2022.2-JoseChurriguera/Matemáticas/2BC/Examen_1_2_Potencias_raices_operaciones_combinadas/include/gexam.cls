@@ -1,6 +1,6 @@
 \LoadClass[addpoints]{exam}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{gexam}[Examenes]
+% \ProvidesClass{gexam}[Examenes]
 
 %\usepackage[paperheight=5.8in,paperwidth=8.27in,bindingoffset=0in,left=0.8in,right=1in, top=0.7in,bottom=1in,headsep=.5\baselineskip]{geometry}
 %\usepackage[bindingoffset=0in,left=0.8in,right=0.8in, top=0.7in,bottom=1in,headsep=.5\baselineskip]{geometry}
@@ -21,6 +21,7 @@
 \graphicspath{ {img/} }
 \usepackage{enumitem} % Para poder configurar las listas
 \everymath{\displaystyle} % Esto es para que las expresiones se vean... grandes, que resulta diferente de si las queremos entre líneas.
+\usepackage{nicefrac, xfrac}
 
 \usepackage{colortbl}
 \definecolor{azul}{rgb}{0.17,0.40, 0.68}
@@ -29,7 +30,6 @@
 \usepackage{amssymb}
 \usepackage{lmodern}
 \usepackage{mathtools, nccmath}
-\usepackage{nicefrac, xfrac}
 \usepackage{polynom}
 \usepackage{polynomial}
 \usepackage{array,booktabs}
