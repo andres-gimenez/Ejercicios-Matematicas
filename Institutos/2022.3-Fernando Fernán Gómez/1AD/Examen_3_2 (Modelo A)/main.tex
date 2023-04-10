@@ -1,0 +1,175 @@
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexam}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \renewcommand{\documentName} { 3ª evaluación }
+ \renewcommand{\documentContent} { Lenguaje algebraico y ecuaciones } 
+ \renewcommand{\waterMark} { Modelo A } 
+
+ % Configuración del documento.
+ \input{./include/configuration} 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+% \renewcommand{\thepartno}{\arabic{partno}}
+%  \renewcommand{\thepartno}{\thecurrentpartno.\arabic{partno}}
+
+% \renewcommand{\partlabel}{(\thequestion.\arabic{partno})}
+% \renewcommand{\subpartlabel}{(\thepart.\arabic{subpartno})}
+
+\renewcommand\subpartlabel{(\thesubpart)}
+\renewcommand\subpartshook{\renewcommand\makelabel[1]{##1\hfil }} 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % Exam configuration
+ %\pointsdroppedatright   %% No mostrar la puntuación
+ \pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+ \extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+ \marginpointname{ \emph{\points}}
+ 
+ %% Si se comenta no aparecerán los espacios de la solución.
+ %\nocancelspace
+ 
+ %% Puntuación a la izquierda.
+%  \nopointsinrightmargin 
+
+ %% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+ %% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+ % \printanswers
+ %\noprintanswers
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \begin{document}
+ 
+ \StudentData{}
+ \GradeTableHeader{}
+ 
+ \justifying{}
+
+ \justifying
+
+% \begin{center}
+%     \fbox{\fbox{\parbox{6.5in}{             
+%                 \begin{itemize}
+%                     \item Deben aparecer todas las operaciones, no vale solo con indicar el resultado.
+%                     \item Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.
+%                     \item Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.
+%                     \item No se puede utilizar la calculadora.
+%                 \end{itemize}
+%             }}}
+% \end{center}
+ 
+ \begin{questions}
+    
+    \question[1] Expresa las siguientes frases en lenguaje algebraico:
+    \begin {parts}
+        \part El doble de un número.
+        \vspace{5mm}
+        \part El cuadrado de un número.
+        \vspace{5mm}
+        \part El cuadrado de un número menos su cuarta parte.
+        \vspace{5mm}
+        \part La mitad de un número menos cuatro.
+        \vspace{5mm}
+        \part El triple de un número menos su cuarta parte.
+        \vspace{5mm}
+    \end{parts} 
+
+    \question[2] Al abrir una hucha, Manuel ha contado '$x$' monedas de 20 cént. e '$y$' monedas de 50 cént.
+    \begin {parts}
+        \part Expresa en lenguaje algebraico:
+        \begin {subparts}   
+            \subpart El dinero que tiene Manuel en monedas de 20 cént.
+            \vspace{5mm}
+            \subpart El dinero que tiene Manuel en monedas de 50 cént.
+            \vspace{5mm}
+            \subpart El dinero total que tiene Manuel.
+            \vspace{5mm}
+        \end {subparts}
+        \part Si Manuel cuenta las monedas y tiene 3 monedas de 20 cént y 7 de 50 cént, indica:
+        \begin {subparts}   
+            \subpart El valor de '$x$' y de '$y$' del apartado anterior
+            \vspace{5mm}
+            \subpart El dinero que tiene Manuel en monedas de 20 cént.
+            \vspace{5mm}
+            \subpart El dinero que tiene Manuel en monedas de 50 cént.
+            \vspace{5mm}
+            \subpart El dinero total que tiene Manuel.
+        \vspace{5mm}
+    \end {subparts}
+    \end{parts}
+
+    \newpage
+
+    \question[2] Cálcula el valor de la expresión $-2x^2+3x-2$ para los siguientes valores:
+    \begin {parts}
+        \part $x=2$
+        \vspace{\stretch{1}}
+        \part $x=-2$
+        \vspace{\stretch{1}}
+        \part $x=0$
+        \vspace{\stretch{1}}
+        \part $x=\frac{3}{5}$
+        \vspace{\stretch{1}}
+    \end{parts}
+
+    \question[2] Realiza las siguientes operaciones:
+    \begin {parts}
+        \part $5x + 3x$
+        \vspace{\stretch{1}}
+
+        \part $5x^2 + 3x$
+        \vspace{\stretch{1}}
+
+        \part $5x^2 + 3x^2$
+        \vspace{\stretch{1}}
+
+        \part $5x \cdot 3x$
+        \vspace{\stretch{1}}
+
+        \part $5x^2 \cdot 3x$
+        \vspace{\stretch{1}}
+    \end{parts}
+
+    \newpage
+
+    \question[2] Reduce todo lo posible:
+    \begin {parts}
+        \part $7x^2+\left(3x^2+2x^2\right) = $
+        \vspace{\stretch{1}}
+        \part $7x^2-\left(3x^2+2x^2\right) = $
+        \vspace{\stretch{1}}
+        \part $\left(3x^2-2x\right) - \left(5x^2+3x\right) = $
+        \vspace{\stretch{1}}
+    \end{parts}
+
+    \question[2] Resuelve las siguientes ecuaciones:
+    \begin {parts}
+        \part $x+2 = 1$
+        \vspace{\stretch{1}}
+        \part $x-3 = 2$
+        \vspace{\stretch{1}}
+        \part $3x=-15$
+        \vspace{\stretch{1}}
+        \part $4x+16=0$
+        \vspace{\stretch{1}}
+        \part $2x= 1 + 3x$
+        \vspace{\stretch{1}}
+        \part $3x + 2 = x + 1$
+        \vspace{\stretch{1}}
+
+
+    \end{parts}
+
+    \newpage
+
+    \question[1] Si duplicamos un número y al resultado le restamos 10, obtenemos 18. 
+    ¿Qué número buscamos?
+    \vspace{\stretch{1}}
+
+    \question[1]
+    Manuel guarda 25 euros en su hucha, que supone sumar una cuarta parte del dinero que ya había. ¿Cuánto dinero hay en la hucha?
+    \vspace{\stretch{1}}
+
+\end{questions}
+ 
+\end{document}
