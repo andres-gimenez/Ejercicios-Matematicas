@@ -1,4 +1,4 @@
-\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{exam}
+\LoadClass{exam}
 
 %\usepackage[paperheight=5.8in,paperwidth=8.27in,bindingoffset=0in,left=0.8in,right=1in, top=0.7in,bottom=1in,headsep=.5\baselineskip]{geometry}
 %\usepackage[bindingoffset=0in,left=0.8in,right=0.8in, top=0.7in,bottom=1in,headsep=.5\baselineskip]{geometry}
@@ -31,6 +31,8 @@
 \usepackage{amssymb}
 \usepackage{lmodern}
 \usepackage{mathtools, nccmath}
+\usepackage{yhmath}
+\usepackage{amsthm}
 \usepackage{polynom}
 \usepackage{polynomial}
 \usepackage{array,booktabs}
@@ -52,7 +54,21 @@
 % \usepackage{markdown}
 \usepackage{blindtext}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\schoolSubject} {  }
+\newcommand{\school} {  }
+\newcommand{\academicPeriod} { \phantom{ } }
+
+\newcommand{\autor} { }
+\newcommand{\emailAuthor} { }
+\newcommand{\autorSing}{ }
+
+\newcommand{\documentName} { }
+\newcommand{\documentContent} { } 
+\newcommand{\waterMark} {  } 
+
 \author{\autor}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[pdfborder={0 0 0}, colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black, pdfpagemode=UseNone]{hyperref}
 \AtBeginDocument

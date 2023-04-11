@@ -1,18 +1,15 @@
- %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\documentName} { Funciones }
-\newcommand{\documentContent} { Funciones lineales y cuadráticas } 
-\newcommand{\waterMark} {  } 
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexercises} 
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\renewcommand{\documentName} { Funciones }
+\renewcommand{\documentContent} { Funciones lineales y cuadráticas } 
+\renewcommand{\waterMark} {  } 
 % Configuración del documento.
-\input{./include/configurationCurso} 
 \input{./include/configuration} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \renewcommand{\thepartno}{\arabic{partno}}
 
-\usepackage{yhmath}
-
-\usepackage{amsthm}
 \theoremstyle{definition}
 \newtheorem*{theorem}{Theorem}
 \newtheorem{definition}{Definición}
@@ -43,9 +40,61 @@
 \justifying{}
 
 \begin{questions}
+    \question Manuel trabaja como repartidor los fines de semana y recibe una cantidad fija de 40 \euro{} mensuales, 
+    más 5 \euro{} por cada paquete que reparte.
+    \begin{parts}
+        \part Escribe la fórmula y representa la gráfica de la función que relaciona el número de paquetes repartidos con el dinero recibido al mes.
+        \part ¿Cuántos paquetes tiene que repartir Manuel para cobrar en un mes 205 \euro{}.
+    \end{parts}
+
+    \question Jorge sale a correr con una velocidad constante de $10km/h$. 
+    Una hora después, Marta también empieza a correr con una velocidad constante de $15km/h$.
+    \begin{parts}
+        \part Escribe las expresiones algebraicas de las funciones que describen la distancia recorrida por cada uno de los corredores.
+        \part Determina el tiempo que transcurre hasta que Jorge y Marta se encuentran, y la distancia recorrida por cada uno hasta ese momento.
+        \part Representa gráficamente estas funciones en un mismo sistema de coordenadas cartesianas
+    \end{parts}
+
+    \question 
+        Nos queremos ir de vacaciones y hemos encontrado las siguientes ofertas:
+        \begin{enumerate}
+            \item Hotel La Laguna:  
+            \begin{itemize}
+                \item Precio por persona y día 70 \euro{}.
+                \item Primer día gratis.
+                \item Estancia mínima 5 días.
+            \end{itemize}
+            \item Hotel El Mar: 
+            \begin{itemize}
+                \item Precio por persona y día 60 \euro{}.
+                \item Estancia mínima 2 días.
+            \end{itemize}
+        \end{enumerate}
+        \begin{parts}
+            \part Confecciona, para cada uno de los hoteles, la tabla de valores relativa los diez primeros días de estancia en el hotel.
+            \part Expresa algebraicamente cómo varía el coste en cada uno de los hoteles al aumentar la estancia.
+            \part Representa gráficamente las funciones obtenidas en el apartado anterior.
+            \part ¿Cuánto pagará una persona después de 5 días en cada uno de los hoteles?
+            \part ¿Al cabo de cuántos días resulta más económico el hotel El Mar?
+            \part El coste de la estancia de una persona en el hotel es de 480 \euro{}.
+            ¿En qué hotel se ha alojado? ¿Cuántos días?
+        \end{parts}
+
     \question
        Queremos crear un recinto vallado, para lo cual disponemos de un muro ya construido y de 100 metros de malla metálica.
-       ¿Qué dimensiones debe tener la valla para que el área del recinto sea máximo? 
+       ¿Qué dimensiones debe tener la valla para que el área del recinto sea máxima? 
+
+    \question 
+        La altura, $h$, a la que se encuentra en cada instante, $t$, 
+        un objeto que lanzamos verticalmente hacia arriba con una velocidad de $20m/s$ es $h=20t - 5t^2$.
+        \begin{parts}
+            \part Representa gráficamente la función.
+            \part Di cuál es su dominio de definición.
+            \part ¿En qué momento alcanza la altura máxima? ¿Cuál es esa altura?
+            \part ¿En qué momento el objeto llega al suelo?
+            \part ¿En qué intervalo de tiempo el objeto está a una altura superior a 15 metros?
+        \end{parts}
+
 
 \end{questions}
 
