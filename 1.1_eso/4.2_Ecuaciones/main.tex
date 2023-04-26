@@ -1,15 +1,15 @@
 \documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexercises}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\documentName} { Expresiones algebraicas }
-\renewcommand{\documentContent} { Expresiones algebraicas y ecuaciones } 
+\renewcommand{\documentName} { Expresiones algebraicas}
+\renewcommand{\documentContent} { Ecuaciones de 1º grado } 
 \renewcommand{\waterMark} {  } 
 
 % Configuración del documento.
 \input{./include/configuration} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \renewcommand{\thepartno}{\arabic{partno}}
+\renewcommand{\thepartno}{\arabic{partno}}
 
 \usepackage{yhmath}
 
@@ -31,7 +31,7 @@
 
 %% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
 %% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
-% \printanswers
+\printanswers
 %\noprintanswers
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -44,101 +44,10 @@
 \justifying{}
 
 \begin{questions}
-    \question Calcula el valor de las siguientes expresiones:
-    \begin{parts}
-        \part El doble de cuatro.
-        \part El triple de cinco.
-        \part El doble de la mitad de tres.
-        \part La mitad de diez menos dos.
-        \part La mitad de diez, menos dos.
-        \part El triple de cinco más cuatro.
-        \part El triple de cinco, más cuatro.
-    \end{parts}
-
-    \question Escribe las siguientes expresiones en notación algebraica:
-    \begin{parts}
-        \part El doble de un número.
-        \part La mitad de un número.
-        \part El doble de un número más su mitad.
-        \part La mitad de un número menos dos.
-        \part La mitad de un número, menos dos.
-        \part El triple de la mitad de un número.
-        \part La mitad del triple de un número.
-        \part El siguiente número a uno dado.
-        \part El triple de un número al sumarle siete.
-
-        \part Un número par.
-        \part Un número impar.
-
-    \end{parts}
-
-    
-
-    \question Realiza las siguientes operaciones con monomio:
-    \begin{parts}
-        \begin{multicols}{2}
-            \part $2x + 3x$
-            \part $2x^2 + 3x^2$
-            \part $3x^2 - 5x^2$
-            \part $15x^5 - 10x^5$
-            \part $5x^2 -4x^2$
-            \part $3xy^2 + 5 xy^2$
-            \part $32x^2 - 4x^2 + 5x^2$
-
-
-            \part $\frac{5}{7}x - \frac{2}{7}x$
-            \part $\frac{5}{4}b^5 + \frac{7}{4} b^5$
-            \part $\frac{1}{3}xy - \frac{2}{5}xy$
-            \part $\frac{2}{5}x + \frac{3}{4}x $
-            \part $\frac{1}{3}x - \frac{4}{7}x + \frac{2}{6}x$
-            \part $\frac{2}{5}y - \frac{5}{2}x$
-
-            \part $15x^2 : 3$
-            \part $-12a^2b : 4$
-            \part $9x^3 : 3x^2$
-            \part $-20x^5 : \left(-4x^2\right)$
-            \part $2y^4 : 3y^2$
-            \part $-4x^6:8x^3$
-            \part $4x^3y^2 : 2x^3y$
-            \part $-10a^2b:5a^2b$
-            \part $5x^5y^3:4x^3y^4$
-        \end{multicols}
-    \end{parts}
-
-    \question Evalua las siguientes expresiones algebraicas para los valores indicados:
-    \begin{parts}
-        \begin{multicols}{2}
-            \part $5x^2 + 3x - 2$ para $x=3$
-            \part $3x^2 - 2x - 5$ para $x=2$
-            \part $3x^2 - 2x - 5$ para $x=-2$
-            \part $3x^2 - 2x - 5$ para $x=0$
-            \part $3x^2 - 2x - 5$ para $x=-1$
-
-            \part $\frac{5}{3}x + \frac{2}{3} $ para $x=\frac{1}{5}$
-            \part $\frac{2}{3}x^2 + \frac{1}{5}$ para $x=\frac{1}{4}$
-            \part $\frac{4}{5}x - \frac{1}{5}$ para $x=-1$
-
-
-            \part $4x^3 + 5x^2 - 2x + 1$ para $x=2$
-            \part $5x^2y - 2x + 2y - 1$ para $x=1$ e $y=2$
-            \part $5xy + 3$ para $x=2$
-        \end{multicols}
-    \end{parts}
-
-    \question Simplifica lo máximo posible las siguientes operaciones con polinomios:
-    \begin{parts}
-        \begin{multicols}{2}
-            \part $2x^2 + 3x$
-            \part $x^3 - 2x^2 + 3x^3 + 5x^2$
-            \part $4x^2 - 7x + x^2 + 4x - 3x^2 + 4x$
-        \end{multicols}
-    \end{parts}
-
-    \newpage
     \question Resuelve las siguientes ecuaciones:
     \begin{parts}
         \begin{multicols}{2}
-            \part $x-3=5$
+            \part $x-3=5$ \ifprintanswers $\left(\text{Sol: } x=8\right)$ \fi
             \part $x-6=3$
             \part $2x+3=13$
             \part $x-6=3x$
