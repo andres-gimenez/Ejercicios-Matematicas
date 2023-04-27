@@ -24,7 +24,6 @@
 \definecolor{azul}{rgb}{0.17,0.40, 0.68}
 \newcommand{\gray}{\rowcolor[gray]{.90}}
 
-\usepackage{xfrac} 
 \usepackage{amssymb}
 \usepackage{lmodern}
 \usepackage{mathtools, nccmath}
