@@ -9,7 +9,10 @@
 \input{./include/configuration} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\renewcommand{\thequestion}{\Roman{question}}
 \renewcommand{\thepartno}{\arabic{partno}}
+% \renewcommand{\thepartno}{\thequestion.\arabic{partno}}
+% \renewcommand{\partlabel}{(\thequestion.\thepartno)}
 
 \usepackage{yhmath}
 
@@ -138,8 +141,44 @@
         \begin{multicols}{2}
             \part $3x+\frac{1}{2}x+6=2x$   \phantom{123}   \ifprintanswers $\left(\text{Sol: } x=-4 \right)$ \fi
             \part $\frac{3}{2}x+8=\frac{3}{5}x-1$   \phantom{123}   \ifprintanswers $\left(\text{Sol: } x=-10 \right)$ \fi
-            % \part $$  \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
-            
+
+            \part $\frac{4}{3}\left(x+1\right)=2x-1$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=\frac{7}{2} \right)$ \fi
+            \part $\frac{x}{2}+\frac{2x}{3}-\frac{5x}{6}=5x-14$ \phantom{14} \ifprintanswers $\left(\text{Sol: } x=3 \right)$ \fi
+            \part $\frac{x-2}{4}-\frac{2x+6}{3}=0$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=-6 \right)$ \fi
+            \part $\frac{x+1}{4}-\frac{x-2}{6}=1$   \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=\frac{34}{11} \right)$ \fi
+            \part $\frac{2x+4}{4}-2\left(x-3\right)=5-\frac{7x}{2}$ \ifprintanswers $\left(\text{Sol: } x=-1 \right)$ \fi
+            \part $\frac{x-5}{2}-\frac{2x-4}{12}=\frac{5-x}{4}-\frac{x}{3}$ \ifprintanswers $\left(\text{Sol: } x=\frac{33}{11} \right)$ \fi
+            \part $\frac{1}{x}+1=\frac{3}{x}-3$  \phantom{123456} \ifprintanswers $\left(\text{Sol: } x=\frac{1}{2} \right)$ \fi
+            \part $\frac{2x-1}{3}-\frac{5x-4}{7}=\frac{x+5}{2}-5$  \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=5 \right)$ \fi
+            \part $\frac{5x}{6}-\frac{3}{6}=\frac{2}{4}+\frac{x}{4}$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=\frac{12}{7} \right)$ \fi
+            \part $\frac{x-4}{6}+\frac{2x-4}{8}=\frac{5x}{10}-\frac{5x-6}{12}$ \phantom{12} \ifprintanswers $\left(\text{Sol: } x=5 \right)$ \fi
+            \part $\frac{x+2}{x}-\frac{1}{3}=\frac{4}{x}$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=3 \right)$ \fi
+            \part $\frac{x+2}{3}-\frac{5x-3}{4}-2x=5$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=-\frac{43}{35} \right)$ \fi
+            \part $\frac{5+2x}{x}-\frac{1}{x^2}=2$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=\frac{1}{5} \right)$ \fi
+            \part $x\left(x-1\right)-\left(x-3\right)=x^2-1-\left(x-2\right)$ \ifprintanswers $\left(\text{Sol: } x=2 \right)$ \fi
+            \part $\frac{x-1}{4}-\frac{x-5}{36}=\frac{x-5}{9}$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=-4 \right)$ \fi
+            \part $5x-3\left(2x-4\right)=9$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=3 \right)$ \fi
+            \part $\frac{3}{2}+3x=\frac{5x}{9}-\frac{2x+1}{6}$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=\frac{-3}{5} \right)$ \fi
+            \part $\frac{8x}{2}-3=3x+1$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=4 \right)$ \fi
+            \part $\frac{3}{2}+\frac{3x}{2}-\frac{5x}{6}=15$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \frac{81}{4} \right)$ \fi
+            \part $\frac{3x-11}{20}-\frac{5x-1}{14}=\frac{x-7}{10}-\frac{5x-6}{21}$ \ifprintanswers $\left(\text{Sol: } x=\frac{-27}{29} \right)$ \fi
+            \part $\frac{3x-17}{8}-\frac{1-4x}{3}=\frac{1-x}{4}-\frac{9+x}{6}$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=\frac{29}{51} \right)$ \fi
+            \part $2+\frac{3x-1}{15}+\frac{x-4}{5}=\frac{x+4}{3}$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=1 \right)$ \fi
+            \part $\frac{5x+7}{2}-\frac{3x+9}{4}=\frac{2x+5}{3}+5$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x=5 \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
+            % \part $$ \phantom{1234} \ifprintanswers $\left(\text{Sol: } x= \right)$ \fi
 
             
         %     \part $\frac{3x}{2} + \frac{2x}{3} = \frac{1 + 3x}{2}$  \ifprintanswers $\left(\text{Sol: } x=\sfrac{3}{4} \right)$ \fi
