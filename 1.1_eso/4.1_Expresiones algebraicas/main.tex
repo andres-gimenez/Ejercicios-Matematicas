@@ -1,0 +1,234 @@
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexercises}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\documentName} { Expresiones algebraicas}
+\renewcommand{\documentContent} { Operaciones con monomios } 
+\renewcommand{\waterMark} {  } 
+
+% Configuración del documento.
+\input{./include/configuration} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thepartno}{\arabic{partno}}
+
+\usepackage{yhmath}
+
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem*{theorem}{Theorem}
+\newtheorem{definition}{Definición}
+\newtheorem{property}{Propiedad}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% \StudentData{}
+% \GradeTableHeader{}
+
+\justifying{}
+
+\begin{questions}
+    \question Calcula el valor de las siguientes expresiones:
+    \begin{parts}
+        \part El doble de cuatro.
+        \part El triple de cinco.
+        \part El doble de la mitad de tres.
+        \part La mitad de diez menos dos.
+        \part La mitad de diez, menos dos.
+        \part El triple de cinco más cuatro.
+        \part El triple de cinco, más cuatro.
+    \end{parts}
+
+    \question Escribe las siguientes expresiones en notación algebraica:
+    \begin{parts}
+        \part El doble de un número.
+        \part La mitad de un número.
+        \part El doble de un número más su mitad.
+        \part La mitad de un número menos dos.
+        \part La mitad de un número, menos dos.
+        \part El triple de la mitad de un número.
+        \part La mitad del triple de un número.
+        \part El siguiente número a uno dado.
+        \part El triple de un número al sumarle siete.
+
+        \part Un número par.
+        \part Un número impar.
+
+    \end{parts}
+
+    \question Realiza las siguientes operaciones con monomio:
+    \begin{parts}
+        \begin{multicols}{2}
+            \part $2x + 3x$  \ifprintanswers $\left(\text{Sol: } 5x\right)$ \fi
+            \part $2x^2 + 3x^2$ \ifprintanswers $\left(\text{Sol: } 6x^2\right)$ \fi
+            \part $3x^2 - 5x^2$ \ifprintanswers $\left(\text{Sol: } -2x^2\right)$ \fi
+            \part $15x^5 - 10x^5$ \ifprintanswers $\left(\text{Sol: } 5x^2\right)$ \fi
+            \part $5x^2 -4x^2$ \ifprintanswers $\left(\text{Sol: } x^2\right)$ \fi
+            \part $3xy^2 + 5 xy^2$
+            \part $32x^2 - 4x^2 + 5x^2$
+            \part $2z + 7 z$ \ifprintanswers $\left(\text{Sol: } 9z\right)$ \fi
+            \part $5xy - 7xy$ \ifprintanswers $\left(\text{Sol: } -2xy\right)$ \fi
+            \part $-4r - 8r$ \ifprintanswers $\left(\text{Sol: } -12r\right)$ \fi
+
+            \part $5\alpha + 4\alpha$
+            \part $6\beta^2 + 4\beta^2$
+            \part $5\delta - 6\delta$
+
+            \part $\frac{5}{7}x - \frac{2}{7}x$
+            \part $\frac{5}{4}b^5 + \frac{7}{4} b^5$
+            \part $\frac{1}{3}xy - \frac{2}{5}xy$
+            \part $\frac{2}{5}x + \frac{3}{4}x $
+            \part $\frac{1}{3}x - \frac{4}{7}x + \frac{2}{6}x$
+            \part $\frac{2}{5}y - \frac{5}{2}x$
+
+            \part $2 \cdot 4x$ \ifprintanswers $\left(\text{Sol: } 8x\right)$ \fi
+            \part $4 \cdot 8x^2$ \part $2 \cdot 4x$ \ifprintanswers $\left(\text{Sol: } 32x^2\right)$ \fi
+            \part $5x \cdot 3x$ \ifprintanswers $\left(\text{Sol: } 15x^2\right)$ \fi
+            \part $3t \cdot 8t$ \ifprintanswers $\left(\text{Sol: } 24t\right)$ \fi
+            \part $4a \cdot 2a$ \ifprintanswers $\left(\text{Sol: } 8a^2\right)$ \fi
+            \part $4x \cdot \left(-2x\right)$ \ifprintanswers $\left(\text{Sol: } -8x^2\right)$ \fi
+            \part $\left(-2x^2\right) \cdot \left(-3x^5\right)$ \ifprintanswers $\left(\text{Sol: } 6x^7\right)$ \fi
+            \part $-5x^2 \cdot 3x^3$ \ifprintanswers $\left(\text{Sol: } -15x^5\right)$ \fi
+            \part $4x \cdot \left(-3\right)$ \ifprintanswers $\left(\text{Sol: } -12x\right)$ \fi
+            \part $\left(4x^4\right)\left(2x^9\right)$ \ifprintanswers $\left(\text{Sol: } 8x^{13}\right)$ \fi
+            \part $\left(-3x\right)\left(-4x\right)$ \ifprintanswers $\left(\text{Sol: } 12x^2\right)$ \fi
+            \part $5x^2y^3 \cdot 4x^3y$ \ifprintanswers $\left(\text{Sol: } 20x^5y^4\right)$ \fi
+
+            \part $2\zeta \cdot 5\zeta$
+            \part $5\nu^2 \cdot 6\nu$
+            \part $4\mu^2 \cdot 2\mu$
+
+            \part $15x^2 : 3$
+            \part $-12a^2b : 4$
+            \part $9x^3 : 3x^2$
+            \part $-20x^5 : \left(-4x^2\right)$
+            \part $2y^4 : 3y^2$
+            \part $-4x^6:8x^3$
+            \part $4x^3y^2 : 2x^3y$
+            \part $-10a^2b:5a^2b$
+            \part $5x^5y^3:4x^3y^4$
+
+        
+        \end{multicols}
+    \end{parts}
+
+    \question Evalua las siguientes expresiones algebraicas para los valores indicados:
+    \begin{parts}
+        \begin{multicols}{2}
+            \part $5x^2 + 3x - 2$ para $x=3$ \ifprintanswers $\left(\text{Sol: } 49\right)$ \fi
+            \part $3x^2 - 2x - 5$ para $x=2$
+            \part $3x^2 - 2x - 5$ para $x=-2$
+            \part $3x^2 - 2x - 5$ para $x=0$
+            \part $3x^2 - 2x - 5$ para $x=-1$
+
+            \part $4t^2 - 4t +2$ para $t=3$
+
+            \part $\frac{5}{3}x + \frac{2}{3} $ para $x=\frac{1}{5}$
+            \part $\frac{2}{3}x^2 + \frac{1}{5}$ para $x=\frac{1}{4}$
+            \part $\frac{4}{5}x - \frac{1}{5}$ para $x=-1$
+
+            \part $4x^3 + 5x^2 - 2x + 1$ para $x=2$
+            \part $5x^2y - 2x + 2y - 1$ para $x=1$ e $y=2$
+            \part $5xy + 3$ para $x=2$
+
+            \part $\theta^2 + 5$ para $\theta=3$
+        \end{multicols}
+    \end{parts}
+
+    \question Simplifica lo máximo posible las siguientes operaciones con monomios:
+    \begin{parts}
+        \begin{multicols}{2}
+            \part $3x + 2x - 5 + 2$
+            \part $5x - 2 + 4x -1$
+            \part $7x + 3 - 2x + 2$
+            \part $9x^2 - 3x  + 2x^2 + 1$
+            \part $2x^2 + 3x$
+            \part $8x- 4x^2 + 2x - 5$
+            \part $-2x + 4x - 2x^2 + 3$
+            \part $-x^2 + 2x^3 - 3x + 2$
+            \part $x^3 - 2x^2 + 3x^3 + 5x^2$
+            \part $4x^2 - 7x + x^2 + 4x - 3x^2 + 4x$
+            \part $5x^8 + 2x^4 - 2x^8 + 3x^4$
+            \part $5x^3 - 8x^3 + 5$
+            \part $9x + 4x - 13x$
+            \part $8x^5 - 3x^2 - 3x^2$
+            \part $-x^3 + 3x^2 + x^3$
+            \part $7y^2 - 4y^2 + 3y + 2$
+            \part $4t^2 - 3t + 2t^2 - 5t$
+            \part $-z^2 + 5z - 2z^2 - z$
+            \part $x^3 - 2x + 4 + 2x^3 + 4x -5$
+            \part $5xy + 3xy^2 - 3xy + 5xy^2$
+            \part $2xy - 3x^2y + 3xy + 2x^2y$
+            \part $2x^2y + 2yx^2$
+
+            \part $\frac{2}{3}x^2 - \frac{3}{2}x^2$
+            \part $\frac{2}{5}x^2 - \frac{1}{3}x + \frac{3}{8}x^2 - \frac{2}{5}x$
+            \part $\frac{5}{2}x^2 - 6x + \frac{4}{5}x^2 + 2x$
+
+            \part $5x - \left[3x + 4x - \left(5x + 2x\right)\right]$
+            \part $-\left(4x + 3x - 3\right) + \left(5x + 1\right)$
+            \part $-\left[3x + \left(3x + 5x - 3\right)\right]$
+            \part $5 - \left(3x + 1\right) - \left(3x + 2\right) + \left(3x - 2\right)$
+            \part $3x - \left(2x - 2x + 3x\right)$
+
+            \part $\frac{2}{3}x + \left(\frac{2}{7}x + 2\right)$
+            \part $\frac{3}{2}x^2 - \left(\frac{3}{4}x^2 - 4x + \frac{2}{3}\right)$
+            \part $\frac{3}{2}x^3 -\left[\frac{2}{3}x^3 - \left(\frac{3}{2}x^3 + 2x\right)\right]$
+            \part $\frac{5}{2}x + 3\left(\frac{3}{2}x + 2\right)$
+            \part $\frac{21}{5}x^2 + \frac{2}{5}x - \left[\frac{3}{2}x^2 + \left(5x + 2\right)\right]$
+
+            \part $5 \alpha + 4\alpha^2 - 3\alpha + 3\alpha^2$
+            \part $5 \gamma^2 + 3 \gamma^2 - 2$
+            
+        \end{multicols}
+    \end{parts}
+
+    \question Realiza las siguientes operaciones
+    \begin{parts}
+        \begin{multicols}{2}
+            \part $2 \cdot 4x$
+            \part $3x^2 \cdot \left(-2x\right)$
+            \part $-2x \cdot \left(3x+2x\right)$
+            \part $5x \left(2x + 4 \right)$
+            \part $6x - 5 \left(2x + 5\right)$
+            \part $-\left[5x + 2\left(4x - 4\right)\right]$
+
+            \part $\left(-x + 2\right) \cdot \left(x+2\right)$
+            \part $\left(2-x\right) \left(x^2 + 3\right)$
+            \part $\left(5x - 3\right) \cdot \left(3x - 2\right)$
+            \part $\left(-3\right) \left(2x - 4\right)$
+            \part $\left(x + 2\right) \cdot \left(2x - 1\right)$
+            \part $3t \cdot \left(5t^2 + 4t - 2\right)$
+            \part $\left[\left(5x + 2\right) \left(2x + 3\right) \right] \left(5x - 1\right)$
+
+            \part $\sigma \left(\sigma - 2\right)$
+            \part $\left(\mu - 2\right) \left(\mu + 5\right)$
+
+            \part $\left[\frac{2}{3}x \left(\frac{5}{2} x^2 + 2\right)\right]$
+            \part $\left(\frac{5}{2}x + \frac{2}{5}x^2\right) \left(\frac{4}{2}x - \frac{7}{2}x^2\right)$
+            
+
+
+           \part $\frac{21}{5}x^2 + \frac{2}{5}x - \left[\frac{3}{2}x^2 + \frac{2}{4}\left(5x + 2\right)\right]$
+        \end{multicols}
+    \end{parts}
+
+\end{questions}
+
+\end{document}
