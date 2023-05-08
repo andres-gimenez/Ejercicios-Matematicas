@@ -1,0 +1,98 @@
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexam}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \renewcommand{\documentName} { 3ª evaluación }
+ \renewcommand{\documentContent} { Lenguaje algebraico y ecuaciones } 
+ \renewcommand{\waterMark} { Modelo A } 
+
+ % Configuración del documento.
+ \input{./include/configuration} 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+% \renewcommand{\thepartno}{\arabic{partno}}
+%  \renewcommand{\thepartno}{\thecurrentpartno.\arabic{partno}}
+
+% \renewcommand{\partlabel}{(\thequestion.\arabic{partno})}
+% \renewcommand{\subpartlabel}{(\thepart.\arabic{subpartno})}
+
+\renewcommand\subpartlabel{(\thesubpart)}
+\renewcommand\subpartshook{\renewcommand\makelabel[1]{##1\hfil }} 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % Exam configuration
+ %\pointsdroppedatright   %% No mostrar la puntuación
+ \pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+ \extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+ \marginpointname{ \emph{\points}}
+ 
+ %% Si se comenta no aparecerán los espacios de la solución.
+ %\nocancelspace
+ 
+ %% Puntuación a la izquierda.
+%  \nopointsinrightmargin 
+
+ %% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+ %% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+ % \printanswers
+ %\noprintanswers
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \begin{document}
+ 
+ \StudentData{}
+ \GradeTableHeader{}
+ 
+ \justifying{}
+
+ \justifying
+
+% \begin{center}
+%     \fbox{\fbox{\parbox{6.5in}{             
+%                 \begin{itemize}
+%                     \item Deben aparecer todas las operaciones, no vale solo con indicar el resultado.
+%                     \item Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.
+%                     \item Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.
+%                     \item No se puede utilizar la calculadora.
+%                 \end{itemize}
+%             }}}
+% \end{center}
+ 
+ \begin{questions}
+    
+    \question[1] \begin{tikzpicture}[scale=1]
+        \begin{axis}[
+                %title={$f(x)=x^2-10$},
+                axis lines=middle,
+                axis line style={<->},
+                legend style={inner ysep=7pt},
+                %x label style={at={(axis description cs:0.5,-0.06)},anchor=north},
+                %y label style={at={(axis description cs:-0.06,.5)},rotate=90,anchor=south},
+                %xlabel={Nº de bombillas},ylabel={Vida en horas},
+                no markers,
+                black!50,
+                grid,
+                width=15cm,
+                xmax=20,ymax=20,xmin=-20,ymin=-20,
+                %axis lines=middle
+                % restrict y to domain=-20:20
+            ]
+
+            % \addplot[domain=10:15,black] {x-10};
+
+            % \addplot[domain=-5:0,black] {x*x+6*x};
+            % \addplot[domain=0:5,black] {x*x-6*x};
+
+            % \addplot[domain=-5:0,black] {-x};
+            % \addplot[domain=-9:-5,black] {x*x+15*x+55};
+            
+            % \addplot[domain=6:15,black] {-5};
+            % \draw[dashed] (axis cs:6,6) -- (axis cs:6,-5);
+            % \addplot[holdotBlack] coordinates{(-9,1)(5,-5)(15,5)};
+            % \addplot[soldotBlack] coordinates{(10,0)};
+        \end{axis}
+    \end{tikzpicture}
+
+\end{questions}
+ 
+\end{document}
