@@ -60,37 +60,30 @@
  
  \begin{questions}
     
-    \question[1] \begin{tikzpicture}[scale=1]
+    \question[1] Une los siguientes puntos 
+    
+  
+
+    \begin{tikzpicture}[scale=1]
         \begin{axis}[
-                %title={$f(x)=x^2-10$},
-                axis lines=middle,
-                axis line style={<->},
-                legend style={inner ysep=7pt},
-                %x label style={at={(axis description cs:0.5,-0.06)},anchor=north},
-                %y label style={at={(axis description cs:-0.06,.5)},rotate=90,anchor=south},
-                %xlabel={Nº de bombillas},ylabel={Vida en horas},
-                no markers,
-                black!50,
-                grid,
-                width=15cm,
-                xmax=20,ymax=20,xmin=-20,ymin=-20,
-                %axis lines=middle
-                % restrict y to domain=-20:20
-            ]
-
-            % \addplot[domain=10:15,black] {x-10};
-
-            % \addplot[domain=-5:0,black] {x*x+6*x};
-            % \addplot[domain=0:5,black] {x*x-6*x};
-
-            % \addplot[domain=-5:0,black] {-x};
-            % \addplot[domain=-9:-5,black] {x*x+15*x+55};
-            
-            % \addplot[domain=6:15,black] {-5};
-            % \draw[dashed] (axis cs:6,6) -- (axis cs:6,-5);
-            % \addplot[holdotBlack] coordinates{(-9,1)(5,-5)(15,5)};
-            % \addplot[soldotBlack] coordinates{(10,0)};
+            xmin=-30,xmax=30,
+            ymin=-30,ymax=30,
+            grid=both,
+            grid style={line width=.1pt, draw=gray!10},
+            major grid style={line width=.2pt,draw=gray!50},
+            axis lines=middle,
+            axis line style={<->},
+            minor tick num=4,
+            enlargelimits={abs=0.5},
+            axis line style={latex-latex},
+            % ticklabel style={font=\tiny,fill=white},
+            xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+            ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+            width=17cm
+        ]
+        
         \end{axis}
+
     \end{tikzpicture}
 
 \end{questions}

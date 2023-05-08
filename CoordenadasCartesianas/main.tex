@@ -1,11 +1,12 @@
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexercises}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\documentName} { Examen 3ª evaluación }
-\newcommand{\documentContent} { Ecuaciones, sistemas de ecuaciones y funciones } 
-\newcommand{\waterMark} { Modelo A} 
+\renewcommand{\documentName} { Eje de coordenadas }
+\renewcommand{\documentContent} { \phantom{ } } 
+\renewcommand{\waterMark} { } 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Configuración del documento.
-\input{./include/configurationCurso} 
 \input{./include/configuration} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -28,6 +29,7 @@
 \usepackage{eqparbox}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
+\usepackage{tikz}
 \pgfplotsset{compat=1.16}
 
 \usepackage{pgfplots}
@@ -76,7 +78,13 @@
  \vspace{1cm}
 
     \begin{figure}[h]
-        \begin{tikzpicture}[scale=0.8]
+        \begin{tikzpicture}
+            [
+                scale=0.8
+            ]
+            % \begin{axis}[
+            %     axis line style={<->},
+            % ]
             \tkzInit[xmax=10,ymax=10,xmin=-10,ymin=-10]
             \tkzGrid[color=black!50]
             \tkzAxeXY
