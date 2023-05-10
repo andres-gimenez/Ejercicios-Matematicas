@@ -49,6 +49,7 @@
 % \usepackage{minted}
 % \usepackage{markdown}
 \usepackage{blindtext}
+\usepackage{multirow}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\schoolSubject} {  }
