@@ -124,6 +124,41 @@
     \fi
 }
 
+\newcommand{\StudentDataB}{
+    \ifprintanswers
+    \else
+        \raggedright
+        \begin{tabular}{cc}
+            \begin{minipage}{0.15\linewidth}
+                \includegraphics[height=1.75cm]{./include/logo}
+            \end{minipage} &
+            \begin{minipage} {0.80\linewidth}
+                Apellidos: \underline{\hspace{5cm}} \hspace{0.1cm} Nombre: \enspace{\hrulefill}
+                \flushright Apellidos: \underline{\hspace{5cm}} \hspace{0.1cm} Nombre: \enspace{\hrulefill} 
+                \flushright Grupo: \underline{\hspace{0.7cm}} \hspace{0.1cm} Fecha: \underline{\hspace{2.1cm}}  \\
+            \end{minipage}
+        \end{tabular}
+    \fi
+}
+
+\newcommand{\StudentDataC}{
+    \ifprintanswers
+    \else
+        \raggedright
+        \begin{tabular}{cc}
+            \begin{minipage}{0.15\linewidth}
+                \includegraphics[height=1.75cm]{./include/logo}
+            \end{minipage} &
+            \begin{minipage} {0.80\linewidth}
+                Apellidos: \underline{\hspace{5cm}} \hspace{0.1cm} Nombre: \enspace{\hrulefill}
+                \flushright Apellidos: \underline{\hspace{5cm}} \hspace{0.1cm} Nombre: \enspace{\hrulefill} 
+                \flushright Apellidos: \underline{\hspace{5cm}} \hspace{0.1cm} Nombre: \enspace{\hrulefill} 
+                \flushright Grupo: \underline{\hspace{0.7cm}} \hspace{0.1cm} Fecha: \underline{\hspace{2.1cm}}  \\
+            \end{minipage}
+        \end{tabular}
+    \fi
+}
+
 \newcommand{\GradeTableHeader}{
     \ifprintanswers
         %Examen resulto
@@ -151,7 +186,7 @@
 \firstpagefooter{}{}{\small Página \thepage\ de \numpages}
 \runningfooter{}{}{\small Página \thepage\ de \numpages}
 
-\renewcommand*\half{\!\hspace{0.6mm},5}
+\renewcommand\half{\!\hspace{0.6mm},5}
 \pointpoints{punto}{puntos}
 \bonuspointpoints{punto extra}{puntos extra}
 \hqword{Pregunta}
@@ -163,7 +198,7 @@
 %\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.   
 
 \extrawidth{-1.0cm} %Un poco más de margen.
-\marginpointname{ \emph{\points}}
+\marginpointname{\emph{\points}}
 %\bracketedpoints
 
 \headrule
