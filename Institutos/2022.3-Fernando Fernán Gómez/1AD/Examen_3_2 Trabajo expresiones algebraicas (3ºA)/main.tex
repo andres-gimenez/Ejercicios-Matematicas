@@ -1,0 +1,120 @@
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexam}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \renewcommand{\documentName} { 3ª evaluación }
+ \renewcommand{\documentContent} {  Trabajo en equipo (1ª parte) } 
+ \renewcommand{\waterMark} {  } 
+
+ % Configuración del documento.
+ \input{./include/configuration} 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+% \renewcommand{\thepartno}{\arabic{partno}}
+%  \renewcommand{\thepartno}{\thecurrentpartno.\arabic{partno}}
+
+% \renewcommand{\partlabel}{(\thequestion.\arabic{partno})}
+% \renewcommand{\subpartlabel}{(\thepart.\arabic{subpartno})}
+
+\renewcommand\subpartlabel{(\thesubpart)}
+\renewcommand\subpartshook{\renewcommand\makelabel[1]{##1\hfil }} 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % Exam configuration
+ %\pointsdroppedatright   %% No mostrar la puntuación
+ \pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+ \extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+ \marginpointname{ \emph{\points}}
+ 
+ %% Si se comenta no aparecerán los espacios de la solución.
+ %\nocancelspace
+ 
+ %% Puntuación a la izquierda.
+%  \nopointsinrightmargin 
+
+ %% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+ %% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+ % \printanswers
+ %\noprintanswers
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \begin{document}
+ 
+ \StudentDataC{}
+ \GradeTableHeader{}
+ 
+ \justifying{}
+
+ \justifying
+
+% \begin{center}
+%     \fbox{\fbox{\parbox{6.5in}{             
+%                 \begin{itemize}
+%                     \item Deben aparecer todas las operaciones, no vale solo con indicar el resultado.
+%                     \item Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.
+%                     \item Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.
+%                     \item No se puede utilizar la calculadora.
+%                 \end{itemize}
+%             }}}
+% \end{center}
+ 
+ \begin{questions}
+
+    \question[2] Reduce las siguientes expresiones algebraicas todo lo que se pueda:
+    \begin {parts}
+        \part $\frac{1}{4}x^2+\frac{1}{8}x^2 = $
+        \vspace{\stretch{1}}
+        
+        \part $2x^2+3x-2-6x^2+x+7 = $
+        \vspace{\stretch{1}}
+    
+        \part $5x \cdot 2x^2 = $
+        \vspace{\stretch{1}}
+
+        % \part $3x - 2 \left(5x^2 - 2x +3\right) = $
+        % \vspace{\stretch{1}}
+
+    \end {parts}
+
+    \question[2] Resuelve las siguientes ecuaciones
+    \begin {parts}
+        \part $2x-5 = 3$
+        \vspace{\stretch{2}}
+
+        \part $3 + 2(x-3)= 1$
+        \vspace{\stretch{2}}
+
+        \part $2x-(3x-4)=x+2$
+        \vspace{\stretch{2}}
+    \end{parts}
+
+    \newpage 
+    \question Sobre la siguiente sucesión
+    \\
+    \begin{minipage}{\linewidth}
+         \centering
+         \includegraphics[width=12cm]{secuencia01}
+     \end{minipage}
+    \begin {parts}
+        \part[1] Escribe los cinco primeros términos de la sucesión numérica que 
+        representa la cantidad de cerillas en cada posición
+        \vspace{\stretch{1}}
+
+        \part[2] Juan dice que la expresión algebraica que indica el número de 
+        cerillas en cada posición es $4+3\left(n-1\right)+2$, 
+        pero Nuria dice que es $n+n+\left(n+1\right)+2$
+        ¿quién tiene razón? ¿pueden tener razón los dos? 
+        \\ \\ Reduce las expresiones algebraicas del apartado anterior 
+        a la forma más sencilla posible y compara las.
+        \vspace{\stretch{1}}
+
+        \part[1] ¿Cuántas cerillas tiene la figura que se encuentra en la posición 120?
+        \vspace{\stretch{1}}
+
+        \part[2] ¿En qué posición se encuentra la figura que tiene 159 cerillas?
+        \vspace{\stretch{1}}
+    \end {parts}
+
+\end{questions}
+ 
+\end{document}
