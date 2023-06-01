@@ -33,15 +33,13 @@
 \justifying
 
 \begin{center}
-    \fbox{\fbox{\parbox{6.5in}{  
-            Para la valoración de la calificación obtenida en el presente trabajo se tendrán en cuenta los siguientes criterios.
+    \fbox{\fbox{\parbox{6.5in}{             
                 \begin{itemize}
-                    \item Colaboración entre los miembros del equipo (20\%)
-                    \item Argumentación y explicación en la resolución del ejercicio. 
-                        La resolución del ejercicio ha de ser fácil de entender y se ha de utilizar el lenguaje matemático de forma correcta (30\%)
-                    \item Exposición de los conceptos matemáticos que se utilizan. 
-                        Indicar el nombre de las figuras geométricas, fórmula de su área o longitud, utilización de simetrías, simplicidad de los cálculos. (30\%)
-                    \item El resultado obtenido es correcto (20\%)
+                    \item Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada del examen que se valorará con un cero.
+                    \item Deben aparecer todas las operaciones, no vale solo con indicar el resultado.
+                    \item Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.
+                    % \item Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.
+                    \item Está permitido utilizar la calculadora.
                 \end{itemize}
             }}}
 \end{center}
@@ -49,8 +47,86 @@
 \begin{questions}
     \setcounter{question}{0}
 
-    \question[0] Pendiente
-    
+    \question[2] Teniendo en cuenta que una rueda de un coche de Fórmula 1 tiene 660mm de diámetro ¿cuántas vueltas habrá dado al recorrer 100Km?
+    \newpage
+
+    \question[2\half] Calcula y representa la recta que pasa por los puntos P(-2, -4) y Q(-1, 2)
+    \vspace{\stretch{1}}
+    \begin{center}
+        \begin{tikzpicture}[scale=0.7]
+            \begin{axis}[
+                axis x line=center,
+                axis y line=center,
+                xmin=-10,xmax=10,
+                ymin=-10,ymax=10,
+                grid=both,
+                grid style={line width=.1pt, draw=gray!30},
+                major grid style={line width=.2pt,draw=gray!70},
+                axis lines=middle,
+                axis line style={<->},
+                minor tick num=1,
+                enlargelimits={abs=0.5},
+                axis line style={latex-latex},
+                % ticklabel style={font=\tiny,fill=white},
+                % xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+                % ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+                xlabel style={below right},
+                ylabel style={above left},
+                width=17cm,
+            ]
+        \end{axis}
+        \end{tikzpicture}
+        \end{center}
+
+    \newpage
+
+    \question[2\half] Dada la parábola $y=x^2-4x+3$ calcula su vértice, punto de corte con los ejes de coordenadas, 
+    indica si el vértice es un máximo o un mínimo y represéntala.
+    % \begin{figure}[h]
+    %     \begin{tikzpicture}[scale=0.5]
+    %         \tkzInit[xmax=10,ymax=10,xmin=-10, ymin=-10]
+    %         \tkzGrid[color=black!50]
+    %         \tkzAxeXY
+    %     \end{tikzpicture}
+    % \end{figure}
+    \vspace{\stretch{1}}
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.7]
+        \begin{axis}[
+            axis x line=center,
+            axis y line=center,
+            xmin=-10,xmax=10,
+            ymin=-10,ymax=10,
+            grid=both,
+            grid style={line width=.1pt, draw=gray!30},
+            major grid style={line width=.2pt,draw=gray!70},
+            axis lines=middle,
+            axis line style={<->},
+            minor tick num=1,
+            enlargelimits={abs=0.5},
+            axis line style={latex-latex},
+            % ticklabel style={font=\tiny,fill=white},
+            % xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+            % ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+            xlabel style={below right},
+            ylabel style={above left},
+            width=17cm,
+        ]
+    \end{axis}
+    \end{tikzpicture}
+    \end{center}
+
+    \newpage
+
+    \question[3] De acuerdo al esquema mostrado ¿cual es el ancho del rio?
+    \\
+    \\
+    \begin{minipage}{\linewidth}
+        % \centering
+        \includegraphics[width=10cm]{ImagenRio}
+    \end{minipage}
+    \vspace{\stretch{1}}
 
 \end{questions}
 \end{document}
