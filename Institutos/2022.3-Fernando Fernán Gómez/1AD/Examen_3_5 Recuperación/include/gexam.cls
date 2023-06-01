@@ -124,41 +124,6 @@
     \fi
 }
 
-\newcommand{\StudentDataB}{
-    \ifprintanswers
-    \else
-        \raggedright
-        \begin{tabular}{cc}
-            \begin{minipage}{0.15\linewidth}
-                \includegraphics[height=1.75cm]{./include/logo}
-            \end{minipage} &
-            \begin{minipage} {0.80\linewidth}
-                Apellidos: \underline{\hspace{5cm}} \hspace{0.1cm} Nombre: \enspace{\hrulefill}
-                \flushright Apellidos: \underline{\hspace{5cm}} \hspace{0.1cm} Nombre: \enspace{\hrulefill} 
-                \flushright Grupo: \underline{\hspace{0.7cm}} \hspace{0.1cm} Fecha: \underline{\hspace{2.1cm}}  \\
-            \end{minipage}
-        \end{tabular}
-    \fi
-}
-
-\newcommand{\StudentDataC}{
-    \ifprintanswers
-    \else
-        \raggedright
-        \begin{tabular}{cc}
-            \begin{minipage}{0.15\linewidth}
-                \includegraphics[height=1.75cm]{./include/logo}
-            \end{minipage} &
-            \begin{minipage} {0.80\linewidth}
-                Apellidos: \underline{\hspace{5cm}} \hspace{0.1cm} Nombre: \enspace{\hrulefill}
-                \flushright Apellidos: \underline{\hspace{5cm}} \hspace{0.1cm} Nombre: \enspace{\hrulefill} 
-                \flushright Apellidos: \underline{\hspace{5cm}} \hspace{0.1cm} Nombre: \enspace{\hrulefill} 
-                \flushright Grupo: \underline{\hspace{0.7cm}} \hspace{0.1cm} Fecha: \underline{\hspace{2.1cm}}  \\
-            \end{minipage}
-        \end{tabular}
-    \fi
-}
-
 \newcommand{\GradeTableHeader}{
     \ifprintanswers
         %Examen resulto
