@@ -1,0 +1,152 @@
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexam}
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \renewcommand{\documentName} { Recuperación final junio }
+ \renewcommand{\documentContent} { Todas las evaluaciones } 
+ \renewcommand{\waterMark} { \phantom{Modelo A} } 
+
+ % Configuración del documento.
+ \input{./include/configuration} 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+  
+ % \renewcommand{\thepartno}{\arabic{partno}}
+ \usepackage{nicefrac, xfrac}
+ \usepackage{amsmath}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % Exam configuration
+ %\pointsdroppedatright   %% No mostrar la puntuación
+ \pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+ \extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+ \marginpointname{ \emph{\points}}
+ 
+ %% Si se comenta no aparecerán los espacios de la solución.
+ %\nocancelspace
+ 
+ %% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+ %% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+ % \printanswers
+ %\noprintanswers
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \begin{document}
+ 
+ \StudentData{}
+ \GradeTableHeader{}
+ 
+ \justifying{}
+
+ \begin{center}
+    \fbox{\fbox{\parbox{6.5in}{             
+                \begin{itemize}
+                    \item Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada del examen que se valorará con un cero.
+                    \item Deben aparecer todas las operaciones, no vale solo con indicar el resultado.
+                    \item Se valorará que se indiquen las cuentas en línea o columna, realizando las operaciones en el margen.
+                    \item No se puede utilizar la calculadora.
+                \end{itemize}
+            }}}
+\end{center}
+
+ \Large
+ 
+ \checkboxchar{$\Box$}
+ \checkedchar{$\blacksquare$}
+
+ \begin{questions}
+    \question Se han tomado las siguientes medidas de temperatura a lo largo de 10 días.
+        \begin{center}
+        \begin{tabular}{ |l|l|l|l|l| }
+            \hline
+            19ºC & 20ºC & 20ºC & 19ºC & 19ºC \\ \hline
+            19ºC & 18ºC & 17ºC & 16ºC & 16ºC \\ \hline
+        \end{tabular}
+        \end{center}
+
+        \begin {parts} 
+            \part[1]
+            Completa la siguiente tabla de frecuencia:
+            \vspace{5mm}
+            \begin{center}
+                % \begin{table}[]
+                    \begin{tabular}{|r|l|l|}
+                    \hline
+                    \multicolumn{1}{|l|}{Temperaturas} & Frecuencia absoluta & Frecuencia relativa \\ \hline
+                    16º                                &                     &                     \\ \hline
+                    17º                                &                     &                     \\ \hline
+                    18º                                &                     &                     \\ \hline
+                    19º                                &                     &                     \\ \hline
+                    20º                                &                     &                     \\ \hline
+                    \end{tabular}
+                % \end{table}
+            \end{center}
+            \vspace{5mm}
+
+            \part[1] Calcula la media de las temperaturas:
+            \vspace{\stretch{3}}
+
+            \part[1] Calcula la moda de las temperaturas:
+            \vspace{\stretch{2}}
+        \end{parts}
+    \newpage{}
+    
+    \question[1] Manuel tiene una cesta con 5 manzanas rojas y 3 amarilla. 
+              Si saca una manzana al azar ¿Cuál es la probabilidad de sacar una manzana roja?
+    \vspace{\stretch{1}}
+
+    \question[2] Completa la tabla de los múltiplos y submúltiplos de las unidades de masa:
+    \\
+    \begin{center}
+    % \begin{table}[]
+        \begin{tabular}{|l|l|l|l|}
+        \hline
+        \multirow{4}{*}{Múltiplos}             & Miriágramo & \multicolumn{1}{r|}{Mag} & \multicolumn{1}{r|}{10.000 g} \\ \cline{2-4} 
+                                               &            &     &          \\ \cline{2-4} 
+                                               &            &     &          \\ \cline{2-4} 
+                                               &            &     &          \\ \hline
+        \multicolumn{1}{|r|}{Unidad principal} & Gramo      & \multicolumn{1}{r|}{g} &  \multicolumn{1}{r|}{1 g} \\ \hline
+        \multirow{3}{*}{Submúltiplos}          &            &     &          \\ \cline{2-4} 
+                                               &            &     &          \\ \cline{2-4} 
+                                               &            &     &          \\ \hline
+        \end{tabular}
+        % \end{table}
+    \end{center}
+
+    \question[1] Realiza las siguientes conversiones de unidades:
+    \begin {parts} 
+        \part $2.000 \text{ m}$ = \fillin[2] $\text{ Km}$
+        \part $2.000 \text{ cm}$ = \fillin[2]  $\text{ m}$
+        \part $0,1 \text{ km}$ = \fillin[100]  $\text{ m}$
+        \part $300 \text{ Hm}$ = \fillin[0,3]  $\text{ Km}$
+        \part $300 \text{ ml}$ = \fillin[0,3] $\text{ l}$
+    \end{parts}
+
+    \newpage 
+    \question[3] Indica el nombre y calcula el área y el perímetro del siguiente polígono.
+
+    \begin {parts} 
+        \part   
+        \begin{minipage}{\linewidth}
+            % \centering
+            \includegraphics[width=7cm]{Romboide01}
+        \end{minipage}
+        \vspace{\stretch{1}}
+        \part   
+        \begin{minipage}{\linewidth}
+            % \centering
+            \includegraphics[width=3cm]{Rombo01}
+        \end{minipage}
+        \vspace{\stretch{1}}
+        \part   
+        \begin{minipage}{\linewidth}
+            % \centering
+            \includegraphics[width=5cm]{Rectangulo01}
+        \end{minipage}
+        \vspace{\stretch{1}}
+    \end{parts}
+
+    \newpage
+    
+\end{questions}
+ 
+\end{document}
