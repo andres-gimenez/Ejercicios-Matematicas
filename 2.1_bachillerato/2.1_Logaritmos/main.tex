@@ -1,0 +1,291 @@
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexercises}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\documentName} { Logaritmos }
+\renewcommand{\documentContent} { Propiedades y ejercicios } 
+\renewcommand{\waterMark} {  } 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuración del documento.
+\input{./include/configuration}
+
+% \renewcommand{\thepartno}{\arabic{partno}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin{} % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+% \printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% \StudentData{}
+% \GradeTableHeader{}
+
+\justifying{}
+
+\begin{center}
+    \fbox{\parbox{6.5in}{
+        \vspace{3mm}
+            {\Large
+                \centerline{\textbf{Definión de logaritmo}}
+            }
+        \vspace{5mm}
+
+    Si \textbf{b} es un número positivo y distinto de 1, el \textbf{logaritmo en base a de un número positivo N}
+    es el exponente al que hay que elevar la base a para obtener N. 
+    
+    \center
+    $\log_b N =x \Leftrightarrow b^x=N$
+
+    \vspace{5mm}
+    }}
+\end{center}
+
+{\Large
+    % \centerline{
+        \textbf{Propiedades de los logaritmos:}
+    % }
+}
+
+\vspace{5mm}
+
+\begin{enumerate}
+
+\item El logaritmo de la base es siempre igual a 1:
+
+\begin{equation*}
+    \log_b b = 1
+\end{equation*}
+
+\item El logaritmo de cualquier base de 1 es igual a 0:
+
+\begin{equation*}
+    \log_b 1 = 0
+\end{equation*}
+
+\item El logaritmo del producto es igual a la suma de los logaritmos:
+
+\begin{equation*}
+    \log_b (N \cdot M) =\log_b (N)+\log_b (M)
+\end{equation*}
+
+\item El logaritmo del cociente es igual a la diferencia de los logaritmos:
+
+\begin{equation*}
+    \log_b (\dfrac {N}{M}) = \log_b (N)-\log_b (M)
+\end{equation*}
+
+\item El logaritmo de una potencia es igual al producto del exponente por el logaritmo de la base:
+
+\begin{equation*}
+    \log_b (N^r) = r\log_b (N)
+\end{equation*}
+
+
+\item La relación entre los logaritmos de un mismo número A en distintas bases viene dada por:
+
+\begin{equation*}
+    \log_a (N) =\dfrac {\log_b (N)}{\log_b (a)} =\dfrac {\ln (N)}{\ln (a)}
+\end{equation*}
+
+\item Si no se especifica la base de un logaritmo, se sobreentiende que es base 10.
+
+\begin{equation*}
+    \log_{10} (N) = \log (N)
+\end{equation*}
+
+\item El logaritmo neperiano o naturales, tiene como base el número $e = 2,718281828459045235360...$ y se indica como $ln$.
+
+\begin{equation*}
+    \log_e (N)=\ln (N)
+\end{equation*}
+
+\end{enumerate}
+
+\newpage
+\textbf{Ejercicios}
+
+\begin{questions}
+    \question
+    Calcula los siguientes logaritmos
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log_2 8$
+            \part $\log_2 32$
+            \part $\log_2 \frac{1}{16}$
+            \part $\log_3 81$
+            \part $\log_3 729$
+            \part $\log_3 \frac{1}{81}$
+            \part $\log_4 (8) + \log_4(2)$ 
+            \part $\log_4 4^4$
+            \part $\log_5 (125) + \log_5(5)$    
+            \part $\log_5 \left(100\right) + \log_5 \left(\frac{1}{4}\right)$ 
+            \part $\log_6 36^2$
+            \part $\log_{17} {17} $
+            \part $\log_8 1$
+            \part $\log_5 10$
+            \part $\log 100000000$
+            \part $\log \frac{1}{10000}$
+            \part $\log 0,001$
+        \end{parts}
+    \end{multicols}
+
+    \question
+    Conociendo el valor de $\log 2 \approx 0,3010$, calcula los siguientes logaritmos:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log 0,0002$
+            \part $\log 16$
+            \part $\log 32^4$
+            \part $\log 4^5$
+            \part $\log 0,0125$
+            \part $\log \frac{0,64^3 \cdot 0,32}{80 \cdot 6,25}$
+        \end{parts}
+    \end{multicols}
+
+    \question
+    Conociendo el valor de $\log 2 \approx 0,3010$, y el de $\log 3 \approx 0,4771$, calcula:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log 12$
+            \part $\log (4,8)^2$
+            \part $\log (0,6)^3$
+            \part $\log 3,\wideparen{3}$
+            \part $\log 40,5$
+            \part $\log 5000$
+            \part $\log \frac{\left(0,027\right)^3 \cdot 540}{96 \cdot 51,84}$
+        \end{parts}
+    \end{multicols}
+
+    \question 
+    Si $\log 8 \approx 0,9031$, halla:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\log 800$
+            \part $\log 2$
+            \part $\log 0,64$
+            \part $\log 40$
+            \part $\log 5$
+            \part $\log 64^4$
+        \end{parts}
+    \end{multicols}
+
+    \question 
+    Utilizando la calculadora, calcula el valor de x en las siguientes expresiones:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $3^x = 20$
+            \part $5^x = 43$
+            \part $5^{x + 2} = 18$
+            \part $3^x = 0,2$
+            \part $2^x= \frac{8}{27}$
+            \part $2^{x+1} + 4 = 80$
+            \part $2 \cdot 3^x - 3^{2x} + 3 = 0$
+            \part $3^{2x-3} = 8^{x+1}$
+            \part $3^{x+2} + 9^{x+1} = 810$
+            \part $2^{x-3} = -3$
+            \part $5^{x-1} = 2 + \frac{2}{5^{x-2}}$
+            \part $2 e^{x-4} = 3$
+            \part $100 \cdot 10^x = \sqrt[x]{1000^5}$
+        \end{parts}
+    \end{multicols}
+
+    \question
+    Resuelve las siguientes ecuaciones
+    \begin{multicols}{2}
+        \begin{parts}
+            \part $12^{x-2} = 4^x$
+            \part $2^{2x+2} = 9 \cdot 2^x - 2$
+            \part $\left(8^{x+2}\right)\left(4^{x-6}\right) = 16$
+
+            \part $\log{\left(2x + 6\right)} = 2$
+            \part $\log{\left(x + 3\right)} - \log{\left(2x -2\right)} = 1 - \log{5}$
+
+            \part $\frac{3}{2} + \log_x{2} = 2$
+            \part $\frac{3}{2} \cdot 10^{-2} = e^x$
+        \end{parts}
+    \end{multicols}
+
+    \question
+    Usando las propiedades de los logaritmos, calcular:
+    \begin{parts}
+            \part $\log_2 {28} - \log_2{\frac{8}{7}} + \log_2 {\frac{1}{49}} - 4 \log_2 {\frac{1}{\sqrt{2}}}$
+
+            \part $\log_3 {\frac{\sqrt{27}}{5}} + \log_3{\frac{3}{125}} - \log_3{\frac{1}{\sqrt{75}}}$
+
+            \part $\log_5{50} - \log_3{\frac{\sqrt{125}}{2}} + \log_5{\frac{25}{8}} - \log_5{\frac{1}{\sqrt{20}}}$
+
+            \part $\log_3{63} - \log_3 {\frac{\sqrt[3]{3}}{7}} + \log_3{\frac{27}{49}} - \log_3 {\left(3 \sqrt[3]{9} \right)}$
+
+            \part $\log_2{40} - \log_2 {\frac{\sqrt{8}}{5}} + \log_2 {\frac{2}{125}} - \log_2 {\frac{1}{\sqrt{5}}}$
+    \end{parts}
+
+    \question 
+    La función que permite calcular en canto se convierte un capital $C_0$ acumulado al cabo de $t$ años es:
+    \begin{equation*}
+        C(t) = C_0 \cdot \left(1+\frac{i}{100}\right)^t
+    \end{equation*}
+    donde: $C_0$ es el capital inicial e $i$ el interés anual.
+    \begin{parts}
+        \part ¿Cuánto dinero tendremos al cabo de 6 años si colocamos a plazo fijo 20.000 \euro{} al 2\%?
+
+        \part ¿Cuántos años deberemos mantener 100.000 \euro{} en una entidad bancaria a una tasa del 2,5\% si queremos duplicar el capital?
+        ¿Es relevante el dato del capital inicial?
+
+        \part Una persona que tiene depositada en una caja de ahorros 30.000\euro{} a una tasa de 3\% queire llegar a tener 40.000\euro
+        ¿Cuánto tiempo deberá mantener intacto el capital?
+    \end{parts}
+
+    \question 
+    La función que expresa el volumen de madera que tiene un bosque al cabo de \textbf{t} años es:
+    \begin{equation*}
+        M(t) = M_0 \cdot \left(1+I\right)^t
+    \end{equation*}
+    donde: $M_0$ es el volumen inicial de madera, en $m^3$ e $I$ es el crecimiento anual, en \%.
+    \begin{parts}
+        \part Se calcula que un bosque tiene $12.000 m^3$ de madera y que aumenta en $5\%$ cada año. ¿Cuánta madera tendrá al cabo de 10 años si sigue creciendo en estas condiciones?
+        \part Cuánto tiempo tardará en duplicarse el bosque?
+    \end{parts}
+
+    \question 
+    Algunos tipos de bacterias tienen un crecimiento de sus poblaciones muy rápido. La \textit{escherichia coli} puede duplicar su población cada hora.
+    \begin{parts}
+        \part Supongamos que hacemos un cultivo en el que inicialmente 
+        hay 5000 bacterias de este tipo. Construir una tabla para razonar que la función que nos da el número de 
+        bacterias al cabo de \textbf{t} horas es: 
+        \begin{equation*}
+            f(t) = 5000 \cdot 2^t
+        \end{equation*}
+
+        \part ¿Cuántas habrá al cabo de 16 horas?
+
+        \part Dibujar una gráfica que represente el crecimiento en las 8 primeras horas.
+
+        \part Si tenemos un cultivo de 100 bacterias y queremos conseguir un millón, ¿cuánto 
+        tiempo ha de transcurrir?
+    \end{parts}
+
+    \question 
+    Un coche que nos costo 12.000\euro pierde un 12\% de su valor cada año.
+    \begin{parts}
+        \part ¿Cuanto valdrá dentro de un año? ¿Y dentro de 3 años?
+        \part Obtén la función que nos da el precio del coche según los años transcurridos.
+        \part ¿Cuánto tiempo ha de transcurrir para que el valor del coche sea la mitad?
+        \part ¿Cuánto tiempo ha de transcurrir para que el valor del coche sea un cuarto del valor inicial?
+    \end{parts}
+
+\end{questions}
+
+\end{document}
