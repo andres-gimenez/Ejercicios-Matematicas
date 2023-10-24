@@ -32,7 +32,6 @@
 \usepackage{amssymb}
 \usepackage{lmodern}
 \usepackage{mathtools, nccmath}
-% \usepackage{amsmath}
 \usepackage{polynom}
 \usepackage{polynomial}
 \usepackage{array,booktabs}
