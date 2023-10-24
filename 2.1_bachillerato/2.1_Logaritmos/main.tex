@@ -33,6 +33,10 @@
 % \StudentData{}
 % \GradeTableHeader{}
 
+%% Para ampliar la hoja
+% https://www.alfonsogonzalez.es/asignaturas/1_bach_ccss/ejercicios_propuestos_1_bach_ccss/3_logaritmos.pdf
+% http://www.ieselescorial.org/wp-content/uploads/2016/11/D.MAT-Ejercicios-de-Logar%C3%ADtmos-y-soluciones.pdf
+
 \justifying{}
 
 \begin{center}
@@ -78,38 +82,43 @@
 \item El logaritmo del producto es igual a la suma de los logaritmos:
 
 \begin{equation*}
-    \log_b (N \cdot M) =\log_b (N)+\log_b (M)
+    \log_b \left(x \cdot y\right) =\log_b \left(x\right)+\log_b \left(y\right)
 \end{equation*}
 
 \item El logaritmo del cociente es igual a la diferencia de los logaritmos:
 
 \begin{equation*}
-    \log_b (\dfrac {N}{M}) = \log_b (N)-\log_b (M)
+    \log_b \left(\dfrac{x}{y}\right) = \log_b \left(x\right)-\log_b \left(y\right)
 \end{equation*}
 
 \item El logaritmo de una potencia es igual al producto del exponente por el logaritmo de la base:
 
 \begin{equation*}
-    \log_b (N^r) = r\log_b (N)
+    \log_b \left(x^p\right)= p\log_b \left(x\right)
 \end{equation*}
 
+\item El logaritmo de un radical es igual al logaritmo de la base dividido entre el grado del radical:
+
+\begin{equation*}
+    \log_b \left(\sqrt[n]{x}\right) = \frac{\log_b \left(x\right)}{n}
+\end{equation*}
 
 \item La relación entre los logaritmos de un mismo número A en distintas bases viene dada por:
 
 \begin{equation*}
-    \log_a (N) =\dfrac {\log_b (N)}{\log_b (a)} =\dfrac {\ln (N)}{\ln (a)}
+    \log_a \left(x\right) =\dfrac{\log_b \left(x\right)}{\log_b \left(a\right)} =\dfrac {\ln \left(x\right)}{\ln \left(a\right)}
 \end{equation*}
 
 \item Si no se especifica la base de un logaritmo, se sobreentiende que es base 10.
 
 \begin{equation*}
-    \log_{10} (N) = \log (N)
+    \log_{10} \left(x\right) = \log \left(x\right)
 \end{equation*}
 
 \item El logaritmo neperiano o naturales, tiene como base el número $e = 2,718281828459045235360...$ y se indica como $ln$.
 
 \begin{equation*}
-    \log_e (N)=\ln (N)
+    \log_e \left(x\right) = \ln \left(x\right)
 \end{equation*}
 
 \end{enumerate}
@@ -191,14 +200,7 @@
             \part $5^{x + 2} = 18$
             \part $3^x = 0,2$
             \part $2^x= \frac{8}{27}$
-            \part $2^{x+1} + 4 = 80$
-            \part $2 \cdot 3^x - 3^{2x} + 3 = 0$
-            \part $3^{2x-3} = 8^{x+1}$
-            \part $3^{x+2} + 9^{x+1} = 810$
-            \part $2^{x-3} = -3$
-            \part $5^{x-1} = 2 + \frac{2}{5^{x-2}}$
-            \part $2 e^{x-4} = 3$
-            \part $100 \cdot 10^x = \sqrt[x]{1000^5}$
+            \part $10^x = 3,4$
         \end{parts}
     \end{multicols}
 
@@ -215,6 +217,30 @@
 
             \part $\frac{3}{2} + \log_x{2} = 2$
             \part $\frac{3}{2} \cdot 10^{-2} = e^x$
+
+            \part $2^{x+1} + 4 = 80$
+            \part $2 \cdot 3^x - 3^{2x} + 3 = 0$
+            \part $3^{2x-3} = 8^{x+1}$
+            \part $3^{x+2} + 9^{x+1} = 810$
+            \part $2^{x-3} = -3$
+            \part $5^{x-1} = 2 + \frac{2}{5^{x-2}}$
+            \part $2 e^{x-4} = 3$
+            \part $100 \cdot 10^x = \sqrt[x]{1000^5}$
+
+            \part $\log{\left(\log{x}\right)} = 1 $
+        \end{parts}
+    \end{multicols}
+
+    \question
+    Halla el valor de x en estas expresiones aplicando las propiedades de los logaritmos:
+    \begin{multicols}{3}
+        \begin{parts}
+            \part $\ln{x} = \ln{8} + \ln{2}$
+            \part $\ln{x} = \ln{3} + \ln{2} - \ln{6}$
+            \part $\log{x} = \log{36} - \log{6}$
+            \part $\log{x} = 4\log{2} - \frac{1}{2} \log{25}$
+            \part $\ln{x} = 3 \ln{2}$
+            \part $\log{x} = 3 \log{2} - \frac{1}{4} \log{16}$
         \end{parts}
     \end{multicols}
 
@@ -233,11 +259,11 @@
     \end{parts}
 
     \question 
-    La función que permite calcular en canto se convierte un capital $C_0$ acumulado al cabo de $t$ años es:
+    La función que permite calcular en canto se convierte un capital \textbf{$C_0$} acumulado al cabo de \textbf{t} años es:
     \begin{equation*}
         C(t) = C_0 \cdot \left(1+\frac{i}{100}\right)^t
     \end{equation*}
-    donde: $C_0$ es el capital inicial e $i$ el interés anual.
+    donde: \textbf{$C_0$} es el capital inicial e \textbf{i} el interés anual.
     \begin{parts}
         \part ¿Cuánto dinero tendremos al cabo de 6 años si colocamos a plazo fijo 20.000 \euro{} al 2\%?
 
@@ -253,7 +279,7 @@
     \begin{equation*}
         M(t) = M_0 \cdot \left(1+I\right)^t
     \end{equation*}
-    donde: $M_0$ es el volumen inicial de madera, en $m^3$ e $I$ es el crecimiento anual, en \%.
+    donde: \textbf{$M_0$} es el volumen inicial de madera, en $m^3$ e \textbf{I} es el crecimiento anual, en \%.
     \begin{parts}
         \part Se calcula que un bosque tiene $12.000 m^3$ de madera y que aumenta en $5\%$ cada año. ¿Cuánta madera tendrá al cabo de 10 años si sigue creciendo en estas condiciones?
         \part Cuánto tiempo tardará en duplicarse el bosque?
@@ -278,7 +304,7 @@
     \end{parts}
 
     \question 
-    Un coche que nos costo 12.000\euro pierde un 12\% de su valor cada año.
+    Un coche que nos costo 12.000\euro{} pierde un 12\% de su valor cada año.
     \begin{parts}
         \part ¿Cuanto valdrá dentro de un año? ¿Y dentro de 3 años?
         \part Obtén la función que nos da el precio del coche según los años transcurridos.
