@@ -1,22 +1,15 @@
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexercises}
+
  %%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\documentName} { Logaritmos }
-\newcommand{\documentContent} { Propiedades y ejercicios } 
-\newcommand{\waterMark} {  } 
+\renewcommand{\documentName} { Logaritmos }
+\renewcommand{\documentContent} { Propiedades y ejercicios } 
+\renewcommand{\waterMark} {  } 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Configuración del documento.
-\input{./include/configurationCurso} 
-\input{./include/configuration} 
+\input{./include/configuration}
 
 % \renewcommand{\thepartno}{\arabic{partno}}
-
-\usepackage{yhmath}
-
-\usepackage{amsthm}
-\theoremstyle{definition}
-\newtheorem*{theorem}{Theorem}
-\newtheorem{definition}{Definición}
-\newtheorem{property}{Propiedad}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Exam configuration
@@ -50,11 +43,11 @@
             }
         \vspace{5mm}
 
-    Si \textbf{a} es un número positivo y distinto de 1, el \textbf{logaritmo en base a de un número positivo N}
-    es el exponente al que hay que elvar la base a para obtener N. 
+    Si \textbf{b} es un número positivo y distinto de 1, el \textbf{logaritmo en base a de un número positivo N}
+    es el exponente al que hay que elevar la base a para obtener N. 
     
     \center
-    $\log_a N =x \Leftrightarrow a^x=N$
+    $\log_b N =x \Leftrightarrow b^x=N$
 
     \vspace{5mm}
     }}
@@ -70,34 +63,34 @@
 
 \begin{enumerate}
 
-\item El logaritmo de la base es simpre igual a 1:
+\item El logaritmo de la base es siempre igual a 1:
 
 \begin{equation*}
-    \log_a a = 1
+    \log_b b = 1
 \end{equation*}
 
 \item El logaritmo de cualquier base de 1 es igual a 0:
 
 \begin{equation*}
-    \log_a 1 = 0
+    \log_b 1 = 0
 \end{equation*}
 
 \item El logaritmo del producto es igual a la suma de los logaritmos:
 
 \begin{equation*}
-    \log_a (N \cdot M) =\log_a (N)+\log_a (M)
+    \log_b (N \cdot M) =\log_b (N)+\log_b (M)
 \end{equation*}
 
 \item El logaritmo del cociente es igual a la diferencia de los logaritmos:
 
 \begin{equation*}
-    \log_a (\dfrac {N}{M}) = \log_a (N)-\log_a (M)
+    \log_b (\dfrac {N}{M}) = \log_b (N)-\log_b (M)
 \end{equation*}
 
 \item El logaritmo de una potencia es igual al producto del exponente por el logaritmo de la base:
 
 \begin{equation*}
-    \log_a (N^r) = r\log_a (N)
+    \log_b (N^r) = r\log_b (N)
 \end{equation*}
 
 
