@@ -3,8 +3,11 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - binomial
   - Fernán
   - IES
+  - inecuaciones
+  - Inecuaciones
   - StudentData
 ignoreWords: []
 import: []
