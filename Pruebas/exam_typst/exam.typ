@@ -42,7 +42,7 @@
   
   [
   //   // 
-    #grid(
+    #grid()
       columns:(auto, 1fr, auto),
       [#numberQuestion. #h(4pt)],
       [#content],
@@ -54,12 +54,19 @@
 #let exam(
   title: "",
   authors: (),
+  // date: none auto datetime,
   date: none,
   logo: none,
   body,
 ) = {
   
-set page(
+  set document(
+    title: title,
+    // author: authors.first(),
+    // date: date
+  )
+
+  set page(
     paper: "a4", 
     margin: (top: 5cm, bottom:3cm),
     numbering: "1 / 1",
@@ -71,17 +78,22 @@ set page(
     //   ]),
 
     header: [
+      #align(left,
+        figure(
+          image("logo.png", height:3cm)
+        ))
       Examen Matemáticas A 4º ESO
       #h(1fr)
       1ª evaluación 2º examen \
       IES Africa
       #h(1fr)
       Proporcionalidad \
-      Curso 2023/2024
+      Curso 2023/2024 \
+      // #line(length: 100%, stroke: 1pt + gray) 
     ],
 
     footer: [
-      #line(length: 100%,  stroke: 1pt + gray) 
+      // #line(length: 100%, stroke: 1pt + gray) 
       #set align(right)
       #set text(9pt)
       #counter(page).display({

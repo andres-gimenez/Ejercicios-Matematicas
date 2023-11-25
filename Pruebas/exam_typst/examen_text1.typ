@@ -12,8 +12,10 @@
 )
 
 #studentData
-#gradeTableHeader
+#v(10pt)
 
+#gradeTableHeader
+#v(10pt)
 
 #question(2.4, 
   [
