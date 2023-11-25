@@ -42,7 +42,7 @@
   
   [
   //   // 
-    #grid()
+    #grid(
       columns:(auto, 1fr, auto),
       [#numberQuestion. #h(4pt)],
       [#content],
@@ -78,10 +78,10 @@
     //   ]),
 
     header: [
-      #align(left,
-        figure(
-          image("logo.png", height:3cm)
-        ))
+      // #align(left,
+        // figure(
+          #image("logo.png", height:3cm)
+        // ))
       Examen Matemáticas A 4º ESO
       #h(1fr)
       1ª evaluación 2º examen \
