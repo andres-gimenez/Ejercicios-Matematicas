@@ -11,18 +11,30 @@
   date: "November 21, 2023",
 )
 
-
-
 #studentData
 #gradeTableHeader
 
 
+#question(2.4, 
+  [
+    Opera y simplifica los resultadod \ \
+    $display( 5/3+4/9+4/6= 3 dot (4/2 + 3)^2 = 5 dot frac(3, 10))$
 
+    $ (3/2)/(3/7)/(3/4) $
+
+    $display(frac(frac(3,6), frac(2,9)))$
+    // #v(1fr)
+  ]
+  )
+#v(1fr)
 
 #question(2.4, 
   [
     Pregunta número 1 \ \
-    $2x -5 = sum_(x=0)^oo$
+    $ 2x -5 = sum_(x=0)^oo (x+1)/2 $
+
+    $ scripts(sum)_1^2 != sum_1^2 $
+    // #v(1fr)
   ]
   )
 
@@ -32,6 +44,7 @@
     $2x -5 = sum_(x=0)^oo$
   ]
   )
+#v(1fr)
 
 #question(1.8, 
   [
@@ -39,7 +52,8 @@
     $2x -5 = sum_(x=0)^oo$
   ]
   )
-
+#v(1fr)
+#pagebreak(weak:true)
 
 #question(4.8, 
   [
@@ -48,7 +62,11 @@
   ]
   )
 
-
+#question(4.8, 
+  [
+     #lorem(40)
+  ]
+  )
 
 = Pregunta 1
 #lorem(60)

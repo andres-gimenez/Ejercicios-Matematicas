@@ -1,10 +1,14 @@
 // Questions 
-#let cuestions = ()
+#let numberQuestion = 0
+#let questions = ( 
+    a: "a", b: "b", c: "3"
+  )
 
 
 #let studentData = [
-  Apellido: ______________________ Nombre: ____________________ \
-  Grupo: ______________ Fecha: ______________
+  Apellido:  #box(width:2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.]) \
+  #v(1pt)
+  #align(right, [Grupo: #box(width:2.5cm, repeat[.]) Fecha: #box(width:4cm, repeat[.])])
 ]
 
 #let gradeTableHeader = [
@@ -23,19 +27,29 @@
   )
 ]
 
-
 #let question(point, content) = {
 
-  // cuestions.push(1)
+  //  numberQuestion = numberQuestion + 1 
+  // let question2 = question
+  let numberQuestion = questions.len()
+  // question2.insert(18, "cc")
+  // question2.insert(numberQuestion+1, "cc")
+  // questions.push(
+  //   number: questions.len()+1, 
+  //   point: point, 
+  //   content: content
+  // )
   
   [
   //   // 
-
-     #content  (#point puntos)
+    #grid(
+      columns:(auto, 1fr, auto),
+      [#numberQuestion. #h(4pt)],
+      [#content],
+      [#h(6pt) (#point puntos)]
+    )
   ]
 }
-
-
 
 #let exam(
   title: "",
@@ -47,8 +61,14 @@
   
 set page(
     paper: "a4", 
-    margin: (top: 5cm, bottom:4cm),
-    numbering: "1",
+    margin: (top: 5cm, bottom:3cm),
+    numbering: "1 / 1",
+    number-align: right,
+
+    // background:rotate(24deg,
+    //   text(18pt, fill: rgb("FFCBC4"))[
+    //     BORRADOR
+    //   ]),
 
     header: [
       Examen Matemáticas A 4º ESO
@@ -58,17 +78,21 @@ set page(
       #h(1fr)
       Proporcionalidad \
       Curso 2023/2024
+    ],
+
+    footer: [
+      #line(length: 100%,  stroke: 1pt + gray) 
+      #set align(right)
+      #set text(9pt)
+      #counter(page).display({
+        "- 1 de 1 -"},
+        both: true,
+      )
     ]
   )
 
   set text(lang: "es")
 
-
-  // // Set the document's basic properties.
-  // set document(author: authors.map(a => a.name), title: title)
-  // set page(numbering: "1", number-align: center)
-  // set text(font: "Linux Libertine", lang: "es")
-  // set heading(numbering: "1.1.")
 
   // // Title page.
   // // The page can contain a logo if you pass one with `logo: "logo.png"`.
