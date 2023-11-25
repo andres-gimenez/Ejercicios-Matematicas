@@ -8,20 +8,22 @@
 #let studentData = [
   Apellido:  #box(width:2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.]) \
   #v(1pt)
-  #align(right, [Grupo: #box(width:2.5cm, repeat[.]) Fecha: #box(width:4cm, repeat[.])])
+  #align(right, [Grupo: #box(width:2.5cm, repeat[.]) Fecha: #box(width:3cm, repeat[.])])
 ]
 
 #let gradeTableHeader = [
   #align(center, 
-    [#table(
-      columns: (auto, 30pt, 30pt, 30pt, 30pt, 30pt, 30pt, auto),
-      rows: (auto, auto, 30pt),
-      inset: 5pt,
-      align: (x, y) => (left, center, center, center, center, center, center, center).at(x),
-      // align: (x,y) => (center, center, center).at(y),
-      [Pregunta], [1], [2],[3],[4],[5],[6], [Total],
-      [Puntos], [2], [2], [2], [2], [2], [2], [10], 
-      [Calificación], [], [], [], [], [], [], [],
+    [#figure(
+      table(
+        columns: (auto, 30pt, 30pt, 30pt, 30pt, 30pt, 30pt, auto),
+        rows: (auto, auto, 30pt),
+        inset: 5pt,
+        align: (x, y) => (left, center, center, center, center, center, center, center).at(x),
+        // align: (x,y) => (center, center, center).at(y),
+        [Pregunta], [1], [2],[3],[4],[5],[6], [Total],
+        [Puntos], [2], [2], [2], [2], [2], [2], [10], 
+        [Calificación], [], [], [], [], [], [], [],
+      )
     )
     ]
   )
