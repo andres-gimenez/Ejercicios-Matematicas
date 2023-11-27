@@ -1,11 +1,7 @@
-// Questions 
-#let numberQuestion = 0
-#let questions = ( 
-    a: "a", b: "b", c: "3"
-  )
 
-
-#let studentData = [
+#let studentData(
+  languaje: "en",
+) = [
   Apellido:  #box(width:2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.]) \
   #v(1pt)
   #align(right, [Grupo: #box(width:2.5cm, repeat[.]) Fecha: #box(width:3cm, repeat[.])])
@@ -32,29 +28,9 @@
 ]
 
 #let gradeTableHeader(
+  questions: (),
   languaje: "en"
-) = {
-  // let count = 8
-  // let enums = range(1, count + 1)
-  let questions = (
-    (
-      calification: 2.3,
-      conten: [Contenido de la pregunta 1]
-    ),
-    (
-      calification: 1.4,
-      conten: [Contenido de la pregunta 2]
-    ),
-    (
-      calification: 2,
-      conten: [Contenido de la pregunta 3]
-    ),
-     (
-      calification: 3,
-      conten: [Contenido de la pregunta 4]
-    )
-  )
-  
+) = {  
   let columnsNumber = range(0, questions.len() + 2)
   
   let questionRow = columnsNumber.map(n => 
@@ -65,11 +41,15 @@
     }
   )
 
-  let pointRow = columnsNumber.map(n => 
-    {
+  let totalPoint = questions.map(q => q.points).sum()
+
+  let pointRow = columnsNumber.map(n => {
       if n == 0 [Puntos]
-      else if n == questions.len() + 1 [10]
-      else [ #n ]
+      else if n == questions.len() + 1 [#totalPoint]
+      else {
+        let question = questions.at(n - 1)
+        [ #question.points ]
+      }
     }
   )
 
@@ -80,7 +60,6 @@
   )
 
   align(center, table(
-    // columns: columnsNumber.len(),
     columns: columnsNumber.map( n => 
     {
       if n == 0 {auto}
@@ -95,29 +74,29 @@
   )
 }
 
-#let question(point, content) = {
+// #let question(point, content) = {
 
-  //  numberQuestion = numberQuestion + 1 
-  // let question2 = question
-  let numberQuestion = questions.len()
-  // question2.insert(18, "cc")
-  // question2.insert(numberQuestion+1, "cc")
-  // questions.push(
-  //   number: questions.len()+1, 
-  //   point: point, 
-  //   content: content
-  // )
+//   //  numberQuestion = numberQuestion + 1 
+//   // let question2 = question
+//   let numberQuestion = questions.len()
+//   // question2.insert(18, "cc")
+//   // question2.insert(numberQuestion+1, "cc")
+//   // questions.push(
+//   //   number: questions.len()+1, 
+//   //   point: point, 
+//   //   content: content
+//   // )
   
-  [
-  //   // 
-    #grid(
-      columns:(auto, 1fr, auto),
-      [#numberQuestion. #h(4pt)],
-      [#content],
-      [#h(6pt) (#point puntos)]
-    )
-  ]
-}
+//   [
+//   //   // 
+//     #grid(
+//       columns:(auto, 1fr, auto),
+//       [#numberQuestion. #h(4pt)],
+//       [#content],
+//       [#h(6pt) (#point puntos)]
+//     )
+//   ]
+// }
 
 #let exam(
   title: "",
@@ -125,7 +104,10 @@
   // date: none auto datetime,
   date: none,
   logo: none,
+  show-studen-data: true,
   show-grade-table: true,
+  languaje: "en",
+  questions: (),
   body,
 ) = {
   
@@ -172,8 +154,7 @@
     ]
   )
 
-  set text(lang: "es")
-
+  set text(lang:languaje)
 
   // // Title page.
   // // The page can contain a logo if you pass one with `logo: "logo.png"`.
@@ -201,6 +182,36 @@
   //     ]),
   //   ),
   // )
+
+  if show-studen-data == true {
+    studentData(
+      languaje: languaje,
+    )
+    v(10pt)
+  }
+
+// #gradeTableHeader2()
+// #v(10pt)
+
+  if show-grade-table == true {
+    gradeTableHeader(
+      languaje: languaje,
+      questions: questions,
+    )
+    v(10pt)
+  }
+
+  let numberQuestion = 0
+  for question in questions {
+    numberQuestion+=1
+
+    grid(
+      columns:(auto, 1fr, auto),
+      [#numberQuestion. #h(4pt)],
+      [#question.content],
+      [#h(6pt) (#question.points puntos)]
+    )
+  }
 
   // Main body.
   set par(justify: true) 
