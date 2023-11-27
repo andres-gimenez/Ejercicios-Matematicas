@@ -20,7 +20,7 @@
       ]
     ),
     (
-      points: 1.4,
+      points: 1.2,
       content: [
         Contenido de la pregunta 2
         $ 4 - x = 2 $
@@ -28,14 +28,14 @@
       ]
     ),
     (
-      points: 2,
+      points: 2.3,
       content: [
         Contenido de la pregunta 3
         // #v(1fr)
       ]
     ),
     (
-      points: 3,
+      points: 3.8,
       content: [Contenido de la pregunta 4]
     )
   )

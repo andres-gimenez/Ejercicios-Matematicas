@@ -211,6 +211,12 @@
       [#question.content],
       [#h(6pt) (#question.points puntos)]
     )
+    // figure(
+    //   // placement:bottom,
+    //   placement:auto,
+    //   [(#question.points puntos)]
+    // )
+    [#v(1fr)]
   }
 
   // Main body.
