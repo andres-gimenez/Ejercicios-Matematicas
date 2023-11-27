@@ -11,7 +11,9 @@
   #align(right, [Grupo: #box(width:2.5cm, repeat[.]) Fecha: #box(width:3cm, repeat[.])])
 ]
 
-#let gradeTableHeader = [
+#let gradeTableHeader2(
+  languaje: "en"
+)= [
   #align(center, 
     [#figure(
       table(
@@ -28,6 +30,70 @@
     ]
   )
 ]
+
+#let gradeTableHeader(
+  languaje: "en"
+) = {
+  // let count = 8
+  // let enums = range(1, count + 1)
+  let questions = (
+    (
+      calification: 2.3,
+      conten: [Contenido de la pregunta 1]
+    ),
+    (
+      calification: 1.4,
+      conten: [Contenido de la pregunta 2]
+    ),
+    (
+      calification: 2,
+      conten: [Contenido de la pregunta 3]
+    ),
+     (
+      calification: 3,
+      conten: [Contenido de la pregunta 4]
+    )
+  )
+  
+  let columnsNumber = range(0, questions.len() + 2)
+  
+  let questionRow = columnsNumber.map(n => 
+    {
+      if n == 0 [Pregunta]
+      else if n == questions.len() + 1 [Total]
+      else [ #n ]
+    }
+  )
+
+  let pointRow = columnsNumber.map(n => 
+    {
+      if n == 0 [Puntos]
+      else if n == questions.len() + 1 [10]
+      else [ #n ]
+    }
+  )
+
+  let calificationRow = columnsNumber.map(n => 
+    {
+      if n == 0 [Calificación]
+    }
+  )
+
+  align(center, table(
+    // columns: columnsNumber.len(),
+    columns: columnsNumber.map( n => 
+    {
+      if n == 0 {auto}
+      else if n == questions.len() + 1 {auto}
+      else {30pt}
+    }),
+    rows: (auto, auto, 30pt),
+    ..questionRow.map(n => n),
+    ..pointRow.map(n => n),
+    ..calificationRow.map(n => n),
+  )
+  )
+}
 
 #let question(point, content) = {
 
@@ -59,6 +125,7 @@
   // date: none auto datetime,
   date: none,
   logo: none,
+  show-grade-table: true,
   body,
 ) = {
   

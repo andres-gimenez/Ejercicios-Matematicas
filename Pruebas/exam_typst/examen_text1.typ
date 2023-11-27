@@ -14,15 +14,20 @@
 #studentData
 #v(10pt)
 
-#gradeTableHeader
+#gradeTableHeader2()
 #v(10pt)
+
+#gradeTableHeader()
+#v(10pt)
+
+Hola
 
 #question(2.4, 
   [
     Opera y simplifica los resultadod \ \
     $display( 5/3+4/9+4/6= 3 dot (4/2 + 3)^2 = 5 dot frac(3, 10))$
 
-    $ (3/2)/(3/7)/(3/4) $
+    $ (3/2)/(3/7)/(3/4) $ 
 
     $display(frac(frac(3,6), frac(2,9)))$
     // #v(1fr)
