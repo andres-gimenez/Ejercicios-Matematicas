@@ -111,6 +111,8 @@
   body,
 ) = {
   
+  set par(justify: true) 
+
   set document(
     title: title,
     // author: authors.first(),
@@ -205,12 +207,18 @@
   for question in questions {
     numberQuestion+=1
 
-    grid(
-      columns:(auto, 1fr, auto),
-      [#numberQuestion. #h(4pt)],
-      [#question.content],
-      [#h(6pt) (#question.points puntos)]
-    )
+    // grid(
+    //   columns:(auto, 1fr, auto),
+      [#numberQuestion. #h(4pt) (#question.points puntos) #h(4pt)]
+      [#question.content]
+      // [#h(6pt) (#question.points puntos)]
+    // )
+    // grid(
+    //   columns:(auto, 1fr, auto),
+    //   [#numberQuestion. #h(4pt)],
+    //   [#question.content],
+    //   [#h(6pt) (#question.points puntos)]
+    // )
     // figure(
     //   // placement:bottom,
     //   placement:auto,

@@ -30,7 +30,7 @@
     (
       points: 2.3,
       content: [
-        Contenido de la pregunta 3
+       #lorem(45)
         // #v(1fr)
       ]
     ),
