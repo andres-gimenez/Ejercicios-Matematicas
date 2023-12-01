@@ -8,6 +8,7 @@
     email: "agimenezmunoz@educa.madrid.com", 
     affiliation: "Profesor de mates"),
   ),
+  languaje: "es",
   date: "November 21, 2023",
   show-grade-table: true,
   questions: (
