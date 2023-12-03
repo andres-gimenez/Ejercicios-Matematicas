@@ -1,0 +1,106 @@
+\documentclass[addpoints,spanish, 12pt,a4paper,cancelspace]{./include/gexam}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\documentName} { 1ª evaluación 3º examen }
+\renewcommand{\documentContent} { Repartos y polinomios } 
+\renewcommand{\waterMark} { Modelo A } 
+
+% Configuración del documento.
+\input{./include/configuration} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exam configuration
+%\pointsdroppedatright   %% No mostrar la puntuación
+\pointsinrightmargin % Para poner las puntuaciones a la derecha. Se puede cambiar. Si se comenta, sale a la izquierda.
+\extrawidth{-1.5cm} %Un poquito más de margen por si ponemos textos largos.
+\marginpointname{ \emph{\points}}
+
+%% Si se comenta no aparecerán los espacios de la solución.
+%\nocancelspace
+
+%% Esto es de la clase exam. Si dejamos sin comentar \printanswers, se mostraran las soluciones. 
+%% Si la comentamos y dejamos sin comentar \noprintanswers, pues no se muestran las soluciones.
+%\printanswers
+%\noprintanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\StudentData{}
+\GradeTableHeader{}
+
+\justifying{}
+
+\begin{center}
+    \fbox{\fbox{\parbox{6.5in}{             
+                \begin{itemize}
+                    \item Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada del examen que se valorará con un cero.
+                    \item Deben aparecer todas las operaciones, no vale solo con indicar el resultado.
+                    % \item Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.
+                    % \item Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.
+                    \item Está permitido utilizar la calculadora y se valorará el correcto uso de esta.
+                \end{itemize}
+            }}}
+\end{center}
+
+\begin{questions}
+    \setcounter{question}{0}
+
+    \question[2] Calcula el capital final que se obtiene al depositar 7.500\euro{} en una entidad bancaria al 7\% anual durante 10 años, 
+    aplicando interés simple e interés compuesto. Calcula la diferencia e indica que tipo de interés nos conviene utilizar
+    \newpage 
+
+    \question[2] Si un grifo, dando por minuto 100 litros de agua, llena en 8 horas un pozo; cinco grifos, dando cada uno 40 litros por minuto. 
+    ¿En cuántas horas llenará un pozo 6 veces el anterior?
+    \vspace{\stretch{1}}
+
+    \question[2] Para agilizar los cobros en una taquilla de un teatro, tras aplicar un 5\% de descuento y 21\% de IVA, 
+    queremos que se paguen 50\euro{} por entrada en la taquilla. ¿Cuál será el precio real de la entrada? ¿Cuánto será el importe del IVA? 
+    \vspace{\stretch{1}}
+    \newpage 
+
+    \question[2] María quiere regalarle una fotografía enmarcada a su abuela, del día que la invitaron a comer. 
+    Para ello dispone de una fotografía en formato digital de 1034 pixeles x 799 pixeles, la cual tiene intención de imprimir con papel fotográfico en una impresora a color.
+    Al ir a la tienda a comprar un marco para la fotografía, encuentra las siguientes ofertas:
+    \begin{enumerate}
+        \item Marco de madera de 27 cm x 21 cm, en su parte interior, a 6,5\euro{} la unidad.
+        \item Marco metálico de 22 cm x 17 cm, en su parte interior, a 12,65\euro{} la unidad.
+        \item Marco de plástico de 23 cm x 17 cm, en su parte interior, a 8,43\euro{} la unidad.
+    \end{enumerate}
+    ¿Si María quiere comprar el marco que mejor se adapta a la relación de aspecto con la foto, qué marco ha de comprar? \\ \\
+    (*Explica la contestación desde un punto de vista matemático, mostrando las cuentas que has utilizado para llegar a la conclusión que defiendes.)
+
+    
+    \newpage 
+    \question[2] Resuelve los siguientes ejercicios con logaritmos. 
+    \begin{parts}
+        \part Descompón el valor numérico en factores primos para posteriormente calcula el valor de los siguientes logaritmos. \\
+        (*Si se expresa la solución en un solo paso, se considerará que se ha realizado con la calculadora y no se considerará válido.)
+            \begin{subparts}
+                \subpart $\log_3 27 $
+                \vspace{\stretch{1}}
+
+                \subpart $\log_3 \sqrt{27}$
+                \vspace{\stretch{1}}
+
+                \subpart $\log_7 \frac{1}{7}$
+                \vspace{\stretch{1}}
+
+            \end{subparts}
+
+    \part Expresa las siguientes expresiones como un solo logaritmo: \\ 
+    (*La solución hay que expresarla como el logaritmo de una expresión numérica.)
+
+    \begin{subparts}
+        \subpart $\log_5 8 + 2 \log_5 7 - \log_5 400$
+        \vspace{\stretch{1}}
+
+        \subpart $\log_7 9 - 3 \log_7 5 + \log_7 3$
+        \vspace{\stretch{1}}
+    \end{subparts}
+    \end{parts}
+
+\end{questions}
+\end{document}
