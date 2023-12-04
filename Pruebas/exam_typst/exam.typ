@@ -166,20 +166,6 @@
         )
       }
     },
-    // header: [
-    //   // #align(left,
-    //     // figure(
-    //       #image("logo.png", height:3cm)
-    //     // ))
-    //   Examen Matemáticas A 4º ESO
-    //   #h(1fr)
-    //   1ª evaluación 2º examen \
-    //   IES Africa
-    //   #h(1fr)
-    //   Proporcionalidad \
-    //   Curso 2023/2024 \
-    //   // #line(length: 100%, stroke: 1pt + gray) 
-    // ],
 
     footer: [
       #line(length: 100%, stroke: 1pt + gray) 
