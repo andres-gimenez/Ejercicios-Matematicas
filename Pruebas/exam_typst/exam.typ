@@ -145,16 +145,17 @@
     },
     header: {
       grid(
-        columns: (auto, auto),
-        gutter:3pt,
+        columns: (auto, auto, 1fr, auto),
+        gutter:12pt,
         image(logo, height:1.5cm, fit: "contain"),
-        [Examen Matemáticas A 4º ESO
-        #h(1fr)
-        1ª evaluación 2º examen \
-        IES Africa
-        #h(1fr)
-        Proporcionalidad \
+        [IES África \  
         Curso 2023/2024 \
+        1ª evaluación 2º examen
+        ],        
+        [],
+        align(right)[
+        Matemáticas A 4º ESO \
+        Proporcionalidad \
         ]
       )
       line(length: 100%, stroke: 1pt + gray)
