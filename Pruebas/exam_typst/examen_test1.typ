@@ -9,6 +9,7 @@
     affiliation: "Profesor de mates"),
   ),
   languaje: "es",
+  decimal-separator: ",",
   date: "November 21, 2023",
   show-grade-table: true,
   questions: (
@@ -17,22 +18,23 @@
       content: [
         Contenido de la pregunta 1 \
         $ 4 + x = 2 $
-        // #v(10pt)
+        #v(50pt)
       ]
     ),
     (
-      points: 1.2,
+      points: 1.5,
       content: [
         Contenido de la pregunta 2
         $ 4 - x = 2 $
-        // #v(1fr)
+        #v(1fr)
       ]
     ),
     (
-      points: 2.3,
+      points: 2,
       content: [
-       #lorem(45)
-        // #v(1fr)
+      #lorem(45)
+      #v(1fr)
+      #pagebreak(weak:true)
       ]
     ),
     (

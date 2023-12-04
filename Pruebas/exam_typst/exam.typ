@@ -1,3 +1,4 @@
+#import "@preview/oxifmt:0.2.0": strfmt
 
 #let studentData(
   languaje: "en",
@@ -29,6 +30,7 @@
 
 #let gradeTableHeader(
   questions: (),
+  decimal-separator: ".",
   languaje: "en"
 ) = {  
   let columnsNumber = range(0, questions.len() + 2)
@@ -45,10 +47,10 @@
 
   let pointRow = columnsNumber.map(n => {
       if n == 0 [Puntos]
-      else if n == questions.len() + 1 [#totalPoint]
+      else if n == questions.len() + 1 [#strfmt("{0}", totalPoint, fmt-decimal-separator: decimal-separator)]
       else {
         let question = questions.at(n - 1)
-        [ #question.points ]
+        [ #strfmt("{0}", question.points, fmt-decimal-separator: decimal-separator) ]
       }
     }
   )
@@ -107,6 +109,7 @@
   show-studen-data: true,
   show-grade-table: true,
   languaje: "en",
+  decimal-separator: ".",
   questions: (),
   body,
 ) = {
@@ -157,6 +160,7 @@
   )
 
   set text(lang:languaje)
+  // set text(lang:"es")
 
   // // Title page.
   // // The page can contain a logo if you pass one with `logo: "logo.png"`.
@@ -197,6 +201,7 @@
 
   if show-grade-table == true {
     gradeTableHeader(
+      decimal-separator: decimal-separator,
       languaje: languaje,
       questions: questions,
     )
@@ -206,10 +211,9 @@
   let numberQuestion = 0
   for question in questions {
     numberQuestion+=1
-
     // grid(
     //   columns:(auto, 1fr, auto),
-      [#numberQuestion. #h(4pt) (#question.points puntos) #h(4pt)]
+      [#numberQuestion. #h(4pt) (#strfmt("{0}", question.points, fmt-decimal-separator: decimal-separator) puntos) #h(4pt)]
       [#question.content]
       // [#h(6pt) (#question.points puntos)]
     // )
@@ -224,11 +228,12 @@
     //   placement:auto,
     //   [(#question.points puntos)]
     // )
-    [#v(1fr)]
+    // [#v(1fr)]
   }
 
   // Main body.
   set par(justify: true) 
   
+  // pagebreak(weak:true)
   body
 }
