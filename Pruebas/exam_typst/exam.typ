@@ -124,7 +124,7 @@
 
   set page(
     paper: "a4", 
-    margin: (top: 5cm, bottom:3cm),
+    margin: (top: 6cm, bottom:3cm),
     numbering: "1 / 1",
     number-align: right,
 
@@ -132,24 +132,55 @@
     //   text(18pt, fill: rgb("FFCBC4"))[
     //     BORRADOR
     //   ]),
-
-    header: [
-      // #align(left,
-        // figure(
-          #image("logo.png", height:3cm)
-        // ))
-      Examen Matemáticas A 4º ESO
-      #h(1fr)
-      1ª evaluación 2º examen \
-      IES Africa
-      #h(1fr)
-      Proporcionalidad \
-      Curso 2023/2024 \
-      // #line(length: 100%, stroke: 1pt + gray) 
-    ],
+    
+    header-ascent: 
+    {
+      if show-studen-data == true {
+        6%
+      }
+      else {
+        30%
+      }
+    },
+    header: {
+      grid(
+        columns: (auto, auto),
+        gutter:3pt,
+        image(logo, height:1.5cm, fit: "contain"),
+        [Examen Matemáticas A 4º ESO
+        #h(1fr)
+        1ª evaluación 2º examen \
+        IES Africa
+        #h(1fr)
+        Proporcionalidad \
+        Curso 2023/2024 \
+        ]
+      )
+      line(length: 100%, stroke: 1pt + gray)
+      if show-studen-data == true {
+        v(10pt)
+        studentData(
+          languaje: languaje,          
+        )
+      }
+    },
+    // header: [
+    //   // #align(left,
+    //     // figure(
+    //       #image("logo.png", height:3cm)
+    //     // ))
+    //   Examen Matemáticas A 4º ESO
+    //   #h(1fr)
+    //   1ª evaluación 2º examen \
+    //   IES Africa
+    //   #h(1fr)
+    //   Proporcionalidad \
+    //   Curso 2023/2024 \
+    //   // #line(length: 100%, stroke: 1pt + gray) 
+    // ],
 
     footer: [
-      // #line(length: 100%, stroke: 1pt + gray) 
+      #line(length: 100%, stroke: 1pt + gray) 
       #set align(right)
       #set text(9pt)
       #counter(page).display({
@@ -188,18 +219,21 @@
   //     ]),
   //   ),
   // )
-
-  if show-studen-data == true {
-    studentData(
-      languaje: languaje,
-    )
-    v(10pt)
-  }
+  
+  // if show-studen-data == true {
+  //   studentData(
+  //     languaje: languaje,
+  //   )
+  //   v(10pt)
+  // }
 
 // #gradeTableHeader2()
 // #v(10pt)
 
   if show-grade-table == true {
+      if show-studen-data == true {
+        v(20pt)
+      }
     gradeTableHeader(
       decimal-separator: decimal-separator,
       languaje: languaje,
