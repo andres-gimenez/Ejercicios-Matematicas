@@ -62,6 +62,7 @@
   )
 
   align(center, table(
+    stroke: 0.8pt + luma(80),
     columns: columnsNumber.map( n => 
     {
       if n == 0 {auto}
