@@ -2,31 +2,14 @@
 
 #let studentData(
   languaje: "en",
-) = [
-  Apellido:  #box(width:2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.]) \
-  #v(1pt)
-  #align(right, [Grupo: #box(width:2.5cm, repeat[.]) Fecha: #box(width:3cm, repeat[.])])
-]
-
-#let gradeTableHeader2(
-  languaje: "en"
-)= [
-  #align(center, 
-    [#figure(
-      table(
-        columns: (auto, 30pt, 30pt, 30pt, 30pt, 30pt, 30pt, auto),
-        rows: (auto, auto, 30pt),
-        inset: 5pt,
-        align: (x, y) => (left, center, center, center, center, center, center, center).at(x),
-        // align: (x,y) => (center, center, center).at(y),
-        [Pregunta], [1], [2],[3],[4],[5],[6], [Total],
-        [Puntos], [2], [2], [2], [2], [2], [2], [10], 
-        [Calificación], [], [], [], [], [], [], [],
-      )
-    )
-    ]
-  )
-]
+  show-two-lines: true
+) = {
+  [Appelido #box(width: 2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.])]
+  if show-two-lines {
+    v(1pt)
+    align(right, [Grupo: #box(width:2.5cm, repeat[.]) Fecha: #box(width:3cm, repeat[.])])
+  }
+}
 
 #let gradeTableHeader(
   questions: (),
@@ -37,8 +20,8 @@
   
   let questionRow = columnsNumber.map(n => 
     {
-      if n == 0 [Pregunta]
-      else if n == questions.len() + 1 [Total]
+      if n == 0 {align(left + horizon)[Pregunta]}
+      else if n == questions.len() + 1 {align(left + horizon)[Total]}
       else [ #n ]
     }
   )
@@ -46,7 +29,7 @@
   let totalPoint = questions.map(q => q.points).sum()
 
   let pointRow = columnsNumber.map(n => {
-      if n == 0 [Puntos]
+      if n == 0 {align(left + horizon)[Puntos]}
       else if n == questions.len() + 1 [#strfmt("{0}", totalPoint, fmt-decimal-separator: decimal-separator)]
       else {
         let question = questions.at(n - 1)
@@ -57,7 +40,7 @@
 
   let calificationRow = columnsNumber.map(n => 
     {
-      if n == 0 [Calificación]
+      if n == 0 {align(left + horizon)[Calificación]}
     }
   )
 
@@ -167,15 +150,31 @@
       }
     },
 
-    footer: [
-      #line(length: 100%, stroke: 1pt + gray) 
-      #set align(right)
-      #set text(9pt)
-      #counter(page).display({
+    footer: {
+      line(length: 100%, stroke: 1pt + gray) 
+      set align(right)
+      set text(9pt)
+      counter(page).display({
         "- 1 de 1 -"},
         both: true,
       )
-    ]
+
+      place(
+        top + right,
+        float: true,
+        clearance: 0pt,
+        dx:40pt,
+        dy:-195pt,
+        rotate(270deg,
+          origin: top + right,
+          {
+            text(size:7pt, fill:gray)[Profesor andres]
+            h(45pt)
+            text(size:8pt, luma(90))[Modelo (A)]
+          }
+        )
+      )
+    }
   )
 
   set text(lang:languaje)

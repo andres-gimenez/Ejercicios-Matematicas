@@ -168,7 +168,7 @@ $4x + 2 = 5$
 
 #pagebreak(weak:true)
 
-#rotate(-90deg)[Profesor andres]
+// #rotate(-90deg)[Profesor andres]
 
 #block(
   fill: luma(230),
