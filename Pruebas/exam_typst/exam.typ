@@ -155,7 +155,7 @@
       set align(right)
       set text(9pt)
       counter(page).display({
-        "- 1 de 1 -"},
+        "1 de 1"},
         both: true,
       )
 
