@@ -163,7 +163,7 @@
         top + right,
         float: true,
         clearance: 0pt,
-        dx:40pt,
+        dx:30pt,
         dy:-195pt,
         rotate(270deg,
           origin: top + right,

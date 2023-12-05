@@ -40,8 +40,14 @@
       ]
     ),
     (
-      points: 3.8,
+      points: 3.7,
       content: [Contenido de la pregunta 4]
+    ),
+    (
+      points: 2.1,
+      content: [hola
+      = Pregunta 111
+      #lorem(60)]
     )
   )
 )
