@@ -1,5 +1,8 @@
 #import "@preview/oxifmt:0.2.0": strfmt
 
+#let question-number = counter("question-number")
+#let question-point = state("question-point", 0)
+
 #let studentData(
   languaje: "en",
   show-two-lines: true
@@ -15,7 +18,33 @@
   questions: (),
   decimal-separator: ".",
   languaje: "en"
-) = {  
+) = {
+
+  locate(loc => {
+    
+    locate(loc => {
+      let question-locations = query(<question-localization>, loc)
+      for question-location in question-locations {
+        let q-number = question-number.at(question-location.location())
+        [
+          Number ->
+          #q-number.first() 
+          \
+        ]  
+
+        let q-point = question-point.at(question-location.location())
+        [ 
+          Point ->
+          #q-point
+          \
+        ]
+      }
+
+    })
+  })
+
+  
+
   let columnsNumber = range(0, questions.len() + 2)
   
   let questionRow = columnsNumber.map(n => 
@@ -26,7 +55,10 @@
     }
   )
 
-  let totalPoint = questions.map(q => q.points).sum()
+  let totalPoint = 0
+  if questions.len() > 0 { 
+    let totalPoint = questions.map(q => q.points).sum()
+  }
 
   let pointRow = columnsNumber.map(n => {
       if n == 0 {align(left + horizon)[Puntos]}
@@ -60,8 +92,6 @@
   )
 }
 
-
-
 #let exam(
   author: (
     name: none,
@@ -88,7 +118,7 @@
   show-studen-data: true,
   show-grade-table: true,
   decimal-separator: ".",
-  questions: (),
+  // questions: (),
   body,
 ) = {
   
@@ -181,6 +211,8 @@
 
   set text(lang:languaje)
 
+  
+
   if show-grade-table == true {
       if show-studen-data == true {
         v(20pt)
@@ -188,7 +220,7 @@
     gradeTableHeader(
       decimal-separator: decimal-separator,
       languaje: languaje,
-      questions: questions,
+      // questions: questions,
     )
     v(10pt)
   }
@@ -221,46 +253,41 @@
   
   // pagebreak(weak:true)
   body
+  [<endexam>]
 }
 
 #let question(body, point : 1,answer : []) = {
   (body : body, point : point, answer : answer)
 }
 
-#let questions(
-  show-answer:false,
-  decimal-separator: ".",
-  ..questionss,
-) = {
-  let numberQuestion = 0
-
-  // [aaaa]
-  // [#questionss.len()]
-  // for question in questions.named() {
-  //   numberQuestion+=1
-  //   [#numberQuestion. #h(4pt) (#strfmt("{0}", question.points, fmt-decimal-separator: decimal-separator) puntos) #h(4pt)]
-  //   [#question.content]
-  // }
-
-  let quest = questionss.pos()
-  let bodys = quest.map(i => i.body)
-  let points = quest.map(i => i.point)
-
-  // [#bodys.len()]
-
-  // let questionshow = range(bodys.len())
-  //   .map(i => {
-  //     numberQuestion+=1
-  //     [#numberQuestion. #h(4pt) (#strfmt("{0}", question.points, fmt-decimal-separator: decimal-separator) puntos) #h(4pt)]
-  //     [#question.content]
-  //   })
-
-  for question in questionss.pos().map(i => i) {
-    numberQuestion+=1
-    [#numberQuestion. #h(4pt) (#strfmt("{0}", question.point, fmt-decimal-separator: decimal-separator) puntos) #h(4pt)]
-    [#question.body]
-  }
-
-  // questionshow.join([a])
-
+#let question2(body, point : 1, answer : []) = {
+  // [#numberQuestion. #h(4pt) (#strfmt("{0}", point, fmt-decimal-separator: decimal-separator) puntos) #h(4pt)]
+  question-number.step() 
+  question-point.update(p => point)
+  [#question-number.display(). #h(4pt) (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos) #h(4pt)]
+  [
+    #body \
+    <question-localization>
+  ]
 }
+
+// #let questions(
+//   show-answer:false,
+//   decimal-separator: ".",
+//   ..questions,
+// ) = {
+//   let numberQuestion = 0
+
+//   // for question in questionss.pos().map(i => i) {
+//   for question in questions.pos() {
+//     numberQuestion+=1
+//     [#numberQuestion. #h(4pt) (#strfmt("{0}", question.point, fmt-decimal-separator: decimal-separator) puntos) #h(4pt)]
+//     [
+//       #question.body \
+//     ]
+
+//   }
+
+//   // questionshow.join([a])
+
+// }

@@ -1,4 +1,5 @@
-#import "exam.typ": exam, questions, question
+// #import "exam.typ": exam, questions, question
+#import "exam.typ": *
 
 // #show: exam.with(
 #show: exam.with(
@@ -25,84 +26,127 @@
   date: "November 21, 2023",
   show-studen-data: true,
   show-grade-table: true,
-  questions: (
-    (
-      points: 2.3,
-      content: [
-        Contenido de la pregunta 1 \
-        $ 4 + x = 2 $
-        #v(50pt)
-      ]
-    ),
-    (
-      points: 1.5,
-      content: [
-        Contenido de la pregunta 2
-        $ 4 - x = 2 $
-        #v(1fr)
-      ]
-    ),
-    (
-      points: 2,
-      content: [
-      #lorem(45)
-      #v(1fr)
-      #pagebreak(weak:true)
-      ]
-    ),
-    (
-      points: 3.7,
-      content: [Contenido de la pregunta 4]
-    ),
-    (
-      points: 2.1,
-      content: [hola
-      = Pregunta 111
-      #lorem(60)]
-    )
-  )
+  // questions: (
+  //   (
+  //     points: 2.3,
+  //     content: [
+  //       Contenido de la pregunta 1 \
+  //       $ 4 + x = 2 $
+  //       #v(50pt)
+  //     ]
+  //   ),
+  //   (
+  //     points: 1.5,
+  //     content: [
+  //       Contenido de la pregunta 2
+  //       $ 4 - x = 2 $
+  //       #v(1fr)
+  //     ]
+  //   ),
+  //   (
+  //     points: 2,
+  //     content: [
+  //     #lorem(45)
+  //     #v(1fr)
+  //     #pagebreak(weak:true)
+  //     ]
+  //   ),
+  //   (
+  //     points: 3.7,
+  //     content: [Contenido de la pregunta 4]
+  //   ),
+  //   (
+  //     points: 2.1,
+  //     content: [hola
+  //     = Pregunta 111
+  //     #lorem(60)]
+  //   )
+  // )
 )
 
-#questions( 
-  show_correction:false,
-  decimal-separator: ",",
-  question(point: 3, [ Pregunta 1]),
-  question(
-    point: 2.3,
-    [
-      Contenido de la pregunta 1 \
-      $ 4 + x = 2 $
-      #v(50pt)
-    ]
-  ),
-  question(
-    point: 1.5, 
-    [
-      Contenido de la pregunta 2
-      $ 4 - x = 2 $
-      #v(1fr)
-    ]
-  ),
-  question(
-    point: 2,
-    [
-    #lorem(45)
-    #v(1fr)
-    #pagebreak(weak:true)
-    ]
-  ),
-  question(
-    point: 3.7,
-    [Contenido de la pregunta 4
-    #lorem(60)]
-  ),
-  question(
-    point: 2.1,
-    [hola
-    = Pregunta 111
-    #lorem(60)]
-  )
+#question2(point: 3, [ Pregunta 1])
+
+#question2(
+  point: 2.3,
+  [
+    Contenido de la pregunta 1 \
+    $ 4 + x = 2 $
+    $ (2 sqrt(3))/(sqrt(2)-sqrt(3)) $
+    #v(50pt)
+  ]
 )
+
+#question2(
+  point: 1.5, 
+  [
+    Contenido de la pregunta 2
+    $ 4 - x = 2 $
+    #v(1fr)
+  ]
+)
+
+#question2(
+  point: 2,
+  [
+  #lorem(45)
+  #v(1fr)
+  #pagebreak(weak:true)
+  ]
+)
+
+#question2(
+  point: 3.7,
+  [Contenido de la pregunta 4
+  #lorem(60)]
+)
+
+#question2(
+  point: 2.1,
+  [hola
+  = Pregunta 111
+  #lorem(60)]
+)
+
+// #questions( 
+//   show_correction:false,
+//   decimal-separator: ",",
+//   question(point: 3, [ Pregunta 1]),
+//   question(
+//     point: 2.3,
+//     [
+//       Contenido de la pregunta 1 \
+//       $ 4 + x = 2 $
+//       #v(50pt)
+//     ]
+//   ),
+//   question(
+//     point: 1.5, 
+//     [
+//       Contenido de la pregunta 2
+//       $ 4 - x = 2 $
+//       #v(1fr)
+//     ]
+//   ),
+//   question(
+//     point: 2,
+//     [
+//     #lorem(45)
+//     #v(1fr)
+//     #pagebreak(weak:true)
+//     ]
+//   ),
+//   question(
+//     point: 3.7,
+//     [Contenido de la pregunta 4
+//     #lorem(60)]
+//   ),
+//   question(
+//     point: 2.1,
+//     [hola
+//     = Pregunta 111
+//     #lorem(60)]
+//   )
+// )
 
 // = Pregunta 1
 // #lorem(60)
