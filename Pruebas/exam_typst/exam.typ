@@ -3,7 +3,7 @@
 #let question-number = counter("question-number")
 #let question-point = state("question-point", 0)
 
-#let studentData(
+#let student-data(
   languaje: "en",
   show-two-lines: true
 ) = {
@@ -14,7 +14,7 @@
   }
 }
 
-#let gradeTableHeader(
+#let grade-table-header(
   decimal-separator: ".",
   languaje: "en"
 ) = {
@@ -72,6 +72,46 @@
       )
     }
   )
+}
+
+#let show-watermark(
+ author: (
+    name: none,
+    email: none,
+    watermark: none
+  ),
+  school: (
+    name: none,
+    logo: none,
+  ),
+  exam-info: (
+    academic-period: none,
+    academic-level: none,
+    academic-subject: none,
+    number: none,
+    content: none,
+    model: none
+  ),
+) = {
+      place(
+        top + right,
+        float: true,
+        clearance: 0pt,
+        dx:30pt,
+        dy:-115pt,
+        rotate(270deg,
+        origin: top + right,
+          {
+            if author.watermark != none {
+              text(size:7pt, fill:gray)[#author.watermark]
+              h(35pt)
+            }
+            if exam-info.model != none {
+              text(size:8pt, luma(90))[#exam-info.model]
+            }
+          }
+        )
+      )
 }
 
 #let exam(
@@ -154,7 +194,7 @@
       line(length: 100%, stroke: 1pt + gray)
       if show-studen-data == true {
         v(10pt)
-        studentData(
+        student-data(
           languaje: languaje,          
         )
       }
@@ -169,25 +209,7 @@
         both: true,
       )
 
-      place(
-        top + right,
-        float: true,
-        clearance: 0pt,
-        dx:30pt,
-        dy:-115pt,
-        rotate(270deg,
-        origin: top + right,
-          {
-            if author.watermark != none {
-              text(size:7pt, fill:gray)[#author.watermark]
-              h(35pt)
-            }
-            if exam-info.model != none {
-              text(size:8pt, luma(90))[#exam-info.model]
-            }
-          }
-        )
-      )
+      show-watermark(author: author, school: school, exam-info: exam-info)
     }
   )
 
@@ -197,7 +219,7 @@
       if show-studen-data == true {
         v(20pt)
       }
-    gradeTableHeader(
+    grade-table-header(
       decimal-separator: decimal-separator,
       languaje: languaje,
       // questions: questions,
@@ -214,9 +236,30 @@
 #let question(body, point : 1, answer : []) = {
   question-number.step() 
   question-point.update(p => point)
-  [#question-number.display(). #h(4pt) (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos) #h(4pt)]
-  [
-    #body \
-    <question-localization>
-  ]
+  locate(loc => {
+      // let location = loc.position()
+      // My location: \
+      // [#loc.position()]
+      // [#loc.position().y]
+      [#question-number.display(). #h(4pt) (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos) #h(4pt)]
+      [
+        #body \
+        <question-localization>
+      ]
+      let pos = loc.position()
+      place(
+        top + right,
+        float: true,
+        clearance: 0pt,
+        dx: pos.x - 30pt,
+        dy: pos.y - 177pt,
+        [(#strfmt("{0}", point, fmt-decimal-separator: ",") puntos)]
+      )
+    })
+
+  // [#question-number.display(). #h(4pt) (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos) #h(4pt)]
+  // [
+  //   #body \
+  //   <question-localization>
+  // ]
 }
