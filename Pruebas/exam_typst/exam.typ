@@ -85,14 +85,27 @@
 // }
 
 #let exam(
-  title: "",
-  authors: (),
+  author: (
+    name: none,
+    email: none,
+    watermark: none
+  ),
+  data: (
+    school: none,
+    academic-period: none,
+    academic-level: none,
+    academic-subject: none,
+    number: none,
+    content: none,
+    model: none
+  ),
   // date: none auto datetime,
   date: none,
+  keywords: none,
   logo: none,
+  languaje: "en",
   show-studen-data: true,
   show-grade-table: true,
-  languaje: "en",
   decimal-separator: ".",
   questions: (),
   body,
@@ -101,9 +114,10 @@
   set par(justify: true) 
 
   set document(
-    title: title,
-    // author: authors.first(),
-    // date: date
+    title: data.school,
+    author: author.name,
+    // date: date,
+    // keywords: keywords
   )
 
   set page(
@@ -137,7 +151,8 @@
         ],        
         [],
         align(right)[
-        Matemáticas A 4º ESO \
+        4º ESO\
+        Matemáticas A\
         Proporcionalidad \
         ]
       )
@@ -164,13 +179,17 @@
         float: true,
         clearance: 0pt,
         dx:30pt,
-        dy:-195pt,
+        dy:-115pt,
         rotate(270deg,
-          origin: top + right,
+        origin: top + right,
           {
-            text(size:7pt, fill:gray)[Profesor andres]
-            h(45pt)
-            text(size:8pt, luma(90))[Modelo (A)]
+            if author.watermark != none {
+              text(size:7pt, fill:gray)[#author.watermark]
+              h(35pt)
+            }
+            if data.model != none {
+              text(size:8pt, luma(90))[#data.model]
+            }
           }
         )
       )
@@ -178,44 +197,6 @@
   )
 
   set text(lang:languaje)
-  // set text(lang:"es")
-
-  // // Title page.
-  // // The page can contain a logo if you pass one with `logo: "logo.png"`.
-  // v(0.6fr)
-  // if logo != none {
-  //   align(right, image(logo, width: 26%))
-  // }
-  // v(9.6fr)
-
-  // text(1.1em, date)
-  // v(1.2em, weak: true)
-  // text(2em, weight: 700, title)
-
-  // Author information.
-  // pad(
-  //   top: 0.7em,
-  //   right: 20%,
-  //   grid(
-  //     columns: (1fr,) * calc.min(3, authors.len()),
-  //     gutter: 1em,
-  //     ..authors.map(author => align(start)[
-  //       *#author.name* \
-  //       #author.email \
-  //       #author.affiliation
-  //     ]),
-  //   ),
-  // )
-  
-  // if show-studen-data == true {
-  //   studentData(
-  //     languaje: languaje,
-  //   )
-  //   v(10pt)
-  // }
-
-// #gradeTableHeader2()
-// #v(10pt)
 
   if show-grade-table == true {
       if show-studen-data == true {

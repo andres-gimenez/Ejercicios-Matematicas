@@ -2,11 +2,19 @@
 
 // #show: exam.with(
 #show: exam.with(
-  title: "Plantilla de examen con typst",
-  authors: (
-    (name: "Andrés Jorge Giménez Muñoz", 
+  author: (
+    name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
-    affiliation: "Profesor de mates"),
+    watermark: "Profesor: andres",
+  ),
+  data: (
+    school: "IES África",
+    academic-period: "Curso 2023/2024",
+    academic-level: "4º ESO",
+    academic-subject: "Matemáticas A",
+    number: "1º evaluación 2º examen",
+    content: "Proporcionalidad",
+    model: "Model A"
   ),
   logo: "logo.png",
   languaje: "es",
