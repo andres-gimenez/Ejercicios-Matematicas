@@ -1,4 +1,4 @@
-#import "exam.typ": *
+#import "exam.typ": exam, questions, question
 
 // #show: exam.with(
 #show: exam.with(
@@ -7,18 +7,21 @@
     email: "agimenezmunoz@educa.madrid.com", 
     watermark: "Profesor: andres",
   ),
-  data: (
-    school: "IES África",
+  school: (
+    name: "IES Fernando Fernán Gómez",
+    logo: "logo.png",
+  ),
+  exam-info: (
     academic-period: "Curso 2023/2024",
     academic-level: "4º ESO",
     academic-subject: "Matemáticas A",
-    number: "1º evaluación 2º examen",
+    number: "1º Evaluación 2º Examen",
     content: "Proporcionalidad",
     model: "Model A"
   ),
-  logo: "logo.png",
+  
   languaje: "es",
-  decimal-separator: ",",
+  // decimal-separator: ",",
   date: "November 21, 2023",
   show-studen-data: true,
   show-grade-table: true,
@@ -60,8 +63,49 @@
   )
 )
 
-= Pregunta 1
-#lorem(60)
+#questions( 
+  show_correction:false,
+  decimal-separator: ",",
+  question(point: 3, [ Pregunta 1]),
+  question(
+    point: 2.3,
+    [
+      Contenido de la pregunta 1 \
+      $ 4 + x = 2 $
+      #v(50pt)
+    ]
+  ),
+  question(
+    point: 1.5, 
+    [
+      Contenido de la pregunta 2
+      $ 4 - x = 2 $
+      #v(1fr)
+    ]
+  ),
+  question(
+    point: 2,
+    [
+    #lorem(45)
+    #v(1fr)
+    #pagebreak(weak:true)
+    ]
+  ),
+  question(
+    point: 3.7,
+    [Contenido de la pregunta 4
+    #lorem(60)]
+  ),
+  question(
+    point: 2.1,
+    [hola
+    = Pregunta 111
+    #lorem(60)]
+  )
+)
+
+// = Pregunta 1
+// #lorem(60)
 
 // #studentData
 // #v(10pt)
@@ -165,28 +209,28 @@
 //     [$a$: edge length]
 //   )
 
-== Sección 1
+// == Sección 1
 
-$5+sqrt(12) = x/3$
+// $5+sqrt(12) = x/3$
 
-$S = sum_(x=0)^oo (x+3)/2$
+// $S = sum_(x=0)^oo (x+3)/2$
 
-=== Sub sección 1
-#par(justify: true)[
-  #lorem(40)
-]
+// === Sub sección 1
+// #par(justify: true)[
+//   #lorem(40)
+// ]
 
-= Pregunta 2
+// = Pregunta 2
 
-$4x + 2 = 5$
+// $4x + 2 = 5$
 
-#pagebreak(weak:true)
+// #pagebreak(weak:true)
 
-// #rotate(-90deg)[Profesor andres]
+// // #rotate(-90deg)[Profesor andres]
 
-#block(
-  fill: luma(230),
-  inset: 8pt,
-  radius: 4pt,
-  lorem(30),
-)
+// #block(
+//   fill: luma(230),
+//   inset: 8pt,
+//   radius: 4pt,
+//   lorem(30),
+// )
