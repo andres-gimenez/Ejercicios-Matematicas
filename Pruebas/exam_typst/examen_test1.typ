@@ -22,7 +22,7 @@
   ),
   
   languaje: "es",
-  // decimal-separator: ",",
+  decimal-separator: ",",
   date: "November 21, 2023",
   show-studen-data: true,
   show-grade-table: true,
@@ -64,9 +64,9 @@
   // )
 )
 
-#question2(point: 3, [ Pregunta 1])
+#question(point: 3, [ Pregunta 1])
 
-#question2(
+#question(
   point: 2.3,
   [
     Contenido de la pregunta 1 \
@@ -76,7 +76,7 @@
   ]
 )
 
-#question2(
+#question(
   point: 1.5, 
   [
     Contenido de la pregunta 2
@@ -85,7 +85,7 @@
   ]
 )
 
-#question2(
+#question(
   point: 2,
   [
   #lorem(45)
@@ -94,13 +94,13 @@
   ]
 )
 
-#question2(
+#question(
   point: 3.7,
   [Contenido de la pregunta 4
   #lorem(60)]
 )
 
-#question2(
+#question(
   point: 2.1,
   [hola
   = Pregunta 111
