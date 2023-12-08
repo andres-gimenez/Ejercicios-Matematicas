@@ -1,7 +1,6 @@
 // #import "exam.typ": exam, questions, question
 #import "exam.typ": *
 
-// #show: exam.with(
 #show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
@@ -26,6 +25,7 @@
   date: "November 21, 2023",
   show-studen-data: true,
   show-grade-table: true,
+  question-point-position: left
 )
 
 #question(point: 3)[Pregunta 1]
@@ -54,9 +54,10 @@
 
 #question(point: 2)[ 
   #lorem(45)
-  #v(1fr)
-  #pagebreak(weak:true)
+  #v(1fr)  
   ]
+
+#pagebreak(weak:true)
 
 #question(point: 3.7)[
   Contenido de la pregunta 4

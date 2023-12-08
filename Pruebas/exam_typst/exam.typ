@@ -3,12 +3,13 @@
 #let question-number = counter("question-number")
 #let part-number = counter("part-number")
 #let question-point = state("question-point", 0)
+#let question-point-position-state = state("question-point-position", left)
 
 #let student-data(
   languaje: "en",
   show-two-lines: true
 ) = {
-  [Appelido #box(width: 2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.])]
+  [Appelidos #box(width: 2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.])]
   if show-two-lines {
     v(1pt)
     align(right, [Grupo: #box(width:2.5cm, repeat[.]) Fecha: #box(width:3cm, repeat[.])])
@@ -98,7 +99,7 @@
         top + right,
         float: true,
         clearance: 0pt,
-        dx:30pt,
+        dx:60pt,
         dy:-115pt,
         rotate(270deg,
         origin: top + right,
@@ -141,7 +142,7 @@
   show-studen-data: true,
   show-grade-table: true,
   decimal-separator: ".",
-  // questions: (),
+  question-point-position: left,
   body,
 ) = {
   
@@ -214,6 +215,8 @@
     }
   )
 
+  question-point-position-state.update(u => question-point-position)
+
   set text(lang:languaje)
 
   if show-grade-table == true {
@@ -235,47 +238,43 @@
 }
 
 #let paint-tab(point: 0) = {
-  [(#strfmt("{0}", point, fmt-decimal-separator: ",") puntos)]
+  if point > 0 [
+    (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos)
+  ]
 }
 
 #let question(point: 0, body) = {
   question-number.step() 
   question-point.update(p => point)
-  
 
   locate(loc => {
-      // let location = loc.position()
-      // My location: \
-      // [#loc.position()]
-      // [#loc.position().y]
-      [ \ ]
-      [#question-number.display(). #h(4pt) #paint-tab(point: point) #h(4pt)]
+    let question-point-position = question-point-position-state.final(loc)
+  
+    if question-point-position == left {
+      [#question-number.display(). #h(4pt) #paint-tab(point:point) #h(4pt)]
       [
         #body \
         <question-localization>
       ]
-      let pos = loc.position()
-      place(
-        top + right,
-        float: true,
-        clearance: 0pt,
-        dx: pos.x - 30pt,
-        dy: pos.y - 177pt,
-        paint-tab(point: point)
+    }
+    else{
+      grid(
+        columns: (95%, 6pt, 20%),
+        rows: (auto),
+      [
+        #question-number.display().
+        #body \
+        <question-localization>
+      ], 
+      [],
+      [#paint-tab(point: point)]
       )
-    })
-
-  // [#question-number.display(). #h(4pt) (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos) #h(4pt)]
-  // [
-  //   #body \
-  //   <question-localization>
-  // ]
-
+    }
+  })
   part-number.update(0)
 }
 
 #let part(point: 0, body) = {
-  // question-number.step(level: 2) 
   part-number.step()
   question-point.update(p => p + point)
 
