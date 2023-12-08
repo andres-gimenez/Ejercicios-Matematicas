@@ -42,7 +42,7 @@
       
         let pointRow = columnsNumber.map(n => {
             if n == 0 {align(left + horizon)[Puntos]}
-            else if n == question-locations.len() + 1 [#strfmt("{0}", total-point, fmt-decimal-separator: decimal-separator)]
+            else if n == question-locations.len() + 1 [#strfmt("{0:*>2}", calc.ceil(total-point), fmt-decimal-separator: decimal-separator)]
             else {
               let point = points.at(n - 1)
               [ #strfmt("{0}", point, fmt-decimal-separator: decimal-separator) ]
@@ -233,7 +233,7 @@
   [<end-exam>]
 }
 
-#let question(body, point : 1, answer : []) = {
+#let question(point : 1, body) = {
   question-number.step() 
   question-point.update(p => point)
   locate(loc => {
