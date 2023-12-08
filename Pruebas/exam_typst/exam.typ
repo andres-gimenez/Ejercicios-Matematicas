@@ -128,10 +128,15 @@
     }
   }
 
-#let paint-tab(point: none) = {
-  if point != none [
-    (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos)
-  ]
+#let paint-tab = (point: none) => {
+  if point != none {
+    let label-point = "puntos"
+    if point == 1 {
+      label-point = "punto"
+    }
+
+    [(#strfmt("{0}", point, fmt-decimal-separator: ",") #label-point)]
+  }
 }
 
 #let question(point: none, body) = {
@@ -149,21 +154,17 @@
       ]
     }
     else{
-      // ----------------------------
-
-      table(
-        columns: (15pt, 90%, 20%),
+      grid(
+        columns: (1em, 90%, 20%),
         rows: (auto),
-        gutter: 1.5em,
         [ 
           #question-number.display(question-numbering)
-          // #h(4pt)
         ],
         [
           #body \
           <question-localization>
         ], 
-        [#paint-tab(point: point)]
+        [#h(0.7em) #paint-tab(point: point)]
       )
 
       // ----------------------------
@@ -202,8 +203,6 @@
   locate(loc => {
       let question-point-position = question-point-position-state.final(loc)
     
-    // let  question-point-position = right
-
       if question-point-position == left {
         [ \ ]
         [#h(14pt) #question-number.display(question-numbering) #paint-tab(point: point)]
@@ -214,16 +213,16 @@
       }
       else{ 
         grid(
-          columns: (15pt, 90%, 20%),
+          columns: (1em, 1.5em, 90% - 1.5em, 20%),
           rows: (auto),
-          gutter: 1.5em,
+          [],
           [
            #question-number.display(question-numbering)
           ],
           [
             #body \
           ],
-          [#paint-tab(point: point)]
+          [#h(0.7em) #paint-tab(point: point)]
         )
       }
     }
