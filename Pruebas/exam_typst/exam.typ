@@ -116,6 +116,109 @@
       )
 }
 
+#let paint-tab(point: none) = {
+  if point != none [
+    (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos)
+  ]
+}
+
+#let question(point: none, body) = {
+  question-number.step() 
+  question-point.update(p => point)
+
+  locate(loc => {
+    let question-point-position = question-point-position-state.final(loc)
+  
+    if question-point-position == left {
+      [#question-number.display("1.") #paint-tab(point:point)]
+      [
+        #body \
+        <question-localization>
+      ]
+    }
+    else{
+      // ----------------------------
+
+      table(
+        columns: (15pt, 90%, 20%),
+        rows: (auto),
+        gutter: 1.5em,
+        [ 
+          #question-number.display("1.")
+          // #h(4pt)
+        ],
+        [
+          #body \
+          <question-localization>
+        ], 
+        [#paint-tab(point: point)]
+      )
+
+      // ----------------------------
+
+      // locate(loc => {
+      //       // let location = loc.position()
+      //       // My location: \
+      //       // [#loc.position()]
+      //       // [#loc.position().y]
+      //       [ \ ]
+      //       [#question-number.display("1"). #h(4pt) #paint-tab(point: point) #h(4pt)]
+      //       [
+      //         #body \
+      //         <question-localization>
+      //       ]
+      //       let pos = loc.position()
+      //       place(
+      //         top + right,
+      //         float: true,
+      //         clearance: 0pt,
+      //         dx: pos.x - 30pt,
+      //         dy: pos.y - 177pt,
+      //         paint-tab(point: point)
+      //       )
+      //     })
+
+// ----------------------------
+    }
+  })
+  part-number.update(0)
+}
+
+#let part(point: none, body) = {
+  part-number.step()
+  question-point.update(p => p + point)
+
+  locate(loc => {
+      let question-point-position = question-point-position-state.final(loc)
+    
+    // let  question-point-position = right
+
+      if question-point-position == left {
+        [ \ ]
+        [#h(14pt) #part-number.display("a)") #paint-tab(point: point)]
+        [
+          #body 
+          \
+        ]
+      }
+      else{ 
+        grid(
+          columns: (15pt, 90%, 20%),
+          rows: (auto),
+          gutter: 1.5em,
+          [
+           #part-number.display("a)")
+          ],
+          [
+            #body \
+          ],
+          [#paint-tab(point: point)]
+        )
+      }
+    }
+  )
+}
+
 #let exam(
   author: (
     name: none,
@@ -230,58 +333,23 @@
     )
     v(10pt)
   }
+  
+  // show heading.where(level: 1): it => {
+  //   set block(above: 1.2em, below: 1em)
+  //   set text(12pt, weight: "semibold")
+  //   question(point: none)[#it.body]
+  // }
+
+  // show heading.where(level: 2): it => {
+  //   set text(12pt, weight: "regular")
+  //   part(point: none)[#it.body]
+  // }
+
 
   set par(justify: true) 
-  
+
   body
   [<end-exam>]
 }
 
-#let paint-tab(point: 0) = {
-  if point > 0 [
-    (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos)
-  ]
-}
 
-#let question(point: 0, body) = {
-  question-number.step() 
-  question-point.update(p => point)
-
-  locate(loc => {
-    let question-point-position = question-point-position-state.final(loc)
-  
-    if question-point-position == left {
-      [#question-number.display(). #h(4pt) #paint-tab(point:point) #h(4pt)]
-      [
-        #body \
-        <question-localization>
-      ]
-    }
-    else{
-      grid(
-        columns: (95%, 6pt, 20%),
-        rows: (auto),
-      [
-        #question-number.display().
-        #body \
-        <question-localization>
-      ], 
-      [],
-      [#paint-tab(point: point)]
-      )
-    }
-  })
-  part-number.update(0)
-}
-
-#let part(point: 0, body) = {
-  part-number.step()
-  question-point.update(p => p + point)
-
-  [ \ ]
-  [#h(14pt) (#part-number.display("a")) #h(4pt) #paint-tab(point: point) #h(4pt)]
-  [
-    #body 
-    \
-  ]
-}
