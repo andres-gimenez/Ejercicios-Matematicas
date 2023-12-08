@@ -37,13 +37,22 @@
     #v(50pt)
   ]
 
-#question(point: 1.5)[
-    Contenido de la pregunta 2
-    $ 4 - x = 2 $
-    #v(1fr)
+#question(point: 1.5)[ Resuelve las siguientes expresiones:
+    #part(point: 1)[
+      $4 - x = 2$
+      #v(1fr)
+    ]
+    #part()[
+      $5 + x = 3$
+      #v(1fr)
+    ]
+    #part(point: 2)[
+      $8 - x^2 = 24$
+      #v(1fr)
+    ]
   ]
 
-#question(point: 2)[
+#question(point: 2)[ 
   #lorem(45)
   #v(1fr)
   #pagebreak(weak:true)
@@ -56,5 +65,4 @@
 #question(point: 2.1)[
   hola
   = Pregunta 111
-  #lorem(60)]
-)
+  #lorem(160)]

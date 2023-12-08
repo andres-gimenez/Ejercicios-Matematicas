@@ -1,6 +1,7 @@
 #import "@preview/oxifmt:0.2.0": strfmt
 
 #let question-number = counter("question-number")
+#let part-number = counter("part-number")
 #let question-point = state("question-point", 0)
 
 #let student-data(
@@ -233,15 +234,22 @@
   [<end-exam>]
 }
 
-#let question(point : 1, body) = {
+#let paint-tab(point: 0) = {
+  [(#strfmt("{0}", point, fmt-decimal-separator: ",") puntos)]
+}
+
+#let question(point: 0, body) = {
   question-number.step() 
   question-point.update(p => point)
+  
+
   locate(loc => {
       // let location = loc.position()
       // My location: \
       // [#loc.position()]
       // [#loc.position().y]
-      [#question-number.display(). #h(4pt) (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos) #h(4pt)]
+      [ \ ]
+      [#question-number.display(). #h(4pt) #paint-tab(point: point) #h(4pt)]
       [
         #body \
         <question-localization>
@@ -253,7 +261,7 @@
         clearance: 0pt,
         dx: pos.x - 30pt,
         dy: pos.y - 177pt,
-        [(#strfmt("{0}", point, fmt-decimal-separator: ",") puntos)]
+        paint-tab(point: point)
       )
     })
 
@@ -262,4 +270,19 @@
   //   #body \
   //   <question-localization>
   // ]
+
+  part-number.update(0)
+}
+
+#let part(point: 0, body) = {
+  // question-number.step(level: 2) 
+  part-number.step()
+  question-point.update(p => p + point)
+
+  [ \ ]
+  [#h(14pt) (#part-number.display("a")) #h(4pt) #paint-tab(point: point) #h(4pt)]
+  [
+    #body 
+    \
+  ]
 }
