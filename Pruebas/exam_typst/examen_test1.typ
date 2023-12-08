@@ -25,7 +25,7 @@
   date: "November 21, 2023",
   show-studen-data: true,
   show-grade-table: true,
-  question-point-position: left
+  question-point-position: right
 )
 
 #question(point: 3)[Pregunta 1]
@@ -38,22 +38,21 @@
   ]
 #v(4fr)
 
-#question(point: 1.5)[ Resuelve las siguientes expresiones:
-    #part(point: 1)[
-      $4 - x = 2$
-    ]
-    #v(3fr)
-    
-    #part()[
-      $5 + x = 3$
-    ]
-    #v(1fr)
-
-    #part(point: 2)[
-      #lorem(45)
-    ]
-    #v(2fr)
+#question(point: 1.5)[ Resuelve las siguientes expresiones:]
+  #part(point: 1)[
+    $4 - x = 2$
   ]
+  #v(3fr)
+  
+  #part()[
+    $5 + x = 3$
+  ]
+  #v(1fr)
+
+  #part(point: 2)[
+    #lorem(45)
+  ]
+  #v(2fr)
 
 #pagebreak(weak:true)
 

@@ -1,7 +1,6 @@
 #import "@preview/oxifmt:0.2.0": strfmt
 
 #let question-number = counter("question-number")
-#let part-number = counter("part-number")
 #let question-point = state("question-point", 0)
 #let question-point-position-state = state("question-point-position", left)
 
@@ -116,6 +115,19 @@
       )
 }
 
+#let question-numbering = (..args) => {
+    let nums = args.pos()
+    if nums.len() == 1 {
+      numbering("1. ", nums.last())
+    }
+    else if nums.len() == 2 {
+      numbering("a) ", nums.last())
+    }
+    else if nums.len() == 3 {
+      numbering("i) ", nums.last())
+    }
+  }
+
 #let paint-tab(point: none) = {
   if point != none [
     (#strfmt("{0}", point, fmt-decimal-separator: ",") puntos)
@@ -123,14 +135,14 @@
 }
 
 #let question(point: none, body) = {
-  question-number.step() 
+  question-number.step(level: 1) 
   question-point.update(p => point)
 
   locate(loc => {
     let question-point-position = question-point-position-state.final(loc)
   
     if question-point-position == left {
-      [#question-number.display("1.") #paint-tab(point:point)]
+      [#question-number.display(question-numbering) #paint-tab(point:point)]
       [
         #body \
         <question-localization>
@@ -144,7 +156,7 @@
         rows: (auto),
         gutter: 1.5em,
         [ 
-          #question-number.display("1.")
+          #question-number.display(question-numbering)
           // #h(4pt)
         ],
         [
@@ -181,11 +193,10 @@
 // ----------------------------
     }
   })
-  part-number.update(0)
 }
 
 #let part(point: none, body) = {
-  part-number.step()
+  question-number.step(level: 2)
   question-point.update(p => p + point)
 
   locate(loc => {
@@ -195,7 +206,7 @@
 
       if question-point-position == left {
         [ \ ]
-        [#h(14pt) #part-number.display("a)") #paint-tab(point: point)]
+        [#h(14pt) #question-number.display(question-numbering) #paint-tab(point: point)]
         [
           #body 
           \
@@ -207,7 +218,7 @@
           rows: (auto),
           gutter: 1.5em,
           [
-           #part-number.display("a)")
+           #question-number.display(question-numbering)
           ],
           [
             #body \
