@@ -28,6 +28,23 @@
   question-point-position: right
 )
 
+#rect(
+  width: 100%, 
+  stroke: luma(120),
+  inset:8pt,
+  radius: 4pt,
+  [
+    - Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada del examen que se valorará con un cero.
+    - Deben aparecer todas las operaciones, no vale solo con indicar el resultado.
+    - Se ha de llegar a la solución más reducida posible.
+    // - Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.
+    // - Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.
+    - No está permitido utilizar la calculadora ni compartir metarial durante el examen.
+  ]
+)
+
+#v(20pt)
+
 #question(point: 3)[Pregunta 1]
 #v(20pt)
 
@@ -46,6 +63,7 @@
   
   #part()[
     $5 + x = 3$
+    $ integral_2^4 1/x dif x $
   ]
   #v(1fr)
 

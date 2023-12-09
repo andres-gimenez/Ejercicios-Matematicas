@@ -6,10 +6,10 @@
 
 #let student-data(
   languaje: "en",
-  show-two-lines: true
+  show-line-two: true
 ) = {
-  [Appelidos #box(width: 2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.])]
-  if show-two-lines {
+  [Apelidos #box(width: 2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.])]
+  if show-line-two {
     v(1pt)
     align(right, [Grupo: #box(width:2.5cm, repeat[.]) Fecha: #box(width:3cm, repeat[.])])
   }
@@ -75,58 +75,18 @@
   )
 }
 
-#let show-watermark(
- author: (
-    name: none,
-    email: none,
-    watermark: none
-  ),
-  school: (
-    name: none,
-    logo: none,
-  ),
-  exam-info: (
-    academic-period: none,
-    academic-level: none,
-    academic-subject: none,
-    number: none,
-    content: none,
-    model: none
-  ),
-) = {
-      place(
-        top + right,
-        float: true,
-        clearance: 0pt,
-        dx:60pt,
-        dy:-115pt,
-        rotate(270deg,
-        origin: top + right,
-          {
-            if author.watermark != none {
-              text(size:7pt, fill:gray)[#author.watermark]
-              h(35pt)
-            }
-            if exam-info.model != none {
-              text(size:8pt, luma(90))[#exam-info.model]
-            }
-          }
-        )
-      )
-}
-
 #let question-numbering = (..args) => {
-    let nums = args.pos()
-    if nums.len() == 1 {
-      numbering("1. ", nums.last())
-    }
-    else if nums.len() == 2 {
-      numbering("a) ", nums.last())
-    }
-    else if nums.len() == 3 {
-      numbering("i) ", nums.last())
-    }
+  let nums = args.pos()
+  if nums.len() == 1 {
+    numbering("1. ", nums.last())
   }
+  else if nums.len() == 2 {
+    numbering("a) ", nums.last())
+  }
+  else if nums.len() == 3 {
+    numbering("i) ", nums.last())
+  }
+}
 
 #let paint-tab = (point: none) => {
   if point != none {
@@ -233,7 +193,45 @@
   body,
 ) = {
   
-  set par(justify: true) 
+  let show-watermark = (
+      author: (
+          name: none,
+          email: none,
+          watermark: none
+        ),
+        school: (
+          name: none,
+          logo: none,
+        ),
+        exam-info: (
+          academic-period: none,
+          academic-level: none,
+          academic-subject: none,
+          number: none,
+          content: none,
+          model: none
+        ),
+      ) => {
+        place(
+          top + right,
+          float: true,
+          clearance: 0pt,
+          dx:60pt,
+          dy:-115pt,
+          rotate(270deg,
+          origin: top + right,
+            {
+              if author.watermark != none {
+                text(size:7pt, fill:gray)[#author.watermark]
+                h(35pt)
+              }
+              if exam-info.model != none {
+                text(size:8pt, luma(90))[#exam-info.model]
+              }
+            }
+          )
+        )
+  }
 
   set document(
     title: school.name + " " + exam-info.content + " " + exam-info.number + " " + exam-info.model,
@@ -242,58 +240,113 @@
 
   set page(
     paper: "a4", 
-    margin: (top: 6cm, bottom:3cm),
+    margin: (top: 5cm, bottom:3cm),
     numbering: "1 / 1",
     number-align: right,
-    
-    header-ascent: 
-    {
-      if show-studen-data == true {
-        6%
-      }
-      else {
-        30%
-      }
-    },
-    header: {
-      grid(
-        columns: (auto, auto, 1fr, auto),
-        gutter:12pt,
-        image(school.logo, height:1.5cm, fit: "contain"),
-        align(left  + top)[
-          #school.name \  
-          #exam-info.academic-period \
-        ], 
-        align(center + top)[
-          // #exam-info.number #exam-info.content \
-        ],
-        align(right + top)[
-          #exam-info.academic-level #exam-info.academic-subject \
-          #exam-info.number \
-          #exam-info.content 
-        ]
-      )
-      line(length: 100%, stroke: 1pt + gray)
-      if show-studen-data == true {
-        v(10pt)
-        student-data(
-          languaje: languaje,          
-        )
-      }
-    },
+    header-ascent: 20%,
+    header:locate(loc => {
+        let page-number = counter(page).at(loc).first()
+        if (page-number==1) { 
+          align(right)[#box(
+            width:105%,
+            grid(
+              columns: (auto, auto),
+              gutter:0.7em,        
+              align(left + top)[
+                #image(school.logo, height:2.5cm, fit: "contain")
+              ],
+              grid(
+                rows: (auto, auto, auto),
+                gutter:1em,    
+                  grid(
+                    columns: (auto, 1fr, auto),
+                    align(left  + top)[
+                      #school.name \  
+                      #exam-info.academic-period \
+                    ],
+                    align(center + top)[
+                    // #exam-info.number #exam-info.content \
+                    ],
+                    align(right + top)[
+                      #exam-info.academic-level #exam-info.academic-subject  \  
+                      #exam-info.number \
+                      #exam-info.content 
+                    ],
+                  ),
+                  line(length: 100%, stroke: 1pt + gray),
+                  student-data(
+                    languaje: languaje,          
+                  )
+              )
+          )
+          )]
+        }
+        else if calc.rem-euclid(page-number, 2) == 1 {
+            grid(
+              columns: (auto, 1fr, auto),
+              gutter:0.3em,
+              align(left  + top)[
+                #school.name \  
+                #exam-info.academic-period \
+              ], 
+              align(center + top)[
+                // #exam-info.number #exam-info.content \
+              ],
+              align(right + top)[
+                #exam-info.academic-level #exam-info.academic-subject \
+                #exam-info.number \
+                #exam-info.content 
+              ]
+            )
+            line(length: 100%, stroke: 1pt + gray) 
+            student-data(
+                    languaje: languaje,       
+                    show-line-two: false   
+                  )
+        }
+        else {
+           grid(
+              columns: (auto, 1fr, auto),
+              gutter:0.3em,
+              align(left  + top)[
+                #school.name \  
+                #exam-info.academic-period
+              ], 
+              align(center + top)[
+                // #exam-info.number #exam-info.content \
+              ],
+              align(right + top)[
+                #exam-info.academic-level #exam-info.academic-subject \
+                #exam-info.number\
+                #exam-info.content\
+              ]
+            )
+            line(length: 100%, stroke: 1pt + gray) 
+        }
+      } 
+    ),
 
     footer: {
       line(length: 100%, stroke: 1pt + gray) 
-      set align(right)
-      set text(9pt)
-      counter(page).display({
-        "1 de 1"},
-        both: true,
+      grid(
+        columns: (1fr, 1fr, 1fr),
+        align(left)[#school.name],
+        align(center)[#exam-info.academic-period],
+        align(right)[
+          Página 
+          #counter(page).display({
+            "1 de 1"},
+            both: true,
+          )
+        ]
       )
 
       show-watermark(author: author, school: school, exam-info: exam-info)
     }
   )
+
+  set par(justify: true) 
+  set text(font: "New Computer Modern")
 
   question-point-position-state.update(u => question-point-position)
 
