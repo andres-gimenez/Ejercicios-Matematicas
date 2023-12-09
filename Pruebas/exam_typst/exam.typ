@@ -166,32 +166,6 @@
         ], 
         [#h(0.7em) #paint-tab(point: point)]
       )
-
-      // ----------------------------
-
-      // locate(loc => {
-      //       // let location = loc.position()
-      //       // My location: \
-      //       // [#loc.position()]
-      //       // [#loc.position().y]
-      //       [ \ ]
-      //       [#question-number.display("1"). #h(4pt) #paint-tab(point: point) #h(4pt)]
-      //       [
-      //         #body \
-      //         <question-localization>
-      //       ]
-      //       let pos = loc.position()
-      //       place(
-      //         top + right,
-      //         float: true,
-      //         clearance: 0pt,
-      //         dx: pos.x - 30pt,
-      //         dy: pos.y - 177pt,
-      //         paint-tab(point: point)
-      //       )
-      //     })
-
-// ----------------------------
     }
   })
 }
@@ -262,10 +236,8 @@
   set par(justify: true) 
 
   set document(
-    title: school.name + " " + exam-info.content,
-    author: author.name,
-    // date: date,
-    // keywords: keywords
+    title: school.name + " " + exam-info.content + " " + exam-info.number + " " + exam-info.model,
+    author: author.name
   )
 
   set page(
@@ -273,11 +245,6 @@
     margin: (top: 6cm, bottom:3cm),
     numbering: "1 / 1",
     number-align: right,
-
-    // background:rotate(24deg,
-    //   text(18pt, fill: rgb("FFCBC4"))[
-    //     BORRADOR
-    //   ]),
     
     header-ascent: 
     {
