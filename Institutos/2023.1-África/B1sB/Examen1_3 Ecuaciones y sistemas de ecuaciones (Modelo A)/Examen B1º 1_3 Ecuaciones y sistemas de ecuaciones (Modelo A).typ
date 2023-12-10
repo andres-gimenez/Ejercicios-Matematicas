@@ -1,5 +1,4 @@
-// #import "exam.typ": exam, questions, question
-#import "exam.typ": *
+#import "./exam.typ": exam, question, part
 
 #show: exam.with(
   author: (
@@ -46,32 +45,17 @@
 
 #v(15pt)
 
-#question(point: 1)[adddddddddd ddd dddd ddddddd ]
-
 #question[Discute y resuleve por el método de Gauß, indicando cuantas soluciones tiene el siguiente sistema:]
 
     #part(point: 2)[
       $display(
         cases(
-        x &+   y &+ z &= 1,
-        x &-   y &+ z &= 3,
-        5x &- 3y &+ z &= 5
+         &x &+ 2&y &+ &z &= 1,
+         &x &-  &y &+ &z &= 3,
+        5&x &- 3&y &+ &z &= 5
         )
       )$
     ]
-
-    #pagebreak()
-
-    #part(point: 2)[
-      $display(
-        cases(
-        x &+   y &+ z &= 1,
-        x &-   y &+ z &= 3,
-        5x &- 3y &+ z &= 5
-        )
-      )$
-    ]
-
 
 #pagebreak()
 
@@ -79,62 +63,102 @@
 \ \
     $display(
       cases(
-        x &+   y &+ z &= 1,
-        x &-   y &+ z &= 3,
-        5x &- 3y &+ z &= 5
+         &x &+ 2&y &+ &z &= 1,
+         &x &-  &y &+ &z &= 3,
+        5&x &- 3&y &+ &z &= 5
         )
       )$
 ]
 
 #pagebreak()
 
+#question(point: 2)[Resuelve las siguiente ecuacion racional:
+  \
+  \
+  $display((x-1)/x-(x+1)/(x-5)=(x+2)/(x^2-5x))$
+  \
+  \
 
-//   #part[$display((5/2+1) dot (4/7+2/3) = )$]
-//   #v(1fr)
+  $display(1/(x+3)-3/(2x-1)=4)$
 
-//   #part[$display((2 dot 5/21) + (4/7 dot 2/3) =)$]
-//   #v(1fr)
+  \
+  \
 
-// #pagebreak()
+  $display((x-2)/(x+3)+1/(x-1)= 2/x)$ 
 
-// #question(point: 2)[Calcula las siguientes potencias:]
+  \
+  \
 
-//   #part[$display((-5)^2 = )$]
-//   #v(1fr)
+  $display(1/(2x+1)-3/(3x-2)= 2/(2x+1))$
+]
 
-//   #part[$display(5^3 =)$]
-//   #v(1fr)
+#pagebreak()
 
-//   #part[$display((3)^2 =)$]
-//   #v(1fr)
+//https://www.matematicasonline.es/BachilleratoCCNN/Primero/ejercicios/Ecuaciones_con_radicales_resueltas.pdf
+#question(point: 2)[Resuelve las siguiente ecuacion con radicales:
+  \
+  \
+  $display(x-sqrt(x-1)=1)$
+  \
+  \
+  $display(2x=sqrt(-2x+5)-1)$
+]
 
-//   #part[$display(1.000^2 =)$]
-//   #v(1fr)
+#pagebreak()
 
-// #question(point: 2)[Calcula las siguientes raíces, factorizando en números primos:]
+// https://www.matesfacil.com/ESO/exponenciales/ejercicios-resueltos-ecuaciones-exponenciales.html
+// https://www.superprof.es/apuntes/escolar/matematicas/algebra/log/ejercicios-de-ecuaciones-exponenciales.html
+#question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:
+  \
+  \
+  $display((x^3-7x-6) dot (x-4) = 0)$
 
-//   #part[$display(sqrt(64)) =$]
-//   #v(1fr)
+  \
+  \
 
-//   #part[$display(sqrt(729)) =$]
-//   #v(1fr)
+  $display((x^3-7x+6) dot (x-5) = 0)$
 
-//   #part[$display(sqrt(900)) =$]
-//   #v(1fr)
+  \
+  \
 
-//   #part[$display(sqrt(225)) =$]
-//   #v(1fr)
+  $display(4^(x+1) + 2^(x+3) = 320)$
 
-// #pagebreak()
+]
+#v(1fr)
 
-// #question(point: 2)[Opera y simplifica los resultados siguientes:]
+#question(point: 2)[Resuelve la siguien ecuación exponencial y comprueba el resultado:
+  \
+  \
+  $display(3^(2x-2)+3^(x-1) = 12)$
+  \
+  \
+  $display(3^(2x+2) + 3^(x+2) = 4)$
+]
+#v(1fr)
 
-//   #part[$display(15/18 + (3/2-1/4)^2)$]
-//   #v(1fr)
+#pagebreak()
 
-//   #part[$display(4/3+(3/2-1/4)^2)$]
-//   #v(1fr)
+#question(point: 2)[Resuelve la siguien ecuación con logaritmos:
+  \
+  \
+  $display(log(3x+13) = 2)$
 
+  \
+  \
 
-// #question(point: 2)[Problema:]
-// #v(1fr)
+  $display(log(7x-3) = -1)$
+]
+
+#v(1fr)
+
+#question(point: 2)[Resuelve la siguien ecuación con valores absolutos y comprueba el resultado:
+  \
+  \
+  $display(|x^2-x| + 3 = 3x)$
+
+  \
+  \
+
+   $display(|5x+1| = 15x -7)$
+]
+#v(1fr)

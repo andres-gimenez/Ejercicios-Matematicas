@@ -1,5 +1,5 @@
-// #import "exam.typ": exam, questions, question
-#import "exam.typ": *
+// #import "./exam.typ": exam, question, part
+#import "./exam.typ": *
 
 #show: exam.with(
   author: (
