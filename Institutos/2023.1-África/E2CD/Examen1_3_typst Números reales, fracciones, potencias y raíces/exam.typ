@@ -5,8 +5,13 @@
 #let question-point-position-state = state("question-point-position", left)
 #let localization = state("localization",
   (
+    grade-table-queston: "Question",
+    grade-table-total: "total",
+    grade-table-points: "points",
+    grade-table-calification: "calification",
     point: "point",
     points: "points",
+    page: "Page"
   ))
 
 #let student-data(
@@ -290,12 +295,13 @@
                     align(left  + top)[
                       #school.name \  
                       #exam-info.academic-period \
+                      #exam-info.academic-level
                     ],
                     align(center + top)[
                     // #exam-info.number #exam-info.content \
                     ],
                     align(right + top)[
-                      #exam-info.academic-level #exam-info.at("academic-subject", default: none)  \  
+                      #exam-info.at("academic-subject", default: none)  \  
                       #exam-info.number \
                       #exam-info.content 
                     ],
@@ -315,12 +321,13 @@
               align(left  + top)[
                 #school.name \  
                 #exam-info.academic-period \
+                #exam-info.academic-level
               ], 
               align(center + top)[
                 // #exam-info.number #exam-info.content \
               ],
               align(right + top)[
-                #exam-info.academic-level #exam-info.at("academic-subject", default: none) \
+                #exam-info.at("academic-subject", default: none) \
                 #exam-info.number \
                 #exam-info.content 
               ]
@@ -337,15 +344,16 @@
               gutter:0.3em,
               align(left  + top)[
                 #school.name \  
-                #exam-info.academic-period
+                #exam-info.academic-period \
+                #exam-info.academic-level
               ], 
               align(center + top)[
                 // #exam-info.number #exam-info.content \
               ],
               align(right + top)[
-                #exam-info.academic-level #exam-info.at("academic-subject", default: none) \
-                #exam-info.number\
-                #exam-info.content\
+                #exam-info.at("academic-subject", default: none) \
+                #exam-info.number \
+                #exam-info.content \
               ]
             )
             line(length: 100%, stroke: 1pt + gray) 
@@ -355,18 +363,25 @@
 
     footer: {
       line(length: 100%, stroke: 1pt + gray) 
-      grid(
-        columns: (1fr, 1fr, 1fr),
-        align(left)[#school.name],
-        align(center)[#exam-info.academic-period],
-        align(right)[
-          Página 
-          #counter(page).display({
-            "1 de 1"},
-            both: true,
-          )
-        ]
-      )
+      align(right)[
+        Página
+        #counter(page).display({
+          "1 de 1"},
+          both: true,
+        )
+      ]
+      // grid(
+      //   columns: (1fr, 1fr, 1fr),
+      //   align(left)[#school.name],
+      //   align(center)[#exam-info.academic-period],
+      //   align(right)[
+      //     Página 
+      //     #counter(page).display({
+      //       "1 de 1"},
+      //       both: true,
+      //     )
+      //   ]
+      // )
 
       show-watermark(author: author, school: school, exam-info: exam-info)
     }
