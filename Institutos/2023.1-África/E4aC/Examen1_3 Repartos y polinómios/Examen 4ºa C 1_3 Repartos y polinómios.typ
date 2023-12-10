@@ -46,7 +46,7 @@
 #v(15pt)
 
 #question(point: 3)[Simplifica estas expresiones:]
-
+  // Pones más facil.
   #part[
     $display(5x dot [(2x^2 + x - 1) - 3 dot (x^2 -x +3)])$
   ]
@@ -80,8 +80,6 @@ y el número de personas que sale, la la expresión $Q(x)=-0,25x^2+2x$, donde $x
 
 #pagebreak()
 
-
-
 #question[En un restaurante, se divide la jornada laboral en turnos de comida y cena, realizando cuatro horas en cada turno. 
 Los cuatro camareros se reparten la jornada laboral de la siguiente manera:
 Marta trabaja de lunes a viernes en el turno de comidas y cenas;
@@ -94,120 +92,3 @@ y Consuelo trabaja en el turno de noche, los viernes, sábados y domingos.]
 
   #part(point: 2)[¿Si durante la semana han recaudado 1.300€ de bote, cuanto le corresponde a cada camarero si se reparte en función de las horas trabajadas durante la semana?]
   #v(1fr)
-// #question[Discute y resuleve por el método de Gauß, indicando cuantas soluciones tiene el siguiente sistema:]
-
-//     #part(point: 2)[
-//       $display(
-//         cases(
-//          &x &+ 2&y &+ &z &= 1,
-//          &x &-  &y &+ &z &= 3,
-//         5&x &- 3&y &+ &z &= 5
-//         )
-//       )$
-//     ]
-
-// #pagebreak()
-
-// #question(point: 2)[Discute y resuleve por el método de Gauß, indicando cuantas soluciones tiene el siguiente sistema:
-// \ \
-//     $display(
-//       cases(
-//          &x &+ 2&y &+ &z &= 1,
-//          &x &-  &y &+ &z &= 3,
-//         5&x &- 3&y &+ &z &= 5
-//         )
-//       )$
-// ]
-
-// #pagebreak()
-
-// #question(point: 2)[Resuelve las siguiente ecuacion racional:
-//   \
-//   \
-//   $display((x-1)/x-(x+1)/(x-5)=(x+2)/(x^2-5x))$
-//   \
-//   \
-
-//   $display(1/(x+3)-3/(2x-1)=4)$
-
-//   \
-//   \
-
-//   $display((x-2)/(x+3)+1/(x-1)= 2/x)$ 
-
-//   \
-//   \
-
-//   $display(1/(2x+1)-3/(3x-2)= 2/(2x+1))$
-// ]
-
-// #pagebreak()
-
-// //https://www.matematicasonline.es/BachilleratoCCNN/Primero/ejercicios/Ecuaciones_con_radicales_resueltas.pdf
-// #question(point: 2)[Resuelve las siguiente ecuacion con radicales:
-//   \
-//   \
-//   $display(x-sqrt(x-1)=1)$
-//   \
-//   \
-//   $display(2x=sqrt(-2x+5)-1)$
-// ]
-
-// #pagebreak()
-
-// // https://www.matesfacil.com/ESO/exponenciales/ejercicios-resueltos-ecuaciones-exponenciales.html
-// // https://www.superprof.es/apuntes/escolar/matematicas/algebra/log/ejercicios-de-ecuaciones-exponenciales.html
-// #question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:
-//   \
-//   \
-//   $display((x^3-7x-6) dot (x-4) = 0)$
-
-//   \
-//   \
-
-//   $display((x^3-7x+6) dot (x-5) = 0)$
-
-//   \
-//   \
-
-//   $display(4^(x+1) + 2^(x+3) = 320)$
-
-// ]
-// #v(1fr)
-
-// #question(point: 2)[Resuelve la siguien ecuación exponencial y comprueba el resultado:
-//   \
-//   \
-//   $display(3^(2x-2)+3^(x-1) = 12)$
-//   \
-//   \
-//   $display(3^(2x+2) + 3^(x+2) = 4)$
-// ]
-// #v(1fr)
-
-// #pagebreak()
-
-// #question(point: 2)[Resuelve la siguien ecuación con logaritmos:
-//   \
-//   \
-//   $display(log(3x+13) = 2)$
-
-//   \
-//   \
-
-//   $display(log(7x-3) = -1)$
-// ]
-
-// #v(1fr)
-
-// #question(point: 2)[Resuelve la siguien ecuación con valores absolutos y comprueba el resultado:
-//   \
-//   \
-//   $display(|x^2-x| + 3 = 3x)$
-
-//   \
-//   \
-
-//    $display(|5x+1| = 15x -7)$
-// ]
-// #v(1fr)
