@@ -3,12 +3,17 @@
 #let question-number = counter("question-number")
 #let question-point = state("question-point", 0)
 #let question-point-position-state = state("question-point-position", left)
+#let localization = state("localization",
+  (
+    point: "point",
+    points: "points",
+  ))
 
 #let student-data(
   languaje: "en",
   show-line-two: true
 ) = {
-  [Apellidos #box(width: 2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.])]
+  [Apellidos: #box(width: 2fr, repeat[.]) Nombre: #box(width:1fr, repeat[.])]
   if show-line-two {
     v(1pt)
     align(right, [Grupo: #box(width:2.5cm, repeat[.]) Fecha: #box(width:3cm, repeat[.])])
@@ -43,7 +48,7 @@
       
         let pointRow = columnsNumber.map(n => {
             if n == 0 {align(left + horizon)[Puntos]}
-            else if n == question-locations.len() + 1 [#strfmt("{0:*>2}", calc.ceil(total-point), fmt-decimal-separator: decimal-separator)]
+            else if n == question-locations.len() + 1 [#strfmt("{0:}", calc.ceil(total-point), fmt-decimal-separator: decimal-separator)]
             else {
               let point = points.at(n - 1)
               [ #strfmt("{0}", point, fmt-decimal-separator: decimal-separator) ]
@@ -81,10 +86,10 @@
     numbering("1. ", nums.last())
   }
   else if nums.len() == 2 {
-    numbering("a) ", nums.last())
+    numbering("(a) ", nums.last())
   }
   else if nums.len() == 3 {
-    numbering("i) ", nums.last())
+    numbering("(i) ", nums.last())
   }
 }
 
@@ -95,7 +100,7 @@
       label-point = "punto"
     }
 
-    [(#strfmt("{0}", point, fmt-decimal-separator: ",") #label-point)]
+    [(#emph[#strfmt("{0}", point, fmt-decimal-separator: ",") #label-point])]
   }
 }
 
@@ -107,7 +112,7 @@
     let question-point-position = question-point-position-state.final(loc)
   
     if question-point-position == left {
-      [#question-number.display(question-numbering) #paint-tab(point:point)]
+      [#question-number.display(question-numbering) #paint-tab(point:point) #h(0.3em)]
       [
         #body \
         <question-localization>
@@ -115,11 +120,12 @@
     }
     else{
       grid(
-        columns: (1em, 90%, 20%),
+        columns: (1em, 0.3em, 90%, 20%),
         rows: (auto),
         [ 
           #question-number.display(question-numbering)
         ],
+        [],
         [
           #body \
           <question-localization>
@@ -139,7 +145,7 @@
     
       if question-point-position == left {
         [ \ ]
-        [#h(14pt) #question-number.display(question-numbering) #paint-tab(point: point)]
+        [#h(14pt) #question-number.display(question-numbering) #paint-tab(point: point) #h(0.3em)]
         [
           #body 
           \
@@ -147,12 +153,13 @@
       }
       else{ 
         grid(
-          columns: (1em, 1.5em, 90% - 1.5em, 20%),
+          columns: (1.5em, 1.5em, 0.3em, 90% - 1.5em, 20%),
           rows: (auto),
           [],
           [
            #question-number.display(question-numbering)
           ],
+          [],
           [
             #body \
           ],
@@ -221,11 +228,11 @@
           rotate(270deg,
           origin: top + right,
             {
-              if author.watermark != none {
+              if author.at("watermark", default: none) != none {
                 text(size:7pt, fill:gray)[#author.watermark]
                 h(35pt)
               }
-              if exam-info.model != none {
+              if exam-info.at("model", default: none) != none {
                 text(size:8pt, luma(90))[#exam-info.model]
               }
             }
@@ -233,8 +240,14 @@
         )
   }
 
+  let document-name = ""
+  if exam-info.at("name", default: none) != none { document-name += " " + exam-info.name }
+  if exam-info.at("content", default: none) != none { document-name += " " + exam-info.content }
+  if exam-info.at("number", default: none) != none { document-name += " " + exam-info.number }
+  if exam-info.at("model", default: none) != none { document-name += " " + exam-info.model }
+
   set document(
-    title: school.name + " " + exam-info.content + " " + exam-info.number + " " + exam-info.model,
+    title: document-name.trim(" "),
     author: author.name
   )
 
@@ -268,7 +281,7 @@
                     // #exam-info.number #exam-info.content \
                     ],
                     align(right + top)[
-                      #exam-info.academic-level #exam-info.academic-subject  \  
+                      #exam-info.academic-level #exam-info.at("academic-subject", default: none)  \  
                       #exam-info.number \
                       #exam-info.content 
                     ],
@@ -293,7 +306,7 @@
                 // #exam-info.number #exam-info.content \
               ],
               align(right + top)[
-                #exam-info.academic-level #exam-info.academic-subject \
+                #exam-info.academic-level #exam-info.at("academic-subject", default: none) \
                 #exam-info.number \
                 #exam-info.content 
               ]
@@ -316,7 +329,7 @@
                 // #exam-info.number #exam-info.content \
               ],
               align(right + top)[
-                #exam-info.academic-level #exam-info.academic-subject \
+                #exam-info.academic-level #exam-info.at("academic-subject", default: none) \
                 #exam-info.number\
                 #exam-info.content\
               ]

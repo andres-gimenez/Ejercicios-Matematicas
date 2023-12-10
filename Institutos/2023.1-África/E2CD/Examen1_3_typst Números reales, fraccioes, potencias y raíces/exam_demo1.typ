@@ -14,10 +14,10 @@
   exam-info: (
     academic-period: "Curso 2023/2024",
     academic-level: "2º ESO",
-    academic-subject: "",
+    academic-subject: none,
     number: "1º Evaluación 3º Examen",
     content: "Números enteros, fracciones, potencias y raíces",
-    model: ""
+    model: none
   ),
   
   languaje: "es",
@@ -43,60 +43,56 @@
   ]
 )
 
-#v(20pt)
+#v(15pt)
 
-#question(point: 3)[Pregunta 1]
-#v(20pt)
-
-#question(point: 2.4)[
-    Contenido de la pregunta 1 \
-    $ 4 + x = 2 $
-    $ (2 sqrt(3))/(sqrt(2)-sqrt(3)) $
-  ]
-#v(4fr)
-
-#question(point: 1.5)[ Resuelve las siguientes expresiones:]
-  #part(point: 1)[
-    $4 - x = 2$
-  ]
-  #v(3fr)
+#question(point: 2)[Realiza las siguientes operaciones:]
   
-  #part()[
-    $5 + x = 3$
-    $ integral_2^4 1/x dif x $
-  ]
+  #part[$display((5/2+1) dot (4/7+2/3) = )$]
   #v(1fr)
 
-  #part(point: 2)[
-    #lorem(45)
-  ]
-  #v(2fr)
+  #part[$display((2 dot 5/21) + (4/7 dot 2/3) =)$]
+  #v(1fr)
 
-#pagebreak(weak:true)
+#pagebreak()
 
-#question(point: 2.3)[ 
-  #lorem(45)
-  ]
-#v(1fr)  
+#question(point: 2)[Calcula las siguientes potencias:]
 
-#pagebreak(weak:true)
+  #part[$display((-5)^2 = )$]
+  #v(1fr)
 
-#question(point: 3.7)[
-  Contenido de la pregunta 4
-  #lorem(60)]
+  #part[$display(5^3 =)$]
+  #v(1fr)
 
-#v(1fr) 
+  #part[$display((3)^2 =)$]
+  #v(1fr)
 
-#question(point: 2.1)[
-  hola
-  #lorem(160)]
+  #part[$display(1.000^2 =)$]
+  #v(1fr)
 
-#pagebreak(weak:true)
+#question(point: 2)[Calcula las siguientes raíces, factorizando en números primos:]
 
-= Pregunta aislada
-== Sub pregunta 1 aislada
-== Sub pregunta 2 aislada
+  #part[$display(sqrt(64)) =$]
+  #v(1fr)
 
-= Otra pregunta aislada
-== Sub pregunta 1 aislada
-== Sub pregunta 2 aislada
+  #part[$display(sqrt(729)) =$]
+  #v(1fr)
+
+  #part[$display(sqrt(900)) =$]
+  #v(1fr)
+
+  #part[$display(sqrt(225)) =$]
+  #v(1fr)
+
+#pagebreak()
+
+#question(point: 2)[Opera y simplifica los resultados siguientes:]
+
+  #part[$display(15/18 + (3/2-1/4)^2)$]
+  #v(1fr)
+
+  #part[$display(4/3+(3/2-1/4)^2)$]
+  #v(1fr)
+
+
+#question(point: 2)[Problema:]
+#v(1fr)
