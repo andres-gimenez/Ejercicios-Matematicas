@@ -14,7 +14,7 @@
   exam-info: (
     academic-period: "Curso 2023/2024",
     academic-level: "2º ESO",
-    academic-subject: none,
+    academic-subject: "Matemáticas",
     number: "1º Evaluación 3º Examen",
     content: "Números enteros, fracciones, potencias y raíces",
     model: none
