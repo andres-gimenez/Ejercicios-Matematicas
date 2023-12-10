@@ -45,7 +45,7 @@
 
 #v(20pt)
 
-#question(point: 3)[Pregunta 1]
+#question(point: 3.2)[Pregunta 1]
 #v(20pt)
 
 #question(point: 2.4)[
@@ -55,8 +55,10 @@
   ]
 #v(4fr)
 
-#question(point: 1.5)[ Resuelve las siguientes expresiones:]
-  #part(point: 1)[
+#pagebreak(weak:true)
+
+#question[Resuelve las siguientes expresiones:]
+  #part(point: 1.7)[
     $4 - x = 2$
   ]
   #v(3fr)
@@ -77,7 +79,17 @@
 #question(point: 2.3)[ 
   #lorem(45)
   ]
-#v(1fr)  
+   #part(point: 1)[
+    $4 - x = 2$
+  ]
+  #v(3fr)
+  
+  #part()[
+    $5 + x = 3$
+    $ integral_2^4 1/x dif x $
+  ]
+  #v(1fr)
+
 
 #pagebreak(weak:true)
 
@@ -93,10 +105,10 @@
 
 #pagebreak(weak:true)
 
-= Pregunta aislada
-== Sub pregunta 1 aislada
-== Sub pregunta 2 aislada
+// = Pregunta aislada
+// == Sub pregunta 1 aislada
+// == Sub pregunta 2 aislada
 
-= Otra pregunta aislada
-== Sub pregunta 1 aislada
-== Sub pregunta 2 aislada
+// = Otra pregunta aislada
+// == Sub pregunta 1 aislada
+// == Sub pregunta 2 aislada

@@ -24,56 +24,62 @@
   decimal-separator: ".",
   languaje: "en"
 ) = {
-      locate(loc => {
-        let question-locations = query(<question-localization>, loc)
-        let columnsNumber = range(0, question-locations.len() + 2)
+      locate(loc => {        
+        let end-question-locations = query(<end-question-localization>, loc)
+        let columns-number = range(0, end-question-locations.len() + 1)
       
-        let questionRow = columnsNumber.map(n => 
+        let question-row = columns-number.map(n => 
           {
             if n == 0 {align(left + horizon)[Pregunta]}
-            else if n == question-locations.len() + 1 {align(left + horizon)[Total]}
+            else if n == end-question-locations.len() {align(left + horizon)[Total]}
             else [ #n ]
           }
         )
 
         let total-point = 0
-        if question-locations.len() > 0 { 
-          total-point = question-locations.map(ql => question-point.at(ql.location())).sum() 
+        if end-question-locations.len() > 0 { 
+          total-point = end-question-locations.map(ql => question-point.at(ql.location())).sum()
         }
 
         let points = ()
-        if question-locations.len() > 0 {
-          points =  question-locations.map(ql => question-point.at(ql.location()))
+        if end-question-locations.len() > 0 {
+          points =  end-question-locations.map(ql => question-point.at(ql.location()))
         }
       
-        let pointRow = columnsNumber.map(n => {
+        let point-row = columns-number.map(n => {
             if n == 0 {align(left + horizon)[Puntos]}
-            else if n == question-locations.len() + 1 [#strfmt("{0:}", calc.ceil(total-point), fmt-decimal-separator: decimal-separator)]
+            else if n == end-question-locations.len() [
+              #strfmt("{0:}", calc.round(total-point, digits:2), fmt-decimal-separator: decimal-separator)
+            ]
             else {
-              let point = points.at(n - 1)
-              [ #strfmt("{0}", point, fmt-decimal-separator: decimal-separator) ]
+              let point = points.at(n)
+              [
+                #strfmt("{0}", calc.round(point, digits: 2), fmt-decimal-separator: decimal-separator)
+              ]
             }
           }
         )
 
-        let calificationRow = columnsNumber.map(n => 
+        let calification-row = columns-number.map(n => 
           {
-            if n == 0 {align(left + horizon)[Calificación]}
+            if n == 0 {
+              align(left + horizon)[Calificación]
+            }
           }
         )
 
         align(center, table(
           stroke: 0.8pt + luma(80),
-          columns: columnsNumber.map( n => 
+          columns: columns-number.map( n => 
           {
             if n == 0 {auto}
-            else if n == question-locations.len() + 1 {auto}
+            else if n == end-question-locations.len() {auto}
             else {30pt}
           }),
           rows: (auto, auto, 30pt),
-          ..questionRow.map(n => n),
-          ..pointRow.map(n => n),
-          ..calificationRow.map(n => n),
+          ..question-row.map(n => n),
+          ..point-row.map(n => n),
+          ..calification-row.map(n => n),
         )
       )
     }
@@ -100,14 +106,20 @@
       label-point = "punto"
     }
 
-    [(#emph[#strfmt("{0}", point, fmt-decimal-separator: ",") #label-point])]
+    [(#emph[#strfmt("{0}", calc.round(point, digits: 2), fmt-decimal-separator: ",") #label-point])]
   }
 }
 
 #let question(point: none, body) = {
   question-number.step(level: 1) 
-  question-point.update(p => point)
-
+  
+  [#hide[]<end-question-localization>]
+  question-point.update(p => 
+    {
+      if point == none { 0 }
+      else { point }
+    })
+  
   locate(loc => {
     let question-point-position = question-point-position-state.final(loc)
   
@@ -115,7 +127,6 @@
       [#question-number.display(question-numbering) #paint-tab(point:point) #h(0.3em)]
       [
         #body \
-        <question-localization>
       ]
     }
     else{
@@ -128,17 +139,20 @@
         [],
         [
           #body \
-          <question-localization>
         ], 
         [#h(0.7em) #paint-tab(point: point)]
       )
     }
   })
+  
 }
 
 #let part(point: none, body) = {
   question-number.step(level: 2)
-  question-point.update(p => p + point)
+
+  let part-point = 0
+  if point != none { part-point = point }
+  question-point.update(p => p + part-point )
 
   locate(loc => {
       let question-point-position = question-point-position-state.final(loc)
@@ -392,7 +406,9 @@
   set par(justify: true) 
 
   body
-  [<end-exam>]
+  
+  [#hide[]<end-question-localization>]
+  [#hide[]<end-exam>]
 }
 
 
