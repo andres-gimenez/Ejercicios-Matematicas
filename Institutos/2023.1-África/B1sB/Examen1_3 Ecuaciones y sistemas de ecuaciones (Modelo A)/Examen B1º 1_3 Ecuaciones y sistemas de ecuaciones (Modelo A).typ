@@ -32,11 +32,11 @@
     // [Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.],
     // [Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.],
     [Está permitido utilizar la calculadora.],
-    [No está permitido compartir metarial durante el examen.],
+    [No está permitido compartir material durante el examen.],
   )
 )
 
-#question(point: 2)[Discute y resuleve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
+#question(point: 2)[Discute y resuelve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
 \
 \
     //Sol: x=1, y=2, z=-1
@@ -51,7 +51,7 @@
 #v(1fr)
 #pagebreak()
 
-#question(point: 2)[Discute y resuleve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
+#question(point: 2)[Discute y resuelve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
 \
 \
     // Sol: Incompatible
@@ -66,7 +66,7 @@
 #v(1fr)
 #pagebreak()
 
-#question(point: 2)[Resuelve la siguiente ecuacion racional:
+#question(point: 2)[Resuelve la siguiente ecuación racional:
   \
   \
   // $display((x-1)/x-(x+1)/(x-5)=(x+2)/(x^2-5x))$
@@ -89,6 +89,7 @@
 // https://www.superprof.es/apuntes/escolar/matematicas/algebra/log/ejercicios-de-ecuaciones-exponenciales.html
 #question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:]
   \
+  \
   $display((x^3-4x) dot (x-7)) = 0$
   // $display((x^3-7x-6) dot (x-4) = 0)$
 
@@ -105,7 +106,7 @@
 // ]
 // #v(1fr)
 
-// #question(point: 2)[Resuelve la siguien ecuación exponencial y comprueba el resultado:
+// #question(point: 2)[Resuelve la siguiente ecuación exponencial y comprueba el resultado:
 //   \
 //   \
 //   $display(3^(2x-2)+3^(x-1) = 12)$
@@ -117,8 +118,9 @@
 #pagebreak()
 
 //https://www.matematicasonline.es/BachilleratoCCNN/Primero/ejercicios/Ecuaciones_con_radicales_resueltas.pdf
-#question(point: 2)[Resuelve la siguiente ecuacion con radicales y comprueba el resultado: \
-
+#question(point: 2)[Resuelve la siguiente ecuación con radicales y comprueba el resultado: \
+  \
+  \
   // Sol x = 2
   $display(sqrt(3x+19)=x+3)$
   // \
@@ -133,7 +135,7 @@
 
 // #pagebreak()
 
-// #question(point: 2)[Resuelve la siguien ecuación con logaritmos:
+// #question(point: 2)[Resuelve la siguiente ecuación con logaritmos:
 //   \
 //   \
 //   $display(log(3x+13) = 2)$
@@ -146,7 +148,7 @@
 
 // #v(1fr)
 
-// #question(point: 2)[Resuelve la siguien ecuación con valores absolutos y comprueba el resultado:
+// #question(point: 2)[Resuelve la siguiente ecuación con valores absolutos y comprueba el resultado:
 //   \
 //   \
 //   $display(|x^2-x| + 3 = 3x)$
