@@ -24,42 +24,31 @@
   date: "November 21, 2023",
   show-studen-data: true,
   show-grade-table: true,
-  question-point-position: right
+  question-point-position: right,
+  clarifications: (
+    [Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada del examen que se valorará con un cero.],
+    [Deben aparecer todas las operaciones, no vale solo con indicar el resultado.],
+    [Se ha de llegar a la solución más reducida posible.],
+    // [Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.],
+    // [Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.],
+    [Está permitido utilizar la calculadora.],
+    [No está permitido compartir metarial durante el examen.],
+  )
 )
 
-#rect(
-  width: 100%, 
-  stroke: luma(120),
-  inset:8pt,
-  radius: 4pt,
-  [
-    - Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada del examen que se valorará con un cero.
-    - Deben aparecer todas las operaciones, no vale solo con indicar el resultado.
-    - Se ha de llegar a la solución más reducida posible.
-    // - Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.
-    // - Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.
-    - Está permitido utilizar la calculadora.
-    - No está permitido compartir metarial durante el examen.
-  ]
-)
+#question(point: 2)[Discute y resuleve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:]
 
-#v(15pt)
-
-#question[Discute y resuleve por el método de Gauß, indicando cuantas soluciones tiene el siguiente sistema:]
-
-    #part(point: 2)[
-      $display(
-        cases(
-         &x &+ 2&y &+ &z &= 1,
-         &x &-  &y &+ &z &= 3,
-        5&x &- 3&y &+ &z &= 5
-        )
-      )$
-    ]
+    $display(
+      cases(
+        &x &+ 2&y &+ &z &= 1,
+        &x &-  &y &+ &z &= 3,
+      5&x &- 3&y &+ &z &= 5
+      )
+    )$
 
 #pagebreak()
 
-#question(point: 2)[Discute y resuleve por el método de Gauß, indicando cuantas soluciones tiene el siguiente sistema:
+#question(point: 2)[Discute y resuleve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
 \ \
     $display(
       cases(

@@ -189,6 +189,38 @@
   )
 }
 
+#let show-clarifications = (clarifications: none) => {
+  if clarifications != none {
+    let clarifications-content = []
+    if type(clarifications) == "content" {
+      clarifications-content = clarifications
+    }
+    else if type(clarifications) == "string" {
+      clarifications-content = clarifications
+    } 
+    else if type(clarifications) == "array" {
+      clarifications-content = [
+        #for clarification in clarifications [
+          - #clarification
+        ]
+      ]
+    }
+    else {
+      panic("Not implementation clarificationso of type: '" + type(clarifications) + "'")
+    }
+
+    rect(
+      width: 100%, 
+      stroke: luma(120),
+      inset:8pt,
+      radius: 4pt,
+      clarifications-content
+    )
+    
+    v(5pt)
+  }
+}
+
 #let exam(
   author: (
     name: none,
@@ -211,7 +243,7 @@
   date: none,
   keywords: none,
   languaje: "en",
- 
+  clarifications: none,
   show-studen-data: true,
   show-grade-table: true,
   decimal-separator: ".",
@@ -248,11 +280,11 @@
           origin: top + right,
             {
               if author.at("watermark", default: none) != none {
-                text(size:7pt, fill:gray)[#author.watermark]
+                text(size:7pt, fill:luma(90))[#author.watermark]
                 h(35pt)
               }
               if exam-info.at("model", default: none) != none {
-                text(size:8pt, luma(90))[#exam-info.model]
+                text(size:8pt, luma(40))[#exam-info.model]
               }
             }
           )
@@ -272,7 +304,7 @@
 
   set page(
     paper: "a4", 
-    margin: (top: 5cm, bottom:3cm),
+    margin: (top: 5cm),
     numbering: "1 / 1",
     number-align: right,
     header-ascent: 20%,
@@ -280,7 +312,7 @@
         let page-number = counter(page).at(loc).first()
         if (page-number==1) { 
           align(right)[#box(
-            width:105%,
+            width:108%,
             grid(
               columns: (auto, auto),
               gutter:0.7em,        
@@ -395,9 +427,6 @@
   set text(lang:languaje)
 
   if show-grade-table == true {
-      if show-studen-data == true {
-        v(20pt)
-      }
     grade-table-header(
       decimal-separator: decimal-separator,
       languaje: languaje,
@@ -419,6 +448,10 @@
 
 
   set par(justify: true) 
+
+  if clarifications != none {
+    show-clarifications(clarifications: clarifications)
+  }
 
   body
   
