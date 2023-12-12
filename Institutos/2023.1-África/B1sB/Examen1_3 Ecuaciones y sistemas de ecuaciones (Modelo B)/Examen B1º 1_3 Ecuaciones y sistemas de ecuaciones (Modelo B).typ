@@ -16,7 +16,7 @@
     academic-subject: "Matemáticas aplicadas a las ciencias sociales",
     number: "1º Evaluación 3º Examen",
     content: "Ecuaciones y sistemas de ecuaciones",
-    model: "Modelo A"
+    model: "Modelo B"
   ),
   
   languaje: "es",
@@ -39,39 +39,39 @@
 #question(point: 2)[Discute y resuelve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
 \
 \
-    //Sol: x=1, y=2, z=-1
+    //Sol: x=2, y=-1, z=2
     $display(
       cases(
-        2&x &-  &y &+ 3&z &= -&3,
-        2&x &- 2&y &+  &z &= -&3,
-        2&x &- 3&y &+ 5&z &= -&9
+        3&x &+ 2&y &+  &z &= &6,
+        3&x &-  &y &+ 2&z &= &11,
+        3&x &+ 3&y &-  &z &= &1
       )
     )$
 ]
-#v(1fr)
 #pagebreak()
 
 #question(point: 2)[Discute y resuelve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
-\
+\ 
 \
     // Sol: Incompatible
     $display(
       cases(
-        3&x &+  &y &+ 3&z &= &2,
-         &x &- 2&y &+  &z &= -&1,
-        4&x &- 1&y &+ 4&z &= &4
+        2&x &+  &y &+  &z &= -&1,
+         &x &- 3&y &- 2&z &=  &3,
+        3&x &- 2&y &-  &z &=  &5
         )
       )$
 ]
-#v(1fr)
+
 #pagebreak()
 
 #question(point: 2)[Resuelve la siguiente ecuación racional:
   \
   \
   // $display((x-1)/x-(x+1)/(x-5)=(x+2)/(x^2-5x))$
-  // Sol x=3 y x=-14/9
-  $display((x+2)/(x+1)-(x+1)/(x+2)=9/20)$
+
+  //Sol: x=3 y x=-5/3
+  $display(x/(x+1)+(2x)/(x-1)=15/4)$
 
   // \
   // \
@@ -87,11 +87,50 @@
 
 // https://www.matesfacil.com/ESO/exponenciales/ejercicios-resueltos-ecuaciones-exponenciales.html
 // https://www.superprof.es/apuntes/escolar/matematicas/algebra/log/ejercicios-de-ecuaciones-exponenciales.html
-#question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:]
+#question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:
   \
   \
-  $display((x^3-4x) dot (x-7)) = 0$
+  $display((x^3-9x) dot (x-5)) = 0$
+
+  // $display((x+2)/(x+1)-(x+1)/(x+2)=9/20)$
+
   // $display((x^3-7x-6) dot (x-4) = 0)$
+
+  // \
+  // \
+
+  // $display((x^3-7x+6) dot (x-5) = 0)$
+
+  // \
+  // \
+
+  // $display(4^(x+1) + 2^(x+3) = 320)$
+]
+#v(1fr)
+
+#pagebreak()
+
+//https://www.matematicasonline.es/BachilleratoCCNN/Primero/ejercicios/Ecuaciones_con_radicales_resueltas.pdf
+#question(point: 2)[Resuelve la siguiente ecuación con radicales y comprueba el resultado:
+  \
+  \
+  //Sol: x= 8
+  $display(3+sqrt(3x+1)=x)$
+  // $display(x-sqrt(x-1)=1)$
+  // \
+  // \
+  // $display(2x=sqrt(-2x+5)-1)$
+]
+#v(1fr)
+
+// #pagebreak()
+
+// https://www.matesfacil.com/ESO/exponenciales/ejercicios-resueltos-ecuaciones-exponenciales.html
+// https://www.superprof.es/apuntes/escolar/matematicas/algebra/log/ejercicios-de-ecuaciones-exponenciales.html
+// #question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:
+//   \
+//   \
+//   $display((x^3-7x-6) dot (x-4) = 0)$
 
 //   \
 //   \
@@ -114,24 +153,7 @@
 //   \
 //   $display(3^(2x+2) + 3^(x+2) = 4)$
 // ]
-#v(1fr)
-#pagebreak()
-
-//https://www.matematicasonline.es/BachilleratoCCNN/Primero/ejercicios/Ecuaciones_con_radicales_resueltas.pdf
-#question(point: 2)[Resuelve la siguiente ecuación con radicales y comprueba el resultado: \
-  \
-  \
-  // Sol x = 2
-  $display(sqrt(3x+19)=x+3)$
-  // \
-  // \
-  // $display(x-sqrt(x-1)=1)$
-  // \
-  // \
-  // $display(2x=sqrt(-2x+5)-1)$
-]
-#v(1fr)
-
+// #v(1fr)
 
 // #pagebreak()
 

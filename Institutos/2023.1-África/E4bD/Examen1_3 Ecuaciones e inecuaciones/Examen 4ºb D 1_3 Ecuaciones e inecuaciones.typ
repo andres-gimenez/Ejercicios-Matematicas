@@ -33,33 +33,44 @@
     // [Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.],
     // [Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.],
     [Está permitido utilizar la calculadora.],
-    [No está permitido compartir metarial durante el examen.],
+    [No está permitido compartir material durante el examen.],
   )
 )
 
-#question(point: 2)[Resuelve la siguien ecuación exponencial y comprueba el resultado:
+#question(point: 2)[Resuelve la siguiente ecuación exponencial y comprueba el resultado:
   \
   \
   $display(3^(2x-2)+3^(x-1) = 12)$
+  // \
+  // \
+  // $display(3^(2x+2) + 3^(x+2) = 4)$
+]
+#v(1fr)
+#pagebreak()
+
+#question(point: 2)[Determina que intervalo es solución de la siguiente inecuación:
   \
   \
-  $display(3^(2x+2) + 3^(x+2) = 4)$
+  // $display(3x^2 - 6x < 0)$
+  $display(x^2 + x - 6 <= 0)$
 ]
 #v(1fr)
 
-#question(point: 2)[Determina la solución de la siguiente inecuación:
+#question(point: 2)[Determina que intervalo es solución de la siguiente inecuación:
   \
   \
-  $display(3x^2 - 6x < 0)$
+  // $display(3x^2 - 6x < 0)$
+  // $display(x^2 + x - 6 <= 0)$
+  $display(log_7(3x-2) - log_7(x+1) = log_7(2))$
 ]
 #v(1fr)
 
 #pagebreak()
 
-#question(point: 2)[Indica la ragión del plano que cumple  la inecuación:
+#question(point: 2)[Indica la región del plano que cumple  la inecuación:
   \
   \
-  $display(2 dot (x-1) >= 3 dot (y+1))$
+  $display(2 (x-1) >= 3 (y+1))$
   
   #v(1fr)
 
@@ -86,7 +97,9 @@
   )
 
 ]
+#v(1fr)
 
+<<<<<<< HEAD
 // #question(point: 3)[Simplifica estas expresiones:]
 
 // #question(point: 3)[Simplifica estas expresiones:]
@@ -248,10 +261,16 @@
 //   \
 //   \
 //   $display(|x^2-x| + 3 = 3x)$
+=======
+#pagebreak(weak: true)
+>>>>>>> 133d8641254fd6159181a71c49ca94bb48bf2e33
 
-//   \
-//   \
+#question(point: 2)[Resuelve la siguiente inecuación indicando que intervalo es solución:
+  \
+  \
+  // Sol:x<=5
+  $display((5x) /10 - (5x - 6)/12 >= (x - 4)/6 + (2x - 4) /8)$
+]
+#v(1fr)
 
-//    $display(|5x+1| = 15x -7)$
-// ]
-// #v(1fr)
+// #pagebreak(weak: true)

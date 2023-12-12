@@ -32,7 +32,7 @@
     [Se ha de llegar a la solución más reducida posible.],
     //[Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.]
     //[Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.]
-    [No está permitido utilizar la calculadora ni compartir metarial durante el examen.]
+    [No está permitido utilizar la calculadora ni compartir mastarial durante el examen.]
   )
 )
 
