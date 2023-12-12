@@ -11,3 +11,4 @@ words:
   - StudentData
 ignoreWords: []
 import: []
+language: es-ES,en-UK

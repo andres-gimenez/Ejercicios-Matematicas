@@ -31,7 +31,7 @@
     [Se ha de llegar a la solución más reducida posible.],
     // [Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.],
     // [Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.],
-    [No está permitido utilizar la calculadora ni compartir metarial durante el examen.],
+    [No está permitido utilizar la calculadora ni compartir material durante el examen.],
   )
 )
 
@@ -45,18 +45,18 @@
 
 #pagebreak()
 
-#question(point: 2)[Calcula las siguientes potencias:]
+#question(point: 2)[Expresa como una única potencia:]
 
-  #part[$display((-5)^2 = )$]
+  #part[$display((-5)^3 dot (-5)^4 : (-5)^2 = )$]
   #v(1fr)
 
-  #part[$display(5^3 =)$]
+  #part[$display(45^7 dot 45^9 dot 45^3 =)$]
   #v(1fr)
 
-  #part[$display((3)^2 =)$]
+  #part[$display((3^2 dot 3^3) ^2 =)$]
   #v(1fr)
 
-  #part[$display(1.000^2 =)$]
+  #part[$display(2^3 dot 3^3 =)$]
   #v(1fr)
 
 #question(point: 2)[Calcula las siguientes raíces, factorizando en números primos:]
@@ -83,6 +83,13 @@
   #part[$display(4/3+(3/2-1/4)^2)$]
   #v(1fr)
 
+#pagebreak()
 
-#question(point: 2)[Problema:]
+#question(point: 2)[Un hospital tiene 11 plantas,
+ 18 habitaciones en cada una de las plantas,
+ 2 camas en cada una de las  habitaciones y 
+ dos almohadas en cada una de las camas.
+ ¿Cuántas almohadas hay en el hospital?
+]
 #v(1fr)
+
