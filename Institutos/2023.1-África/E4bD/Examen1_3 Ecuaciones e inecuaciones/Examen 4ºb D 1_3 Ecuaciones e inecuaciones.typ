@@ -99,7 +99,6 @@
 ]
 #v(1fr)
 
-<<<<<<< HEAD
 // #question(point: 3)[Simplifica estas expresiones:]
 
 // #question(point: 3)[Simplifica estas expresiones:]
@@ -261,9 +260,6 @@
 //   \
 //   \
 //   $display(|x^2-x| + 3 = 3x)$
-=======
-#pagebreak(weak: true)
->>>>>>> 133d8641254fd6159181a71c49ca94bb48bf2e33
 
 #question(point: 2)[Resuelve la siguiente inecuación indicando que intervalo es solución:
   \
