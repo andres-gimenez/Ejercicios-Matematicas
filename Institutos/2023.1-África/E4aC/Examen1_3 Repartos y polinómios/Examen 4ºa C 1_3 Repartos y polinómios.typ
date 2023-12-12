@@ -15,7 +15,7 @@
     academic-level: "4º ESO",
     academic-subject: "Matemáticas A",
     number: "1º Evaluación 3º Examen",
-    content: "Repartos proporcionales y polinómios",
+    content: "Repartos proporcionales y polinomios",
     model: none
   ),
   
@@ -32,7 +32,7 @@
     // [Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.],
     // [Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.],
     [Está permitido utilizar la calculadora.],
-    [No está permitido compartir metarial durante el examen.],
+    [No está permitido compartir material durante el examen.],
   )
 )
 
@@ -58,12 +58,12 @@
 #pagebreak()
 
 #question[El número de personas que acceden a un comercio en cada hora puede estimarse a partir de la expresión $P(x)=-x^2+8x$ 
-y el número de personas que sale, la la expresión $Q(x)=-0,25x^2+2x$, donde $x$ representa el número de horas desde su apertura.]
+y el número de personas que sale, la expresión $Q(x)=-0,25x^2+2x$, donde $x$ representa el número de horas desde su apertura.]
 
-  #part(point: 1)[Indica cúantas personas entran en el comercio durante la segunda hora y cuántas salen.]
+  #part(point: 1)[Indica cuantas personas entran en el comercio durante la segunda hora y cuántas salen.]
   #v(1fr)
 
-  #part(point: 2)[Indica la expresión que calcula el número de personas que hay en el interior del comercio a cualquier hora.]
+  #part(point: 2)[Indica la expresión algebraica que calcula el número de personas que hay en el interior del comercio a cualquier hora.]
   #v(2fr)
 
   #part(point: 1)[¿Cuántas personas hay en el comercio en la segunda hora? ¿y en la cuarta?]
