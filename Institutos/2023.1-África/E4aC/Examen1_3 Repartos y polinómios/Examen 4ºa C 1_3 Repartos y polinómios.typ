@@ -57,13 +57,14 @@
 
 #pagebreak()
 
+// Problema ambiguo, no utilizar. 
 #question[El número de personas que acceden a un comercio en cada hora puede estimarse a partir de la expresión $P(x)=-x^2+8x$ 
 y el número de personas que sale, la expresión $Q(x)=-0,25x^2+2x$, donde $x$ representa el número de horas desde su apertura.]
 
   #part(point: 1)[Indica cuantas personas entran en el comercio durante la segunda hora y cuántas salen.]
   #v(1fr)
 
-  #part(point: 2)[Indica la expresión algebraica que calcula el número de personas que hay en el interior del comercio a cualquier hora.]
+  #part(point: 2)[Indica la expresión algebraica que calcula el número de personas que hay en el interior del comercio en una hora determinada.]
   #v(2fr)
 
   #part(point: 1)[¿Cuántas personas hay en el comercio en la segunda hora? ¿y en la cuarta?]

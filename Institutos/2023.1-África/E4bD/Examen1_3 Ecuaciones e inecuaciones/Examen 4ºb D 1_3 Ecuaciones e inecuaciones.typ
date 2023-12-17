@@ -56,7 +56,7 @@
 ]
 #v(1fr)
 
-#question(point: 2)[Determina que intervalo es solución de la siguiente inecuación:
+#question(point: 2)[Resuelve la siguiente versión logarítmica:
   \
   \
   // $display(3x^2 - 6x < 0)$
