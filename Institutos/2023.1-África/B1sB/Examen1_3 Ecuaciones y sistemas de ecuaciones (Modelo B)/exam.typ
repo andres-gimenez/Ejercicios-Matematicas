@@ -1,3 +1,5 @@
+// Plantilla Examen 0.1
+
 #import "@preview/oxifmt:0.2.0": strfmt
 
 #let question-number = counter("question-number")
