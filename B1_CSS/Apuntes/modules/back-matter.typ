@@ -8,7 +8,9 @@
   if bibliography-file != none {
     //pagebreak()
     //v(-space)
-    let bib-title = if lang == "en" [References] else [Literaturverzeichnis]
+    // let bib-title = if lang == "en" [References] else [Literaturverzeichnis]
+    let bib-title = [Referencias]
+
     heading(level: 1, outlined: true, numbering: none, bib-title)
     //show bibliography: set text(8pt)
     set block(spacing: .65em)

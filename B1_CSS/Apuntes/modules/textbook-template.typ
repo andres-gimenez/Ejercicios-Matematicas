@@ -17,15 +17,15 @@
   translated-title: none,
   date: datetime.today(),
   degree: "bachelor",
-  supervisors: (),
-  advisors: (),
+  // supervisors: (),
+  // advisors: (),
   bibliography-file: none,
   flavour: "info",
   numbering-depth: 2,
   pagination-align: "outside",
 )
 
-#let doc(
+#let Textbook(
   ..passed-args, 
   // author: [],
   // title: [],

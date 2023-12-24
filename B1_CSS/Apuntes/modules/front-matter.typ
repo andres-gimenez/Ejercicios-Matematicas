@@ -14,21 +14,21 @@
     row-gutter: 5pt,
     stroke: none,
   )
-
+  [submission-info-table]
   if args.lang == "en" [
     #table(
       ..opts,
       [Author:], [#args.author],
-      [Supervisor] + if args.supervisors.len() > 1 [s:] else [:], args.supervisors.join([ \ ]),
-      [Advisor] + if args.advisors.len() > 1 [s:] else [:], args.advisors.join([ \ ]),
+      // [Supervisor] + if args.supervisors.len() > 1 [s:] else [:], args.supervisors.join([ \ ]),
+      // [Advisor] + if args.advisors.len() > 1 [s:] else [:], args.advisors.join([ \ ]),
       [Submitted:], [#args.date.display("[day] [month repr:short] [year]")]
     )
   ] else if args.lang == "de" [
     #table(
       ..opts,
       [Verfasser:], [#args.author],
-      [Themensteller:], args.supervisors.join([ \ ]),
-      [Betreuer:], args.advisors.join([ #parbreak() ]),
+      // [Themensteller:], args.supervisors.join([ \ ]),
+      // [Betreuer:], args.advisors.join([ #parbreak() ]),
       [Abgabedatum:], [#args.date.display("[day].[month].[year]")]
     )
   ]
@@ -75,7 +75,9 @@
   pagebreak(weak: false, to: "even")
   set heading(numbering: none, outlined: false, bookmarked: true, level: 1)
 
-  let toc-title = if lang == "en" [Contents] else [Inhaltsverzeichnis]
+  // let toc-title = if lang == "en" [Contents] else [Inhaltsverzeichnis]
+  let toc-title = "Contenido"
+  
   if simple {
     show outline.entry: outrageous.show-entry.with(
       ..outrageous.presets.outrageous-toc,
