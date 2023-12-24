@@ -35,7 +35,7 @@
 // But the rest of this example just goes right here:
 = intro
 === Motivation
-As xkcd wisely reminds us, "There's nothing quite so beautiful as watching someone code in a language they're fluent in." In this linguistic dance between quantum bits and biological sequences, we strive to achieve fluency in the unique syntax that intertwines the principles of quantum computation with the complex language of life. 
+Asssdddds xkcd wisely reminds us, "There's nothing quite so beautiful as watching someone code in a language they're fluent in." In this linguistic dance between quantum bits and biological sequences, we strive to achieve fluency in the unique syntax that intertwines the principles of quantum computation with the complex language of life. 
 
 === Background and related work
 Drawing inspiration from xkcd #link("https://xkcd.com/378/", "#378"), where "Python" is the programming language of choice for researchers plotting world domination, our research aligns itself with the power and elegance of Pythonic quantum algorithms. The literature review explores the quantum landscape, guiding us through the footsteps of pioneers like Schrödinger and Turing, who, if xkcd is to be believed (#795), may have shared a cup of coffee in a parallel computational universe.

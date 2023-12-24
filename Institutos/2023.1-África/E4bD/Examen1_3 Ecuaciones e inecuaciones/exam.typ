@@ -460,5 +460,3 @@
   [#hide[]<end-question-localization>]
   [#hide[]<end-exam>]
 }
-
-
