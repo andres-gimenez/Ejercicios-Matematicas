@@ -71,6 +71,19 @@
   content
 }
 
+#let abstract(german, english) = {
+  pagebreak(weak: true, to: "even")
+  set heading(numbering: none, outlined: false, bookmarked: true, level: 1)
+  [
+    = Zusammenfassung
+    #german
+    #pagebreak()
+    = Abstract
+    #english
+  ]
+}
+
+
 #let table-of-contents(lang, simple: true) = {
   pagebreak(weak: false, to: "even")
   set heading(numbering: none, outlined: false, bookmarked: true, level: 1)
