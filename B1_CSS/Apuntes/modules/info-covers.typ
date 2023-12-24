@@ -1,3 +1,4 @@
+// Cubiertas informativas
 #import "styles.typ": *
 
 #let info-front-style(body) = {
@@ -17,6 +18,7 @@
   body
 }
 
+// Portada
 #let cover-page(args) = {
   show: info-front-style
   [
@@ -29,6 +31,7 @@
   // the scope of show: info-front-style i.e. it's body ends here because cover-page is not passed a body - just args
 }
 
+// Título de la página
 #let title-page(args, submission-info-content) = {
   show: info-front-style
   [
