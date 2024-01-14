@@ -12,10 +12,10 @@
   ),
   exam-info: (
     academic-period: "Curso 2023/2024",
-    academic-level: "1º Bachillerato",
-    academic-subject: "Matemáticas aplicadas a las ciencias sociales",
+    academic-level: "1º ESO",
+    academic-subject: "Matemáticas",
     number: "2º Evaluación 1º Examen",
-    content: "Funciones I",
+    content: "Fracciones",
     model: "Modelo A"
   ),
   
@@ -101,7 +101,7 @@
   $f(x) = display(
         cases(
           2/x &"si" &x < 0,
-          sqrt(x+1)-2 &"si" &x>=0,
+          sqrt(x+1)-2 &"si" &x >= 0,
         )
       )$
 ]
