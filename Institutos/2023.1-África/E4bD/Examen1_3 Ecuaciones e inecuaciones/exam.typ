@@ -133,7 +133,7 @@
     if question-point-position == left {
       [#question-number.display(question-numbering) #paint-tab(point:point) #h(0.3em)]
       [
-        #body \
+        #body \ \
       ]
     }
     else{
@@ -145,7 +145,7 @@
         ],
         [],
         [
-          #body \
+          #body \ \
         ], 
         [#h(0.7em) #paint-tab(point: point)]
       )
@@ -168,8 +168,7 @@
         [ \ ]
         [#h(14pt) #question-number.display(question-numbering) #paint-tab(point: point) #h(0.3em)]
         [
-          #body 
-          \
+          #body \ \
         ]
       }
       else{ 
@@ -182,7 +181,7 @@
           ],
           [],
           [
-            #body \
+            #body \ \
           ],
           [#h(0.7em) #paint-tab(point: point)]
         )
