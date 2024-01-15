@@ -76,10 +76,17 @@
 
 #question(point:2)[
   Halla el dominio de definición de la s funciones:
-  + $y = (2+x)/(x^2+1)$ #v(1fr)
-  + $y = sqrt(3x-1)$ #v(1fr)
-  + $y = 1/(x^2+1)$ #v(1fr)
-  + $y = (log(x+1))/(x^2-4)$ #v(1fr)
+  #part[$y = (2+x)/(x^2+1)$]
+  #v(1fr)
+
+  #part[$y = sqrt(3x-1)$]
+  #v(1fr)
+
+  #part[$y = 1/(x^2+1)$]
+  #v(1fr)
+  
+  #part[$y = (log(x+1))/(x^2-4)$]
+  #v(1fr)
 ]
 #pagebreak()
 
