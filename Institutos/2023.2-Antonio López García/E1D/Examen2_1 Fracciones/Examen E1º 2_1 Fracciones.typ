@@ -15,7 +15,7 @@
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
     number: "2º Evaluación 1º Examen",
-    content: "Fracciones",
+    content: "Radicales y fracciones",
     model: "Modelo A"
   ),
   
@@ -26,88 +26,73 @@
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
-    [Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada del examen que se valorará con un cero.],
+    [Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada de la prueba que se valorará con un cero.],
+    [Esta prueba ha de realizarse con boligrafo no borrable azul o negro.],
     [Deben aparecer todas las operaciones, no vale solo con indicar el resultado.],
     [Se ha de llegar a la solución más reducida posible.],
-    // [Se podrán quitar hasta cinco décimas por falta de claridad o rigor en el desarrollo de las respuestas o por una mala presentación.],
-    // [Se valorará que se indiquen las cuentas en línea, realizando las operaciones en el margen.],
-    [Está permitido utilizar la calculadora.],
-    [No está permitido compartir material durante el examen.],
+    [No está permitido utilizar calculadora, móvil, ni ningún otro tipo de aparato electrónico. La mera exhibición de material no permitido o la sospecha de haber sido utilizada por parte del corrector implicara la anulará de la prueba y por consiguiente será calificada con un cero.],
+    [No está permitido compartir material, durante la prueba.],
   )
 )
 
-#question(point: 2)[
-  Resuelve el siguiente sistema de inecuaciones:
-  \
-  \
-    #align(center,
-      $display(
-        cases(
-          4(x+1) - 2 &<= 0,
-          2x+4 &>= 6
-        )
-      )$
-    )
-]
-#v(1fr)
+#question(point:2)[Calcula las siguientes raíces:
+  #subquestion[$sqrt(49)=$]
+  #v(1fr)
 
-#question(point: 2)[
-  Resuelve el siguiente sistema de inecuaciones:
-  \
-  \
-    #align(center,
-      $display(
-        cases(
-          2x-y+2 &> 0,
-          x-3y &<= 0,
-          x &<= 3,
-          y <= 3
-        )
-      )$
-   )
-]
-#v(1fr)
-#pagebreak()
+  #subquestion[$sqrt(169)=$]
+  #v(1fr)
 
-#question(point: 2)[
-  A partir de la gráfica de la siguientes funciones, indica cuál es su dominio de definición y su recorrido:
-]
-#v(1fr)
+  #subquestion[$sqrt(15^2)=$]
+  #v(1fr)
 
-#question(point:2)[
-  Halla el dominio de definición de la s funciones:
-  + $y = (2+x)/(x^2+1)$ #v(1fr)
-  + $y = sqrt(3x-1)$ #v(1fr)
-  + $y = 1/(x^2+1)$ #v(1fr)
-  + $y = (log(x+1))/(x^2-4)$ #v(1fr)
+  #subquestion[$sqrt(2500)=$]
+  #v(1fr)
 ]
 #pagebreak()
 
-#question(point:2)[
-  Una función lineal esta definida en el intervalo $[-3,5)$. 
-  Escribe la expresión analitítica de dicha función lineal y represéntala, a partir de los siguientes datos:
-  $f(-2) = 3$ y $f(3) = -4$.
-]
-#v(1fr)
+#question(point: 2)[Realiza las siguientes operaciones con fracciones y simpliﬁca el resultado lo máximo posible: \ 
+  #text(size:8pt)[$(*)$  Recuerda que con las fracciones no se pueden utilizar decimales:]
 
-#question(point:2)[
-  Halla la función exponencial tipo $y=k dot a^x$, que pasa por los puntos $(1, 10)$ y $(-2,50)$. Representala aproximadamente.
+  #subquestion[$11+2/3+3/4=$]
+  #v(1fr)
+
+  #subquestion[$(3+1/5):2 + ((-3))/4=$]
+  #v(1fr)
+
+  #subquestion[$(5/2+3/4) - (2/10 + 5)=$]
+  #v(1fr)
+
+  #subquestion[$(5/2 dot 4/5) + 3/7=$]
+  #v(1fr)
 ]
-#v(1fr)
 #pagebreak()
 
-#question(point:2)[
-  Representa la siguiente función: \ \
-  $f(x) = display(
-        cases(
-          2/x &"si" &x < 0,
-          sqrt(x+1)-2 &"si" &x >= 0,
-        )
-      )$
-]
-#v(1fr)
+#question(point: 2)[Resuelve las operaciones convinadas
+  #subquestion[$5+3 dot (-4 +2)=$]
+  #v(1fr)
 
-#question(point:2)[
-  Obtén la expresión analítica de la siguiente función:
+  #subquestion[$(-3)^3+ 3 dot (10-13)=$]
+  #v(1fr)
+
+  #subquestion[$5 + (-4)^2 dot sqrt(25)=$]
+  #v(1fr)
+
+  #subquestion[$sqrt(9) + sqrt(25) - sqrt(36) + sqrt(81)=$]
+  #v(1fr)
 ]
-#v(1fr)
+#pagebreak()
+
+#question(point: 2)[Ordena de meyor a menor las siguientes fracciones 
+      \ \
+      #align(center, [$ 2/3 ; 3/8 ; 4/6 ; 1/2 $])
+]    
+// #v(1fr)
+#v(4cm)
+
+#question(point: 2)[En un jardin tenemos 20 rosales rojos, 10 blancos y 15 amarillos.
+  #subquestion[¿Qué fracción representa cada color?]
+  #v(1fr)
+
+  #subquestion[Si hemos podados los rosales rojos, ¿qué fracción nos queda por podar?]
+  #v(1fr)
+]
