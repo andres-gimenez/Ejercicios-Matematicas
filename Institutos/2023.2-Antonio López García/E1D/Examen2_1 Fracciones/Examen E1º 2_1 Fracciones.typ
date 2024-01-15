@@ -35,7 +35,7 @@
   )
 )
 
-#question(point:2)[Calcula las siguientes raíces:
+#question(point: 2)[Calcula las siguientes raíces:
   #subquestion[$sqrt(49)=$]
   #v(1fr)
 
@@ -48,7 +48,7 @@
   #subquestion[$sqrt(2500)=$]
   #v(1fr)
 ]
-#pagebreak()
+#pagebreak(weak: true)
 
 #question(point: 2)[Realiza las siguientes operaciones con fracciones y simpliﬁca el resultado lo máximo posible: \ 
   #text(size:8pt)[$(*)$  Recuerda que con las fracciones no se pueden utilizar decimales:]
@@ -65,10 +65,10 @@
   #subquestion[$(5/2 dot 4/5) + 3/7=$]
   #v(1fr)
 ]
-#pagebreak()
+#pagebreak(weak: true)
 
-#question(point: 2)[Resuelve las operaciones convinadas
-  #subquestion[$5+3 dot (-4 +2)=$]
+#question(point: 2)[Resuelve las operaciones convinadas:
+  #subquestion[$5+3 dot (-4 +2)=43$]
   #v(1fr)
 
   #subquestion[$(-3)^3+ 3 dot (10-13)=$]
@@ -82,12 +82,12 @@
 ]
 #pagebreak()
 
-#question(point: 2)[Ordena de meyor a menor las siguientes fracciones 
+#question(point: 2)[Ordena de meyor a menor las siguientes fracciones:
       \ \
       #align(center, [$ 2/3 ; 3/8 ; 4/6 ; 1/2 $])
 ]    
-// #v(1fr)
-#v(4cm)
+#v(1fr)
+// #v(4cm)
 
 #question(point: 2)[En un jardin tenemos 20 rosales rojos, 10 blancos y 15 amarillos.
   #subquestion[¿Qué fracción representa cada color?]

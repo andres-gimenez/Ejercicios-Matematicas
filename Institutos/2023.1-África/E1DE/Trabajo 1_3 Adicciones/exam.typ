@@ -137,18 +137,13 @@
       ]
     }
     else{
-      grid(
-        columns: (1em, 0.3em, 90%, 20%),
-        rows: (auto),
-        [ 
-          #question-number.display(question-numbering)
-        ],
-        [],
-        [
-          #body \ \
-        ], 
-        [#h(0.7em) #paint-tab(point: point)]
-      )
+      [#place(right, 
+        dx: 14%,
+        float: false,
+        [#h(0.7em) #paint-tab(point: point)]) 
+          #question-number.display(question-numbering) 
+          #body
+      ]
     }
   })
   
@@ -172,19 +167,13 @@
         ]
       }
       else{ 
-        grid(
-          columns: (1.5em, 1.5em, 0.3em, 90% - 1.5em, 20%),
-          rows: (auto),
-          [],
-          [
-           #question-number.display(question-numbering)
-          ],
-          [],
-          [
-            #body \ \
-          ],
-          [#h(0.7em) #paint-tab(point: point)]
-        )
+          [#place(right, 
+            dx: 14%,
+            float: false,
+            [#h(0.7em) #paint-tab(point: point)]) 
+            #question-number.display(question-numbering) 
+            #body
+          ]
       }
     }
   )
@@ -275,7 +264,7 @@
           top + right,
           float: true,
           clearance: 0pt,
-          dx:60pt,
+          dx:72pt,
           dy:-115pt,
           rotate(270deg,
           origin: top + right,
@@ -303,9 +292,14 @@
     author: author.name
   )
 
+  let margin-right = 2.5cm
+  if (question-point-position == right) {
+    margin-right = 3cm
+  }
+
   set page(
     paper: "a4", 
-    margin: (top: 5cm),
+    margin: (top: 5cm, right:margin-right),
     numbering: "1 / 1",
     number-align: right,
     header-ascent: 20%,
@@ -422,7 +416,7 @@
 
   set par(justify: true) 
   set text(font: "New Computer Modern")
-
+  
   question-point-position-state.update(u => question-point-position)
 
   set text(lang:languaje)
