@@ -1,4 +1,4 @@
-#import "./exam.typ": exam, question, part
+#import "./exam.typ": exam, question, subquestion
 
 #show: exam.with(
   author: (

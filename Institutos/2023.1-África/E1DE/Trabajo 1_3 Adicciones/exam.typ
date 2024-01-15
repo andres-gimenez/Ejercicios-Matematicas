@@ -1,3 +1,5 @@
+// Plantilla Examen 0.2
+
 #import "@preview/oxifmt:0.2.0": strfmt
 
 #let question-number = counter("question-number")
@@ -152,12 +154,12 @@
   
 }
 
-#let part(point: none, body) = {
+#let subquestion(point: none, body) = {
   question-number.step(level: 2)
 
-  let part-point = 0
-  if point != none { part-point = point }
-  question-point.update(p => p + part-point )
+  let subquestion-point = 0
+  if point != none { subquestion-point = point }
+  question-point.update(p => p + subquestion-point )
 
   locate(loc => {
       let question-point-position = question-point-position-state.final(loc)
@@ -442,7 +444,7 @@
 
   // show heading.where(level: 2): it => {
   //   set text(12pt, weight: "regular")
-  //   part(point: none)[#it.body]
+  //   subquestion(point: none)[#it.body]
   // }
 
 

@@ -1,5 +1,4 @@
-// #import "./exam.typ": exam, question, part
-#import "./exam.typ": *
+#import "./exam.typ": exam, question, subquestion
 
 #show: exam.with(
   author: (
@@ -49,18 +48,18 @@
 #pagebreak(weak:true)
 
 #question[Resuelve las siguientes expresiones:]
-  #part(point: 1.7)[
+  #subquestion(point: 1.7)[
     $4 - x = 2$
   ]
   #v(3fr)
   
-  #part()[
+  #subquestion()[
     $5 + x = 3$
     $ integral_2^4 1/x dif x $
   ]
   #v(1fr)
 
-  #part(point: 2)[
+  #subquestion(point: 2)[
     #lorem(45)
   ]
   #v(2fr)
@@ -70,12 +69,12 @@
 #question(point: 2.3)[ 
   #lorem(45)
   ]
-   #part(point: 1)[
+   #subquestion(point: 1)[
     $4 - x = 2$
   ]
   #v(3fr)
   
-  #part()[
+  #subquestion()[
     $5 + x = 3$
     $ integral_2^4 1/x dif x $
   ]

@@ -1,4 +1,4 @@
-#import "./exam.typ": exam, question, part
+#import "./exam.typ": exam, question, subquestion
 // #import emoji: *
 
 #show: exam.with(

@@ -1,4 +1,4 @@
-#import "./exam.typ": exam, question, part
+#import "./exam.typ": exam, question, subquestion
 
 #show: exam.with(
   author: (
@@ -37,50 +37,50 @@
 
 #question(point: 2)[Realiza las siguientes operaciones:]
   
-  #part[$display((5/2+1) dot (4/7+2/3) = )$]
+  #subquestion[$display((5/2+1) dot (4/7+2/3) = )$]
   #v(1fr)
 
-  #part[$display((2 dot 5/21) + (4/7 dot 2/3) =)$]
+  #subquestion[$display((2 dot 5/21) + (4/7 dot 2/3) =)$]
   #v(1fr)
 
 #pagebreak()
 
 #question(point: 2)[Expresa como una única potencia:]
 
-  #part[$display((-5)^3 dot (-5)^4 : (-5)^2 = )$]
+  #subquestion[$display((-5)^3 dot (-5)^4 : (-5)^2 = )$]
   #v(1fr)
 
-  #part[$display(45^7 dot 45^9 dot 45^3 =)$]
+  #subquestion[$display(45^7 dot 45^9 dot 45^3 =)$]
   #v(1fr)
 
-  #part[$display((3^2 dot 3^3) ^2 =)$]
+  #subquestion[$display((3^2 dot 3^3) ^2 =)$]
   #v(1fr)
 
-  #part[$display(2^3 dot 3^3 =)$]
+  #subquestion[$display(2^3 dot 3^3 =)$]
   #v(1fr)
 
 #question(point: 2)[Calcula las siguientes raíces, factorizando en números primos:]
 
-  #part[$display(sqrt(64)) =$]
+  #subquestion[$display(sqrt(64)) =$]
   #v(1fr)
 
-  #part[$display(sqrt(729)) =$]
+  #subquestion[$display(sqrt(729)) =$]
   #v(1fr)
 
-  #part[$display(sqrt(900)) =$]
+  #subquestion[$display(sqrt(900)) =$]
   #v(1fr)
 
-  #part[$display(sqrt(225)) =$]
+  #subquestion[$display(sqrt(225)) =$]
   #v(1fr)
 
 #pagebreak()
 
 #question(point: 2)[Opera y simplifica los resultados siguientes:]
 
-  #part[$display(15/18 + (3/2-1/4)^2)$]
+  #subquestion[$display(15/18 + (3/2-1/4)^2)$]
   #v(1fr)
 
-  #part[$display(4/3+(3/2-1/4)^2)$]
+  #subquestion[$display(4/3+(3/2-1/4)^2)$]
   #v(1fr)
 
 #pagebreak()
