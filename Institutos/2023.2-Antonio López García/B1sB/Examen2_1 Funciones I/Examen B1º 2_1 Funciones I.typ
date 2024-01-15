@@ -1,4 +1,4 @@
-#import "./exam.typ": exam, question, part
+#import "./exam.typ": exam, question, subquestion
 
 #show: exam.with(
   author: (
@@ -76,16 +76,16 @@
 
 #question(point:2)[
   Halla el dominio de definición de la s funciones:
-  #part[$y = (2+x)/(x^2+1)$]
+  #subquestion[$y = (2+x)/(x^2+1)$]
   #v(1fr)
 
-  #part[$y = sqrt(3x-1)$]
+  #subquestion[$y = sqrt(3x-1)$]
   #v(1fr)
 
-  #part[$y = 1/(x^2+1)$]
+  #subquestion[$y = 1/(x^2+1)$]
   #v(1fr)
   
-  #part[$y = (log(x+1))/(x^2-4)$]
+  #subquestion[$y = (log(x+1))/(x^2-4)$]
   #v(1fr)
 ]
 #pagebreak()
