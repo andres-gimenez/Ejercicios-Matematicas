@@ -141,8 +141,8 @@
         dx: 14%,
         float: false,
         [#h(0.7em) #paint-tab(point: point)]) 
-          #question-number.display(question-numbering) 
-          #body
+      #question-number.display(question-numbering) 
+      #body \ \
       ]
     }
   })
@@ -171,8 +171,8 @@
             dx: 14%,
             float: false,
             [#h(0.7em) #paint-tab(point: point)]) 
-            #question-number.display(question-numbering) 
-            #body
+          #question-number.display(question-numbering) 
+          #body \ \
           ]
       }
     }

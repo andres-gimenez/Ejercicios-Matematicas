@@ -137,12 +137,13 @@
       ]
     }
     else{
-      [#place(right, 
-        dx: 14%,
-        float: false,
-        [#h(0.7em) #paint-tab(point: point)]) 
-          #question-number.display(question-numbering) 
-          #body
+      [
+        #place(right, 
+          dx: 14%,
+          float: false,
+          [#h(0.7em) #paint-tab(point: point)]) 
+        #question-number.display(question-numbering) 
+        #body \ \
       ]
     }
   })
@@ -167,13 +168,14 @@
         ]
       }
       else{ 
-          [#place(right, 
+        [
+          #place(right, 
             dx: 14%,
             float: false,
             [#h(0.7em) #paint-tab(point: point)]) 
-            #question-number.display(question-numbering) 
-            #body
-          ]
+          #question-number.display(question-numbering) 
+          #body \ \
+        ]
       }
     }
   )
