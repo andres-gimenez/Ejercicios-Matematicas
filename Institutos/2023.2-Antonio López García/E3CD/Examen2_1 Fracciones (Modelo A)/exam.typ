@@ -456,4 +456,6 @@
   [#hide[]<end-exam>]
 }
 
-
+#let explanation(size:8pt, body) = { 
+  text(size:size)[$(*)$ #body] 
+}
