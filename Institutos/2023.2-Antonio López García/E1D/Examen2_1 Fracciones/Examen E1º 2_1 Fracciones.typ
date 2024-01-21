@@ -35,49 +35,88 @@
   )
 )
 
-#question(point: 2)[Calcula las siguientes raíces:
-  #subquestion[$sqrt(49)=$]
+// #question(point: 2)[Calcula las siguientes raíces:
+//   #subquestion[$sqrt(49)=$]
+//   #v(1fr)
+
+//   #subquestion[$sqrt(169)=$]
+//   #v(1fr)
+
+//   #subquestion[$sqrt(15^2)=$]
+//   #v(1fr)
+
+//   #subquestion[$sqrt(2500)=$]
+//   #v(1fr)
+// ]
+// #pagebreak(weak: true)
+
+// #question(point: 2)[Realiza las siguientes operaciones con fracciones y simpliﬁca el resultado lo máximo posible: \ 
+//   #text(size:8pt)[$(*)$  Recuerda que con las fracciones no se pueden utilizar decimales:]
+
+//   #subquestion[$11+2/3+3/4=$]
+//   #v(1fr)
+
+//   #subquestion[$(3+1/5):2 + ((-3))/4=$]
+//   #v(1fr)
+
+//   #subquestion[$(5/2+3/4) - (2/10 + 5)=$]
+//   #v(1fr)
+
+//   #subquestion[$(5/2 dot 4/5) + 3/7=$]
+//   #v(1fr)
+// ]
+// #pagebreak(weak: true)
+
+// #question(point: 2)[Resuelve las operaciones convinadas:
+//   #subquestion[$5+3 dot (-4 +2)=43$]
+//   #v(1fr)
+
+//   #subquestion[$(-3)^3+ 3 dot (10-13)=$]
+//   #v(1fr)
+
+//   #subquestion[$5 + (-4)^2 dot sqrt(25)=$]
+//   #v(1fr)
+
+//   #subquestion[$sqrt(9) + sqrt(25) - sqrt(36) + sqrt(81)=$]
+//   #v(1fr)
+// ]
+// #pagebreak()
+
+#question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
+  #subquestion[$display(5/12 dot 9/15=)$]
   #v(1fr)
 
-  #subquestion[$sqrt(169)=$]
+  #subquestion[$display(10 dot 9/15=)$]
   #v(1fr)
 
-  #subquestion[$sqrt(15^2)=$]
+  #subquestion[$display(5/12 : 4/15=)$]
   #v(1fr)
 
-  #subquestion[$sqrt(2500)=$]
+  #subquestion[$display(2 : 5/3 =)$]
   #v(1fr)
 ]
-#pagebreak(weak: true)
+#pagebreak()
 
-#question(point: 2)[Realiza las siguientes operaciones con fracciones y simpliﬁca el resultado lo máximo posible: \ 
-  #text(size:8pt)[$(*)$  Recuerda que con las fracciones no se pueden utilizar decimales:]
-
-  #subquestion[$11+2/3+3/4=$]
+#question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
+  #subquestion[$display(4/11+5/11-2/11=)$]
   #v(1fr)
 
-  #subquestion[$(3+1/5):2 + ((-3))/4=$]
+  #subquestion[$display(3+2/5=)$]
   #v(1fr)
 
-  #subquestion[$(5/2+3/4) - (2/10 + 5)=$]
+  #subquestion[$display(7/12+2/9=)$]
   #v(1fr)
 
-  #subquestion[$(5/2 dot 4/5) + 3/7=$]
+  #subquestion[$display(1-9/13=)$]
   #v(1fr)
 ]
-#pagebreak(weak: true)
+#pagebreak()
 
-#question(point: 2)[Resuelve las operaciones convinadas:
-  #subquestion[$5+3 dot (-4 +2)=43$]
+#question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
+  #subquestion[$display(3/5 - (1-7/10) = )$]
   #v(1fr)
 
-  #subquestion[$(-3)^3+ 3 dot (10-13)=$]
-  #v(1fr)
-
-  #subquestion[$5 + (-4)^2 dot sqrt(25)=$]
-  #v(1fr)
-
-  #subquestion[$sqrt(9) + sqrt(25) - sqrt(36) + sqrt(81)=$]
+  #subquestion[$display((3-5/3) - (2-7/5) =)$]
   #v(1fr)
 ]
 #pagebreak()
@@ -85,9 +124,8 @@
 #question(point: 2)[Ordena de meyor a menor las siguientes fracciones:
       \ \
       #align(center, [$ 2/3 ; 3/8 ; 4/6 ; 1/2 $])
+      #v(1fr)
 ]    
-#v(1fr)
-// #v(4cm)
 
 #question(point: 2)[En un jardin tenemos 20 rosales rojos, 10 blancos y 15 amarillos.
   #subquestion[¿Qué fracción representa cada color?]
