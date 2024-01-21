@@ -116,7 +116,7 @@
   #subquestion[$display(3/5 - (1-7/10) = )$]
   #v(1fr)
 
-  #subquestion[$display((3-5/3) - (2-7/5) =)$]
+  #subquestion[$display((3-5/3) dot (2-7/5) =)$]
   #v(1fr)
 ]
 #pagebreak()
