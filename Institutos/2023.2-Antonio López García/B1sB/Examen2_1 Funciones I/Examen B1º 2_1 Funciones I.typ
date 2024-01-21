@@ -72,6 +72,100 @@
 
 #question(point: 2)[
   A partir de la gráfica de la siguientes funciones, indica cuál es su dominio de definición y su recorrido:
+
+  #cetz.canvas(length: 0.5cm, {
+      cetz.plot.plot(
+        // axes: ("x", "y"),
+        size: (12, 11),
+        axis-style: "school-book",
+        fill: "o" ,
+        fill-below: true,
+        // horizontal:false,
+        x-domain: (-4, 8),
+        y-domain: (-5, 5),
+        x-max: 8,
+        x-min:-4,
+        y-max: 5,
+        y-min:-5,
+        x-grid: "both",
+        y-grid: "both",
+        // x-tick-step: none,
+        x-tick-step: 2,
+        // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
+        y-tick-step: 2,
+        x-minor-tick-step: 1,
+        y-minor-tick-step: 1,
+          {
+            cetz.plot.add(((0,0),), mark-size: 0,)
+            cetz.plot.add-vline(3,
+              // style:(
+              //   stroke: (
+              //     colors: (color.luma(90),),
+              //     // dash: "dashed",
+              //     ),
+              // ),
+              // style: (
+              //   // stroke: color.luma(100) + ,
+              //     // colors: (color.gray, ),
+              //     // colors: (color.luma(100),),
+              //     // dash: "dashed",
+              //   // ),
+              // ),
+              style: (stroke: (paint: color.luma(100), thickness: 1pt, dash: "dashed")),
+            )
+            cetz.plot.add(
+              style: (stroke: black),
+              // domain: (-4, 6),
+              domain: (-4, 2.9),
+              // mark: "+",
+              x=>1/(x+(-3))
+            )
+            cetz.plot.add(
+              style: (stroke: black),
+              domain: (3.1, 8), 
+              // mark: "+",
+              x=>1/(x+(-3))
+            )
+          }
+        )
+      }
+    )
+
+    #cetz.canvas(length: 0.5cm, {
+      cetz.plot.plot(
+        // axes: ("x", "y"),
+        size: (12, 11),
+        axis-style: "school-book",
+        fill: "o" ,
+        fill-below: true,
+        // horizontal:false,
+        x-domain: (-4, 8),
+        y-domain: (-5, 5),
+        x-max: 8,
+        x-min:-4,
+        y-max: 5,
+        y-min:-5,
+        x-grid: "both",
+        y-grid: "both",
+        // x-tick-step: none,
+        x-tick-step: 2,
+        // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
+        y-tick-step: 2,
+        x-minor-tick-step: 1,
+        y-minor-tick-step: 1,
+          {
+            cetz.plot.add(((0,0),), mark-size: 0,)
+            cetz.plot.add(
+              style: (stroke: black),
+              // domain: (-4, 6),
+              domain: (2, 8),
+              // mark: "+",
+              x=>calc.sqrt(4/3*x+(-8/3))
+            )
+          }
+        )
+      }
+    )
 ]
 #v(1fr)
 
@@ -104,14 +198,57 @@
 #v(1fr)
 #pagebreak()
 
+#let style = (stroke: black)
+
 #question(point:2)[
   Representa la siguiente función: \ \
-  $f(x) = display(
-        cases(
-          2/x &"si" &x < 0,
-          sqrt(x+1)-2 &"si" &x >= 0,
+    $f(x) = display(
+      cases(
+        2/x &"si" &x < 0,
+        sqrt(x+1)-2 &"si" &x >= 0,
+      )
+    )$
+      
+    #cetz.canvas(length: 0.5cm, {
+      cetz.plot.plot(
+        // axes: ("x", "y"),
+        size: (12, 11),
+        axis-style: "school-book",
+        fill: "o" ,
+        fill-below: true,
+        // horizontal:false,
+        x-domain: (-10, 10),
+        y-domain: (-10, 10),
+        x-max: 10,
+        x-min:-10,
+        y-max: 10,
+        y-min:-10,
+        x-grid: "both",
+        y-grid: "both",
+        // x-tick-step: none,
+        x-tick-step: 2,
+        // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
+        y-tick-step: 2,
+        x-minor-tick-step: 1,
+        y-minor-tick-step: 1,
+          {
+            cetz.plot.add(((0,0),), mark-size: 0,)
+            // cetz.plot.add(
+            //   style: style,
+            //   domain: (-10, 0.1), 
+            //   // mark: "+",
+            //   x=>2/x
+            // )
+            // cetz.plot.add(
+            //   style: style,
+            //   domain: (0, 10), 
+            //   // mark: "+",
+            //   x=>calc.sqrt(x+1)-2
+            // )
+          }
         )
-      )$
+      }
+    )
 ]
 #v(1fr)
 
@@ -122,9 +259,6 @@
   Obtén la expresión analítica de la siguiente función:
   //  #align(center, 
     #cetz.canvas(length: 0.5cm, {
-      // import cetz.draw: *
-      // cetz.draw.grid((-4, 8), (-2, 9), step: 0.5, stroke: gray + 0.2pt)
-
       cetz.plot.plot(
         // axes: ("x", "y"),
         size: (12, 11),
@@ -147,17 +281,34 @@
         x-minor-tick-step: 1,
         y-minor-tick-step: 1,
           {
-            cetz.plot.add(((2,5),(2,3)), mark: "o")
-
             cetz.plot.add(
               style: style,
               domain: (-4, 2), 
               // mark: "+",
-              x=> x*x+1)
+              x=> x*x+1
+            )
             cetz.plot.add(
               style: style,
               domain: (2, 8), 
-              x=>x+1)
+              // mark: "+",
+              x=>x+1
+            )
+
+            cetz.plot.add(
+              ((2,5),),
+              style: (stroke: none),
+              mark: "o",
+              mark-size: 0.25,
+              mark-style:(stroke: black, fill: color.black)
+            )
+            cetz.plot.add(
+              // style: style,
+              style: (stroke: none),
+              ((2,3),),
+              mark: "o",
+              mark-size: 0.25,
+              mark-style:(stroke: black, fill: color.white)
+            )
           }
         )
       }
@@ -167,78 +318,4 @@
 
 #v(1fr)
 
- #cetz.plot.add(
-              style: style,
-              domain: (-4, 2), calc.sin)
-
-// #align(center, 
-//     cetz.canvas(
-//       length: 0.5cm,
-//       {
-//         import cetz.draw: *
-
-//         set-style(
-//           mark: (fill: black),
-//           stroke: (thickness: 0.4pt, cap: "round"),
-//           content: (padding: 1pt)
-//         )
-
-//         grid((-10, -10), (10, 10), step: 1, stroke: gray + 0.6pt)
-
-//         line((-10.5, 0), (10.5, 0), mark: (end: ">"))
-//         content((), $ x $, anchor: "left")
-//         line((0, -10.5), (0, 10.5), mark: (end: ">"))
-//         content((), $ y $, anchor: "bottom")
-//       }
-//     )
-//   )
-
-#cetz.canvas(length: 3cm, {
-  import cetz.draw: *
-
-  set-style(
-    mark: (fill: black, scale: 2),
-    stroke: (thickness: 0.4pt, cap: "round"),
-    angle: (
-      radius: 0.3,
-      label-radius: .22,
-      fill: green.lighten(80%),
-      stroke: (paint: green.darken(50%))
-    ),
-    content: (padding: 1pt)
-  )
-
-  grid((-1.5, -1.5), (1.4, 1.4), step: 0.5, stroke: gray + 0.2pt)
-
-  // circle((0,0), radius: 1)
-
-  line((-1.5, 0), (1.5, 0), mark: (end: "stealth"))
-  content((), $ x $, anchor: "west")
-  line((0, -1.5), (0, 1.5), mark: (end: "stealth"))
-  content((), $ y $, anchor: "south")
-
-  // for (x, ct) in ((-1, $ -1 $), (-0.5, $ -1/2 $), (1, $ 1 $)) {
-  //   line((x, 3pt), (x, -3pt))
-  //   content((), anchor: "north", ct)
-  // }
-
-  // for (y, ct) in ((-1, $ -1 $), (-0.5, $ -1/2 $), (0.5, $ 1/2 $), (1, $ 1 $)) {
-  //   line((3pt, y), (-3pt, y))
-  //   content((), anchor: "east", ct)
-  // }
-
-  // Draw the green angle
-  // cetz.angle.angle((0,0), (1,0), (1, calc.tan(30deg)),
-  //   label: text(green, [#sym.alpha]))
-
-  // line((0,0), (1, calc.tan(30deg)))
-
-  // set-style(stroke: (thickness: 1.2pt))
-
-  // line((30deg, 1), ((), "|-", (0,0)), stroke: (paint: red), name: "sin")
-  // content(("sin.start", 50%, "sin.end"), text(red)[$ sin alpha $])
-  // line("sin.end", (0,0), stroke: (paint: blue), name: "cos")
-  // content(("cos.start", 50%, "cos.end"), text(blue)[$ cos alpha $], anchor: "north")
-  // line((1, 0), (1, calc.tan(30deg)), name: "tan", stroke: (paint: orange))
-  // content("tan.end", $ text(#orange, tan alpha) = text(#red, sin alpha) / text(#blue, cos alpha) $, anchor: "west")
-})
+ 
