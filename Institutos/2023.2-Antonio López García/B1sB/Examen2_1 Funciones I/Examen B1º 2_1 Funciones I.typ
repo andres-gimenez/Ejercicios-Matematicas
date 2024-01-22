@@ -41,8 +41,8 @@
   Resuelve el siguiente sistema de inecuaciones:
   \
   \
-    #align(center,
-      $display(
+    #align(left,
+      $ display(
         cases(
           4(x+1) - 2 &<= 0,
           2x+4 &>= 6
@@ -56,13 +56,13 @@
   Resuelve el siguiente sistema de inecuaciones:
   \
   \
-    #align(center,
+    #align(left,
       $display(
         cases(
           2x-y+2 &> 0,
           x-3y &<= 0,
           x &<= 3,
-          y <= 3
+          y &<= 3
         )
       )$
    )
@@ -170,17 +170,17 @@
 #v(1fr)
 
 #question(point:2)[
-  Halla el dominio de definición de la s funciones:
-  #subquestion[$y = (2+x)/(x^2+1)$]
+  Halla el dominio de definición de las funciones:
+  #subquestion[$display(f(x) = (2+x)/(x^2+1))$]
   #v(1fr)
 
-  #subquestion[$y = sqrt(3x-1)$]
+  #subquestion[$display(f(x) = sqrt(3x-1))$]
   #v(1fr)
 
-  #subquestion[$y = 1/(x^2+1)$]
+  #subquestion[$display(f(x) = 1/(x^2+1))$]
   #v(1fr)
   
-  #subquestion[$y = (log(x+1))/(x^2-4)$]
+  #subquestion[$display(f(x) = (log(x+1))/(x^2-4))$]
   #v(1fr)
 ]
 #pagebreak()

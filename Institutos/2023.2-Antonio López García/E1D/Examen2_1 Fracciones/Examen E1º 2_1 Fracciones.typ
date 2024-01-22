@@ -30,7 +30,7 @@
     [Esta prueba ha de realizarse con boligrafo no borrable azul o negro.],
     [Deben aparecer todas las operaciones, no vale solo con indicar el resultado.],
     [Se ha de llegar a la solución más reducida posible.],
-    [No está permitido utilizar calculadora, móvil, ni ningún otro tipo de aparato electrónico. La mera exhibición de material no permitido o la sospecha de haber sido utilizada por parte del corrector implicara la anulará de la prueba y por consiguiente será calificada con un cero.],
+    [No está permitido utilizar calculadora, móvil, ni ningún otro tipo de aparato electrónico. La mera exhibición de material no permitido o la sospecha de haber sido utilizada por parte del corrector, implicará la anulará de la prueba y por consiguiente será calificada con un cero.],
     [No está permitido compartir material, durante la prueba.],
   )
 )
@@ -121,13 +121,13 @@
 ]
 #pagebreak()
 
-#question(point: 2)[Ordena de meyor a menor las siguientes fracciones:
+#question(point: 2)[Ordena de mayor a menor las siguientes fracciones:
       \ \
       #align(center, [$ 2/3 ; 3/8 ; 4/6 ; 1/2 $])
       #v(1fr)
 ]    
 
-#question(point: 2)[En un jardin tenemos 20 rosales rojos, 10 blancos y 15 amarillos.
+#question(point: 2)[En un jardín tenemos 20 rosales rojos, 10 blancos y 15 amarillos.
   #subquestion[¿Qué fracción representa cada color?]
   #v(1fr)
 

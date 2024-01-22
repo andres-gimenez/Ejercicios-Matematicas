@@ -31,7 +31,7 @@
     [Deben aparecer todas las operaciones, no vale solo con indicar el resultado.],
     [Se ha de llegar a la solución más reducida posible.],
     [No está permitido el uso móvil, ni ningún otro tipo de aparato electrónico, salvo una calculadora no programable. 
-    La mera exhibición de material no permitido o la sospecha de haber sido utilizada por parte del corrector implicara la anulará de la prueba y por consiguiente será calificada con un cero.],
+    La mera exhibición de material no permitido o la sospecha de haber sido utilizada por parte del corrector, implicará la anulará de la prueba y por consiguiente será calificada con un cero.],
     [No está permitido compartir material, durante la prueba.],
   )
 )
