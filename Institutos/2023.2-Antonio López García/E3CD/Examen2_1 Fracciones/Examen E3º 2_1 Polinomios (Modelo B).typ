@@ -27,7 +27,7 @@
   question-point-position: right,
   clarifications: (
  [Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada de la prueba que se valorará con un cero.],
-    [Esta prueba ha de realizarse con boligrafo no borrable azul o negro.],
+    [Esta prueba ha de realizarse con bolígrafo no borrable azul o negro.],
     [Deben aparecer todas las operaciones, no vale solo con indicar el resultado.],
     [Se ha de llegar a la solución más reducida posible.],
     [No está permitido el uso móvil, ni ningún otro tipo de aparato electrónico, salvo una calculadora no programable. 
@@ -42,22 +42,22 @@
     El no mostrar los factores primos o el utilizar número decimales anulará la respuesta.
   ]
   
-  #subquestion[$sqrt(45) + sqrt(20)=$]
+  #subquestion[$display(sqrt(45) + sqrt(20) = )$]
   #v(1fr)
 
-  #subquestion[$sqrt(28) - sqrt(63) - sqrt(175) + sqrt(112)=$]
+  #subquestion[$display(sqrt(28) - sqrt(63) - sqrt(175) + sqrt(112) = )$]
   #v(1fr)
 
-  #subquestion[$5 sqrt(20) - 2 sqrt(45) + 2 sqrt(245)=$]
+  #subquestion[$display(5 sqrt(20) - 2 sqrt(45) + 2 sqrt(245) = )$]
   #v(1fr)
 
-  #subquestion[$3/2 root(3, 32) + 4/5 root(3, 500) - 5/3 root(3, 108)=$]
+  #subquestion[$display(3/2 root(3, 32) + 4/5 root(3, 500) - 5/3 root(3, 108) = )$]
   #v(1fr)
 ]
 
 #pagebreak()
 
-#question(point: 2)[Si $P(x) = x^4+x^3-2x^2+x-2$, evalúa:
+#question(point: 1.5)[Si $P(x) = x^4+x^3-2x^2+x-2$, evalúa:
   #subquestion[$P(-1)=$]
   #v(1fr)
 
@@ -68,33 +68,47 @@
   #v(1fr)
 ]
 
-#question(point: 2)[Sea $P(x) = x^5+3x^3-2x^2+2$, $Q(x)=2x^4-3x^2-1$ $R(x) = x^2+1$. Calcula:
-  #subquestion[$P(x) - Q(x) =$]
-  #v(6fr)
+// #question(point: 2)[Sea $P(x) = x^5+3x^3-2x^2+2$, $Q(x)=2x^4-3x^2-1$ $R(x) = x^2+1$. Calcula:
+//   #subquestion[$P(x) - Q(x) =$]
+//   #v(6fr)
 
-  #subquestion[$Q(x) dot R(x)=$]
-  #v(6fr)
-]
+//   #subquestion[$Q(x) dot R(x)=$]
+//   #v(6fr)
+// ]
+
+#question(point: 2)[Sea $P(x) = x^5+x^3-3x+1$ y $Q(x)= x+2$ Realiza la división $P(x):Q(x)$ por el método de Rouffini y expresa el resultado de la forma $P(x) = Q(X) dot C(x) + R(x)$.]
+#v(8fr)
 #pagebreak()
 
 #question(point: 2)[Sea $P(x)=x^4-x^2+1$ y $Q(x) = x^2+1$ Realiza la división $P(x):Q(x)$ y expresa el resultado de la forma $P(x) = Q(X) dot C(x) + R(x)$. 
 ]
 #v(1fr)
-
-#question(point: 2)[Sea $P(x) = x^5+x^3-3x+1$ y $Q(x)= x+2$ Realiza la división $P(x):Q(x)$ por el método de Rouffini y expresa el resultado de la forma $P(x) = Q(X) dot C(x) + R(x)$.]
-#v(1fr)
 #pagebreak()
 
-#question(point: 2)[Factoriza las siguientes expresiones, sacando factor común o utilizando las desigualdades notables:
+#question(point: 1)[Factoriza las siguientes expresiones, sacando factor común o utilizando las desigualdades notables:
   #subquestion[$x^3+5x = $]
   #v(1fr)
 
   #subquestion[$5x^4+25x^2 = $]
   #v(1fr)
 
-  #subquestion[$x^2-2x+1= $]
+  // #subquestion[$display(x^2-2x+1 = )$]
+  // #v(1fr)
+
+  // #subquestion[$display(x^2 - 9 = )$]
+  // #v(1fr)
+]
+
+#question(point: 1.5)[Realiza las siguientes operaciones utilizando las igualdades notables:
+  #subquestion[$display((x^2 + 3)^2 =)$]
   #v(1fr)
 
-  #subquestion[$x^2 - 9=$]
+  #subquestion[$display((x^2 - 3y)^2 =)$]
+  #v(1fr)
+
+  #subquestion[$display((x + 2y^2) (x - 2y^2) =)$]
+  #v(1fr)
+
+  #subquestion[$display((x + 3) (x + 3) =)$]
   #v(1fr)
 ]

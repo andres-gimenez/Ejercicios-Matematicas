@@ -26,8 +26,9 @@
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
+    [Esta prueba ha de realizarse con bolígrafo no borrable azul o negro.],
     [Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada de la prueba que se valorará con un cero.],
-    [Esta prueba ha de realizarse con boligrafo no borrable azul o negro.],
+    [Esta prueba ha de realizarse con bolígrafo no borrable azul o negro.],
     [Deben aparecer todas las operaciones, no vale solo con indicar el resultado.],
     [Se ha de llegar a la solución más reducida posible.],
     [No está permitido utilizar calculadora, móvil, ni ningún otro tipo de aparato electrónico. La mera exhibición de material no permitido o la sospecha de haber sido utilizada por parte del corrector, implicará la anulará de la prueba y por consiguiente será calificada con un cero.],
