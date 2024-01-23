@@ -42,11 +42,11 @@
     El no mostrar los factores primos o el utilizar número decimales anulará la respuesta.
   ]
 
-  #subquestion[$display(sqrt(12) + sqrt(27) = )$]
-  #v(1fr)
+  // #subquestion[$display(sqrt(12) + sqrt(27) = )$]
+  // #v(1fr)
  
-  #subquestion[$display(sqrt(28) - sqrt(112) + sqrt(175) - sqrt(63) = ) $]
-  #v(1fr)
+  // #subquestion[$display(sqrt(28) - sqrt(112) + sqrt(175) - sqrt(63) = ) $]
+  // #v(1fr)
 
   #subquestion[$display(5 sqrt(2) - 2 sqrt(18) + sqrt(8) -2 sqrt(50) = )$]
   #v(1fr)
@@ -56,14 +56,14 @@
 ]
 #pagebreak()
 
-#question(point: 1.5)[Si $P(x) = x^4+2x^3-x^2+x+2$, evalúa:
-  #subquestion[$P(-1)=$]
+#question[Si $P(x) = x^4+2x^3-x^2+x+2$, evalúa:
+  #subquestion(point: 0.5)[$P(-1)=$]
   #v(1fr)
 
-  #subquestion[$P(0)=$]
+  #subquestion(point: 0.5)[$P(0)=$]
   #v(1fr)
 
-  #subquestion[$P(1/2)=$]
+  #subquestion(point: 0.5)[$P(1/2)=$]
   #v(1fr)
 ]
 
@@ -88,7 +88,7 @@
   #subquestion[$display(x^3+3x = )$]
   #v(1fr)
 
-  #subquestion[$display(3x^4+9x^2 = )$]
+  #subquestion[$display(3x^4 y +9x^2 y = )$]
   #v(1fr)
 
   // #subquestion[$display(x^2+2x+1 = )$]
@@ -98,16 +98,16 @@
   // #v(1fr)
 ]
 
-#question(point: 1.5)[Realiza las siguientes operaciones utilizando las igualdades notables:
-  #subquestion[$display((x^2 + 2)^2 =)$]
+#question[Realiza las siguientes operaciones utilizando las igualdades notables:
+  #subquestion(point:0.5)[$display((x^2 + 2)^2 =)$]
   #v(1fr)
 
-  #subquestion[$display((x^2 - 2y)^2 =)$]
+  #subquestion(point:0.5)[$display((x^2 - 2y)^2 =)$]
   #v(1fr)
 
-  #subquestion[$display((x + 3y^3) (x - 3y^2) =)$]
+  #subquestion(point:0.5)[$display((x + 3y^3) (x - 3y^2) =)$]
   #v(1fr)
 
-  #subquestion[$display((x + 2) (x + 2) =)$]
-  #v(1fr)
+  // #subquestion[$display((x + 2) (x + 2) =)$]
+  // #v(1fr)
 ]
