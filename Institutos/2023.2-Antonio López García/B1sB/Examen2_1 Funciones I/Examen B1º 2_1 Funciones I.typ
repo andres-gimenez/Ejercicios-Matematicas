@@ -347,6 +347,22 @@
               mark-size: 0.25,
               mark-style:(stroke: black, fill: color.black)
             )
+            
+            cetz.plot.add(
+              ((0,1),),
+              style: (stroke: none),
+              mark: "o",
+              mark-size: 0.15,
+              mark-style:(stroke: black, fill: color.black)
+            )
+            cetz.plot.add(
+              ((-2,5),),
+              style: (stroke: none),
+              mark: "o",
+              mark-size: 0.15,
+              mark-style:(stroke: black, fill: color.black)
+            )
+
             cetz.plot.add(
               // style: style,
               style: (stroke: none),
@@ -355,6 +371,14 @@
               mark-size: 0.25,
               mark-style:(stroke: black, fill: color.white)
             )
+            cetz.plot.add(
+              ((6,7),),
+              style: (stroke: none),
+              mark: "o",
+              mark-size: 0.15,
+              mark-style:(stroke: black, fill: color.black)
+            )
+
           }
         )
       }
