@@ -18,9 +18,9 @@
 
 = Conjuntos numéricos
 
-= Polinomios
+#include "./capítulos/2_capítulo_polinomios.typ"
 
-= ecuaciones
+= Ecuaciones
 
 = Sistema de ecuaciones
 
