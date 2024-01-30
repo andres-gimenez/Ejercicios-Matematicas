@@ -214,7 +214,7 @@
 			]
 		}
 	],
-	"editor.inlineSuggest.showToolbar": "onHover",
+	"editor.inlineSuggest.showToolbar": "always",
 	// "latex-workshop.view.pdf.viewer": "external",
 	// "latex-workshop.view.pdf.external.viewer.command": "/Users/zhangfeng775/Applications/Skim.app/Contents/SharedSupport/displayline",
 	// "latex-workshop.view.pdf.external.viewer.args": [ "0", "%PDF%" ],

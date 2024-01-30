@@ -39,7 +39,7 @@
   h(1cm),
   [ 
     + Ninguna
-    + En la antigüedad los planetas eras La luna, Marte, Mercurio, Júpiter, Venus, Saturno y El Sol.
+    + En la antigüedad los planetas eras La Luna, Marte, Mercurio, Júpiter, Venus, Saturno y El Sol.
     + Los nombres de los planetas y los días de la semana coinciden, porque en los dos se utilizaron nombres de dios romanos. 
   ])
 ]
@@ -131,7 +131,7 @@
 ]
 
 #pagebreak()
-#question[¿Cómo se llamaba el primer astronauta que pisó la luna?
+#question[¿Cómo se llamaba el primer astronauta que pisó la Luna?
  #stack(dir:ltr,
   h(1cm),
   [ 
@@ -151,7 +151,7 @@
   ])
 ]
 
-#question[Stephen William Hawking fue un ilustre físico teórico que destaco por sus estudios sobre los agujeros negros. Pese a su fama y relevancia en el mundo academico, ¿En qué año le concedieron el Premio Novel?
+#question[Stephen William Hawking fue un ilustre físico teórico que destaco por sus estudios sobre los agujeros negros. Pese a su fama y relevancia en el mundo académico, ¿En qué año le concedieron el Premio Novel?
   #stack(dir:ltr,
   h(1cm),
   [ 
