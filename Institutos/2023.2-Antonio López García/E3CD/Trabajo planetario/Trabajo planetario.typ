@@ -100,7 +100,7 @@
   ])
 ]
 
-#question[¿Desde donde no se puede ver la Estrella Polar
+#question[¿Desde donde no se puede ver la Estrella Polar?
   #stack(dir:ltr,
   h(1cm),
   [ 

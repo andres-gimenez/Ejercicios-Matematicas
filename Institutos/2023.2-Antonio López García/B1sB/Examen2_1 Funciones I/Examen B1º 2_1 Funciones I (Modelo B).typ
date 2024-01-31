@@ -278,18 +278,18 @@
             {
               cetz.plot.add(((0,0),), mark-size: 0,)
               
-              cetz.plot.add(
-                style: style,
-                domain: (0.1, 10), 
-                // mark: "+",
-                x=>5/x - 5
-              )
-              cetz.plot.add(
-                style: style,
-                domain: (-10, 0.1), 
-                // mark: "+",
-                x=>calc.sqrt(1-4*x)-4
-              )
+              // cetz.plot.add(
+              //   style: style,
+              //   domain: (0.1, 10), 
+              //   // mark: "+",
+              //   x=>5/x - 5
+              // )
+              // cetz.plot.add(
+              //   style: style,
+              //   domain: (-10, 0.1), 
+              //   // mark: "+",
+              //   x=>calc.sqrt(1-4*x)-4
+              // )
             }
           )
         }
