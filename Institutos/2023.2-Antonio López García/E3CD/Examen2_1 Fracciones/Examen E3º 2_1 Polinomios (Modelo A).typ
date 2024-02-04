@@ -1,6 +1,6 @@
-#import "./exam.typ": exam, question, subquestion, explanation
+#import "./g-exam.typ": g-exam, g-question, g-subquestion, g-explanation
 
-#show: exam.with(
+#show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -36,78 +36,78 @@
   )
 )
 
-#question(point: 2)[Opera y simplifica lo máximo posible las siguientes operaciones con radicales: \
-    #explanation[
+#g-question(point: 2)[Opera y simplifica lo máximo posible las siguientes operaciones con radicales: \
+    #g-explanation[
     Se ha de indicar la descomposición de cada valor en sus factores primos antes de extraerlos del radical.
     El no mostrar los factores primos o el utilizar número decimales anulará la respuesta.
   ]
 
-  // #subquestion[$display(sqrt(12) + sqrt(27) = )$]
+  // #g-subquestion[$display(sqrt(12) + sqrt(27) = )$]
   // #v(1fr)
  
-  // #subquestion[$display(sqrt(28) - sqrt(112) + sqrt(175) - sqrt(63) = ) $]
+  // #g-subquestion[$display(sqrt(28) - sqrt(112) + sqrt(175) - sqrt(63) = ) $]
   // #v(1fr)
 
-  #subquestion[$display(5 sqrt(2) - 2 sqrt(18) + sqrt(8) -2 sqrt(50) = )$]
+  #g-subquestion[$display(5 sqrt(2) - 2 sqrt(18) + sqrt(8) -2 sqrt(50) = )$]
   #v(1fr)
 
-  #subquestion[$display(-1/5 root(3, 40) + 2/3 root(3, 135) - 3 root(3, 5) = )$]
+  #g-subquestion[$display(-1/5 root(3, 40) + 2/3 root(3, 135) - 3 root(3, 5) = )$]
   #v(1fr)
 ]
 #pagebreak()
 
-#question[Si $P(x) = x^4+2x^3-x^2+x+2$, evalúa:
-  #subquestion(point: 0.5)[$P(-1)=$]
+#g-question[Si $P(x) = x^4+2x^3-x^2+x+2$, evalúa:
+  #g-subquestion(point: 0.5)[$P(-1)=$]
   #v(1fr)
 
-  #subquestion(point: 0.5)[$P(0)=$]
+  #g-subquestion(point: 0.5)[$P(0)=$]
   #v(1fr)
 
-  #subquestion(point: 0.5)[$P(1/2)=$]
+  #g-subquestion(point: 0.5)[$P(1/2)=$]
   #v(1fr)
 ]
 
-// #question(point: 2)[Sea $P(x) = x^5+2x^3-3x^2+2$, $Q(x)=2x^4-2x^2+1$ $R(x) = x^2-1$. Calcula:
-//   #subquestion[$P(x) - Q(x) =$]
+// #g-question(point: 2)[Sea $P(x) = x^5+2x^3-3x^2+2$, $Q(x)=2x^4-2x^2+1$ $R(x) = x^2-1$. Calcula:
+//   #g-subquestion[$P(x) - Q(x) =$]
 //   #v(6fr)
 
-//   #subquestion[$Q(x) dot R(x)=$]
+//   #g-subquestion[$Q(x) dot R(x)=$]
 //   #v(6fr)
 // ]
 
-#question(point: 2)[Sea $P(x) = x^5-x^3+3x-1$ y $Q(x)= x+2$ Realiza la división $P(x):Q(x)$ por el método de Rouffini y expresa el resultado de la forma $P(x) = Q(X) dot C(x) + R(x)$.]
+#g-question(point: 2)[Sea $P(x) = x^5-x^3+3x-1$ y $Q(x)= x+2$ Realiza la división $P(x):Q(x)$ por el método de Rouffini y expresa el resultado de la forma $P(x) = Q(X) dot C(x) + R(x)$.]
 #v(8fr)
 #pagebreak()
 
-#question(point: 2)[Sea $P(x)=x^4+x^2+1$ y $Q(x) = x^2-1$ Realiza la división $P(x):Q(x)$ y expresa el resultado de la forma $P(x) = Q(X) dot C(x) + R(x)$. 
+#g-question(point: 2)[Sea $P(x)=x^4+x^2+1$ y $Q(x) = x^2-1$ Realiza la división $P(x):Q(x)$ y expresa el resultado de la forma $P(x) = Q(X) dot C(x) + R(x)$. 
 ]
 #v(1fr)
 #pagebreak()
 
-#question(point: 1)[Factoriza las siguientes expresiones, sacando factor común o utilizando las desigualdades notables:
-  #subquestion[$display(x^3+3x = )$]
+#g-question(point: 1)[Factoriza las siguientes expresiones, sacando factor común o utilizando las desigualdades notables:
+  #g-subquestion[$display(x^3+3x = )$]
   #v(1fr)
 
-  #subquestion[$display(3x^4 y +9x^2 y = )$]
+  #g-subquestion[$display(3x^4 y +9x^2 y = )$]
   #v(1fr)
 
-  // #subquestion[$display(x^2+2x+1 = )$]
+  // #g-subquestion[$display(x^2+2x+1 = )$]
   // #v(1fr)
 
-  // #subquestion[$display(x^2 - 4 = )$]
+  // #g-subquestion[$display(x^2 - 4 = )$]
   // #v(1fr)
 ]
 
-#question[Realiza las siguientes operaciones utilizando las igualdades notables:
-  #subquestion(point:0.5)[$display((x^2 + 2)^2 =)$]
+#g-question[Realiza las siguientes operaciones utilizando las igualdades notables:
+  #g-subquestion(point:0.5)[$display((x^2 + 2)^2 =)$]
   #v(1fr)
 
-  #subquestion(point:0.5)[$display((x^2 - 2y)^2 =)$]
+  #g-subquestion(point:0.5)[$display((x^2 - 2y)^2 =)$]
   #v(1fr)
 
-  #subquestion(point:0.5)[$display((x + 3y^3) (x - 3y^2) =)$]
+  #g-subquestion(point:0.5)[$display((x + 3y^3) (x - 3y^2) =)$]
   #v(1fr)
 
-  // #subquestion[$display((x + 2) (x + 2) =)$]
+  // #g-subquestion[$display((x + 2) (x + 2) =)$]
   // #v(1fr)
 ]
