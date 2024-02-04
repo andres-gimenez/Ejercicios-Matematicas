@@ -29,4 +29,8 @@ ddeeeff
 
 == Igualdades notables
 
+=== Ejercicios
+
+#include "../ejercicios/2_5_ejercicios_igualdades_notables.typ"
+
 == Factorización de un polinomio
