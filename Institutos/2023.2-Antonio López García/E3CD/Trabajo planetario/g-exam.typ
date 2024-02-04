@@ -117,7 +117,7 @@
   }
 }
 
-#let question(point: none, body) = {
+#let g-question(point: none, body) = {
   question-number.step(level: 1) 
   
   [#hide[]<end-question-localization>]
@@ -150,7 +150,7 @@
   
 }
 
-#let subquestion(point: none, body) = {
+#let g-subquestion(point: none, body) = {
   question-number.step(level: 2)
 
   let subquestion-point = 0
@@ -213,7 +213,7 @@
   }
 }
 
-#let exam(
+#let g-exam(
   author: (
     name: none,
     email: none,
@@ -456,6 +456,6 @@
   [#hide[]<end-exam>]
 }
 
-#let explanation(size:8pt, body) = { 
+#let g-explanation(size:8pt, body) = { 
   text(size:size)[$(*)$ #body] 
 }

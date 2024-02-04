@@ -1,7 +1,7 @@
-#import "./exam.typ": exam, question, subquestion, explanation
+#import "./g-exam.typ": g-exam, g-question, g-subquestion, g-explanation
 #import "@preview/cetz:0.2.0"
 
-#show: exam.with(
+#show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -34,7 +34,7 @@
 
 #set enum(numbering: "a)")
 
-#question[¿Qué relación hay entre los nombres de los días de la semana y el de los planetas?
+#g-question[¿Qué relación hay entre los nombres de los días de la semana y el de los planetas?
   #stack(dir:ltr,
   h(1cm),
   [ 
@@ -44,53 +44,7 @@
   ])
 ]
 
-// #question[Busca las distancias de cada planeta del Sistema Solar al Sol y representala en la recta.]
-// #align(center, 
-//       cetz.canvas(length: 1cm, {
-//         cetz.plot.plot(
-//           // axes: ("x", "y"),
-//           size: (16, 1),
-//           axis-style: "school-book",
-//           fill: "o" ,
-//           fill-below: true,
-//           // horizontal:false,
-//           x-domain: (0, 4.5E+9),
-//           y-domain: (0, 0),
-//           x-max: 5E+9,
-//           x-min: 0,
-//           y-max: 0,
-//           y-min: 0,
-//           x-grid: "both",
-//           y-grid: false,
-//           // x-tick-step: none,
-//           // x-tick-step: 1E+9,
-//           x-ticks: ((1E+9, $1 dot 10^9 "Km"$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
-//           y-ticks: ((0,0),),
-//           // y-tick-step: 1,
-//           // x-minor-tick-step: 1,
-//           // y-minor-tick-step: 1,
-//             {
-//               cetz.plot.add(((0,0),), mark-size: 0,)
-//               // cetz.plot.add(
-//               //   style: style,
-//               //   domain: (-10, 0.1), 
-//               //   // mark: "+",
-//               //   x=>2/x
-//               // )
-//               // cetz.plot.add(
-//               //   style: style,
-//               //   domain: (0, 10), 
-//               //   // mark: "+",
-//               //   x=>calc.sqrt(x+1)-2
-//               // )
-//             }
-//           )
-//         }
-//       )
-//     )
-// ]
-
-#question[¿Cuál es la estrella más cercana al Sistema Solar?
+#g-question[¿Cuál es la estrella más cercana al Sistema Solar?
   #stack(dir:ltr,
   h(1cm),
   [ 
@@ -100,7 +54,7 @@
   ])
 ]
 
-#question[¿Desde donde no se puede ver la Estrella Polar
+#g-question[¿Desde donde no se puede ver la Estrella Polar
   #stack(dir:ltr,
   h(1cm),
   [ 
@@ -110,7 +64,7 @@
   ])
 ]
 
-#question[¿Cómo se llamaba la primera nave tripulada que se lanzó al espacio?
+#g-question[¿Cómo se llamaba la primera nave tripulada que se lanzó al espacio?
   #stack(dir:ltr,
   h(1cm),
   [ 
@@ -120,7 +74,7 @@
   ])
 ]
 
-#question[¿Cómo se llama la galaxia que alberga al sistema solar?
+#g-question[¿Cómo se llama la galaxia que alberga al sistema solar?
  #stack(dir:ltr,
   h(1cm),
   [ 
@@ -131,7 +85,7 @@
 ]
 
 #pagebreak()
-#question[¿Cómo se llamaba el primer astronauta que pisó la luna?
+#g-question[¿Cómo se llamaba el primer astronauta que pisó la luna?
  #stack(dir:ltr,
   h(1cm),
   [ 
@@ -141,7 +95,7 @@
   ])
 ]
 
-#question[¿Qué efectos produce la Luna sobre la Tierra?
+#g-question[¿Qué efectos produce la Luna sobre la Tierra?
  #stack(dir:ltr,
   h(1cm),
   [ 
@@ -151,7 +105,7 @@
   ])
 ]
 
-#question[Stephen William Hawking fue un ilustre físico teórico que destaco por sus estudios sobre los agujeros negros. Pese a su fama y relevancia en el mundo academico, ¿En qué año le concedieron el Premio Novel?
+#g-question[Stephen William Hawking fue un ilustre físico teórico que destaco por sus estudios sobre los agujeros negros. Pese a su fama y relevancia en el mundo academico, ¿En qué año le concedieron el Premio Novel?
   #stack(dir:ltr,
   h(1cm),
   [ 
@@ -161,7 +115,7 @@
   ])
 ]
 
-#question[¿Qué porcentaje de la Tierra está cubierta por agua?
+#g-question[¿Qué porcentaje de la Tierra está cubierta por agua?
  #stack(dir:ltr,
   h(1cm),
   [ 
@@ -171,7 +125,7 @@
   ])
 ]
 
-#question[El pensamiento más extendido hasta el siglo XVII fue que
+#g-question[El pensamiento más extendido hasta el siglo XVII fue que
  #stack(dir:ltr,
   h(1cm),
   [ 
