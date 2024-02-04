@@ -25,7 +25,7 @@
   pagination-align: "outside",
 )
 
-#let Textbook(
+#let g-book(
   ..passed-args, 
   // author: [],
   // title: [],

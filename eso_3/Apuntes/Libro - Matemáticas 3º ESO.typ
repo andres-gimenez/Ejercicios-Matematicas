@@ -1,6 +1,6 @@
-#import "modules/textbook-template.typ": *
+#import "modules/g-book.typ": g-book
 
-#show: Textbook.with(
+#show: g-book.with(
   author: "Andrés Jorge Giménez Muñoz",
   title: [
     Matemáticas aplicadas a las ciencias sociales
