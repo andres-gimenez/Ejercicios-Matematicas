@@ -1,6 +1,7 @@
 Realiza las siguientes igualdades notables:
 // https://www.matematicasonline.es/segundoeso/ejercicios/identidades-notables.pdf
 
+#columns(2, [
 
   $(x+5)^2 = x^2+2 dot x dot 5 + 5^2 = underline(x^2+10x+25)$
 
@@ -63,3 +64,4 @@ Realiza las siguientes igualdades notables:
   $(2x-4)^2 = $
 
   $(4x+3)(4x-3) = $
+])
