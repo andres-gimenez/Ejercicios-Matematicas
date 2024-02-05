@@ -1,4 +1,4 @@
-// Plantilla Examen 0.2
+// g-exam template 0.0.2
 
 #import "@preview/oxifmt:0.2.0": strfmt
 
