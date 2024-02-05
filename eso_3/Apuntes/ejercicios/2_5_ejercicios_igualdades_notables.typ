@@ -3,7 +3,7 @@ Realiza las siguientes igualdades notables:
 
 #columns(2, [
 
-  $(x+5)^2 = x^2+2 dot x dot 5 + 5^2 = underline(x^2+10x+25)$
+  $(x+5)^2 = x^2+2 dot x dot 5 + 5^2 = #box(stroke:black, inset: 5pt)[$x^2+10x+25$]$
 
   $(x-6)^2 = x^2-2 dot x dot 6 + 6^2 = underline(x^2+12x+36)$
 
