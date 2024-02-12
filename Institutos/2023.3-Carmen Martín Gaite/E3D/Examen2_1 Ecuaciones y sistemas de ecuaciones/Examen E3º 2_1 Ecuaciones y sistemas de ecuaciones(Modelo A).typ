@@ -5,7 +5,7 @@
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andres",
+    // watermark: "Profesor: andres",
   ),
   school: (
     name: "IES Carmen Martín Gaite",
@@ -37,66 +37,98 @@
   )
 )
 
-#g-question(point: 2)[Resuelve la ecuación:]
-#pagebreak()
 #set math.cases(reverse: true)
 
-#g-question(point: 2)[Resuelve el siguiente sistema de ecuaciones por el método gráﬁco: \ \
-$cases( delim: "|",
-        // reverse: true,
-        // grap: 2em,
-        4x &+ &3y &= &2,
-        5x &+ &2y &= &7
-        // display(sqrt(1-4x)-5) &"si" &x <= 0,
-        // display(5/x- 2) &"si" &x > 0,
-      )
-    $
+#g-question[Resuelve las siguientes ecuaciones:
+
+ #g-subquestion(point: 0.75)[$3x^2-2x-3=4 dot (x^2-5x-2) - x^2$]
+ #v(1fr)
+
+ #g-subquestion(point: 1.25)[$x^4 - 16x -255 = 0$]
+ #v(1fr)
+
+ #g-subquestion(point: 2)[$x^5 + 5x^4 - x^3 - 5x = 0 $]
+ #v(1fr)
 ]
+#pagebreak()
+
+#g-question(point: 1)[La suma de los cuadrados de dos n´umeros consecutivos es 181. 
+Calcula dichos números.]
 #v(1fr)
-#align(center, 
-      cetz.canvas(length: 0.7cm, {
-        cetz.plot.plot(
-          // axes: ("x", "y"),
-          size: (12, 11),
-          axis-style: "school-book",
-          fill: "o" ,
-          fill-below: true,
-          // horizontal:false,
-          x-domain: (-10, 10),
-          y-domain: (-10, 10),
-          x-max: 10,
-          x-min:-10,
-          y-max: 10,
-          y-min:-10,
-          x-grid: "both",
-          y-grid: "both",
-          // x-tick-step: none,
-          x-tick-step: 2,
-          // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
-          y-tick-step: 2,
-          x-minor-tick-step: 1,
-          y-minor-tick-step: 1,
-          // y-minor-tick-color:
-            {
-              cetz.plot.add(((0,0),), mark-size: 0,)
+
+#g-question[Resuelve los siguientes sistemas de ecuaciones lineales por métodos diferentes. \ \
+  #g-subquestion(point: 1) [
+      // $cases( delim: "|",
+      //         // reverse: true,
+      //         // grap: 2em,
+      //         4x &+ &3y &= &2,
+      //         5x &+ &2y &= &7
+      //         // display(sqrt(1-4x)-5) &"si" &x <= 0,
+      //         // display(5/x- 2) &"si" &x > 0,
+      //       )
+      //     $
+      ]
+
+  ]
+]
+#pagebreak()
+
+// #g-question(point: 2)[Resuelve el siguiente sistema de ecuaciones por el método gráﬁco: \ \
+// $cases( delim: "|",
+//         // reverse: true,
+//         // grap: 2em,
+//         4x &+ &3y &= &2,
+//         5x &+ &2y &= &7
+//         // display(sqrt(1-4x)-5) &"si" &x <= 0,
+//         // display(5/x- 2) &"si" &x > 0,
+//       )
+//     $
+// ]
+// #v(1fr)
+// #align(center, 
+//       cetz.canvas(length: 0.7cm, {
+//         cetz.plot.plot(
+//           // axes: ("x", "y"),
+//           size: (12, 11),
+//           axis-style: "school-book",
+//           fill: "o" ,
+//           fill-below: true,
+//           // horizontal:false,
+//           x-domain: (-10, 10),
+//           y-domain: (-10, 10),
+//           x-max: 10,
+//           x-min:-10,
+//           y-max: 10,
+//           y-min:-10,
+//           x-grid: "both",
+//           y-grid: "both",
+//           // x-tick-step: none,
+//           x-tick-step: 2,
+//           // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
+//           y-tick-step: 2,
+//           x-minor-tick-step: 1,
+//           y-minor-tick-step: 1,
+//           // y-minor-tick-color:
+//             {
+//               cetz.plot.add(((0,0),), mark-size: 0,)
               
-              // cetz.plot.add(
-              //   style: style,
-              //   domain: (0.1, 10), 
-              //   // mark: "+",
-              //   x=>5/x - 5
-              // )
-              // cetz.plot.add(
-              //   style: style,
-              //   domain: (-10, 0.1), 
-              //   // mark: "+",
-              //   x=>calc.sqrt(1-4*x)-4
-              // )
-            }
-          )
-        }
-      )
-    )
+//               // cetz.plot.add(
+//               //   style: style,
+//               //   domain: (0.1, 10), 
+//               //   // mark: "+",
+//               //   x=>5/x - 5
+//               // )
+//               // cetz.plot.add(
+//               //   style: style,
+//               //   domain: (-10, 0.1), 
+//               //   // mark: "+",
+//               //   x=>calc.sqrt(1-4*x)-4
+//               // )
+//             }
+//           )
+//         }
+//       )
+//     )
 
 
 // #g-question(point: 2)[Opera y simplifica lo máximo posible las siguientes operaciones con radicales: \
