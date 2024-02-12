@@ -41,168 +41,169 @@
 
 #g-question[Resuelve las siguientes ecuaciones:
 
- #g-subquestion(point: 0.75)[$3x^2-2x-3=4 dot (x^2-5x-2) - x^2$]
+ #g-subquestion(point: 0.75)[$display(3x^2-2x-3=4 dot (x^2-5x-2) - x^2)$]
  #v(1fr)
 
- #g-subquestion(point: 1.25)[$x^4 - 16x -255 = 0$]
+ #g-subquestion(point: 1.25)[$display(x^4 - 16x -255 = 0)$]
  #v(1fr)
 
- #g-subquestion(point: 2)[$x^5 + 5x^4 - x^3 - 5x = 0 $]
- #v(1fr)
-]
 #pagebreak()
 
-#g-question(point: 1)[La suma de los cuadrados de dos n´umeros consecutivos es 181. 
-Calcula dichos números.]
-#v(1fr)
+ #g-subquestion(point: 2)[$display(x^5 + 5x^4 - x^3 - 5x = 0)$]
+ #v(1fr)
+]
 
-#g-question[Resuelve los siguientes sistemas de ecuaciones lineales por métodos diferentes. \ \
-  #g-subquestion(point: 1) [
-      // $cases( delim: "|",
-      //         // reverse: true,
-      //         // grap: 2em,
-      //         4x &+ &3y &= &2,
-      //         5x &+ &2y &= &7
-      //         // display(sqrt(1-4x)-5) &"si" &x <= 0,
-      //         // display(5/x- 2) &"si" &x > 0,
-      //       )
-      //     $
-      ]
+#g-question[
+  Dadas las gráficas de los siguientes sistemas de ecuaciones lineales,
+  determina por la posición de las rectas el tipo de sistema según el número de soluciones. \
 
+#columns(2, gutter: 2cm)[
+ #g-subquestion(point: 0.5)[
+      #align(center, 
+      cetz.canvas(length: 0.7cm, {
+        cetz.plot.plot(
+          // axes: ("x", "y"),
+          size: (10, 10),
+          axis-style: "school-book",
+          fill: "o" ,
+          fill-below: true,
+          // horizontal:false,
+          x-domain: (-5.2, 5.2),
+          y-domain: (-5.2, 5.2),
+          x-max: 5.2,
+          x-min:-5.2,
+          y-max: 5.2,
+          y-min:-5.2,
+          x-grid: "both",
+          y-grid: "both",
+          // x-tick-step: none,
+          x-tick-step: 1,
+          // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
+          y-tick-step: 1,
+          // x-minor-tick-step: 0.2,
+          // y-minor-tick-step: 0.2,
+          // y-minor-tick-color:
+            {
+              cetz.plot.add(((0,0),), mark-size: 0,)
+            
+              cetz.plot.add(
+                style: (stroke: blue),
+                domain: (-5.2, 5.2), 
+                x=>x + 3
+              )
+
+              cetz.plot.add(
+                style: (stroke: green),
+                domain: (-5.2, 5.2), 
+                x=>x
+              )
+            }
+          )
+        }
+      )
+    )
+  ]
+  #colbreak()
+
+  #g-subquestion(point: 0.5)[
+      #align(center, 
+      cetz.canvas(length: 0.7cm, {
+        cetz.plot.plot(
+          // axes: ("x", "y"),
+          size: (10, 10),
+          axis-style: "school-book",
+          fill: "o" ,
+          fill-below: true,
+          // horizontal:false,
+          x-domain: (-5.2, 5.2),
+          y-domain: (-5.2, 5.2),
+          x-max: 5.2,
+          x-min:-5.2,
+          y-max: 5.2,
+          y-min:-5.2,
+          x-grid: "both",
+          y-grid: "both",
+          // x-tick-step: none,
+          x-tick-step: 1,
+          // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
+          y-tick-step: 1,
+          // x-minor-tick-step: 0.2,
+          // y-minor-tick-step: 0.2,
+          // y-minor-tick-color:
+            {
+              cetz.plot.add(((0,0),), mark-size: 0,)
+            
+              cetz.plot.add(
+                style: (stroke: blue),
+                domain: (-5.2, 5.2), 
+                x=>-x - 4
+              )
+
+              cetz.plot.add(
+                style: (stroke: green),
+                domain: (-5.2, 5.2), 
+                x=>3
+              )
+            }
+          )
+        }
+      )
+    )
+  ]
+]
+]
+// #v(1cm)
+
+#pagebreak()
+
+#g-question[Resuelve los siguientes sistemas de ecuaciones lineales por métodos diferentes. \
+  #g-subquestion(point: 1)[
+      $display(cases( delim: "{",
+              // reverse: true,
+              // grap: 2em,
+              x &+ &y &= &0,
+              3x &+ &5y &= &0
+            ))$
+    #v(1fr)
+  ]
+
+  #g-subquestion(point: 1)[
+      $display(cases( delim: "{",
+              // reverse: true,
+              // grap: 2em,
+              &3x &+ &y &= &0,
+              -&6x &- 2&y &= &5
+            ))$
+    #v(1fr)
+  ]
+
+  #g-subquestion(point: 1)[
+      $display(cases( delim: "{",
+              // reverse: true,
+              // grap: 2em,
+              2x &= &y &- &2,
+              6x &= 3&y &+ &12
+            ))$
+      // ]
+    #v(1fr)
   ]
 ]
 #pagebreak()
 
-// #g-question(point: 2)[Resuelve el siguiente sistema de ecuaciones por el método gráﬁco: \ \
-// $cases( delim: "|",
-//         // reverse: true,
-//         // grap: 2em,
-//         4x &+ &3y &= &2,
-//         5x &+ &2y &= &7
-//         // display(sqrt(1-4x)-5) &"si" &x <= 0,
-//         // display(5/x- 2) &"si" &x > 0,
-//       )
-//     $
-// ]
-// #v(1fr)
-// #align(center, 
-//       cetz.canvas(length: 0.7cm, {
-//         cetz.plot.plot(
-//           // axes: ("x", "y"),
-//           size: (12, 11),
-//           axis-style: "school-book",
-//           fill: "o" ,
-//           fill-below: true,
-//           // horizontal:false,
-//           x-domain: (-10, 10),
-//           y-domain: (-10, 10),
-//           x-max: 10,
-//           x-min:-10,
-//           y-max: 10,
-//           y-min:-10,
-//           x-grid: "both",
-//           y-grid: "both",
-//           // x-tick-step: none,
-//           x-tick-step: 2,
-//           // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
-//           y-tick-step: 2,
-//           x-minor-tick-step: 1,
-//           y-minor-tick-step: 1,
-//           // y-minor-tick-color:
-//             {
-//               cetz.plot.add(((0,0),), mark-size: 0,)
-              
-//               // cetz.plot.add(
-//               //   style: style,
-//               //   domain: (0.1, 10), 
-//               //   // mark: "+",
-//               //   x=>5/x - 5
-//               // )
-//               // cetz.plot.add(
-//               //   style: style,
-//               //   domain: (-10, 0.1), 
-//               //   // mark: "+",
-//               //   x=>calc.sqrt(1-4*x)-4
-//               // )
-//             }
-//           )
-//         }
-//       )
-//     )
+#g-question(point: 1)[
+  La suma de los cuadrados de dos núumeros consecutivos es 181. 
+  Calcula dichos números.
+  
+  #v(1fr)
+]
 
 
-// #g-question(point: 2)[Opera y simplifica lo máximo posible las siguientes operaciones con radicales: \
-//     #g-explanation[
-//     Se ha de indicar la descomposición de cada valor en sus factores primos antes de extraerlos del radical.
-//     El no mostrar los factores primos o el utilizar número decimales anulará la respuesta.
-//   ]
+#g-question(point: 1)[
+El día 12 de julio, Metallica da un concierto benéfico en una sala de Madrid para
+el cual se venden dos tipos de entradas, una del tipo general y otra VIP con acceso anticipado.
+El concierto resulta un éxito, se venden todas las entradas y se recaudan 23 mil dólares. 
+Los precios de las entradas son 50 dólares las de tipo general y 300 dólares las VIP.
+Calcula el número de entradas vendidas de cada tipo si el aforo del establecimiento es de 160 personas.
 
-//   // #g-subquestion[$display(sqrt(12) + sqrt(27) = )$]
-//   // #v(1fr)
- 
-//   // #g-subquestion[$display(sqrt(28) - sqrt(112) + sqrt(175) - sqrt(63) = ) $]
-//   // #v(1fr)
-
-//   #g-subquestion[$display(5 sqrt(2) - 2 sqrt(18) + sqrt(8) -2 sqrt(50) = )$]
-//   #v(1fr)
-
-//   #g-subquestion[$display(-1/5 root(3, 40) + 2/3 root(3, 135) - 3 root(3, 5) = )$]
-//   #v(1fr)
-// ]
-// #pagebreak()
-
-// #g-question[Si $P(x) = x^4+2x^3-x^2+x+2$, evalúa:
-//   #g-subquestion(point: 0.5)[$P(-1)=$]
-//   #v(1fr)
-
-//   #g-subquestion(point: 0.5)[$P(0)=$]
-//   #v(1fr)
-
-//   #g-subquestion(point: 0.5)[$P(1/2)=$]
-//   #v(1fr)
-// ]
-
-// // #g-question(point: 2)[Sea $P(x) = x^5+2x^3-3x^2+2$, $Q(x)=2x^4-2x^2+1$ $R(x) = x^2-1$. Calcula:
-// //   #g-subquestion[$P(x) - Q(x) =$]
-// //   #v(6fr)
-
-// //   #g-subquestion[$Q(x) dot R(x)=$]
-// //   #v(6fr)
-// // ]
-
-// #g-question(point: 2)[Sea $P(x) = x^5-x^3+3x-1$ y $Q(x)= x+2$ Realiza la división $P(x):Q(x)$ por el método de Rouffini y expresa el resultado de la forma $P(x) = Q(X) dot C(x) + R(x)$.]
-// #v(8fr)
-// #pagebreak()
-
-// #g-question(point: 2)[Sea $P(x)=x^4+x^2+1$ y $Q(x) = x^2-1$ Realiza la división $P(x):Q(x)$ y expresa el resultado de la forma $P(x) = Q(X) dot C(x) + R(x)$. 
-// ]
-// #v(1fr)
-// #pagebreak()
-
-// #g-question(point: 1)[Factoriza las siguientes expresiones, sacando factor común o utilizando las desigualdades notables:
-//   #g-subquestion[$display(x^3+3x = )$]
-//   #v(1fr)
-
-//   #g-subquestion[$display(3x^4 y +9x^2 y = )$]
-//   #v(1fr)
-
-//   // #g-subquestion[$display(x^2+2x+1 = )$]
-//   // #v(1fr)
-
-//   // #g-subquestion[$display(x^2 - 4 = )$]
-//   // #v(1fr)
-// ]
-
-// #g-question[Realiza las siguientes operaciones utilizando las igualdades notables:
-//   #g-subquestion(point:0.5)[$display((x^2 + 2)^2 =)$]
-//   #v(1fr)
-
-//   #g-subquestion(point:0.5)[$display((x^2 - 2y)^2 =)$]
-//   #v(1fr)
-
-//   #g-subquestion(point:0.5)[$display((x + 3y^3) (x - 3y^2) =)$]
-//   #v(1fr)
-
-//   // #g-subquestion[$display((x + 2) (x + 2) =)$]
-//   // #v(1fr)
-// ]
+#v(2fr)
+]
