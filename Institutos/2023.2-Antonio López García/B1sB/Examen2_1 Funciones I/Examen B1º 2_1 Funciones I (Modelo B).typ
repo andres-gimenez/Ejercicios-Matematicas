@@ -1,7 +1,7 @@
-#import "./exam.typ": exam, question, subquestion
+#import "./g-exam.typ": g-exam, g-question, g-subquestion
 #import "@preview/cetz:0.2.0"
 
-#show: exam.with(
+#show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -37,7 +37,7 @@
   )
 )
 
-#question(point: 2.5)[
+#g-question(point: 2.5)[
   Resuelve el siguiente sistema de inecuaciones:
   \
   \
@@ -169,9 +169,9 @@
 // ]
 // #v(1fr)
 
-#question(point:2.5)[
+#g-question(point:2.5)[
   Halla el dominio de definición de las funciones:
-  #subquestion[$display(f(x) = sqrt(2-x)/(x^2-1))$]
+  #g-subquestion[$display(f(x) = sqrt(2-x)/(x^2-1))$]
   #v(1fr)
 
   // #subquestion[$display(f(x) = sqrt(5x+5))$]
@@ -180,7 +180,7 @@
   // #subquestion[$display(f(x) = 1/(x^2+1))$]
   // #v(1fr)
   
-  #subquestion[$display(f(x) = (log(1-x))/(x^2-9))$]
+  #g-subquestion[$display(f(x) = (log(1-x))/(x^2-9))$]
   #v(1fr)
 ]
 #pagebreak()
@@ -242,7 +242,7 @@
 
 #let style = (stroke: black)
 
-#question(point:2.5)[
+#g-question(point:2.5)[
   Representa la siguiente función: \ \
     $display(f(x) = 
       cases(
@@ -302,7 +302,7 @@
 // // #let style = (stroke: black, fill: rgb(0, 0, 200, 75))
 // #let style = (stroke: black)
 
-#question(point:2.5)[
+#g-question(point:2.5)[
   Obtén la expresión analítica de la siguiente función:
   //  #align(center, 
     #cetz.canvas(length: 0.5cm, {

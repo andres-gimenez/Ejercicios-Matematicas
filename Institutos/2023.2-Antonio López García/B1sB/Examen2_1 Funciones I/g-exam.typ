@@ -1,4 +1,4 @@
-// g-exam template 0.0.2
+// g-exam template 0.0.3
 
 #import "@preview/oxifmt:0.2.0": strfmt
 
@@ -117,7 +117,7 @@
   }
 }
 
-#let question(point: none, body) = {
+#let g-question(point: none, body) = {
   question-number.step(level: 1) 
   
   [#hide[]<end-question-localization>]
@@ -137,19 +137,20 @@
       ]
     }
     else{
-      [#place(right, 
-        dx: 14%,
-        float: false,
-        [#h(0.7em) #paint-tab(point: point)]) 
-      #question-number.display(question-numbering) 
-      #body \ \
+      [
+        #place(right, 
+          dx: 14%,
+          float: false,
+          [#h(0.7em) #paint-tab(point: point)]) 
+        #question-number.display(question-numbering) 
+        #body \ \
       ]
     }
   })
   
 }
 
-#let subquestion(point: none, body) = {
+#let g-subquestion(point: none, body) = {
   question-number.step(level: 2)
 
   let subquestion-point = 0
@@ -167,13 +168,14 @@
         ]
       }
       else{ 
-          [#place(right, 
+        [
+          #place(right, 
             dx: 14%,
             float: false,
             [#h(0.7em) #paint-tab(point: point)]) 
           #question-number.display(question-numbering) 
           #body \ \
-          ]
+        ]
       }
     }
   )
@@ -211,7 +213,7 @@
   }
 }
 
-#let exam(
+#let g-exam(
   author: (
     name: none,
     email: none,
@@ -454,6 +456,6 @@
   [#hide[]<end-exam>]
 }
 
-#let explanation(size:8pt, body) = { 
+#let g-explanation(size:8pt, body) = { 
   text(size:size)[$(*)$ #body] 
 }
