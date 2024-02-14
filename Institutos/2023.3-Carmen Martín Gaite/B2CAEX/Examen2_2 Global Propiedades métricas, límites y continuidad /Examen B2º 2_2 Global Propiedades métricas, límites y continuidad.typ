@@ -23,9 +23,9 @@
   languaje: "es",
   decimal-separator: ",",
   date: "November 21, 2023",
-  show-studen-data: true,
+  show-studen-data: false,
   show-grade-table: false,
-  question-point-position: right,
+  question-point-position: left,
 //   clarifications: (
 //  [Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada de la prueba que se valorará con un cero.],
 //     [Esta prueba ha de realizarse con bolígrafo no borrable azul o negro.],
@@ -37,182 +37,95 @@
 //   )
 )
 
- #g-question(point: 2.5)[Pregunta1:]
+= Opcion A
+ #g-question(point: 2.5)[Halla la ecuación de la recta que pasa por el punto $A(2, -3, 0)$ y es paralela a la recta que es intersección de los planos:
+  #align(top + center, columns(2, 
+    [$ pi eq.triple 2x-3y+z=0 $
+    #colbreak()
+    $ pi prime eq.triple cases( delim: "{",
+                &x &= 2+t+s,
+                &y &= t-s,
+                &z &=2+2t+s
+              ) $ ]
+    ))
+ ]
 
- #g-question(point: 2.5)[Pregunta2:]
+  #g-question(point: 2.5)[Calcula el valor de los siguientes limites:
+    // #g-subquestion(point: 1)[$display(lim_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
 
- #g-question(point: 2.5)[Pregunta3:]
+    #g-subquestion(point: 1)[$display(lim_(x->2)(x^3-x^2-x-2)/(x^2+x-6))$] // =7/5
 
- #g-question(point: 2.5)[Pregunta4:]
+    #g-subquestion(point: 1.5)[$display(lim_(x->+ infinity)((3x^3+x-1)/(3x^3-1))^(3x^2))$ ] // = e
+  ]
 
+ #g-question(point: 2.5)[
+    #g-subquestion(point: 1.25)[
+      Halla la recta que pasa por $A=(2,-2,1)$ y es perpendicular al plano $pi$:
+      $ pi prime eq.triple cases( delim: "{",
+                &x &= 1 -λ + μ,
+                &y &= -3 + λ,
+                &z &= 3μ
+              ) $ ]
+    #g-subquestion(point: 1.25)[Calcular la distancia de ese plano $pi$ al punto $A$. ]
+ ]
 
-// #set math.cases(reverse: true)
+ #g-question(point: 2.5)[
+    #g-subquestion(point: 1.5)[Estudia la continuidad de la función en #underline[todo] el intervalo $[0, 3]$
+    $ f(x) = cases( delim: "{",
+                &x^3 + x - 2 &"si" &x <= 1,
+                &2x^2 - 2 &"si" &x> 1
+              ) $ 
+    ]
+    
+    #g-subquestion(point: 0.25)[Enuncia el Teorema de Bolzano]
+    #g-subquestion(point: 0.75)[Demuestra que $exists x in (0, 3)$ tal que $f(c)=0$]
+ ]
 
-// #g-question[Resuelve las siguientes ecuaciones:
+#pagebreak()
 
-//  #g-subquestion(point: 0.75)[$display(3x^2-2x-3=4 dot (x^2-5x-2) - x^2)$]
-//  #v(1fr)
+= Opcion B
+#g-question(point: 2.5)[Determina la ecuación del plano que pasa por el punto $P(-2,-3,2)$ y es paralelo a las rectas:
+  #align(top + center, columns(2, 
+    [$ r eq.triple (x+2)/(-1)=(y-1)/3=(z-3)/(-4)$
+    #colbreak()
+    $ s eq.triple cases( delim: "{",
+                &x &= 2+3t,
+                &y &= t,
+                &y &=-1-t
+              ) $ ]
+    ))
+ ]
 
-//  #g-subquestion(point: 1.25)[$display(x^4 - 16x -255 = 0)$]
-//  #v(1fr)
+ #g-question(point: 2.5)[Calcula el valor de los siguientes límites:
+    \
+    // #g-subquestion(point: 1)[$display(lim_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
+    #g-subquestion(point: 1)[$display(lim_(x->- infinity)(x)/sqrt(x^2+1))$] // =7/5
+ 
+    // #g-subquestion(point: 1.5)[$display(lim_(x->0)(1 + "sen"(x))^(1/x))$ ] // = e
+    #g-subquestion(point: 1.5)[$display(lim_(x->+ infinity)(sqrt(x^2-5x+6) - x))$ ] // = -5/2
 
-// #pagebreak()
+    // #g-subquestion(point: 1.5)[$display(lim_(x->0)((1+tg x) / (1 + "sen" x))^(1/"sen" x))$ ] // = 1
+  ]
 
-//  #g-subquestion(point: 2)[$display(x^5 + 5x^4 - x^3 - 5x = 0)$]
-//  #v(1fr)
-// ]
+   #g-question(point: 2.5)[
+    #g-subquestion(point: 1.25)[
+      Hallar el plano paralelo a la recta $r$ que contiene a la recta $s$, siendo:
+       #align(top + center, columns(2, 
+        [\ $ r eq.triple x-1 = (y+2)/2 = z $
+        #colbreak()
+        $ s prime eq.triple cases( delim: "{",
+                    &x &= -2 + 2λ,
+                    &y &= 1 - λ,
+                    &y &= 3λ
+                  ) $ ]
+        ))
+    ]
+    #g-subquestion(point: 1.25)[Calcular la distancia de dicho plano a la recta $r$.
+    ]
+ ]
 
-// #g-question[
-//   Dadas las gráficas de los siguientes sistemas de ecuaciones lineales,
-//   determina por la posición de las rectas el tipo de sistema según el número de soluciones. \
-
-// #columns(2, gutter: 2cm)[
-//  #g-subquestion(point: 0.5)[
-//       #align(center, 
-//       cetz.canvas(length: 0.7cm, {
-//         cetz.plot.plot(
-//           // axes: ("x", "y"),
-//           size: (10, 10),
-//           axis-style: "school-book",
-//           fill: "o" ,
-//           fill-below: true,
-//           // horizontal:false,
-//           x-domain: (-5.2, 5.2),
-//           y-domain: (-5.2, 5.2),
-//           x-max: 5.2,
-//           x-min:-5.2,
-//           y-max: 5.2,
-//           y-min:-5.2,
-//           x-grid: "both",
-//           y-grid: "both",
-//           // x-tick-step: none,
-//           x-tick-step: 1,
-//           // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
-//           y-tick-step: 1,
-//           // x-minor-tick-step: 0.2,
-//           // y-minor-tick-step: 0.2,
-//           // y-minor-tick-color:
-//             {
-//               cetz.plot.add(((0,0),), mark-size: 0,)
-            
-//               cetz.plot.add(
-//                 style: (stroke: blue),
-//                 domain: (-5.2, 5.2), 
-//                 x=>x + 3
-//               )
-
-//               cetz.plot.add(
-//                 style: (stroke: green),
-//                 domain: (-5.2, 5.2), 
-//                 x=>x
-//               )
-//             }
-//           )
-//         }
-//       )
-//     )
-//   ]
-//   #colbreak()
-
-//   #g-subquestion(point: 0.5)[
-//       #align(center, 
-//       cetz.canvas(length: 0.7cm, {
-//         cetz.plot.plot(
-//           // axes: ("x", "y"),
-//           size: (10, 10),
-//           axis-style: "school-book",
-//           fill: "o" ,
-//           fill-below: true,
-//           // horizontal:false,
-//           x-domain: (-5.2, 5.2),
-//           y-domain: (-5.2, 5.2),
-//           x-max: 5.2,
-//           x-min:-5.2,
-//           y-max: 5.2,
-//           y-min:-5.2,
-//           x-grid: "both",
-//           y-grid: "both",
-//           // x-tick-step: none,
-//           x-tick-step: 1,
-//           // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
-//           y-tick-step: 1,
-//           // x-minor-tick-step: 0.2,
-//           // y-minor-tick-step: 0.2,
-//           // y-minor-tick-color:
-//             {
-//               cetz.plot.add(((0,0),), mark-size: 0,)
-            
-//               cetz.plot.add(
-//                 style: (stroke: blue),
-//                 domain: (-5.2, 5.2), 
-//                 x=>-x - 4
-//               )
-
-//               cetz.plot.add(
-//                 style: (stroke: green),
-//                 domain: (-5.2, 5.2), 
-//                 x=>3
-//               )
-//             }
-//           )
-//         }
-//       )
-//     )
-//   ]
-// ]
-// ]
-// // #v(1cm)
-
-// #pagebreak()
-
-// #g-question[Resuelve los siguientes sistemas de ecuaciones lineales por métodos diferentes. \
-//   #g-subquestion(point: 1)[
-//       $display(cases( delim: "{",
-//               // reverse: true,
-//               // grap: 2em,
-//               x &+ &y &= &0,
-//               3x &+ &5y &= &0
-//             ))$
-//     #v(1fr)
-//   ]
-
-//   #g-subquestion(point: 1)[
-//       $display(cases( delim: "{",
-//               // reverse: true,
-//               // grap: 2em,
-//               &3x &+ &y &= &0,
-//               -&6x &- 2&y &= &5
-//             ))$
-//     #v(1fr)
-//   ]
-
-//   #g-subquestion(point: 1)[
-//       $display(cases( delim: "{",
-//               // reverse: true,
-//               // grap: 2em,
-//               2x &= &y &- &2,
-//               6x &= 3&y &+ &12
-//             ))$
-//       // ]
-//     #v(1fr)
-//   ]
-// ]
-// #pagebreak()
-
-// #g-question(point: 1)[
-//   La suma de los cuadrados de dos núumeros consecutivos es 181. 
-//   Calcula dichos números.
-  
-//   #v(1fr)
-// ]
-
-
-// #g-question(point: 1)[
-// El día 12 de julio, Metallica da un concierto benéfico en una sala de Madrid para
-// el cual se venden dos tipos de entradas, una del tipo general y otra VIP con acceso anticipado.
-// El concierto resulta un éxito, se venden todas las entradas y se recaudan 23 mil dólares. 
-// Los precios de las entradas son 50 dólares las de tipo general y 300 dólares las VIP.
-// Calcula el número de entradas vendidas de cada tipo si el aforo del establecimiento es de 160 personas.
-
-// #v(2fr)
-// ]
+ #g-question(point: 2.5)[
+    #g-subquestion(point: 1.5)[Estudia la continuidad de la función $f(x)="sen"(x)-x^2+1$ en #underline[todo] el intervalo $[0, 2]$]
+    #g-subquestion(point: 0.25)[Enuncia el Teorema de Bolzano]
+    #g-subquestion(point: 0.75)[Demuestra que la ecuación $"sen"(x) = x^2 - 1$ tiene almenos una solución en el intervalo $[0,2]$]
+ ]
