@@ -37,17 +37,19 @@
 //   )
 )
 
-= Opcion A
- #g-question(point: 2.5)[Halla la ecuación de la recta que pasa por el punto $A(2, -3, 0)$ y es paralela a la recta que es intersección de los planos:
+= Opción A
+#g-question(point: 2.5)[Dados las rectas:
   #align(top + center, columns(2, 
-    [$ pi eq.triple 2x-3y+z=0 $
+    [$ r eq.triple (x+2)/(-1)=(y-1)/3=(z-3)/(-4)$
     #colbreak()
-    $ pi prime eq.triple cases( delim: "{",
-                &x &= 2+t+s,
-                &y &= t-s,
-                &z &=2+2t+s
+    $ s eq.triple cases( delim: "{",
+                &x &= 2+3t,
+                &y &= t,
+                &y &=-1-t
               ) $ ]
     ))
+  #g-subquestion(point: 1)[Determina la ecuación del plano que pasa por el punto $P(-2,-3,2)$ y es paralelo a las rectas $r$ y $s$.]
+  #g-subquestion(point: 1)[Calcula el angulo que forman las rectas $r$ y $s$.]
  ]
 
   #g-question(point: 2.5)[Calcula el valor de los siguientes limites:
@@ -83,18 +85,20 @@
 
 #pagebreak()
 
-= Opcion B
-#g-question(point: 2.5)[Determina la ecuación del plano que pasa por el punto $P(-2,-3,2)$ y es paralelo a las rectas:
+= Opción B
+ #g-question(point: 2.5)[Dados los planos 
   #align(top + center, columns(2, 
-    [$ r eq.triple (x+2)/(-1)=(y-1)/3=(z-3)/(-4)$
+    [$ pi eq.triple 2x-3y+z=0 $
     #colbreak()
-    $ s eq.triple cases( delim: "{",
-                &x &= 2+3t,
-                &y &= t,
-                &y &=-1-t
-              ) $ ]
-    ))
+    $ pi prime eq.triple cases( delim: "{",
+                &x &= 2+t+s,
+                &y &= t-s,
+                &z &=2+2t+s
+              ) $ ]))
+  #g-subquestion(point: 1.5)[Halla la ecuación de la recta que pasa por el punto $A(2, -3, 0)$ y es paralela a la recta que es intersección de los planos $pi$ y $pi prime$.]
+  #g-subquestion(point: 1)[Calcula el angulo que forman los planos $pi$ y $pi prime$.]
  ]
+
 
  #g-question(point: 2.5)[Calcula el valor de los siguientes límites:
     \
