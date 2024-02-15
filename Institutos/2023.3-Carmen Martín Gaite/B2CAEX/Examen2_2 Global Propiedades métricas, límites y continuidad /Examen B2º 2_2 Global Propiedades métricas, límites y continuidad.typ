@@ -65,7 +65,7 @@
 
     Despues de leer atentamente el examen, responda razonadamente las #underline[cuatro] preguntas de una de las opciones A o B. Todas las respuestas deberan estar debidamente justificadas.
 
-    *CALIFICACION:* Cada pregunta se calificara sobre 2.5 puntos.
+    *CALIFICACION:* Cada pregunta se calificara sobre 2,5 puntos.
     
     *TIEMPO:* 90 minutos.
   ]
@@ -166,15 +166,15 @@
     #h(6pt) Calcula el valor de los siguientes límites:
     
     // #g-subquestion(point: 1)[$display(limits("lím")_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
-    #h(14pt) a) (0,75 puntos) $display(limits("lím")_(x->- infinity)(x)/sqrt(x^2+1))$ // =7/5
+    #h(14pt) a) (0,5 puntos) $display(limits("lím")_(x->- infinity)(x)/sqrt(x^2+1))$ // =7/5
  
     // #g-subquestion(point: 1.5)[$display(limits("lím")_(x->0)(1 + "sen"(x))^(1/x))$ ] // = e
     \
-    #h(14pt) b) (0,75 puntos) $display(limits("lím")_(x->+ infinity)sqrt(x^2-5x+6) - x)$  // = -5/2
+    #h(14pt) b) (1 punto) $display(limits("lím")_(x->+ infinity)sqrt(x^2-5x+6) - x)$  // = -5/2
     \ \
     // #g-subquestion(point: 1.5)[$display(limits("lím")_(x->0)((1+tg x) / (1 + "sen" x))^(1/"sen" x))$ ] // = 1
 
-    #h(14pt) c) (1 puntos) $display(limits("lím")_(x->+ infinity)(2x+1)^(1/x))$
+    #h(14pt) c) (1 punto) $display(limits("lím")_(x->+ infinity)(2x+1)^(1/x))$
 
 
 *B.3  Calificación máxima:* 2,5 puntos.
