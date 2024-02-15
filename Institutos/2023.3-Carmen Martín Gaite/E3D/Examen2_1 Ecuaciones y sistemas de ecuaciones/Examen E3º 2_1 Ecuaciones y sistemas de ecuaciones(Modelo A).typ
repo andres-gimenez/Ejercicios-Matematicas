@@ -87,13 +87,13 @@
               cetz.plot.add(((0,0),), mark-size: 0,)
             
               cetz.plot.add(
-                style: (stroke: blue),
+                style: (stroke: blue + 2pt),
                 domain: (-5.2, 5.2), 
                 x=>x + 3
               )
 
               cetz.plot.add(
-                style: (stroke: green),
+                style: (stroke: olive + 2pt),
                 domain: (-5.2, 5.2), 
                 x=>x
               )
@@ -130,17 +130,19 @@
           // x-minor-tick-step: 0.2,
           // y-minor-tick-step: 0.2,
           // y-minor-tick-color:
+          // plot-style:(stroke: blue + 2pt),
+          // mark-tyle:(stroke: blue + 2pt),
             {
               cetz.plot.add(((0,0),), mark-size: 0,)
             
               cetz.plot.add(
-                style: (stroke: blue),
+                style: (stroke: blue + 2pt),
                 domain: (-5.2, 5.2), 
                 x=>-x - 4
               )
 
               cetz.plot.add(
-                style: (stroke: green),
+                style: (stroke: olive + 2pt),
                 domain: (-5.2, 5.2), 
                 x=>3
               )
