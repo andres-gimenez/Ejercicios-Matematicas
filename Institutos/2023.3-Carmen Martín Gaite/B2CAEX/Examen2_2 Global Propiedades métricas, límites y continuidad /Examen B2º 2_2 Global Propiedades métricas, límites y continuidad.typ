@@ -1,45 +1,85 @@
-#import "@preview/cetz:0.2.0"
 #import "./g-exam.typ": g-exam, g-question, g-subquestion, g-explanation
 
-#show: g-exam.with(
-  author: (
-    name: "Andrés Jorge Giménez Muñoz", 
-    email: "agimenezmunoz@educa.madrid.com", 
-    // watermark: "Profesor: andres",
-  ),
-  school: (
-    name: "IES Carmen Martín Gaite",
-    logo: "logo-ies_carmen.jpeg",
-  ),
-  exam-info: (
-    academic-period: "Curso 2023/2024",
-    academic-level: "2º Bachillerato",
-    academic-subject: "Matemáticas II",
-    number: "2º Evaluación ",
-    content: "Examen global",
-    model: "Modelo A"
-  ),
+#set heading(numbering: "A.1")
+#show heading: it => [
+  #set align(center)
+  // #set text(font: "Inria Serif")
+  // #emph(it.body)
+  #it.body
+  #counter(heading).display() 
+]
+
+// #show: g-exam.with(
+//   author: (
+//     name: "Andrés Jorge Giménez Muñoz", 
+//     email: "agimenezmunoz@educa.madrid.com", 
+//     // watermark: "Profesor: andres",
+//   ),
+//   school: (
+//     name: "IES Carmen Martín Gaite",
+//     logo: "logo-ies_carmen.jpeg",
+//   ),
+//   exam-info: (
+//     academic-period: "Curso 2023/2024",
+//     academic-level: "2º Bachillerato",
+//     academic-subject: "Matemáticas II",
+//     number: "2º Evaluación ",
+//     content: "Examen global",
+//     model: "Modelo A"
+//   ),
   
-  languaje: "es",
-  decimal-separator: ",",
-  date: "November 21, 2023",
-  show-studen-data: false,
-  show-grade-table: false,
-  question-point-position: left,
-//   clarifications: (
-//  [Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada de la prueba que se valorará con un cero.],
-//     [Esta prueba ha de realizarse con bolígrafo no borrable azul o negro.],
-//     [Deben aparecer todas las operaciones, no vale solo con indicar el resultado.],
-//     [Se ha de llegar a la solución más reducida posible.],
-//     [No está permitido el uso móvil, ni ningún otro tipo de aparato electrónico, salvo una calculadora no programable. 
-//     La mera exhibición de material no permitido o la sospecha de haber sido utilizada por parte del corrector, implicará la anulará de la prueba y por consiguiente será calificada con un cero.],
-//     [No está permitido compartir material, durante la prueba.],
-//   )
+//   languaje: "es",
+//   decimal-separator: ",",
+//   date: "November 21, 2023",
+//   show-studen-data: false,
+//   show-grade-table: false,
+//   question-point-position: left,
+// )
+
+// #rect(
+//    width: 100%,
+//   [
+    #table(
+      columns: (auto, 1fr, 80pt),
+      // rows: (100pt),
+      image("logo-ies_carmen.jpeg", height:2.5cm, fit: "contain"),
+      [
+        #align(center + top)[
+          *IES Carmen Martín Gaite*
+
+          Examen Global 2º Evaluación
+
+          Curso *2022-2023*
+        ]
+        MATERIA: *MATEMÁTICAS II*
+      ],
+      [],
+    )
+  // ])
+
+#rect(
+  width:100%,
+  [
+     #align(center)[*INSTRUCCIONES GENERALES Y CALIFICACION*]
+
+    Despues de leer atentamente el examen, responda razonadamente las #underline[cuatro] preguntas de una de las opciones A o B. Todas las respuestas deberan estar debidamente justificadas.
+
+    *CALIFICACION:* Cada pregunta se calificara sobre 2.5 puntos.
+    
+    *TIEMPO:* 90 minutos.
+  ]
 )
 
-= Opción A
-#g-question(point: 2.5)[Dados las rectas:
-  #align(top + center, columns(2, 
+#rect(
+  width: 100%,
+  // height: 1pt,
+  outset: 0pt,
+  inset: 15pt,
+  [
+= Opción
+*A.1  Calificación máxima:* 2.5 puntos.
+  Dados las rectas:
+  #align(center, columns(2, 
     [$ r eq.triple (x+2)/(-1)=(y-1)/3=(z-3)/(-4)$
     #colbreak()
     $ s eq.triple cases( delim: "{",
@@ -48,45 +88,52 @@
                 &y &=-1-t
               ) $ ]
     ))
-  #g-subquestion(point: 1)[Determina la ecuación del plano que pasa por el punto $P(-2,-3,2)$ y es paralelo a las rectas $r$ y $s$.]
-  #g-subquestion(point: 1)[Calcula el angulo que forman las rectas $r$ y $s$.]
- ]
 
-  #g-question(point: 2.5)[Calcula el valor de los siguientes limites:
-    // #g-subquestion(point: 1)[$display(lim_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
+    #h(14pt) a) (1.5 puntos) Determina la ecuación del plano que pasa por el punto $P(-2,-3,2)$ y es paralelo a las rectas $r$ y $s$.
+    #h(14pt) b) (1 punto) Calcula el angulo que forman las rectas $r$ y $s$
 
-    #g-subquestion(point: 1)[$display(lim_(x->2)(x^3-x^2-x-2)/(x^2+x-6))$] // =7/5
+*A.2  Calificación máxima:* 2.5 puntos.
+  Calcula el valor de los siguientes límites:
+    // #g-subquestion(point: 1)[$display("lím"_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
 
-    #g-subquestion(point: 1.5)[$display(lim_(x->+ infinity)((3x^3+x-1)/(3x^3-1))^(3x^2))$ ] // = e
-  ]
+    #h(24pt) a) (1 punto) $display("lím"_(x->2)(x^3-x^2-x-2)/(x^2+x-6))$ // =7/5
 
- #g-question(point: 2.5)[
-    #g-subquestion(point: 1.25)[
+    #h(14pt) b) (1,5 puntos) $display("lím"_(x->+ infinity)((3x^3+x-1)/(3x^3-1))^(3x^2))$ // = e
+
+*A.3  Calificación máxima:* 2.5 puntos.
+    #h(14pt) a) (1,5 puntos)
       Halla la recta que pasa por $A=(2,-2,1)$ y es perpendicular al plano $pi$:
-      $ pi prime eq.triple cases( delim: "{",
+      $ pi eq.triple cases( delim: "{",
                 &x &= 1 -λ + μ,
                 &y &= -3 + λ,
                 &z &= 3μ
-              ) $ ]
-    #g-subquestion(point: 1.25)[Calcular la distancia de ese plano $pi$ al punto $A$. ]
- ]
+              ) $ 
+    #h(14pt) b) (1,5 puntos) Calcular la distancia del plano $pi$ al punto $A$.
 
- #g-question(point: 2.5)[
-    #g-subquestion(point: 1.5)[Estudia la continuidad de la función en #underline[todo] el intervalo $[0, 3]$
+*A.4 Calificación máxima:* 2.5 puntos.
+    #h(14pt) a) (1,5 puntos) Estudia la continuidad de la función en #underline[todo] el intervalo $[0, 3]$
     $ f(x) = cases( delim: "{",
                 &x^3 + x - 2 &"si" &x <= 1,
                 &2x^2 - 2 &"si" &x> 1
               ) $ 
-    ]
     
-    #g-subquestion(point: 0.25)[Enuncia el Teorema de Bolzano]
-    #g-subquestion(point: 0.75)[Demuestra que $exists x in (0, 3)$ tal que $f(c)=0$]
- ]
+    #h(14pt) b) (0,25 puntos) Enuncia el Teorema de Bolzano.
+
+    #h(14pt) c) (0,75 puntos) Demuestra que $exists x in (0, 3)$ tal que $f(c)=0$
+])
 
 #pagebreak()
 
-= Opción B
- #g-question(point: 2.5)[Dados los planos 
+#rect(
+  width: 100%,
+  // height: 1pt,
+  outset: 0pt,
+  inset: 15pt,
+  [
+= Opción
+
+*B.1  Calificación máxima:* 2.5 puntos.
+Dados los planos 
   #align(top + center, columns(2, 
     [$ pi eq.triple 2x-3y+z=0 $
     #colbreak()
@@ -95,24 +142,25 @@
                 &y &= t-s,
                 &z &=2+2t+s
               ) $ ]))
-  #g-subquestion(point: 1.5)[Halla la ecuación de la recta que pasa por el punto $A(2, -3, 0)$ y es paralela a la recta que es intersección de los planos $pi$ y $pi prime$.]
-  #g-subquestion(point: 1)[Calcula el angulo que forman los planos $pi$ y $pi prime$.]
- ]
+  
+  #h(14pt) a) (1,5 puntos) Halla la ecuación de la recta que pasa por el punto $A(2, -3, 0)$ y es paralela a la recta que es intersección de los planos $pi$ y $pi prime$.
 
+  #h(14pt) a) (1 punto) Calcula el angulo que forman los planos $pi$ y $pi prime$.
 
- #g-question(point: 2.5)[Calcula el valor de los siguientes límites:
+*B.2  Calificación máxima:* 2.5 puntos.
+ Calcula el valor de los siguientes límites:
     \
-    // #g-subquestion(point: 1)[$display(lim_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
-    #g-subquestion(point: 1)[$display(lim_(x->- infinity)(x)/sqrt(x^2+1))$] // =7/5
+    // #g-subquestion(point: 1)[$display("lím"_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
+    #h(14pt) a) (1,5 puntos) $display("lím"_(x->- infinity)(x)/sqrt(x^2+1))$ // =7/5
  
-    // #g-subquestion(point: 1.5)[$display(lim_(x->0)(1 + "sen"(x))^(1/x))$ ] // = e
-    #g-subquestion(point: 1.5)[$display(lim_(x->+ infinity)(sqrt(x^2-5x+6) - x))$ ] // = -5/2
+    // #g-subquestion(point: 1.5)[$display("lím"_(x->0)(1 + "sen"(x))^(1/x))$ ] // = e
 
-    // #g-subquestion(point: 1.5)[$display(lim_(x->0)((1+tg x) / (1 + "sen" x))^(1/"sen" x))$ ] // = 1
-  ]
+    #h(14pt) a) (1,5 puntos) $display("lím"_(x->+ infinity)(sqrt(x^2-5x+6) - x))$  // = -5/2
 
-   #g-question(point: 2.5)[
-    #g-subquestion(point: 1.25)[
+    // #g-subquestion(point: 1.5)[$display("lím"_(x->0)((1+tg x) / (1 + "sen" x))^(1/"sen" x))$ ] // = 1
+ 
+*B.3  Calificación máxima:* 2.5 puntos.
+    #h(14pt) a) (1,25 puntos) 
       Hallar el plano paralelo a la recta $r$ que contiene a la recta $s$, siendo:
        #align(top + center, columns(2, 
         [\ $ r eq.triple x-1 = (y+2)/2 = z $
@@ -123,13 +171,13 @@
                     &y &= 3λ
                   ) $ ]
         ))
-    ]
-    #g-subquestion(point: 1.25)[Calcular la distancia de dicho plano a la recta $r$.
-    ]
- ]
+    
+    #h(14pt) b) (1,25 puntos) Calcular la distancia de dicho plano a la recta $r$.
 
- #g-question(point: 2.5)[
-    #g-subquestion(point: 1.5)[Estudia la continuidad de la función $f(x)="sen"(x)-x^2+1$ en #underline[todo] el intervalo $[0, 2]$]
-    #g-subquestion(point: 0.25)[Enuncia el Teorema de Bolzano]
-    #g-subquestion(point: 0.75)[Demuestra que la ecuación $"sen"(x) = x^2 - 1$ tiene almenos una solución en el intervalo $[0,2]$]
- ]
+*B.4  Calificación máxima:* 2.5 puntos.
+    #h(14pt) a) (1,5 puntos) Estudia la continuidad de la función $f(x)="sen"(x)-x^2+1$ en #underline[todo] el intervalo $[0, 2]$
+
+    #h(14pt) a) (0,25 puntos) Enuncia el Teorema de Bolzano
+
+    #h(14pt) a) (0,75 puntos) Demuestra que la ecuación $"sen"(x) = x^2 - 1$ tiene al menos una solución en el intervalo $[0,2]$
+])
