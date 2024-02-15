@@ -44,12 +44,12 @@
  #g-subquestion(point: 0.75)[$display(3x^2-2x-3=4 dot (x^2-5x-2) - x^2)$]
  #v(1fr)
 
- #g-subquestion(point: 1.25)[$display(x^4 - 16x -255 = 0)$]
+ #g-subquestion(point: 1.25)[$display(x^4 - 16x^2 -225 = 0)$]
  #v(1fr)
 
 #pagebreak()
 
- #g-subquestion(point: 2)[$display(x^5 + 5x^4 - x^3 - 5x = 0)$]
+ #g-subquestion(point: 2)[$display(x^5 + 5x^4 - x^3 - 5x^2 = 0)$]
  #v(1fr)
 ]
 
@@ -193,7 +193,7 @@
 #pagebreak()
 
 #g-question(point: 1)[
-  La suma de los cuadrados de dos núumeros consecutivos es 181. 
+  La suma de los cuadrados de dos números consecutivos es 181. 
   Calcula dichos números.
   
   #v(1fr)
@@ -205,7 +205,7 @@ El día 12 de julio, Metallica da un concierto benéfico en una sala de Madrid p
 el cual se venden dos tipos de entradas, una del tipo general y otra VIP con acceso anticipado.
 El concierto resulta un éxito, se venden todas las entradas y se recaudan 23 mil dólares. 
 Los precios de las entradas son 50 dólares las de tipo general y 300 dólares las VIP.
-Calcula el número de entradas vendidas de cada tipo si el aforo del establecimiento es de 160 personas.
 
+Calcula el número de entradas vendidas de cada tipo si el aforo del establecimiento es de 160 personas.
 #v(2fr)
 ]
