@@ -41,9 +41,6 @@
 //   question-point-position: left,
 // )
 
-// #rect(
-//    width: 100%,
-//   [
     #table(
       columns: (auto, 1fr, 80pt),
       // rows: (100pt),
@@ -52,7 +49,7 @@
         #align(center + top)[
           *IES Carmen Martín Gaite*
 
-          Examen Global 2º Evaluación
+          Examen Global - 2º Evaluación
 
           Curso *2023-2024*
         ]
@@ -60,7 +57,6 @@
       ],
       [],
     )
-  // ])
 
 #rect(
   width:100%,
@@ -82,35 +78,40 @@
   inset: 15pt,
   [
 = Opción
-*A.1  Calificación máxima:* 2.5 puntos.
-  Dados las rectas:
-  #align(center, columns(2, 
-    [\ $ r eq.triple (x+2)/(-1)=(y-1)/3=(z-3)/(-4)$
-    #colbreak()
-    $ s eq.triple cases( delim: "{",
+*A.1  Calificación máxima:* 2,5 puntos.
+  
+  #h(6pt)Dados las rectas:
+    #h(14pt) #grid(columns:(60pt, 1fr, 20pt, 1fr, 60pt),
+    [],
+    [ #align(horizon, $ r eq.triple (x+2)/(-1)=(y-1)/3=(z-3)/(-4) $ )],
+    [],
+    [ #align(horizon, $ s eq.triple cases( delim: "{",
                 &x &= 2+3t,
                 &y &= t,
                 &y &=-1-t
-              ) $ ]
-    ))
+              ) $ )],
+    []
+    )
 
     #h(14pt) a) (1.5 puntos) Determina la ecuación del plano que pasa por el punto $P(-2,-3,2)$ y es paralelo a las rectas $r$ y $s$.
     
     #h(14pt) b) (1 punto) Calcula el angulo que forman las rectas $r$ y $s$
 
-*A.2  Calificación máxima:* 2.5 puntos.
+*A.2  Calificación máxima:* 2,5 puntos.
   
-    #h(14pt) Calcula el valor de los siguientes límites:
-    // #g-subquestion(point: 1)[$display("lím"_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
+    #h(6pt) Calcula el valor de los siguientes límites:
+    // #g-subquestion(point: 1)[$display(limits("lím")_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
 
-    #h(14pt) a) (1 punto) $display("lím"_(x->2)(x^3-x^2-x-2)/(x^2+x-6))$ // =7/5
+    #h(14pt) a) (1 punto) $display(limits("lím")_(x->2)(x^3-x^2-x-2)/(x^2+x-6))$ // =7/5
 
-    #h(14pt) b) (1,5 puntos) $display("lím"_(x->+ infinity)((3x^3+x-1)/(3x^3-1))^(3x^2))$ // = e
+    #h(14pt) b) (1,5 puntos) $display(limits("lím")_(x->+ infinity)((3x^3+x-1)/(3x^3-1))^(3x^2))$ // = e
 
-*A.3  Calificación máxima:* 2.5 puntos.
+    // #h(14pt) c) (1,5 puntos) $display(limits("lím")_(x->+ infinity)(x-sqrt(x^2-6x)))$ // = 3
+
+*A.3  Calificación máxima:* 2,5 puntos.
 
     #h(14pt) a) (1,5 puntos)
-      Halla la recta que pasa por $A=(2,-2,1)$ y es perpendicular al plano $pi$:
+      Halla la recta que pasa por $A(2,-2,1)$ y es perpendicular al plano $pi$:
       $ pi eq.triple cases( delim: "{",
                 &x &= 1 -λ + μ,
                 &y &= -3 + λ,
@@ -118,7 +119,7 @@
               ) $ 
     #h(14pt) b) (1,5 puntos) Calcular la distancia del plano $pi$ al punto $A$.
 
-*A.4 Calificación máxima:* 2.5 puntos.
+*A.4 Calificación máxima:* 2,5 puntos.
     
     #h(14pt) a) (1,5 puntos) Estudia la continuidad de la función en #underline[todo] el intervalo $[0, 3]$
     $ f(x) = cases( delim: "{",
@@ -128,7 +129,7 @@
     
     #h(14pt) b) (0,25 puntos) Enuncia el Teorema de Bolzano.
 
-    #h(14pt) c) (0,75 puntos) Demuestra que $exists x in (0, 3)$ tal que $f(c)=0$
+    #h(14pt) c) (0,75 puntos) Demuestra que $exists c in (0, 3)$ tal que $f(c)=0$
 ])
 
 #pagebreak()
@@ -141,55 +142,64 @@
   [
 = Opción
 
-*B.1  Calificación máxima:* 2.5 puntos.
+*B.1  Calificación máxima:* 2,5 puntos.
 
-  #h(14pt) Dados los planos 
-  #align(top + center, columns(2, 
-    [\ $ pi eq.triple 2x-3y+z=0 $
-    #colbreak()
-    $ pi prime eq.triple cases( delim: "{",
+  #h(6pt) Dados los planos:
+  #h(14pt) #grid(columns:(60pt, 1fr, 20pt, 1fr, 60pt),
+    [],
+    [ #align(horizon, $ pi eq.triple 2x-3y+z=0 $ )],
+    [],
+    [ #align(horizon, $ pi prime eq.triple cases( delim: "{",
                 &x &= 2+t+s,
                 &y &= t-s,
                 &z &=2+2t+s
-              ) $ ]))
+              )  $ )],
+    []
+    )
   
   #h(14pt) a) (1,5 puntos) Halla la ecuación de la recta que pasa por el punto $A(2, -3, 0)$ y es paralela a la recta que es intersección de los planos $pi$ y $pi prime$.
 
   #h(14pt) b) (1 punto) Calcula el angulo que forman los planos $pi$ y $pi prime$.
 
-*B.2  Calificación máxima:* 2.5 puntos.
+*B.2  Calificación máxima:* 2,5 puntos.
  
-    #h(14pt) Calcula el valor de los siguientes límites:
+    #h(6pt) Calcula el valor de los siguientes límites:
     
-    // #g-subquestion(point: 1)[$display("lím"_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
-    #h(14pt) a) (1,25 puntos) $display("lím"_(x->- infinity)(x)/sqrt(x^2+1))$ // =7/5
+    // #g-subquestion(point: 1)[$display(limits("lím")_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
+    #h(14pt) a) (0,75 puntos) $display(limits("lím")_(x->- infinity)(x)/sqrt(x^2+1))$ // =7/5
  
-    // #g-subquestion(point: 1.5)[$display("lím"_(x->0)(1 + "sen"(x))^(1/x))$ ] // = e
+    // #g-subquestion(point: 1.5)[$display(limits("lím")_(x->0)(1 + "sen"(x))^(1/x))$ ] // = e
     \
-    #h(14pt) b) (1,25 puntos) $display("lím"_(x->+ infinity)(sqrt(x^2-5x+6) - x))$  // = -5/2
+    #h(14pt) b) (0,75 puntos) $display(limits("lím")_(x->+ infinity)sqrt(x^2-5x+6) - x)$  // = -5/2
     \ \
-    // #g-subquestion(point: 1.5)[$display("lím"_(x->0)((1+tg x) / (1 + "sen" x))^(1/"sen" x))$ ] // = 1
-*B.3  Calificación máxima:* 2.5 puntos.
+    // #g-subquestion(point: 1.5)[$display(limits("lím")_(x->0)((1+tg x) / (1 + "sen" x))^(1/"sen" x))$ ] // = 1
+
+    #h(14pt) c) (1 puntos) $display(limits("lím")_(x->+ infinity)(2x+1)^(1/x))$
+
+
+*B.3  Calificación máxima:* 2,5 puntos.
     
     #h(14pt) a) (1,25 puntos) 
       Hallar el plano paralelo a la recta $r$ que contiene a la recta $s$, siendo:
-       #align(top + center, columns(2, 
-        [$ r eq.triple x-1 = (y+2)/2 = z $
-        #colbreak()
-        $ s prime eq.triple cases( delim: "{",
+    #h(14pt) #grid(columns:(60pt, 1fr, 20pt, 1fr, 60pt),
+    [],
+    [ #align(horizon, $ r eq.triple x-1 = (y+2)/2 = z $ )],
+    [],
+    [ #align(horizon, $ s eq.triple cases( delim: "{",
                     &x &= -2 + 2λ,
                     &y &= 1 - λ,
                     &y &= 3λ
-                  ) $ ]
-        ))
+                  )   $ )],
+    []
+    )
     
     #h(14pt) b) (1,25 puntos) Calcular la distancia de dicho plano a la recta $r$.
 
-*B.4  Calificación máxima:* 2.5 puntos.
+*B.4  Calificación máxima:* 2,5 puntos.
     
-    #h(14pt) a) (1,5 puntos) Estudia la continuidad de la función $f(x)="sen"(x)-x^2+1$ en #underline[todo] el intervalo $[0, 2]$.
+    #h(14pt) a) (1,5 puntos) Estudia la continuidad de la función $f(x)=ln(x+1)- 2x +3$ en #underline[todo] el intervalo $[0, 3]$.
 
     #h(14pt) b) (0,25 puntos) Enuncia el Teorema de Bolzano.
 
-    #h(14pt) c) (0,75 puntos) Demuestra que la ecuación $"sen"(x) = x^2 - 1$ tiene al menos una solución en el intervalo $(0,2)$.
+    #h(14pt) c) (0,75 puntos) Demuestra que la ecuación $ln(x+1) = 2x - 3$ tiene al menos una solución en el intervalo $(0,3)$.
 ])
