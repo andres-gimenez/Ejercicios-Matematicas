@@ -110,14 +110,14 @@
 
 *A.3  Calificación máxima:* 2,5 puntos.
 
-    #h(14pt) a) (1,5 puntos)
+    #h(14pt) a) (1,25 puntos)
       Halla la recta que pasa por $A(2,-2,1)$ y es perpendicular al plano $pi$:
       $ pi eq.triple cases( delim: "{",
                 &x &= 1 -λ + μ,
                 &y &= -3 + λ,
                 &z &= 3μ
               ) $ 
-    #h(14pt) b) (1,5 puntos) Calcular la distancia del plano $pi$ al punto $A$.
+    #h(14pt) b) (1,25 puntos) Calcular la distancia del plano $pi$ al punto $A$.
 
 *A.4 Calificación máxima:* 2,5 puntos.
     
