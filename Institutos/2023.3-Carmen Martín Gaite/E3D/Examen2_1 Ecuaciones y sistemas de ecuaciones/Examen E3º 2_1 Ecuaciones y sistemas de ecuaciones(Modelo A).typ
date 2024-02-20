@@ -121,6 +121,7 @@
           x-min:-5.2,
           y-max: 5.2,
           y-min:-5.2,
+          // grid: (stroke:(paint: gray.lighten(20%))
           x-grid: "both",
           y-grid: "both",
           // x-tick-step: none,
