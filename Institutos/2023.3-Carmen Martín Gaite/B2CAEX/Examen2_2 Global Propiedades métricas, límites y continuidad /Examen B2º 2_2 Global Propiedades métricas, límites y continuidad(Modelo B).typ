@@ -113,7 +113,7 @@
     \ \
     // #g-subquestion(point: 1.5)[$display(limits("lím")_(x->0)((1+tg x) / (1 + "sen" x))^(1/"sen" x))$ ] // = 1
 
-    #h(14pt) c) (1 punto) $display(limits("lím")_(x->+ infinity)(2x+1)^(1/x))$
+    #h(14pt) c) (1 punto) $display(limits("lím")_(x->0)(2x+1)^(1/x))$
 
 
 *A.3  Calificación máxima:* 2,5 puntos.

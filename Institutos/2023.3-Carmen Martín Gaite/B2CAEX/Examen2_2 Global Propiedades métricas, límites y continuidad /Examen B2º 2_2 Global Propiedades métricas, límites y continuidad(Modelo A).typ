@@ -82,7 +82,7 @@
 = Opción
 *A.1  Calificación máxima:* 2,5 puntos.
   
-  #h(6pt)Dados las rectas:
+  #h(6pt)Dadas las rectas:
     #h(14pt) #grid(columns:(60pt, 1fr, 20pt, 1fr, 60pt),
     [],
     [ #align(horizon, $ r eq.triple (x+2)/(-1)=(y-1)/3=(z-3)/(-4) $ )],
@@ -176,7 +176,7 @@
     \ \
     // #g-subquestion(point: 1.5)[$display(limits("lím")_(x->0)((1+tg x) / (1 + "sen" x))^(1/"sen" x))$ ] // = 1
 
-    #h(14pt) c) (1 punto) $display(limits("lím")_(x->+ infinity)(2x+1)^(1/x))$
+    #h(14pt) c) (1 punto) $display(limits("lím")_(x->0)(2x+1)^(1/x))$
 
 
 *B.3  Calificación máxima:* 2,5 puntos.
@@ -190,7 +190,7 @@
     [ #align(horizon, $ s eq.triple cases( delim: "{",
                     &x &= -2 + 2λ,
                     &y &= 1 - λ,
-                    &y &= 3λ
+                    &z &= 3λ
                   )   $ )],
     []
     )
