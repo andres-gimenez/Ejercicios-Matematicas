@@ -1,4 +1,4 @@
-#import "./g-exam.typ": g-exam, g-question, g-subquestion
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 #import "@preview/cetz:0.2.0"
 
 #show: g-exam.with(
@@ -23,7 +23,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "November 21, 2023",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
@@ -52,7 +52,7 @@
 ]
 #v(1fr)
 
-// #question(point: 2)[
+// #g-question(point: 2)[
 //   Resuelve el siguiente sistema de inecuaciones:
 //   \
 //   \
@@ -70,7 +70,7 @@
 // #v(1fr)
 #pagebreak()
 
-// #question(point: 2)[
+// #g-question(point: 2)[
 //   A partir de la gráfica de la siguientes funciones, indica cuál es su dominio de definición y su recorrido:
 
 //   #cetz.canvas(length: 0.5cm, {
@@ -185,7 +185,7 @@
 ]
 #pagebreak()
 
-// #question(point:2)[
+// #g-question(point:2)[
 //   Una función lineal esta definida en el intervalo $[-3,5)$. 
 //   Escribe la expresión analitítica de dicha función lineal y represéntala, a partir de los siguientes datos:
 //   $f(-2) = 3$ y $f(3) = -4$ e interpola valores para $x=0$ y $x=2$.
@@ -234,7 +234,7 @@
 //     )
 //   )
 
-// #question(point:2)[
+// #g-question(point:2)[
 //   Halla la función exponencial tipo $y=k dot a^x$, que pasa por los puntos $(1, 10)$ y $(-2,50)$. Representala aproximadamente.
 // ]
 // #v(1fr)

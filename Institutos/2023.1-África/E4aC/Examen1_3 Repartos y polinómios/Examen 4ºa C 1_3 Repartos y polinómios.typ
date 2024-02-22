@@ -1,6 +1,6 @@
-#import "./exam.typ": exam, question, subquestion
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 
-#show: exam.with(
+#show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -22,7 +22,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "Diciembre 21, 2023",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
@@ -36,7 +36,7 @@
   )
 )
 
-#question(point: 3)[Simplifica estas expresiones:]
+#g-question(point: 3)[Simplifica estas expresiones:]
   // Pones más facil.
   #subquestion[
     $display(5x dot [(2x^2 + x - 1) - 3 dot (x^2 -x +3)])$
@@ -58,7 +58,7 @@
 #pagebreak()
 
 // Problema ambiguo, no utilizar. 
-#question[El número de personas que acceden a un comercio en cada hora puede estimarse a partir de la expresión $P(x)=-x^2+8x$ 
+#g-question[El número de personas que acceden a un comercio en cada hora puede estimarse a partir de la expresión $P(x)=-x^2+8x$ 
 y el número de personas que sale, la expresión $Q(x)=-0,25x^2+2x$, donde $x$ representa el número de horas desde su apertura.]
 
   #subquestion(point: 1)[Indica cuantas personas entran en el comercio durante la segunda hora y cuántas salen.]
@@ -72,7 +72,7 @@ y el número de personas que sale, la expresión $Q(x)=-0,25x^2+2x$, donde $x$ r
 
 #pagebreak()
 
-#question[En un restaurante, se divide la jornada laboral en turnos de comida y cena, realizando cuatro horas en cada turno. 
+#g-question[En un restaurante, se divide la jornada laboral en turnos de comida y cena, realizando cuatro horas en cada turno. 
 Los cuatro camareros se reparten la jornada laboral de la siguiente manera:
 Marta trabaja de lunes a viernes en el turno de comidas y cenas;
 Juan trabaja los viernes solo en el turno de cena y los sábados y domingos realiza los turnos de comida y cena;

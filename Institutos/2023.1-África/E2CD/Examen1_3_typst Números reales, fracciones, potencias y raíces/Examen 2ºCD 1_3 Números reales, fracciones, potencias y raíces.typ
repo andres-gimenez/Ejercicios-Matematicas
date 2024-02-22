@@ -1,6 +1,6 @@
-#import "./exam.typ": exam, question, subquestion
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 
-#show: exam.with(
+#show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -22,7 +22,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "November 21, 2023",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
@@ -35,7 +35,7 @@
   )
 )
 
-#question(point: 2)[Realiza las siguientes operaciones:]
+#g-question(point: 2)[Realiza las siguientes operaciones:]
   
   #subquestion[$display((5/2+1) dot (4/7+2/3) = )$]
   #v(1fr)
@@ -45,7 +45,7 @@
 
 #pagebreak()
 
-#question(point: 2)[Expresa como una única potencia:]
+#g-question(point: 2)[Expresa como una única potencia:]
 
   #subquestion[$display((-5)^3 dot (-5)^4 : (-5)^2 = )$]
   #v(1fr)
@@ -59,7 +59,7 @@
   #subquestion[$display(2^3 dot 3^3 =)$]
   #v(1fr)
 
-#question(point: 2)[Calcula las siguientes raíces, factorizando en números primos:]
+#g-question(point: 2)[Calcula las siguientes raíces, factorizando en números primos:]
 
   #subquestion[$display(sqrt(64)) =$]
   #v(1fr)
@@ -75,7 +75,7 @@
 
 #pagebreak()
 
-#question(point: 2)[Opera y simplifica los resultados siguientes:]
+#g-question(point: 2)[Opera y simplifica los resultados siguientes:]
 
   #subquestion[$display(15/18 + (3/2-1/4)^2)$]
   #v(1fr)
@@ -85,7 +85,7 @@
 
 #pagebreak()
 
-#question(point: 2)[Un hospital tiene 11 plantas,
+#g-question(point: 2)[Un hospital tiene 11 plantas,
  18 habitaciones en cada una de las plantas,
  2 camas en cada una de las  habitaciones y 
  dos almohadas en cada una de las camas.

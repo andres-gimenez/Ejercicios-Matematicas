@@ -1,5 +1,5 @@
 #import "@preview/cetz:0.2.0"
-#import "./g-exam.typ": g-exam, g-question, g-subquestion, g-explanation
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion, g-explanation
 
 #show: g-exam.with(
   author: (
@@ -9,7 +9,7 @@
   ),
   school: (
     name: "IES Carmen Martín Gaite",
-    logo: "logo-ies_carmen.jpeg",
+    logo: read("./logo-ies_carmen.jpeg", encoding: none)
   ),
   exam-info: (
     academic-period: "Curso 2023/2024",
@@ -23,7 +23,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "November 21, 2023",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (

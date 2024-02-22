@@ -1,6 +1,6 @@
-#import "./exam.typ": exam, question, subquestion
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 
-#show: exam.with(
+#show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -22,7 +22,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "November 21, 2023",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
@@ -36,7 +36,7 @@
   )
 )
 
-// #question(point: 2)[Calcula las siguientes raíces:
+// #g-question(point: 2)[Calcula las siguientes raíces:
 //   #subquestion[$sqrt(49)=$]
 //   #v(1fr)
 
@@ -51,7 +51,7 @@
 // ]
 // #pagebreak(weak: true)
 
-// #question(point: 2)[Realiza las siguientes operaciones con fracciones y simpliﬁca el resultado lo máximo posible: \ 
+// #g-question(point: 2)[Realiza las siguientes operaciones con fracciones y simpliﬁca el resultado lo máximo posible: \ 
 //   #text(size:8pt)[$(*)$  Recuerda que con las fracciones no se pueden utilizar decimales:]
 
 //   #subquestion[$11+2/3+3/4=$]
@@ -68,7 +68,7 @@
 // ]
 // #pagebreak(weak: true)
 
-// #question(point: 2)[Resuelve las operaciones convinadas:
+// #g-question(point: 2)[Resuelve las operaciones convinadas:
 //   #subquestion[$5+3 dot (-4 +2)=43$]
 //   #v(1fr)
 
@@ -83,7 +83,7 @@
 // ]
 // #pagebreak()
 
-#question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
+#g-question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
   #subquestion[$display(5/12 dot 9/15=)$]
   #v(1fr)
 
@@ -98,7 +98,7 @@
 ]
 #pagebreak()
 
-#question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
+#g-question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
   #subquestion[$display(4/11+5/11-2/11=)$]
   #v(1fr)
 
@@ -113,7 +113,7 @@
 ]
 #pagebreak()
 
-#question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
+#g-question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
   #subquestion[$display(3/5 - (1-7/10) = )$]
   #v(1fr)
 
@@ -122,13 +122,13 @@
 ]
 #pagebreak()
 
-#question(point: 2)[Ordena de mayor a menor las siguientes fracciones:
+#g-question(point: 2)[Ordena de mayor a menor las siguientes fracciones:
       \ \
       #align(center, [$ 2/3 ; 3/8 ; 4/6 ; 1/2 $])
       #v(1fr)
 ]    
 
-#question(point: 2)[En un jardín tenemos 20 rosales rojos, 10 blancos y 15 amarillos.
+#g-question(point: 2)[En un jardín tenemos 20 rosales rojos, 10 blancos y 15 amarillos.
   #subquestion[¿Qué fracción representa cada color?]
   #v(1fr)
 

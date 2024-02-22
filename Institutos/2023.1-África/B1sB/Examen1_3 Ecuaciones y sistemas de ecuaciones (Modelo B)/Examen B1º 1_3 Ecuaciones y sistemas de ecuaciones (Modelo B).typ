@@ -1,6 +1,6 @@
-#import "./exam.typ": exam, question, subquestion
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 
-#show: exam.with(
+#show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -22,7 +22,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "November 21, 2023",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
@@ -36,7 +36,7 @@
   )
 )
 
-#question(point: 2)[Discute y resuelve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
+#g-question(point: 2)[Discute y resuelve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
 \
 \
     //Sol: x=2, y=-1, z=2
@@ -50,7 +50,7 @@
 ]
 #pagebreak()
 
-#question(point: 2)[Discute y resuelve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
+#g-question(point: 2)[Discute y resuelve por el método de Gauss, indicando cuantas soluciones tiene el siguiente sistema:
 \ 
 \
     // Sol: Incompatible
@@ -65,7 +65,7 @@
 
 #pagebreak()
 
-#question(point: 2)[Resuelve la siguiente ecuación racional:
+#g-question(point: 2)[Resuelve la siguiente ecuación racional:
   \
   \
   // $display((x-1)/x-(x+1)/(x-5)=(x+2)/(x^2-5x))$
@@ -87,7 +87,7 @@
 
 // https://www.matesfacil.com/ESO/exponenciales/ejercicios-resueltos-ecuaciones-exponenciales.html
 // https://www.superprof.es/apuntes/escolar/matematicas/algebra/log/ejercicios-de-ecuaciones-exponenciales.html
-#question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:
+#g-question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:
   \
   \
   $display((x^3-9x) dot (x-5)) = 0$
@@ -111,7 +111,7 @@
 #pagebreak()
 
 //https://www.matematicasonline.es/BachilleratoCCNN/Primero/ejercicios/Ecuaciones_con_radicales_resueltas.pdf
-#question(point: 2)[Resuelve la siguiente ecuación con radicales y comprueba el resultado:
+#g-question(point: 2)[Resuelve la siguiente ecuación con radicales y comprueba el resultado:
   \
   \
   //Sol: x= 8
@@ -127,7 +127,7 @@
 
 // https://www.matesfacil.com/ESO/exponenciales/ejercicios-resueltos-ecuaciones-exponenciales.html
 // https://www.superprof.es/apuntes/escolar/matematicas/algebra/log/ejercicios-de-ecuaciones-exponenciales.html
-// #question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:
+// #g-question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:
 //   \
 //   \
 //   $display((x^3-7x-6) dot (x-4) = 0)$
@@ -145,7 +145,7 @@
 // ]
 // #v(1fr)
 
-// #question(point: 2)[Resuelve la siguiente ecuación exponencial y comprueba el resultado:
+// #g-question(point: 2)[Resuelve la siguiente ecuación exponencial y comprueba el resultado:
 //   \
 //   \
 //   $display(3^(2x-2)+3^(x-1) = 12)$
@@ -157,7 +157,7 @@
 
 // #pagebreak()
 
-// #question(point: 2)[Resuelve la siguiente ecuación con logaritmos:
+// #g-question(point: 2)[Resuelve la siguiente ecuación con logaritmos:
 //   \
 //   \
 //   $display(log(3x+13) = 2)$
@@ -170,7 +170,7 @@
 
 // #v(1fr)
 
-// #question(point: 2)[Resuelve la siguiente ecuación con valores absolutos y comprueba el resultado:
+// #g-question(point: 2)[Resuelve la siguiente ecuación con valores absolutos y comprueba el resultado:
 //   \
 //   \
 //   $display(|x^2-x| + 3 = 3x)$

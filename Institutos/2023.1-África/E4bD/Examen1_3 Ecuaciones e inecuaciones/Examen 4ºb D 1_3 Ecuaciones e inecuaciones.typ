@@ -1,7 +1,7 @@
 #import "@preview/cetz:0.1.2"
-#import "./exam.typ": exam, question, subquestion
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 
-#show: exam.with(
+#show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -23,7 +23,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "Diciembre 21, 2023",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
@@ -37,7 +37,7 @@
   )
 )
 
-#question(point: 2)[Resuelve la siguiente ecuación exponencial y comprueba el resultado:
+#g-question(point: 2)[Resuelve la siguiente ecuación exponencial y comprueba el resultado:
   \
   \
   $display(3^(2x-2)+3^(x-1) = 12)$
@@ -48,7 +48,7 @@
 #v(1fr)
 #pagebreak()
 
-#question(point: 2)[Determina que intervalo es solución de la siguiente inecuación:
+#g-question(point: 2)[Determina que intervalo es solución de la siguiente inecuación:
   \
   \
   // $display(3x^2 - 6x < 0)$
@@ -56,7 +56,7 @@
 ]
 #v(1fr)
 
-#question(point: 2)[Resuelve la siguiente versión logarítmica:
+#g-question(point: 2)[Resuelve la siguiente versión logarítmica:
   \
   \
   // $display(3x^2 - 6x < 0)$
@@ -67,7 +67,7 @@
 
 #pagebreak()
 
-#question(point: 2)[Indica la región del plano que cumple  la inecuación:
+#g-question(point: 2)[Indica la región del plano que cumple  la inecuación:
   \
   \
   $display(2 (x-1) >= 3 (y+1))$
@@ -99,9 +99,9 @@
 ]
 #v(1fr)
 
-// #question(point: 3)[Simplifica estas expresiones:]
+// #g-question(point: 3)[Simplifica estas expresiones:]
 
-// #question(point: 3)[Simplifica estas expresiones:]
+// #g-question(point: 3)[Simplifica estas expresiones:]
 //   // Pones más facil.
 //   #subquestion[
 //     $display(5x dot [(2x^2 + x - 1) - 3 dot (x^2 -x +3)])$
@@ -122,7 +122,7 @@
 
 // #pagebreak()
 
-// #question[El número de personas que acceden a un comercio en cada hora puede estimarse a partir de la expresión $P(x)=-x^2+8x$ 
+// #g-question[El número de personas que acceden a un comercio en cada hora puede estimarse a partir de la expresión $P(x)=-x^2+8x$ 
 // y el número de personas que sale, la expresión $Q(x)=-0,25x^2+2x$, donde $x$ representa el número de horas desde su apertura.]
 
 //   #subquestion(point: 1)[Indica cuantas personas entran en el comercio durante la segunda hora y cuántas salen.]
@@ -138,7 +138,7 @@
 
 
 
-// #question[En un restaurante, se divide la jornada laboral en turnos de comida y cena, realizando cuatro horas en cada turno. 
+// #g-question[En un restaurante, se divide la jornada laboral en turnos de comida y cena, realizando cuatro horas en cada turno. 
 // Los cuatro camareros se reparten la jornada laboral de la siguiente manera:
 // Marta trabaja de lunes a viernes en el turno de comidas y cenas;
 // Juan trabaja los viernes solo en el turno de cena y los sábados y domingos realiza los turnos de comida y cena;
@@ -150,7 +150,7 @@
 
 //   #subquestion(point: 2)[¿Si durante la semana han recaudado 1.300€ de bote, cuanto le corresponde a cada camarero si se reparte en función de las horas trabajadas durante la semana?]
 //   #v(1fr)
-// #question[Discute y resuleve por el método de Gauß, indicando cuantas soluciones tiene el siguiente sistema:]
+// #g-question[Discute y resuleve por el método de Gauß, indicando cuantas soluciones tiene el siguiente sistema:]
 
 //     #subquestion(point: 2)[
 //       $display(
@@ -164,7 +164,7 @@
 
 // #pagebreak()
 
-// #question(point: 2)[Discute y resuleve por el método de Gauß, indicando cuantas soluciones tiene el siguiente sistema:
+// #g-question(point: 2)[Discute y resuleve por el método de Gauß, indicando cuantas soluciones tiene el siguiente sistema:
 // \ \
 //     $display(
 //       cases(
@@ -177,7 +177,7 @@
 
 // #pagebreak()
 
-// #question(point: 2)[Resuelve las siguiente ecuacion racional:
+// #g-question(point: 2)[Resuelve las siguiente ecuacion racional:
 //   \
 //   \
 //   $display((x-1)/x-(x+1)/(x-5)=(x+2)/(x^2-5x))$
@@ -200,7 +200,7 @@
 // #pagebreak()
 
 // //https://www.matematicasonline.es/BachilleratoCCNN/Primero/ejercicios/Ecuaciones_con_radicales_resueltas.pdf
-// #question(point: 2)[Resuelve las siguiente ecuacion con radicales:
+// #g-question(point: 2)[Resuelve las siguiente ecuacion con radicales:
 //   \
 //   \
 //   $display(x-sqrt(x-1)=1)$
@@ -213,7 +213,7 @@
 
 // // https://www.matesfacil.com/ESO/exponenciales/ejercicios-resueltos-ecuaciones-exponenciales.html
 // // https://www.superprof.es/apuntes/escolar/matematicas/algebra/log/ejercicios-de-ecuaciones-exponenciales.html
-// #question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:
+// #g-question(point: 2)[Resuelve la siguiente ecuación polinómica, indicando todas sus soluciones:
 //   \
 //   \
 //   $display((x^3-7x-6) dot (x-4) = 0)$
@@ -231,7 +231,7 @@
 // ]
 // #v(1fr)
 
-// #question(point: 2)[Resuelve la siguien ecuación exponencial y comprueba el resultado:
+// #g-question(point: 2)[Resuelve la siguien ecuación exponencial y comprueba el resultado:
 //   \
 //   \
 //   $display(3^(2x-2)+3^(x-1) = 12)$
@@ -243,7 +243,7 @@
 
 // #pagebreak()
 
-// #question(point: 2)[Resuelve la siguien ecuación con logaritmos:
+// #g-question(point: 2)[Resuelve la siguien ecuación con logaritmos:
 //   \
 //   \
 //   $display(log(3x+13) = 2)$
@@ -256,12 +256,12 @@
 
 // #v(1fr)
 
-// #question(point: 2)[Resuelve la siguien ecuación con valores absolutos y comprueba el resultado:
+// #g-question(point: 2)[Resuelve la siguien ecuación con valores absolutos y comprueba el resultado:
 //   \
 //   \
 //   $display(|x^2-x| + 3 = 3x)$
 
-#question(point: 2)[Resuelve la siguiente inecuación indicando que intervalo es solución:
+#g-question(point: 2)[Resuelve la siguiente inecuación indicando que intervalo es solución:
   \
   \
   // Sol:x<=5

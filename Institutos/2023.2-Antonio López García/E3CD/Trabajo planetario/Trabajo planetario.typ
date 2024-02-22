@@ -1,4 +1,4 @@
-#import "./g-exam.typ": g-exam, g-question, g-subquestion, g-explanation
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 #import "@preview/cetz:0.2.0"
 
 #show: g-exam.with(
@@ -23,7 +23,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "November 28, 2024",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: false,
   question-point-position: right,
   clarifications: (

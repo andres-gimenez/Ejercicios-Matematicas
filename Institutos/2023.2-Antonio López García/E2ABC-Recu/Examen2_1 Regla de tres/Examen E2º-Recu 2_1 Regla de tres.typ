@@ -1,6 +1,6 @@
-#import "./exam.typ": exam, question, subquestion
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 
-#show: exam.with(
+#show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -22,7 +22,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "November 21, 2023",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
@@ -36,7 +36,7 @@
   )
 )
 
-#question(point: 2)[
+#g-question(point: 2)[
   Resuelve el siguiente sistema de inecuaciones:
   \
   \
@@ -51,7 +51,7 @@
 ]
 #v(1fr)
 
-#question(point: 2)[
+#g-question(point: 2)[
   Resuelve el siguiente sistema de inecuaciones:
   \
   \
@@ -69,12 +69,12 @@
 #v(1fr)
 #pagebreak()
 
-#question(point: 2)[
+#g-question(point: 2)[
   A partir de la gráfica de la siguientes funciones, indica cuál es su dominio de definición y su recorrido:
 ]
 #v(1fr)
 
-#question(point:2)[
+#g-question(point:2)[
   Halla el dominio de definición de la s funciones:
   + $y = (2+x)/(x^2+1)$ #v(1fr)
   + $y = sqrt(3x-1)$ #v(1fr)
@@ -83,20 +83,20 @@
 ]
 #pagebreak()
 
-#question(point:2)[
+#g-question(point:2)[
   Una función lineal esta definida en el intervalo $[-3,5)$. 
   Escribe la expresión analitítica de dicha función lineal y represéntala, a partir de los siguientes datos:
   $f(-2) = 3$ y $f(3) = -4$.
 ]
 #v(1fr)
 
-#question(point:2)[
+#g-question(point:2)[
   Halla la función exponencial tipo $y=k dot a^x$, que pasa por los puntos $(1, 10)$ y $(-2,50)$. Representala aproximadamente.
 ]
 #v(1fr)
 #pagebreak()
 
-#question(point:2)[
+#g-question(point:2)[
   Representa la siguiente función: \ \
   $f(x) = display(
         cases(
@@ -107,7 +107,7 @@
 ]
 #v(1fr)
 
-#question(point:2)[
+#g-question(point:2)[
   Obtén la expresión analítica de la siguiente función:
 ]
 #v(1fr)

@@ -1,4 +1,4 @@
-#import "./g-exam.typ": g-exam, g-question, g-subquestion, g-explanation
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 
 #set page(
   paper: "a4",

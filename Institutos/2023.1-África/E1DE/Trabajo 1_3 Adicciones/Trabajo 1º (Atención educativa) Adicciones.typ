@@ -1,7 +1,7 @@
-#import "./exam.typ": exam, question, subquestion
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 // #import emoji: *
 
-#show: exam.with(
+#show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -23,7 +23,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "Diciembre 21, 2023",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: false,
   question-point-position: right,
   // clarifications: (

@@ -1,4 +1,4 @@
-#import "./g-exam.typ": g-exam, g-question, g-subquestion, g-explanation
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 
 #show: g-exam.with(
   author: (
@@ -22,7 +22,7 @@
   languaje: "es",
   decimal-separator: ",",
   date: "November 21, 2023",
-  show-studen-data: true,
+  show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
@@ -68,7 +68,7 @@
   #v(1fr)
 ]
 
-// #question(point: 2)[Sea $P(x) = x^5+3x^3-2x^2+2$, $Q(x)=2x^4-3x^2-1$ $R(x) = x^2+1$. Calcula:
+// #g-question(point: 2)[Sea $P(x) = x^5+3x^3-2x^2+2$, $Q(x)=2x^4-3x^2-1$ $R(x) = x^2+1$. Calcula:
 //   #subquestion[$P(x) - Q(x) =$]
 //   #v(6fr)
 
