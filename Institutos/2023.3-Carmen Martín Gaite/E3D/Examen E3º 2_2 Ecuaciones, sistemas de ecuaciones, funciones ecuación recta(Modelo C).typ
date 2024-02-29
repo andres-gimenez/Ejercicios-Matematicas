@@ -49,8 +49,8 @@
 
 #pagebreak()
 
-#g-question(point: 2)[Calcula la ecuación de la recta paralela (tiene la misma pendiente) a $y=5x+2$ y que pase por el punto $(0, 5)$.]
-g-explanation[Explica el resultado.]
+#g-question(point: 2)[Calcula la ecuación de la recta paralela (tiene la misma pendiente) a $y=5x+2$ y que pase por el punto $(0, 5)$.] \
+#g-explanation[Explica el resultado.]
 #v(1fr)
 
 #g-question(point: 2)[Dada la parábola $y=-x^2 + x + 6$ calcula su vértice, punto de corte con los ejes de coordenadas e indica si el vértice es un máximo o un mínimo.]
