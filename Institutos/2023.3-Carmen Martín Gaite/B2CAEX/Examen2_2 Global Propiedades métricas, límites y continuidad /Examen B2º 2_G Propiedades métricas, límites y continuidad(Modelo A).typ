@@ -104,7 +104,7 @@
     #h(6pt) Calcula el valor de los siguientes límites:
     // #g-subquestion(point: 1)[$display(limits("lím")_(x->1^(+))((1+ln x)/(x-1))^(1/(ln x)))$]
 
-    #h(14pt) a) (1 punto) $display(limits("lím")(x->2)(x^3-x^2-x-2)/(x^2+x-6))$ // =7/5
+    #h(14pt) a) (1 punto) $display(limits("lím")_(x->2)(x^3-x^2-x-2)/(x^2+x-6))$ // =7/5
 
     #h(14pt) b) (1,5 puntos) $display(limits("lím")_(x->+ infinity)((3x^3+x-1)/(3x^3-1))^(3x^2))$ // = e
 

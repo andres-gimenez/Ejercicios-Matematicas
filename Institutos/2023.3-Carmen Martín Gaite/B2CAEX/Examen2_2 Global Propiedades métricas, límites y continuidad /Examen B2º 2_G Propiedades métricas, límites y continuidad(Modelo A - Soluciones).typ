@@ -1,4 +1,4 @@
-#include "./Examen B2º 2_2 Global Propiedades métricas, límites y continuidad(Modelo A).typ"
+#include "./Examen B2º 2_G Propiedades métricas, límites y continuidad(Modelo A).typ"
 
 #for img_page in ("./soluciones/IMG_4606.JPG", 
                   "./soluciones/IMG_4607.JPG",
