@@ -5,7 +5,7 @@
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
-    // watermark: "Profesor: andres",
+    watermark: "Profesor: andres",
   ),
   school: (
     name: "IES Carmen Martín Gaite",
@@ -48,7 +48,7 @@
   #v(5pt)
   #g-subquestion(point: 1)[$display(limits("lím")_(x->1) ((2x+1)/(x+2))^(1/x-1))$]
   #v(5pt)
-  #g-subquestion(point: 1)[$display(limits("lím")_(x->infinity) (sqrt(x^-2) - x))$]
+  #g-subquestion(point: 1)[$display(limits("lím")_(x->infinity) (sqrt(x-2) - x))$]
   #v(5pt)
   #g-subquestion(point: 1)[$display(limits("lím")_(x->infinity) (sqrt(x+3) - sqrt(x+2)))$]
   #v(5pt)
