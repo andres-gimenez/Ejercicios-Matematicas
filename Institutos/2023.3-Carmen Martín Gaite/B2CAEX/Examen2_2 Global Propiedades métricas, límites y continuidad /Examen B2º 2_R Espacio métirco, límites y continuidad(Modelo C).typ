@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas II",
     number: "2º Evaluación recuperación",
     content: "Espacios metricos, límites y continuidad",
-    model: "Modelo A"
+    model: "Modelo C"
   ),
   
   languaje: "es",
