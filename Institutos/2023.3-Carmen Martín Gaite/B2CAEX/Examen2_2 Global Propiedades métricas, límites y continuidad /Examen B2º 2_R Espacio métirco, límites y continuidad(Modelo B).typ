@@ -71,7 +71,7 @@
 #g-question(point: 1)[Determina $a$ y $b$ para que sea continua la función \
   #align(center, [
     $f(x) = display(cases( delim: "{",
-                a x^2 + 3x     & #h(10pt) &"si" & #h(10pt) &      &x <= -1,
+                a x^2 + 3x     & #h(10pt) &"si" & #h(10pt) &      &x < -1,
                 x^3 - a       &          &"si" &          & -1 <= &x <= 2,
                 b x-3          &          &"si" &          &      &x > 2
               ))$ 
@@ -83,7 +83,7 @@
 #g-question(point: 1.5)[Determina $a$ y $b$ para que sea continua la función \
   #align(center, [
     $f(x) = display(cases( delim: "{",
-                x^4 + 3x + 4        & #h(10pt) &"si" & #h(10pt) &      &x <= 0,
+                x^4 + 3x + 4        & #h(10pt) &"si" & #h(10pt) &      &x < 0,
                 a dot "cos"(x) + b  &          &"si" &          & 0 <= &x <= pi/2,
                 (x-pi/2)^2 + a      &          &"si" &          &      &x > pi/2
               ))$ 

@@ -41,12 +41,12 @@
 #set math.cases(reverse: true)
 
 #g-question[Obtén la ecuación de la recta que pasa por los puntos $A(5,4)$ y $B(6,2)$ expresándola en su forma
- general y explicita]
+ general y explicita.]
 #v(1fr)
 
 #pagebreak()
 
-#g-question(point:4)[Resuelve los siguientes sistemas de ecuaciones:]
+#g-question(point:4)[Resuelve #underline[dos] de los siguientes sistemas de ecuaciones:]
     #g-subquestion[
         Por el método de sustitución: \ \
           $display(cases( delim: "{",
