@@ -18,7 +18,7 @@
     academic-subject: "Matemáticas",
     number: "2º Evaluación Examen parcial",
     content: "Ecuaciones y sistemas de ecuaciones",
-    model: "Modelo A"
+    model: "Modelo B"
   ),
   
   languaje: "es",
@@ -40,8 +40,8 @@
 
 #set math.cases(reverse: true)
 
-#g-question(point:2)[Obtén la ecuación de la recta que pasa por los puntos $A(4,5)$ y $B(2,6)$ expresándola en su forma
-general y explicita]
+#g-question[Obtén la ecuación de la recta que pasa por los puntos $A(5,4)$ y $B(6,2)$ expresándola en su forma
+ general y explicita]
 #v(1fr)
 
 #pagebreak()
@@ -50,8 +50,8 @@ general y explicita]
     #g-subquestion[
         Por el método de sustitución: \ \
           $display(cases( delim: "{",
-              2x - 3y  = -1 ,
-              3x +2y = 5
+                2&x &- 3&y  &= -&4 ,
+                3&x &+ 2&y &= &7
             ))$
         #v(1fr)
     ]
@@ -59,8 +59,8 @@ general y explicita]
     #g-subquestion[
       Por el método de igualación. \ \
           $display(cases( delim: "{",
-             -3&x &- 4&y &= &5 ,
-              -2&x &+ 3&y &= &9
+               &2x &+  &y &= &10 ,
+              -&3x &- 2&y &= -&16
             ))$
         #v(1fr)
     ]
@@ -68,8 +68,8 @@ general y explicita]
     #g-subquestion[
        Por el método de reducción. \ \
           $display(cases( delim: "{",
-              &x &+ 2&y &= &5 ,
-              &x &+ 3&y &= &6
+              &x &+ 2&y &= &6 ,
+              &x &+ 3&y &= &7
             ))$
         #v(1fr)
     ]
@@ -77,8 +77,7 @@ general y explicita]
 #pagebreak()
 
 
-// #g-question[Obtén la ecuación de la recta que pasa por los puntos $A(5,4)$ y $B(6,2)$ expresándola en su forma
-// general y explicita]
+
 
 #g-question(point:2)[Calcula la ecuación de la recta paralela a $x - 2y - 2 = 0$ y que pase por el punto $P(1,2)$. 
     Representa las dos rectas.]
