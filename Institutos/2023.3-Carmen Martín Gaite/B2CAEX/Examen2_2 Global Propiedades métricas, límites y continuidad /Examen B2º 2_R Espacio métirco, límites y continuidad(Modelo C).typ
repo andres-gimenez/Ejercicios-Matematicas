@@ -46,7 +46,7 @@
   // #v(5pt)
   #g-subquestion(point: 1)[$display(limits("lím")_(x->3) (sqrt(x+1) - 2)/(x-3))$]
   #v(5pt)
-  #g-subquestion(point: 1.5)[$display(limits("lím")_(x->1) ((2x+1)/(x+2))^(1/x-1))$]
+  #g-subquestion(point: 1.5)[$display(limits("lím")_(x->1) ((2x+1)/(x+2))^(1/(x-1)))$]
   #v(5pt)
   // #g-subquestion(point: 1)[$display(limits("lím")_(x->infinity) (sqrt(x-2) - x))$]
   // #v(5pt)
@@ -77,7 +77,7 @@
   ) 
 ]
 
-#g-question(point: 1.5)[Determina $a$ para que sea continua la función \
+#g-question(point: 1.5)[Determina $a$ y $b$ para que sea continua la función \
   #align(center, [
     $f(x) = display(cases( delim: "{",
                 -x^2 + a   & #h(10pt) &"si" & #h(10pt) &     &x < -1,
