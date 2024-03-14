@@ -5,7 +5,7 @@
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
-    // watermark: "Profesor: andres",
+    watermark: "Profesor: andres",
   ),
   school: (
     name: "IES Santa Teresa de Jesús",
