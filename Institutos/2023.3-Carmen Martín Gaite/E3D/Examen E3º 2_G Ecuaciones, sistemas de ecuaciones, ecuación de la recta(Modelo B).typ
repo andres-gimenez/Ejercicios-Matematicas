@@ -40,7 +40,7 @@
 
 #set math.cases(reverse: true)
 
-#g-question[Obtén la ecuación de la recta que pasa por los puntos $A(5,4)$ y $B(6,2)$ expresándola en su forma
+#g-question(point:2)[Obtén la ecuación de la recta que pasa por los puntos $A(5,4)$ y $B(6,2)$ expresándola en su forma
  general y explicita.]
 #v(1fr)
 
