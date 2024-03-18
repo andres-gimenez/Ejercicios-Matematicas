@@ -74,7 +74,20 @@
   #v(1fr)
 
 #pagebreak()
-#g-question(point:1)[Indica la pendiente y la ordenada en el origen de la siguiente función]
+// #g-question(point:1)[Indica la pendiente y la ordenada en el origen de la siguiente función]
+// $ f(x)=3x-5 $
+// #v(1fr)
+#g-question(point:2)[En un tramo de carretera de 3Km se sube de la cota 620m a la cota 680m. 
+¿Cúal es la pendiente de dicho tramo de carretera?]
+#align(left, image("./imagenes/PendienteMedia.jpeg", width: 80%))
+#v(1fr)
 
-$ f(x)=3x-5 $
+#pagebreak()
 
+#g-question(point:2)[Se mezcla café de tipo A que cuesta a 6€/Kg con café de tipo B que cuesta 4€/Kg. 
+Si tenemos 120kg de mezcla que sale a 4,5€/kg, ¿cuántos kilogramos de café de cada clase se han mezclamo? ]
+#v(2fr)
+
+#g-question(point:2)[Tres kilos de manzanas y dos kilos de naranjas cuestan 9€. Dos kilos de manzans y dos kilos de naranjas cuestan 7€. 
+¿Cuánto vale el kilo de manzanas y el kilo de naranjas?]
+#v(2fr)
