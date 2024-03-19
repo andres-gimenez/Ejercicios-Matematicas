@@ -121,5 +121,5 @@ Calcula el peso total de las dos bolsas.]
 #pagebreak()
 
 #g-question(point:2)[La distancia entre Villaconejos y Chinchón es de $7"Km"$, $5"Hm"$, $9"Dam"$ y $4"m"$. 
-Si hemos recorrido 3Km, 2Hm, 5Da y 1m ¿Cuanto nos queda por recorrer en Hm? ]
+Si hemos recorrido 3Km, 2Hm, 5Da y 1m ¿Cuánto nos queda por recorrer en Hm? ]
 #v(1fr)
