@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion, g-explanation
+#import "@preview/g-exam:0.2.0": g-exam, g-question, g-subquestion
 
 #show: g-exam.with(
   author: (
@@ -8,7 +8,7 @@
   ),
   school: (
     name: "IES Antonio López García",
-    logo: read("./logo-ies_antonio.jpeg", encoding: none)
+    logo: image("./logo-ies_antonio.jpeg")
   ),
   exam-info: (
     academic-period: "Curso 2023/2024",

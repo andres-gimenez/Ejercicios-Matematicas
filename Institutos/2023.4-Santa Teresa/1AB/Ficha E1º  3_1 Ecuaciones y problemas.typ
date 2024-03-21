@@ -9,8 +9,7 @@
   ),
   school: (
     name: "IES Santa Teresa de Jesús",
-    logo: read("./logo-ies_santa_teresa.jpeg", encoding: none)
-    // logo:image("./logo-ies_santa_teresa.jpeg", alt: "IES Santa Teresa de Jesús")
+    logo:image("./logo-ies_santa_teresa.jpeg")
   ),
   exam-info: (
     academic-period: "Curso 2023/2024",

@@ -9,8 +9,7 @@
   ),
   school: (
     name: "IES Santa Teresa de Jesús",
-    logo: read("./logo-ies_santa_teresa.jpeg", encoding: none)
-    // logo:image("./logo-ies_santa_teresa.jpeg", alt: "IES Santa Teresa de Jesús")
+    logo: image("./logo-ies_santa_teresa.jpeg")
   ),
   exam-info: (
     academic-period: "Curso 2023/2024",
@@ -28,7 +27,7 @@
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
- [Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada de la prueba que se valorará con un cero.],
+    [Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada de la prueba que se valorará con un cero.],
     [Esta prueba ha de realizarse con bolígrafo no borrable azul o negro.],
     [Deben aparecer todas las operaciones, no vale solo con indicar el resultado.],
     [Se ha de llegar a la solución más reducida posible.],

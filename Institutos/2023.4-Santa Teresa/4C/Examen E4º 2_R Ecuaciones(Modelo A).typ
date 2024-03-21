@@ -1,5 +1,5 @@
 #import "@preview/cetz:0.2.1"
-#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion, g-explanation
+#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
 
 #show: g-exam.with(
   author: (
@@ -9,8 +9,7 @@
   ),
   school: (
     name: "IES Santa Teresa de Jesús",
-    logo: read("./logo-ies_santa_teresa.jpeg", encoding: none)
-    // logo:image("./logo-ies_santa_teresa.jpeg", alt: "IES Santa Teresa de Jesús")
+    logo:image("./logo-ies_santa_teresa.jpeg")
   ),
   exam-info: (
     academic-period: "Curso 2023/2024",
