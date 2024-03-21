@@ -15,7 +15,7 @@
     academic-period: "Curso 2023/2024",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
-    number: "3º Evaluación (Ficha de nivél)",
+    number: "3º Evaluación (Ficha de nivel)",
     content: "Potencias y sistema métrico",
     model: "Modelo A"
   ),
@@ -59,9 +59,9 @@
 #pagebreak()
 
 #g-question[
-En un quiosco de prensa al final de la mañana se ha vendido la mitad de los periódicos. Por la tarde se 
-vendieron la mitad de los que quedaban y se quedaron 40 periódicos sin vender. ¿Cuántos periódicos 
-había en el quiosco al comenzar el día?]
+En un quiosco de prensa al final de la mañana se ha vendido la mitad de los periódicos. 
+Por la tarde se vendieron la mitad de los que quedaban y se quedaron 40 periódicos sin vender. 
+¿Cuántos periódicos había en el quiosco al comenzar el día?]
 
 #v(1fr)
 

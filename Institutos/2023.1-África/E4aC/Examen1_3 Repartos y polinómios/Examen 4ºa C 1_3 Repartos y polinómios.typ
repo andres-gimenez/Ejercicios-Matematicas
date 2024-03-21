@@ -82,5 +82,5 @@ y Consuelo trabaja en el turno de noche, los viernes, sábados y domingos.]
   #subquestion(point: 1)[Calcula las horas semanales que realiza cada camarero.]
   #v(1fr)
 
-  #subquestion(point: 2)[¿Si durante la semana han recaudado 1.300€ de bote, cuanto le corresponde a cada camarero si se reparte en función de las horas trabajadas durante la semana?]
+  #subquestion(point: 2)[¿Si durante la semana han recaudado 1.300€ de bote, cuánto le corresponde a cada camarero si se reparte en función de las horas trabajadas durante la semana?]
   #v(1fr)

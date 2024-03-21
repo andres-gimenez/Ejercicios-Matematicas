@@ -148,7 +148,7 @@
 //   #subquestion(point: 1)[Calcula las horas semanales que realiza cada camarero.]
 //   #v(1fr)
 
-//   #subquestion(point: 2)[¿Si durante la semana han recaudado 1.300€ de bote, cuanto le corresponde a cada camarero si se reparte en función de las horas trabajadas durante la semana?]
+//   #subquestion(point: 2)[¿Si durante la semana han recaudado 1.300€ de bote, cuánto le corresponde a cada camarero si se reparte en función de las horas trabajadas durante la semana?]
 //   #v(1fr)
 // #g-question[Discute y resuleve por el método de Gauß, indicando cuantas soluciones tiene el siguiente sistema:]
 
