@@ -1,5 +1,5 @@
 #import "@preview/cetz:0.2.1"
-#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion, g-explanation
+#import "@preview/g-exam:0.2.0": g-exam, g-question, g-subquestion, g-explanation
 
 #show: g-exam.with(
   author: (
