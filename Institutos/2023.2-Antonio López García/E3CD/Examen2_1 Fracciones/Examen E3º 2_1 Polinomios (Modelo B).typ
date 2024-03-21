@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
+#import "@preview/g-exam:0.2.0": g-exam, g-question, g-subquestion, g-solution
 
 #show: g-exam.with(
   author: (
@@ -8,7 +8,7 @@
   ),
   school: (
     name: "IES Antonio López García",
-    logo: "logo-ies_antonio.jpeg",
+    logo: image("./logo-ies_antonio.jpeg"),
   ),
   exam-info: (
     academic-period: "Curso 2023/2024",
@@ -37,7 +37,7 @@
 )
 
 #g-question(point: 2)[Opera y simplifica lo máximo posible las siguientes operaciones con radicales \
-  #g-explanation[
+  #g-solution[
     Se ha de indicar la descomposición de cada valor en sus factores primos antes de extraerlos del radical.
     El no mostrar los factores primos o el utilizar número decimales anulará la respuesta.
   ]

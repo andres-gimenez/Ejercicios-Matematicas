@@ -37,7 +37,7 @@
 )
 
 #g-question(point: 2)[Opera y simplifica lo máximo posible las siguientes operaciones con radicales: \
-    #g-explanation[
+    #g-solution[
     Se ha de indicar la descomposición de cada valor en sus factores primos antes de extraerlos del radical.
     El no mostrar los factores primos o el utilizar número decimales anulará la respuesta.
   ]
