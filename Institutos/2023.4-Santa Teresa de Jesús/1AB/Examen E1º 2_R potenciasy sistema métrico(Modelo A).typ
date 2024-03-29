@@ -101,10 +101,10 @@
   #g-subquestion[$0,0058 "Km"^3=$ #box(width: 2cm, repeat[.]) $"dam"^3$]
   #v(2cm)
 
-  #g-subquestion[$0,2 "l"=$ #box(width: 2cm, repeat[.]) $"ml"^3$]
+  #g-subquestion[$0,2 "l"=$ #box(width: 2cm, repeat[.]) $"ml"$]
   #v(2cm)
 
-  #g-subquestion[$85"1m"=$ #box(width: 2cm, repeat[.]) $"Hm"^3$]
+  #g-subquestion[$85"1m"=$ #box(width: 2cm, repeat[.]) $"Hm"$]
   #v(2cm)
 
 
@@ -113,12 +113,12 @@
 #g-question(point:2)[Un fraco de perfume de 120 mL cuesta 33,5€. Calula cuánto vale el litro de perfume.]
 #v(1fr)
 
-#g-question(point:2)[Tenemos dos bolsas de arena, en la que una pesa $2"Kg"$, $2"Hg"$ y $4"Dag"$ y la otra pesa $4"Kg"$, 9Hg y $2"Da"$. 
+#g-question(point:2)[Tenemos dos bolsas de arena, en la que una pesa $2"Kg"," "2"Hg" y " "4"Dag"$ y la otra pesa $4"Kg"," " 9 "Hg" "y" " "2"Dag"$. 
 Calcula el peso total de las dos bolsas.]
 #v(1fr)
 
 #pagebreak()
 
-#g-question(point:2)[La distancia entre Villaconejos y Chinchón es de $7"Km"$, $5"Hm"$, $9"Dam"$ y $4"m"$. 
-Si hemos recorrido 3Km, 2Hm, 5Da y 1m ¿Cuánto nos queda por recorrer en Hm? ]
+#g-question(point:2)[La distancia entre Villaconejos y Chinchón es de $7"Km", " "5"Hm", 9"Dam" y " "4"m"$. 
+Si hemos recorrido $3"Km", " " 2 "Hm", " " 5"Dam" "y" " " 1"m"$ ¿Cuánto nos queda por recorrer en $"Hm"$? ]
 #v(1fr)
