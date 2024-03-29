@@ -110,7 +110,7 @@
 
 #pagebreak()
 
-#g-question(point:2)[Un fraco de perfume de 120 mL cuesta 33,5€. Calula cuánto vale el litro de perfume.]
+#g-question(point:2)[Un fraco de perfume de 120 ml cuesta 33,5€. Calula cuánto vale el litro de perfume.]
 #v(1fr)
 
 #g-question(point:2)[Tenemos dos bolsas de arena, en la que una pesa $2"Kg"," "2"Hg" y " "4"Dag"$ y la otra pesa $4"Kg"," " 9 "Hg" "y" " "2"Dag"$. 
