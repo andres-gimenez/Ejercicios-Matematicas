@@ -1,5 +1,5 @@
 #import "@preview/cetz:0.2.1"
-#import "@preview/g-exam:0.2.0": g-exam, g-question, g-subquestion, g-explanation
+#import "@preview/g-exam:0.2.0": g-exam, g-question, g-subquestion
 
 #show: g-exam.with(
   author: (
@@ -54,7 +54,7 @@
 
 #pagebreak()
 
-#g-question[Resuelve los siguiente sistemas de ecuaciones]
+#g-question[Resuelve los siguiente sistemas de ecuaciones, por métodos distintos]
 
   #g-subquestion(point:1)[
     $display(cases( delim: "{",
