@@ -46,13 +46,16 @@ Se dice que un elemento (o miembro) pertenece al conjunto si está definido como
 
 Dados dos conjuntos: $X$ e $Y$ , se entiende como una correspondencia entre $X$ e $Y$ a una relación en la que asocia elementos de X con elemtos de $Y$.
 
+
 == Función
 
 Una función estre $X$ e $Y$ es una correspondencia en la que a cada elemento del conjunto imagen $X$ le corresponde un unico elemento del conjunto destino $Y$. \
 
 A los elementos del conjunto $X$ se les llama variable independiente, mientras que a cada elemento del conjunto $Y$ se le llama variable dependiente.
 
-=== Gráfica
+Ejemplo 
+
+=== Gráfica de conrrespodencias y funciones
 
 === Eje de coordenadas
 Los *ejes de coordenadas* son dos rectas perpendicuales que dividen el plano en cuatro cuadrantes. \
