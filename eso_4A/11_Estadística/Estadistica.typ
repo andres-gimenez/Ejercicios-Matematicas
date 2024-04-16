@@ -8,7 +8,7 @@
 // Use #polylux-slide to create a slide and style it using your favourite Typst functions
 #polylux-slide[
   #align(horizon + center)[
-    = Estadistica
+    = Estadística
   ]
     
 ]
