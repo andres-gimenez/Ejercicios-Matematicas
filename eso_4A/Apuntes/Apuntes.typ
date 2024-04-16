@@ -89,11 +89,22 @@ Puede ser:
 
 Son tablas con los valores de la variable y sus frecuencias. \
 
-La *frecuencia absoluta de un valor* es el número de indiiudos de la población para los que la variable toma ese valor. 
+La *frecuencia absoluta de un valor* es el número de individuos de la población para los que la variable toma ese valor. 
 Se representa por $n_j$. La suma de todas las frecuencas absolutas es igual a ltotal de los individuos, y se representa por $N$.\
 
 La *frecuencia relativa de una valor* es el cociente entre la frecuencia asboluta y el número total de individuos. 
 Se representa por $f_i=n_j/N$. La suma de toas las recuencias relativas es $1$.
+
+== Diagramas:
+
+Un *diagrama de barras* es un gráfico que está formado por barras de altura proporcional a la frecuencia de cada valor. Se utiliza con datos cualitativos y cuantitativos discretos.
+
+Un *histograma* es una representación gráfica mediante rectángulos adosados de base el intervalo y altura proporcional a la frecuencia.
+Se utiliza cuando los datos son cuantitativos continuos o están agrupados en intervalos.
+
+Un *diagrama de sectores* es una representación gráfica que consiste en un círculo que se divide en sectores de amplitud proporcional a la frecuencia.
+El diagrama de sectores se puede utilizar con cualquier tipo de datos, pero se emplea especialmente en datos cualitativos.
+
 
 
 
