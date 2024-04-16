@@ -190,6 +190,6 @@
     ]
     #v(1cm)
      #align(center)[
-  #image("Diagrama de barras con leyenda 2.png", width: 70%)
+  #image("Diagrama de datos apilados 2.png", width: 70%)
      ]
 ]
