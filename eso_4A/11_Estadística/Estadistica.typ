@@ -193,3 +193,25 @@
   #image("Diagrama de datos apilados 2.png", width: 70%)
      ]
 ]
+
+#polylux-slide[
+  
+  #align(center)[
+  == Diagrama de caja y bigotes 1º examen
+    ]
+    #v(1cm)
+     #align(center)[
+  #image("Diagrama de caja y bigotes 1º examen.png", width: 70%)
+     ]
+]
+
+#polylux-slide[
+  
+  #align(center)[
+  == Diagrama de caja y bigotes 4 examenes
+    ]
+    #v(1cm)
+     #align(center)[
+  #image("Diagrama de caja y bigotes 4 examenes.png", width: 70%)
+     ]
+]
