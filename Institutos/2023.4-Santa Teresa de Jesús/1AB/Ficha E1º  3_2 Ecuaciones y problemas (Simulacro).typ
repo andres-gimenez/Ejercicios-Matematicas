@@ -89,3 +89,21 @@ $display(5(x^2 + 3x - 2) - 5x^2 -14x + 9)=$]
 
 #g-subquestion[$display(5(2x + 2) = 4x - 2)$]
 #v(3fr)
+
+#pagebreak()
+#g-question[Expresa las siguientes frases en lenguaje algebraico]
+
+#g-subquestion[El doble de un número]
+#v(1fr)
+
+#g-subquestion[La mitad de un número]
+#v(1fr)
+
+#g-subquestion[El triple de un número menos cinco.]
+#v(1fr)
+
+#g-subquestion[Si x es el número de ovejas que tenemos en una granja, indica la expresión algebraica que te dice el número de patas que tenemos.]
+#v(1fr)
+
+#g-question[Un recipiente está lleno de agua. Se extrae la mitad del agua primero y después la cuarta parte del resto. Si quedan 300 litros, ¿cuál era la capacidad del recipiente?]
+#v(5fr)
