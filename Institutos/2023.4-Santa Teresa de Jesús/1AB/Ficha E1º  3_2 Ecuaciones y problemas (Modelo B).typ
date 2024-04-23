@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "3º Evaluación - 1º examene",
     content: "Expresiones algebraicas y ecuaciones",
-    model: "Modelo A"
+    model: "Modelo B"
   ),
   
   languaje: "es",
@@ -32,35 +32,35 @@
 
 #g-question(point:2)[Simplifica las siguientes expresiones algebraicas:]
 
-#g-subquestion[$display(5x + 7x =)$]
+// #g-subquestion[$display(4x + 12x =)$]
+// #v(1fr)
+
+#g-subquestion[$display(3x + 7 - 4x + 8 =)$]
 #v(1fr)
 
-#g-subquestion[$display(6x + 8 - 7x + 5 =)$]
+#g-subquestion[$display(4x^2 + 2x - 6x^2 + 3 - 4x + 6 =)$]
 #v(1fr)
 
-#g-subquestion[$display(3x^2 + 2x - 5x^2 + 2 - 3x + 6 =)$]
+#g-subquestion[$display(3(3x^2 + 2x + 1) - 4x^2 + 2 =)$]
 #v(1fr)
 
-#g-subquestion[$display(2(2x^2 + 3x + 2) - 2x^2 + 1 =)$]
-#v(1fr)
-
-#g-subquestion[$display(-(x - 2) + (x - 3) =)$]
+#g-subquestion[$display(-(x - 2) + (x + 7) =)$]
 #v(1fr)
 
 #pagebreak()
 
-// #g-question[Evalua las siguientes expresiones algebraicas con el valor indicado:]
+// #g-question(point:1)[Evalua las siguientes expresiones algebraicas con el valor indicado:]
 
-// #g-subquestion[$display(3x^2 - 2x + 3)$ para $x=2$ y $x=0$:]
+// #g-subquestion[$display(4x^2 - 3x + 1)$ para $x=2$ y $x=0$:]
 // #v(1fr)
 
-// #g-subquestion[$display(3x^2 + 3x - 2)$ para $x=-1$ y $x=0$:]
+// #g-subquestion[$display(2x^2 + 2x - 1)$ para $x=-1$ y $x=0$:]
 // #v(1fr)
 
 #g-question[Simplifica y evalúa:]
 
 #g-subquestion(point:1)[Simplifica la expresión algebraica: \ \
-$display(2(x^2 + 2x - 1) - 2x^2 -14x + 7)=$]
+$display(3(x^2 + 3x - 2) - 3x^2 -19x + 2)=$]
 #v(2fr)
 
 #g-subquestion(point:0.25)[Evalúa la para $x=-1:$]
@@ -77,26 +77,25 @@ $display(2(x^2 + 2x - 1) - 2x^2 -14x + 7)=$]
 
 #g-question[Resuelve las siguientes ecuaciones:]
 
-#g-subquestion(point:0.5)[$display(x+3 = 12)$]
+#g-subquestion(point:0.5)[$display(x+7 = 9)$]
 #v(2fr)
 
-#g-subquestion(point:0.75)[$display(25 - 2x = 4x + 1)$]
+#g-subquestion(point:0.75)[$display(25 - 4x = 6x + 5)$]
 #v(2fr)
 
 #pagebreak()
 
-#g-subquestion(point:0.75)[$display(3 (6 - 2x)-12 = 5)$]
+#g-subquestion(point:0.75)[$display(4 (2 - 3x)-10 = 3)$]
 #v(3fr)
 
-#g-subquestion(point:0.75)[$display(4(3x + 5) = 2x + 8)$]
+#g-subquestion(point:0.75)[$display(2 (5x + 2) = 4x + 3)$]
 #v(3fr)
 
-#g-subquestion(point:0.5)[$display(6x+3x=21-3)$]
+#g-subquestion(point:0.5)[$display(4x+2x=21-3)$]
 #v(2fr)
 
-#g-subquestion(point:0.75)[$display(3(2+2x) = 12 )$]
+#g-subquestion(point:0.75)[$display(2(2+2x) = 12 )$]
 #v(3fr)
-
 
 #pagebreak()
 #g-question(point:2)[Expresa las siguientes frases en lenguaje algebraico]
@@ -114,10 +113,6 @@ $display(2(x^2 + 2x - 1) - 2x^2 -14x + 7)=$]
 #v(1fr)
 
 #g-subquestion[Si tenemos '$x$' ovejas e '$y$' vacas en una granja, ¿cuántos animales tenemos?]
-#v(1fr)
-
-
-#g-subquestion[Si tenemos '$x$' ovejas e '$y$' pavos en una granja, ¿cuántas patas tenemos?]
 #v(1fr)
 
 // #g-question[Un recipiente está lleno de agua. Se extrae la mitad del agua primero y después la cuarta parte del resto. Si quedan 300 litros, ¿cuál era la capacidad del recipiente?]
