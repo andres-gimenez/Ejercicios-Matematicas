@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "2º Evaluación Recuperación",
     content: "Potencias, raíces y sistema métrico",
-    model: "Modelo A"
+    model: "Modelo B"
   ),
   
   languaje: "es",
@@ -42,17 +42,17 @@
 #g-question(point:1)[Calcula utilizando las propiedades de las potencias:]
 
 #columns(2, [
-  #g-subquestion[$display(5^3 dot 5^6)=$]
+  #g-subquestion[$display(7^4 dot 7^3)=$]
   #v(1cm)
 
-  #g-subquestion[$display((7^3)^5)=$]
+  #g-subquestion[$display((5^2)^6)=$]
   #v(1cm)
   #colbreak()
 
-  #g-subquestion[$display(8^7 : 4^7=)$]
+  #g-subquestion[$display(3^4 : 3^9=)$]
   #v(1cm)
 
-  #g-subquestion[$display(4 dot 4^2 dot 4^3)=$]
+  #g-subquestion[$display(7^2 dot 7 dot 4^6)=$]
   #v(1cm)
 ])
 #v(1fr)
@@ -60,17 +60,17 @@
 #g-question(point:1)[Calcula la raíz entera y el resto en cada apartado:]
 
 #columns(2, [
-  #g-subquestion[$26$]
+  #g-subquestion[$20$]
   #v(2cm)
 
   #g-subquestion[$54$]
   #v(2cm)
   #colbreak()
 
-  #g-subquestion[$125$]
+  #g-subquestion[$81$]
   #v(2cm)
 
-  #g-subquestion[$200$]
+  #g-subquestion[$210$]
   #v(2cm)
 ])
 #v(1fr)
@@ -80,41 +80,41 @@
 #g-question(point:1)[Calcula las siguientes potencias:]
 
 #columns(2, [
-  #g-subquestion[$2^4=$]
+  #g-subquestion[$2^5=$]
   #v(2cm)
 
-  #g-subquestion[$(-8)^2=$]
+  #g-subquestion[$(-7)^2=$]
   #v(2cm)
   #colbreak()
 
-  #g-subquestion[$-5^3=$]
+  #g-subquestion[$-6^3=$]
   #v(2cm)
 
-  #g-subquestion[$43^0=$]
+  #g-subquestion[$96^0=$]
   #v(2cm)
 ])
 
 #g-question(point:1)[Realiza las siguientes conversiones de unidades:]
-  #g-subquestion[$1,45 "Hm"^2=$ #box(width: 2cm, repeat[.]) $"m"^2$]
+  #g-subquestion[$1,75 "Hm"^2=$ #box(width: 2cm, repeat[.]) $"m"^2$]
   #v(2cm)
 
-  #g-subquestion[$0,0058 "Km"^3=$ #box(width: 2cm, repeat[.]) $"dam"^3$]
+  #g-subquestion[$0,0037 "Km"^3=$ #box(width: 2cm, repeat[.]) $"dam"^3$]
   #v(2cm)
 
-  #g-subquestion[$0,2 "l"=$ #box(width: 2cm, repeat[.]) $"ml"$]
+  #g-subquestion[$0,3 "l"=$ #box(width: 2cm, repeat[.]) $"ml"$]
   #v(2cm)
 
-  #g-subquestion[$85"1m"=$ #box(width: 2cm, repeat[.]) $"Hm"$]
+  #g-subquestion[$311m=$ #box(width: 2cm, repeat[.]) $"Hm"$]
   #v(2cm)
 
 
 #pagebreak()
 
-#g-question(point:2)[Un fraco de perfume de 120 ml cuesta 33,5€. Calula cuánto vale el litro de perfume.]
+#g-question(point:2)[Un fraco de tinta para impresora de 120 ml cuesta 53,5€. Calula cuánto vale el litro de tinta para impresora.]
 #v(1fr)
 
-#g-question(point:2)[Tenemos dos bolsas de arena, en la que una pesa $2"Kg"," "2"Hg" y " "4"Dag"$ y la otra pesa $4"Kg"," " 9 "Hg" "y" " "2"Dag"$. 
-Calcula el peso total de las dos bolsas.]
+#g-question(point:2)[Tenemos dos cajas de azulejos, en la que una pesa $2"Kg"," "2"Hg" y " "4"Dag"$ y la otra pesa $4"Kg"," " 9 "Hg" "y" " "2"Dag"$. 
+Calcula el peso total de las dos cajas.]
 #v(1fr)
 
 #pagebreak()

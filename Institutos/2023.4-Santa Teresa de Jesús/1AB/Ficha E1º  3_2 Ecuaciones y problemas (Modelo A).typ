@@ -15,14 +15,14 @@
     academic-period: "Curso 2023/2024",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
-    number: "3º Evaluación (Simulacro de examen)",
+    number: "3º Evaluación - 1º examene",
     content: "Expresiones algebraicas y ecuaciones",
-    model: "Simulacro de examen"
+    model: "Modelo A"
   ),
   
   languaje: "es",
   decimal-separator: ",",
-  date: "November 21, 2023",
+  date: "abril 23, 2024",
   show-studen-data: "odd-pages",
   show-grade-table: false,
   question-point-position: right,
