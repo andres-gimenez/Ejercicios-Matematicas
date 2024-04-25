@@ -101,23 +101,23 @@ $display(2(x^2 + 2x - 1) - 2x^2 -14x + 7)=$]
 #pagebreak()
 #g-question(point:2)[Expresa las siguientes frases en lenguaje algebraico]
 
-#g-subquestion[La mitad de un número]
+// #g-subquestion[La mitad de un número]
+// #v(1fr)
+
+// #g-subquestion[El triple de un número]
+// #v(1fr)
+
+// #g-subquestion[El triple de un número menos cinco.]
+// #v(1fr)
+
+#g-subquestion[Si '$x$' es el número de coches que tenemos en una garaje, indica la expresión algebraica que te dice el número de ruedas que tenemos.]
 #v(1fr)
 
-#g-subquestion[El triple de un número]
-#v(1fr)
-
-#g-subquestion[El triple de un número menos cinco.]
-#v(1fr)
-
-#g-subquestion[Si x es el número de coches que tenemos en una granja, indica la expresión algebraica que te dice el número de ruedas que tenemos.]
-#v(1fr)
-
-#g-subquestion[Si tenemos '$x$' motos e '$y$' coches en un garaje, ¿cuántos veiculos tenemos?]
+#g-subquestion[Si tenemos '$x$' motos e '$y$' coches en un garaje, ¿cuántos vehículos tenemos?]
 #v(1fr)
 
 
-#g-subquestion[Si tenemos '$x$' motos e '$y$' coches en una garaje, ¿cuántas pruedas tenemos?]
+#g-subquestion[Si tenemos '$x$' motos e '$y$' coches en una garaje, ¿cuántas ruedas tenemos?]
 #v(1fr)
 
 // #g-question[Un recipiente está lleno de agua. Se extrae la mitad del agua primero y después la cuarta parte del resto. Si quedan 300 litros, ¿cuál era la capacidad del recipiente?]
