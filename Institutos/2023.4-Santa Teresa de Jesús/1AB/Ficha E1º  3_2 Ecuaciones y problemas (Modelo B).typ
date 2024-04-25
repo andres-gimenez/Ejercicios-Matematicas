@@ -109,10 +109,10 @@ $display(3(x^2 + 3x - 2) - 3x^2 -19x + 2)=$]
 #g-subquestion[El triple de un número menos cinco.]
 #v(1fr)
 
-#g-subquestion[Si x es el número de ovejas que tenemos en una granja, indica la expresión algebraica que te dice el número de patas que tenemos.]
+#g-subquestion[Si x es el número de coches que tenemos en un garaje, indica la expresión algebraica que te dice el número de ruedas que tenemos.]
 #v(1fr)
 
-#g-subquestion[Si tenemos '$x$' ovejas e '$y$' vacas en una granja, ¿cuántos animales tenemos?]
+#g-subquestion[Si tenemos '$x$' coches e '$y$' motos en una granja, ¿cuántas ruedas tenemos?]
 #v(1fr)
 
 // #g-question[Un recipiente está lleno de agua. Se extrae la mitad del agua primero y después la cuarta parte del resto. Si quedan 300 litros, ¿cuál era la capacidad del recipiente?]
