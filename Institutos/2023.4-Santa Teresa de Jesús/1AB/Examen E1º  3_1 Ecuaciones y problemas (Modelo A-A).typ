@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "3º Evaluación - 1º examene",
     content: "Expresiones algebraicas y ecuaciones",
-    model: "Modelo A-G"
+    model: "Modelo A-A"
   ),
   
   languaje: "es",
