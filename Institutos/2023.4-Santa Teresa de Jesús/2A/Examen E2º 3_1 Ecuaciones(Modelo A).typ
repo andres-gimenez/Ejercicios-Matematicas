@@ -39,7 +39,9 @@
 
 #set math.cases(reverse: true)
 
-#g-question(point:1)[En la siguiente gráfica, se muestra la correspondencia entre el número de horas díarias que le dedicamos a la lectura de un libro y el número de días que tardamos en leer el libro completo:]
+#let style-point =  (stroke: color.black, fill: color.gray)
+
+#g-question(point:2)[En la siguiente gráfica, se muestra la correspondencia entre el número de horas díarias que le dedicamos a la lectura de un libro y el número de días que tardamos en leer el libro completo:]
 #align(center,
   grid(
     columns: (25pt, auto),
@@ -63,19 +65,19 @@
         x-tick-step: 1,
         y-tick-step: 1,
           {
-            cetz.plot.add(((1,9),), mark-size: 0.2, mark: "o", style:( fill: black ))
-            cetz.plot.add(((2,4.5),), mark-size: 0.2, mark: "o", style:( fill: black ))
-            cetz.plot.add(((3,3),), mark-size: 0.2, mark: "o", style:( fill: black ))
-            cetz.plot.add(((4,2.25),), mark-size: 0.2, mark: "o")
-            cetz.plot.add(((5,1.8),), mark-size: 0.2, mark: "o")
-            cetz.plot.add(((6,1.5),), mark-size: 0.2, mark: "o")
-            cetz.plot.add(((7,1.28),), mark-size: 0.2, mark: "o")
-            cetz.plot.add(((8,1.129),), mark-size: 0.2, mark: "o")
-            cetz.plot.add(((9,1),), mark-size: 0.2, mark: "o")
-            cetz.plot.add(((10,0.9),), mark-size: 0.2, mark: "o")
-            cetz.plot.add(((11,0.82),), mark-size: 0.2, mark: "o")
-            cetz.plot.add(((12,0.75),), mark-size: 0.2, mark: "o")
-            cetz.plot.add(((13,0.69),), mark-size: 0.2, mark: "o")
+            cetz.plot.add(((1,9),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((2,4.5),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((3,3),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((4,2.25),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((5,1.8),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((6,1.5),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((7,1.28),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((8,1.129),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((9,1),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((10,0.9),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((11,0.82),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((12,0.75),), mark-size: 0.2, mark: "o", mark-style: style-point)
+            cetz.plot.add(((13,0.69),), mark-size: 0.2, mark: "o", mark-style: style-point)
           }
         )
       }
@@ -84,7 +86,6 @@
     [\ Número de horas de lectura diaria]
   )
 )
-
 
 #g-subquestion[¿Es una función?]
 #v(1fr)
@@ -96,39 +97,188 @@
 #v(1fr)
 #pagebreak()
 
-#g-question(point: 2)[Calcula la ecuación de la recta que para por los puntos $P(1,1)$ y $Q(2,2)$]
+#g-question(point: 3)[Calcula la ecuación de la recta que para por los puntos $P(1,2)$ y $Q(2,4)$]
+#pagebreak()
 
-#g-question(point: 2)[Proporcionalidad inversa - Poner tabla, calcular la K y ]
+// #g-question(point: 2)[Proporcionalidad inversa - Poner tabla, calcular la K y ]
 
-#g-question(point: 2)[Si el IVA aplicado es del 21%. Escribe la ecuación que da el IVA en función del precio, representala y calcula la pendiente]
+// #g-question(point: 2)[Si el IVA aplicado es del 21%. Escribe la ecuación que da el IVA en función del precio, representala y calcula la pendiente]
+
+#g-question(point: 3)[Escribe debajo de cada gráfica a que función corresponde de la siguiente lista:]
+
+#box(height: 68pt,
+columns(3, gutter: 11pt)[
+ - $display(y = 2x + 1)$ \ \
+ - $display(y = 4/x)$ \ \
+
+ - $display(y = -4/x)$ \ \
+ - $display(y = x - 3)$ \ \
+
+ - $display(y = -x + 2)$ \ \
+ - $display(y = 1/2 x)$ \ \
+])
+
+#grid(columns: (auto, auto, auto),
+    gutter:25pt,{
+    cetz.canvas(length:0.4cm, 
+    {
+      cetz.plot.plot(
+        size: (10, 10),
+        axis-style: "school-book",
+        fill-below: false,
+        x-domain: (-10, 10),
+        y-domain: (-10, 10),
+        x-max: 10, x-min: -10,
+        y-max: 10, y-min: -10,
+        x-grid: "both", y-grid: "both",
+        x-tick: none, y-tick: none,
+        x-tick-step: 1, y-tick-step: 1,
+          {
+            cetz.plot.add(domain: (-10, 10), x=>2*x+1, style: style-point)
+          }
+        )
+      }
+    ) 
+    v(1cm)
+    },
+    {
+      cetz.canvas(length:0.4cm, {
+        cetz.plot.plot(
+          size: (10, 10),
+          axis-style: "school-book",
+          fill-below: false,
+          x-domain: (-10, 10),
+          y-domain: (-10, 10),
+          x-max: 10, x-min: -10,
+          y-max: 10, y-min: -10,
+          x-grid: "both", y-grid: "both",
+          x-tick: none, y-tick: none,
+          x-tick-step: 1, y-tick-step: 1,
+            {
+              cetz.plot.add(domain: (-10, 10), x=>4/x, style: style-point)
+            }
+          )
+        }
+      )
+      v(1cm)
+    },
+    {
+      cetz.canvas(length:0.4cm, {
+        cetz.plot.plot(
+          size: (10, 10),
+          axis-style: "school-book",
+          fill-below: false,
+          x-domain: (-10, 10),
+          y-domain: (-10, 10),
+          x-max: 10, x-min: -10,
+          y-max: 10, y-min: -10,
+          x-grid: "both", y-grid: "both",
+          x-tick: none, y-tick: none,
+          x-tick-step: 1, y-tick-step: 1,
+            {
+              cetz.plot.add(domain: (-10, 10), x=>-4/x, style: style-point)
+            }
+          )
+        }
+      )
+      v(1cm)
+    },
+    {
+      cetz.canvas(length:0.4cm, {
+        cetz.plot.plot(
+          size: (10, 10),
+          axis-style: "school-book",
+          fill-below: false,
+          x-domain: (-10, 10),
+          y-domain: (-10, 10),
+          x-max: 10, x-min: -10,
+          y-max: 10, y-min: -10,
+          x-grid: "both", y-grid: "both",
+          x-tick: none, y-tick: none,
+          x-tick-step: 1, y-tick-step: 1,
+            {
+              cetz.plot.add(domain: (-10, 10), x=>x+(-3), style: style-point)
+            }
+          )
+        })
+        v(1cm)
+    },
+    {
+      cetz.canvas(length:0.4cm, {
+        cetz.plot.plot(
+          size: (10, 10),
+          axis-style: "school-book",
+          fill-below: false,
+          x-domain: (-10, 10),
+          y-domain: (-10, 10),
+          x-max: 10, x-min: -10,
+          y-max: 10, y-min: -10,
+          x-grid: "both", y-grid: "both",
+          x-tick: none, y-tick: none,
+          x-tick-step: 1, y-tick-step: 1,
+            {
+              cetz.plot.add(domain: (-10, 10), x=>-x+2, style: style-point)
+            }
+          )
+        })
+        v(1cm)
+    },
+    {
+      cetz.canvas(length:0.4cm, {
+        cetz.plot.plot(
+          size: (10, 10),
+          axis-style: "school-book",
+          fill-below: false,
+          x-domain: (-10, 10),
+          y-domain: (-10, 10),
+          x-max: 10, x-min: -10,
+          y-max: 10, y-min: -10,
+          x-grid: "both", y-grid: "both",
+          x-tick: none, y-tick: none,
+          x-tick-step: 1, y-tick-step: 1,
+            {
+              cetz.plot.add(domain: (-10, 10), x=>0.5*x, style: style-point)
+            }
+          )
+        })
+        v(1cm)
+      }
+    )
+
+#pagebreak()
+
+#g-question(point: 2)[Halla la pendiente, el valor de la ordenada en el origen y dibuja la gráfica de la función] \ \
+$ y = 2x - 2 $
+
+#v(1fr)
 #align(center, 
-  cetz.canvas(length: 1.4cm, {
-                cetz.plot.plot(
-                  // axes: ("x", "y"),
-                  size: (10, 10),
-                  axis-style: "school-book",
-                  fill: "o" ,
-                  fill-below: true,
-                  // horizontal:false,
-                  x-domain: (-10, 10),
-                  y-domain: (-10, 10),
-                  x-max: 10,
-                  x-min: -10,
-                  y-max: 10,
-                  y-min: -10,
-                  x-grid: "both",
-                  y-grid: "both",
-                  // x-tick-step: none,
-                  x-tick-step: 1,
-                  // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
-                  y-tick-step: 1,
-                  // x-minor-tick-step: 0.2,
-                  // y-minor-tick-step: 0.2,
-                  // y-minor-tick-color:
-                    {
-                      cetz.plot.add(((0,0),), mark-size: 0,)
-                    }
-                  )
-                }
-              )
-            )
+  cetz.canvas(length: 1.3cm, {
+      cetz.plot.plot(
+        // axes: ("x", "y"),
+        size: (10, 10),
+        axis-style: "school-book",
+        fill: "o" ,
+        fill-below: true,
+        // horizontal:false,
+        x-domain: (-10, 10),
+        y-domain: (-10, 10),
+        x-max: 10,
+        x-min: -10,
+        y-max: 10,
+        y-min: -10,
+        x-grid: "both",
+        y-grid: "both",
+        // x-tick-step: none,
+        x-tick-step: 1,
+        // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
+        y-tick-step: 1,
+        // x-minor-tick-step: 0.2,
+        // y-minor-tick-step: 0.2,
+        // y-minor-tick-color:
+          {
+            cetz.plot.add(((0,0),), mark-size: 0,)
+          }
+        )
+      }
+    )
+  )
