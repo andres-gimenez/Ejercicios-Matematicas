@@ -109,9 +109,9 @@
 #box(height: 68pt,
 columns(3, gutter: 11pt)[
  - $display(y = 2x + 1)$ \ \
- - $display(y = 4/x)$ \ \
+ - $display(y = 2/x)$ \ \
 
- - $display(y = -4/x)$ \ \
+ - $display(y = -2/x)$ \ \
  - $display(y = x - 3)$ \ \
 
  - $display(y = -x + 2)$ \ \
@@ -120,21 +120,21 @@ columns(3, gutter: 11pt)[
 
 #grid(columns: (auto, auto, auto),
     gutter:25pt,{
-    cetz.canvas(length:0.4cm, 
+    cetz.canvas(length:4cm, 
     {
       cetz.plot.plot(
-        size: (10, 10),
+        // size: (10, 10),
         axis-style: "school-book",
         fill-below: false,
-        x-domain: (-10, 10),
-        y-domain: (-10, 10),
-        x-max: 10, x-min: -10,
-        y-max: 10, y-min: -10,
+        x-domain: (-4, 4),
+        y-domain: (-4, 4),
+        x-max: 4, x-min: -4,
+        y-max: 4, y-min: -4,
         x-grid: "both", y-grid: "both",
         x-tick: none, y-tick: none,
         x-tick-step: 1, y-tick-step: 1,
           {
-            cetz.plot.add(domain: (-10, 10), x=>2*x+1, style: style-point)
+            cetz.plot.add(domain: (-4, 4), x=>2*x+1, style: style-point)
           }
         )
       }
@@ -142,20 +142,20 @@ columns(3, gutter: 11pt)[
     v(1cm)
     },
     {
-      cetz.canvas(length:0.4cm, {
+      cetz.canvas(length:4cm, {
         cetz.plot.plot(
-          size: (10, 10),
+          // size: (10, 10),
           axis-style: "school-book",
           fill-below: false,
-          x-domain: (-10, 10),
-          y-domain: (-10, 10),
-          x-max: 10, x-min: -10,
-          y-max: 10, y-min: -10,
+          x-domain: (-4, 4),
+          y-domain: (-4, 4),
+          x-max: 4, x-min: -4,
+          y-max: 4, y-min: -4,
           x-grid: "both", y-grid: "both",
           x-tick: none, y-tick: none,
           x-tick-step: 1, y-tick-step: 1,
             {
-              cetz.plot.add(domain: (-10, 10), x=>4/x, style: style-point)
+              cetz.plot.add(domain: (-4, 4), x=>2/x, style: style-point)
             }
           )
         }
@@ -163,20 +163,20 @@ columns(3, gutter: 11pt)[
       v(1cm)
     },
     {
-      cetz.canvas(length:0.4cm, {
+      cetz.canvas(length:4cm, {
         cetz.plot.plot(
-          size: (10, 10),
+          // size: (10, 10),
           axis-style: "school-book",
           fill-below: false,
-          x-domain: (-10, 10),
-          y-domain: (-10, 10),
-          x-max: 10, x-min: -10,
-          y-max: 10, y-min: -10,
+          x-domain: (-4, 4),
+          y-domain: (-4, 4),
+          x-max: 4, x-min: -4,
+          y-max: 4, y-min: -4,
           x-grid: "both", y-grid: "both",
           x-tick: none, y-tick: none,
           x-tick-step: 1, y-tick-step: 1,
             {
-              cetz.plot.add(domain: (-10, 10), x=>-4/x, style: style-point)
+              cetz.plot.add(domain: (-4, 4), x=>-2/x, style: style-point)
             }
           )
         }
@@ -184,60 +184,61 @@ columns(3, gutter: 11pt)[
       v(1cm)
     },
     {
-      cetz.canvas(length:0.4cm, {
+      cetz.canvas(length:4cm, {
         cetz.plot.plot(
-          size: (10, 10),
+          // size: (5, 5),
           axis-style: "school-book",
           fill-below: false,
-          x-domain: (-10, 10),
-          y-domain: (-10, 10),
-          x-max: 10, x-min: -10,
-          y-max: 10, y-min: -10,
+          x-domain: (-4, 4),
+          y-domain: (-4, 4),
+          x-max: 4, x-min: -4,
+          y-max: 4, y-min: -4,
           x-grid: "both", y-grid: "both",
           x-tick: none, y-tick: none,
           x-tick-step: 1, y-tick-step: 1,
             {
-              cetz.plot.add(domain: (-10, 10), x=>x+(-3), style: style-point)
+              cetz.plot.add(domain: (-4, 4), x=>x+(-3), style: style-point)
             }
           )
         })
         v(1cm)
     },
     {
-      cetz.canvas(length:0.4cm, {
+      cetz.canvas(length:4cm, {
         cetz.plot.plot(
-          size: (10, 10),
+          // size: (5, 5),
           axis-style: "school-book",
           fill-below: false,
-          x-domain: (-10, 10),
-          y-domain: (-10, 10),
-          x-max: 10, x-min: -10,
-          y-max: 10, y-min: -10,
+          x-domain: (-4, 4),
+          y-domain: (-4, 4),
+          x-max: 4, x-min: -4,
+          y-max: 4, y-min: -4,
           x-grid: "both", y-grid: "both",
           x-tick: none, y-tick: none,
           x-tick-step: 1, y-tick-step: 1,
             {
-              cetz.plot.add(domain: (-10, 10), x=>-x+2, style: style-point)
+              cetz.plot.add(domain: (-4, 4), x=>-x+2, style: style-point)
             }
           )
         })
         v(1cm)
     },
     {
-      cetz.canvas(length:0.4cm, {
+      cetz.canvas(length:4cm, {
         cetz.plot.plot(
-          size: (10, 10),
+          // size: (5, 5),
           axis-style: "school-book",
+          // axis-ticks: "none",
           fill-below: false,
-          x-domain: (-10, 10),
-          y-domain: (-10, 10),
-          x-max: 10, x-min: -10,
-          y-max: 10, y-min: -10,
+          x-domain: (-4, 4),
+          y-domain: (-4, 4),
+          x-max: 4, x-min: -4,
+          y-max: 4, y-min: -4,
           x-grid: "both", y-grid: "both",
           x-tick: none, y-tick: none,
           x-tick-step: 1, y-tick-step: 1,
             {
-              cetz.plot.add(domain: (-10, 10), x=>0.5*x, style: style-point)
+              cetz.plot.add(domain: (-4, 4), x=>0.5*x, style: style-point)
             }
           )
         })
