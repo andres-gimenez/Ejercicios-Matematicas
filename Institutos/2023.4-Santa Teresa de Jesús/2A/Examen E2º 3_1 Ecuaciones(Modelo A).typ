@@ -104,7 +104,7 @@
 
 // #g-question(point: 2)[Si el IVA aplicado es del 21%. Escribe la ecuación que da el IVA en función del precio, representala y calcula la pendiente]
 
-#g-question(point: 3)[Escribe debajo de cada gráfica a que función corresponde de la siguiente lista:]
+#g-question(point: 3)[Escribe debajo de cada gráfica a que expresión algebraica corresponde de la siguiente lista:]
 
 #box(height: 68pt,
 columns(3, gutter: 11pt)[
