@@ -39,15 +39,70 @@
 
 #set math.cases(reverse: true)
 
-#g-question(point:1)[(similar a Pág 234 - Eje 25)]
+#g-question(point:1)[En la siguiente gráfica, se muestra la correspondencia entre el número de horas díarias que le dedicamos a la lectura de un libro y el número de días que tardamos en leer el libro completo:]
+#align(center,
+  grid(
+    columns: (25pt, auto),
+    rows: (auto, 25pt),
+    align(center + horizon)[#rotate(-90deg, reflow: true)[Número de días en leer un libro]],
+    cetz.canvas(length: 0.8cm, {
+      cetz.plot.plot(
+        size: (10, 10),
+        axis-style: "school-book",        
+        fill: "o" ,
+        fill-below: true,
+        // horizontal:false,
+        x-domain: (0, 13),
+        y-domain: (0, 13),
+        x-max: 13,
+        x-min: 0,
+        y-max: 13,
+        y-min: 0,
+        x-grid: "both",
+        y-grid: "both",
+        x-tick-step: 1,
+        y-tick-step: 1,
+          {
+            cetz.plot.add(((1,9),), mark-size: 0.2, mark: "o", style:( fill: black ))
+            cetz.plot.add(((2,4.5),), mark-size: 0.2, mark: "o", style:( fill: black ))
+            cetz.plot.add(((3,3),), mark-size: 0.2, mark: "o", style:( fill: black ))
+            cetz.plot.add(((4,2.25),), mark-size: 0.2, mark: "o")
+            cetz.plot.add(((5,1.8),), mark-size: 0.2, mark: "o")
+            cetz.plot.add(((6,1.5),), mark-size: 0.2, mark: "o")
+            cetz.plot.add(((7,1.28),), mark-size: 0.2, mark: "o")
+            cetz.plot.add(((8,1.129),), mark-size: 0.2, mark: "o")
+            cetz.plot.add(((9,1),), mark-size: 0.2, mark: "o")
+            cetz.plot.add(((10,0.9),), mark-size: 0.2, mark: "o")
+            cetz.plot.add(((11,0.82),), mark-size: 0.2, mark: "o")
+            cetz.plot.add(((12,0.75),), mark-size: 0.2, mark: "o")
+            cetz.plot.add(((13,0.69),), mark-size: 0.2, mark: "o")
+          }
+        )
+      }
+    ),
+    [],
+    [\ Número de horas de lectura diaria]
+  )
+)
+
+
+#g-subquestion[¿Es una función?]
+#v(1fr)
+#g-subquestion[¿Qué magnitudes se relacionan?]
+#v(1fr)
+#g-subquestion[¿Cuál es la variable  independiente? ¿Es discreta o continua?]
+#v(1fr)
+#g-subquestion[¿Cuál es la variable dependiente?]
+#v(1fr)
+#pagebreak()
 
 #g-question(point: 2)[Calcula la ecuación de la recta que para por los puntos $P(1,1)$ y $Q(2,2)$]
 
 #g-question(point: 2)[Proporcionalidad inversa - Poner tabla, calcular la K y ]
 
 #g-question(point: 2)[Si el IVA aplicado es del 21%. Escribe la ecuación que da el IVA en función del precio, representala y calcula la pendiente]
-
-  #cetz.canvas(length: 1.4cm, {
+#align(center, 
+  cetz.canvas(length: 1.4cm, {
                 cetz.plot.plot(
                   // axes: ("x", "y"),
                   size: (10, 10),
@@ -76,3 +131,4 @@
                   )
                 }
               )
+            )
