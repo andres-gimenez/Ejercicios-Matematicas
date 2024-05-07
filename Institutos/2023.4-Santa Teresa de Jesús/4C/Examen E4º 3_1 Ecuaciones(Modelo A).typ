@@ -40,21 +40,44 @@
 #set math.cases(reverse: true)
 // #set text(18pt)
 
-// #g-question(point:2)[Resuelve las siguientes ecuaciones]
+#g-question(point:3)[En un club deportivo juvenil admiten socios con edades entre 12 y 18 años. La distribución de las
+edades es:]
 
-//   #g-subquestion[
-//     $x^2 -x -2 = 0$
-//   ]
-//   #v(1fr)
+#align(center,
+  table(
+    fill: (x, y) =>
+      if(x == 0) { luma(230) },
+  columns: (4cm,auto,auto,auto,auto,auto,auto,auto),
+  rows:(auto, auto),
+  gutter:0pt,
+  [Edad], [12], [13],[14],[15],[16],[17],[18],
+  [Número de socios], [5], [7], [11], [15], [17], [6], [3]
+))
 
-//   #g-subquestion[
-//     $display((x^2-x)/2=2x-3)$
-//   ]
-//   #v(1fr)
+#g-subquestion[Completa la siguiente tabla de frecuencias siendo: \ 
+  - $x_i$: Valor del carácter estadistico.
+  - $n_i$: Frecuencia absoluta.
+  - $N_i$: Frecuencia absoluta acumulada.
+  - $f_i$: Frecuencia relativa.
+  - $f_i %$: Frecuencia relativa (en porcentaje).
+  - $F_i$: Frecuencia relativa acumulada.
+  ]
 
-// #pagebreak()
 
-// #g-question[Resuelve los siguientes sistemas de ecuaciones, por métodos distintos]
+#align(center,
+  table(
+    fill: (x, y) =>
+      if(y == 0) { luma(230) },
+    columns: (1.5cm, 1.5cm,  1.5cm, 1.5cm, 1.5cm, 1.5cm),
+    rows: (0.7cm,)*8,
+    [$x_i$],[$n_i$], [$N_i$], [$f_i$],[$f_i$ %],[$F_i$]
+))
+
+#g-subquestion[Calcula la moda, la media y la mediana.]
+
+#pagebreak()
+
+#g-question[Resuelve los siguientes sistemas de ecuaciones, por métodos distintos]
 
 //   #g-subquestion(point:1)[
 //     $display(cases( delim: "{",
