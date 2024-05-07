@@ -73,42 +73,59 @@ edades es:]
 ))
 
 #g-subquestion[Calcula la moda, la media y la mediana.]
+#v(1fr)
 
-#pagebreak()
+#g-question[En una fábrica de bombillas se estudia la vida de un tipo de bombilla. Se ha tomado una muestra
+de 200 lámparas con los siguientes resultados:]
 
-#g-question[Resuelve los siguientes sistemas de ecuaciones, por métodos distintos]
+#align(center,
+  table(
+    fill: (x, y) =>
+      if(x == 0) { luma(230) },
+  columns: (4cm,auto,auto,auto,auto,auto),
+  rows:(auto, auto),
+  gutter:0pt,
+  [Vida en horas], [$[100, 300)$], [$[300, 500)$], [$[500, 700)$], [$[700, 900)$], [$[900, 1100)$],
+  [Número de bombillas], [10], [65], [75], [35], [15], 
+))
 
-//   #g-subquestion(point:1)[
-//     $display(cases( delim: "{",
-//               2&x - 3&y  &= -&1 ,
-//               3&x + 2&y  &= &5
-//             ))$
-//   ]
-//   #v(1fr)
+#g-subquestion(point:0.5)[¿Se trata de un carácter estadistico cualitativo o cuantitativo?]
+#v(1fr)
+#g-subquestion(point:0.5)[¿Se trata de un carácter estadistico continuo o discreto?]
+#v(1fr)
+#g-subquestion[Calcula la moda, la media y la mediana.]
+#v(1fr)
 
-//   #g-subquestion(point:1)[
-//     $display(cases( delim: "{",
-//              -3&x &- 4&y &= &5 ,
-//               -2&x &+ 3&y &= &9
-//             ))$
-//   ]
-//   #v(1fr)
-
-// #pagebreak()
-// // #g-question(point:1)[Indica la pendiente y la ordenada en el origen de la siguiente función]
-// // $ f(x)=3x-5 $
-// // #v(1fr)
-// #g-question(point:2)[En un tramo de carretera de 3Km se sube de la cota 620m a la cota 680m. 
-// ¿Cuál es la pendiente de dicho tramo de carretera?]
-// #align(left, image("./imagenes/PendienteMedia.jpeg", width: 80%))
-// #v(1fr)
-
-// #pagebreak()
-
-// #g-question(point:2)[Se mezcla café de tipo A que cuesta a 6€/Kg con café de tipo B que cuesta 4€/Kg. 
-// Si tenemos 120kg de mezcla que sale a 4,5€/kg, ¿cuántos kilogramos de café de cada clase se han mezclado? ]
-// #v(2fr)
-
-// #g-question(point:2)[Tres kilos de manzanas y dos kilos de naranjas cuestan 9€. Dos kilos de manzanas y dos kilos de naranjas cuestan 7€. 
-// ¿Cuánto vale el kilo de manzanas y el kilo de naranjas?]
-// #v(2fr)
+#g-subquestion(point:1)[Dibuja el historgrama]
+#v(1fr)
+#align(center, 
+  cetz.canvas(length: 1.3cm, {
+      cetz.plot.plot(
+        // axes: ("x", "y"),
+        size: (10, 10),
+        axis-style: "school-book",
+        fill: "o" ,
+        fill-below: true,
+        // horizontal:false,
+        x-domain: (-10, 10),
+        y-domain: (-10, 10),
+        x-max: 10,
+        x-min: -10,
+        y-max: 10,
+        y-min: -10,
+        x-grid: "both",
+        y-grid: "both",
+        // x-tick-step: none,
+        x-tick-step: 1,
+        // x-ticks: ((-2, $-2$), (0, $0$), (2, $2$), (4, $4$), (6, $6$)),
+        y-tick-step: 1,
+        // x-minor-tick-step: 0.2,
+        // y-minor-tick-step: 0.2,
+        // y-minor-tick-color:
+          {
+            cetz.plot.add(((0,0),), mark-size: 0,)
+          }
+        )
+      }
+    )
+  )
