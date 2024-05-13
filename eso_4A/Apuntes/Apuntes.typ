@@ -77,7 +77,7 @@ La *grafica* de una función es la representación de los pares de valores (x, y
 
 = Estadística
 
-Un *carácter estadistico* es una propiedad que se estuia de los individuos de una población.
+Un *carácter estadístico* es una propiedad que se estuia de los individuos de una población.
 
 Puede ser:
   - *Cualitativo*:  si indica una cualidad no medible. 

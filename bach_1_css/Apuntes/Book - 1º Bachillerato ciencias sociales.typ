@@ -200,7 +200,7 @@
 
 = Estadística
 
-== Conceptos estadisticos
+== Conceptos estadísticos
 
 == Estadística bidimensional. Conceptos y tablas
 

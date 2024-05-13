@@ -16,13 +16,13 @@
     academic-level: "4º ESO",
     academic-subject: "Matemáticas A",
     number: "3º Evaluación Recuperación",
-    content: "Estadistica",
+    content: "Estadística",
     model: "Modelo A"
   ),
   
   languaje: "es",
   decimal-separator: ",",
-  date: "November 21, 2023",
+  date: "May 13, 2024",
   show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
@@ -55,7 +55,7 @@ edades es:]
 ))
 
 #g-subquestion(point:3)[Completa la siguiente tabla de frecuencias siendo: \ 
-  - $x_i$: Valor del carácter estadistico.
+  - $x_i$: Valor del carácter estadístico.
   - $n_i$: Frecuencia absoluta.
   - $N_i$: Frecuencia absoluta acumulada.
   - $f_i$: Frecuencia relativa.
@@ -90,14 +90,14 @@ de 200 lámparas con los siguientes resultados:]
   [Número de bombillas], [12], [15], [70], [45], [10]
 ))
 
-#g-subquestion(point:0.5)[¿Se trata de un carácter estadistico cualitativo o cuantitativo?]
+#g-subquestion(point:0.5)[¿Se trata de un carácter estadístico cualitativo o cuantitativo?]¿Por qué?
 #v(1fr)
-#g-subquestion(point:0.5)[¿Se trata de un carácter estadistico continuo o discreto?]
+#g-subquestion(point:0.5)[¿Se trata de un carácter estadístico continuo o discreto? ¿Por qué?]
 #v(1fr)
 #g-subquestion(point:1)[Calcula la moda, la media y la mediana.]
 #v(3fr)
 
-#g-subquestion(point:1)[Dibuja el historgrama, lo más preciso posible]
+#g-subquestion(point:1)[Dibuja el histograma, lo más preciso posible.]
 #align(center, 
   grid(
     columns: (25pt, auto),
@@ -159,5 +159,5 @@ se publican los siguientes datos de media y desviación típica.] \
 #g-subquestion(point:1)[Calcula el coeficiente de variación para cada grupo.]
 #v(1fr)
 
-#g-subquestion(point:2)[Responde a la pregunta *¿En qué grupo está la mejor nota del instituto?* dando una respuesta argumenta desde el punto de vista matemático. Utilizando tus conocimientos sobre que significa la media y la desviación típica. ] \
+#g-subquestion(point:2)[Responde a la pregunta *¿En qué grupo está la mejor nota del instituto?* dando una respuesta argumenta desde el punto de vista matemático, utilizando tus conocimientos sobre que significa la media y la desviación típica. ] \
 #v(2fr)
