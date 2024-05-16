@@ -51,10 +51,10 @@ edades es:]
   rows:(auto, auto),
   gutter:0pt,
   [Edad], [12], [13],[14],[15],[16],[17],[18],
-  [Número de socios], [4], [6], [12], [16], [14], [8], [4]
+  [Número de socios], [4], [6], [11], [13], [18], [8], [4]
 ))
 
-#g-subquestion(point:3)[Completa la siguiente tabla de frecuencias siendo: \ 
+#g-subquestion(point:3)[Completa la siguiente tabla de frecuencias, redondeando a dos decimales y siendo: \ 
   - $x_i$: Valor del carácter estadístico.
   - $n_i$: Frecuencia absoluta.
   - $N_i$: Frecuencia absoluta acumulada.

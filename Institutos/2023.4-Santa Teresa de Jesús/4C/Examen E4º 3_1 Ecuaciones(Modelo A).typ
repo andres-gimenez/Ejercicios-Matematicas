@@ -54,7 +54,7 @@ edades es:]
   [Número de socios], [5], [7], [11], [15], [17], [6], [3]
 ))
 
-#g-subquestion(point:3)[Completa la siguiente tabla de frecuencias siendo: \ 
+#g-subquestion(point:3)[Completa la siguiente tabla de frecuencias, redondeando a dos decimales y siendo: \ 
   - $x_i$: Valor del carácter estadístico.
   - $n_i$: Frecuencia absoluta.
   - $N_i$: Frecuencia absoluta acumulada.
