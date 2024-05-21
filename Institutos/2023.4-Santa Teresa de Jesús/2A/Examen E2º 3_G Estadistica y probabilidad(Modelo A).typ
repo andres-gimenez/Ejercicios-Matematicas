@@ -15,8 +15,8 @@
     academic-period: "Curso 2023/2024",
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
-    number: "3º Evaluación - 1º Examen",
-    content: "Expresiones algebraicas y ecuaciones",
+    number: "3º Evaluación - Global",
+    content: "Estadistica, combinatoria y probabilidad",
     model: "Modelo A"
   ),
   
@@ -97,7 +97,7 @@
 #v(1fr)
 #pagebreak()
 
-#g-question(point: 3)[Calcula la ecuación de la recta que para por los puntos $P(1,2)$ y $Q(2,4)$]
+#g-question(point: 3)[Calcula la ecuación de la recta que para por los puntos $P(2,4)$ y $Q(3,6)$]
 #pagebreak()
 
 // #g-question(point: 2)[Proporcionalidad inversa - Poner tabla, calcular la K y ]
@@ -108,84 +108,23 @@
 
 #box(height: 68pt,
 columns(3, gutter: 11pt)[
- - $display(y = x - 3)$ \ \
  - $display(y = 2x + 1)$ \ \
-
  - $display(y = -2/x)$ \ \
- - $display(y = -x + 2)$ \ \
 
  - $display(y = 2/x)$ \ \
+ - $display(y = -x + 2)$ \ \
+
+ - $display(y = x - 3)$ \ \
  - $display(y = 1/2 x)$ \ \
 ])
 
 #grid(columns: (auto, auto, auto),
     gutter:25pt,{
-    cetz.canvas(length:4cm, {
-      cetz.plot.plot(
-        // size: (10, 10),
-        axis-style: "school-book",
-        fill-below: false,
-        x-domain: (-4, 4),
-        y-domain: (-4, 4),
-        x-max: 4, x-min: -4,
-        y-max: 4, y-min: -4,
-        x-grid: "both", y-grid: "both",
-        x-tick: none, y-tick: none,
-        x-tick-step: 1, y-tick-step: 1,
-          {
-            cetz.plot.add(domain: (-4, 4), x=>2*x+1, style: style-point)
-          }
-        )
-      }) 
-      v(1cm)
-    },
-    {
-      cetz.canvas(length:4cm, {
-        cetz.plot.plot(
-          // size: (10, 10),
-          axis-style: "school-book",
-          fill-below: false,
-          x-domain: (-4, 4),
-          y-domain: (-4, 4),
-          x-max: 4, x-min: -4,
-          y-max: 4, y-min: -4,
-          x-grid: "both", y-grid: "both",
-          x-tick: none, y-tick: none,
-          x-tick-step: 1, y-tick-step: 1,
-            {
-              cetz.plot.add(domain: (-4, 4), x=>2/x, style: style-point)
-            }
-          )
-        }
-      )
-      v(1cm)
-    },
-    {
-      cetz.canvas(length:4cm, {
-        cetz.plot.plot(
-          // size: (10, 10),
-          axis-style: "school-book",
-          fill-below: false,
-          x-domain: (-4, 4),
-          y-domain: (-4, 4),
-          x-max: 4, x-min: -4,
-          y-max: 4, y-min: -4,
-          x-grid: "both", y-grid: "both",
-          x-tick: none, y-tick: none,
-          x-tick-step: 1, y-tick-step: 1,
-            {
-              cetz.plot.add(domain: (-4, 4), x=>-2/x, style: style-point)
-            }
-          )
-        }
-      )
-      v(1cm)
-    },
-    {
       cetz.canvas(length:4cm, {
         cetz.plot.plot(
           // size: (5, 5),
           axis-style: "school-book",
+          // axis-ticks: "none",
           fill-below: false,
           x-domain: (-4, 4),
           y-domain: (-4, 4),
@@ -195,7 +134,7 @@ columns(3, gutter: 11pt)[
           x-tick: none, y-tick: none,
           x-tick-step: 1, y-tick-step: 1,
             {
-              cetz.plot.add(domain: (-4, 4), x=>x+(-3), style: style-point)
+              cetz.plot.add(domain: (-4, 4), x=>0.5*x, style: style-point)
             }
           )
         })
@@ -226,7 +165,6 @@ columns(3, gutter: 11pt)[
         cetz.plot.plot(
           // size: (5, 5),
           axis-style: "school-book",
-          // axis-ticks: "none",
           fill-below: false,
           x-domain: (-4, 4),
           y-domain: (-4, 4),
@@ -236,18 +174,83 @@ columns(3, gutter: 11pt)[
           x-tick: none, y-tick: none,
           x-tick-step: 1, y-tick-step: 1,
             {
-              cetz.plot.add(domain: (-4, 4), x=>0.5*x, style: style-point)
+              cetz.plot.add(domain: (-4, 4), x=>x+(-3), style: style-point)
             }
           )
         })
         v(1cm)
+    },
+    {
+      cetz.canvas(length:4cm, {
+        cetz.plot.plot(
+          // size: (10, 10),
+          axis-style: "school-book",
+          fill-below: false,
+          x-domain: (-4, 4),
+          y-domain: (-4, 4),
+          x-max: 4, x-min: -4,
+          y-max: 4, y-min: -4,
+          x-grid: "both", y-grid: "both",
+          x-tick: none, y-tick: none,
+          x-tick-step: 1, y-tick-step: 1,
+            {
+              cetz.plot.add(domain: (-4, 4), x=>-2/x, style: style-point)
+            }
+          )
+        }
+      )
+      v(1cm)
+    },
+   
+    {
+      cetz.canvas(length:4cm, 
+      {
+        cetz.plot.plot(
+          // size: (10, 10),
+          axis-style: "school-book",
+          fill-below: false,
+          x-domain: (-4, 4),
+          y-domain: (-4, 4),
+          x-max: 4, x-min: -4,
+          y-max: 4, y-min: -4,
+          x-grid: "both", y-grid: "both",
+          x-tick: none, y-tick: none,
+          x-tick-step: 1, y-tick-step: 1,
+            {
+              cetz.plot.add(domain: (-4, 4), x=>2*x+1, style: style-point)
+            }
+          )
       }
+      ) 
+      v(1cm)
+    },
+    {
+      cetz.canvas(length:4cm, {
+        cetz.plot.plot(
+          // size: (10, 10),
+          axis-style: "school-book",
+          fill-below: false,
+          x-domain: (-4, 4),
+          y-domain: (-4, 4),
+          x-max: 4, x-min: -4,
+          y-max: 4, y-min: -4,
+          x-grid: "both", y-grid: "both",
+          x-tick: none, y-tick: none,
+          x-tick-step: 1, y-tick-step: 1,
+            {
+              cetz.plot.add(domain: (-4, 4), x=>2/x, style: style-point)
+            }
+          )
+        }
+      )
+      v(1cm)
+    }
     )
 
 #pagebreak()
 
 #g-question(point: 2)[Halla la pendiente, el valor de la ordenada en el origen y dibuja la gráfica de la función] \ \
-$ y = 3x - 2 $
+$ y = 2x - 2 $
 
 #v(1fr)
 #align(center, 
