@@ -40,6 +40,21 @@
 #set math.cases(reverse: true)
 // #set text(18pt)
 
+
+#g-question[Una mesa de despacho tiene dos cajones. El primero contiene 4 rotuladores rojos y 2 azules. El segundo contiene 3 rotuladores rojos y 3 azules. Se abre un cajón al azar y se extrae un rotulador. Contesta a las tres supuestos por separado.]
+
+#g-subquestion[¿Cuál será la probabilidad de que se haya abierto el segundo cajón y se haya cogido un rotulador rojo?]
+#v(1fr)
+
+#g-subquestion[Sabiendo que se ha abierto el primer cajón, ¿cuál es la probabilidad de que el rotulador sea rojo?]
+#v(1fr)
+
+#g-subquestion[¿Cuál es la probabilidad de que el rotulador sea azul?]
+#v(1fr)
+
+#g-question(point:1)[A tres segundos del final de un partido de baloncestos, en el que los dos equipos van empatados a puntos, pitan una falta personal. El encargado de tirar los dos tiros libres tiene una efectividad del 60%, ¿Cuál es la probabilidad hay de que meta al menos uno de los tiros?]
+#v(1fr)
+
 // #g-question[En un club deportivo juvenil admiten socios con edades entre 12 y 18 años. La distribución de las
 // edades es:]
 
