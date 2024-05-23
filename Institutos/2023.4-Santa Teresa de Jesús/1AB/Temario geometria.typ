@@ -1,6 +1,8 @@
+= Ecuaciones
+Lo mismo que en el examen anterior.
 = Tema 10: Triángulos
 \
-- *Página 166*: La suma de los ánguos de un triángulo miden 180º.
+- *Página 166*: La suma de los ángulos de un triángulo miden 180º.
 - *Página 167*: Clasificación de triángulos.
 - *Página 168 y 169*: Teorema de Pitágoras.
 - *Página 176 y 177*: Repaso.
