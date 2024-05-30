@@ -16,7 +16,7 @@
     academic-level: "2º ESO - Refuerzo",
     academic-subject: "Matemáticas",
     number: "3º Evaluación - 2º examene",
-    content: "Expresiones algebraicas y ecuaciones",
+    content: "Ecuaciones de 1º grado",
     model: "Modelo A"
   ),
   
@@ -30,71 +30,30 @@
 
 #set math.cases(reverse: true)
 
-// #g-question(point:2)[Simplifica las siguientes expresiones algebraicas:]
+#g-question[Resuelve las siguientes ecuaciones.]
 
-// // #g-subquestion[$display(4x + 12x =)$]
-// // #v(1fr)
+#g-subquestion(point: 1)[$display(2(x-2)=6)$]
+#v(1fr)
 
-// #g-subquestion[$display(3x + 7 - 4x + 8 =)$]
-// #v(1fr)
+#g-subquestion(point: 1)[$display(1+3x = x-5)$]
+#v(1fr)
 
-// #g-subquestion[$display(4x^2 + 2x - 6x^2 + 3 - 4x + 6 =)$]
-// #v(1fr)
+#pagebreak()
+#g-question[Resuelve las siguientes ecuaciones.]
+#g-subquestion(point: 2)[$display((x+1)/20=(x-1)/10)$]
+#v(1fr)
 
-// #g-subquestion[$display(3(3x^2 + 2x + 1) - 4x^2 + 2 =)$]
-// #v(1fr)
+#g-subquestion(point: 2)[$display( 3(2x-2) - 4 =  2(3x-5) -4(2x - 3))$]
+#v(1fr)
 
-// #g-subquestion[$display(-(x - 2) + (x + 7) =)$]
-// #v(1fr)
+#g-subquestion(point: 2)[$display(2/(x-2) = 2)$]
+#v(1fr)
 
-// #pagebreak()
+#pagebreak()
+#g-question[Indica el número de soluciones que tienen las siguientes ecuaciones.]
 
-// // #g-question(point:1)[Evalua las siguientes expresiones algebraicas con el valor indicado:]
+#g-subquestion(point: 2)[$display(4(2x - 1) = 2(4x + 5) - 2)$]
+#v(1fr)
 
-// // #g-subquestion[$display(4x^2 - 3x + 1)$ para $x=2$ y $x=0$:]
-// // #v(1fr)
-
-// // #g-subquestion[$display(2x^2 + 2x - 1)$ para $x=-1$ y $x=0$:]
-// // #v(1fr)
-
-// #g-question[Simplifica y evalúa:]
-
-// #g-subquestion(point:1)[Simplifica la expresión algebraica: \ \
-// $display(3(x^2 + 3x - 2) - 3x^2 -19x + 2)=$]
-// #v(2fr)
-
-// #g-subquestion(point:0.25)[Evalúa la para $x=-1:$]
-// #v(1fr)
-
-// #g-subquestion(point:0.25)[Evalúa la para $x=0:$]
-// #v(1fr)
-
-// #g-subquestion(point:0.25)[Evalúa la para $x=1:$]
-// #v(1fr)
-
-// #g-subquestion(point:0.25)[Evalúa la para $x=2:$]
-// #v(1fr)
-
-// #g-question[Resuelve las siguientes ecuaciones:]
-
-// // #g-subquestion(point:0.5)[$display(x+7 = 9)$]
-// // #v(2fr)
-
-// #g-subquestion(point:1)[$display(25 - 4x = 6x + 5)$]
-// #v(2fr)
-
-// #pagebreak()
-
-// #g-subquestion(point:1)[$display(4 (2 - 3x)-10 = 3)$]
-// #v(3fr)
-
-// #g-subquestion(point:1)[$display(2 (5x + 2) = 4x + 3)$]
-// #v(3fr)
-
-
-// #g-subquestion(point:1)[$display((x+2)/2 + 3 = x+ 2 )$]
-// #v(3fr)
-
-// #pagebreak()
-
-// #g-question(point:2)[En una ferretería se venden tornillos en cajas de tres tamaños: pequeña, mediana y grande. La caja grande contiene el doble que la mediana y la mediana 25 tornillos más que la pequeña. He comprado una caja de cada tamaño y en total hay 375 tornillos, ¿cuántos tornillos hay en cada caja?]
+#g-subquestion(point: 2)[$display(3(5x + 1) = 5(3x + 1) - 2)$]
+#v(1fr)
