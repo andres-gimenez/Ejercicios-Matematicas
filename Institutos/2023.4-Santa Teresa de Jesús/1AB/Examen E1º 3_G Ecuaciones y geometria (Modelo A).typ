@@ -1,4 +1,4 @@
-#import "@preview/cetz:0.2.1"
+#import "@preview/cetz:0.2.2"
 #import "@preview/g-exam:0.3.0": *
 
 #show: g-exam.with(
@@ -29,6 +29,39 @@
 )
 
 #set math.cases(reverse: true)
+
+#g-question(point:2)[Calcula el área sobreada de la siguiente figura:]
+
+#cetz.canvas({
+  import cetz.draw: *
+  // circle((0,0), anchor: "west")
+  // fill(red)
+  // stroke(none)
+  // circle((0,0), radius: 0.3)
+  // circle((0,0), anchor: "circle")
+
+  circle((0, 0), fill: gray, stroke: black),
+
+  circle((0, 0), fill: gray, stroke: black),
+})
+
+
+#g-question(point:2)[Calcula el área sobreada de la siguiente figura:]
+
+#cetz.canvas(length: 2cm,
+{
+ import cetz.draw: *
+  // circle((0,0), anchor: "west")
+  // fill(red)
+  // stroke(none)
+  // circle((0,0), radius: 0.3)
+  // circle((0,0), anchor: "circle")
+
+  rect((-1, -1), (1, 1), fill: gray, stroke:black)
+
+  circle((0, 0), fill: white, stroke: black)
+
+})
 
 // #g-question(point:2)[Simplifica las siguientes expresiones algebraicas:]
 

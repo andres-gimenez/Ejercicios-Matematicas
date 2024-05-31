@@ -40,20 +40,20 @@
 
 #pagebreak()
 #g-question[Resuelve las siguientes ecuaciones.]
-#g-subquestion(point: 2)[$display((x+1)/20=(x-1)/10)$]
+#g-subquestion(point: 1.5)[$display((x+1)/20=(x-1)/10)$]
 #v(1fr)
 
 #g-subquestion(point: 2)[$display( 3(2x-2) - 4 =  2(3x-5) -4(2x - 3))$]
 #v(1fr)
 
-#g-subquestion(point: 2)[$display(2/(x-2) = 2)$]
+#g-subquestion(point: 1.5)[$display(2/(x-2) = 2)$]
 #v(1fr)
 
 #pagebreak()
 #g-question[Indica el número de soluciones que tienen las siguientes ecuaciones.]
 
-#g-subquestion(point: 2)[$display(4(2x - 1) = 2(4x + 5) - 2)$]
+#g-subquestion(point: 1.5)[$display(4(2x - 1) = 2(4x + 5) - 2)$]
 #v(1fr)
 
-#g-subquestion(point: 2)[$display(3(5x + 1) = 5(3x + 1) - 2)$]
+#g-subquestion(point: 1.5)[$display(3(5x + 1) = 5(3x + 1) - 2)$]
 #v(1fr)
