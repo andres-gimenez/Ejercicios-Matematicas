@@ -15,7 +15,7 @@
     academic-period: "Curso 2023/2024",
     academic-level: "2º ESO - Refuerzo",
     academic-subject: "Matemáticas",
-    number: "3º Evaluación - 2º examene",
+    number: "3º Evaluación - 2º examen",
     content: "Ecuaciones de 1º grado",
     model: "Modelo B"
   ),

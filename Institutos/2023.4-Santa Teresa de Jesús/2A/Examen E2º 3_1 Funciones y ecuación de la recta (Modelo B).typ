@@ -97,7 +97,7 @@
 #v(1fr)
 #pagebreak()
 
-#g-question(point: 3)[Calcula la ecuación de la recta que para por los puntos $P(2,4)$ y $Q(3,6)$]
+#g-question(point: 3)[Calcula la ecuación de la recta que pasa por los puntos $P(2,4)$ y $Q(3,6)$]
 #pagebreak()
 
 // #g-question(point: 2)[Proporcionalidad inversa - Poner tabla, calcular la K y ]
