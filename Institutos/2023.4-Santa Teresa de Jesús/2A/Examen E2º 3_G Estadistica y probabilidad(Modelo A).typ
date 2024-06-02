@@ -41,7 +41,7 @@
 
 #let style-point =  (stroke: color.black, fill: color.gray)
 
-#g-question[Un jugador de baloncesto durante toda la temporada a lanzado 15 tiros libres y ha anotado 11. Si en la final del campeonato, va a lanzar un tiro libre, ¿cuál es la probabilidad de que lo falle?]
+#g-question(point: 1)[Un jugador de baloncesto durante toda la temporada a lanzado 15 tiros libres y ha anotado 11. Si en la final del campeonato, va a lanzar un tiro libre, ¿cuál es la probabilidad de que lo falle?]
 #v(1fr)
 
 #g-question[Una urna contiene 8 bolas rojas, 5 amarillas y 7 verdes. Se extrae una bola al azar. Calcula la probabilidad de que:]
@@ -60,6 +60,44 @@
 #v(1fr)
 #g-subquestion(point: 1)[No sea amarilla]
 #v(1fr)
+
+#pagebreak()
+#g-question[Los días que en una ciudad se han dado distintos factores climáticos han sido:]
+
+#align(center,
+  table(
+    fill: (x, y) =>
+      if(x == 0) { luma(230) },
+  columns: (4cm,auto,auto,auto,auto,auto),
+  rows:(auto, auto),
+  gutter:0pt,
+  [Clima], [Lluvia], [Soleado], [Nubes y claros], [Nublado], [Nieve],
+  [Número de días], [7], [45], [30], [15], [2]
+))
+
+#g-subquestion(point:0.5)[¿Se trata de un carácter estadístico cualitativo o cuantitativo?]¿Por qué?
+#v(1fr)
+#g-subquestion(point:1.5)[Calcula, si se puede, la moda, la media y la mediana. Si no se puede, indicar el por qué.]
+#v(3fr)
+
+#g-question[En un club deportivo juvenil admiten socios con edades entre 12 y 18 años. La distribución de las
+edades es:]
+
+#align(center,
+  table(
+    fill: (x, y) =>
+      if(x == 0) { luma(230) },
+  columns: (4cm,auto,auto,auto,auto,auto,auto,auto),
+  rows:(auto, auto),
+  gutter:0pt,
+  [Edad], [12], [13],[14],[15],[16],[17],[18],
+  [Número de socios], [5], [7], [11], [15], [17], [6], [3]
+))
+
+#g-subquestion(point:0.5)[¿Se trata de un carácter estadístico cualitativo o cuantitativo?]¿Por qué?
+#v(1fr)
+#g-subquestion(point:1.5)[Calcula, si se puede, la moda, la media y la mediana. Si no se puede, indicar el por qué.]
+#v(3fr)
 
 // #g-question(point:2)[En la siguiente gráfica, se muestra la correspondencia entre el número de horas díarias que le dedicamos a la lectura de un libro y el número de días que tardamos en leer el libro completo:]
 // #align(center,
