@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "3º Evaluación - Global",
     content: "Ecuaciones y geometría",
-    model: "Modelo A"
+    model: "Modelo B"
   ),
   
   languaje: "es",
@@ -34,8 +34,7 @@
 )
 
 // #set math.cases(reverse: true)
-
-#g-question(point:2)[Que altura ha de tener un trapezoide, cuyas bases miden $5 "cm"$ y $3 "cm"$, para que su área mida $"12 cm"^2$.] \
+#g-question(point:2)[Que altura ha de tener un trapezoide, cuyas bases miden $7 "cm"$ y $3 "cm"$, para que su área mida $"15 cm"^2$.] \
 #g-clarification[Expresa el problema en forma de ecuación y resuélvela.] \
 #g-clarification[Indica cual es el área del trapezoide.]
 \ \
@@ -47,14 +46,14 @@
 
   line((1.3, 0.3), (1.3, -0.8), stroke: (paint:luma(130), dash: "dashed"))
 
-  content((0.5, 0.5), [base menor = 3 cm])
+  content((0.5, 0.5), [base menor = 2 cm])
   content((0.3, -0.99), [base mayor = 5 cm])
   content((1.1, -0.2), text(size:20pt)[x])
 })
 #v(1fr)
 #pagebreak()
 
-#g-question(point:2)[En la siguiente figura formada por un cuadrado y un semicírculo, calcula el área sombreada, teniendo en cuenta que el lado del cuadro mide 3 cm.] \
+#g-question(point:2)[En la siguiente figura formada por un cuadrado y un semicírculo, calcula el área sombreada, teniendo en cuenta que el lado del cuadro mide 3 cm.]
 #g-clarification[Tomar $cal(pi) cal(tilde.eq) 3,14$] \
 #g-clarification[Indica cual es el área del semicírculo y del cuadrado.] \
 #g-clarification[Evalua el área del círculo y del cuadrado.] \
@@ -67,9 +66,7 @@
 })
 #v(1fr)
 
-
-#g-question(point:2)[Calcula el área sombreada de la siguiente figura, si el lado del cuadrado mide 2 cm.] \
-#g-clarification[Tomar $cal(pi) cal(tilde.eq) 3,14$] \
+#g-question(point:2)[Calcula el área sombreada de la siguiente figura, si el lado del cuadrado mide 5 cm. (Tomar $cal(pi) cal(tilde.eq) 3,14$)]
 #g-clarification[Indica cual es el área del círculo y del cuadrado.] \
 #g-clarification[Evalua el área del círculo y del cuadrado.] \
 
@@ -79,13 +76,14 @@
   rect((-1, -1), (1, 1), fill: silver, stroke:black)
 
   circle((0, 0), fill: white, stroke: black)
-  content((0, -1.2), [lado = 2cm])
+  content((0, -1.2), [lado = 5cm])
 
 })
 #v(1fr)
+
 #pagebreak()
 
-#g-question(point:2)[En un rectángulo en el que la base mide 24cm y la altura 7cm, ¿cuánto mide la diagonal?] \
+#g-question(point:2)[En un rectángulo en el que la base mide 10cm y la altura 5cm, ¿cuánto mide la diagonal?] \
 #g-clarification[Explica como has calculado la longitud de la diagonal y que teorema has utilizado.]
 \ \
 #cetz.canvas(length: 2cm,
@@ -95,18 +93,18 @@
   line((-1, -1), (-1, 1), (2,1), (2, -1), stroke:black, close:true)
   line((-1, -1), (2, 1), stroke: (paint:luma(0), dash: "dashed"))
 
-  content((0.5, -1.2), [base = 24 cm])
-  content((2.2, 0), [altura = 7 cm], angle:90deg)
+  content((0.5, -1.2), [base = 10 cm])
+  content((2.2, 0), [altura = 5 cm], angle:90deg)
   content((0.3, 0.2),  text(size:25pt)[x])
 })
-
+#v(1fr)
 #pagebreak()
 
 #g-question[Resuelve las siguientes ecuaciones:] \
 #g-clarification[Expresa el resultado como una fracción irreducible]
 
-#g-subquestion(point:1)[$display(6x+5=21-2x)$]
-#v(1fr)
+#g-subquestion(point:1)[$display(6x+5=25-4x)$]
+#v(2fr)
 
-#g-subquestion(point:1)[$display(2(2+3x) = 8)$]
-#v(1fr)
+#g-subquestion(point:1)[$display(4(3+3x) = 7)$]
+#v(3fr)
