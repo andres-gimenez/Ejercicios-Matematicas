@@ -41,7 +41,7 @@
 // #set text(18pt)
 
 
-#g-question(point: 2)[Se sabe que: $display(P(A)=3/4)$, $display(P(B)=2/5)$ y $display(P(A bb(union) B) = 8/9)$. Calcula $P(A bb(sect) B )$. ]
+#g-question(point: 2)[Se sabe que: $display(P(A)=3/4)$, $display(P(B)=2/5)$ y $display(P(A cal(union) B) = 8/9)$. Calcula $P(A cal(sect) B )$. ]
 #v(1fr)
 
 #g-question(point: 2)[Un jugador de baloncesto durante toda la temporada a lanzado 15 tiros libres y ha anotado 11. Si en la final del campeonato, va a lanzar un tiro libre, ¿cuál es la probabilidad de que lo falle?]

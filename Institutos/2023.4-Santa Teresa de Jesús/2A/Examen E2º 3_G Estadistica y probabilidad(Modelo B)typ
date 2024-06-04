@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "3º Evaluación - Global",
     content: "Estadistica, combinatoria y probabilidad",
-    model: "Modelo A"
+    model: "Modelo B"
   ),
   
   languaje: "es",
@@ -41,20 +41,14 @@
 
 #let style-point =  (stroke: color.black, fill: color.gray)
 
-
-
 #g-question[Una urna contiene 8 bolas rojas, 5 amarillas y 7 verdes. Se extrae una bola al azar. Calcula la probabilidad de que:]
 
-#g-subquestion(point: 1)[Sea roja]
+#g-subquestion(point: 1)[Sea verde]
 #v(1fr)
-// #g-subquestion(point: 1)[Sea amarilla]
-// #v(1fr)
-#g-subquestion(point: 1)[No sea roja]
+#g-subquestion(point: 1)[No sea verde]
 #v(1fr)
-// #g-subquestion(point: 1)[No sea verde]
-// #v(1fr)
 
-#g-question(point: 1)[Un jugador de baloncesto durante el partido ha lanzado 12 tiros libres y ha anotado 9. Si en el último minuto, va a lanzar un tiro libre, ¿cuál es la probabilidad de que lo falle?]
+#g-question(point: 1)[Un jugador de baloncesto durante el partido ha lanzado 16 tiros libres y ha anotado 11. Si en el último minuto, va a lanzar un tiro libre, ¿cuál es la probabilidad de que lo falle?]
 #v(2fr)
 
 #pagebreak()
@@ -68,7 +62,7 @@
   rows:(auto, auto),
   gutter:0pt,
   [Clima], [Lluvia], [Soleado], [Nubes y claros], [Nublado], [Nieve],
-  [Número de días], [7], [45], [30], [15], [2]
+  [Número de días], [6], [40], [28], [17], [3]
 ))
 
 #g-subquestion(point:0.5)[¿Se trata de un carácter estadístico cualitativo o cuantitativo?]¿Por qué?
@@ -87,7 +81,7 @@ edades es:]
   rows:(auto, auto),
   gutter:0pt,
   [Edad], [12], [13],[14],[15],[16],[17],[18],
-  [Número de socios], [5], [7], [11], [15], [17], [6], [3]
+  [Número de socios], [6], [8], [12], [17], [15], [7], [5]
 ))
 
 #g-subquestion(point:0.5)[¿Se trata de un carácter estadístico cualitativo o cuantitativo?]¿Por qué?
@@ -112,47 +106,26 @@ columns(3, gutter: 11pt)[
 
 #grid(columns: (auto, auto, auto),
     gutter:25pt, 
-    //{
-    // cetz.canvas(length:4cm, {
-    //   cetz.plot.plot(
-    //     // size: (10, 10),
-    //     axis-style: "school-book",
-    //     fill-below: false,
-    //     x-domain: (-4, 4),
-    //     y-domain: (-4, 4),
-    //     x-max: 4, x-min: -4,
-    //     y-max: 4, y-min: -4,
-    //     x-grid: "both", y-grid: "both",
-    //     x-tick: none, y-tick: none,
-    //     x-tick-step: 1, y-tick-step: 1,
-    //       {
-    //         cetz.plot.add(domain: (-4, 4), x=>2*x+1, style: style-point)
-    //       }
-    //     )
-    //   }) 
-    //   v(1cm)
-    // },
-    // {
-    //   cetz.canvas(length:4cm, {
-    //     cetz.plot.plot(
-    //       // size: (10, 10),
-    //       axis-style: "school-book",
-    //       fill-below: false,
-    //       x-domain: (-4, 4),
-    //       y-domain: (-4, 4),
-    //       x-max: 4, x-min: -4,
-    //       y-max: 4, y-min: -4,
-    //       x-grid: "both", y-grid: "both",
-    //       x-tick: none, y-tick: none,
-    //       x-tick-step: 1, y-tick-step: 1,
-    //         {
-    //           cetz.plot.add(domain: (-4, 4), x=>2/x, style: style-point)
-    //         }
-    //       )
-    //     }
-    //   )
-    //   v(1cm)
-    // },
+    {
+    cetz.canvas(length:4cm, {
+      cetz.plot.plot(
+        // size: (10, 10),
+        axis-style: "school-book",
+        fill-below: false,
+        x-domain: (-4, 4),
+        y-domain: (-4, 4),
+        x-max: 4, x-min: -4,
+        y-max: 4, y-min: -4,
+        x-grid: "both", y-grid: "both",
+        x-tick: none, y-tick: none,
+        x-tick-step: 1, y-tick-step: 1,
+          {
+            cetz.plot.add(domain: (-4, 4), x=>2*x+1, style: style-point)
+          }
+        )
+      }) 
+      v(1cm)
+    },
     {
       cetz.canvas(length:4cm, {
         cetz.plot.plot(
@@ -167,33 +140,54 @@ columns(3, gutter: 11pt)[
           x-tick: none, y-tick: none,
           x-tick-step: 1, y-tick-step: 1,
             {
-              cetz.plot.add(domain: (-4, 4), x=>-2/x, style: style-point)
+              cetz.plot.add(domain: (-4, 4), x=>2/x, style: style-point)
             }
           )
         }
       )
       v(1cm)
     },
-    {
-      cetz.canvas(length:4cm, {
-        cetz.plot.plot(
-          // size: (5, 5),
-          axis-style: "school-book",
-          fill-below: false,
-          x-domain: (-4, 4),
-          y-domain: (-4, 4),
-          x-max: 4, x-min: -4,
-          y-max: 4, y-min: -4,
-          x-grid: "both", y-grid: "both",
-          x-tick: none, y-tick: none,
-          x-tick-step: 1, y-tick-step: 1,
-            {
-              cetz.plot.add(domain: (-4, 4), x=>x+(-3), style: style-point)
-            }
-          )
-        })
-        v(1cm)
-    },
+    // {
+    //   cetz.canvas(length:4cm, {
+    //     cetz.plot.plot(
+    //       // size: (10, 10),
+    //       axis-style: "school-book",
+    //       fill-below: false,
+    //       x-domain: (-4, 4),
+    //       y-domain: (-4, 4),
+    //       x-max: 4, x-min: -4,
+    //       y-max: 4, y-min: -4,
+    //       x-grid: "both", y-grid: "both",
+    //       x-tick: none, y-tick: none,
+    //       x-tick-step: 1, y-tick-step: 1,
+    //         {
+    //           cetz.plot.add(domain: (-4, 4), x=>-2/x, style: style-point)
+    //         }
+    //       )
+    //     }
+    //   )
+    //   v(1cm)
+    // },
+    // {
+    //   cetz.canvas(length:4cm, {
+    //     cetz.plot.plot(
+    //       // size: (5, 5),
+    //       axis-style: "school-book",
+    //       fill-below: false,
+    //       x-domain: (-4, 4),
+    //       y-domain: (-4, 4),
+    //       x-max: 4, x-min: -4,
+    //       y-max: 4, y-min: -4,
+    //       x-grid: "both", y-grid: "both",
+    //       x-tick: none, y-tick: none,
+    //       x-tick-step: 1, y-tick-step: 1,
+    //         {
+    //           cetz.plot.add(domain: (-4, 4), x=>x+(-3), style: style-point)
+    //         }
+    //       )
+    //     })
+    //     v(1cm)
+    // },
     // {
     //   cetz.canvas(length:4cm, {
     //     cetz.plot.plot(
@@ -239,4 +233,4 @@ columns(3, gutter: 11pt)[
 
 #pagebreak()
 
-#g-question(point:2)[Si los sucesos A y B son incompatibles y sabemos que $display(P(A)=2/5)$ y $display(P(B)=1/4)$. Calcula $display(P(A cal(union) B))$.]
+#g-question(point:2)[Si los sucesos A y B son incompatibles y sabemos que $display(P(A)=3/5)$ y $display(P(B)=1/3)$. Calcula $display(P(A cal(union) B))$.]
