@@ -30,95 +30,42 @@
 
 #set math.cases(reverse: true)
 
-// #g-question(point:2)[Simplifica las siguientes expresiones algebraicas:]
+#g-question(point:2)[Calcula utilizando las propiedades de las potencias:]
+#g-subquestion[$5^3 dot 5^7 =$]
+#v(0.5cm)
+#g-subquestion[$7^5 : 7^2 =$]
+#v(0.5cm)
+#g-subquestion[$(5^3)^4 =$]
+#v(0.5cm)
+#g-subquestion[$37^0 =$]
+#v(0.5cm)
 
-// #g-subquestion[$display(5x + 7x =)$]
-// #v(1fr)
+#g-question(point:2)[Realiza los siguientes cambios de unidades:]
+#g-subquestion[$1,45"hm"^2=$ #h(2cm) $m^2$]
+#g-subquestion[$0,253"km"=$ #h(2cm) $"dam"$]
+#g-subquestion[$6369"ml"^2=$ #h(2cm) $l$]
 
-// #g-subquestion[$display(6x + 8 - 7x + 5 =)$]
-// #v(1fr)
+#pagebreak()
 
-// #g-subquestion[$display(3x^2 + 2x - 5x^2 + 2 - 3x + 6 =)$]
-// #v(1fr)
+#g-question[Resuelve las siguientes ecuaciones:]
 
-// #g-subquestion[$display(2(2x^2 + 3x + 2) - 2x^2 + 1 =)$]
-// #v(1fr)
+#g-subquestion(point:1)[$display(3 (6 - 2x)-12 = 5)$]
+#v(1fr)
 
-// #g-subquestion[$display(-(x - 2) + (x - 3) =)$]
-// #v(1fr)
+#g-subquestion(point:1)[$display(4(3x + 5) = 2x + 8)$]
+#v(1fr)
+#pagebreak()
 
-// #pagebreak()
+#g-question(point:2)[Una granja acaba de vender 35 jamones a 18€ el kilo, obteniendo 7.560€. ¿cuántos pesan todos los jamonos? ¿Y cuánto pesa cada jamón?]
 
-// // #g-question[Evalua las siguientes expresiones algebraicas con el valor indicado:]
-
-// // #g-subquestion[$display(3x^2 - 2x + 3)$ para $x=2$ y $x=0$:]
-// // #v(1fr)
-
-// // #g-subquestion[$display(3x^2 + 3x - 2)$ para $x=-1$ y $x=0$:]
-// // #v(1fr)
-
-// #g-question[Simplifica y evalúa:]
-
-// #g-subquestion(point:1)[Simplifica la expresión algebraica: \ \
-// $display(2(x^2 + 2x - 1) - 2x^2 -14x + 7)=$]
-// #v(2fr)
-
-// #g-subquestion(point:0.25)[Evalúa la para $x=-1:$]
-// #v(1fr)
-
-// #g-subquestion(point:0.25)[Evalúa la para $x=0:$]
-// #v(1fr)
-
-// #g-subquestion(point:0.25)[Evalúa la para $x=1:$]
-// #v(1fr)
-
-// #g-subquestion(point:0.25)[Evalúa la para $x=2:$]
-// #v(1fr)
-
-// #g-question[Resuelve las siguientes ecuaciones:]
-
-// #g-subquestion(point:0.5)[$display(x+3 = 12)$]
-// #v(2fr)
-
-// #g-subquestion(point:0.75)[$display(25 - 2x = 4x + 1)$]
-// #v(2fr)
-
-// #pagebreak()
-
-// #g-subquestion(point:0.75)[$display(3 (6 - 2x)-12 = 5)$]
-// #v(3fr)
-
-// #g-subquestion(point:0.75)[$display(4(3x + 5) = 2x + 8)$]
-// #v(3fr)
-
-// #g-subquestion(point:0.5)[$display(6x+3x=21-3)$]
-// #v(2fr)
-
-// #g-subquestion(point:0.75)[$display(3(2+2x) = 12 )$]
-// #v(3fr)
-
-
-// #pagebreak()
-// #g-question(point:2)[Expresa las siguientes frases en lenguaje algebraico]
-
-// // #g-subquestion[La mitad de un número]
-// // #v(1fr)
-
-// // #g-subquestion[El triple de un número]
-// // #v(1fr)
-
-// // #g-subquestion[El triple de un número menos cinco.]
-// // #v(1fr)
-
-// #g-subquestion[Si '$x$' es el número de coches que tenemos en una garaje, indica la expresión algebraica que te dice el número de ruedas que tenemos.]
-// #v(1fr)
-
-// #g-subquestion[Si tenemos '$x$' motos e '$y$' coches en un garaje, ¿cuántos vehículos tenemos?]
-// #v(1fr)
-
-
-// #g-subquestion[Si tenemos '$x$' motos e '$y$' coches en una garaje, ¿cuántas ruedas tenemos?]
-// #v(1fr)
-
-// // #g-question[Un recipiente está lleno de agua. Se extrae la mitad del agua primero y después la cuarta parte del resto. Si quedan 300 litros, ¿cuál era la capacidad del recipiente?]
-// // #v(5fr)
+#pagebreak()
+#g-question(point:2)[Calcula el área de la siguiente figura según las cotas que aparecen en el dibujo.] \
+#g-clarification[Indica cuantas figuras hay y como calculas el área de cada una.] \
+#cetz.canvas({
+  import cetz.draw: *
+   line((-1.5, 0), (0, 1.5), (1.5, 0), close: true, fill: gray, stroke:black)
+  rect((-1.5,0), (1.5,-3), fill: gray, stroke: black)
+  content((0, -3.3), [lado = 5cm])
+  content((2, -0.8), [altura total = 7cm], angle:90deg)
+})
+#v(1fr)
