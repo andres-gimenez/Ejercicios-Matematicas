@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "Examen final",
     content: "",
-    model: "Modelo A"
+    model: "Modelo A - A"
   ),
   
   languaje: "es",
@@ -26,50 +26,52 @@
   show-studen-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
+  question-text-parameters: (size: 15pt, spacing:200%),
 )
 
 #set math.cases(reverse: true)
 
 #g-question(point:1.5)[Calcula utilizando las propiedades de las potencias:]
 #g-subquestion[$5^3 dot 5^7 =$]
-#v(0.5cm)
+#v(1cm)
 #g-subquestion[$7^5 : 7^2 =$]
-#v(0.5cm)
+#v(1cm)
 #g-subquestion[$(5^3)^4 =$]
-#v(0.5cm)
-#g-subquestion[$37^0 =$]
-#v(0.5cm)
+#v(1cm)
+// #g-subquestion[$37^0 =$]
+// #v(0.5cm)
 
 #g-question(point:1.5)[Realiza los siguientes cambios de unidades:]
 #g-subquestion[$1,45 "hm"^2=$ #h(2cm) $m^2$]
-#v(0.5cm)
+#v(1cm)
 #g-subquestion[$0,253"km"=$ #h(2cm) $"dam"$]
-#v(0.5cm)
-#g-subquestion[$6369 "ml"^2=$ #h(2cm) $l$]
-#v(0.5cm)
+#v(1cm)
+// #g-subquestion[$6369 "ml"^2=$ #h(2cm) $l$]
+// #v(0.5cm)
 
-#g-question(point:1.5)[Efectúa las siguientes operaciones:]
+#g-question(point:2)[Efectúa la siguiente operacion:]
 #g-subquestion[$display(2 dot 6 - [ 3 + (5 - 3)]) = $ ]
 #v(1fr)
 
-#g-subquestion[$display(15 - (8 - 5 + 9 + 2)) =$]
-#v(1fr)
+// #g-subquestion[$display(15 - (8 - 5 + 9 + 2)) =$]
+// #v(1fr)
 
 #pagebreak()
 
-#g-question[Resuelve las siguientes ecuaciones:]
+#g-question[Resuelve la siguiente ecuacion:]
 
 #g-subquestion(point:1)[$display(3 (6 - 2x)-12 = 5)$]
 #v(1fr)
 
-#g-subquestion(point:1)[$display(4(3x + 5) = 2x + 8)$]
-#v(1fr)
+// #g-subquestion(point:1)[$display(4(3x + 5) = 2x + 8)$]
+// #v(1fr)
 #pagebreak()
 
 // #g-question(point:2)[Una granja acaba de vender 35 jamones a 18€ el kilo, obteniendo 7.560€. ¿cuántos pesan todos los jamonos? ¿Y cuánto pesa cada jamón?]
 
 #g-question(point:2)[Por la impresión de 36 fotografías digitales nos han cobrado 11,52€. ¿Cuál sería el coste de imprimir 48 fotografías?]
 #v(1fr)
+#pagebreak()
 
 #g-question(point:2)[Calcula el área de la siguiente figura según las cotas que aparecen en el dibujo.] \
 #g-clarification[Indica cuantas figuras hay y como calculas el área de cada una de ellas.] \
