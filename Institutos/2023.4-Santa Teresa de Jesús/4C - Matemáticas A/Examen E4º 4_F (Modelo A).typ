@@ -97,4 +97,4 @@ edades es:]
 
 #pagebreak()
 
-#g-question(point:2)[En el estuche tengo 3 bolígrafos negros, 6 azules, 2 rojos y 1 verdes. Si el examen solo lo puedo hacer con bolígrafo azul o negro y saco uno sin mirar, ¿cuál es la probabilidad de sacar un bolígrafo que me sirva para realizar el examen?]
+#g-question(point:2)[En el estuche tengo 3 bolígrafos negros, 6 azules, 2 rojos y 1 verdes. Si el examen solo lo puedo hacer con bolígrafo azul o negro y saco uno sin mirar, ¿cuál es la probabilidad de sacar un bolígrafo que me sirva para realizar el examen?] 
