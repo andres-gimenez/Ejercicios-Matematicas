@@ -69,7 +69,7 @@
 #v(1fr)
 
 #g-subquestion(point:1)[Resuelve la ecuación y calcula el área.]
-#v(1fr)
+#v(2fr)
 
 #pagebreak()
 
