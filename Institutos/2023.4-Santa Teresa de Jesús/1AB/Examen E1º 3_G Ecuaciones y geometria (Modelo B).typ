@@ -56,7 +56,7 @@
 #g-question(point:2)[En la siguiente figura formada por un cuadrado y un semicírculo, calcula el área sombreada, teniendo en cuenta que el lado del cuadro mide 3 cm.] \
 #g-clarification[Tomar $cal(pi) cal(tilde.eq) 3,14$] \
 #g-clarification[Indica cual es el área del semicírculo y del cuadrado.] \
-#g-clarification[Evalua el área del círculo y del cuadrado.] \
+#g-clarification[Evalúa el área del círculo y del cuadrado.] \
 
 #cetz.canvas({
   import cetz.draw: *
@@ -69,7 +69,7 @@
 #g-question(point:2)[Calcula el área sombreada de la siguiente figura, si el lado del cuadrado mide 5 cm.] \
 #g-clarification[Tomar $cal(pi) cal(tilde.eq) 3,14$] \
 #g-clarification[Indica cual es el área del círculo y del cuadrado.] \
-#g-clarification[Evalua el área del círculo y del cuadrado.] \
+#g-clarification[Evalúa el área del círculo y del cuadrado.] \
 
 #cetz.canvas(length: 2cm,
 {

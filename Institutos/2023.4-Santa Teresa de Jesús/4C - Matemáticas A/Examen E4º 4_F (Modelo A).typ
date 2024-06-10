@@ -42,10 +42,10 @@
 
 #g-question[Resuleve las siguientes ecuaciones]
 
-#g-subquestion(point:2)[$display(x^2-4x+4=0)$]
+#g-subquestion(point:1.5)[$display(x^2-4x+4=0)$]
 #v(1fr)
 
-#g-subquestion(point:2)[$display((x^2-x)/2 = 2x - 3)$]
+#g-subquestion(point:1.5)[$display((x^2-x)/2 = 2x - 3)$]
 #v(1fr)
 #pagebreak()
 
@@ -74,7 +74,7 @@ edades es:]
   [Número de socios], [5], [7], [11], [15], [17], [6], [3]
 ))
 
-#g-subquestion(point:3)[Completa la siguiente tabla de frecuencias, redondeando a dos decimales y siendo: \ 
+#g-subquestion(point:1.5)[Completa la siguiente tabla de frecuencias, redondeando a dos decimales y siendo: \ 
   - $x_i$: Valor del carácter estadístico.
   - $n_i$: Frecuencia absoluta.
   - $N_i$: Frecuencia absoluta acumulada.
@@ -92,5 +92,9 @@ edades es:]
     [$x_i$],[$n_i$], [$N_i$], [$f_i$],[$f_i$ %],[$F_i$]
 ))
 
-#g-subquestion(point:1)[Calcula la moda, la media y la mediana.]
+#g-subquestion(point:1.5)[Calcula la moda, la media y la mediana.]
 #v(1fr)
+
+#pagebreak()
+
+#g-question(point:2)[En el estuche tengo 3 bolígrafos negros, 6 azules, 2 rojos y 1 verdes. Si el examen solo lo puedo hacer con bolígrafo azul o negro y saco uno sin mirar, ¿cuál es la probabilidad de sacar un bolígrafo que me sirva para realizar el examen?] 
