@@ -1,5 +1,5 @@
 #import "@preview/cetz:0.2.1"
-#import "@preview/g-exam:0.3.0": *
+#import "@preview/g-exam:0.3.2": *
 
 #show: g-exam.with(
   author: (
@@ -20,10 +20,10 @@
     model: "Modelo A-A"
   ),
   
-  languaje: "es",
+  language: "ESO",
   decimal-separator: ",",
   date: "abril 23, 2024",
-  show-studen-data: "odd-pages",
+  show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   question-text-parameters: (size: 18pt, spacing:200%),
