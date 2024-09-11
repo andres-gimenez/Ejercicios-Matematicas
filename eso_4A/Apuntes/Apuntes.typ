@@ -77,7 +77,18 @@ La *grafica* de una función es la representación de los pares de valores (x, y
 
 = Estadística
 
-Un *carácter estadístico* es una propiedad que se estuia de los individuos de una población.
+Def: La estadística es la rama de las matemáticas que studia conjuntos de datos con el objetivo de resumirlos, organizarlos, representarlos y analizarlos y , de esta forma, facilitar su interpretación.
+
+
+Una *población* es el conjunto de individuos del que se va a hacer el estudio estadistico.
+
+*individuos* son cada entidad, persona u objeto sobre los que se puede realizar el esdudio estádistico.
+
+Un *carácter estadístico o variable estadística* es una propiedad que se estuia de los individuos de una población.
+
+Llamamos *muestra* a un subconjunto de una población, que utilizaremos para realizar el estudio estadistico. En ocasiones, cuando la población es muy grande, es inviable hacer el estudio sobre toda la población y se hace sobre una muestra de esta. 
+
+El *tamaño de una población* o *tamaño de la muestra* es el número total de indifiduos que se va a considerar para el estudio. Se suele indicar con la letra N.
 
 Puede ser:
   - *Cualitativo*:  si indica una cualidad no medible. 
