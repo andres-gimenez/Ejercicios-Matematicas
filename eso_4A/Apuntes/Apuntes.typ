@@ -116,6 +116,34 @@ Se utiliza cuando los datos son cuantitativos continuos o están agrupados en in
 Un *diagrama de sectores* es una representación gráfica que consiste en un círculo que se divide en sectores de amplitud proporcional a la frecuencia.
 El diagrama de sectores se puede utilizar con cualquier tipo de datos, pero se emplea especialmente en datos cualitativos.
 
+= Ejemplos de Variables aleatorias
+
+Lanzar un dado.
+
+Temperatura diaria en una ciudad durante el verano.
+
+Número de accidentes de tráfico en una intersección.
+
+Tiempo de espera en una fila en un supermercado.
+
+Precio de las acciones de una empresa en la bolsa de valores.
+
+Edades de los estudantes en una escuela.
+
+Teimpo de respuesta de un servidor de internet.
+
+Ventas diarias de una tienda minorista.
+
+Número de visitas a un sitio web en un día.
+
+Medir el ancho de una mesa.
+
+Tiempo de vida de una bombilla. 
+
+Alumnos que asisten a clase de matemáticas en un día.
+
+Peso de las vacas de una granja.
+
 
 
 
