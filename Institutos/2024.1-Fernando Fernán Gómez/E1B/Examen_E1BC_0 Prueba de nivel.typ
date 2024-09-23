@@ -15,7 +15,7 @@
     academic-period: "Curso 2023/2024",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
-    number: "Ficha de nivel",
+    number: "Prueba de nivel",
     content: "",
     model: "Modelo A"
   ),

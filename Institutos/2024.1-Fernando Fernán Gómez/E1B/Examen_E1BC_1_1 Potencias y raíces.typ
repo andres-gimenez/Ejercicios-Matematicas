@@ -77,7 +77,7 @@
 
 #pagebreak()
 
-=? 1 Escribe en forma de una única potencia las siguientes operaciones:
+=? 2 Escribe en forma de una única potencia las siguientes operaciones:
 
 ==? $display((3^2)^8 = )$
 #v(1fr)
@@ -93,7 +93,7 @@
 ==? $display(20^6 dot (5^2)^3 = )$
 #v(1fr)
 
-=? Halla el valor de estar raices cuadras esactas:
+=? 1 Halla el valor de estar raices cuadras esactas:
 
 ==? $display(sqrt(81) = )$
 #v(1fr)
@@ -101,7 +101,7 @@
 ==? $display(sqrt(225) = )$
 #v(1fr)
 
-=? Indica el valor de las siguientes espresiones como un solo radical:
+=? 1 Indica el valor de las siguientes espresiones como un solo radical:
 
 ==? $display(sqrt(7) dot sqrt(3) = )$
 #v(1fr)
@@ -111,3 +111,6 @@
 
 ==? $display(sqrt(14) : sqrt(7) = )$
 #v(1fr)
+
+=? 2 Quéremos crear un jardín cuadrado y nos han dado para ello 18 crisantemos, ¿Cuál será el tamaño del jardín y cuantas flores nos sobran?
+#v(5fr)
