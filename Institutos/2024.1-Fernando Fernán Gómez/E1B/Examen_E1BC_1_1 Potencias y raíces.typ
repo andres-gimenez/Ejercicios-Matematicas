@@ -26,91 +26,94 @@
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
+  // question-text-parameters: (size: 18pt, spacing:200%)
+
+  question-text-parameters: (size: 16pt, spacing:100%)
 )
 
 #set math.cases(reverse: true)
 
-=? 1 Calcula el valor de las siguientes potencias:
+#g-subquestion(point:1)[Calcula el valor de las siguientes potencias:]
 
-==? $display(3^3 = )$
+#g-subquestion[$display(3^3 = )$]
 #v(1fr)
 
-==? $display(5^3 =)$
+#g-subquestion[$display(5^3 =)$]
 #v(1fr)
 
-==? $display(2^5 =)$
+// ==? $display(2^5 =)$
+// #v(1fr)
+
+#g-subquestion[$display(37^0 =)$]
 #v(1fr)
 
-==? $display(37^0 =)$
+#g-question(point:1)[Expresa en forma de potencia:]
+
+#g-subquestion[$display(3 dot 3 dot 3 dot 3 =)$]
 #v(1fr)
 
-=? 1 Expresa en forma de potencia:
+// ==? $display(5 dot 5 dot 5 = )$
+// #v(1fr)
 
-==? $display(3 dot 3 dot 3 dot 3 =)$
+#g-subquestion(point:2)[$display(18 dot 18 dot 18 dot 18 dot 18 dot 18 = )$]
 #v(1fr)
 
-==? $display(5 dot 5 dot 5 = )$
+#g-question(point:2)[Espresa en forma de una sola potencia:]
+
+#g-subquestion[$display(3^5 dot 3^7 = )$]
 #v(1fr)
 
-==? $display(18 dot 18 dot 18 dot 18 dot 18 dot 18 = )$
+#g-subquestion[$display(2^3 dot 2^8 = )$]
 #v(1fr)
 
-=? 2 Espresa en forma de una sola potencia:
-
-==? $display(3^5 dot 3^7 = )$
+#g-subquestion[$display(2^5:2^2 = )$]
 #v(1fr)
 
-==? $display(2^3 dot 2^8 = )$
+#g-subquestion[$display(5^10:5^7 = )$]
 #v(1fr)
 
-==? $display(2^5:2^2 = )$
+#g-subquestion[$display(5^3 dot 2^3 = )$]
 #v(1fr)
 
-==? $display(5^10:5^7 = )$
-#v(1fr)
-
-==? $display(5^3 dot 2^3 = )$
-#v(1fr)
-
-==? $display(14^5 : 7^5 = )$
+#g-subquestion[$display(14^5 : 7^5 = )$]
 #v(1fr)
 
 #pagebreak()
 
-=? 2 Escribe en forma de una única potencia las siguientes operaciones:
+#g-question(point:2)[Escribe en forma de una única potencia las siguientes operaciones:]
 
-==? $display((3^2)^8 = )$
+#g-subquestion[$display((3^2)^8 = )$]
 #v(1fr)
 
-==? $display((25^3)^5 = )$
+#g-subquestion[$display((25^3)^5 = )$]
 #v(1fr)
 
-=? 1 Simplifica las siguientes expresiones e indicalas en forma de una única potencia:
+// =? 1 Simplifica las siguientes expresiones e indicalas en forma de una única potencia:
 
-==? $display((3^3 dot 3^2)^2 = )$
+// ==? $display((3^3 dot 3^2)^2 = )$
+// #v(1fr)
+
+// ==? $display(20^6 dot (5^2)^3 = )$
+// #v(1fr)
+
+=? 1 Halla el valor de estar raíces cuadras exactas:
+
+#g-subquestion[$display(sqrt(81) = )$]
 #v(1fr)
 
-==? $display(20^6 dot (5^2)^3 = )$
+#g-subquestion[$display(sqrt(225) = )$]
 #v(1fr)
 
-=? 1 Halla el valor de estar raices cuadras esactas:
+#g-question(point:2)[Indica el valor de las siguientes expresiones como un solo radical:]
 
-==? $display(sqrt(81) = )$
+#g-subquestion[$display(sqrt(7) dot sqrt(3) = )$]
 #v(1fr)
 
-==? $display(sqrt(225) = )$
+#g-subquestion[$display(sqrt(15) dot sqrt(5) = )$]
 #v(1fr)
 
-=? 1 Indica el valor de las siguientes espresiones como un solo radical:
-
-==? $display(sqrt(7) dot sqrt(3) = )$
+#g-subquestion[$display(sqrt(14) : sqrt(7) = )$]
 #v(1fr)
 
-==? $display(sqrt(15) dot sqrt(5) = )$
-#v(1fr)
-
-==? $display(sqrt(14) : sqrt(7) = )$
-#v(1fr)
-
-=? 2 Quéremos crear un jardín cuadrado y nos han dado para ello 18 crisantemos, ¿Cuál será el tamaño del jardín y cuantas flores nos sobran?
+#g-question(point:2)[Queremos crear un jardín cuadrado y nos han dado para ello 18 crisantemos, ¿Cuál será el tamaño del jardín y cuantas flores nos sobran?]
 #v(5fr)
