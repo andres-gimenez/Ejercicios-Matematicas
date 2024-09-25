@@ -33,7 +33,7 @@
 
 #set math.cases(reverse: true)
 
-#g-subquestion(point:1)[Calcula el valor de las siguientes potencias:]
+#g-question(point:0.5)[Calcula el valor de las siguientes potencias:]
 
 #g-subquestion[$display(3^3 = )$]
 #v(1fr)
@@ -47,7 +47,7 @@
 #g-subquestion[$display(37^0 =)$]
 #v(1fr)
 
-#g-question(point:1)[Expresa en forma de potencia:]
+#g-question(point:0.5)[Expresa en forma de potencia:]
 
 #g-subquestion[$display(3 dot 3 dot 3 dot 3 =)$]
 #v(1fr)
@@ -55,7 +55,7 @@
 // ==? $display(5 dot 5 dot 5 = )$
 // #v(1fr)
 
-#g-subquestion(point:2)[$display(18 dot 18 dot 18 dot 18 dot 18 dot 18 = )$]
+#g-subquestion[$display(18 dot 18 dot 18 dot 18 dot 18 dot 18 = )$]
 #v(1fr)
 
 #g-question(point:2)[Espresa en forma de una sola potencia:]
@@ -96,7 +96,7 @@
 // ==? $display(20^6 dot (5^2)^3 = )$
 // #v(1fr)
 
-=? 1 Halla el valor de estar raíces cuadras exactas:
+=? 1 Halla el valor de estar raíces cuadradas exactas:
 
 #g-subquestion[$display(sqrt(81) = )$]
 #v(1fr)
