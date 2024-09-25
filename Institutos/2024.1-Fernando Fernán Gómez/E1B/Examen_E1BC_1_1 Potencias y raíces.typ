@@ -27,8 +27,7 @@
   show-grade-table: true,
   question-point-position: right,
   // question-text-parameters: (size: 18pt, spacing:200%)
-
-  question-text-parameters: (size: 16pt, spacing:100%)
+  // question-text-parameters: (size: 11pt, spacing:100%)
 )
 
 #set math.cases(reverse: true)
@@ -58,7 +57,7 @@
 #g-subquestion[$display(18 dot 18 dot 18 dot 18 dot 18 dot 18 = )$]
 #v(1fr)
 
-#g-question(point:2)[Espresa en forma de una sola potencia:]
+#g-question(point:2)[Expresa en forma de una sola potencia:]
 
 #g-subquestion[$display(3^5 dot 3^7 = )$]
 #v(1fr)
@@ -96,7 +95,7 @@
 // ==? $display(20^6 dot (5^2)^3 = )$
 // #v(1fr)
 
-=? 1 Halla el valor de estar raíces cuadradas exactas:
+=? 1 Halla el valor de estas raíces cuadradas exactas:
 
 #g-subquestion[$display(sqrt(81) = )$]
 #v(1fr)
