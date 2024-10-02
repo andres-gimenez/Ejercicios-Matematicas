@@ -61,7 +61,7 @@
 
 =? En un club deportivo juvenil admiten socios con edades entre 12 y 18 años. Al preguntar la edad de los socios, obtenemos estas respuestas.
 
-#align(center, [12, 12, 13, 15, 15, 12, 18, 18, 17, 17, 14, 14, 14, 15, 18, 13, 13, 17, 16, 16]) 
+#align(center, [12, 12, 13, 15, 15, 12, 18, 18, 17, 17, 14, 14, 14, 15, 18, 13, 13, 17, 16, 16, 12, 12, 14, 14, 14]) 
 
 ==? 4 Completa la siguiente tabla de frecuencias, redondeando a dos decimales y siendo: \ 
   - $x_i$: Valor del carácter estadístico.
