@@ -79,7 +79,7 @@
 
 #pagebreak()
 
-#g-question(point:2)[Escribe en forma de una única potencia las siguientes operaciones:]
+#g-question(point:1)[Escribe en forma de una única potencia las siguientes operaciones:]
 
 #g-subquestion[$display((3^2)^8 = )$]
 #v(1fr)
@@ -95,7 +95,7 @@
 // ==? $display(20^6 dot (5^2)^3 = )$
 // #v(1fr)
 
-=? 1 Halla el valor de estas raíces cuadradas exactas:
+=? 2 Halla el valor de estas raíces cuadradas exactas:
 
 #g-subquestion[$display(sqrt(81) = )$]
 #v(1fr)

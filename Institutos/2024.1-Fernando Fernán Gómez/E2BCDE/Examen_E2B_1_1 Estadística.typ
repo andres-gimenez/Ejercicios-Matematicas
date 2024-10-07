@@ -1,5 +1,7 @@
-#import "@preview/cetz:0.2.1"
 #import "@preview/g-exam:0.3.2": *
+
+// #set text(font:"OpenDyslexic")
+// #set text(font: "New Computer Modern")
 
 #show: g-exam.with(
   author: (
@@ -26,11 +28,13 @@
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
+  question-text-parameters: (font:"OpenDyslexic")
 )
 
 // #text(font: "Linux Libertine", style: "italic")[Italic]
 // #set text(font:"Linux Libertine", style: "italic")
-#set text(font:"Open Dyslexic")
+// #set text(font:"Open Dyslexic")
+// #set text(font:"OpenDyslexic")
 
 #set math.cases(reverse: true)
 
@@ -61,7 +65,7 @@
 
 =? En un club deportivo juvenil admiten socios con edades entre 12 y 18 años. Al preguntar la edad de los socios, obtenemos estas respuestas.
 
-#align(center, [12, 12, 13, 15, 15, 12, 18, 18, 17, 17, 14, 14, 14, 15, 18, 13, 13, 17, 16, 16]) 
+#align(center, [12, 12, 13, 15, 15, 12, 18, 18, 17, 17, 14, 14, 14, 15, 18, 13, 13, 17, 16, 16, 12, 12, 14, 14, 14]) 
 
 ==? 4 Completa la siguiente tabla de frecuencias, redondeando a dos decimales y siendo: \ 
   - $x_i$: Valor del carácter estadístico.
