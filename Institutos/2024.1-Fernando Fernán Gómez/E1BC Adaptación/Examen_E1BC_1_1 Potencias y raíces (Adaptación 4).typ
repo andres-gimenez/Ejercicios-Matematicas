@@ -50,7 +50,7 @@
   table(
     fill: (x, y) =>
       if(y == 0) { luma(230) },
-    columns: (4cm, 4cm,  4cm, 4cm),
+    columns: (6cm, 4cm,  4cm, 4cm),
     [Suma],                             [Multiplicación], [Factores], [Producto], 
     [$6+6+6+6+6$],                      [$6 times 5$],    [6 y 5],    [$30$], 
     [$8 + 8 + 8 + 8$],                  [], [], [],
