@@ -159,10 +159,9 @@
 
   #g-subquestion()[$sqrt(25)$=]
   #v(1fr)
-  
+
   #g-subquestion()[$sqrt(-25)$=]
   #v(1fr)
-
 
 #g-question(point:2)[Hoy a las seis de la mañana hacia tres grados bajo cero de temperatura, si en las siguientes cuatro horas sube la temperatura siete grados, indica la temperatura que hace a las seis y a las diez de la mañana utilizando número naturales. \
 ] 
