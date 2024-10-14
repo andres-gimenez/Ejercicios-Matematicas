@@ -64,7 +64,7 @@
     [$9 + 9 + 9 + 9 + 9$],              [], [], [],
 ))
 
-#g-question(point:2)[Descubre las cifras perdidas:
+#g-question(point:1.5)[Descubre las cifras perdidas:
 
 #columns(2, gutter: 11pt)[
     #grid(
@@ -106,7 +106,7 @@
 #pagebreak()
 
 
-#g-question(point:1)[Multiplicar por 8 la suma de 5 y 7 se escribe:
+#g-question(point:1.5)[Multiplicar por 8 la suma de 5 y 7 se escribe:
 
   #g-subquestion()[$8 times 5 + 7=$]
   #v(1fr)
@@ -118,7 +118,7 @@
   #v(1fr)
 ]
 
-#g-question(point:2)[Relaciona cada división con su cociente:
+#g-question(point:1)[Relaciona cada división con su cociente:
   
   #v(1cm)
   
@@ -162,7 +162,7 @@
 ]
 #pagebreak()
 
-#g-question(point:1)[Jorge dice que ha envasado 73 salchichas en paquetes de 5 salchichas. ¿Es posible que le hayan sobrado 8 salchichas? ¿Por qué?:
+#g-question(point:1.5)[Jorge dice que ha envasado 73 salchichas en paquetes de 5 salchichas. ¿Es posible que le hayan sobrado 8 salchichas? ¿Por qué?:
 
   #columns(2, gutter: 11pt)[
     Datos
@@ -175,7 +175,7 @@
   #v(1fr)
 ]
 
-#g-question(point:1)[¿Cuáles son los posibles restos al dividir un número por 3? ¿Y por 4?:
+#g-question(point:1.5)[¿Cuáles son los posibles restos al dividir un número por 3? ¿Y por 4?:
 
   #columns(2, gutter: 11pt)[
     Datos
@@ -189,7 +189,7 @@
 ]
 #pagebreak()
 
-#g-question(point:1)[El resto de una división es 5 y el divisor es 2. ¿Está bien hecha esa división? ¿por qué?:
+#g-question(point:1.5)[El resto de una división es 5 y el divisor es 2. ¿Está bien hecha esa división? ¿por qué?:
 
   #columns(2, gutter: 11pt)[
     Datos

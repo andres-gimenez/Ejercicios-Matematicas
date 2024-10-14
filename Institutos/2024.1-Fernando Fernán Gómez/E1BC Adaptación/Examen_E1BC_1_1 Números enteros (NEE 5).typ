@@ -46,7 +46,6 @@
 
 #g-question(point:1)[Completa la tabla:]
 
-// #set text(size: 12pt, font:"OpenDyslexic")
 #align(center,
   table(
     fill: (x, y) =>
@@ -64,7 +63,7 @@
     [$9 + 9 + 9 + 9 + 9$],              [], [], [],
 ))
 
-#g-question(point:2)[Descubre las cifras perdidas:
+#g-question(point:1.5)[Descubre las cifras perdidas:
 
 #columns(2, gutter: 11pt)[
     #grid(
@@ -118,7 +117,7 @@
   #v(1fr)
 ]
 
-#g-question(point:2)[Relaciona cada división con su cociente:
+#g-question(point:1)[Relaciona cada división con su cociente:
   
   #v(1cm)
   
@@ -162,7 +161,7 @@
 ]
 #pagebreak()
 
-#g-question(point:1)[Jorge dice que ha envasado 73 salchichas en paquetes de 5 salchichas. ¿Es posible que le hayan sobrado 8 salchichas? ¿Por qué?:
+#g-question(point:1.5)[Jorge dice que ha envasado 73 salchichas en paquetes de 5 salchichas. ¿Es posible que le hayan sobrado 8 salchichas? ¿Por qué?:
 
   #columns(2, gutter: 11pt)[
     Datos
@@ -175,7 +174,7 @@
   #v(1fr)
 ]
 
-#g-question(point:1)[Para unas obras, cada uno de los 125 vecinos de un bloque tiene que pagar 2 cuotas de 48 € cada una.
+#g-question(point:1.5)[Para unas obras, cada uno de los 125 vecinos de un bloque tiene que pagar 2 cuotas de 48 € cada una.
 ¿Cuánto cuestan las obras?:
 
   #columns(2, gutter: 11pt)[
@@ -190,7 +189,7 @@
 ]
 #pagebreak()
 
-#g-question(point:1)[Un teatro tiene 125 butacas. De un colegio llegaron 2 autobuses con 48 alumnos cada uno.
+#g-question(point:1.5)[Un teatro tiene 125 butacas. De un colegio llegaron 2 autobuses con 48 alumnos cada uno.
 ¿Cuántas butacas quedaron libres?:
 
   #columns(2, gutter: 11pt)[
