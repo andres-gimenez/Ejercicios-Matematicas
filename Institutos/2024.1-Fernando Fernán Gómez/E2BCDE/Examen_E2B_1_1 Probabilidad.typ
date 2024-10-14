@@ -38,6 +38,18 @@
 
 #set math.cases(reverse: true)
 
+#place(
+  center ,
+  clearance: 0pt,
+  dx: -30pt,
+  dy: 40pt,
+  rotate(-45deg,
+    origin: top + right,
+    text(size:70pt, fill:silver)[Borrador] 
+  )
+)
+
+
 #g-question(point:1)[Indica cual es el espacio muestral de los siguientes espacioes aleatorios:]
 
 #g-subquestion()[Elegir al azar un dia de la semana.]

@@ -32,6 +32,17 @@
 
 #set math.cases(reverse: true)
 
+#place(
+  center ,
+  clearance: 0pt,
+  dx: -30pt,
+  dy: 40pt,
+  rotate(-45deg,
+    origin: top + right,
+    text(size:70pt, fill:silver)[Borrador] 
+  )
+)
+
 #g-question(point:1)[Ordena de mayor a menor los siguientes números, utilizando el signo '$gt$' o '$lt$':
   #align(center)[
     $+225, +323, -532, +236, -15, 0, -323 $
