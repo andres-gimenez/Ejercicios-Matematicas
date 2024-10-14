@@ -64,7 +64,7 @@
     [$9 + 9 + 9 + 9 + 9$],              [], [], [],
 ))
 
-#g-question(point:1.5)[Descubre las cifras perdidas:
+#g-question(point:1)[Descubre las cifras perdidas:
 
 #columns(2, gutter: 11pt)[
     #grid(
