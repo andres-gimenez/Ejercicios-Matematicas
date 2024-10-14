@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "1º Evaluación",
     content: "Números enteros",
-    model: "Modelo A"
+    model: "Modelo (NEE 4)"
   ),
   
   language: "es",
@@ -26,7 +26,7 @@
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
-  question-text-parameters: (font:"OpenDyslexic")
+  question-text-parameters: (size: 18pt, font:"OpenDyslexic")
   // question-text-parameters: (size: 18pt, spacing:200%)
   // question-text-parameters: (size: 11pt, spacing:100%)
 )
@@ -35,7 +35,7 @@
 
 #g-question(point:1)[Calcula los valor de las siguientes operaciones:]
 
-#g-subquestion[$display(3 times 3 times 3 = )$]
+#g-subquestion[$display(3 times 3 times 3 =)$]
 #v(1fr)
 
 #g-subquestion[$display(5 times 5 times 5 =)$]
@@ -46,12 +46,16 @@
 
 #g-question(point:1)[Completa la tabla:]
 
+// #set text(size: 12pt, font:"OpenDyslexic")
 #align(center,
   table(
     fill: (x, y) =>
       if(y == 0) { luma(230) },
-    columns: (6cm, 4cm,  4cm, 4cm),
-    [Suma],                             [Multiplicación], [Factores], [Producto], 
+    columns: (5cm, 4cm,  4cm, 4cm),
+    text(size:14pt, font: "OpenDyslexic")[Suma],                             
+    text(size:14pt, font: "OpenDyslexic")[Multiplicación], 
+    text(size:14pt, font: "OpenDyslexic")[Factores], 
+    text(size:14pt, font: "OpenDyslexic")[Producto], 
     [$6+6+6+6+6$],                      [$6 times 5$],    [6 y 5],    [$30$], 
     [$8 + 8 + 8 + 8$],                  [], [], [],
     [$2 + 2 + 2 + 2 + 2 +2$],           [], [], [],
@@ -59,8 +63,6 @@
     [$7 + 7 + 7$],                      [], [], [],
     [$9 + 9 + 9 + 9 + 9$],              [], [], [],
 ))
-
-
 
 #g-question(point:2)[Descubre las cifras perdidas:
 
@@ -101,12 +103,18 @@
   ]
 
 ]
-
 #pagebreak()
+
 
 #g-question(point:1)[Multiplicar por 8 la suma de 5 y 7 se escribe:
 
-  $8 times 5 + 78 times (5 + 7) 8 times 7 + 5$
+  #g-subquestion()[$8 times 5 + 7=$]
+  #v(1fr)
+
+  #g-subquestion()[$8 times (5 + 7)=$]
+  #v(1fr)
+
+  #g-subquestion()[$ 8 times 7 + 5=$]
   #v(1fr)
 ]
 
@@ -117,31 +125,42 @@
     #align(center,
       columns(2, gutter: 11pt)[
           $513 colon 82$
+          #v(0.2cm)
 
           $918 colon 24$
+          #v(0.2cm)
 
           $416 colon 37$
+          #v(0.2cm)
 
           $661 colon 46$
+          #v(0.2cm)
 
           $807 colon 75$
+          #v(0.2cm)
 
         #colbreak()
 
           $14$
+          #v(0.2cm)
 
           $10$
+          #v(0.2cm)
 
           $6$
+          #v(0.2cm)
 
           $38$
+          #v(0.2cm)
 
           $11$
+          #v(0.2cm)
       ]
     )
 
   #v(1cm)
 ]
+#pagebreak()
 
 #g-question(point:1)[Jorge dice que ha envasado 73 salchichas en paquetes de 5 salchichas. ¿Es posible que le hayan sobrado 8 salchichas? ¿Por qué?:
 
@@ -156,8 +175,6 @@
   #v(1fr)
 ]
 
-#pagebreak()
-
 #g-question(point:1)[¿Cuáles son los posibles restos al dividir un número por 3? ¿Y por 4?:
 
   #columns(2, gutter: 11pt)[
@@ -170,6 +187,7 @@
 
   #v(1fr)
 ]
+#pagebreak()
 
 #g-question(point:1)[El resto de una división es 5 y el divisor es 2. ¿Está bien hecha esa división? ¿por qué?:
 
