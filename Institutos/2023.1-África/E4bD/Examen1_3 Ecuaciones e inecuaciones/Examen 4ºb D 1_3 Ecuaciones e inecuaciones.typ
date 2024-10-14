@@ -9,7 +9,7 @@
   ),
   school: (
     name: "IES África",
-    logo: "logo-ies_africa.jpeg",
+    logo: image("./logo-ies_africa.jpeg"),
   ),
   exam-info: (
     academic-period: "Curso 2023/2024",

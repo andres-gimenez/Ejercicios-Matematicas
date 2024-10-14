@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
+#import "@preview/g-exam:0.3.2": *
 
 #show: g-exam.with(
   author: (
@@ -8,7 +8,7 @@
   ),
   school: (
     name: "IES Antonio López García",
-    logo: "logo-ies_antonio.jpeg",
+    logo: image("./logo-ies_antonio.jpeg"),
   ),
   exam-info: (
     academic-period: "Curso 2023/2024",
@@ -19,10 +19,10 @@
     model: "Modelo A"
   ),
   
-  languaje: "es",
+  language: "es",
   decimal-separator: ",",
   date: "November 21, 2023",
-  show-studen-data: "odd-pages",
+  show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
@@ -83,41 +83,40 @@
 // ]
 // #pagebreak()
 
+#g-question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:]
+  #g-subquestion[$display(5/12 dot 9/15=)$]
+  #v(1fr)
+
+  #g-subquestion[$display(10 dot 9/15=)$]
+  #v(1fr)
+
+  #g-subquestion[$display(5/12 : 4/15=)$]
+  #v(1fr)
+
+  #g-subquestion[$display(2 : 5/3 =)$]
+  #v(1fr)
+#pagebreak()
+
 #g-question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
-  #subquestion[$display(5/12 dot 9/15=)$]
+  #g-subquestion[$display(4/11+5/11-2/11=)$]
   #v(1fr)
 
-  #subquestion[$display(10 dot 9/15=)$]
+  #g-subquestion[$display(3+2/5=)$]
   #v(1fr)
 
-  #subquestion[$display(5/12 : 4/15=)$]
+  #g-subquestion[$display(7/12+2/9=)$]
   #v(1fr)
 
-  #subquestion[$display(2 : 5/3 =)$]
+  #g-subquestion[$display(1-9/13=)$]
   #v(1fr)
 ]
 #pagebreak()
 
 #g-question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
-  #subquestion[$display(4/11+5/11-2/11=)$]
+  #g-subquestion[$display(3/5 - (1-7/10) = )$]
   #v(1fr)
 
-  #subquestion[$display(3+2/5=)$]
-  #v(1fr)
-
-  #subquestion[$display(7/12+2/9=)$]
-  #v(1fr)
-
-  #subquestion[$display(1-9/13=)$]
-  #v(1fr)
-]
-#pagebreak()
-
-#g-question(point: 2)[Calcula las siguientes operaciones y simplifica si se puede:
-  #subquestion[$display(3/5 - (1-7/10) = )$]
-  #v(1fr)
-
-  #subquestion[$display((3-5/3) dot (2-7/5) =)$]
+  #g-subquestion[$display((3-5/3) dot (2-7/5) =)$]
   #v(1fr)
 ]
 #pagebreak()
@@ -129,9 +128,9 @@
 ]    
 
 #g-question(point: 2)[En un jardín tenemos 20 rosales rojos, 10 blancos y 15 amarillos.
-  #subquestion[¿Qué fracción representa cada color?]
+  #g-subquestion[¿Qué fracción representa cada color?]
   #v(1fr)
 
-  #subquestion[Si hemos podados los rosales rojos, ¿qué fracción nos queda por podar?]
+  #g-subquestion[Si hemos podados los rosales rojos, ¿qué fracción nos queda por podar?]
   #v(1fr)
 ]
