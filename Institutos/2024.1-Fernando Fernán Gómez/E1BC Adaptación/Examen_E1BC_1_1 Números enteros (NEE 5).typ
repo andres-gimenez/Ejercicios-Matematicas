@@ -33,37 +33,37 @@
 
 #set math.cases(reverse: true)
 
-#g-question(point:1)[Calcula los valor de las siguientes operaciones:]
+// #g-question(point:1)[Calcula los valor de las siguientes operaciones:]
 
-#g-subquestion[$display(3 times 3 times 3 =)$]
-#v(1fr)
+// #g-subquestion[$display(3 times 3 times 3 =)$]
+// #v(1fr)
 
-#g-subquestion[$display(5 times 5 times 5 =)$]
-#v(1fr)
+// #g-subquestion[$display(5 times 5 times 5 =)$]
+// #v(1fr)
 
-#g-subquestion[$display(27 colon 3 =)$]
-#v(1fr)
+// #g-subquestion[$display(27 colon 3 =)$]
+// #v(1fr)
 
-#g-question(point:1)[Completa la tabla:]
+// #g-question(point:1)[Completa la tabla:]
 
-#align(center,
-  table(
-    fill: (x, y) =>
-      if(y == 0) { luma(230) },
-    columns: (5cm, 4cm,  4cm, 4cm),
-    text(size:14pt, font: "OpenDyslexic")[Suma],                             
-    text(size:14pt, font: "OpenDyslexic")[Multiplicación], 
-    text(size:14pt, font: "OpenDyslexic")[Factores], 
-    text(size:14pt, font: "OpenDyslexic")[Producto], 
-    [$6+6+6+6+6$],                      [$6 times 5$],    [6 y 5],    [$30$], 
-    [$8 + 8 + 8 + 8$],                  [], [], [],
-    [$2 + 2 + 2 + 2 + 2 +2$],           [], [], [],
-    [$3 + 3 + 3 + 3 + 3 + 3 + 3$],      [], [], [],
-    [$7 + 7 + 7$],                      [], [], [],
-    [$9 + 9 + 9 + 9 + 9$],              [], [], [],
-))
+// #align(center,
+//   table(
+//     fill: (x, y) =>
+//       if(y == 0) { luma(230) },
+//     columns: (5cm, 4cm,  4cm, 4cm),
+//     text(size:14pt, font: "OpenDyslexic")[Suma],                             
+//     text(size:14pt, font: "OpenDyslexic")[Multiplicación], 
+//     text(size:14pt, font: "OpenDyslexic")[Factores], 
+//     text(size:14pt, font: "OpenDyslexic")[Producto], 
+//     [$6+6+6+6+6$],                      [$6 times 5$],    [6 y 5],    [$30$], 
+//     [$8 + 8 + 8 + 8$],                  [], [], [],
+//     [$2 + 2 + 2 + 2 + 2 +2$],           [], [], [],
+//     [$3 + 3 + 3 + 3 + 3 + 3 + 3$],      [], [], [],
+//     [$7 + 7 + 7$],                      [], [], [],
+//     [$9 + 9 + 9 + 9 + 9$],              [], [], [],
+// ))
 
-#g-question(point:1.5)[Descubre las cifras perdidas:
+#g-question(point:2)[Descubre las cifras perdidas:
 
 #columns(2, gutter: 11pt)[
     #grid(
@@ -105,7 +105,7 @@
 #pagebreak()
 
 
-#g-question(point:1)[Multiplicar por 8 la suma de 5 y 7 se escribe:
+#g-question(point:2)[Multiplicar por 8 la suma de 5 y 7 se escribe:
 
   #g-subquestion()[$8 times 5 + 7 times 5 - 4 times 2=$]
   #v(1fr)
@@ -113,55 +113,55 @@
   #g-subquestion()[$8 times (5 + 7) - 5 times 7 =$]
   #v(1fr)
 
-  #g-subquestion()[$ 8 times 7 + 5 times 5=$]
+  #g-subquestion()[$ 8 times 7 + 5 times (3 + 7)=$]
   #v(1fr)
 ]
 
-#g-question(point:1)[Relaciona cada división con su cociente:
+// #g-question(point:1)[Relaciona cada división con su cociente:
   
-  #v(1cm)
+//   #v(1cm)
   
-    #align(center,
-      columns(2, gutter: 11pt)[
-          $513 colon 82$
-          #v(0.2cm)
+//     #align(center,
+//       columns(2, gutter: 11pt)[
+//           $513 colon 82$
+//           #v(0.2cm)
 
-          $918 colon 24$
-          #v(0.2cm)
+//           $918 colon 24$
+//           #v(0.2cm)
 
-          $416 colon 37$
-          #v(0.2cm)
+//           $416 colon 37$
+//           #v(0.2cm)
 
-          $661 colon 46$
-          #v(0.2cm)
+//           $661 colon 46$
+//           #v(0.2cm)
 
-          $807 colon 75$
-          #v(0.2cm)
+//           $807 colon 75$
+//           #v(0.2cm)
 
-        #colbreak()
+//         #colbreak()
 
-          $14$
-          #v(0.2cm)
+//           $14$
+//           #v(0.2cm)
 
-          $10$
-          #v(0.2cm)
+//           $10$
+//           #v(0.2cm)
 
-          $6$
-          #v(0.2cm)
+//           $6$
+//           #v(0.2cm)
 
-          $38$
-          #v(0.2cm)
+//           $38$
+//           #v(0.2cm)
 
-          $11$
-          #v(0.2cm)
-      ]
-    )
+//           $11$
+//           #v(0.2cm)
+//       ]
+//     )
 
-  #v(1cm)
-]
+//   #v(1cm)
+// ]
 #pagebreak()
 
-#g-question(point:1.5)[Jorge dice que ha envasado 73 salchichas en paquetes de 5 salchichas. ¿Es posible que le hayan sobrado 8 salchichas? ¿Por qué?:
+#g-question(point:2)[Jorge dice que ha envasado 73 salchichas en paquetes de 5 salchichas. ¿Es posible que le hayan sobrado 8 salchichas? ¿Por qué?:
 
   #columns(2, gutter: 11pt)[
     Datos
@@ -174,7 +174,7 @@
   #v(1fr)
 ]
 
-#g-question(point:1.5)[Para unas obras, cada uno de los 125 vecinos de un bloque tiene que pagar 2 cuotas de 48 € cada una.
+#g-question(point:2)[Para unas obras, cada uno de los 125 vecinos de un bloque tiene que pagar 2 cuotas de 48 € cada una.
 ¿Cuánto cuestan las obras?:
 
   #columns(2, gutter: 11pt)[
@@ -189,7 +189,7 @@
 ]
 #pagebreak()
 
-#g-question(point:1.5)[Un teatro tiene 125 butacas. De un colegio llegaron 2 autobuses con 48 alumnos cada uno.
+#g-question(point:2)[Un teatro tiene 125 butacas. De un colegio llegaron 2 autobuses con 48 alumnos cada uno.
 ¿Cuántas butacas quedaron libres?:
 
   #columns(2, gutter: 11pt)[

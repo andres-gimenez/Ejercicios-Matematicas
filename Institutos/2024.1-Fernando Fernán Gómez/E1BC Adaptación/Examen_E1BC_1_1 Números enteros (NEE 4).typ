@@ -64,49 +64,47 @@
     [$9 + 9 + 9 + 9 + 9$],              [], [], [],
 ))
 
-#g-question(point:1)[Descubre las cifras perdidas:
+// #g-question(point:1)[Descubre las cifras perdidas:
 
-#columns(2, gutter: 11pt)[
-    #grid(
-      columns: 6,
-      rows: auto,
-      gutter: 5pt,
-      align: right,
-      [], [], [], [3], [6], [5],
-      [], [], [$times$], [], [4], [5],
-      grid.hline(stroke: 0.2mm),
+// #columns(2, gutter: 11pt)[
+//     #grid(
+//       columns: 6,
+//       rows: auto,
+//       gutter: 5pt,
+//       align: right,
+//       [], [], [], [3], [6], [5],
+//       [], [], [$times$], [], [4], [5],
+//       grid.hline(stroke: 0.2mm),
       
-      [], [], [\_], [8], [3], [\_],
-      [], [1], [4], [\_], [8], [],
-      grid.hline(stroke: 0.2mm),
+//       [], [], [\_], [8], [3], [\_],
+//       [], [1], [4], [\_], [8], [],
+//       grid.hline(stroke: 0.2mm),
 
-      [\_], [\_], [5], [1], [\_], [\_],
-    )
-    #colbreak()
+//       [\_], [\_], [5], [1], [\_], [\_],
+//     )
+//     #colbreak()
 
-    #grid(
-      columns: 7,
-      rows: auto,
-      gutter: 5pt,
-      align: right,
-      [], [], [], [2], [\_], [7], [4],
-      [], [], [$times$], [], [\_], [2], [3],
-      grid.hline(stroke: 0.2mm),
+//     #grid(
+//       columns: 7,
+//       rows: auto,
+//       gutter: 5pt,
+//       align: right,
+//       [], [], [], [2], [\_], [7], [4],
+//       [], [], [$times$], [], [\_], [2], [3],
+//       grid.hline(stroke: 0.2mm),
       
-      [], [], [], [7], [7], [2], [2],
-      [], [], [5], [1], [4], [8], [],
-      [\_], [5], [4], [\_], [5], [], [],
-      grid.hline(stroke: 0.2mm),
+//       [], [], [], [7], [7], [2], [2],
+//       [], [], [5], [1], [4], [8], [],
+//       [\_], [5], [4], [\_], [5], [], [],
+//       grid.hline(stroke: 0.2mm),
 
-      [1], [6], [\_], [3], [\_], [0], [2],
-    )
-  ]
-
-]
+//       [1], [6], [\_], [3], [\_], [0], [2],
+//     )
+//   ]
+// ]
 #pagebreak()
 
-
-#g-question(point:1.5)[Multiplicar por 8 la suma de 5 y 7 se escribe:
+#g-question(point:2)[Multiplicar por 8 la suma de 5 y 7 se escribe:
 
   #g-subquestion()[$8 times 5 + 7=$]
   #v(1fr)
@@ -118,51 +116,51 @@
   #v(1fr)
 ]
 
-#g-question(point:1)[Relaciona cada división con su cociente:
+// #g-question(point:1)[Relaciona cada división con su cociente:
   
-  #v(1cm)
+//   #v(1cm)
   
-    #align(center,
-      columns(2, gutter: 11pt)[
-          $513 colon 82$
-          #v(0.2cm)
+//     #align(center,
+//       columns(2, gutter: 11pt)[
+//           $513 colon 82$
+//           #v(0.2cm)
 
-          $918 colon 24$
-          #v(0.2cm)
+//           $918 colon 24$
+//           #v(0.2cm)
 
-          $416 colon 37$
-          #v(0.2cm)
+//           $416 colon 37$
+//           #v(0.2cm)
 
-          $661 colon 46$
-          #v(0.2cm)
+//           $661 colon 46$
+//           #v(0.2cm)
 
-          $807 colon 75$
-          #v(0.2cm)
+//           $807 colon 75$
+//           #v(0.2cm)
 
-        #colbreak()
+//         #colbreak()
 
-          $14$
-          #v(0.2cm)
+//           $14$
+//           #v(0.2cm)
 
-          $10$
-          #v(0.2cm)
+//           $10$
+//           #v(0.2cm)
 
-          $6$
-          #v(0.2cm)
+//           $6$
+//           #v(0.2cm)
 
-          $38$
-          #v(0.2cm)
+//           $38$
+//           #v(0.2cm)
 
-          $11$
-          #v(0.2cm)
-      ]
-    )
+//           $11$
+//           #v(0.2cm)
+//       ]
+//     )
 
-  #v(1cm)
-]
+//   #v(1cm)
+// ]
 #pagebreak()
 
-#g-question(point:1.5)[Jorge dice que ha envasado 73 salchichas en paquetes de 5 salchichas. ¿Es posible que le hayan sobrado 8 salchichas? ¿Por qué?:
+#g-question(point:2)[Jorge dice que ha envasado 73 salchichas en paquetes de 5 salchichas. ¿Es posible que le hayan sobrado 8 salchichas? ¿Por qué?:
 
   #columns(2, gutter: 11pt)[
     Datos
@@ -175,7 +173,7 @@
   #v(1fr)
 ]
 
-#g-question(point:1.5)[¿Cuáles son los posibles restos al dividir un número por 3? ¿Y por 4?:
+#g-question(point:2)[¿Cuáles son los posibles restos al dividir un número por 3? ¿Y por 4?:
 
   #columns(2, gutter: 11pt)[
     Datos
@@ -189,7 +187,7 @@
 ]
 #pagebreak()
 
-#g-question(point:1.5)[El resto de una división es 5 y el divisor es 2. ¿Está bien hecha esa división? ¿por qué?:
+#g-question(point:2)[El resto de una división es 5 y el divisor es 2. ¿Está bien hecha esa división? ¿por qué?:
 
   #columns(2, gutter: 11pt)[
     Datos
