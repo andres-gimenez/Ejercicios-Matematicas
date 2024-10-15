@@ -105,7 +105,7 @@
 #pagebreak()
 
 
-#g-question(point:2)[Multiplicar por 8 la suma de 5 y 7 se escribe:
+#g-question(point:2)[Multiplicar por 8 la suma de 5 y 7 se escribe:]
 
   #g-subquestion()[$8 times 5 + 7 times 5 - 4 times 2=$]
   #v(1fr)
@@ -115,7 +115,6 @@
 
   #g-subquestion()[$ 8 times 7 + 5 times (3 + 7)=$]
   #v(1fr)
-]
 
 // #g-question(point:1)[Relaciona cada división con su cociente:
   

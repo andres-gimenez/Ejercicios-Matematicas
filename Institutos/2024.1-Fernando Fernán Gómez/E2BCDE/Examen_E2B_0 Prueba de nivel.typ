@@ -62,7 +62,6 @@
 En un quiosco de prensa al final de la mañana se ha vendido la mitad de los periódicos. 
 Por la tarde se vendieron la mitad de los que quedaban y se quedaron 40 periódicos sin vender. 
 ¿Cuántos periódicos había en el quiosco al comenzar el día?]
-
 #v(1fr)
 
 #g-question[
@@ -70,5 +69,4 @@ Un kilogramo de café cuesta 9,6 euros, un litro de leche 0,60 euros y un kilogr
 qué precio sale una taza de café con leche con 12,5 gramos de café, 15 centilitros de leche y 10 gramos 
 de azúcar?
 ]
-
 #v(1fr)
