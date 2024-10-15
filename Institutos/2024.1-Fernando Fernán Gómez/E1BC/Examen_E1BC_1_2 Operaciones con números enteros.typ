@@ -32,6 +32,17 @@
 
 #set math.cases(reverse: true)
 
+#place(
+  center ,
+  clearance: 0pt,
+  dx: -30pt,
+  dy: 40pt,
+  rotate(-45deg,
+    origin: top + right,
+    text(size:70pt, fill:silver)[Borrador] 
+  )
+)
+
 #g-question(point:1)[Ordena de mayor a menor los siguientes números, utilizando el signo '$gt$' o '$lt$':
   #align(center)[
     $+225, +323, -532, +236, -15, 0, -323 $
@@ -159,10 +170,9 @@
 
   #g-subquestion()[$sqrt(25)$=]
   #v(1fr)
-  
+
   #g-subquestion()[$sqrt(-25)$=]
   #v(1fr)
-
 
 #g-question(point:2)[Hoy a las seis de la mañana hacia tres grados bajo cero de temperatura, si en las siguientes cuatro horas sube la temperatura siete grados, indica la temperatura que hace a las seis y a las diez de la mañana utilizando número naturales. \
 ] 

@@ -38,61 +38,72 @@
 
 #set math.cases(reverse: true)
 
+#place(
+  center ,
+  clearance: 0pt,
+  dx: -30pt,
+  dy: 40pt,
+  rotate(-45deg,
+    origin: top + right,
+    text(size:70pt, fill:silver)[Borrador] 
+  )
+)
 
-#g-question 
-// =? 1 Indica si son variables estadísticas y en caso de serlo, indica de que tipo son:
 
-// ==? Distancia recorrida por un jugador en un partido de futbol.
-// #v(1fr)
+#g-question(point:1)[Indica cual es el espacio muestral de los siguientes espacioes aleatorios:]
 
-// ==? Color de los ojos de los alumnos de 2º. 
-// #v(1fr)
+#g-subquestion()[Elegir al azar un dia de la semana.]
+#v(1fr)
 
-// ==? Canastas encestadas por los jugadores de un equipo de baloncesto.
-// #v(1fr)
+#g-subquestion()[Extraer una bola de un bombo con 10 bolas numeradas del 0 al 9.]
+#v(1fr)
 
-// ==? Dimensiones de los pupitres del aula. 
-// #v(1fr)
+#g-subquestion()[De las asignaturas que tienes en el instituto, elegir una al azar.]
+#v(1fr)
 
-// ==? Tiempo de espera en la cola del supermercado.
-// #v(1fr)
+#g-question(point:2)[Del esperimento aleatorio lanzar un dado de seis caras, indica:]
 
-// ==? Número de pacientes en una sala de espera.
-// #v(1fr)
+#g-subquestion()[Cual es el espacio muestral.]
+#v(1fr)
 
-// =? 1 En un instituto donde hay 1.200 alumnos se quiere hacer un estudio de la talla y el peso de los alumnos, para ello se escogen a 40 alumnos aleatoriamente, a los cuales se les mide y se les pesa. Indica cuales son las variables aleatorias del estudio, el individuo, la población, la muestra, el tamaño de la población y el tamaño de la muestra.
-// #v(3fr)
+#g-subquestion()[Cual es el suceso contrario a $A={1,4,5}$.]
+#v(1fr)
 
-// #pagebreak()
+#g-subquestion()[Un suceso imposible.]
+#v(1fr)
 
-// =? En un club deportivo juvenil admiten socios con edades entre 12 y 18 años. Al preguntar la edad de los socios, obtenemos estas respuestas.
+#g-subquestion()[Un suceso seguro.]
+#v(1fr)
 
-// #align(center, [12, 12, 13, 15, 15, 12, 18, 18, 17, 17, 14, 14, 14, 15, 18, 13, 13, 17, 16, 16, 12, 12, 14, 14, 14]) 
+#pagebreak()
+#g-question(point:3)[En una caja tenemos 3 tizas blancas, 5 azules y 7 rojas, si sacamos una tiza al azar, calcula las siguientes probabilidades]
 
-// ==? 4 Completa la siguiente tabla de frecuencias, redondeando a dos decimales y siendo: \ 
-//   - $x_i$: Valor del carácter estadístico.
-//   - $n_i$: Frecuencia absoluta.
-//   - $N_i$: Frecuencia absoluta acumulada.
-//   - $f_i$: Frecuencia relativa.
-//   - $p_i %$: Frecuencia relativa (en porcentaje).
-//   // - $F_i$: Frecuencia relativa acumulada.
-  
-// #align(center,
-//   table(
-//     fill: (x, y) =>
-//       if(y == 0) { luma(230) },
-//     // columns: (1.5cm, 1.5cm,  1.5cm, 1.5cm, 1.5cm, 1.5cm),
-//     columns: (2.5cm, 2.5cm,  2.5cm, 2.5cm, 2.5cm),
-//     rows: (1.2cm,)*8,
-//     // [$x_i$],[$n_i$], [$N_i$], [$f_i$],[$f_i$ %],[$F_i$]
-//     [$x_i$],[$n_i$], [$N_i$], [$f_i$],[$p_i$ %]
-// ))
+#g-subquestion()[Probabilidad de que la tiza sea azul.]
+#v(1fr)
 
-// #pagebreak()
+#g-subquestion()[Probabilidad de que la tiza no sea azul.]
+#v(1fr)
 
-// ==? 1 Dibuja un diagrama de barras y de sectores (con los datos del primer apartado).
-// #v(1fr)
+#g-subquestion()[Probabilidad de que la tiza sea azul azul o roja.]
+#v(1fr)
 
-// ==? 3 Calcula la moda, la media y la mediana (con los datos del primer apartado).
-// #v(1fr)
+#g-subquestion()[Probabilidad de que la tiza sea verde.]
+#v(1fr)
 
+#g-subquestion()[Probabilidad de que la tiza sea azul o roja.]
+#v(1fr)
+
+#g-subquestion()[Probabilidad de que la tiza sea blanza, azul o roja.]
+#v(1fr)
+
+#pagebreak()
+#g-question(point:1)[En las noticias nos han dicho que hay una probabilidad de que llueva mañana del $0,2$ por ciento ¿Qué probabilidad hay de que no llueva mañana?]
+#v(1fr)
+
+#g-question(point:3)[Tenemos 2 pares de zapatillas de colores azul y rojas y 3 pares de calcetines azul, rojos y morados. Si nos elige nuestra madre la ropa al azar:]
+
+#g-subquestion()[De cuantas formas podemos vestir. Escribe el espacio muestral.]
+#v(1fr)
+
+#g-subquestion()[¿Cual es la probabilidad de llevar las zapatillas y los calcetines del mismo color?]
+#v(1fr)
