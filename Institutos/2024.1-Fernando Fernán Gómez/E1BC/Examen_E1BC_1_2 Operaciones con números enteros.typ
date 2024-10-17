@@ -15,8 +15,8 @@
     academic-period: "Curso 2023/2024",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
-    number: "1º Evaluación",
-    content: "Operaciones con números enteros",
+    number: "1ª evaluación - 2º examen",
+    content: "Números enteros",
     model: "Modelo A"
   ),
   
@@ -26,6 +26,7 @@
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
+  // question-text-parameters: (font:"OpenDyslexic")
   // question-text-parameters: (size: 18pt, spacing:200%)
   // question-text-parameters: (size: 11pt, spacing:100%)
 )
@@ -51,12 +52,12 @@
 
 #v(1fr)
 
-#g-question(point:1)[Representa los siguientes número enteros en la recta:
+#g-question(point:1)[Representa los siguientes números enteros en la recta:
   #align(center)[
     $-5, 3, -7, 0, 6$
   ]
   #v(1cm)
-  #align(center, [------------------------------------------------------------------------------------------])
+  #align(center, line(length: 70%))
   #v(1cm)
 ]
 
@@ -163,7 +164,7 @@
   #g-subquestion()[$(-16) : (4) + (-5) dot 2 - 12 : (-4)$=]
   #v(1fr)
 
-#g-question(point:1)[Resuelve las siguientes operacions:]
+#g-question(point:1)[Resuelve las siguientes operaciones:]
 
   #g-subquestion()[$(-3)^2$=]
   #v(1fr)
@@ -194,4 +195,4 @@
 #g-subquestion()[Expresa con un *número entero* la cantidad que ha cambiado la temperatura = ]
 #v(0.5cm)
 
-#g-subquestion()[Indica la operación en linea para calcular la temperatura a las diez y expresa el resultado:]
+#g-subquestion()[Indica la operación en línea para calcular la temperatura a las diez y expresa el resultado:]

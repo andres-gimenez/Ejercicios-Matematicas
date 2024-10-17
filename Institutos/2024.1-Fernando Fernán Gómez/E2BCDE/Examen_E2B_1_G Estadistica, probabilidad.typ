@@ -17,7 +17,7 @@
     academic-period: "Curso 2023/2024",
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
-    number: "1º Evaluación - Global",
+    number: "1º evaluación - Global",
     content: "Probabilidad",
     model: "Modelo A"
   ),
