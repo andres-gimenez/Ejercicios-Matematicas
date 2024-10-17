@@ -32,16 +32,16 @@
 
 #set math.cases(reverse: true)
 
-#place(
-  center ,
-  clearance: 0pt,
-  dx: -30pt,
-  dy: 40pt,
-  rotate(-45deg,
-    origin: top + right,
-    text(size:70pt, fill:silver)[Borrador] 
-  )
-)
+// #place(
+//   center ,
+//   clearance: 0pt,
+//   dx: -30pt,
+//   dy: 40pt,
+//   rotate(-45deg,
+//     origin: top + right,
+//     text(size:70pt, fill:silver)[Borrador] 
+//   )
+// )
 
 #g-question(point:1)[Ordena de mayor a menor los siguientes números, utilizando el signo '$gt$' o '$lt$':
   #align(center)[
@@ -55,6 +55,9 @@
   #align(center)[
     $-5, 3, -7, 0, 6$
   ]
+  #v(1cm)
+  #align(center, [------------------------------------------------------------------------------------------])
+  #v(1cm)
 ]
 
 // #align(center, 
@@ -108,7 +111,7 @@
 //   )
 // )
 
-#g-question(point:2)[Efectúa las siguientes operaciones con números enteros:]
+#g-question(point:1.5)[Efectúa las siguientes operaciones con números enteros:]
 
   #g-subquestion()[$(-5)+(-2)$=]
   #v(1fr)
@@ -130,7 +133,7 @@
 
 
 #pagebreak()
-#g-question(point:2)[Efectúa las siguientes operaciones con números enteros:]
+#g-question(point:1.5)[Efectúa las siguientes operaciones con números enteros:]
   
   #g-subquestion()[$(-2) dot (-7)$=]
   #v(1fr)
@@ -160,7 +163,7 @@
   #g-subquestion()[$(-16) : (4) + (-5) dot 2 - 12 : (-4)$=]
   #v(1fr)
 
-#g-question(point:2)[Resuelve las siguientes operacions:]
+#g-question(point:1)[Resuelve las siguientes operacions:]
 
   #g-subquestion()[$(-3)^2$=]
   #v(1fr)
@@ -174,91 +177,21 @@
   #g-subquestion()[$sqrt(-25)$=]
   #v(1fr)
 
-#g-question(point:2)[Hoy a las seis de la mañana hacia tres grados bajo cero de temperatura, si en las siguientes cuatro horas sube la temperatura siete grados, indica la temperatura que hace a las seis y a las diez de la mañana utilizando número naturales. \
-] 
-#v(1fr)
+  #g-subquestion()[$(-12)^6 : (-12)^5$=]
+  #v(1fr)
 
-// #g-question(point:0.5)[Calcula el valor de las siguientes potencias:]
+  #g-subquestion()[$[(-59)^25]^0$=]
+  #v(1fr)
 
-// #g-subquestion[$display(3^3 = )$]
-// #v(1fr)
 
-// #g-subquestion[$display(5^3 =)$]
-// #v(1fr)
+#pagebreak()
 
-// // ==? $display(2^5 =)$
-// // #v(1fr)
+#g-question(point:2)[Hoy a las seis de la mañana hacia tres grados bajo cero de temperatura, si en las siguientes cuatro horas sube la temperatura siete grados, indica la temperatura que hace a las seis y a las diez de la mañana *utilizando números enteros*.] 
 
-// #g-subquestion[$display(37^0 =)$]
-// #v(1fr)
+#g-subquestion()[Expresa con un *número entero* la temperatura a las tres de la mañana = ]
+#v(0.5cm)
 
-// #g-question(point:0.5)[Expresa en forma de potencia:]
+#g-subquestion()[Expresa con un *número entero* la cantidad que ha cambiado la temperatura = ]
+#v(0.5cm)
 
-// #g-subquestion[$display(3 dot 3 dot 3 dot 3 =)$]
-// #v(1fr)
-
-// // ==? $display(5 dot 5 dot 5 = )$
-// // #v(1fr)
-
-// #g-subquestion[$display(18 dot 18 dot 18 dot 18 dot 18 dot 18 = )$]
-// #v(1fr)
-
-// #g-question(point:2)[Expresa en forma de una sola potencia:]
-
-// #g-subquestion[$display(3^5 dot 3^7 = )$]
-// #v(1fr)
-
-// #g-subquestion[$display(2^3 dot 2^8 = )$]
-// #v(1fr)
-
-// #g-subquestion[$display(2^5:2^2 = )$]
-// #v(1fr)
-
-// #g-subquestion[$display(5^10:5^7 = )$]
-// #v(1fr)
-
-// #g-subquestion[$display(5^3 dot 2^3 = )$]
-// #v(1fr)
-
-// #g-subquestion[$display(14^5 : 7^5 = )$]
-// #v(1fr)
-
-// #pagebreak()
-
-// #g-question(point:1)[Escribe en forma de una única potencia las siguientes operaciones:]
-
-// #g-subquestion[$display((3^2)^8 = )$]
-// #v(1fr)
-
-// #g-subquestion[$display((25^3)^5 = )$]
-// #v(1fr)
-
-// // =? 1 Simplifica las siguientes expresiones e indicalas en forma de una única potencia:
-
-// // ==? $display((3^3 dot 3^2)^2 = )$
-// // #v(1fr)
-
-// // ==? $display(20^6 dot (5^2)^3 = )$
-// // #v(1fr)
-
-// =? 2 Halla el valor de estas raíces cuadradas exactas:
-
-// #g-subquestion[$display(sqrt(81) = )$]
-// #v(1fr)
-
-// #g-subquestion[$display(sqrt(225) = )$]
-// #v(1fr)
-
-// #g-question(point:2)[Indica el valor de las siguientes expresiones como un solo radical:]
-
-// #g-subquestion[$display(sqrt(7) dot sqrt(3) = )$]
-// #v(1fr)
-
-// #g-subquestion[$display(sqrt(15) dot sqrt(5) = )$]
-// #v(1fr)
-
-// #g-subquestion[$display(sqrt(14) : sqrt(7) = )$]
-// #v(1fr)
-
-// #g-question(point:2)[Queremos crear un jardín cuadrado y nos han dado para ello 18 crisantemos, ¿Cuál será el tamaño del jardín y cuantas flores nos sobran?]
-// #v(5fr)
+#g-subquestion()[Indica la operación en linea para calcular la temperatura a las diez y expresa el resultado:]

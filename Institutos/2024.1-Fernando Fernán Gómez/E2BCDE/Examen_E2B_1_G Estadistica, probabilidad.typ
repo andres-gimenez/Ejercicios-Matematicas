@@ -17,7 +17,7 @@
     academic-period: "Curso 2023/2024",
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
-    number: "1ª Evaluación - 2º examen",
+    number: "1º Evaluación - Global",
     content: "Probabilidad",
     model: "Modelo A"
   ),
@@ -38,20 +38,21 @@
 
 #set math.cases(reverse: true)
 
-// #place(
-//   center ,
-//   clearance: 0pt,
-//   dx: -30pt,
-//   dy: 40pt,
-//   rotate(-45deg,
-//     origin: top + right,
-//     text(size:70pt, fill:silver)[Borrador] 
-//   )
-// )
+#place(
+  center ,
+  clearance: 0pt,
+  dx: -30pt,
+  dy: 40pt,
+  rotate(-45deg,
+    origin: top + right,
+    text(size:70pt, fill:silver)[Borrador] 
+  )
+)
 
-#g-question(point:1)[Indica cual es el espacio muestral de los siguientes experimentos aleatorios:]
 
-#g-subquestion()[Elegir al azar un día de la semana.]
+#g-question(point:1)[Indica cual es el espacio muestral de los siguientes espacioes aleatorios:]
+
+#g-subquestion()[Elegir al azar un dia de la semana.]
 #v(1fr)
 
 #g-subquestion()[Extraer una bola de un bombo con 10 bolas numeradas del 0 al 9.]
@@ -60,7 +61,7 @@
 #g-subquestion()[De las asignaturas que tienes en el instituto, elegir una al azar.]
 #v(1fr)
 
-#g-question(point:2)[Del experimento aleatorio lanzar un dado de seis caras, indica:]
+#g-question(point:2)[Del esperimento aleatorio lanzar un dado de seis caras, indica:]
 
 #g-subquestion()[Cual es el espacio muestral.]
 #v(1fr)
@@ -83,7 +84,7 @@
 #g-subquestion()[Probabilidad de que la tiza no sea azul.]
 #v(1fr)
 
-#g-subquestion()[Probabilidad de que la tiza sea azul o roja.]
+#g-subquestion()[Probabilidad de que la tiza sea azul azul o roja.]
 #v(1fr)
 
 #g-subquestion()[Probabilidad de que la tiza sea verde.]
@@ -92,7 +93,7 @@
 #g-subquestion()[Probabilidad de que la tiza sea azul o roja.]
 #v(1fr)
 
-#g-subquestion()[Probabilidad de que la tiza sea blanca, azul o roja.]
+#g-subquestion()[Probabilidad de que la tiza sea blanza, azul o roja.]
 #v(1fr)
 
 #pagebreak()
@@ -105,4 +106,12 @@
 #v(1fr)
 
 #g-subquestion(point:2)[¿Cuál es la probabilidad de obtener exactamente 2 caras?]
+#v(1fr)
+
+#g-question(point:3)[Tenemos 2 pares de zapatillas de colores azul y rojas y 3 pares de calcetines azul, rojos y morados. Si nos elige nuestra madre la ropa al azar:]
+
+#g-subquestion()[De cuantas formas podemos vestir. Escribe el espacio muestral.]
+#v(1fr)
+
+#g-subquestion()[¿Cual es la probabilidad de llevar las zapatillas y los calcetines del mismo color?]
 #v(1fr)
