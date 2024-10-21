@@ -60,7 +60,7 @@
 #g-subquestion()[De las asignaturas que tienes en el instituto, elegir una al azar.]
 #v(1fr)
 
-#g-question(point:2)[Del experimento aleatorio lanzar un dado de seis caras, indica:]
+#g-question(point:1.5)[Del experimento aleatorio lanzar un dado de seis caras, indica:]
 
 #g-subquestion()[Cual es el espacio muestral.]
 #v(1fr)
@@ -75,7 +75,7 @@
 #v(1fr)
 
 #pagebreak()
-#g-question(point:3)[En una caja tenemos 3 tizas blancas, 5 azules y 7 rojas, si sacamos una tiza al azar, calcula las siguientes probabilidades]
+#g-question(point:3)[En una caja tenemos 3 tizas blancas, 5 azules y 7 rojas, si sacamos una tiza al azar, calcula las siguientes probabilidades.]
 
 #g-subquestion()[Probabilidad de que la tiza sea azul.]
 #v(1fr)
@@ -96,13 +96,16 @@
 #v(1fr)
 
 #pagebreak()
-#g-question(point:1)[En las noticias nos han dicho que hay una probabilidad de que llueva mañana del $0,2$ ¿Qué probabilidad hay de que no llueva mañana?]
+#g-question(point:1.5)[En las noticias nos han dicho que hay una probabilidad de que llueva mañana del $0,2$ ¿Qué probabilidad hay de que no llueva mañana?]
 #v(1fr)
 
 #g-question[Una moneda se lanza 3 veces.]
 
-#g-subquestion(point:1)[Muestra en un diagrama de árbol los resultados posibles]
+#g-subquestion(point:1)[Muestra en un diagrama de árbol los resultados posibles.]
 #v(1fr)
 
-#g-subquestion(point:2)[¿Cuál es la probabilidad de obtener exactamente 2 caras?]
+#g-subquestion(point:1)[¿Cuál es la probabilidad de obtener exactamente 2 caras?]
+#v(1fr)
+
+#g-subquestion(point:1)[¿Cuál es la probabilidad de obtener almenos 1 cara?]
 #v(1fr)
