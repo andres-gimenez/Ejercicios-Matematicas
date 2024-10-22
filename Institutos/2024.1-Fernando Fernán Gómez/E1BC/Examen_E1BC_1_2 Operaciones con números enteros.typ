@@ -161,8 +161,16 @@
   #g-subquestion()[$(-5) dot (-7) + (-4) dot 3 - 4 dot 7$=]
   #v(1fr)
 
-  #g-subquestion()[$(-16) : (4) + (-5) dot 2 - 12 : (-4)$=]
+  // #g-subquestion()[$(-16) : (4) + (-5) dot 2 - 12 : (-4)$=]
+  // #v(1fr)
+
+  #g-subquestion()[$2 dot (7 - 8) + 5 dot (8 - 10)$=]
   #v(1fr)
+
+  #g-subquestion()[$22 - (-4) dot [6 - (-3)]$=]
+  #v(1fr)
+
+#pagebreak()
 
 #g-question(point:1)[Resuelve las siguientes operaciones:]
 
@@ -184,9 +192,6 @@
   #g-subquestion()[$[(-59)^25]^0$=]
   #v(1fr)
 
-
-#pagebreak()
-
 #g-question(point:2)[Hoy a las seis de la mañana hacia tres grados bajo cero de temperatura, si en las siguientes cuatro horas sube la temperatura siete grados, indica la temperatura que hace a las seis y a las diez de la mañana *utilizando números enteros*.] 
 
 #g-subquestion()[Expresa con un *número entero* la temperatura a las tres de la mañana = ]
@@ -196,3 +201,4 @@
 #v(0.5cm)
 
 #g-subquestion()[Indica la operación en línea para calcular la temperatura a las diez y expresa el resultado:]
+#v(4fr)
