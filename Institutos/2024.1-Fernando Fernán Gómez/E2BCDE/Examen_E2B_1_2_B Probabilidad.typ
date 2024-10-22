@@ -103,7 +103,7 @@
 #g-subquestion(point:1)[Muestra en un diagrama de árbol los resultados posibles]
 #v(1fr)
 
-#g-subquestion(point:2)[¿Cuál es la probabilidad de obtener exactamente 1 criz?]
+#g-subquestion(point:2)[¿Cuál es la probabilidad de obtener exactamente 1 cruz?]
 #v(1fr)
 
 #g-subquestion(point:2)[¿Cuál es la probabilidad de obtener al menos 1 cruz?]

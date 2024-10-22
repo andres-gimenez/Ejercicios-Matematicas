@@ -103,15 +103,8 @@
 #g-subquestion(point:1)[Muestra en un diagrama de árbol los resultados posibles.]
 #v(1fr)
 
-<<<<<<<< HEAD:Institutos/2024.1-Fernando Fernán Gómez/E2BCDE/Examen_E2B_1_2_A Probabilidad.typ
 #g-subquestion(point:2)[¿Cuál es la probabilidad de obtener exactamente 2 caras?]
 #v(1fr)
 
 #g-subquestion(point:2)[¿Cuál es la probabilidad de obtener al menos 1 caras?]
-========
-#g-subquestion(point:1)[¿Cuál es la probabilidad de obtener exactamente 2 caras?]
-#v(1fr)
-
-#g-subquestion(point:1)[¿Cuál es la probabilidad de obtener almenos 1 cara?]
->>>>>>>> 911eb59aad39703a349f18e951ec45a08eb80cd6:Institutos/2024.1-Fernando Fernán Gómez/E2BCDE/Examen_E2B_1_2 Probabilidad.typ
 #v(1fr)
