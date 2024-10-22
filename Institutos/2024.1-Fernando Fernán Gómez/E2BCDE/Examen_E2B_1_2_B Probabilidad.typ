@@ -19,12 +19,11 @@
     academic-subject: "Matemáticas",
     number: "1ª evaluación - 2º examen",
     content: "Probabilidad",
-    model: "Modelo A"
+    model: "Modelo B"
   ),
   
   language: "es",
   decimal-separator: ",",
-  date: "November 21, 2023",
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
@@ -51,7 +50,7 @@
 
 #g-question(point:1)[Indica cual es el espacio muestral de los siguientes experimentos aleatorios:]
 
-#g-subquestion()[Elegir al azar un día de la semana.]
+#g-subquestion()[Elegir al azar un mes del año.]
 #v(1fr)
 
 #g-subquestion()[Extraer una bola de un bombo con 10 bolas numeradas del 0 al 9.]
@@ -60,12 +59,12 @@
 #g-subquestion()[De las asignaturas que tienes en el instituto, elegir una al azar.]
 #v(1fr)
 
-#g-question(point:2)[Del experimento aleatorio lanzar un dado de seis caras, indica:]
+#g-question(point:2)[Del experimento aleatorio lanzar un dado de ocho caras, indica:]
 
 #g-subquestion()[Cual es el espacio muestral.]
 #v(1fr)
 
-#g-subquestion()[Cual es el suceso contrario a $A={1,4,5}$.]
+#g-subquestion()[Cual es el suceso contrario a $A={1, 4, 5, 8}$.]
 #v(1fr)
 
 #g-subquestion()[Un suceso imposible.]
@@ -75,28 +74,28 @@
 #v(1fr)
 
 #pagebreak()
-#g-question(point:3)[En una caja tenemos 3 tizas blancas, 5 azules y 7 rojas, si sacamos una tiza al azar, calcula las siguientes probabilidades]
+#g-question(point:3)[En una caja tenemos 3 fichas blancas, 5 azules y 7 rojas, si sacamos una tiza al azar, calcula las siguientes probabilidades]
 
-#g-subquestion()[Probabilidad de que la tiza sea azul.]
+#g-subquestion()[Probabilidad de que la ficha sea azul.]
 #v(1fr)
 
-#g-subquestion()[Probabilidad de que la tiza no sea azul.]
+#g-subquestion()[Probabilidad de que la ficha no sea azul.]
 #v(1fr)
 
-#g-subquestion()[Probabilidad de que la tiza sea azul o roja.]
+#g-subquestion()[Probabilidad de que la ficha sea azul o roja.]
 #v(1fr)
 
-#g-subquestion()[Probabilidad de que la tiza sea verde.]
+#g-subquestion()[Probabilidad de que la ficha sea verde.]
 #v(1fr)
 
-#g-subquestion()[Probabilidad de que la tiza sea azul o roja.]
+#g-subquestion()[Probabilidad de que la ficha no sea azul o roja.]
 #v(1fr)
 
-#g-subquestion()[Probabilidad de que la tiza sea blanca, azul o roja.]
+#g-subquestion()[Probabilidad de que la ficha sea blanca, azul o roja.]
 #v(1fr)
 
 #pagebreak()
-#g-question(point:1)[En las noticias nos han dicho que hay una probabilidad de que llueva mañana del $0,2$ ¿Qué probabilidad hay de que no llueva mañana?]
+#g-question(point:1)[En las noticias nos han dicho que hay una probabilidad de que llueva mañana del $0,23$ ¿Qué probabilidad hay de que no llueva mañana?]
 #v(1fr)
 
 #g-question[Una moneda se lanza 3 veces.]
@@ -104,5 +103,8 @@
 #g-subquestion(point:1)[Muestra en un diagrama de árbol los resultados posibles]
 #v(1fr)
 
-#g-subquestion(point:2)[¿Cuál es la probabilidad de obtener exactamente 2 caras?]
+#g-subquestion(point:2)[¿Cuál es la probabilidad de obtener exactamente 1 criz?]
+#v(1fr)
+
+#g-subquestion(point:2)[¿Cuál es la probabilidad de obtener al menos 1 cruz?]
 #v(1fr)
