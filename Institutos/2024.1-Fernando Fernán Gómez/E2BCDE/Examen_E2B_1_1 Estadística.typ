@@ -28,7 +28,7 @@
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
-  question-text-parameters: (font:"OpenDyslexic")
+  // question-text-parameters: (font:"OpenDyslexic")
 )
 
 // #text(font: "Linux Libertine", style: "italic")[Italic]

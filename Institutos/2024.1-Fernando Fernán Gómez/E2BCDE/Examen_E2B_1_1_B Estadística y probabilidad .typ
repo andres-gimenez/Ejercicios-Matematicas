@@ -37,16 +37,44 @@
 
 #set math.cases(reverse: true)
 
-// #place(
-//   center ,
-//   clearance: 0pt,
-//   dx: -30pt,
-//   dy: 40pt,
-//   rotate(-45deg,
-//     origin: top + right,
-//     text(size:70pt, fill:silver)[Borrador] 
-//   )
-// )
+#g-question[En un club deportivo juvenil admiten socios con edades entre 12 y 18 años. Al preguntar la edad de los socios, obtenemos estas respuestas.
+
+#align(center, [12, 12, 13, 15, 15, 13, 12, 14, 14, 14, 15, 13, 13,  16, 16, 12, 12, 14, 14, 14]) 
+]
+
+#g-subquestion(point:2)[Completa la siguiente tabla de frecuencias, redondeando a dos decimales y siendo: \ 
+  // - $x_i$: Valor del carácter estadístico.
+  // - $n_i$: Frecuencia absoluta.
+  // - $N_i$: Frecuencia absoluta acumulada.
+  // - $f_i$: Frecuencia relativa.
+  // - $p_i %$: Frecuencia relativa (en porcentaje).
+  // // - $F_i$: Frecuencia relativa acumulada.
+  
+#align(center,
+  table(
+    fill: (x, y) =>
+      if(y == 0) { luma(230) },
+    // columns: (1.5cm, 1.5cm,  1.5cm, 1.5cm, 1.5cm, 1.5cm),
+    columns: (2.5cm, 4cm,  4cm, 4cm),
+    rows: (1.2cm,)*6,
+    // [$x_i$],[$n_i$], [$N_i$], [$f_i$],[$f_i$ %],[$F_i$]
+    [Valor],[F. absoluta], [F. relativa],[Porcentaje],
+    [12], [5], [0,25], [25%],
+    [13], [4], [0,20], [20%],
+    [14], [6], [0,30], [30%],
+    // [15], [3], [0,15], [15%],
+    // [16], [2], [0,10], [10%],
+))
+]
+#pagebreak()
+
+==? 1 Dibuja un diagrama de barras y de sectores (con los datos del primer apartado).
+#v(1fr)
+
+==? 3 Calcula la moda, la media y la mediana (con los datos del primer apartado).
+#v(1fr)
+
+#pagebreak()
 
 #g-question(point:1.5)[Del experimento aleatorio lanzar un dado de seis caras, indica:]
 
