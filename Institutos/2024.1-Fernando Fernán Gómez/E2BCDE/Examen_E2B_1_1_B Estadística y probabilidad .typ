@@ -68,10 +68,10 @@
 ]
 #pagebreak()
 
-==? 1 Dibuja un diagrama de barras y de sectores (con los datos del primer apartado).
+#g-subquestion(point:1)[Dibuja un diagrama de barras y de sectores (con los datos del primer apartado).]
 #v(1fr)
 
-==? 3 Calcula la moda, la media y la mediana (con los datos del primer apartado).
+#g-subquestion(point:2)[Calcula la moda, la media y la mediana (con los datos del primer apartado).]
 #v(1fr)
 
 #pagebreak()
@@ -91,7 +91,7 @@
 #v(1fr)
 
 #pagebreak()
-#g-question(point:3)[En una caja tenemos 3 tizas blancas, 5 azules y 7 rojas, si sacamos una tiza al azar, calcula las siguientes probabilidades.]
+#g-question(point:2)[En una caja tenemos 3 tizas blancas, 5 azules y 7 rojas, si sacamos una tiza al azar, calcula las siguientes probabilidades.]
 
 #g-subquestion()[Probabilidad de que la tiza sea azul.]
 #v(1fr)
@@ -101,8 +101,6 @@
 
 #g-subquestion()[Probabilidad de que la tiza sea azul o roja.]
 #v(1fr)
-
-
 
 #pagebreak()
 #g-question(point:1.5)[En las noticias nos han dicho que hay una probabilidad de que llueva mañana del $0,2$ ¿Qué probabilidad hay de que no llueva mañana?]
