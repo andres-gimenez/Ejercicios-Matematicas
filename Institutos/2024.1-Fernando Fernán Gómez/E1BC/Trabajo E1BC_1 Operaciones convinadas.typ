@@ -22,7 +22,7 @@
   language: "es",
   decimal-separator: ",",
   show-student-data: "odd-pages",
-  show-student-number:2,
+  show-student-number: 2,
   show-grade-table: false,
   question-points-position: right,
 )
