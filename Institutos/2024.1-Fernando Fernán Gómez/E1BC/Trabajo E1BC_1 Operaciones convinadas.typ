@@ -45,33 +45,33 @@
   #subquestion[$display((-8)-(-5))=$]
 ]
 
-#g-question[Realiza las siguientes multiplicaciones y divisiones]
+#question[Realiza las siguientes multiplicaciones y divisiones]
 
 #columns(2)[
-#subquestion[$display(5 dot 4)=$]
-#subquestion[$display(-2 dot (-9))=$]
-#subquestion[$display((-4) dot (-8))=$]
-#subquestion[$display((-6) dot (-9))=$]
-#subquestion[$display((-8) dot (+3))=$]
+  #subquestion[$display(5 dot 4)=$]
+  #subquestion[$display(-2 dot (-9))=$]
+  #subquestion[$display((-4) dot (-8))=$]
+  #subquestion[$display((-6) dot (-9))=$]
+  #subquestion[$display((-8) dot (+3))=$]
 #colbreak()
-#subquestion[$display((-15) dot (-3))=$]
-#subquestion[$display((-5) dot (-7))=$]
-#subquestion[$display((-18) : (-2))=$]
-#subquestion[$display((+25) :(-5))=$]
-#subquestion[$display((+100) :(-10))=$]
+  #subquestion[$display((-15) dot (-3))=$]
+  #subquestion[$display((-5) dot (-7))=$]
+  #subquestion[$display((-18) : (-2))=$]
+  #subquestion[$display((+25) :(-5))=$]
+  #subquestion[$display((+100) :(-10))=$]
 ]
 
 #question[Realiza las siguientes potencias]
-#columns(2)[
-#subquestion[$display((+5)^2)=$]
-#subquestion[$display((-5)^2)=$]
-#subquestion[$display((+5)^3)=$]
-#subquestion[$display(((-5)^4)^0)=$]
-#colbreak()
-#subquestion[$display((-5)^3)=$]
-#subquestion[$display((-5)^4 : (-5)^3)=$]
-#subquestion[$display((-15)^3 : (-3)^3)=$]
-#subquestion[$display((17^6)/(17^5))=$]
+  #columns(2)[
+    #subquestion[$display((+5)^2)=$]
+    #subquestion[$display((-5)^2)=$]
+    #subquestion[$display((+5)^3)=$]
+    #subquestion[$display(((-5)^4)^0)=$]
+  #colbreak()
+    #subquestion[$display((-5)^3)=$]
+    #subquestion[$display((-5)^4 : (-5)^3)=$]
+    #subquestion[$display((-15)^3 : (-3)^3)=$]
+    #subquestion[$display((17^6)/(17^5))=$]
 ]
 
 #question[Realiza las siguientes operaciones combinadas]
