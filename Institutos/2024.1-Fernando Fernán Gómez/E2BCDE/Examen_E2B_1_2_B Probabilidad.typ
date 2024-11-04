@@ -59,7 +59,7 @@
 #g-subquestion()[De las asignaturas que tienes en el instituto, elegir una al azar.]
 #v(1fr)
 
-#g-question(point:2)[Del experimento aleatorio lanzar un dado de ocho caras, indica:]
+#g-question(point:1.5)[Del experimento aleatorio lanzar un dado de ocho caras, indica:]
 
 #g-subquestion()[Cual es el espacio muestral.]
 #v(1fr)
@@ -95,7 +95,7 @@
 #v(1fr)
 
 #pagebreak()
-#g-question(point:1)[En las noticias nos han dicho que hay una probabilidad de que llueva mañana del $0,23$ ¿Qué probabilidad hay de que no llueva mañana?]
+#g-question(point:1.5)[En las noticias nos han dicho que hay una probabilidad de que llueva mañana del $0,23$ ¿Qué probabilidad hay de que no llueva mañana?]
 #v(1fr)
 
 #g-question[Una moneda se lanza 3 veces.]
@@ -103,8 +103,8 @@
 #g-subquestion(point:1)[Muestra en un diagrama de árbol los resultados posibles]
 #v(1fr)
 
-#g-subquestion(point:2)[¿Cuál es la probabilidad de obtener exactamente 1 cruz?]
+#g-subquestion(point:1)[¿Cuál es la probabilidad de obtener exactamente 1 cruz?]
 #v(1fr)
 
-#g-subquestion(point:2)[¿Cuál es la probabilidad de obtener al menos 1 cruz?]
+#g-subquestion(point:1)[¿Cuál es la probabilidad de obtener al menos 1 cruz?]
 #v(1fr)
