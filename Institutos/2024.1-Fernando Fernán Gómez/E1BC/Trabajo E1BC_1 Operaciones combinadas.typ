@@ -89,7 +89,7 @@
 
 #pagebreak()
 
-#subquestion[$display(15 dot (3 - 5)^2 + 4 dot (12 - 4))=$]
+#subquestion[$display(15 dot (3 - 5)^2 + 4 dot sqrt(12 - 3))=$]
 #v(1fr)
 #subquestion[$display([(3 - 2) dot (4 + 2) + 2 dot 6] dot 3)=$]
 #v(1fr)
