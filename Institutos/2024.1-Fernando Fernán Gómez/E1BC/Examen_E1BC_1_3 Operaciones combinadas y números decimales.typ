@@ -14,7 +14,7 @@
     academic-period: "Curso 2024/2025",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
-    number: "1ª evaluación - 2º examen",
+    number: "1ª evaluación - 3º examen",
     content: "Números enteros",
     model: "Modelo A"
   ),
@@ -43,10 +43,10 @@
 //   )
 // )
 
-#question(points:0.5)[Indica dos número decimales distintos entre $3,6$ y $3,7$.]
+#question(points:0.5)[Indica dos números decimales distintos entre $3,6$ y $3,7$.]
   #v(1fr)
 
-#question(points:0.5)[Indica dos número decimales distintos entre $-5,3$ y $-5,2$.]
+#question(points:0.5)[Indica dos números decimales distintos entre $-5,3$ y $-5,2$.]
   #v(1fr)
 
 #question(points:2)[Realiza las siguientes operaciones, indicando las operaciones realizadas al margen:]
@@ -58,7 +58,7 @@
 
 #pagebreak()
 
-#question(points: 1)[Indica el valor de las siguientes operaciones con números decimales:]
+#question(points: 2)[Indica el valor de las siguientes operaciones con números decimales:]
 
 #subquestion[$display((-2,3)^2)$=]
 #v(1fr)
@@ -78,13 +78,25 @@
 #pagebreak()
 #question(points: 3)[Realiza las siguientes operaciones combinadas:]
 
-#subquestion[$display(3 dot (5-2) + 5 dot (4-8) - 4 dot (6 - 10))$=]
-#v(1fr)
+// #subquestion[$display(3 dot (5-2) + 5 dot (4-8) - 4 dot (6 - 10))$=]
+// #v(1fr)
+
 #subquestion[$display(5 dot (-2+4) - 7 dot (-8+2) - 4 dot (5 - 3))$=]
 #v(1fr)
 
-#subquestion[$display((2 - 3) dot (-4+2) - (-3+1)^2 - 5 dot (4 - 3))$=]
-#v(1fr)
+// #subquestion[$display((2 - 3) dot (-4+2) - (-3+1)^2 - 5 dot (4 - 3))$=]
+// #v(1fr)
 
 #subquestion[$display(sqrt(5 - 1) + (3-1)^2 + 5 dot (1 - 2))$=]
+#v(1fr)
+
+#pagebreak()
+
+#question(points:2)[En un tarro de cristal hay 30 bolas, Marta saca 10 bolas, 
+Juan saca el doble que Marta y Pablo mete cinco veces tres bolas.]
+
+#subquestion[Indica las bolas que quedan en el tarro, mediante una opareción combinada. (Deberán aparecer todas las operaciones en una sola línea.)]
+#v(2cm)
+
+#subquestion[Resuelve la operación combinada del apartado anterior e indica cuantas bolas quedan en el tarro.]
 #v(1fr)
