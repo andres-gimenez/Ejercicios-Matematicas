@@ -38,7 +38,7 @@
 
 #set math.cases(reverse: true)
 
-#question(points:2)[Efectua la siguiente operaciones ]
+#question(points:2)[Efectua las siguientes operaciones:]
 
 #subquestion[$display((-12) + (+30) - (-10) + (32) - (+17) - (-23))$ = ]
 #v(2fr)
@@ -61,7 +61,7 @@
 
 #pagebreak()
 
-#question(points: 2)[Calcula el valor exanco de las siguientes expresions con raíces:]
+#question(points: 2)[Calcula el valor exacto de las siguientes expresiones con raíces:]
 #subquestion[$display(sqrt(3600))$ = ]
 #v(1fr)
 
