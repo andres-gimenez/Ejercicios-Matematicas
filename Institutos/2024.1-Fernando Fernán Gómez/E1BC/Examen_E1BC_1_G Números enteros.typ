@@ -1,7 +1,7 @@
 #import "@preview/cetz:0.2.1"
 #import "@local/g-exam:0.4.0": *
 
-#show: g-exam.with(
+#show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -12,7 +12,7 @@
     logo:image("./logo-ies_fernando_fernan_gomez.png")
   ),
   exam-info: (
-    academic-period: "Curso 2023/2024",
+    academic-period: "Curso 2024/2025",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
     number: "1ª evaluación - Global",
@@ -22,10 +22,10 @@
   
   language: "es",
   decimal-separator: ",",
-  date: "November 21, 2024",
+  date: datetime(year: 2024, month: 11, day: 21),
   show-student-data: "odd-pages",
   show-grade-table: true,
-  question-point-position: right,
+  question-points-position: right,
   // question-text-parameters: (font:"OpenDyslexic")
   // question-text-parameters: (size: 18pt, spacing:200%)
   // question-text-parameters: (size: 11pt, spacing:100%)

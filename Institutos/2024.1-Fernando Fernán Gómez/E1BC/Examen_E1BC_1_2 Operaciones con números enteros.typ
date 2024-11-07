@@ -12,7 +12,7 @@
     logo:image("./logo-ies_fernando_fernan_gomez.png")
   ),
   exam-info: (
-    academic-period: "Curso 2023/2024",
+    academic-period: "Curso 2024/2025",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
     number: "1ª evaluación - 2º examen",
