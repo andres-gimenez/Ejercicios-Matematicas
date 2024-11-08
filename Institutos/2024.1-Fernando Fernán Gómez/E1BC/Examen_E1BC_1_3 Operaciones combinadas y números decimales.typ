@@ -1,4 +1,4 @@
-#import "@local/g-exam:0.4.0": *
+#import "@preview/g-exam:0.4.0": *
 
 #show: g-exam.with(
   author: (
