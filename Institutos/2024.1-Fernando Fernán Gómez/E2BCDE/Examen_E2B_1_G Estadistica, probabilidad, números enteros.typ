@@ -32,7 +32,7 @@
   // question-text-parameters: (size: 16pt, spacing:120%, font:"OpenDyslexic"),
   clarifications: 
   (
-    [Han de aparecer todas las cuentas de la resolución de los ejercicios para que estos se consideren correctos.],
+    [Han de aparecer todas las cuentas en la resolución de los ejercicios para que estos se consideren correctos.],
     [Se puede utilizar calculadoras],
     [No se puede utilizar ni móvil ni la calculadora del móvil.]
 
