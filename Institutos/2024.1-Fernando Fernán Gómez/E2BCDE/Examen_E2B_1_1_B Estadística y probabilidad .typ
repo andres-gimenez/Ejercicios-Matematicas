@@ -37,12 +37,12 @@
 
 #set math.cases(reverse: true)
 
-#g-question[En un club deportivo juvenil admiten socios con edades entre 12 y 18 años. Al preguntar la edad de los socios, obtenemos estas respuestas.
+#question[En un club deportivo juvenil admiten socios con edades entre 12 y 18 años. Al preguntar la edad de los socios, obtenemos estas respuestas.
 
 #align(center, [12, 12, 13, 15, 15, 13, 12, 14, 14, 14, 15, 13, 13,  16, 16, 12, 12, 14, 14, 14]) 
 ]
 
-#g-subquestion(point:2)[Completa la siguiente tabla de frecuencias, redondeando a dos decimales y siendo: \ 
+#subquestion(points:2)[Completa la siguiente tabla de frecuencias, redondeando a dos decimales y siendo: \ 
   // - $x_i$: Valor del carácter estadístico.
   // - $n_i$: Frecuencia absoluta.
   // - $N_i$: Frecuencia absoluta acumulada.
