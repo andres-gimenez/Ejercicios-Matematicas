@@ -53,7 +53,7 @@
 #subquestion[$display((-62)^6 dot (-62)^4)$ = ]
 #v(1fr)
 
-#subquestion[$display((-5)^9 dot (+6)^98)$ = ]
+#subquestion[$display((-5)^9 dot (+6)^9)$ = ]
 #v(1fr)
 
 #subquestion[$display([(-12)^8]^3)$ = ]
