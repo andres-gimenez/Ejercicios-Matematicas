@@ -16,7 +16,7 @@
     academic-subject: "Matemáticas",
     number: "1ª evaluación - 3º examen",
     content: "Números enteros",
-    model: "Modelo A"
+    model: "Adaptación"
   ),
   
   language: "es",
@@ -25,6 +25,7 @@
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
+  question-text-parameters: (size: 18pt, spacing:200%, font:"OpenDyslexic")
   // question-text-parameters: (font:"OpenDyslexic")
   // question-text-parameters: (size: 18pt, spacing:200%)
   // question-text-parameters: (size: 11pt, spacing:100%)
@@ -32,11 +33,11 @@
 
 #set math.cases(reverse: true)
 
-#question(points:0.5)[Indica dos números decimales distintos entre $3,6$ y $3,7$.]
-  #v(1fr)
+#question(points:1)[Indica dos números decimales distintos entre $3,6$ y $3,7$.]
+  #v(2fr)
 
-#question(points:0.5)[Indica dos números decimales distintos entre $-5,3$ y $-5,2$.]
-  #v(1fr)
+// #question(points:0.5)[Indica dos números decimales distintos entre $-5,3$ y $-5,2$.]
+//   #v(1fr)
 
 #question(points:2)[Realiza las siguientes operaciones, indicando las operaciones realizadas al margen:]
 #subquestion[$display("8,32" times "4,23" + "5,3322")$=]
@@ -58,8 +59,8 @@
 #subquestion[$display("-1432,435" dot 100)$=]
 #v(1fr)
 
-#subquestion[$display("536,233254" : 1000)$=]
-#v(1fr)
+// #subquestion[$display("536,233254" : 1000)$=]
+// #v(1fr)
 
 #subquestion[$(-10)^8$=]
 #v(1fr)
@@ -76,8 +77,8 @@
 // #subquestion[$display((2 - 3) dot (-4+2) - (-3+1)^2 - 5 dot (4 - 3))$=]
 // #v(1fr)
 
-#subquestion[$display(sqrt(5 - 1) + (3-1)^2 + 5 dot (1 - 2))$=]
-#v(1fr)
+// #subquestion[$display(sqrt(5 - 1) + (3-1)^2 + 5 dot (1 - 2))$=]
+// #v(1fr)
 
 #pagebreak()
 
@@ -85,7 +86,7 @@
 Juan saca el doble que Marta y Pablo mete cinco veces tres bolas.]
 
 #subquestion[Indica las bolas que quedan en el tarro, mediante una opareción combinada. (Deberán aparecer todas las operaciones en una sola línea.)]
-#v(2cm)
+#v(3cm)
 
 #subquestion[Resuelve la operación combinada del apartado anterior e indica cuantas bolas quedan en el tarro.]
 #v(1fr)
