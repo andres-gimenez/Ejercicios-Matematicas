@@ -40,10 +40,10 @@
 
 #question(points:2)[Efectua las siguientes operaciones:]
 
-#subquestion[$display((-12) + (+32) - (-12) + (32) - (+21) - (-23))$ = ]
+#subquestion[$display((-12) + (+32) - (-12) + (32) - (+21) - (-23))$ = ] // 64
 #v(2fr)
 
-#subquestion[$display(abs(-32) + abs(+32) - abs(12 - 15) + (-32))$ = ]
+#subquestion[$display(abs(-32) + abs(+32) - abs(12 - 15) + (-32))$ = ] // 29
 #v(2fr)
 
 #question(points: 2)[Expresa como una única potencia:]
@@ -78,13 +78,13 @@
 
 \
 
-$display((6^2 dot (5^3)^4 dot 6^7)/(15^4 dot (10^4)^2 dot 3^5))=$
+$display((6^2 dot (5^3)^4 dot 6^7)/(15^4 dot (10^4)^2 dot 3^5))=$  // 2
 #v(2fr)
 
 #pagebreak()
 #question(points: 2)[Resuelve las siguientes operaciones combinadas:]
 
-#subquestion[$display(15 dot (3^2 - 5)^2 + 4 dot sqrt(12 - 3))=$]
+#subquestion[$display(15 dot (3^2 - 5)^2 + 4 dot sqrt(12 - 3))=$]  // 252
 #v(1fr)
 
 #subquestion[$display([(2 - 3)^2 dot (4 + 2) + 2 dot 6] dot 3)=$]
