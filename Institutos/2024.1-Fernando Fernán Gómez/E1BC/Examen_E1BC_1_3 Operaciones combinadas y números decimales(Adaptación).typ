@@ -50,13 +50,13 @@
 
 #question(points: 2)[Indica el valor de las siguientes operaciones con números decimales:]
 
-#subquestion[$display((-2,3)^2)$=]
+#subquestion[$display((2,3)^2)$=]
 #v(1fr)
 
 #subquestion[$display((0,2)^2)$=]
 #v(1fr)
 
-#subquestion[$display("-1432,435" dot 100)$=]
+#subquestion[$display("1432,435" dot 100)$=]
 #v(1fr)
 
 // #subquestion[$display("536,233254" : 1000)$=]
@@ -66,12 +66,15 @@
 #v(1fr)
 
 #pagebreak()
-#question(points: 3)[Realiza las siguientes operaciones combinadas:]
+#question(points: 3)[Realiza las siguientes operaciones combinadas:
+
+$display(5 dot 6 + 3 dot 8 - 5 dot 2 =)$
+]
 
 // #subquestion[$display(3 dot (5-2) + 5 dot (4-8) - 4 dot (6 - 10))$=]
 // #v(1fr)
 
-#subquestion[$display(5 dot (-2+4) - 7 dot (-8+2) - 4 dot (5 - 3))$=]
+// #subquestion[$display(5 dot (-2+4) - 7 dot (-8+2) - 4 dot (5 - 3))$=]
 #v(1fr)
 
 // #subquestion[$display((2 - 3) dot (-4+2) - (-3+1)^2 - 5 dot (4 - 3))$=]
@@ -83,10 +86,11 @@
 #pagebreak()
 
 #question(points:2)[En un tarro de cristal hay 30 bolas, Marta saca 10 bolas, 
-Juan saca el doble que Marta y Pablo mete cinco veces tres bolas.]
+Juan saca el doble que Marta y Pablo mete cinco veces tres bolas. 
+¿Cuantas bolas quedan en el tarro?]
 
-#subquestion[Indica las bolas que quedan en el tarro, mediante una opareción combinada. (Deberán aparecer todas las operaciones en una sola línea.)]
-#v(3cm)
+// #subquestion[Indica las bolas que quedan en el tarro, mediante una opareción combinada. (Deberán aparecer todas las operaciones en una sola línea.)]
+// #v(3cm)
 
-#subquestion[Resuelve la operación combinada del apartado anterior e indica cuantas bolas quedan en el tarro.]
-#v(1fr)
+// #subquestion[Resuelve la operación combinada del apartado anterior e indica cuantas bolas quedan en el tarro.]
+// #v(1fr)
