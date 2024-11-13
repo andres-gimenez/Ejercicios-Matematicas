@@ -87,5 +87,5 @@ $display((6^2 dot (5^3)^4 dot 6^7)/(15^4 dot (10^4)^2 dot 3^5))=$  // 2
 #subquestion[$display(15 dot (3^2 - 5)^2 + 4 dot sqrt(12 - 3))=$]  // 252
 #v(1fr)
 
-#subquestion[$display([(2 - 3)^2 dot (4 + 2) + 2 dot 6] dot 3)=$]
+#subquestion[$display([(2 - 3)^2 dot (4 + 2) + 2 dot 6] dot 3)=$] //42
 #v(1fr)
