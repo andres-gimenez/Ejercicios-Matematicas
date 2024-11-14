@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.0": *
+#import "@local/g-exam:0.4.1": *
 
 // #set text(font:"OpenDyslexic")
 // #set text(font: "New Computer Modern")
