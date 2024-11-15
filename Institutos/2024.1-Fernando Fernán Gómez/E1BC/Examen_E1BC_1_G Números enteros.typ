@@ -1,5 +1,5 @@
 #import "@preview/cetz:0.2.1"
-#import "@preview/g-exam:0.4.0": *
+#import "@local/g-exam:0.4.1": *
 
 #show: exam.with(
   author: (
@@ -29,176 +29,191 @@
   // question-text-parameters: (font:"OpenDyslexic")
   // question-text-parameters: (size: 18pt, spacing:200%)
   // question-text-parameters: (size: 11pt, spacing:100%)
+  clarifications: 
+  (
+    [Deben aparecer todos los pasos (cálculos) intermedios.],
+    [No se permite el uso de calculadora.],
+    [Se debe usar bolígrafo azul o negro para escribir.]
+  )
 )
 
-#set math.cases(reverse: true)
+// #set math.cases(reverse: true)
 
-// #place(
-//   center ,
-//   clearance: 0pt,
-//   dx: -30pt,
-//   dy: 40pt,
-//   rotate(-45deg,
-//     origin: top + right,
-//     text(size:70pt, fill:silver)[Borrador] 
-//   )
-// )
+#question(points:1.2)[Realiza las siguientes operaciones:]
 
-#g-question(point:1)[Ordena de mayor a menor los siguientes números, utilizando el signo '$gt$' o '$lt$':
-  #align(center)[
-    $+225, +323, -532, +236, -15, 0, -323 $
-  ]
+#columns(3)[
+  #subquestion[$display(53 - 17 + 3)$ = ]
+
+  #subquestion[$display(6 dot (-4))$ = ]
+
+  #colbreak()
+
+  #subquestion[$display((-17) colon (-3))$ = ]
+
+  #subquestion[$display(-15 colon 3 dot (-4))$ = ]
+
+  #colbreak()
+
+  #subquestion[$display((-3)^3)$ = ]
+
+  #subquestion[$display((-2)^4)$ = ]
 ]
 
-#v(1fr)
+// #g-question(point:1)[Ordena de mayor a menor los siguientes números, utilizando el signo '$gt$' o '$lt$':
+//   #align(center)[
+//     $+225, +323, -532, +236, -15, 0, -323 $
+//   ]
+// ]
 
-#g-question(point:1)[Representa los siguientes números enteros en la recta:
-  #align(center)[
-    $-5, 3, -7, 0, 6$
-  ]
-  #v(1cm)
-  #align(center, line(length: 70%))
-  #v(1cm)
-]
+// #v(1fr)
 
-// #align(center, 
-//   cetz.canvas(
-//     length: 0.5cm,
-//     {
-//       import cetz.draw: *
+// #g-question(point:1)[Representa los siguientes números enteros en la recta:
+//   #align(center)[
+//     $-5, 3, -7, 0, 6$
+//   ]
+//   #v(1cm)
+//   #align(center, line(length: 70%))
+//   #v(1cm)
+// ]
 
-//       // set-style(
-//       //   mark: (fill: black),
-//       //   stroke: (thickness: 0.4pt, cap: "round"),
-//       //   content: (padding: 1pt)
-//       // )
-//       // grid((0,0), (2,2))
+// // #align(center, 
+// //   cetz.canvas(
+// //     length: 0.5cm,
+// //     {
+// //       import cetz.draw: *
 
-//       // grid((-10, -10), (10, 10), step: 1, stroke: gray + 0.6pt)
+// //       // set-style(
+// //       //   mark: (fill: black),
+// //       //   stroke: (thickness: 0.4pt, cap: "round"),
+// //       //   content: (padding: 1pt)
+// //       // )
+// //       // grid((0,0), (2,2))
 
-//       line((-10.5, 0), (10.5, 0), mark: (end: ">"))
-//       // content((), $ x $, anchor: "left")
-//       // line((0, -10.5), (0, 10.5), mark: (end: ">"))
-//       // content((), $ y $, anchor: "bottom")
-//     }
-//   )
-// )
+// //       // grid((-10, -10), (10, 10), step: 1, stroke: gray + 0.6pt)
 
-// #align(center,
-// cetz.canvas(
-//     length: 5cm, 
-//     {
-//       cetz.plot.plot(
-//         // axes: ("x", "y"),
-//         size: (3, 0.3),
-//         axis-style: "school-book",
-//         x-tick-step: 1,
-//         y-tick-step: none,
-//         // fill: "o" ,
-//         // fill-below: true,
-//         x-domain: (-10, 10),
-//         // y-domain: (-10, 10),
-//         x-max:10,
-//         x-min: -10,
-//         // y-max: -2,
-//         // y-min: -1,
-//         // x-grid: "both",
-//         // y-grid: "both",
-//           {
-//             cetz.plot.add(((0,0),), mark-size: 0,)
-//           }
-//         )
-//     }
-//   )
-// )
+// //       line((-10.5, 0), (10.5, 0), mark: (end: ">"))
+// //       // content((), $ x $, anchor: "left")
+// //       // line((0, -10.5), (0, 10.5), mark: (end: ">"))
+// //       // content((), $ y $, anchor: "bottom")
+// //     }
+// //   )
+// // )
 
-#g-question(point:1.5)[Efectúa las siguientes operaciones con números enteros:]
+// // #align(center,
+// // cetz.canvas(
+// //     length: 5cm, 
+// //     {
+// //       cetz.plot.plot(
+// //         // axes: ("x", "y"),
+// //         size: (3, 0.3),
+// //         axis-style: "school-book",
+// //         x-tick-step: 1,
+// //         y-tick-step: none,
+// //         // fill: "o" ,
+// //         // fill-below: true,
+// //         x-domain: (-10, 10),
+// //         // y-domain: (-10, 10),
+// //         x-max:10,
+// //         x-min: -10,
+// //         // y-max: -2,
+// //         // y-min: -1,
+// //         // x-grid: "both",
+// //         // y-grid: "both",
+// //           {
+// //             cetz.plot.add(((0,0),), mark-size: 0,)
+// //           }
+// //         )
+// //     }
+// //   )
+// // )
 
-  #g-subquestion()[$(-5)+(-2)$=]
-  #v(1fr)
+// #g-question(point:1.5)[Efectúa las siguientes operaciones con números enteros:]
 
-  #g-subquestion()[$(+2)+(-5)$=]
-  #v(1fr)
+//   #g-subquestion()[$(-5)+(-2)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(+5)+(-3)$=]
-  #v(1fr)
+//   #g-subquestion()[$(+2)+(-5)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(-5)+(+2)$=]
-  #v(1fr)
+//   #g-subquestion()[$(+5)+(-3)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(-3)-(-2)$=]
-  #v(1fr)
+//   #g-subquestion()[$(-5)+(+2)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(-3)-(+5)$=]
-  #v(1fr)
+//   #g-subquestion()[$(-3)-(-2)$=]
+//   #v(1fr)
+
+//   #g-subquestion()[$(-3)-(+5)$=]
+//   #v(1fr)
 
 
-#pagebreak()
-#g-question(point:1.5)[Efectúa las siguientes operaciones con números enteros:]
+// #pagebreak()
+// #g-question(point:1.5)[Efectúa las siguientes operaciones con números enteros:]
   
-  #g-subquestion()[$(-2) dot (-7)$=]
-  #v(1fr)
+//   #g-subquestion()[$(-2) dot (-7)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(+3) dot (-5)$=]
-  #v(1fr)
+//   #g-subquestion()[$(+3) dot (-5)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(-5) dot (-8)$=]
-  #v(1fr)
+//   #g-subquestion()[$(-5) dot (-8)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(-15) : (+3)$=]
-  #v(1fr)
+//   #g-subquestion()[$(-15) : (+3)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(-14):(-2)$=]
-  #v(1fr)
+//   #g-subquestion()[$(-14):(-2)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(-25) : (-5)$=]
-  #v(1fr)
+//   #g-subquestion()[$(-25) : (-5)$=]
+//   #v(1fr)
 
-#pagebreak()
+// #pagebreak()
 
-#g-question(point:2)[Realiza las siguientes operaciones combinadas:]
+// #g-question(point:2)[Realiza las siguientes operaciones combinadas:]
 
-  #g-subquestion()[$(-5) dot (-7) + (-4) dot 3 - 4 dot 7$=]
-  #v(1fr)
+//   #g-subquestion()[$(-5) dot (-7) + (-4) dot 3 - 4 dot 7$=]
+//   #v(1fr)
 
-  // #g-subquestion()[$(-16) : (4) + (-5) dot 2 - 12 : (-4)$=]
-  // #v(1fr)
+//   // #g-subquestion()[$(-16) : (4) + (-5) dot 2 - 12 : (-4)$=]
+//   // #v(1fr)
 
-  #g-subquestion()[$2 dot (7 - 8) + 5 dot (8 - 10)$=]
-  #v(1fr)
+//   #g-subquestion()[$2 dot (7 - 8) + 5 dot (8 - 10)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$22 - (-4) dot [6 - (-3)]$=]
-  #v(1fr)
+//   #g-subquestion()[$22 - (-4) dot [6 - (-3)]$=]
+//   #v(1fr)
 
-#pagebreak()
+// #pagebreak()
 
-#g-question(point:1)[Resuelve las siguientes operaciones:]
+// #g-question(point:1)[Resuelve las siguientes operaciones:]
 
-  #g-subquestion()[$(-3)^2$=]
-  #v(1fr)
+//   #g-subquestion()[$(-3)^2$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(-3)^3$=]
-  #v(1fr)
+//   #g-subquestion()[$(-3)^3$=]
+//   #v(1fr)
 
-  #g-subquestion()[$sqrt(25)$=]
-  #v(1fr)
+//   #g-subquestion()[$sqrt(25)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$sqrt(-25)$=]
-  #v(1fr)
+//   #g-subquestion()[$sqrt(-25)$=]
+//   #v(1fr)
 
-  #g-subquestion()[$(-12)^6 : (-12)^5$=]
-  #v(1fr)
+//   #g-subquestion()[$(-12)^6 : (-12)^5$=]
+//   #v(1fr)
 
-  #g-subquestion()[$[(-59)^25]^0$=]
-  #v(1fr)
+//   #g-subquestion()[$[(-59)^25]^0$=]
+//   #v(1fr)
 
-#g-question(point:2)[Hoy a las seis de la mañana hacia tres grados bajo cero de temperatura, si en las siguientes cuatro horas sube la temperatura siete grados, indica la temperatura que hace a las seis y a las diez de la mañana *utilizando números enteros*.] 
+// #g-question(point:2)[Hoy a las seis de la mañana hacia tres grados bajo cero de temperatura, si en las siguientes cuatro horas sube la temperatura siete grados, indica la temperatura que hace a las seis y a las diez de la mañana *utilizando números enteros*.] 
 
-#g-subquestion()[Expresa con un *número entero* la temperatura a las tres de la mañana = ]
-#v(0.5cm)
+// #g-subquestion()[Expresa con un *número entero* la temperatura a las tres de la mañana = ]
+// #v(0.5cm)
 
-#g-subquestion()[Expresa con un *número entero* la cantidad que ha cambiado la temperatura = ]
-#v(0.5cm)
+// #g-subquestion()[Expresa con un *número entero* la cantidad que ha cambiado la temperatura = ]
+// #v(0.5cm)
 
-#g-subquestion()[Indica la operación en línea para calcular la temperatura a las diez y expresa el resultado:]
-#v(4fr)
+// #g-subquestion()[Indica la operación en línea para calcular la temperatura a las diez y expresa el resultado:]
+// #v(4fr)
