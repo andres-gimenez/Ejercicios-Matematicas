@@ -15,8 +15,8 @@
     academic-period: "Curso 2024/2025",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
-    number: "1ª evaluación - Global",
-    content: "Números enteros",
+    number: "Global 1ª evaluación",
+    content: "Números enteros, números decimales y divisibilidad",
     model: "Modelo A"
   ),
   
@@ -173,10 +173,10 @@
 #v(1fr)
 
 #subquestion()[Calcula cuanto se gasta, evaluando la operación combinada del apartado anterior.]
-#v(2fr)
+#v(3fr)
 
 #subquestion()[Si paga con un billete de $20€$. Expresa mediante una operación combinada cuanto le devuelven.]
 #v(1fr)
 
 #subquestion()[Calcula cuanto se gasta, evaluando la operación combinada del apartado anterior.]
-#v(2fr)
+#v(3fr)

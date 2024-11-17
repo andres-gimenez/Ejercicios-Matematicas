@@ -14,7 +14,7 @@
     academic-period: "Curso 2024/2025",
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
-    number: "1º evaluación - global",
+    number: "Global 1º evaluación",
     content: "Estadistica, probabilidad, números enteros y fracciones.",
     model: "Modelo A"
   ),
