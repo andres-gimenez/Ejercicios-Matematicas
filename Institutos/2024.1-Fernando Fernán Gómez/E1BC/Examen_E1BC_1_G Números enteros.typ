@@ -26,14 +26,13 @@
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-points-position: right,
-  // question-text-parameters: (font:"OpenDyslexic")
-  // question-text-parameters: (size: 18pt, spacing:200%)
-  // question-text-parameters: (size: 11pt, spacing:100%)
+  // question-text-parameters: (size: 18pt, spacing:200%, font:"OpenDyslexic")
   clarifications: 
   (
     [Deben aparecer todos los pasos (cálculos) intermedios.],
     [No se permite el uso de calculadora.],
-    [Se debe usar bolígrafo azul o negro para escribir.]
+    [Se debe usar bolígrafo azul o negro para escribir.],
+    [El hablar en clase sin causa justificada llevara la disminución de la nota del examen.]
   )
 )
 
@@ -41,179 +40,143 @@
 
 #question(points:1.2)[Realiza las siguientes operaciones:]
 
-#columns(3)[
+#columns(2)[
   #subquestion[$display(53 - 17 + 3)$ = ]
+  #v(1cm)
 
   #subquestion[$display(6 dot (-4))$ = ]
-
-  #colbreak()
+  #v(1cm)
 
   #subquestion[$display((-17) colon (-3))$ = ]
+  #v(1cm)
+  #colbreak()
 
   #subquestion[$display(-15 colon 3 dot (-4))$ = ]
+  #v(1cm)
+
+  #subquestion[$display((-3)^3)$ = ]
+  #v(1cm)
+
+  #subquestion[$display((-2)^4)$ = ]
+  #v(1cm)
+]
+
+#question(points:1)[Aplicando las propiedades de las potencias, expresa como una sola potencia:]
+#columns(2)[
+  #subquestion[$display(7^3 dot 7^5)$ = ]
+  #v(1cm)
+
+  #subquestion[$display(4^7 colon 4^4)$ = ]
+  #v(1cm)
+
+  #subquestion[$display((6^4)^3)$ = ]
+  #v(1cm)
 
   #colbreak()
 
-  #subquestion[$display((-3)^3)$ = ]
+  #subquestion[$display(2^3 dot 5^3)$ = ]
+  #v(1cm)
 
-  #subquestion[$display((-2)^4)$ = ]
+  #subquestion[$display(12^3 colon 4^3)$ = ]
+  #v(1cm)
 ]
 
-// #g-question(point:1)[Ordena de mayor a menor los siguientes números, utilizando el signo '$gt$' o '$lt$':
-//   #align(center)[
-//     $+225, +323, -532, +236, -15, 0, -323 $
-//   ]
-// ]
+#question(points:1)[Aproxima por redondeo y truncamiento los siguientes decimales:]
 
-// #v(1fr)
+#align(center,
+  table(
+    fill: (x, y) =>
+      if(y == 0) { luma(230) },
+    columns: (3cm, 3cm,  3cm, 3cm),
+    [],[Número], [Truncamiento], [Redondeo],
+    [a la milésima],  [$"6,3256"$], [], [],
+    [a la décima],    [$"13,71"$], [], [],
+    [a la centésima], [$"9,876"$], [], [],
+))
 
-// #g-question(point:1)[Representa los siguientes números enteros en la recta:
-//   #align(center)[
-//     $-5, 3, -7, 0, 6$
-//   ]
-//   #v(1cm)
-//   #align(center, line(length: 70%))
-//   #v(1cm)
-// ]
+#pagebreak()
 
-// // #align(center, 
-// //   cetz.canvas(
-// //     length: 0.5cm,
-// //     {
-// //       import cetz.draw: *
+#question(points:1)[Calcula mentalmente:]
 
-// //       // set-style(
-// //       //   mark: (fill: black),
-// //       //   stroke: (thickness: 0.4pt, cap: "round"),
-// //       //   content: (padding: 1pt)
-// //       // )
-// //       // grid((0,0), (2,2))
+#columns(2)[
+  #subquestion[$display("67,942" dot "100")$ =]
+  #v(1cm)
 
-// //       // grid((-10, -10), (10, 10), step: 1, stroke: gray + 0.6pt)
+  #subquestion[$display("0,072" colon "1000")$ =]
+  #v(1cm)
 
-// //       line((-10.5, 0), (10.5, 0), mark: (end: ">"))
-// //       // content((), $ x $, anchor: "left")
-// //       // line((0, -10.5), (0, 10.5), mark: (end: ">"))
-// //       // content((), $ y $, anchor: "bottom")
-// //     }
-// //   )
-// // )
-
-// // #align(center,
-// // cetz.canvas(
-// //     length: 5cm, 
-// //     {
-// //       cetz.plot.plot(
-// //         // axes: ("x", "y"),
-// //         size: (3, 0.3),
-// //         axis-style: "school-book",
-// //         x-tick-step: 1,
-// //         y-tick-step: none,
-// //         // fill: "o" ,
-// //         // fill-below: true,
-// //         x-domain: (-10, 10),
-// //         // y-domain: (-10, 10),
-// //         x-max:10,
-// //         x-min: -10,
-// //         // y-max: -2,
-// //         // y-min: -1,
-// //         // x-grid: "both",
-// //         // y-grid: "both",
-// //           {
-// //             cetz.plot.add(((0,0),), mark-size: 0,)
-// //           }
-// //         )
-// //     }
-// //   )
-// // )
-
-// #g-question(point:1.5)[Efectúa las siguientes operaciones con números enteros:]
-
-//   #g-subquestion()[$(-5)+(-2)$=]
-//   #v(1fr)
-
-//   #g-subquestion()[$(+2)+(-5)$=]
-//   #v(1fr)
-
-//   #g-subquestion()[$(+5)+(-3)$=]
-//   #v(1fr)
-
-//   #g-subquestion()[$(-5)+(+2)$=]
-//   #v(1fr)
-
-//   #g-subquestion()[$(-3)-(-2)$=]
-//   #v(1fr)
-
-//   #g-subquestion()[$(-3)-(+5)$=]
-//   #v(1fr)
-
-
-// #pagebreak()
-// #g-question(point:1.5)[Efectúa las siguientes operaciones con números enteros:]
+  #colbreak()
   
-//   #g-subquestion()[$(-2) dot (-7)$=]
-//   #v(1fr)
+  #subquestion[$display("0,032" dot "100")$ = ]
+  #v(1cm)
 
-//   #g-subquestion()[$(+3) dot (-5)$=]
-//   #v(1fr)
+  #subquestion[$display("412,9" colon "100")$ = ]
+  #v(1cm)
+]
 
-//   #g-subquestion()[$(-5) dot (-8)$=]
-//   #v(1fr)
+#question(points:1)[Realiza la siguiente división (saca 1 decimal) e indica el cociente y el resto:]
 
-//   #g-subquestion()[$(-15) : (+3)$=]
-//   #v(1fr)
+  $display("648" colon "3,2"=)$ 
+  #v(1fr)
 
-//   #g-subquestion()[$(-14):(-2)$=]
-//   #v(1fr)
+#question(points:1)[Haz la descomposición factorial de 180 y 135:]
+  #v(0.5cm)
+    #stack(
+      dir:ltr,
+      spacing:1cm,
+      [ ],
+      grid(
+        columns: (0.65cm, 2cm),
+        rows: (1cm,4cm),
+        stroke: (x, y) => if x == 0 {
+          (right: (
+            thickness: 1pt,
+          ))
+        },
+        [180],[]
+        
+      ),
+      grid(
+        columns: (0.65cm, 2cm),
+        rows: (1cm,4cm),
+        stroke: (x, y) => if x == 0 {
+          (right: (
+            thickness: 1pt,
+          ))
+        },
+        [135],[]
+        
+      ), 
+    )
+    #h(1cm) 180 = #h(2.8cm) 135=
 
-//   #g-subquestion()[$(-25) : (-5)$=]
-//   #v(1fr)
+#v(0.5cm)
 
-// #pagebreak()
+#pagebreak()
 
-// #g-question(point:2)[Realiza las siguientes operaciones combinadas:]
+#question(points:1.8)[Realiza las siguientes operaciones combinadas:]
 
-//   #g-subquestion()[$(-5) dot (-7) + (-4) dot 3 - 4 dot 7$=]
-//   #v(1fr)
+  #subquestion()[$display(21 + 35 colon (-7)-2 dot (-6))$=]
+  #v(1fr)
 
-//   // #g-subquestion()[$(-16) : (4) + (-5) dot 2 - 12 : (-4)$=]
-//   // #v(1fr)
+  #subquestion()[$display(3^2 + 8 - 3  dot (sqrt(81) - sqrt(16)))$=]
+  #v(1fr)
 
-//   #g-subquestion()[$2 dot (7 - 8) + 5 dot (8 - 10)$=]
-//   #v(1fr)
+  #subquestion()[$display("13,594" - "1,37" dot "6,2")$=]
+  #v(1fr)
 
-//   #g-subquestion()[$22 - (-4) dot [6 - (-3)]$=]
-//   #v(1fr)
+#pagebreak()
 
-// #pagebreak()
+#question(points:2)[Marta va al supermercado y compra 6 bricks de leche a $1,05€$; la unidad, una caja de galletas que vale $1,59€$, queso semicurado que vale $4,33€$ y una bolsa de almendras naturales que valen $2,15€$.]
 
-// #g-question(point:1)[Resuelve las siguientes operaciones:]
+#subquestion()[Expresa mediante una operación combinado cuanto se gasta.]
+#v(1fr)
 
-//   #g-subquestion()[$(-3)^2$=]
-//   #v(1fr)
+#subquestion()[Calcula cuanto se gasta, evaluando la operación combinada del apartado anterior.]
+#v(2fr)
 
-//   #g-subquestion()[$(-3)^3$=]
-//   #v(1fr)
+#subquestion()[Si paga con un billete de $20€$. Expresa mediante una operación combinada cuanto le devuelven.]
+#v(1fr)
 
-//   #g-subquestion()[$sqrt(25)$=]
-//   #v(1fr)
-
-//   #g-subquestion()[$sqrt(-25)$=]
-//   #v(1fr)
-
-//   #g-subquestion()[$(-12)^6 : (-12)^5$=]
-//   #v(1fr)
-
-//   #g-subquestion()[$[(-59)^25]^0$=]
-//   #v(1fr)
-
-// #g-question(point:2)[Hoy a las seis de la mañana hacia tres grados bajo cero de temperatura, si en las siguientes cuatro horas sube la temperatura siete grados, indica la temperatura que hace a las seis y a las diez de la mañana *utilizando números enteros*.] 
-
-// #g-subquestion()[Expresa con un *número entero* la temperatura a las tres de la mañana = ]
-// #v(0.5cm)
-
-// #g-subquestion()[Expresa con un *número entero* la cantidad que ha cambiado la temperatura = ]
-// #v(0.5cm)
-
-// #g-subquestion()[Indica la operación en línea para calcular la temperatura a las diez y expresa el resultado:]
-// #v(4fr)
+#subquestion()[Calcula cuanto se gasta, evaluando la operación combinada del apartado anterior.]
+#v(2fr)

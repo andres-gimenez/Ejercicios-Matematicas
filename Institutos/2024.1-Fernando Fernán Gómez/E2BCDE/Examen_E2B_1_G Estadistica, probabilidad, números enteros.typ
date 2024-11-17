@@ -1,9 +1,5 @@
 #import "@local/g-exam:0.4.1": *
 
-// #set text(font:"OpenDyslexic")
-// #set text(font: "New Computer Modern")
-// #set text(font:"Linux Libertine")
-
 #show: g-exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
@@ -34,14 +30,10 @@
   (
     [Han de aparecer todas las operaciones en la resolución de los ejercicios para que estos se consideren correctos.],
     [Se puede utilizar calculadoras],
-    [No se puede utilizar ni móvil ni la calculadora del móvil.]
+    [No se puede utilizar ni móvil ni la calculadora del móvil.],
+    [El hablar en clase sin causa justificada llevara la disminución de la nota del examen.]
   )
 )
-
-// #text(font: "Linux Libertine", style: "italic")[Italic]
-// #set text(font:"Linux Libertine", style: "italic")
-// #set text(font:"Open Dyslexic")
-// #set text(font:"OpenDyslexic")
 
 // #set math.cases(reverse: true)
 
