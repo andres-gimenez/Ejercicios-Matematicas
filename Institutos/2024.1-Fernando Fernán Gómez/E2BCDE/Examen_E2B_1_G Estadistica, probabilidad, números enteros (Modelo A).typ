@@ -70,7 +70,8 @@ este nos dice que tienen una probabilidad de 1,1 de ganar el partido. ¿Qué pod
 ))
 ]
 
-#subquestion(points:1)[Clasifica el carácter estadístico estudiado y termina la siguiente tabla de frecuencias absoluta y relativa]
+#subquestion(points:1)[Clasifica el carácter estadístico estudiado y termina la siguiente tabla de frecuencias absoluta y relativa
+#v(0.8cm)
 #align(center,
   table(
     fill: (x, y) =>
@@ -87,6 +88,7 @@ este nos dice que tienen una probabilidad de 1,1 de ganar el partido. ¿Qué pod
     [4], [], [], [],
     [5], [], [], [],
 ))
+]
 
 #subquestion(points:1)[Representa los datos en un diagrama de barras.]
 #v(1fr)
