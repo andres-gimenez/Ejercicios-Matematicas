@@ -36,17 +36,7 @@
 )
 
 // #set math.cases(reverse: true)
-
-#question(points:0.5)[En cierta marca de bombillas, la probabilidad de fabricar una bombilla defectuosa es de 0,04. 
-¿Si escogemos una bombilla al azar, que probabilidad hay de que esta bombilla funcione?]
-#v(1fr)
-
-#question(points:0.5)[Al preguntar al entrenador del equipo local sobre la probabilidad de ganar el próximo partido, 
-este nos dice que tienen una probabilidad de 1,1 de ganar el partido. ¿Qué podemos afirmar sobre lo que ha dicho?]
-#v(1fr)
-
-#pagebreak()
-#question(points:1)[En el estuche, tenemos 3 rotuladores rojos, 2 azules, 4 verdes y 1 negro. Si sacamos un rotulador al azar que probabilidad hay de que:]
+#question(points:2)[En el estuche, tenemos 3 rotuladores rojos, 2 azules, 4 verdes y 1 negro. Si sacamos un rotulador al azar que probabilidad hay de que:]
 
 #subquestion[El rotulador sea azul.]
 #v(1fr)
@@ -71,7 +61,7 @@ este nos dice que tienen una probabilidad de 1,1 de ganar el partido. ¿Qué pod
 ))
 ]
 
-#subquestion(points:1)[Clasifica el carácter estadístico estudiado y termina la siguiente tabla de frecuencias absoluta y relativa
+#subquestion(points:1.33)[Clasifica el carácter estadístico estudiado y termina la siguiente tabla de frecuencias absoluta y relativa
 #v(0.8cm)
 #align(center,
   table(
@@ -91,16 +81,16 @@ este nos dice que tienen una probabilidad de 1,1 de ganar el partido. ¿Qué pod
 ))
 ]
 
-#subquestion(points:1)[Representa los datos en un diagrama de barras.]
+#subquestion(points:1.33)[Representa los datos en un diagrama de barras.]
 #v(1fr)
 #pagebreak()
 
-#subquestion(points:1)[Calcula la media, la moda y la mediana si tienen sentido calcularla.]
+#subquestion(points:1.34)[Calcula la media, la moda y la mediana si tienen sentido calcularla.]
 #v(1fr)
 
 #pagebreak()
 
-#question(points:1)[Expresa como una única potencia:]
+#question(points:1.5)[Expresa como una única potencia:]
 #subquestion[$display((-54)^86 dot (-54)^15)$=]
 #v(1fr)
 #subquestion[$display((-2)^125 dot (-3)^125)$=]
@@ -110,16 +100,16 @@ este nos dice que tienen una probabilidad de 1,1 de ganar el partido. ¿Qué pod
 #subquestion[$display((-2)^125 colon (-3)^125)$=]
 #v(1fr)
 
+// #pagebreak()
+
+// #question(points:2)[Realiza la siguiente operación combinada con números enteros (indicando todos los pasos):]
+// \ \
+// $display(3 dot (4-1) + (2^2 - 5)^2 dot  (1-7) - root(3, 5 dot (5 - 30)))$=
+
+// #v(3fr)
+
 #pagebreak()
 
-#question(points:2)[Realiza la siguiente operación combinada con números enteros (indicando todos los pasos):]
-\ \
-$display(3 dot (4-1) + (2^2 - 5)^2 dot  (1-7) - root(3, 5 dot (5 - 30)))$=
-
-#v(3fr)
-
-#pagebreak()
-
-#question(points:2)[Realiza la siguiente operación combinada con fracciones (indicando todos los pasos):]
+#question(points:2.5)[Realiza la siguiente operación combinada con fracciones (indicando todos los pasos):]
 \ \ 
 $display(2/5 - (5/4 - 2) colon (3/4 - 7/6) + 3/2)$ =
