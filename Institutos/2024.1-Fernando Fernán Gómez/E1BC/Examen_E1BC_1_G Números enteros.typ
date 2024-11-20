@@ -156,13 +156,13 @@
 
 #question(points:1.8)[Realiza las siguientes operaciones combinadas:]
 
-  #subquestion()[$display(21 + 35 colon (-7)-2 dot (-6))$=]
+  #subquestion()[$display(21 + 35 colon (-7)-2 dot (-6))$=]  // 28
   #v(1fr)
 
-  #subquestion()[$display(3^2 + 8 - 3  dot (sqrt(81) - sqrt(16)))$=]
+  #subquestion()[$display(3^2 + 8 - 3  dot (sqrt(81) - sqrt(16)))$=]  // 2
   #v(1fr)
 
-  #subquestion()[$display("13,594" - "1,37" dot "6,2")$=]
+  #subquestion()[$display("13,594" - "1,37" dot "6,2")$=]  // 5,1
   #v(1fr)
 
 #pagebreak()
@@ -172,11 +172,11 @@
 #subquestion()[Expresa mediante una operación combinado cuanto se gasta.]
 #v(1fr)
 
-#subquestion()[Calcula cuanto se gasta, evaluando la operación combinada del apartado anterior.]
+#subquestion()[Calcula cuanto se gasta, evaluando la operación combinada del apartado anterior.] //14,37
 #v(3fr)
 
 #subquestion()[Si paga con un billete de $20€$. Expresa mediante una operación combinada cuanto le devuelven.]
 #v(1fr)
 
-#subquestion()[Calcula cuanto se gasta, evaluando la operación combinada del apartado anterior.]
+#subquestion()[Calcula cuanto le devuelven, evaluando la operación combinada del apartado anterior.] // 5,63
 #v(3fr)
