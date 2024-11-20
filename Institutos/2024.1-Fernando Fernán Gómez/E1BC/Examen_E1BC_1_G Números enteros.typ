@@ -46,7 +46,7 @@
   #subquestion[$display(6 dot (-4))$ = ]
   #v(1cm)
 
-  #subquestion[$display((-17) colon (-3))$ = ]
+  #subquestion[$display((-75) colon (-3))$ = ]
   #v(1cm)
   #colbreak()
 
