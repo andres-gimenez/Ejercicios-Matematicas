@@ -1,5 +1,4 @@
-#import "@preview/cetz:0.2.1"
-#import "@local/g-exam:0.4.1": *
+#import "@preview/g-exam:0.4.1": *
 
 #show: exam.with(
   author: (
@@ -47,7 +46,7 @@
   #subquestion[$display(6 dot (-4))$ = ]
   #v(1cm)
 
-  #subquestion[$display((-17) colon (-3))$ = ]
+  #subquestion[$display((-75) colon (-3))$ = ]
   #v(1cm)
   #colbreak()
 
