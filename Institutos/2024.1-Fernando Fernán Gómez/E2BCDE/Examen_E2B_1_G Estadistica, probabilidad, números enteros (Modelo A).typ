@@ -15,7 +15,7 @@
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
     number: "Global 1º evaluación",
-    content: "Estadistica, probabilidad, números enteros y fracciones.",
+    content: "Estadística, probabilidad, números enteros y fracciones.",
     model: "Modelo A"
   ),
   

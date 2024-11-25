@@ -18,7 +18,7 @@
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
     number: "1ª evaluación - 1º examen",
-    content: "Estadistica y Probabilidad",
+    content: "Estadística y Probabilidad",
     model: "Modelo B"
   ),
   

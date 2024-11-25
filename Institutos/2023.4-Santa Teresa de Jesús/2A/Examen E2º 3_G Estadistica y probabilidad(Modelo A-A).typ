@@ -16,7 +16,7 @@
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
     number: "3º Evaluación - Global",
-    content: "Estadistica, combinatoria y probabilidad",
+    content: "Estadística, combinatoria y probabilidad",
     model: "Modelo A-A"
   ),
   
