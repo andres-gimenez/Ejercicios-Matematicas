@@ -110,7 +110,7 @@ este nos dice que tienen una probabilidad de 1,1 de ganar el partido. ¿Qué pod
 
 #question(points:2)[Realiza la siguiente operación combinada con números enteros (indicando todos los pasos):]
 \ \
-$display(3 dot (4-1) + (2^2 - 5)^2 dot  (1-7) - root(3, 5 dot (5 - 30)))$=
+$display(3 dot (4-1) + (2^2 - 5)^2 dot  (1-7) - root(3, 5 dot (5 - 30)))$=   // 8
 
 #v(3fr)
 
@@ -118,4 +118,4 @@ $display(3 dot (4-1) + (2^2 - 5)^2 dot  (1-7) - root(3, 5 dot (5 - 30)))$=
 
 #question(points:2)[Realiza la siguiente operación combinada con fracciones (indicando todos los pasos):]
 \ \ 
-$display(2/5 - (5/4 - 2) colon (3/4 - 7/6) + 3/2)$ =
+$display(2/5 - (5/4 - 2) colon (3/4 - 7/6) + 3/2)$ = // 1/ 10
