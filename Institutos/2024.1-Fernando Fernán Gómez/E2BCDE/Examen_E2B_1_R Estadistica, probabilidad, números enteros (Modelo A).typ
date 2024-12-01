@@ -4,7 +4,7 @@
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andrés",
+    watermark: "Profesor: Andrés",
   ),
   school: (
     name: "IES Fernando Fernán Gómez",
@@ -26,6 +26,9 @@
   show-grade-table: true,
   question-point-position: right,
   // question-text-parameters: (size: 16pt, spacing:120%, font:"OpenDyslexic"),
+  localization: (
+    grade-table-grade: [Calificación]
+  ),
   clarifications: 
   (
     [Han de aparecer todas las operaciones en la resolución de los ejercicios para que estos se consideren correctos.],
