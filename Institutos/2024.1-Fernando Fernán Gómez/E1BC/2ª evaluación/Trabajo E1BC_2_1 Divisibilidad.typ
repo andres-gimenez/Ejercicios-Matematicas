@@ -54,11 +54,11 @@ align: right)
 
 #pagebreak()
 
-#wrap-content(box(height:4cm, image("./Relog10horas.jpg"), inset:0.2em), 
+#wrap-content(box(height:5cm, image("./Relog10horas.jpg"), inset:0.2em), 
 [Tras el existo del sistema de medidas que fue el Sistema Métrico Decimal, basado en múltiplos de 10, hubo un intento de llevar la misma idea para medir el tiempo, estableciendo relojes de 10 horas, en la que cada hora tenía 100 minutos y cada minuto 100 segundos.
 
 Sin embargo, esta idea no tuvo tanta aceptación como el resto de medidas y se dejó de utilizar.],
-align: right)
+align: left)
 
 #question()[Para analizar porque no triunfó los relojes de 10 horas, 100 minutos y 100 segundos, sigue los siguientes pasos]
 
