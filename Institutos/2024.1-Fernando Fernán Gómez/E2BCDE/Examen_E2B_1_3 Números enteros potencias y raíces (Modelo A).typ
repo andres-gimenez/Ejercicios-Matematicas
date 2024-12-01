@@ -7,7 +7,7 @@
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andres",
+    watermark: "Profesor: andrés",
   ),
   school: (
     name: "IES Fernando Fernán Gómez",
