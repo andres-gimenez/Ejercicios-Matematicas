@@ -79,7 +79,7 @@ se están dando premios, introduciendo una marca en el reverso del tapón. Si ca
     columns: (2.5cm, 4cm,  4cm, 4cm),
     // rows: (1.2cm,)*6,
     // [$x_i$],[$n_i$], [$N_i$], [$f_i$],[$f_i$ %],[$F_i$]
-    [Valor],[F. absoluta], [F. relativa],[Porcentaje],
+    [Valor ($x_i$)],[F. absoluta ($n_i$)], [F. relativa ($f_i$)],[Porcentaje ($p_i$)],
     [11], [4], [0,19], [],
     [12], [3], [0,14], [14%],
     [13], [], [], [],
