@@ -24,13 +24,9 @@
   language: "es",
   decimal-separator: ",",
   show-student-data: "odd-pages",
-  show-student-number: 2,
+  // show-student-number: 2,
   show-grade-table: false,
   question-points-position: right,
-  clarifications:
-    ([La prueba se tendrá que hacer en grupos de dos personas, excepcionalmente de tres con permiso expreso del profesor.], 
-     [Durante la realización de la prueba, se evaluará la capacidad de trabajo en equipo de los alumnos, la colaboración entre ellos y la corrección del trabajo.],
-     [En caso de que el trabajo realizado por los alumnos, no sea equitativo, se podrán poner calificaciones diferentes a los miembros del equipo.])
 )
 
 #set math.cases(reverse: true)
@@ -80,20 +76,20 @@
 //     #subquestion[$display((17^6)/(17^5))=$]
 // ]
 
-#question[Realiza las siguientes operaciones combinadas:]
+// #question[Realiza las siguientes operaciones combinadas:]
 
-#subquestion[$display(5 dot (4 + 2) - 3 dot (4 - 2))=$]
-#v(1fr)
-#subquestion[$display(5 dot (3 - 5) + 6 dot (5 - 12))=$]
-#v(1fr)
-#subquestion[$display(3 dot (7 - 5) - (5 - 3) dot (3+6))=$]
-#v(1fr)
+// #subquestion[$display(5 dot (4 + 2) - 3 dot (4 - 2))=$]
+// #v(1fr)
+// #subquestion[$display(5 dot (3 - 5) + 6 dot (5 - 12))=$]
+// #v(1fr)
+// #subquestion[$display(3 dot (7 - 5) - (5 - 3) dot (3+6))=$]
+// #v(1fr)
 
-#pagebreak()
+// #pagebreak()
 
-#subquestion[$display(15 dot (3 - 5)^2 + 4 dot sqrt(12 - 3))=$]
-#v(1fr)
-#subquestion[$display([(3 - 2) dot (4 + 2) + 2 dot 6] dot 3)=$]
-#v(1fr)
-#subquestion[$display(5 dot 4 - (7 - 1) dot 5 + 15:(-3))=$]
-#v(1fr)
+// #subquestion[$display(15 dot (3 - 5)^2 + 4 dot sqrt(12 - 3))=$]
+// #v(1fr)
+// #subquestion[$display([(3 - 2) dot (4 + 2) + 2 dot 6] dot 3)=$]
+// #v(1fr)
+// #subquestion[$display(5 dot 4 - (7 - 1) dot 5 + 15:(-3))=$]
+// #v(1fr)
