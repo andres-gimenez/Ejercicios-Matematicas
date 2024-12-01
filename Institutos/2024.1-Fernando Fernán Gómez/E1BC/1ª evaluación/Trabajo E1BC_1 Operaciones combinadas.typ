@@ -11,14 +11,16 @@
     logo:image("./logo-ies_fernando_fernan_gomez.png")
   ),
   exam-info: (
-    academic-period: "Curso 2023/2024",
+    academic-period: "Curso 2024/2025",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
     number: "1º evaluación - Trabajo en equipo",
     content: "Operaciones combinadas",
     // model: "Modelo A"
   ),
-  
+  localization: (
+    grade-table-grade: [Calificación]
+  ),
   language: "es",
   decimal-separator: ",",
   show-student-data: "odd-pages",
