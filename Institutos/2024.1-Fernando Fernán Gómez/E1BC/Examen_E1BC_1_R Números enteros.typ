@@ -4,7 +4,7 @@
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andres",
+    watermark: "Profesor: Andrés",
   ),
   school: (
     name: "IES Fernando Fernán Gómez",
@@ -43,20 +43,20 @@
 #question(points:1.2)[Realiza las siguientes operaciones:]
 
 #columns(2)[
-  #subquestion[$display(53 - 17 + 3)$ = ]
+  #subquestion[$display(48 - 15 + 8)$ = ]
   #v(1cm)
 
-  #subquestion[$display(6 dot (-4))$ = ]
+  #subquestion[$display(7 dot (-3))$ = ]
   #v(1cm)
 
-  #subquestion[$display((-75) colon (-3))$ = ]
+  #subquestion[$display((-52) colon (-4))$ = ]
   #v(1cm)
   #colbreak()
 
-  #subquestion[$display(-15 colon 3 dot (-4))$ = ]
+  #subquestion[$display(-15 + 3 dot (-4))$ = ]
   #v(1cm)
 
-  #subquestion[$display((-3)^3)$ = ]
+  #subquestion[$display((-4)^3)$ = ]
   #v(1cm)
 
   #subquestion[$display((-2)^4)$ = ]
@@ -65,21 +65,21 @@
 
 #question(points:1)[Aplicando las propiedades de las potencias, expresa como una sola potencia:]
 #columns(2)[
-  #subquestion[$display(7^3 dot 7^5)$ = ]
+  #subquestion[$display(13^3 dot 13^5)$ = ]
   #v(1cm)
 
-  #subquestion[$display(4^7 colon 4^4)$ = ]
+  #subquestion[$display(6^7 colon 6^4)$ = ]
   #v(1cm)
 
-  #subquestion[$display((6^4)^3)$ = ]
+  #subquestion[$display((3^5)^4)$ = ]
   #v(1cm)
 
   #colbreak()
 
-  #subquestion[$display(2^3 dot 5^3)$ = ]
+  #subquestion[$display(3^5 dot 7^5)$ = ]
   #v(1cm)
 
-  #subquestion[$display(12^3 colon 4^3)$ = ]
+  #subquestion[$display(12^7 colon 3^7)$ = ]
   #v(1cm)
 ]
 
@@ -91,9 +91,9 @@
       if(y == 0) { luma(230) },
     columns: (3cm, 3cm,  3cm, 3cm),
     [],[Número], [Truncamiento], [Redondeo],
-    [a la milésima],  [$"6,3256"$], [], [],
-    [a la décima],    [$"13,71"$], [], [],
-    [a la centésima], [$"9,876"$], [], [],
+    [a la milésima],  [$"5,2236"$], [], [],
+    [a la décima],    [$"26,33"$], [], [],
+    [a la centésima], [$"3,366"$], [], [],
 ))
 
 #pagebreak()
@@ -101,24 +101,24 @@
 #question(points:1)[Calcula mentalmente:]
 
 #columns(2)[
-  #subquestion[$display("67,942" dot "100")$ =]
+  #subquestion[$display("52,142" dot "100")$ =]
   #v(1cm)
 
-  #subquestion[$display("0,072" colon "1000")$ =]
+  #subquestion[$display("0,035" colon "1000")$ =]
   #v(1cm)
 
   #colbreak()
   
-  #subquestion[$display("0,032" dot "100")$ = ]
+  #subquestion[$display("0,057" dot "100")$ = ]
   #v(1cm)
 
-  #subquestion[$display("412,9" colon "100")$ = ]
+  #subquestion[$display("327,2" colon "100")$ = ]
   #v(1cm)
 ]
 
 #question(points:1)[Realiza la siguiente división (saca 1 decimal) e indica el cociente y el resto:]
 
-  $display("648" colon "3,2"=)$ 
+  $display("8,46" colon "2,9"=)$ 
   #v(1fr)
 
 #question(points:1)[Haz la descomposición factorial de 180 y 135:]
@@ -135,7 +135,7 @@
             thickness: 1pt,
           ))
         },
-        [180],[]
+        [288],[]
         
       ),
       grid(
@@ -146,11 +146,11 @@
             thickness: 1pt,
           ))
         },
-        [135],[]
+        [150],[]
         
       ), 
     )
-    #h(1cm) 180 = #h(2.8cm) 135=
+    #h(1cm) 288 = #h(2.8cm) 150=
 
 #v(0.5cm)
 
@@ -158,18 +158,18 @@
 
 #question(points:1.8)[Realiza las siguientes operaciones combinadas:]
 
-  #subquestion()[$display(21 + 35 colon (-7)-2 dot (-6))$=]
+  #subquestion()[$display(12 + 25 colon (-5) - 3 dot (-4))$=]
   #v(1fr)
 
-  #subquestion()[$display(3^2 + 8 - 3  dot (sqrt(81) - sqrt(16)))$=]
+  #subquestion()[$display(5^2 + 2 - 3  dot (sqrt(4) - sqrt(25)))$=]
   #v(1fr)
 
-  #subquestion()[$display("13,594" - "1,37" dot "6,2")$=]
+  #subquestion()[$display("1,24" - "1,21" dot "3,1")$=]
   #v(1fr)
 
 #pagebreak()
 
-#question(points:2)[Marta va al supermercado y compra 6 bricks de leche a $1,05€$; la unidad, una caja de galletas que vale $1,59€$, queso semicurado que vale $4,33€$ y una bolsa de almendras naturales que valen $2,15€$.]
+#question(points:2)[Marta va al supermercado y compra 5 paquetes de lentejas a $2,02€$; cada paquete, una caja de galletas que vale $1,39€$, queso semicurado que vale $5,23€$ y una bolsa de almendras naturales que valen $3,15€$.]
 
 #subquestion()[Expresa mediante una operación combinado cuanto se gasta.]
 #v(1fr)
@@ -180,5 +180,5 @@
 #subquestion()[Si paga con un billete de $20€$. Expresa mediante una operación combinada cuanto le devuelven.]
 #v(1fr)
 
-#subquestion()[Calcula cuanto se gasta, evaluando la operación combinada del apartado anterior.]
+#subquestion()[Calcula cuanto le devuelven, evaluando la operación combinada del apartado anterior.]
 #v(3fr)
