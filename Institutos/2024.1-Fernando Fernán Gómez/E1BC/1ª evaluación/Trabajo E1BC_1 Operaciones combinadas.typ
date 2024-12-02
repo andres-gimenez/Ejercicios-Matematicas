@@ -1,10 +1,10 @@
-#import "@preview/g-exam:0.4.0": *
+#import "@preview/g-exam:0.4.1": *
 
 #show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andrés",
+    watermark: "Profesor: Andrés",
   ),
   school: (
     name: "IES Fernando Fernán Gómez",
