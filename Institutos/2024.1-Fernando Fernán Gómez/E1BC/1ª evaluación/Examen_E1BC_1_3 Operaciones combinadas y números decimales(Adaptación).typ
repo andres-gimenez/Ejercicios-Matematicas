@@ -8,7 +8,7 @@
   ),
   school: (
     name: "IES Fernando Fernán Gómez",
-    logo:image("../logo-ies_fernando_fernan_gomez.png")
+    logo:image("../../logo-ies_fernando_fernan_gomez.png")
   ),
   exam-info: (
     academic-period: "Curso 2024/2025",
