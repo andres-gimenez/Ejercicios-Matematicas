@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.0": *
+#import "@preview/g-exam:0.4.1": *
 
 #show: exam.with(
   author: (
@@ -12,7 +12,7 @@
   ),
   exam-info: (
     academic-period: "Curso 2024/2025",
-    academic-level: "1º ESO",
+    academic-level: "2º ESO",
     academic-subject: "Matemáticas",
     number: "2ª evaluación - Ficha 1",
     content: "Operaciones combinadas",
