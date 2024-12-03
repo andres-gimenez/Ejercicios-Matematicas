@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.1": *
+#import "@preview/g-exam:0.4.2": *
 
 #show: g-exam.with(
   author: (
@@ -26,9 +26,6 @@
   show-grade-table: true,
   question-point-position: right,
   question-text-parameters: (size: 16pt, spacing:120%, font:"OpenDyslexic"),
-  localization: (
-    grade-table-grade: [Calificación]
-  ),
   clarifications: 
   (
     [Han de aparecer todas las operaciones en la resolución de los ejercicios para que estos se consideren correctos.],
