@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.1": *
+#import "@preview/g-exam:0.4.2": *
 #import "@preview/wrap-it:0.1.0": wrap-content
 
 

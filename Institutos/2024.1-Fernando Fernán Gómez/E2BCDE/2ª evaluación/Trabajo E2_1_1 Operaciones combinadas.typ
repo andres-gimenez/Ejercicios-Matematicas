@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.1": *
+#import "@preview/g-exam:0.4.2": *
 
 #show: exam.with(
   author: (
@@ -17,9 +17,6 @@
     number: "2ª evaluación - Ficha 1",
     content: "Operaciones combinadas",
     // model: "Modelo A"
-  ),
-  localization: (
-    grade-table-grade: [Calificación]
   ),
   language: "es",
   decimal-separator: ",",
