@@ -30,8 +30,23 @@
 
 #set math.cases(reverse: true)
 
-#question(points:2)[Efectua las siguientes operaciones:]
+#question(points:1)[Efectúa las siguientes operaciones con notación científica:]
 
+#subquestion()[$display("3,2" dot 10^(18) + "2,8" dot 10^(17))$=]
+#v(1fr)
+
+#subquestion()[$display("5,8" dot 10^(-32) - "2,4" dot 10^(-33))$=]
+#v(1fr)
+
+#subquestion()[$display("1,5" dot 10^(7) dot "3,2" dot 10^(-2))$=]
+#v(1fr)
+
+#pagebreak()
+
+#question()[Un fabricante de piezas de automóvil tiene tiene un contrato en el que las piezas que fabrica tienen que tener menos de un error relativo de $3 dot 10^(-4)$ metros. Al relizar las pruebas de calidad, una pieza que ha de medir $3dot 10^(-3)$ metros, mide $3,2 dot 10^(-3)$ metros. ¿Está la pieza dentro de los margenes de calidad que se le exige? ]
+
+
+#question()[]
 // #subquestion[$display((-12) + (+30) - (-10) + (32) - (+17) - (-23))$ = ] // 66
 // #v(2fr)
 
