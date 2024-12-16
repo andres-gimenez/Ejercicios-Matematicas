@@ -54,7 +54,7 @@
 
 #pagebreak()
 
-
+#question(points:2)[Para una ong tengo que comprar 120 galletas de chocolate y 108 galletas de fresa. ¿Cuál es el mínimo número de cajas de cada sabor que debo comprar para tener el mismo número de galletas de los dos sabores?]
 
 // #question(points:1)[Indica dos números decimales distintos entre $3,6$ y $3,7$.]
 //   #v(2fr)

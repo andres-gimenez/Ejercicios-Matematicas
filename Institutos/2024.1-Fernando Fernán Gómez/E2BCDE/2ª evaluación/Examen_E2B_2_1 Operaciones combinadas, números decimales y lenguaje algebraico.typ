@@ -15,7 +15,7 @@
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
     number: "2ª evaluación - 1º examen",
-    content: "Operaciones combinadas, números decimales y lenguaje algebraico.",
+    content: "Operaciones combinadas, números decimales y lenguaje algebraico",
     model: "Modelo A"
   ),
   
@@ -30,69 +30,55 @@
 
 #set math.cases(reverse: true)
 
-#question(points:1)[Efectúa las siguientes operaciones con notación científica:]
+#question()[Efectúa las siguientes operaciones con notación científica:]
 
-#subquestion()[$display("3,2" dot 10^(18) + "2,8" dot 10^(17))$=]
+#subquestion(points:0.5)[$display("3,2" dot 10^(18) + "2,8" dot 10^(17))$=]
 #v(1fr)
 
-#subquestion()[$display("5,8" dot 10^(-32) - "2,4" dot 10^(-33))$=]
+#subquestion(points:0.5)[$display("5,8" dot 10^(-32) - "2,4" dot 10^(-33))$=]
 #v(1fr)
 
-#subquestion()[$display("1,5" dot 10^(7) dot "3,2" dot 10^(-2))$=]
+#subquestion(points:0.5)[$display("1,5" dot 10^(7) dot "3,2" dot 10^(-2))$=]
+#v(1fr)
+
+#subquestion(points:0.5)[$display("1,2" dot 10^(4) + "1,7" dot 10 ^6 dot "3,2" dot 10^(-2))$=]
+#v(1fr)
+#pagebreak()
+
+#question(points:2)[Un fabricante de piezas de automóvil tiene un contrato en el que las piezas que ha de fabricar tienen que tener menos de un error relativo de $3 dot 10^(-4)$ metros. Al realizar las pruebas de calidad, una pieza que ha de medir $3,1 dot 10^(-3)$ metros, mide $3,2 dot 10^(-3)$ metros. ¿Está la pieza dentro de los márgenes de calidad que se le exige?]
+#v(1fr)
+#pagebreak()
+
+#question()[Siendo el polinomio $P(x)= 2x^3 - 3x^2 + x-5$, calcula:]
+#subquestion(points:0.75)[$display(P(1))=$]
+#v(1fr)
+
+#subquestion(points:0.75)[$display(P(1/2))=$]
+#v(1fr)
+
+#subquestion(points:0.75)[$display(P(-1))=$]
+#v(1fr)
+
+#subquestion(points:0.75)[$display(P(2))=$]
 #v(1fr)
 
 #pagebreak()
+#question()[Reduce todo lo que se pueda las siguientes expresiones algebraicas:]
 
-#question()[Un fabricante de piezas de automóvil tiene tiene un contrato en el que las piezas que fabrica tienen que tener menos de un error relativo de $3 dot 10^(-4)$ metros. Al relizar las pruebas de calidad, una pieza que ha de medir $3dot 10^(-3)$ metros, mide $3,2 dot 10^(-3)$ metros. ¿Está la pieza dentro de los margenes de calidad que se le exige? ]
+#subquestion(points:0.5)[$display(5x - (3x^3 + 2x^2 - 5x - 2))$=]
+#v(2fr)
 
+#subquestion(points:0.5)[$display((3x + 2) - (-5x^3 - x^2 + 5x - 7))$=]
+#v(2fr)
 
-#question()[]
-// #subquestion[$display((-12) + (+30) - (-10) + (32) - (+17) - (-23))$ = ] // 66
-// #v(2fr)
+#subquestion(points:0.5)[$display(3x dot 5x^5)$=]
+#v(1fr)
 
-// #subquestion[$display(abs(-35) + abs(+35) - abs(12 - 15) + (-35))$ = ]  // 32
-// #v(2fr)
+#subquestion(points:0.5)[$display(140x^14 : 20x^2)$=]
+#v(1fr)
 
-// #question(points: 2)[Expresa como una única potencia:]
-// #subquestion[$display((-8)^4 dot (-8)^7)$ = ]
-// #v(1fr)
+#subquestion(points:0.5)[$display((3x^5)^3)$=]
+#v(1fr)
 
-// #subquestion[$display((-62)^6 dot (-62)^4)$ = ]
-// #v(1fr)
-
-// #subquestion[$display((-5)^9 dot (+6)^9)$ = ]
-// #v(1fr)
-
-// #subquestion[$display([(-12)^8]^3)$ = ]
-// #v(1fr)
-
-// #pagebreak()
-
-// #question(points: 2)[Calcula el valor exacto de las siguientes expresiones con raíces:]
-// #subquestion[$display(sqrt(3600))$ = ]
-// #v(1fr)
-
-// #subquestion[$display(sqrt(1296))$ = ]
-// #v(1fr)
-
-// #subquestion[$display(root(3, -27))$ = ]
-// #v(1fr)
-
-// #subquestion[$display(sqrt(10) dot sqrt(14) dot sqrt(35))$ = ]
-// #v(1fr)
-
-// #question(points: 2)[Resuelve la siguiente expresión:]
-
-// \
-
-// $display((6^2 dot (5^3)^5 dot 6^8)/(15^4 dot (10^5)^2 dot 3^6))=$  // 5
-// #v(2fr)
-
-// #pagebreak()
-// #question(points: 2)[Resuelve las siguientes operaciones combinadas:]
-
-// #subquestion[$display(12 dot (2^3 - 5)^2 + 3 dot sqrt(12 - 3))=$]  // 117
-// #v(1fr)
-
-// #subquestion[$display([(2 - 3)^2 dot (4 + 3) + 2 dot 6] dot 3)=$]  // 57
-// #v(1fr)
+#subquestion(points:0.5)[$display((2x^3)^2) dot 5 x^6$=]
+#v(1fr)
