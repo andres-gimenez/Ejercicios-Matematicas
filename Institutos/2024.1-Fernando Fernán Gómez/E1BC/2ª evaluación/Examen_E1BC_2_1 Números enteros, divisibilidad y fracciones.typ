@@ -21,99 +21,70 @@
   
   language: "es",
   decimal-separator: ",",
-  date: datetime(year: 2024, month: 12, day: 10),
+  date: datetime(year: 2024, month: 12, day: 17),
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
-  question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
+  // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
 
 #set math.cases(reverse: true)
 
 
-#question(points:2)[Simplifica las siguientes fracciones a la fracción irreducible.]
+#question()[Simplifica las siguientes fracciones a la fracción irreducible:]
 
-#subquestion()[$display(200/450)$=]
+#subquestion(points:0.5)[$display(200/450)$=]
 #v(1fr)
 
-#subquestion()[$display(150/210)$=]
+#subquestion(points:0.5)[$display(150/210)$=]
 #v(1fr)
 
-#pagebreak()
-
-#question(points:2)[Resuelve las siguientes operaciones con fracciones, expresando el resultado con una fracción irreducible.]
-
-#subquestion()[$display(5/2+3/7)$=]
+#subquestion(points:0.5)[$display(1800/840)$=]
 #v(1fr)
 
-#subquestion()[$display(12/4+6/6)$=]
-#v(1fr)
-
-#subquestion()[$display(5/8+ 7/12)$=]
+#subquestion(points:0.5)[$display(462/154)$=]
 #v(1fr)
 
 #pagebreak()
 
-#question(points:2)[Para una ong tengo que comprar 120 galletas de chocolate y 108 galletas de fresa. ¿Cuál es el mínimo número de cajas de cada sabor que debo comprar para tener el mismo número de galletas de los dos sabores?]
+#question()[Indica si las siguientes fracciones son equivalentes, mostrando las operaciones realizadas:]
 
-// #question(points:1)[Indica dos números decimales distintos entre $3,6$ y $3,7$.]
-//   #v(2fr)
+#subquestion(points:0.5)[$display(324/215)$ y $display(108/70)$]
+#v(1fr)
 
-// // #question(points:0.5)[Indica dos números decimales distintos entre $-5,3$ y $-5,2$.]
-// //   #v(1fr)
+#subquestion(points:0.5)[$display(252/462)$ y $display(6/11)$]
+#v(1fr)
 
-// #question(points:2)[Realiza las siguientes operaciones, indicando las operaciones realizadas al margen:]
-// #subquestion[$display("8,32" times "4,23" + "5,3322")$=]
-// #v(3fr)
+#subquestion(points:0.5)[$display(150/50)$ y $display(50/150)$]
+#v(1fr)
 
-// #subquestion[$display("5,42" times ("2,36" - "5,33"))$=]
-// #v(3fr)
+#subquestion(points:0.5)[$display(37/22)$ y $display(74/66)$]
+#v(1fr)
 
-// #pagebreak()
+// #question(points:2)[Resuelve las siguientes operaciones con fracciones, expresando el resultado con una fracción irreducible.]
 
-// #question(points: 2)[Indica el valor de las siguientes operaciones con números decimales:]
-
-// #subquestion[$display((2,3)^2)$=]
+// #subquestion()[$display(5/2+3/7)$=]
 // #v(1fr)
 
-// #subquestion[$display((0,2)^2)$=]
+// #subquestion()[$display(12/4+6/6)$=]
 // #v(1fr)
 
-// #subquestion[$display("1432,435" dot 100)$=]
+// #subquestion()[$display(5/8+ 7/12)$=]
 // #v(1fr)
 
-// // #subquestion[$display("536,233254" : 1000)$=]
-// // #v(1fr)
+#pagebreak()
 
-// #subquestion[$(-10)^8$=]
+#question(points:2)[Calcula el máximo común múltiplo y mínimo común divisor de $1.800$, $220$ y $616$.]
+#v(1fr)
+
+#question(points:2)[Para una ONG tengo que comprar 120 galletas de chocolate y 108 galletas de fresa. ¿Cuál es el mínimo número de cajas de cada sabor que debo comprar para tener el mismo número de galletas de los dos sabores?]
+#v(1fr)
+
+
+// #question(points:2)[Un grupo de amigos va a correr alrededor de una pista. Carlos tarda 12 minutos en dar una vuelta completa, mientras que Ana tarda 18 minutos y Pedro tarda 24 minutos en completar la misma vuelta.
+
+// Si comienzan a correr al mismo tiempo desde el mismo punto, ¿cuántos minutos pasarán hasta que los tres amigos vuelvan a encontrarse en el punto de partida al mismo tiempo?]
 // #v(1fr)
 
-// #pagebreak()
-// #question(points: 3)[Realiza las siguientes operaciones combinadas:
-
-// $display(5 dot 6 + 3 dot 8 - 5 dot 2 =)$
-// ]
-
-// // #subquestion[$display(3 dot (5-2) + 5 dot (4-8) - 4 dot (6 - 10))$=]
-// // #v(1fr)
-
-// // #subquestion[$display(5 dot (-2+4) - 7 dot (-8+2) - 4 dot (5 - 3))$=]
-// #v(1fr)
-
-// // #subquestion[$display((2 - 3) dot (-4+2) - (-3+1)^2 - 5 dot (4 - 3))$=]
-// // #v(1fr)
-
-// // #subquestion[$display(sqrt(5 - 1) + (3-1)^2 + 5 dot (1 - 2))$=]
-// // #v(1fr)
-
-// #pagebreak()
-
-// #question(points:2)[En un tarro de cristal hay 30 bolas, Marta saca 10 bolas, 
-// Juan saca el doble que Marta y Pablo mete cinco veces tres bolas. 
-// ¿Cuantas bolas quedan en el tarro?]
-
-// // #subquestion[Indica las bolas que quedan en el tarro, mediante una opareción combinada. (Deberán aparecer todas las operaciones en una sola línea.)]
-// // #v(3cm)
-
-// // #subquestion[Resuelve la operación combinada del apartado anterior e indica cuantas bolas quedan en el tarro.]
-// // #v(1fr)
+#question(points:2)[Queremos montar unas pulseras y disponemos de 56 cuentas azules, 28 amarillas y 42 rojas. ¿Cuántas cuentas de cada color tenemos que poner en cada pulsera para que sean todas las pulseras igual y tener el máximo de cuentas posibles en cada una de ellas?]
+#v(1fr)
