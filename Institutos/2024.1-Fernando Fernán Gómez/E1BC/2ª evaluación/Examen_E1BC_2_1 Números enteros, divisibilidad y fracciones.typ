@@ -74,7 +74,7 @@
 
 #pagebreak()
 
-#question(points:2)[Calcula el máximo común múltiplo y mínimo común divisor de $1.800$, $220$ y $616$.]
+#question(points:2)[Calcula el mínimo común múltiplo y máximo común divisor de $1.800$, $220$ y $616$.]
 #v(1fr)
 
 #question(points:2)[Para una ONG tengo que comprar 120 galletas de chocolate y 108 galletas de fresa. ¿Cuál es el mínimo número de cajas de cada sabor que debo comprar para tener el mismo número de galletas de los dos sabores?]
