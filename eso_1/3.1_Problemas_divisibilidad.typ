@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.3.2": *
+#import "@preview/g-exam:0.4.2": *
 
 // #set text(font:"OpenDyslexic")
 // #set text(font: "New Computer Modern")
@@ -14,7 +14,7 @@
     // logo:image("../../logo-ies_fernando_fernan_gomez.png")
   ),
   exam-info: (
-    academic-period: "Curso 2023/2024",
+    academic-period: "Curso 2024/2025",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
     number: "1º Evaluación",
