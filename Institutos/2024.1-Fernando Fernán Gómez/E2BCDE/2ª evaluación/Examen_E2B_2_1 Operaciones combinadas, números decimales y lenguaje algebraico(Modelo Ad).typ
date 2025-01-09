@@ -45,7 +45,7 @@
 #v(1fr)
 #pagebreak()
 
-#question(points:2)[Un fabricante de piezas de automóvil tiene un contrato en el que las piezas que ha de fabricar tienen que tener menos de un error relativo de $3 dot 10^(-4)$ metros. Al realizar las pruebas de calidad, una pieza que ha de medir $3,1 dot 10^(-3)$ metros, mide $3,2 dot 10^(-3)$ metros. ¿Está la pieza dentro de los márgenes de calidad que se le exige?]
+#question(points:2)[Un fabricante de piezas de automóvil tiene un contrato en el que las piezas que ha de fabricar tienen que tener menos de un error absoluto de $3 dot 10^(-4)$ metros. Al realizar las pruebas de calidad, una pieza que ha de medir $3,1 dot 10^(-3)$ metros, mide $3,2 dot 10^(-3)$ metros. ¿Está la pieza dentro de los márgenes de calidad que se le exige?]
 #v(1fr)
 #pagebreak()
 
