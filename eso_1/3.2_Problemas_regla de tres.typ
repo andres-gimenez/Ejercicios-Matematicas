@@ -129,11 +129,9 @@ Hoy 3 camiones, iguales a los de ayer, tendrán que hacer 6 viajes cada uno para
   - 6 manzanas. 
 ])
 
-Calcula los ingredientes necesarios de una tarta de manzana para 15 personas.
-]
+Calcula los ingredientes necesarios de una tarta de manzana para 15 personas.]
     
-#question()[Indica si hay proporcionalidad directa, inversa o si no hay ninguna proporcionalidad:
-]
+#question()[Indica si hay proporcionalidad directa, inversa o si no hay ninguna proporcionalidad:]
 #subquestion()[Cantidad de personas que viajan en un autobús y dinero recaudado.]
 #subquestion()[Cantidad de refrescos que caben en una caja y diámetro de las botellas.] 
 #subquestion()[Número de litros que escapan por segundo en el desagüe de una piscina y diámetro del desagüe.] 
@@ -153,7 +151,6 @@ Calcula los ingredientes necesarios de una tarta de manzana para 15 personas.
 #subquestion()[ El número de líneas de cada página y el número de páginas de una novela.]
 #subquestion()[Número de horas dedicadas a las matemáticas y nota de mi examen.]
 #subquestion()[Peso y estatura de una persona.]
-
 
 #question()[¿Qué distancia real medida en kilómetros hay entre dos ciudades que están separadas por 40 cm en un mapa a escala 1:500.000?]
 
