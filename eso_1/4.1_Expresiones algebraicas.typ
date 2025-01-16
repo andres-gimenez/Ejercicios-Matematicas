@@ -52,20 +52,20 @@
 
 #question()[Escribe las siguientes expresiones en notación algebraica:]
 #columns(2, gutter: 11pt)[
-#subquestion()[El doble de un número.]
-#subquestion()[La mitad de un número.]
-#subquestion()[El doble de un número más su mitad.]
-#subquestion()[La mitad de un número menos dos.]
-#subquestion()[La mitad de un número, menos dos.]
+  #subquestion()[El doble de un número.]
+  #subquestion()[La mitad de un número.]
+  #subquestion()[El doble de un número más su mitad.]
+  #subquestion()[La mitad de un número menos dos.]
+  #subquestion()[La mitad de un número, menos dos.]
 
-#subquestion()[El triple de la mitad de un número.]
+  #subquestion()[El triple de la mitad de un número.]
 #colbreak()
-#subquestion()[La mitad del triple de un número.]
-#subquestion()[El siguiente número a uno dado.]
-#subquestion()[El triple de un número al sumarle siete.]
+  #subquestion()[La mitad del triple de un número.]
+  #subquestion()[El siguiente número a uno dado.]
+  #subquestion()[El triple de un número al sumarle siete.]
 
-#subquestion()[Un número par.]
-#subquestion()[Un número impar.]
+  #subquestion()[Un número par.]
+  #subquestion()[Un número impar.]
 ]
 
 #question()[Realiza las siguientes operaciones con monomio:]
