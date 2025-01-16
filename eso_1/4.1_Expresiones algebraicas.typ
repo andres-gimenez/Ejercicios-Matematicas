@@ -17,7 +17,7 @@
     academic-period: "Curso 2024/2025",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
-    number: "",
+    number: "Ejercicios",
     content: "Expresiones algebraicas",
     // model: "Modelo A"
   ),
