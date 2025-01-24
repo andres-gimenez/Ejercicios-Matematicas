@@ -52,7 +52,7 @@
 #question[Un artesano fabrica 21 jarrones en 3 días. 
 ¿Cuántos jarrones producirá en 2 días? ¿Cuántos días tardará en realizar 280 jarrones?]
 
-#question[Si 46 papeleras cuestan 368 \euro{}, ¿cuánto cuesta 20 papeleras?]
+#question[Si 46 papeleras cuestan 368€, ¿cuánto cuesta 20 papeleras?]
 
 #question[Para hacer una tarta de queso de 3 kilos hemos de utilizar 1,20 kilos de queso. ¿Cuánto queso hemos de utilizar para hacer una tarta de 4,5 kilos?]
 
@@ -95,7 +95,7 @@ Hoy queremos ir a un parque que se encuentra a 8 cm del hotel en el mapa. ¿A qu
 #question[Una obra puede estar acabada por 20 albañiles en 14 días. ¿Cuántos obreros hay que añadir para que la obra se termine en 8 días?]
 
 #question[Una granja de conejos recibe un pedido de pienso y llena el depósito, 
-    con lo que tienen comida para sus 150 conejos durante 12 días. 
+con lo que tienen comida para sus 150 conejos durante 12 días. 
 Pero deciden vender 30 conejos, ¿cuántos días podrán comer los conejos con ese depósito lleno?]
 
 #question[En un taller de confección, si se trabajan 8 horas diarias se tardan 6 días en servir un pedido. 

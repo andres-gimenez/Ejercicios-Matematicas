@@ -39,21 +39,20 @@
 #set math.cases(reverse: true)
 
 #question()[Para fabricar 30 kg de chocolate se necesitan 10 kg de cacao. 
-    ¿Cuántos kg de chocolate se podrán fabricar con 64 kg de cacao?]
+¿Cuántos kg de chocolate se podrán fabricar con 64 kg de cacao?]
 
 #question()[Una moto recorre 30 km en 15 minutos. ¿Cuántos kilómetros recorrerá en 2 horas? 
     ¿Y cuánto tardará en recorrer 50 km?]
 
-#question()[Diez obreros tardan 2 meses en construir una casa. 
-    ¿Cuántos días tardarían 15 obreros?]
+#question()[Diez obreros tardan 2 meses en construir una casa. ¿Cuántos días tardarían 15 obreros?]
 
-#question()[Un autobús tarda una hora en hacer su trayecto a una velocidad de 80 km/h. Si aumentase la velocidad en 20 km/h, 
-    ¿en cuánto haría su trayecto?]
+#question()[Un autobús tarda una hora en hacer su trayecto a una velocidad de 80 km/h. Si aumentase la velocidad en 20 km/h, ¿en cuánto haría su trayecto?]
 
 #question()[Un artesano fabrica 21 jarrones en 3 días. 
-    ¿Cuántos jarrones producirá en 2 días? ¿Cuántos días tardará en realizar 280 jarrones?]
+¿Cuántos jarrones producirá en 2 días? 
+¿Cuántos días tardará en realizar 280 jarrones?]
 
-#question()[Si 46 papeleras cuestan 368 \euro{}, ¿cuánto cuesta 20 papeleras?]
+#question()[Si 46 papeleras cuestan 368€, ¿cuánto cuesta 20 papeleras?]
 
 #question()[Para hacer una tarta de queso de 3 kilos hemos de utilizar 1,20 kilos de queso. ¿Cuánto queso hemos de utilizar para hacer una tarta de 4,5 kilos?]
     
@@ -131,35 +130,35 @@ Hoy 3 camiones, iguales a los de ayer, tendrán que hacer 6 viajes cada uno para
 
 Calcula los ingredientes necesarios de una tarta de manzana para 15 personas.]
     
-#question()[Indica si hay proporcionalidad directa, inversa o si no hay ninguna proporcionalidad:]
-#subquestion()[Cantidad de personas que viajan en un autobús y dinero recaudado.]
-#subquestion()[Cantidad de refrescos que caben en una caja y diámetro de las botellas.] 
-#subquestion()[Número de litros que escapan por segundo en el desagüe de una piscina y diámetro del desagüe.] 
-#subquestion()[Velocidad media de un ciclista y distancia recorrida.]
-#subquestion()[Número de vueltas que da una rueda para recorrer una distancia y diámetro de la rueda.] 
-  #subquestion()[Número de comensales para zamparse una tarta y cantidad que come cada uno.]
-#subquestion()[Tiempo que tarda un balón en caer al suelo y altura desde la que se lanza.]
-#subquestion()[Número de horas que está encendida una bombilla y gasto que ocasiona.] 
-#subquestion()[Número de peldaños de una escalera de altura fija y anchura de ellos.]
-#subquestion()[Número de goles marcados por un equipo y partidos ganados.]
-#subquestion()[El número de libros que caben en una estantería y el grosor de estos.]
-#subquestion()[La velocidad a la que corre una moto y el tiempo que tarda en hacer un determinado trayecto.]
-#subquestion()[El número de litros de agua y el número de botellas que los contienen.]
-  #subquestion()[El número de sandías que hay en un camión y el peso de éste.]
-#subquestion()[El número de cromos que reparto entre mis amigos y el número de amigos.]
-#subquestion()[El número de personas en un campamento y el número de raciones de comida.]
-#subquestion()[ El número de líneas de cada página y el número de páginas de una novela.]
-#subquestion()[Número de horas dedicadas a las matemáticas y nota de mi examen.]
-#subquestion()[Peso y estatura de una persona.]
+// #question()[Indica si hay proporcionalidad directa, inversa o si no hay ninguna proporcionalidad:]
+// #subquestion()[Cantidad de personas que viajan en un autobús y dinero recaudado.]
+// #subquestion()[Cantidad de refrescos que caben en una caja y diámetro de las botellas.] 
+// #subquestion()[Número de litros que escapan por segundo en el desagüe de una piscina y diámetro del desagüe.] 
+// #subquestion()[Velocidad media de un ciclista y distancia recorrida.]
+// #subquestion()[Número de vueltas que da una rueda para recorrer una distancia y diámetro de la rueda.] 
+//   #subquestion()[Número de comensales para zamparse una tarta y cantidad que come cada uno.]
+// #subquestion()[Tiempo que tarda un balón en caer al suelo y altura desde la que se lanza.]
+// #subquestion()[Número de horas que está encendida una bombilla y gasto que ocasiona.] 
+// #subquestion()[Número de peldaños de una escalera de altura fija y anchura de ellos.]
+// #subquestion()[Número de goles marcados por un equipo y partidos ganados.]
+// #subquestion()[El número de libros que caben en una estantería y el grosor de estos.]
+// #subquestion()[La velocidad a la que corre una moto y el tiempo que tarda en hacer un determinado trayecto.]
+// #subquestion()[El número de litros de agua y el número de botellas que los contienen.]
+//   #subquestion()[El número de sandías que hay en un camión y el peso de éste.]
+// #subquestion()[El número de cromos que reparto entre mis amigos y el número de amigos.]
+// #subquestion()[El número de personas en un campamento y el número de raciones de comida.]
+// #subquestion()[ El número de líneas de cada página y el número de páginas de una novela.]
+// #subquestion()[Número de horas dedicadas a las matemáticas y nota de mi examen.]
+// #subquestion()[Peso y estatura de una persona.]
 
-#question()[¿Qué distancia real medida en kilómetros hay entre dos ciudades que están separadas por 40 cm en un mapa a escala 1:500.000?]
+// #question()[¿Qué distancia real medida en kilómetros hay entre dos ciudades que están separadas por 40 cm en un mapa a escala 1:500.000?]
 
-#question()[¿Qué distancia real, medida en kilómetros, hay entre dos ciudades que están separadas por 50 cm. en un mapa a escala 1:100.000?]
+// #question()[¿Qué distancia real, medida en kilómetros, hay entre dos ciudades que están separadas por 50 cm. en un mapa a escala 1:100.000?]
 
-#question()[En un mapa la distancia entre dos puntos es de 5 cm y en la realidad es de 2.500 m. ¿Cuál es la escala del mapa?]
+// #question()[En un mapa la distancia entre dos puntos es de 5 cm y en la realidad es de 2.500 m. ¿Cuál es la escala del mapa?]
 
-#question()[Si en la escala gráfica de un mapa 1 kilómetro equivale a 4 centímetros, ¿cuál es la escala de ese mapa?]
+// #question()[Si en la escala gráfica de un mapa 1 kilómetro equivale a 4 centímetros, ¿cuál es la escala de ese mapa?]
 
-#question()[¿A cuántos cm equivalen en un mapa de escala 1: 400.000, 5 km. de terreno en la realidad?]
+// #question()[¿A cuántos cm equivalen en un mapa de escala 1: 400.000, 5 km. de terreno en la realidad?]
 
-#question()[¿Qué distancia real, medida en kilómetros, hay entre dos ciudades que están separadas por 50 cm en un mapa a escala 1:1.000.000?]
+// #question()[¿Qué distancia real, medida en kilómetros, hay entre dos ciudades que están separadas por 50 cm en un mapa a escala 1:1.000.000?]
