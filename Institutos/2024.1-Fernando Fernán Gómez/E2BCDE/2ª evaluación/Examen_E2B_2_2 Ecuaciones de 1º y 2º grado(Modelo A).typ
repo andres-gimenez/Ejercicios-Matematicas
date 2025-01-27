@@ -16,7 +16,7 @@
     academic-subject: "Matemáticas",
     number: "2ª evaluación - 2º examen",
     content: "Operaciones combinadas, números decimales y lenguaje algebraico",
-    model: "Modelo B"
+    model: [Modelo A]
   ),
   
   language: "es",
@@ -32,6 +32,8 @@
 )
 
 #set math.cases(reverse: true)
+ 
+
 
 #question(points:3)[Siendo los polinomios: 
 
