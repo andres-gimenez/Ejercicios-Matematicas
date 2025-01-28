@@ -16,7 +16,7 @@
     academic-subject: "Matemáticas",
     number: "2ª evaluación - 2º examen",
     content: "Operaciones combinadas, números decimales y lenguaje algebraico",
-    model: [Modelo A]
+    model: "Modelo A"
   ),
   
   language: "es",
