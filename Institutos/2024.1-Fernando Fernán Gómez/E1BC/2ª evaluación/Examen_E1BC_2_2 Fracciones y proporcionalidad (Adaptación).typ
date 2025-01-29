@@ -15,8 +15,8 @@
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
     number: "2ª evaluación - 2º examen",
-    content: "Fracciones y porcentajes",
-    model: "Modelo  A"
+    content: "Fracciones y proporcionalidad",
+    model: "Modelo  Adaptación",
   ),
   
   language: "es",
@@ -25,16 +25,20 @@
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
-  // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
+  question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
 
 #set math.cases(reverse: true)
 
 #question()[Resuelve las siguientes operaciones con fracciones:]
 
-#subquestion(points:2)[$1/5-7/4-(1/10 dot 1/2)$ =]
+#subquestion(points:1.5)[$(1/10 dot 2/3) =$]
 #v(1fr)
-#subquestion(points:2)[$-7/6 -(5/12 colon 1/2) dot 4$ =]
+
+#subquestion(points:1.5)[$7/6 - 5/9 + 3/4=$]
+#v(1fr)
+
+#subquestion(points:1.5)[$5/12 colon 1/2 =$]
 #v(1fr)
 
 #pagebreak()
@@ -44,17 +48,17 @@ $1/4$ de las chocolatinas a su amiga Laura. Luego, le da $1/3$ de las chocolatin
 #subquestion()[¿Cuántas chocolatinas recibe cada uno?]
 #v(1fr)
 
-#subquestion()[¿Qué fracción de chocolatinas le quedan a Ana?]
-#v(1fr)
+// #subquestion()[¿Qué fracción de chocolatinas le quedan a Ana?]
+// #v(1fr)
 
 #subquestion()[Ordenando las fracciones que le queda a cada uno ¿Qué fracción es mayor?]
 #v(1fr)
 
 #pagebreak()
-#question(points:1)[Marta ha visto unos zapatos que cuestan 52€ más IVA. ¿Cuánto tiene que pagar por ellos si ha de pagar el 21% de IVA?]
-#v(21fr)
+// #question(points:1)[Marta ha visto unos zapatos que cuestan 52€ más IVA. ¿Cuánto tiene que pagar por ellos si ha de pagar el 21% de IVA?]
+// #v(21fr)
 
-#question(points:1)[Una receta de trufas para seis personas lleva 200 gramos de chocolate. ¿Cuántos gramos de chocolate se necesitan para hacer trufas para 130 personas?]
+#question(points:1.5)[Una receta de trufas para seis personas lleva 200 gramos de chocolate. ¿Cuántos gramos de chocolate se necesitan para hacer trufas para 130 personas?]
 #v(21fr)
 
 #pagebreak()
