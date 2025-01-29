@@ -17,7 +17,7 @@
     academic-period: "Curso 2024/2025",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
-    number: "1º Evaluación",
+    number: "2º Evaluación",
     content: "Regla de tres",
     // model: "Modelo A"
   ),
