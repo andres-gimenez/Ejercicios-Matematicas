@@ -16,7 +16,7 @@
     academic-subject: "Matemáticas",
     number: "2ª evaluación - 2º examen",
     content: "Ecuaciones de 1º y 2º grado",
-    model: "Modelo A"
+    model: "Modelo B"
   ),
   
   language: "es",
@@ -25,7 +25,7 @@
   show-grade-table: true,
   question-points-position: right,
   clarifications: (
-    [Se permite el uso de calculadora.],
+ [Se permite el uso de calculadora.],
     [No está permitido el uso de teléfono móvil, ni la calculadora de este.],
     [No está permitido compartir calculadora con un compañero.]
   )
@@ -34,15 +34,13 @@
 
 #set math.cases(reverse: true)
  
-
-
 #question(points:3)[Siendo los polinomios: 
 
-  $P[x] = 4x^4+2x^3-x^2+2x-5$
+  $P[x] = 2x^4+3x^3-1x^2+2x-4$
 
-  $Q[x] = 3x^4-x^3+8x^2-6x+3$
+  $Q[x] = 3x^4-6x^3+8x^2-x+2$
 
-  $R[x] = 2x^2+5x+1$
+  $R[x] = 2x^2+x+2$
 
   Calcula: $ P[x] + Q[x] dot R[x] = $
 ]
