@@ -40,7 +40,7 @@
 
   $P[x] = 4x^4+2x^3-x^2+2x-5$
 
-  $Q[x] = 3x^4-x^3+8x^2-6x+3$
+  $Q[x] = 3x^4-2x^3+8x^2-6x+3$
 
   $R[x] = 2x^2+5x+1$
 
@@ -57,12 +57,13 @@
   #v(1fr)
 
 #question(points:2)[Resuelve las siguientes ecuaciones:]
-  #subquestion()[$display(3/2 x + 1/3 = 3/5 - (2- 2x)/3)$] //(sol: x=)
-  #v(1fr)
+  #v(0.2cm)
+  $display((3x)/2 + 1/3 = 3/5 - (2- 2x)/3)$
+  #v(2fr)
   // #subquestion()[$display(1/5 x + 2/7 = (2x - 1)/2) + 2/3$] //(sol: x=)
   // #v(1fr)
 
-
+#pagebreak()
 #question(points:2)[Halla la solución de la  ecuacion]
   // #subquestion()[$display((3x + 5)/7 = (2x - 3) / 4)$]
   // #subquestion()[$display((2x+4)/5 = 5 - (3x+5)/3)$]
@@ -71,10 +72,11 @@
   $display((x+2)/5 + (2x-3)/4 = (3x+5)/3)$
   #v(1fr)
 
-#pagebreak()
+
 #question(points:2)[Resuelve la siguiente ecuación de 2º grado:]
   #v(0.2cm)
   $2x^2-14x+20 = 0$
+#v(1fr)
 
   // #subquestion()[$display(x^2-5x+6 = 0)$] //(sol: x=)
   // #subquestion()[$display(2x^2+3x-2 = 0)$] //(sol: x=)
