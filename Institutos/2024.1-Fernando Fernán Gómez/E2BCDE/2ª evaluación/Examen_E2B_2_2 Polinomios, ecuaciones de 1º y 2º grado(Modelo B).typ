@@ -15,7 +15,7 @@
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
     number: "2ª evaluación - 2º examen",
-    content: "Ecuaciones de 1º y 2º grado",
+    content: "Polinomios y ecuaciones de 1º y 2º grado",
     model: "Modelo B"
   ),
   
