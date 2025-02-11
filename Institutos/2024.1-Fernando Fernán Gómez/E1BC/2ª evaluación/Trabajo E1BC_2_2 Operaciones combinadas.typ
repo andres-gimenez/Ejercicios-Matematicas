@@ -15,7 +15,7 @@
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
     number: "2º evaluación - Trabajo en equipo",
-    content: "Operaciones combinadas",
+    content: "Fracciones y porcentajes",
     // model: "Modelo A"
   ),
   localization: (
@@ -30,38 +30,30 @@
   clarifications:
     ([La prueba se tendrá que hacer en grupos de dos personas, excepcionalmente de tres con permiso expreso del profesor.], 
      [Durante la realización de la prueba, se evaluará la capacidad de trabajo en equipo de los alumnos, la colaboración entre ellos y la corrección del trabajo.],
-     [En caso de que el trabajo realizado por los alumnos, no sea equitativo, se podrán poner calificaciones diferentes a los miembros del equipo.])
+     [En caso de que el trabajo realizado por los alumnos, no sea equitativo, se podrán poner calificaciones diferentes a los miembros del equipo.]),
+    // question-text-parameters: (size: 16pt, spacing:200%)
 )
+// question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
+#set text(16pt)
 
 #set math.cases(reverse: true)
 
 #question()[Resuelve las siguientes operaciones con fracciones:]
-#subquestion(points:2)[$(-7/6 + 4/9) dot (5/12 - 1/2) dot 4$ =]
+
+$(-2/5 - 3/10) dot (7/12 + 3/2) dot 3 = $
 #v(1fr)
 
-#subquestion(points:2)[$(-2/7 - 4/14) dot (15/14 - 8/21) + 1/35 $ =]
+#question()[Tenemos 350 caramelos de fresa de los le damos 3/5 a Rosa y 1/7 a Carlos. ¿Qué proporción de caramelos nos quedan? ¿Cuántos caramelos le dimos a Rosa?]
 #v(1fr)
-
 #pagebreak()
 
-#question()[Un coche recorre 240 kilómetros con 15 litros de gasolina. ¿Cuántos kilómetros recorrerá con 50 litros de gasolina, manteniendo la misma eficiencia?]
-#v(1fr)
+#question()[Un comerciante compra 1000 bolígrafos a 0,25 € cada uno. Si los vende un 20% más caro] 
+#subquestion[¿Cuál es su beneficio por cada bolígrafo?]
+#subquestion[Si tiene que cobrar un 21% de IVA, a cuanto tiene que vender cada bolígrafo?]
+#subquestion[Si vende el 90% de los bolígrafos que compro, ¿cuánto dinero ha ganado?]
+#subquestion[Tras vender el 90% de los bolígrafos, ¿qué beneficio le queda?]
+#subquestion[¿Qué porcentaje a obtenido de beneficio?]
 
-#question()[Si 5 trabajadores construyen una casa en 10 días, ¿cuántos días necesitarían 10 trabajadores para construir la misma casa, trabajando al mismo ritmo?]
-#v(1fr)
-
-// #pagebreak()
-
-// #question()[Un comerciante compra 1000 bolígrafos a 0,25 € cada uno. Si los vende a 0,35 € cada uno, ¿cuál será su beneficio?]
-
-// #subquestion(points:2)[¿Cuál es el precio total de compra de los bolígrafos?]
-// #v(1fr)
-
-// #subquestion(points:2)[¿Cuál es el precio total de venta de los bolígrafos?]
-
-// #subquestion(points:2)[¿Cuál es el beneficio total que obtiene el comerciante?]
-
-// #pagebreak()
 
 
 
