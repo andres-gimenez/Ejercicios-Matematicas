@@ -1,6 +1,7 @@
 #import "@preview/g-exam:0.4.2": *
+#import "@preview/wrap-it:0.1.0": wrap-content
 
-#show: g-exam.with(
+#show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
@@ -24,11 +25,12 @@
   date: datetime(year: 2024, month: 12, day: 17),
   show-student-data: "odd-pages",
   show-grade-table: true,
-  question-point-position: right,
+  draft: true,
+  question-points-position: right,
+  question-text-parameters: (size: 16pt, spacing:150%)
+
   // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
-
-#set text(size: 14pt, spacing:200%)
 #set math.cases(reverse: true)
 
 #question()[Resuelve las siguientes operaciones con fracciones:]
@@ -38,51 +40,38 @@
 #subquestion(points:2)[$(5/21 - 6/35) colon 4 / 15  $ =]
 #v(1fr)
 
-// #pagebreak()
-// #question(points:2)[Ana tiene 12 chocolatinas y quiere repartirlas entre sus amigos de la siguiente manera. Primero, le da 
-// $1/4$ de las chocolatinas a su amiga Laura. Luego, le da $1/3$ de las chocolatinas a su amigo Javier.]
+#pagebreak()
 
-// #subquestion()[¿Cuántas chocolatinas recibe cada uno?]
-// #v(1fr)
+// #question()[#wrap-content(
+//     box(height:14cm, image("./Zapatillas.png"), inset:0.2em), 
+//     [¿Si unas zapatillas cuestan 12€ más IVA, cuanto tengo que pagar por ellas?],
+//     align: bottom + right
+//   )
+// ]
 
-// #subquestion()[¿Qué fracción de chocolatinas le quedan a Ana?]
-// #v(1fr)
+#question(points:1)[¿Si unas zapatillas cuestan 30€ más IVA, cuanto tengo que pagar por ellas?]
+#v(1fr)
 
-// #subquestion()[Ordenando las fracciones que le queda a cada uno ¿Qué fracción es mayor?]
-// #v(1fr)
-
-// #pagebreak()
-// #question(points:1)[Marta ha visto unos zapatos que cuestan 52€ más IVA. ¿Cuánto tiene que pagar por ellos si ha de pagar el 21% de IVA?]
-// #v(21fr)
-
-// #question(points:1)[Una receta de trufas para seis personas lleva 200 gramos de chocolate. ¿Cuántos gramos de chocolate se necesitan para hacer trufas para 130 personas?]
-// #v(21fr)
-
-// #pagebreak()
-// #question(points:2)[Un coche recorre 150 kilómetros en 3 horas.]
-
-// #subquestion()[¿Cuántos kilómetros recorrerá en 5 horas si mantiene la misma velocidad?]
-// #v(1fr)
-
-// #subquestion()[Si el coche debe recorrer 300 kilómetros, ¿cuánto tiempo tardará?]
-// #v(1fr)
+#question(points:1)[¿Si un televisor que costaba 800€, ahora lo venden por 600€, ¿qué descuento le han hecho?]
+#v(1fr)
 
 #pagebreak()
 
-// #question()[Los estudiantes de un instituto han obtenido las siguientes calificaciones en un examen:]
-// 5, 7, 7, 8, 6, 5, 10, 6, 6, 7
+#question(points:1)[Una fotocopiadora imprime 200 páginas en 10 minutos. ¿Cuántas páginas imprimirá en 25 minutos?]
+#v(1fr)
 
-// #subquestion()[Calcula la media aritmética.]
-// #subquestion()[Encuentra la moda.]
-// #subquestion()[Determina la mediana.]
+#question(points:1)[Un equipo de 6 pintores tarda 12 días en pintar una casa. ¿Cuántos días tardará un equipo de 9 pintores si trabajan al mismo ritmo?]
+#v(1fr)
 
-#question()[De la siguientes variables estadísticas, indica si son cualitativas o cuantitativas:]
+#pagebreak()
+
+#question(points:1)[De la siguientes variables estadísticas, indica si son cualitativas o cuantitativas:]
 
 #align(center,
   table(
     fill: (x, y) =>
       if(y == 0) { luma(230) },
-  columns: (9cm, 5cm),
+  columns: (9cm, 6cm),
   rows:(auto, auto),
   // gutter:0pt,
   // [Edad], [12], [13],[14],[15],[16],[17],[18],
@@ -95,7 +84,7 @@
   [La temperatura en grados centígrados], [],
 ))
 
-#question()[En un partido de baloncesto cada uno de los jugadores de un equipo han anotado los siguientes puntos:]
+#question(points:2)[En un partido de baloncesto cada uno de los jugadores de un equipo han anotado los siguientes puntos:]
 
 #align(center,
   table(
@@ -109,7 +98,6 @@
 
   [0], [5], [5], [6], [6], [7], [7], [7], [15] 
 ))
-
 
 #subquestion()[Calcula la media aritmética.]
 #subquestion()[Encuentra la moda.]
