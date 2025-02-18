@@ -22,7 +22,7 @@
   
   language: "es",
   decimal-separator: ",",
-  date: datetime(year: 2024, month: 12, day: 17),
+  date: datetime(year: 2025, month: 2, day: 18),
   show-student-data: "odd-pages",
   show-grade-table: true,
   draft: true,
