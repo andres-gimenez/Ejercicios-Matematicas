@@ -35,9 +35,9 @@
 
 #question()[Resuelve las siguientes operaciones con fracciones:]
 
-#subquestion(points:2)[$(5/2 + 7/5) dot (7/3 - 5 / 7)$ =]
+#subquestion(points:2)[$(5/2 + 7/5) dot (7/3 - 5 / 7)=$]
 #v(1fr)
-#subquestion(points:2)[$(5/21 - 6/35) colon 4 / 15  $ =]
+#subquestion(points:2)[$(5/21 - 6/35) colon 4 / 15=$]
 #v(1fr)
 
 #pagebreak()
@@ -65,17 +65,14 @@
 
 #pagebreak()
 
-#question(points:1)[De la siguientes variables estadísticas, indica si son cualitativas o cuantitativas:]
+#question(points:1)[De la siguientes variables estadísticas, indica si son cualitativas o cuantitativas:
 
 #align(center,
   table(
     fill: (x, y) =>
       if(y == 0) { luma(230) },
-  columns: (9cm, 6cm),
+  columns: (10cm, 7cm),
   rows:(auto, auto),
-  // gutter:0pt,
-  // [Edad], [12], [13],[14],[15],[16],[17],[18],
-  // [Número de socios], [6], [8], [12], [17], [15], [7], [5]
   [Variable], [Cualitativa / Cuantitativa],
   [El color de los ojos de una persona], [],
   [La altura de los alumnos en metros	], [],
@@ -83,18 +80,14 @@
   [El tipo de música favorita	], [],	
   [La temperatura en grados centígrados], [],
 ))
+]
 
 #question(points:2)[En un partido de baloncesto cada uno de los jugadores de un equipo han anotado los siguientes puntos:]
 
 #align(center,
   table(
-    // fill: (x, y) =>
-    //   if(y == 0) { luma(230) },
   columns: 9,
   rows:(auto),
-  // gutter:0pt,
-  // [Edad], [12], [13],[14],[15],[16],[17],[18],
-  // [Número de socios], [6], [8], [12], [17], [15], [7], [5]
 
   [0], [5], [5], [6], [6], [7], [7], [7], [15] 
 ))
