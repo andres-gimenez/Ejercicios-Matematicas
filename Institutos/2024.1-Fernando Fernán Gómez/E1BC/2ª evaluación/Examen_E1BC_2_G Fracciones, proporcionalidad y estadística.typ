@@ -42,13 +42,6 @@
 
 #pagebreak()
 
-// #question()[#wrap-content(
-//     box(height:14cm, image("./Zapatillas.png"), inset:0.2em), 
-//     [¿Si unas zapatillas cuestan 12€ más IVA, cuanto tengo que pagar por ellas?],
-//     align: bottom + right
-//   )
-// ]
-
 #question(points:1)[¿Si unas zapatillas cuestan 30€ más IVA, cuanto tengo que pagar por ellas?]
 #v(1fr)
 
@@ -65,7 +58,23 @@
 
 #pagebreak()
 
-#question(points:1)[De la siguientes variables estadísticas, indica si son cualitativas o cuantitativas:
+#question(points:2)[En un cumpleaños se reparten caramelos. 
+Carla bebió 1/3 de la botella.
+Luis bebió 1/4 de la botella.
+María bebió 1/6 de la botella.]
+
+#subquestion()[¿Qué fracción de los caramelos han recibido entre los tres?]
+#v(1fr)
+
+#subquestion()[¿Qué fracción de caramelos queda sin repartir?]
+#v(1fr)
+
+#subquestion()[Si había 30 caramelos, cuantos recibió María?]
+#v(1fr)
+
+#pagebreak()
+
+#question(points:0.5)[De la siguientes variables estadísticas, indica si son cualitativas o cuantitativas:
 
 #align(center,
   table(
@@ -82,7 +91,7 @@
 ))
 ]
 
-#question(points:2)[En un partido de baloncesto cada uno de los jugadores de un equipo han anotado los siguientes puntos:]
+#question(points:1)[En un partido de baloncesto cada uno de los jugadores de un equipo han anotado los siguientes puntos:]
 
 #align(center,
   table(
