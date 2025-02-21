@@ -53,7 +53,7 @@
 
 #pagebreak()
 
-#question(points:2)[Resuelve la siguiente ecuación de 1er grado paso a a paso:]
+#question(points:2)[Resuelve la siguiente ecuación de 1º grado paso a paso:]
 
 // #subquestion()[$display(4(5x-3)-7x = 3 (6x-4) + 10)$]
 // #v(1fr)

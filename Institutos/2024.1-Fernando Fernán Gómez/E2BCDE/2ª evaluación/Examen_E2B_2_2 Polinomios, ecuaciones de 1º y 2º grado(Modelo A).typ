@@ -64,7 +64,7 @@
   // #v(1fr)
 
 #pagebreak()
-#question(points:2)[Halla la solución de la  ecuacion]
+#question(points:2)[Halla la solución de la  ecuación]
   // #subquestion()[$display((3x + 5)/7 = (2x - 3) / 4)$]
   // #subquestion()[$display((2x+4)/5 = 5 - (3x+5)/3)$]
 

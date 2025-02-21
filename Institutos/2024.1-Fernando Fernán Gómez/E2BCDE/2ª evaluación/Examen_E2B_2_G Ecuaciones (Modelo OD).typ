@@ -53,7 +53,7 @@
 
 #pagebreak()
 
-#question(points:2)[Resuelve las siguientes ecuaciones de 1er grado paso a a paso:]
+#question(points:2)[Resuelve las siguientes ecuaciones de 1º grado paso a paso:]
 
 #subquestion()[$display(4(5x-3)-7x = 3 (6x-4) + 10)$]
 #v(1fr)
@@ -79,7 +79,7 @@ $display("1,6" + 3 dot ("5,6" - "4,8") = )$
 
 #pagebreak()
 
-#g-question(point:2)[Resuelve los siguientes sistemas de ecuaciones, por metodos distintos:]
+#g-question(point:2)[Resuelve los siguientes sistemas de ecuaciones, por métodos distintos:]
     #g-subquestion[
           $display(cases( delim: "{",
                &2x &+  &y &= &10 ,
