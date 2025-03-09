@@ -1,4 +1,4 @@
-#import "@local/g-exam:0.4.3": *
+#import "@preview/g-exam:0.4.2": *
 #import "@preview/wrap-it:0.1.0": wrap-content
 
 #show: exam.with(
@@ -15,9 +15,10 @@
     academic-period: "Curso 2024/2025",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
-    number: "2ª evaluación - Examen global",
+    number: "2ª evaluación - Examen recuperación",
     content: "Fracciones, proporcionalidad y estadística",
-    model: [Modelo $alpha$]
+    // model: [Modelo $alpha$]
+    model: "Modelo A"
   ),
   
   language: "es",
@@ -42,18 +43,18 @@
 
 #pagebreak()
 
-#question(points:0.75)[¿Si unas zapatillas cuestan 20€ más IVA, cuanto tengo que pagar por ellas?]
+#question(points:1)[¿Si unas zapatillas cuestan 20€ más IVA, cuanto tengo que pagar por ellas?]
 #v(1fr)
 
-#question(points:0.75)[¿Si un televisor que costaba 800€, ahora lo venden por 600€, ¿qué descuento le han hecho?]
+// #question(points:0.75)[¿Si un televisor que costaba 800€, ahora lo venden por 600€, ¿qué descuento le han hecho?]
+// #v(1fr)
+
+// #pagebreak()
+
+#question(points:1)[Un coche recorre 240 km en 4 horas a velocidad constante. ¿Cuántos kilómetros recorrerá en 7 horas a la misma velocidad?]
 #v(1fr)
 
-#pagebreak()
-
-#question(points:0.75)[Una fotocopiadora imprime 200 páginas en 10 minutos. ¿Cuántas páginas imprimirá en 25 minutos?]
-#v(1fr)
-
-#question(points:0.75)[Un equipo de 6 pintores tarda 12 días en pintar una casa. ¿Cuántos días tardará un equipo de 9 pintores si trabajan al mismo ritmo?]
+#question(points:1)[6 obreros tardan 12 días en construir un muro. ¿Cuántos días tardará 9 obreros en hacer el mismo trabajo, si trabajan al mismo ritmo?]
 #v(1fr)
 
 #pagebreak()
@@ -81,23 +82,23 @@ María 1/6.]
       if(y == 0) { luma(230) },
   columns: (10cm, 7cm),
   rows:(auto, auto),
-  [Variable], [Cualitativa / Cuantitativa],
-  [El color de los ojos de una persona], [],
-  [La altura de los alumnos en metros	], [],
-  [La cantidad de libros en una estantería], [],
-  [El tipo de música favorita	], [],	
-  [La temperatura en grados centígrados], [],
+  [Variable], [Cualitativa / Cuantitativa], 
+  [Tipo de música favorita (rock, pop, reguetón...)], [],
+  [Edad de los alumnos (12, 13, 14 años...)], [],
+  [Número de hermanos (0, 1, 2, 3...)], [],
+  [Estado del tiempo (soleado, nublado, lluvioso...)], [],	
+  [Nota en matemáticas (5, 6, 7, 8...)], [],
 ))
 ]
 
-#question(points:1)[En un partido de baloncesto cada uno de los jugadores de un equipo han anotado los siguientes puntos:]
+#question(points:1)[En un partido de balonmano cada uno de los jugadores de un equipo han anotado el siguiente número de goles:]
 
 #align(center,
   table(
   columns: 9,
   rows:(auto),
 
-  [0], [5], [5], [6], [6], [7], [7], [7], [15] 
+  [0], [0], [0], [0], [2], [2], [3], [4], [5] 
 ))
 
 #subquestion()[Calcula la media aritmética.]
