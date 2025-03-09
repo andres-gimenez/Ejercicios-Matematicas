@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.2": *
+#import "@local/g-exam:0.4.3": *
 
 #show: exam.with(
   author: (
@@ -31,7 +31,7 @@
     ([La prueba se tendrá que hacer en grupos de dos personas, excepcionalmente de tres con permiso expreso del profesor.], 
      [Durante la realización de la prueba, se evaluará la capacidad de trabajo en equipo de los alumnos, la colaboración entre ellos y la corrección del trabajo.],
      [En caso de que el trabajo realizado por los alumnos, no sea equitativo, se podrán poner calificaciones diferentes a los miembros del equipo.]),
-    //  question-text-parameters:(size: 14pt, spacing:200%)
+     question-text-parameters:(size: 14pt, spacing:200%)
 )
 
 #set text(12pt)
