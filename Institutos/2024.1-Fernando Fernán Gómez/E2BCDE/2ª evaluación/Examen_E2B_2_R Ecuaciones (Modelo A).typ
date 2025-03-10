@@ -16,7 +16,7 @@
     academic-subject: "Matemáticas",
     number: "2ª evaluación - Examen recuperación",
     content: "Polinomios y ecuaciones de 1º y 2º grado",
-    model: "Modelo ◔"
+    model: "Modelo ◔"// ◓◮◮◤◨◨◫◢◮◤◨◨◫◢◱◵◹◾▶▨▢
   ),
   
   language: "es",

@@ -112,7 +112,7 @@ María 5/9.]
 
 #pagebreak()
 
-#question(points:0.5)[De la siguientes variables estadísticas, indica si son cualitativas o cuantitativas:
+#question(points:0.5)[De las siguientes variables estadísticas, indica si son cualitativas o cuantitativas:
 
 #align(center,
   table(

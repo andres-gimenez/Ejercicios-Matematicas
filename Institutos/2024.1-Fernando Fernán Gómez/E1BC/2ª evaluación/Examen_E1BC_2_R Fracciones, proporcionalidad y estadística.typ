@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.2": *
+#import "@local/g-exam:0.4.3": *
 #import "@preview/wrap-it:0.1.0": wrap-content
 
 #show: exam.with(
@@ -74,7 +74,7 @@ María 1/6.]
 
 #pagebreak()
 
-#question(points:0.5)[De la siguientes variables estadísticas, indica si son cualitativas o cuantitativas:
+#question(points:0.5)[De las siguientes variables estadísticas, indica si son cualitativas o cuantitativas:
 
 #align(center,
   table(
