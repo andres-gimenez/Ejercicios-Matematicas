@@ -120,8 +120,8 @@
 #subquestion()[$5x^2 + 3x - 2 "para" x = -1$]
 
 #colbreak()
-#subquestion()[$display(2/3x^2 + 1/5 "para" x = 1/4)$]
 #subquestion()[$display(4/5x - 1/5 "para" x = -1)$]
+#subquestion()[$display(2/3x^2 + 1/5 "para" x = 1/4)$]
 #subquestion()[$display(5x^2y - 2x + 2y -1 "para" x = 1 " e " y = 2)$]
 #subquestion()[$display(5 x y + 3 "para" x = 2 )$]
 #subquestion()[$display(alpha + 5 "para" alpha = 3 )$]
@@ -166,56 +166,114 @@
 
 #pagebreak()
 
-#question()[Resuelve las siguientes ecuaciones:]
-#columns(2, gutter: 11pt)[
+#question()[Resuelve las siguientes ecuaciones sencillas:]
+#columns(3, gutter: 11pt)[
    #subquestion()[$x-3 = 5$]
    #subquestion()[$x-6 = 3$]
    #subquestion()[$2x + 3 = 13$]
+  #colbreak()
    #subquestion()[$x - 6 = 3x$]
    #subquestion()[$x + 6 = 9$]
    #subquestion()[$x + 9 = 3$]
+  #colbreak()
    #subquestion()[$x - 3 = 4 - x$]
    #subquestion()[$x - 3 = 4 - 2x$]
    #subquestion()[$2x + 34 = -20$]
+]
+#question()[Resuelve las siguientes ecuaciones con termino en ambos lados:]
+  #columns(3, gutter: 11pt)[
+
    #subquestion()[$4x + 3 = 3x + 5$]
    #subquestion()[$x - 8 = 2x - 11$]
    #subquestion()[$9x + 8 = 7x + 6$]
    #subquestion()[$7x + 9 = 3 + 9x$]
    #subquestion()[$x + 1 = 2x - 7$]
+  #colbreak() 
    #subquestion()[$6x + 6 = 4 + 8x$]
    #subquestion()[$9 + 9x = 17 + 5x$]
-   #colbreak()
    #subquestion()[$2x + 3 = 3x$]
    #subquestion()[$25 - 2x = 3x + 3$]
-   
    #subquestion()[$4x + 1 = 3x + 3$]
+  #colbreak()
    #subquestion()[$5x - 3 = 10x - 6$]
    #subquestion()[$1 + 8x = -16x + 31$]
    #subquestion()[$5x - 11 = 15x - 19$]
+   #subquestion()[$3x + 4 = 2x + 5$]
+   #subquestion()[$3x + 4 = 2x + 5$]
+]
+
+#question()[Resuelve las siguientes ecuaciones con paréntesis:]
+  #columns(3, gutter: 11pt)[
+    #subquestion()[$2(x+3)=10$]
+    #subquestion()[$5(x-2)=15$]
+    #subquestion()[$3(x+4)=15$]
+    #subquestion()[$2(x-3)=10$]
+    #subquestion()[$4(x+2)=20$]
+    #subquestion()[$3(x-1)=9$]
+  #colbreak() 
+    #subquestion()[$5(x+3)=20$]
+    #subquestion()[$2(x-4)=6$]
+    #subquestion()[$3(x+2)=15$]
+    #subquestion()[$4(x-3)=8$]
+    #subquestion()[$5(x+1)=15$]
+    #subquestion()[$3(x-2)=9$]
+  #colbreak()
+    #subquestion()[$2(x+3)=10$]
+    #subquestion()[$5(x-2)=15$]
+    #subquestion()[$3(x+4)=15$]
+    #subquestion()[$2(x-3)=10$]
+    #subquestion()[$4(x+2)=20$]
+    #subquestion()[$3(x-1)=9$]
+  ]
+
+#question()[Resuelve las siguientes ecuaciones:]
+#columns(2, gutter: 11pt)[
    #subquestion()[$2 + 5 (x - 13) = x - 3$]
    #subquestion()[$2 (2x - 2) = - (4 - x)$]
    #subquestion()[$2 (3x - 49) = -x + 14$]
    #subquestion()[$3 (x - 5) - 2 (x + 4) = 18$]
    #subquestion()[$5 (x - 1) + 10 (x + 2) = 45$]
+    #subquestion()[$3 (x - 2) - 2 (x + 3) = 18$]
+   #colbreak() 
    #subquestion()[$3 - 2x (5 - 2x) = 4x^2 + x - 30$]
    #subquestion()[$3 (2 - x) = 18x - 1$]
    #subquestion()[$10 + 5 (x - 3) = 3 (x + 1)$]
-   #subquestion()[$2 [3 (x + 5) - 9] = -3 (2x - 4)$]
-   #subquestion()[$display(x/5 = -30)$]
+   #subquestion()[$display(2 [3 (x + 5) - 9] = -3 (2x - 4))$]
+   #subquestion()[$display(3 (x - 2) - 2 (x + 3) = 18)$]
+   #subquestion()[$display(5 [2(x - 1) + 10 (x + 2)] - 2x = 45)$]
 ]
 
+#question()[Determina cuantas soluciones tienen las siguientes ecuaciones:]
+#columns(2, gutter: 11pt)[
+#subquestion()[$2x+3=2x+5$]
+#subquestion()[$3(x+2)=3x+10$]
+#subquestion()[$5(x-1)+2=5x+4$]
+#subquestion()[$display(5(x+1)+2=5x+4)$]
+#colbreak() 
+#subquestion()[$2x+5=2x+5$]
+#subquestion()[$3(x+2)=3x+6$]
+#subquestion()[$4x-8=4(x-2)$]
+#subquestion()[$display(4x+8=4(x-2))$]
+]
 #pagebreak()
 
-#question()[Resuelve las siguientes ecuaciones:]
+#question()[Resuelve las siguientes ecuaciones con fracciones:]
 #columns(2, gutter: 11pt)[
-
+  #subquestion()[$display(x/5 = -30)$]
+  #subquestion()[$display(2x/3 = 4)$]
+  #subquestion()[$display(3x/4 = 5)$]
+  #subquestion()[$display(4x/5 = 6)$]
   #subquestion()[$display(3x + 1/2 x + 6 = 2x)$]
   #subquestion()[$display(3/2 x + 8 = 3/5 x - 1)$]
   #subquestion()[$display(4/3 (x + 1) = 2x - 1)$]
   #subquestion()[$display((x - 2)/4 - (2x + 6) / 3 = 0 )$]
-  #colbreak()
+ #colbreak()
+
   #subquestion()[$display((x + 1) /4 - (x - 2)/6 = 1)$]
   #subquestion()[$display((x - 1) / 4 - (x - 5)/36 = (x - 5)/9)$]
   #subquestion()[$display(3/2 + 3x = (5x) / 9 - (2x + 1)/ 6)$]
-  
+  #subquestion()[$display(3/2 x + 1/3 = 2/5 x - 1/4)$]
+  #subquestion()[$display((x + 1) /4 - (x - 2)/6 = 1)$]
+  #subquestion()[$display((x - 1) / 4 - (x - 5)/36 = (x - 5)/9)$]
+  #subquestion()[$display(3/2 + 3x = (5x) / 9 - (2x + 1)/ 6)$]
 ]
