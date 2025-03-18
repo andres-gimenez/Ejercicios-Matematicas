@@ -134,34 +134,54 @@
   #subquestion()[$7x^2 + 2x + 1 + 2x^2$ ]
   #subquestion()[$8x^4 - 5x^2 + 4x^4 -5x ^2$]
   #subquestion()[$2x^2 - 3x$]
-  #subquestion()[$5x^4 - 5x + 3x^4 - 3$] 
+  #subquestion()[$5x^4 - 5x + 3x^4 - 3$]
+  #colbreak() 
   #subquestion()[$x^3 + 5x^2 + 2x^3$]
   #subquestion()[$x^2 - 5x - 3 + 3x^2 - x -1$]
   #subquestion()[$7y^2 - 4y^2 + 3y + 2$]
   #subquestion()[$5x^2-4x + 6x^2 +2x$]
   #subquestion()[$4t^2 - 3t + 2t^2 - 5t$] 
+  #subquestion()[$4x^5 - 3x + 5 + 2x^5 - 5x^2 + 5x - 2 + 3x$] 
+]
+#question()[Simplifica las siguientes expresiones algebraicas con paréntesis:]
+#columns(2, gutter: 11pt)[
 
   #subquestion()[$(3x + 3) + (5x + 2)$]
   #subquestion()[$(6x + 7) + (8x + 2)$]
   
   #subquestion()[$(5x - 3) - (2x + 2)$]
    
-#colbreak()
+
   #subquestion()[$(2x + 3) - (3x - 2)$]
   #subquestion()[$(-2x - 5) - (-3x + 2)$]
   #subquestion()[$-(2x + 2) + (3x - 1)$]  
-  #subquestion()[$3y^3 - 5y + 2) - (5y^3 + 3y - 2$] 
+  #subquestion()[$3y^3 - 5y + 2) - (5y^3 + 3y - 2)$] 
+ 
   #subquestion()[$5x - [3x + 4x - (5x + 2x)]$]
-  
+   #colbreak()
+
   #subquestion()[$- (4x + 3x - 3) + (5x + 1)$]
   #subquestion()[$- [3x + (3x + 5x - 3)]$]
-  #subquestion()[$5 - (3x + 1) - (3x + 2) + (3x - 2)$]
-  
-  #subquestion()[$display(2/5 x^2 - 1/3 x + 3/8 x^2 - 2/5 x)$]
-  #subquestion()[$display(21/5x^2+2/5x-[3/2x^2+(5x+2)])$]
+  #subquestion()[$5 - (3x + 1) - (3x + 2) + (4x - 2)$]
+  #subquestion()[$- 6(3x + 2) + 3(3x + 2) + 5(3x - 2)$]
+  #subquestion()[$- 2(5x + 4) - 4(2x + 2) + 1(5x - 7)$]
+  #subquestion()[$- 3(2x + 8) + 6(6x + 1) + 3(3x - 2)$]
+  #subquestion()[$(3x + 2) (2x + 3)$]
+  #subquestion()[$(5x - 2) (3x + 5)$]
+]
 
+#question()[Simplifica las siguientes expresiones algebraicas con fracciones:]
+#columns(2, gutter: 11pt)[
+  #subquestion()[$display(5/2 x - 3/5 x)$]
   #subquestion()[$display((5x)/2 - (3x)/5)$]
   #subquestion()[$display((6x^2)/5 + (2x^2) / 7)$]
+  #subquestion()[$display((3x^2)/4 - (5x^2) / 3)$]
+  #colbreak()
+  #subquestion()[$display(2/5 x^2 - 1/3 x + 3/8 x^2 - 2/5 x)$]
+  #subquestion()[$display(21/5x^2+2/5x-[3/2x^2+(5x+2)])$]
+  #subquestion()[$display(5/2x^2+3/4x-[2/3x^2+(5x+2)])$]
+  #subquestion()[$display(5/2x^2+3/4x-2/3x^2+5x+2)$]
+
 ]
 
 #pagebreak()
@@ -268,7 +288,6 @@
   #subquestion()[$display(4/3 (x + 1) = 2x - 1)$]
   #subquestion()[$display((x - 2)/4 - (2x + 6) / 3 = 0 )$]
  #colbreak()
-
   #subquestion()[$display((x + 1) /4 - (x - 2)/6 = 1)$]
   #subquestion()[$display((x - 1) / 4 - (x - 5)/36 = (x - 5)/9)$]
   #subquestion()[$display(3/2 + 3x = (5x) / 9 - (2x + 1)/ 6)$]
