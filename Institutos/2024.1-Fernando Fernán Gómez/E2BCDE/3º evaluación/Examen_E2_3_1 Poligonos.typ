@@ -142,7 +142,7 @@
 
 #subquestion()[Calcula el área del jardín.]
 
-#subquestion()[¿Cuantos metros metros de valla necesita para cercarlo?]
+#subquestion()[¿Cuantos metros de valla necesita para cercarlo?]
 
 #subquestion()[Si quiere colocar césped en todo el jardín y cada metro cuadrado de césped cuesta 12€, ¿cuánto gastará en total?]
 
@@ -234,8 +234,8 @@
 #subquestion()[Si se quisiera transformar este paralelogramo en un rectángulo de igual área, ¿cuál debería ser la nueva altura manteniendo la base de 10 metros?]
 
 #pagebreak()
-#question(points:2.5)[Si la diagonal de un televisor mide 223 cm y su altura son 119cm. ¿Cual es su area?] 
+#question(points:2.5)[Si la diagonal de un televisor mide 223 cm y su altura son 119cm. ¿Cuál es su área?] 
 
 #pagebreak()
-#question(points:2.5)[Si los segmento $overline("AB")$, $overline("BC")$ y $overline("A'B'")$ miden respectivamente, 2,4cm, 5,3cm, 2,7cm, ¿cuanto mide el segmente $overline("B'C'")$]  
+#question(points:2.5)[Si los segmento $overline("AB")$, $overline("BC")$ y $overline("A'B'")$ miden respectivamente, 2,4cm, 5,3cm, 2,7cm, ¿cuánto mide el segmente $overline("B'C'")$]  
 #image("Tales.png")
