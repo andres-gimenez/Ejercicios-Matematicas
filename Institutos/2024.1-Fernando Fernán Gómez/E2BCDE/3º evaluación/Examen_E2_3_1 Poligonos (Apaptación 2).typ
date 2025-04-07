@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "3ª evaluación - 1º examen",
     content: "Polígonos - Teorema de Pitágoras y teorema de Tales",
-    model: "Modelo ◔"
+    model: "Modelo ◮"
   ),
   
   language: "es",
