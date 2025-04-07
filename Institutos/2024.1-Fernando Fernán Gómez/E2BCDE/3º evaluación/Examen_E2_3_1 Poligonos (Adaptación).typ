@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "3ª evaluación - 1º examen",
     content: "Polígonos - Teorema de Pitágoras y teorema de Tales",
-    model: "Modelo ◔"
+    model: "Modelo (Adaptación)"
   ),
   
   language: "es",
@@ -25,8 +25,8 @@
   show-student-data: "odd-pages",
   show-grade-table: true,
   question-points-position: right,
-  // clarifications: [No está permitido el uso de calculadora]
-  // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
+  // clarifications: [No está permitido el uso de calculadora],
+  question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
 
 // #set math.cases(reverse: true)
@@ -136,7 +136,7 @@
 
 
 
-#question(points:2)[Ana quiere construir un jardín en forma de triángulo. Sus lados miden 6 m, 8 m y 10 m.]
+#question(points:2.5)[Ana quiere construir un jardín en forma de triángulo. Sus lados miden 6 m, 8 m y 10 m.]
 
 #subquestion()[Demuestra que el triángulo es rectángulo.]
 
@@ -158,7 +158,7 @@
 
 #pagebreak()
 
-#question(points:2)[Imagina que un parque tiene la forma de un romboide. La base del paralelogramo mide 10 metros, y su altura (la distancia perpendicular entre las bases) es de 6 metros. Además, los lados inclinados miden 8 metros cada uno.]
+#question(points:2.5)[Imagina que un parque tiene la forma de un romboide. La base del paralelogramo mide 10 metros, y su altura (la distancia perpendicular entre las bases) es de 6 metros. Además, los lados inclinados miden 8 metros cada uno.]
 
 // #cetz.canvas(length: 1cm, {
 //   import cetz.draw: *
@@ -234,11 +234,11 @@
 #subquestion()[Si se quisiera transformar este paralelogramo en un rectángulo de igual área, ¿cuál debería ser la nueva altura manteniendo la base de 10 metros?]
 
 #pagebreak()
-#question(points:2)[Si la diagonal de un televisor mide 223 cm y su altura son 119cm. ¿Cuál es su área?] 
-#v(1fr)
-#question(points:2)[Un parque tiene forma de triangulo equilatero de 20 metros de lado. ¿Cuanto cuesta plantar césped	 en el parque si el metro cuadrado cuesta 5€?] 
+// #question(points:2)[Si la diagonal de un televisor mide 223 cm y su altura son 119cm. ¿Cuál es su área?] 
+// #v(1fr)
+#question(points:2.5)[Un parque tiene forma de triangulo equilatero de 20 metros de lado. ¿Cuanto cuesta plantar césped	 en el parque si el metro cuadrado cuesta 5€?] 
 #v(1fr)
 
 #pagebreak()
-#question(points:2)[Si los segmento $overline("AB")$, $overline("BC")$ y $overline("A'B'")$ miden respectivamente, 2,4cm, 5,3cm, 2,7cm, ¿cuánto mide el segmente $overline("B'C'")$]  
+#question(points:2.5)[Si los segmento $overline("AB")$, $overline("BC")$ y $overline("A'B'")$ miden respectivamente, 2,4cm, 5,3cm, 2,7cm, ¿cuánto mide el segmente $overline("B'C'")$]  
 #image("Tales.png")
