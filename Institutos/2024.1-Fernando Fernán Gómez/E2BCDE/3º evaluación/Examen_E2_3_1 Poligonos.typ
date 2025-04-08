@@ -240,5 +240,5 @@
 #v(1fr)
 
 #pagebreak()
-#question(points:2)[Si los segmento $overline("AB")$, $overline("BC")$ y $overline("A'B'")$ miden respectivamente, 2,4cm, 5,3cm, 2,7cm, ¿cuánto mide el segmente $overline("B'C'")$]  
+#question(points:2)[Si los segmento $overline("AB")$, $overline("BC")$ y $overline("A'B'")$ miden respectivamente, 2,4cm, 5,3cm, 2,7cm, ¿cuánto mide el segmento $overline("B'C'")$]  
 #image("Tales.png")
