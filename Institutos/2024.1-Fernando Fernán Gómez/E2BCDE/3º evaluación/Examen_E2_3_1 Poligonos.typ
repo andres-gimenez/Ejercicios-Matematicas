@@ -26,7 +26,7 @@
   show-grade-table: true,
   question-points-position: right,
   // clarifications: [No está permitido el uso de calculadora]
-  question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
+  // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
 
 // #set math.cases(reverse: true)
