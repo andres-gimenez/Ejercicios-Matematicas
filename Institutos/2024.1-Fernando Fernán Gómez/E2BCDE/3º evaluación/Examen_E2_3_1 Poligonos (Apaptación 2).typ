@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "3ª evaluación - 1º examen",
     content: "Polígonos - Teorema de Pitágoras y teorema de Tales",
-    model: "Modelo ◔"
+    model: "Modelo ◮"
   ),
   
   language: "es",
@@ -26,7 +26,7 @@
   show-grade-table: true,
   question-points-position: right,
   // clarifications: [No está permitido el uso de calculadora]
-  // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
+  question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
 
 // #set math.cases(reverse: true)
@@ -240,5 +240,5 @@
 #v(1fr)
 
 #pagebreak()
-#question(points:2)[Si los segmento $overline("AB")$, $overline("BC")$ y $overline("A'B'")$ miden respectivamente, 2,4cm, 5,3cm, 2,7cm, ¿cuánto mide el segmento $overline("B'C'")$]  
+#question(points:2)[Si los segmento $overline("AB")$, $overline("BC")$ y $overline("A'B'")$ miden respectivamente, 2,4cm, 5,3cm, 2,7cm, ¿cuánto mide el segmente $overline("B'C'")$]  
 #image("Tales.png")

@@ -14,7 +14,7 @@
     academic-period: "Curso 2024/2025",
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
-    number: "2º evaluación - Ejercicios sistema de ecuaciones",
+    number: "3º evaluación - Ejercicios sistema de ecuaciones",
     content: "Ecuaciones",
     // model: "Modelo A"
   ),
