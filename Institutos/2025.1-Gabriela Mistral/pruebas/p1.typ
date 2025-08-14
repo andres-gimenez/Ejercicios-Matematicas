@@ -1,5 +1,5 @@
-#import "@local/g-exam:0.4.3": *
-#import "@preview/wrap-it:0.1.0": wrap-content
+#import "@preview/g-exam:0.4.3": *
+// #import "@preview/wrap-it:0.1.0": wrap-content
 
 #show: exam.with(
   author: (
@@ -15,7 +15,7 @@
     academic-period: "Curso 2025/2026",
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
-    number: "2ª evaluación - 1º parcial",
+    number: "1ª evaluación - 1º parcial",
     content: "Probabilidad y expresiones algebraicas",
     model: [Modelo $alpha$],
   ),
