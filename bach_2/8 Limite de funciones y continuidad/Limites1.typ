@@ -168,9 +168,9 @@
   #subquestion()[$display(limits("lím")_(x->0) (sqrt(1-x)-1)/x)$]
   #subquestion()[$display(limits("lím")_(x->3) (2x+1)/(3-x))$]
   #subquestion()[$display(limits("lím")_(x->4) (x^2+x-20)/(x^2-7x+12))$]
-  #colbreak()
   #subquestion()[$display(limits("lím")_(x->-4) (x^2-7x+16)/(x^2-2x-24))$]
   #subquestion()[$display(limits("lím")_(x->1) (x-1)/(x^2+1))$]
+  // #colbreak()
   #subquestion()[$display(limits("lím")_(x->1) (x^2+1)/(x-1))$]
   #subquestion()[$display(limits("lím")_(x->3) (x^2-9)/(x^2-4))$]
   #subquestion()[$display(limits("lím")_(x->3) (x^2-x-6)/(x^2+4x-21))$]
