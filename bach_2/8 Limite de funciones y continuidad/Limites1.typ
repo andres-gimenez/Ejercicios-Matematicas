@@ -72,20 +72,23 @@
 
 #question()[Calcula el valor de los siguientes límites, si existieran:]
 #columns(2, [
+  #subquestion()[$display(limits("lím")_(x->+infinity) (5x^2+3x+2))$]
+  #subquestion()[$display(limits("lím")_(x->+infinity) (2x+sqrt(2x^2+6x-5)))$]
   #subquestion()[$display(limits("lím")_(x->+infinity) (3x^2+5x-3)/4)$]
   #subquestion()[$display(limits("lím")_(x->+infinity) sqrt(3x^2+5x-3) / 4)$]
   #subquestion()[$display(limits("lím")_(x->+infinity) x+e^x)$]
   #subquestion()[$display(limits("lím")_(x->+infinity) 2^x)$]
   #subquestion()[$display(limits("lím")_(x->+infinity) (1/2)^x)$]
   #subquestion()[$display(limits("lím")_(x->-infinity) (1/2)^x)$]
+  #subquestion()[$display(limits("lím")_(x->+infinity) (0,5)^x)$]
+  #colbreak()
   #subquestion()[$display(limits("lím")_(x->+infinity) 4/(3x^2+5x-3))$]
   #subquestion()[$display(limits("lím")_(x->+infinity) 4/sqrt(3x^2+5x-3))$]
-  #colbreak()
   #subquestion()[$display(limits("lím")_(x->-infinity) x-e^(-x))$]
   #subquestion()[$display(limits("lím")_(x->-infinity) 2^(-x))$]
   #subquestion()[$display(limits("lím")_(x->+infinity) (1/2)^(-x))$]
   #subquestion()[$display(limits("lím")_(x->-infinity) (1/2)^(-x))$]
-  #subquestion()[$display(limits("lím")_(x->+infinity) ((x+3)/(3x^2+5))^(2 sqrt(2)))$]
+  #subquestion()[$display(limits("lím")_(x->+infinity) ((x+3)/(3x^2+5))^(2 sqrt(x)))$]
 ])
 
 #pagebreak()
@@ -97,12 +100,14 @@
   #subquestion()[$display(limits("lím")_(x->-infinity) (4x^3+3x^2-2)/(5-x^2))$]
   #subquestion()[$display(limits("lím")_(x->-infinity) (-4x^2+1)/(x^3+x))$]
   #subquestion()[$display(limits("lím")_(x->+infinity) (sqrt(2x^2+2x+3))/(2x+3))$]
+  #subquestion()[$display(limits("lím")_(x->+infinity) (root(3, 2x^2+3)-5)/((sqrt(x+5))+root(3, 1-x^2)))$]
   #colbreak()
   #subquestion()[$display(limits("lím")_(x->+infinity) (2x^2+1)/sqrt(x^3+3x-1))$]
   #subquestion()[$display(limits("lím")_(x->+infinity) (sqrt(2x^2+2x+3))/(2x+3))$]
   #subquestion()[$display(limits("lím")_(x->+infinity) (sqrt(2x^3+2x+3))/(x^2+3))$]
   #subquestion()[$display(limits("lím")_(x->-infinity) (sqrt(2x^3+2x+3))/(x^2+3))$]
   #subquestion()[$display(limits("lím")_(x->infinity) 1/(3x^2+1) (3-2x^2))$]
+  
 ])
 
 #question()[Calcula el valor de los siguientes límites, si existieran:]
@@ -110,10 +115,14 @@
   #subquestion()[$display(limits("lím")_(x->+infinity) x^2/(x-1)- x^2/(x-2))$]
   #subquestion()[$display(limits("lím")_(x->-infinity) (3x^4+5)/(x+2) - (4x^3-x)/(x-2))$]
   #subquestion()[$display(limits("lím")_(x->-infinity) (3x+5)/2 - (x^2-2)/x)$]
+  #subquestion()[$display(limits("lím")_(x->-infinity) x-sqrt(3x^2+6x-5))$]
+  #subquestion()[$display(limits("lím")_(x->-infinity) 2x^2-sqrt(2x^2-1))$]
   #colbreak()
   #subquestion()[$display(limits("lím")_(x->+infinity) 2/sqrt(x^2-1) - 2/sqrt(x^2+1))$]
   #subquestion()[$display(limits("lím")_(x->+infinity) (x^3-2x^2)/(x^2-1) - (x^3+2x^2)/(x^2+1))$]
   #subquestion()[$display(limits("lím")_(x->-infinity) (x^2+x+2)/(x-3) - (x^2-2x+2)/(x+3))$]
+  #subquestion()[$display(limits("lím")_(x->+infinity) sqrt(x^2+1) + sqrt(x+1)))$]
+  #subquestion()[$display(limits("lím")_(x->-infinity) sqrt(1-x) - e^x + e^(-x)))$]
 ])
 
 #question()[Calcula el valor de los siguientes límites, si existieran:]
@@ -128,6 +137,8 @@
   #subquestion()[$display(limits("lím")_(x->infinity) x^2 sqrt(x/(x^5-3)) )$]
   #subquestion()[$display(limits("lím")_(x->infinity) "Ln"(x) dot 2/x)$]
 ])
+
+#pagebreak()
 
 #question()[Calcula los siguientes límites:]
 #columns(3, [
@@ -155,7 +166,6 @@
   
 ])
 
-#pagebreak()
 #question()[Calcula los siguientes límites:]
   #columns(2, [
     #subquestion()[$display(limits("lím")_(x->-infinity) ((3x^3+5)/(x+2) - (4x^3 - x)/(x-2)))$]
@@ -169,42 +179,4 @@
   #subquestion()[$display(limits("lím")_(x->-infinity) (1-1/x)^(5x+3))$]
   #subquestion()[$display(limits("lím")_(x->-infinity) ((x^2+x-1)/(x^2+2))^(3x-1))$]
 ])
-// = EvAU
-// #question()[Año 2011 - Ordinaria - Opción A]
-
-// #subquestion()[$display(limits("lím")_(x->infinity) sqrt(x) / (sqrt(x + sqrt(x))))$]
-
-// #question()[Año 2012 - Ordinaria - Opción B]
-
-// #subquestion()[$display(limits("lím")_(x->+infinity) (3x + ln(x+1))/(sqrt(x^2-3)) )$]
-
-// #question()[Año 2012 - Ordinaria - Coincidente - Opción B
-
-// Dada la función
-
-//  $ f(x) = (x-3)/sqrt(x^2-9) $
- 
-// se pide:
-// ]
-
-// #subquestion()[Hallar $display(limits("lím")_(x->+3^+) f(x))$, $display(limits("lím")_(x->-3^-) f(x))$]
-
-// #subquestion()[Hallar $display(limits("lím")_(x->+infinity) f(x))$, $display(limits("lím")_(x->-infinity) f(x))$]
-
-
-
-// #question()[Año 2025 - Modelo - Bloque 2
-
-// Dada la función $display(f(x)=sin(pi/2 x))$, se pide]
-
-// #subquestion()[Estudiar la paridad de la función $display(g(x) = f(x f(x))) $]
-
-// #subquestion()[Hallar $display(limits("lím")_(x->0) (sqrt(4+3f(x)) - 3) / x )$.]
-
-
-// #question()[Año 2025 - Ordinaria - Coincidente - Bloque 2
-
-// Para la  la función $display(f(x)=sqrt(x^2+3x))$, se pide]
-
-// #subquestion()[Hallar $display(limits("lím")_(x->-infinity) f(x)/x )$ y $display(limits("lím")_(x->-infinity) f(x)+x )$.]
 

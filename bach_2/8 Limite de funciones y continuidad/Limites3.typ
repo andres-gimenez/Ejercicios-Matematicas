@@ -60,3 +60,41 @@
 
 ])
 
+= EvAU
+#question()[Año 2011 - Ordinaria - Opción A]
+
+#subquestion()[$display(limits("lím")_(x->infinity) sqrt(x) / (sqrt(x + sqrt(x))))$]
+
+#question()[Año 2012 - Ordinaria - Opción B]
+
+#subquestion()[$display(limits("lím")_(x->+infinity) (3x + ln(x+1))/(sqrt(x^2-3)) )$]
+
+#question()[Año 2012 - Ordinaria - Coincidente - Opción B
+
+Dada la función
+
+ $ f(x) = (x-3)/sqrt(x^2-9) $
+ 
+se pide:
+]
+
+#subquestion()[Hallar $display(limits("lím")_(x->+3^+) f(x))$, $display(limits("lím")_(x->-3^-) f(x))$]
+
+#subquestion()[Hallar $display(limits("lím")_(x->+infinity) f(x))$, $display(limits("lím")_(x->-infinity) f(x))$]
+
+
+
+#question()[Año 2025 - Modelo - Bloque 2
+
+Dada la función $display(f(x)=sin(pi/2 x))$, se pide]
+
+#subquestion()[Estudiar la paridad de la función $display(g(x) = f(x f(x))) $]
+
+#subquestion()[Hallar $display(limits("lím")_(x->0) (sqrt(4+3f(x)) - 3) / x )$.]
+
+
+#question()[Año 2025 - Ordinaria - Coincidente - Bloque 2
+
+Para la  la función $display(f(x)=sqrt(x^2+3x))$, se pide]
+
+#subquestion()[Hallar $display(limits("lím")_(x->-infinity) f(x)/x )$ y $display(limits("lím")_(x->-infinity) f(x)+x )$.]
