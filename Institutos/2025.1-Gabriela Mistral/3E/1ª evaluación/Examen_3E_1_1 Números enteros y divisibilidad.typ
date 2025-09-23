@@ -31,7 +31,7 @@
 
   // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
-#question(points: 2)[Dos faros marinos emiten destellos de luz: el primero cada 45 segundos y el segundo cada 60 segundos.]
+#question(points: 2.5)[Dos faros marinos emiten destellos de luz: el primero cada 45 segundos y el segundo cada 60 segundos.]
 
 #subquestion()[¿Cada cuántos segundos se encenderán a la vez?]
 #v(1fr)
@@ -41,18 +41,36 @@
 
 #pagebreak()
 
-#question(points: 2)[En un almacén hay $600$ cajas de fruta. Primero se vendieron $1/4$ del total. Después se vendieron $1/5$ de las cajas que quedaban. Finalmente se vendieron $1/3$ de las cajas restantes.]
+#question(points: 2.5)[En un almacén hay $600$ cajas de fruta. Primero se vendieron $1/4$ del total. Después se vendieron $1/5$ de las cajas que quedaban. Finalmente se vendieron $1/3$ de las cajas restantes.]
 #subquestion()[¿Cuántas cajas se han vendido?]
 #subquestion()[¿Cuántas se estropearon?]
 #subquestion()[¿Cuántas se donaron?]
 #subquestion()[¿Cuántas cajas quedaron en el almacén al final?]
 #v(2fr)
 
-
-
 #pagebreak()
 #question()[Calcula]
 #subquestion(points: 1)[$display(7/5 dot 3/4 - 3/5:3/10) = $]
 #v(1fr)
+
 #subquestion(points: 1)[$display(2 (1/3 + 2/6) - 4 (1/6 - 5/2)) = $]
+#v(1fr)
+
+#subquestion(points: 1)[$display(5/6-3/7 : 9/14 + (2/3 - 4/9):16/45 -1/14) = $]
+#v(2fr)
+
+#pagebreak()
+
+#question(points: 2)[Convierte a fracción los siguientes números en formato decimal.]
+
+#subquestion()[$display("0,25" = )$]
+#v(1fr)
+
+#subquestion()[$display("3,75" = )$]
+#v(1fr)
+
+#subquestion()[$display("0,"overparen("18") = )$]
+#v(1fr)
+
+#subquestion()[$display("5,2"overparen("34") = )$]
 #v(1fr)
