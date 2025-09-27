@@ -82,7 +82,9 @@ se pide:
 
 #subquestion()[Hallar $display(limits("lím")_(x->+infinity) f(x))$, $display(limits("lím")_(x->-infinity) f(x))$]
 
+#question()[Año 2024 - Ordinaria - Opción B]
 
+#subquestion()[$display(limits("lím")_(x->pi/2) tg(x/2)^(1/cos(x)))$]
 
 #question()[Año 2025 - Modelo - Bloque 2
 
@@ -98,3 +100,5 @@ Dada la función $display(f(x)=sin(pi/2 x))$, se pide]
 Para la  la función $display(f(x)=sqrt(x^2+3x))$, se pide]
 
 #subquestion()[Hallar $display(limits("lím")_(x->-infinity) f(x)/x )$ y $display(limits("lím")_(x->-infinity) f(x)+x )$.]
+
+
