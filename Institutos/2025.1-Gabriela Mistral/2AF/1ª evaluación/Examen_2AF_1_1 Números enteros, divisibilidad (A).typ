@@ -27,7 +27,7 @@
   show-grade-table: true,
   // draft: true,
   question-points-position: right,
-  // question-text-parameters: (size: 14pt, spacing:150%)
+  question-text-parameters: (size: 14pt, spacing:150%)
 
   // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
