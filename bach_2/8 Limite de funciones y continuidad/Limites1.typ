@@ -107,7 +107,6 @@
   #subquestion()[$display(limits("lím")_(x->+infinity) (sqrt(2x^3+2x+3))/(x^2+3))$]
   #subquestion()[$display(limits("lím")_(x->-infinity) (sqrt(2x^3+2x+3))/(x^2+3))$]
   #subquestion()[$display(limits("lím")_(x->infinity) 1/(3x^2+1) (3-2x^2))$]
-  
 ])
 
 #question()[Calcula el valor de los siguientes límites, si existieran:]
