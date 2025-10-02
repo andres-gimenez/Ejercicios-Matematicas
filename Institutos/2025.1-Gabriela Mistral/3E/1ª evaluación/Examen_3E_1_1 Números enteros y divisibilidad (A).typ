@@ -41,7 +41,7 @@
 
 #pagebreak()
 
-#question(points: 2.5)[En un almacén hay $600$ cajas de fruta. Primero se vendieron $1/4$ del total. Después se vendieron $1/5$ de las cajas que quedaban. Finalmente se vendieron $1/3$ de las cajas restantes.]
+#question(points: 2.5)[En un almacén hay $600$ cajas de fruta. Primero se vendieron $1/4$ del total. Después se estropearon $1/5$ de las cajas que quedaban. Finalmente se donaron $1/3$ de las cajas restantes.]
 #subquestion()[¿Cuántas cajas se han vendido?]
 #subquestion()[¿Cuántas se estropearon?]
 #subquestion()[¿Cuántas se donaron?]
