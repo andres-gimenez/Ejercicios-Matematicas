@@ -56,7 +56,7 @@
 #subquestion(points: 1)[$display(2 (1/3 + 2/6) - 4 (1/6 - 5/2)) = $]
 #v(1fr)
 
-#subquestion(points: 1)[$display(5/6-3/7 : 9/14 + (2/3 - 4/9):16/45 -1/14) = $]
+#subquestion(points: 1)[$display(5/6-3/7 : 6/14 + (2/3 - 6/9):16/45 -1/14) = $]
 #v(2fr)
 
 #pagebreak()
