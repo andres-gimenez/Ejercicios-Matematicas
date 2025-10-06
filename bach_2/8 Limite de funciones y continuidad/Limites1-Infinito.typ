@@ -12,11 +12,11 @@
     logo:image("../logo-ies_gabriela_mistral.png")
   ),
   exam-info: (
-    // academic-period: "Curso 2025/2026",
+    academic-period: "Curso 2025/2026",
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas",
-    // number: "Versión 1",
-    content: "Límites 1 (v1)",  // Limite -> infinity
+    number: [Límites 1  (v2)],
+    content: [($X->infinity$)] 
     // model: [Modelo $alpha$],
   ),
   

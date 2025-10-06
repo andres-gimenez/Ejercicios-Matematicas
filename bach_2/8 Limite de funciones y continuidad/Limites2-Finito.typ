@@ -12,12 +12,12 @@
     logo:image("../logo-ies_gabriela_mistral.png")
   ),
   exam-info: (
-    // academic-period: "Curso 2025/2026",
+    academic-period: "Curso 2025/2026",
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas",
-    // number: "Versión 1",
-    content: "Límites 2 (v1)",  // limite x-> c
-    // model: [Modelo $alpha$],
+    number: [Límites 2  ],
+    content: [($X->c$)],
+    model: [(v3)],
   ),
   
   language: "es",
@@ -41,23 +41,72 @@
   #subquestion()[$display(limits("lím")_(x->0)1000/x^2)$]
   #subquestion()[$display(limits("lím")_(x->0) 1/x^3)$]
   #subquestion()[$display(limits("lím")_(x->0) -10/(x^2))$]
+
   #subquestion()[$display(limits("lím")_(x->0) -1/x^3)$]
+
+  #subquestion()[$display(limits("lím")_(x->1) sqrt(x^2+2x-3))$]
+  #subquestion()[$display(limits("lím")_(x->1^+) sqrt(x^2+2x-3))$]
+  #subquestion()[$display(limits("lím")_(x->1^-) sqrt(x^2+2x-3))$]
+  
+  
+  #subquestion()[$display(limits("lím")_(x->1^+) ln(x^2+2x-3))$]
+  #subquestion()[$display(limits("lím")_(x->1^-) ln(x^2+2x-3))$]
+  #subquestion()[$display(limits("lím")_(x->1) ln(x^2+2x-3))$]
+  #colbreak()
   #subquestion()[$display(limits("lím")_(x->2^+) 1/root(4, x^4-16))$]
   #subquestion()[$display(limits("lím")_(x->2^-) 1/root(4, x^4-16))$]
   #subquestion()[$display(limits("lím")_(x->2) 1/root(4, x^4-16))$]
-  #colbreak()
+  #subquestion()[$display(limits("lím")_(x->2^+) 1/ln(x^4-16))$]
+  #subquestion()[$display(limits("lím")_(x->2^-) 1/ln(x^4-16))$]
+  #subquestion()[$display(limits("lím")_(x->2) 1/ln(x^4-16))$]
+  #subquestion()[$display(limits("lím")_(x->2) 1/sqrt(x^2+x-6))$]
+  #subquestion()[$display(limits("lím")_(x->2) 1/ln(x^2+x-6))$]
+])
+
+#question()[Resuelve los siguientes limites comparando infinitos:]
+
+#clarification("Este tipo de límite en un examen es recomendable que se resuelvan por L'Hôpital.")
+#columns(2, [
   #subquestion()[$display(limits("lím")_(x->0^+) x/(ln x))$]
   #subquestion()[$display(limits("lím")_(x->0^-) x/(ln x))$]
   #subquestion()[$display(limits("lím")_(x->0) x/(ln x))$]
   #subquestion()[$display(limits("lím")_(x->0^+) (ln x)/x)$]
   #subquestion()[$display(limits("lím")_(x->0^-) (ln x)/x)$]
   #subquestion()[$display(limits("lím")_(x->0) (ln x)/x)$]
-  #subquestion()[$display(limits("lím")_(x->0) (ln x)/x)$]
-  #subquestion()[$display(limits("lím")_(x->(pi/2)^+) (1+tan(x))/cos(x))$]
-  #subquestion()[$display(limits("lím")_(x->(pi/2)^-) (1+tan(x))/cos(x))$]
-  #subquestion()[$display(limits("lím")_(x->pi/2) (1+tan(x))/cos(x))$]
+  
+
+  #subquestion()[$display(limits("lím")_(x->0^-) sqrt(x)/(ln x))$]
+  #subquestion()[$display(limits("lím")_(x->0^+) sqrt(x)/(ln x))$]
+  #subquestion()[$display(limits("lím")_(x->0) sqrt(x)/(ln x))$]
+  #colbreak()
+
+  #subquestion()[$display(limits("lím")_(x->0) e^x/sqrt(x))$]
+  #subquestion()[$display(limits("lím")_(x->1) e^x/sqrt(x-1))$]
+  
+  #subquestion()[$display(limits("lím")_(x->1) e^x/sqrt(x-1))$]
+  #subquestion()[$display(limits("lím")_(x->1) e^x/sqrt(x^2-1))$]
+
+  #subquestion()[$display(limits("lím")_(x->1) e^x/ln(x^2-1))$]
+
+
 ])
 
+// #question()[Resuelve los siguientes limites observando la gráfica de las funciones y comparando infinitos:]
+
+// #clarification("Este tipo de límite en un examen, es recomendable que se resuelvan por L'Hôpital.")
+// #columns(2, [
+//   #subquestion()[$display(limits("lím")_(x->(pi/2)^+) (1+tan(x))/cos(x))$]
+//   #subquestion()[$display(limits("lím")_(x->(pi/2)^-) (1+tan(x))/cos(x))$]
+//   #subquestion()[$display(limits("lím")_(x->pi/2) (1+tan(x))/cos(x))$]
+
+//   #colbreak()
+//   #subquestion()[$display(limits("lím")_(x->0) (tan(x) dot (1-cos(x))) / (x^3))$]
+//   #subquestion()[$display(limits("lím")_(x->1) ("sen"(x-1))/(x^2-1))$]
+
+//   #subquestion()[$display(limits("lím")_(x->0) ("sen"(2x)/x))$]
+// ])
+
+#pagebreak()
 #question()[Si $limits("lím")_(x->a) f(x)=-2$, $limits("lím")_(x->a) g(x)=2$ y $limits("lím")_(x->a) h(x)=5$] 
 
 #columns(2, [
@@ -78,15 +127,23 @@
   #subquestion()[$display(limits("lím")_(x->-4) (x^2-7x+16)/(x^2-2x-24))$]
   #subquestion()[$display(limits("lím")_(x->1) (x-1)/(x^2+1))$]
   #subquestion()[$display(limits("lím")_(x->1) (x^2+1)/(x-1))$]
-  #colbreak()
   #subquestion()[$display(limits("lím")_(x->3) (x^2-9)/(x^2-4))$]
   #subquestion()[$display(limits("lím")_(x->3) (x^2-x-6)/(x^2+4x-21))$]
-  #subquestion()[$display(limits("lím")_(x->3) (x^3+3x-18)/(x^2-27))$]
-  #subquestion()[$display(limits("lím")_(x->-1) (x^4-x^3-3x^2+5x-2)/(x^2-2x+1))$]
+
+  #subquestion()[$display(limits("lím")_(x->1) (x^4-x^3-3x^2+5x-2)/(x^2-2x+1))$]
+  #colbreak()
   #subquestion()[$display(limits("lím")_(x->-1) (x^3-2x^2+2x+5)/(x^2-6x-7))$]
-  #subquestion()[$display(limits("lím")_(x->4) (x^3-5x+1)/(x^3+2x^2-3x))$]
-      #subquestion()[$display(limits("lím")_(x->0) (x^2-5x+2)/(x^2+2x) - (x^3+2x+1)/
-  (x^3+x))$]
+  #subquestion()[$display(limits("lím")_(x->4) (x^3 - x^2 - 14 x + 8)/(x^4 - 2 x^3 - 11 x^2 + 12 x))$]
+  #subquestion()[$display(limits("lím")_(x->0) (x^2-5x+2)/(x^2+2x) - (x^3+2x+1)/(x^3+x))$]
+  #subquestion()[$display(limits("lím")_(x->1) (x^2-2x+1)/(x^4-x^3-3x^2+5x-2))$]
+  #subquestion()[$display(limits("lím")_(x->-1) [(x+1)(3x+2)/(x^3+x^2)])$]
+  #subquestion()[$display(limits("lím")_(x->2) (x^2-4)/(x^3-8))$]
+  #subquestion()[$display(limits("lím")_(x->-4) (x^3+3x^2-24x-80)/(x^2+x-12) )$]
+
+  #subquestion()[$display(limits("lím")_(x->1) [2/(x-1)^2-1/(x(x-1))])$]
+
+  #subquestion()[$display(limits("lím")_(x->2) [3/(x^2-5x+6)-1/(x-2)])$]
+
 ])
 
 #question()[Determina los siguientes límites de funciones distinguiendo, si es necesario, los dos límites laterales.]
@@ -105,6 +162,7 @@
 
 ])
 
+#pagebreak()
 #question()[Dada la función,
     $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
                 & x/(x-2) &"si" & x < 1,
@@ -127,10 +185,32 @@ Calcula:
   #subquestion()[$display(limits("lím")_(x->5) f(x))$]
 ])
 
+#question()[Dada la función,
+    $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                & e^x &"si" & x <= 0,
+                & 1-x^2 &"si" & 0 < x < 2,
+                & 3/(x-3) &"si" & x>2
+              ) $ 
+Calcula:
+]
+#columns(4, [
+  #subquestion()[$display(limits("lím")_(x->-infinity) f(x))$]
+  #subquestion()[$display(limits("lím")_(x->0) f(x))$]
+  #colbreak()
+  #subquestion()[$display(limits("lím")_(x->2) f(x))$]
+  #subquestion()[$display(limits("lím")_(x->3) f(x))$]
+  #colbreak()
+  #subquestion()[$display(limits("lím")_(x->4) f(x))$]
+  #subquestion()[$display(limits("lím")_(x->+infinity) f(x))$]
+])
 
-#question()[Determina los siguientes límites de funciones distinguiendo, si es necesario, los dos límites laterales.]
+
+#question()[Determina los siguientes límites de funciones distinguiendo.]
 #columns(2, [
   #subquestion()[$display(limits("lím")_(x->-1) ((3-2x)/(x^2+1))^(x/(x+3)))$]
   #subquestion()[$display(limits("lím")_(x->7) ((x^2-7x+4)/(x-3))^((x+1)/(x-7)))$]
+  #colbreak()
+  #subquestion()[$display(limits("lím")_(x->0) ((x^2+1)/(2x+1))^(1/x))$]
+  #subquestion()[$display(limits("lím")_(x->0) ((2x^2-x-1)/(7-x))^(1/(x-2)))$]
 ])
 
