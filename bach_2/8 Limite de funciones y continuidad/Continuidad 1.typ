@@ -41,7 +41,7 @@
 
 #question()[Estudia la continuidad de la función $display(f(x) = (x^2 - 5x + 6)/(x - 3))$ en el punto $x=3$.]
 
-#question()[Estudia la continuidad de la función $display(f(x) = (|x-1|)/(x-1))$ en el punto $x=1$. (Estudia los límites laterales en $x=1$).]
+#question()[Estudia la continuidad de la función $display(f(x) = (|x-1|)/(x-1))$ en el punto $x=1$. (Estudia primero los límites laterales en $x=1$).]
 
 #question()[Estudia la continuidad de la siguiente función en todo su dominio:
     $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
