@@ -148,6 +148,14 @@
    
   
 
+  #subquestion(
+  )[$display(limits("lím")_(x->-infinity) (3x^2+5x-3)/4)$]
+
+  #solution()[$display(limits("lím")_(x->-infinity) (3x^2+5x-3)/4 = limits("lím")_(x->infinity) (3x^2-5x-3)/4 = ((+infinity)^2 - 5(+infinity)-3)/4 
+    = ((+infinity)-(+infinity))/4 = (+infinity)/4= +infinity)$
+    
+  (El $(+infinity) - (+infinity) = (+infinity)$ porque la potencia de mayor grado es de orden superior).    ]
+  
   #subquestion()[$display(limits("lím")_(x->-infinity) x-e^(-x))$]
   
   #subquestion()[$display(limits("lím")_(x->-infinity) 2^(-x))$]
