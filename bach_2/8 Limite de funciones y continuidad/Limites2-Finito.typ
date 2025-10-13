@@ -24,7 +24,7 @@
   date: datetime(year: 2025, month: 9, day: 1),
   show-student-data: false,
   show-grade-table: false,
-  show-solution: false,
+  show-solution: true,
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -109,46 +109,73 @@
       $display(limits("lím")_(x -> 1^-) ln(x^2 + 2x - 3)
         = limits("lím")_(x -> 1^-) ln((x + 3)(x - 1)))$
 
-      Cuando $x->1^-, (x - 1) < 0$
+      Cuando $x->1^-, (x - 1) < 0 - delta$
       ⇒ El argumento de la raíz es negativo
       ⇒ El límite no existe cuando $x->1^-$.
     ]
   )[$display(limits("lím")_(x->1^-) ln(x^2+2x-3))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [
+      $display(limits("lím")_(x -> 1) ln(x^2 + 2x - 3)
+        = limits("lím")_(x -> 1) ln((x + 3)(x - 1)))$
+
+    Cuando $x->1^-, (x - 1) < 0$
+      ⇒ El argumento de la raíz es negativo
+      ⇒ El límite no existe cuando $x->1^-$.
+    ]
   )[$display(limits("lím")_(x->1) ln(x^2+2x-3))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [$display(= +infinity)$]
   )[$display(limits("lím")_(x->2^+) 1/root(4, x^4-16))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->2^-) 1/root(4, x^4-16))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->2) 1/root(4, x^4-16))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [$display(=0)$]
   )[$display(limits("lím")_(x->2^+) 1/ln(x^4-16))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$
+    
+    Cuando $x < 2 => (x^4-16)<0$ y el $ln$ no existe.
+    ]
   )[$display(limits("lím")_(x->2^-) 1/ln(x^4-16))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$
+    
+    Cuando $x < 2 => (x^4-16) < 0$ y el $ln$ no existe.
+    ]
   )[$display(limits("lím")_(x->2) 1/ln(x^4-16))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [$display(exists.not)$
+
+      $display(limits("lím")_(x->2^+) 1/sqrt(x^2+x-6) = limits("lím")_(x->2^+) 1/sqrt((x+3)(x-2)) = 1/sqrt(0) = 1/0 = +infinity)$
+
+      $display(limits("lím")_(x->2^-) 1/sqrt(x^2+x-6) = limits("lím")_(x->2^+) 1/sqrt((x+3)(x-2)) exists.not)$ ya que $(x+3)(x-2) < 0 "cuando" x < 2 - delta $
+
+      Como no existe $display(limits("lím")_(x->2^-) 1/sqrt(x^2+x-6))$ tampoco existe $display(limits("lím")_(x->2) 1/sqrt(x^2+x-6))$
+    ]
   )[$display(limits("lím")_(x->2) 1/sqrt(x^2+x-6))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [$display(exists.not)$
+
+      $display(limits("lím")_(x->2^+) 1/sqrt(x^2+x-6) = limits("lím")_(x->2^+) 1/ln((x+3)(x-2)) = 1/ln(0) = 1/(-infinity) = 0)$
+
+      $display(limits("lím")_(x->2^-) 1/ln(x^2+x-6) = limits("lím")_(x->2^+) 1/ln((x+3)(x-2)) exists.not)$ ya que $(x+3)(x-2) < 0 "cuando" x < 2 - delta $
+
+      Como no existe $display(limits("lím")_(x->2^-) 1/ln(x^2+x-6))$ tampoco existe $display(limits("lím")_(x->2) 1/ln(x^2+x-6))$
+    ]
   )[$display(limits("lím")_(x->2) 1/ln(x^2+x-6))$]
 
 ])
@@ -158,44 +185,51 @@
 #clarification("Este tipo de límite en un examen es recomendable que se resuelvan por L'Hôpital.")
 #questions-columns([
   #subquestion(
-    solution: [$display(=)$]
+    solution: [$display(=0)$]
   )[$display(limits("lím")_(x->0^+) x/(ln x))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->0^-) x/(ln x))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->0) x/(ln x))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [$display(= +infinity)$]
   )[$display(limits("lím")_(x->0^+) (ln x)/x)$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->0^-) (ln x)/x)$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->0) (ln x)/x)$]
   
-
   #subquestion(
-    solution: [$display(=)$]
-  )[$display(limits("lím")_(x->0^-) sqrt(x)/(ln x))$]
-
-  #subquestion(
-    solution: [$display(=)$]
+    solution: [$display(=0)$]
   )[$display(limits("lím")_(x->0^+) sqrt(x)/(ln x))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
+  )[$display(limits("lím")_(x->0^-) sqrt(x)/(ln x))$]
+
+  #subquestion(
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->0) sqrt(x)/(ln x))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(= + infinity)$]
+  )[$display(limits("lím")_(x->0^+) sqrt(x)/(ln x))$]
+
+  #subquestion(
+    solution: [#h(0.1cm) $display(exists.not)$]
+  )[$display(limits("lím")_(x->0^-) e^x/sqrt(x))$]
+
+  #subquestion(
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->0) e^x/sqrt(x))$]
 
   #subquestion(
@@ -230,7 +264,7 @@
 //   #subquestion()[$display(limits("lím")_(x->0) ("sen"(2x)/x))$]
 // ])
 
-#pagebreak()
+
 #question()[Si $limits("lím")_(x->a) f(x)=-2$, $limits("lím")_(x->a) g(x)=2$ y $limits("lím")_(x->a) h(x)=5$] 
 
 #questions-columns([
@@ -242,7 +276,7 @@
 
   #subquestion()[$display(limits("lím")_(x->a) [f(x)/g(x) - (f(x) + g(x))/h(x)]) $]
 ])
-
+#pagebreak()
 
 #question()[Determina los siguientes límites de funciones distinguiendo, si es necesario, los dos límites laterales.]
 #questions-columns([
