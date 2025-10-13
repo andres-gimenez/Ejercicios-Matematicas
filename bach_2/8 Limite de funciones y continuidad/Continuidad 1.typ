@@ -57,3 +57,50 @@
               ) $ 
 ]
 
+#question()[Determina el valor de $k$ para que la siguiente función sea continua en todo $RR$.
+    $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                & (x^2-4)/(x-2) &"si" & x != 2,
+                & a &"si" & x = 2,
+              ) $ 
+]
+#subquestion()[Estudia la continuidad de $f(x)$ en todo su dominio]
+
+#subquestion()[Si $a=5$, que tipo de discontinuidad tiene $f(x)$ en $x=2$?]
+
+#pagebreak()
+#question()[Estudia la continuidad de las siguientes funciones:]
+
+#columns(2, [
+
+#subquestion()[$display(f(x) = (x^2 - 4)/(x^2 - x - 6) )$]
+
+#subquestion()[$display(f(x) = (2x - 1)/(x^2 - 4x + 4) )$]
+
+#subquestion()[$display(f(x) = (x^2 - 3x + 2)/(x^2 - 1) )$]
+
+#subquestion()[$display(f(x) = (x^2 - 4)/(x - 2) )$]
+
+#subquestion()[$display(f(x) = (x^3 - 8)/(x - 2) )$]
+
+#subquestion()[$display(f(x) = ln(x-3) )$]
+
+#subquestion()[$display(f(x) = sqrt(4 - x^2) )$]
+
+#subquestion()[$display(f(x) = sqrt(x^2 - 4) )$]
+
+#colbreak()
+
+#subquestion()[$display(f(x) = ln(x^2-4))$]
+
+#subquestion()[$display(f(x) = 1/sqrt(x-2))$] 
+
+#subquestion()[$display(f(x) = 1/sqrt(4 - x^2))$]
+
+#subquestion()[$display(f(x) = 1/ln(x-2))$]
+
+#subquestion()[$display(f(x) = 1/ln(4 - x^2))$]
+
+#subquestion()[$display(f(x) = e^(1/(x-3)))$]
+
+#subquestion()[$display(f(x) = e^(1/(4 - x^2)))$]
+])

@@ -179,3 +179,7 @@
   #subquestion()[$display(limits("lím")_(x->-infinity) ((x^2+x-1)/(x^2+2))^(3x-1))$]
 ])
 
+= EvAU
+#question()[Junio 2006  - Opción A
+
+Calcular $display(limits("lím")_(n->infinity) n^2 (a_(n+1) - a_n)$]
