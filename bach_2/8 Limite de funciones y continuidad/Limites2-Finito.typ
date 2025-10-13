@@ -38,11 +38,11 @@
 #questions-columns([
   #subquestion()[$display(limits("lím")_(x->1) (3x^3-9x^2+6)/(x+1))$]
   #solution()[
-    $limits("lím")_(x->1)(3x^3 - 9x^2 + 6) / (x + 1)
+    $display(limits("lím")_(x->1)(3x^3 - 9x^2 + 6) / (x + 1)
     = (3(1)^3 - 9(1)^2 + 6) / (1 + 1)
     = (3 - 9 + 6) / 2
     = 0 / 2
-    = 0$
+    = result(0))$
   ]
   #subquestion(
     solution: [$display(=3)$]
@@ -159,7 +159,7 @@
   #subquestion(
     solution: [$display(exists.not)$
 
-      $display(limits("lím")_(x->2^+) 1/sqrt(x^2+x-6) = limits("lím")_(x->2^+) 1/sqrt((x+3)(x-2)) = 1/sqrt(0) = 1/0 = +infinity)$
+      $display(limits("lím")_(x->2^+) 1/sqrt(x^2+x-6) = limits("lím")_(x->2^+) 1/sqrt((x+3)(x-2)) = 1/sqrt(0) = 1/0 = result(+infinity))$
 
       $display(limits("lím")_(x->2^-) 1/sqrt(x^2+x-6) = limits("lím")_(x->2^+) 1/sqrt((x+3)(x-2)) exists.not)$ ya que $(x+3)(x-2) < 0 "cuando" x < 2 - delta $
 
@@ -170,7 +170,7 @@
   #subquestion(
     solution: [$display(exists.not)$
 
-      $display(limits("lím")_(x->2^+) 1/sqrt(x^2+x-6) = limits("lím")_(x->2^+) 1/ln((x+3)(x-2)) = 1/ln(0) = 1/(-infinity) = 0)$
+      $display(limits("lím")_(x->2^+) 1/sqrt(x^2+x-6) = limits("lím")_(x->2^+) 1/ln((x+3)(x-2)) = 1/ln(0) = 1/(-infinity) = result(0))$
 
       $display(limits("lím")_(x->2^-) 1/ln(x^2+x-6) = limits("lím")_(x->2^+) 1/ln((x+3)(x-2)) exists.not)$ ya que $(x+3)(x-2) < 0 "cuando" x < 2 - delta $
 
@@ -233,19 +233,19 @@
   )[$display(limits("lím")_(x->0) e^x/sqrt(x))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->1) e^x/sqrt(x-1))$]
   
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->1) e^x/sqrt(x-1))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->1) e^x/sqrt(x^2-1))$]
 
   #subquestion(
-    solution: [$display(=)$]
+   solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->1) e^x/ln(x^2-1))$]
 ])
 
@@ -268,37 +268,66 @@
 #question()[Si $limits("lím")_(x->a) f(x)=-2$, $limits("lím")_(x->a) g(x)=2$ y $limits("lím")_(x->a) h(x)=5$] 
 
 #questions-columns([
-  #subquestion()[$display(limits("lím")_(x->a) [2f(x) - 2g(x) + h(x)])$]
+  #subquestion(
+    solution: [$= -3$]
+  )[$display(limits("lím")_(x->a) [2f(x) - 2g(x) + h(x)])$]
+  #solution[
+    $display(limits("lím")_(x->a) [2f(x) - 2g(x) + h(x)] = limits("lím")_(x->a) 2f(x) - limits("lím")_(x->a) 2g(x) + limits("lím")_(x->a) h(x) 
+    =  2 limits("lím")_(x->a) f(x) - 2 limits("lím")_(x->a) g(x) + limits("lím")_(x->a) h(x) = \
+    = 2 dot (-2) - 2 dot 2 +5 = (-4) dot (-4) + 5) = result(-3)$
+  ]
 
-  #subquestion()[$display(limits("lím")_(x->a) 12/(f(x)+g(x)))$]
+  #subquestion(
+    solution: [$display(= 12 / (-2 + 2) = 12/0 = result(+infinity))$]
+  )[$display(limits("lím")_(x->a) 12/(f(x)+g(x)))$]
 
-  #subquestion()[$display(limits("lím")_(x->a) sqrt(f(x)^2 + g(x)^2))$]
+  #subquestion(
+    solution: [$display(= sqrt((-2)^2 +  (2)^2) = sqrt(4 + 4) = sqrt(8) = result(2 sqrt(2)))$]
+  )[$display(limits("lím")_(x->a) sqrt(f(x)^2 + g(x)^2))$]
 
-  #subquestion()[$display(limits("lím")_(x->a) [f(x)/g(x) - (f(x) + g(x))/h(x)]) $]
+  #subquestion(
+    solution: [$display( = (-2)/2 - ((-2)+2)/5 = result(-))$]
+    )[$display(limits("lím")_(x->a) [f(x)/g(x) - (f(x) + g(x))/h(x)]) $]
 ])
 #pagebreak()
 
 #question()[Determina los siguientes límites de funciones distinguiendo, si es necesario, los dos límites laterales.]
-#questions-columns([
+#questions-columns(max-columns: 1, [
   #subquestion(
-    solution: [$display(=)$]
+    solution: [$display(=0)$]
   )[$display(limits("lím")_(x->0) (3x^4)/(x^3+x^2))$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [$display(=-3/2)$]
   )[$display(limits("lím")_(x->2) (x-2)/(x^2-4) - (x^2-4)/(x-2) )$]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->3) (2x+1)/(3-x))$]  
+  #solution()[ // no se muestra en columna, cuando no se define max-columns.
+    $display(limits("lím")_(x->3^+) (2x+1)/(3-x) = -infinity \
+    limits("lím")_(x->3^-) (2x+1)/(3-x) = +infinity)$
+  ]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [$display(=9)$]
   )[$display(limits("lím")_(x->4) (x^2+x-20)/(x^2-7x+12))$]
+  #solution()[
+    $display(limits("lím")_(x->4) (x^2+x-20)/(x^2-7x+12) 
+    = limits("lím")_(x->4) ((x+5)cancel((x-4)))/((x-3)cancel((x-4))) 
+    = limits("lím")_(x->4) ((x+5))/((x-3)) 
+    = (4+5)/(4-3) = 9/1 = result(9))$ \
+    En este caso, no hay problema con el signo, porque al cancelarse x-4 en numerador y denominador, el signo a la izquierda y a la derecha de $4$ no cambia.
+  ]
 
   #subquestion(
-    solution: [$display(=)$]
+    solution: [#h(0.1cm) $display(exists.not)$]
   )[$display(limits("lím")_(x->-4) (x^2-7x+16)/(x^2-2x-24))$]
+  #solution()[ // no se muestra en columna, cuando no se define max-columns.
+    $display(limits("lím")_(x->-4^-) (x^2-7x+16)/(x^2-2x-24) = limits("lím")_(x->-4^-) (x^2-7x+16)/((x+4)(x-4)) = +infinity \
+        limits("lím")_(x->-4^+) (x^2-7x+16)/(x^2-2x-24) = limits("lím")_(x->-4^-) (x^2-7x+16)/((x+4)(x-4)) = +infinity)$
+  ]
+
 
   #subquestion(
     solution: [$display(=)$]
@@ -493,7 +522,7 @@ Calcula:
 
 
 #question()[Determina los siguientes límites de funciones distinguiendo.]
-#questions-columns([
+#questions-columns(max-columns: 2, [
   
   #subquestion(
     solution: [$display(=)$]
