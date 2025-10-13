@@ -58,6 +58,7 @@
   #subquestion()[$display(limits("lím")_(x->infinity) (log x)^(1-3x))$]
 #subquestion()[$display(limits("lím")_(x->infinity) ((x+2)/6))^(1/(x-4))$]
 
+#subquestion()[$display(limits("lím")_(x->0) (e^(2x) - cos(3x)) / (5x) )$]
 ])
 
 = EvAU
@@ -102,3 +103,7 @@ Para la  la función $display(f(x)=sqrt(x^2+3x))$, se pide]
 #subquestion()[Hallar $display(limits("lím")_(x->-infinity) f(x)/x )$ y $display(limits("lím")_(x->-infinity) f(x)+x )$.]
 
 
+#question()[Año 2005 - Opción B]
+#subquestion()[$display(limits("lím")_(x->0) (sqrt(x^2 + x) - sqrt(x^2-x)))$]
+
+#subquestion()[$display(limits("lím")_(x->infinity) x[arctan(e^x)-pi/2])$]
