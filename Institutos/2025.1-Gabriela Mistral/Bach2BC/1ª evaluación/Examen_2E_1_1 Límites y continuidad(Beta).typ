@@ -75,7 +75,7 @@
 
 
 
- #subquestion(points:1)[$display(limits("lím")_(x->3) (2/(x-3) - 12/(x^2-9)))$]
+ #subquestion(points:1)[$display(limits("lím")_(x->4) (3/(x-4) - 24/(x^2-16)))$] //= 3/8
 
  #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (sqrt(x^4 + 2)/(3-x)+x))$]
 

@@ -75,7 +75,7 @@
 
  #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (sqrt(x^2 + 4x + 5) - x))$] // = 2
 
- #subquestion(points:1)[$display(limits("lím")_(x->3) (2/(x-3) - 12/(x^2-9)))$]
+ #subquestion(points:1)[$display(limits("lím")_(x->3) (2/(x-3) - 12/(x^2-9)))$] // = 1/3
 
  #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (sqrt(x^4 +1)/(x-1)-x))$]
 
