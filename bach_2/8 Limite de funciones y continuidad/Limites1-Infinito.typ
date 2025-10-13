@@ -128,9 +128,7 @@
   #subquestion(
     solution: [$display(= 0)$. (Ya que al ser $0,5 < 1$, el límite de la exponencial cuando $x -> +infinity$, tiende a 0).]
   )[$display(limits("lím")_(x->+infinity) (0,5)^x)$]
-  
-  #question-colbreak()
-  
+   
   #subquestion(
     solution: [$display(=4/(3(+infinity)^2+5(+infinity)-3) = 4 / (+infinity) = 0)$]
   )[$display(limits("lím")_(x->+infinity) 4/(3x^2+5x-3))$]
