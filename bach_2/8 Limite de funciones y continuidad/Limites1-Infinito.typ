@@ -71,7 +71,7 @@
 ])
 
 #question()[Calcula el valor de los siguientes límites, si existieran:]
-#question-columns(2, [
+#questions-columns([
   #subquestion(
     solution: [$display(= 5 (+infinity)^2 + 3 (+infinity) + 2) = (+infinity)$]
   )[$display(limits("lím")_(x->+infinity) (5x^2+3x+2))$]   
@@ -439,4 +439,4 @@
 = EvAU
 #question()[Junio 2006  - Opción A
 
-Calcular $display(limits("lím")_(n->infinity) n^2 (a_(n+1) - a_n)$]
+Calcular $display(limits("lím")_(n->infinity) n^2 (a_(n+1) - a_n))$]

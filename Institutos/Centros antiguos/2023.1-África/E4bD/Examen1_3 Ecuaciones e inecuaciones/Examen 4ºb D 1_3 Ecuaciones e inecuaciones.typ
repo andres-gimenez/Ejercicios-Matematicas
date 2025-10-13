@@ -1,5 +1,5 @@
 #import "@preview/cetz:0.1.2"
-#import "@preview/g-exam:0.1.1": g-exam, g-question, g-subquestion
+#import "@preview/g-exam:0.4.3": *
 
 #show: g-exam.with(
   author: (
@@ -22,8 +22,7 @@
   
   languaje: "es",
   decimal-separator: ",",
-  date: "Diciembre 21, 2023",
-  show-studen-data: "odd-pages",
+  show-student-data: "odd-pages",
   show-grade-table: true,
   question-point-position: right,
   clarifications: (
