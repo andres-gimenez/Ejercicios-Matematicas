@@ -44,8 +44,6 @@
 
 #question()[Calcula los siguientes límites. Desarrollando los pasos que realices.]
 
-
- 
  #subquestion(points:1)[$display(limits("lím")_(x->+infinity)   ((3x^4+5x)/(3x^4+7))^(6x^3-2))$] // = e^10
 
  #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (sqrt(x^2 + 4x + 5) - x))$] // = 2
