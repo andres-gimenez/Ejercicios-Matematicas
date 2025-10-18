@@ -1,4 +1,5 @@
 #import "@local/g-exam:0.4.4": *
+#import "@preview/mannot:0.2.2": markrect
 
 #show: exam.with(
   author: (
@@ -213,63 +214,78 @@
     #subquestion(
       solution: [$display(=0)$]
     )[$display(limits("lím")_(x->0^+) x/(ln x))$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->0^-) x/(ln x))$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->0) x/(ln x))$]
-
+  ],
+  [
     #subquestion(
       solution: [$display(= +infinity)$]
     )[$display(limits("lím")_(x->0^+) (ln x)/x)$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->0^-) (ln x)/x)$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->0) (ln x)/x)$]
-    
+  ],
+  [   
     #subquestion(
       solution: [$display(=0)$]
     )[$display(limits("lím")_(x->0^+) sqrt(x)/(ln x))$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->0^-) sqrt(x)/(ln x))$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->0) sqrt(x)/(ln x))$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(= + infinity)$]
     )[$display(limits("lím")_(x->0^+) sqrt(x)/(ln x))$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->0^-) e^x/sqrt(x))$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->0) e^x/sqrt(x))$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->1) e^x/sqrt(x-1))$]
-    
+  ],
+  [   
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->1) e^x/sqrt(x-1))$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->1) e^x/sqrt(x^2-1))$]
-
+  ],
+  [
     #subquestion(
     solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->1) e^x/ln(x^2-1))$]
@@ -287,14 +303,19 @@
       =  2 limits("lím")_(x->a) f(x) - 2 limits("lím")_(x->a) g(x) + limits("lím")_(x->a) h(x) = \
       = 2 dot (-2) - 2 dot 2 +5 = (-4) dot (-4) + 5) = result(-3)$
     ]
-
+  ],
+  [
     #subquestion(
       solution: [$display(= 12 / (-2 + 2) = 12/0 = result(+infinity))$]
     )[$display(limits("lím")_(x->a) 12/(f(x)+g(x)))$]
+  ],
+  [
 
     #subquestion(
       solution: [$display(= sqrt((-2)^2 +  (2)^2) = sqrt(4 + 4) = sqrt(8) = result(2 sqrt(2)))$]
     )[$display(limits("lím")_(x->a) sqrt(f(x)^2 + g(x)^2))$]
+  ],
+  [
 
     #subquestion(
       solution: [$display( = (-2)/2 - ((-2)+2)/5 = result(-))$]
@@ -307,11 +328,13 @@
     #subquestion(
       solution: [$display(=0)$]
     )[$display(limits("lím")_(x->0) (3x^4)/(x^3+x^2))$]
-
+  ],
+  [
     #subquestion(
       solution: [$display(=-3/2)$]
     )[$display(limits("lím")_(x->2) (x-2)/(x^2-4) - (x^2-4)/(x-2) )$]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->3) (2x+1)/(3-x))$]  
@@ -319,7 +342,8 @@
       $display(limits("lím")_(x->3^+) (2x+1)/(3-x) = -infinity \
       limits("lím")_(x->3^-) (2x+1)/(3-x) = +infinity)$
     ]
-
+  ],
+  [
     #subquestion(
       solution: [$display(=9)$]
     )[$display(limits("lím")_(x->4) (x^2+x-20)/(x^2-7x+12))$]
@@ -330,71 +354,110 @@
       = (4+5)/(4-3) = 9/1 = result(9))$ \
       En este caso, no hay problema con el signo, porque al cancelarse x-4 en numerador y denominador, el signo a la izquierda y a la derecha de $4$ no cambia.
     ]
-
+  ],
+  [
     #subquestion(
       solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->-4) (x^2-7x+16)/(x^2-2x-24))$]
-    #solution()[ // no se muestra en columna, cuando no se define max-columns.
-      $display(limits("lím")_(x->-4^-) (x^2-7x+16)/(x^2-2x-24) = limits("lím")_(x->-4^-) (x^2-7x+16)/((x+4)(x-4)) = +infinity \
-          limits("lím")_(x->-4^+) (x^2-7x+16)/(x^2-2x-24) = limits("lím")_(x->-4^-) (x^2-7x+16)/((x+4)(x-4)) = +infinity)$
+    #solution()[ 
+      $display(limits("lím")_(x->-4^-) (x^2-7x+16)/(x^2-2x-24) = limits("lím")_(x->-4^-) (x^2-7x+16)/((x+4)(x-4)) = (0^+)/(0^+ dot 0^-) = (0^+)/(0^-) = +infinity)$  \ 
+      ya que si $x<4 => (x-4) < 0$ \
+      $display(limits("lím")_(x->-4^+) (x^2-7x+16)/(x^2-2x-24) = limits("lím")_(x->-4^+) (x^2-7x+16)/((x+4)(x-4)) = (0^+)/(0^+ dot 0^+) = (0^+)/(0^+) = -infinity)$ \ 
+      ya que si  $x>4 => (x-4) > 0$ \
     ]
-
+  ],
+  [
     #subquestion(
-      solution: [$display(=)$]
+      solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->1) (x-1)/(x^2+1))$]
-
+  ],
+  [
+    #solution()[ 
+      $display(limits("lím")_(x->1^-) (x-1)/(x^2+1) = (0^-)/(0^+) = -infinity)$  ya que si $x<1 => (x-1)< 0$  \
+          $display(limits("lím")_(x->1^+) (x-1)/(x^2+1) = (0^+)/(0^+)= = +infinity)$ ya que $x>1 => (x-1)< 0$ 
+    ]
+  ],
+  [
     #subquestion(
-      solution: [$display(=)$]
+      solution: [#h(0.1cm) $display(exists.not)$]
     )[$display(limits("lím")_(x->1) (x^2+1)/(x-1))$]
-
+    #solution()[ 
+      $display(limits("lím")_(x->1^-) (x^2+1)/(x-1) = (0^+)/(0^-) = -infinity)$  ya que si $x<1 => (x-1)< 0$  \
+          $display(limits("lím")_(x->1^+) (x^2+1)/(x-1) = (0^+)/(0^+)= = +infinity)$ ya que $x>1 => (x-1)< 0$ 
+    ]
+  ],
+  [
     #subquestion(
-      solution: [$display(=)$]
+      solution: [$display(= 0)$]
     )[$display(limits("lím")_(x->3) (x^2-9)/(x^2-4))$]
-    
+  ],
+  [   
     #subquestion(
-      solution: [$display(=)$]
-    )[$display(limits("lím")_(x->3) (x^2-x-6)/(x^2+4x-21))$]
-
+      solution: [$display(= 1/2)$]
+    )[$display(limits("lím")_(x->3) (x^2-x-6)/(x^2+4x-21) = x^3 - 3 x + 2)$]
+    #solution()[ 
+      $display(limits("lím")_(x->3) (x^2-x-6)/(x^2+4x-21) = 0/0 "(indeterminado)" \ 
+      limits("lím")_(x->3) (x^2-x-6)/(x^2+4x-21) = limits("lím")_(x->3) ((x + 2) cancel((x - 3)))/((x + 7) cancel((x - 3))) = limits("lím")_(x->3) (x + 2)/(x + 7) = (3+2)/(3+7) = 5/10 = 1/2)$ // #rect[$display(1/2)$] )
+    ]
+  ],
+  [
     #subquestion(
-      solution: [$display(=)$]
+      solution: [$display(=0)$]
     )[$display(limits("lím")_(x->1) (x^4-x^3-3x^2+5x-2)/(x^2-2x+1))$]
-    
+    #solution()[ 
+      $display(limits("lím")_(x->1) (x^4-x^3-3x^2+5x-2)/(x^2-2x+1) = 0/0 "(indeterminado)" \ 
+      limits("lím")_(x->1) (x^4-x^3-3x^2+5x-2)/(x^2-2x+1) = limits("lím")_(x->1) (cancel((x-1))(x^3 - 3 x + 2))/(cancel((x-1))(x-1)) =  0/0 "(indeterminado)" \
+      limits("lím")_(x->1) (x^3 - 3 x + 2)/(x-1) = limits("lím")_(x->1) (cancel((x-1))(x^2 + x - 2))/cancel(x-1) = limits("lím")_(x->1) x^2 + x - 2 = result(0) )$
+    ]
+  ],
+  [ 
     #subquestion(
-      solution: [$display(=)$]
+      solution: [$display(=-9/8)$]
     )[$display(limits("lím")_(x->-1) (x^3-2x^2+2x+5)/(x^2-6x-7))$]
-    
+  ],
+  [ 
     #subquestion(
-      solution: [$display(=)$]
+      solution: [$display(=13/42)$]
     )[$display(limits("lím")_(x->4) (x^3 - x^2 - 14 x + 8)/(x^4 - 2 x^3 - 11 x^2 + 12 x))$]
-    
+  ],
+  [     
     #subquestion(
-      solution: [$display(=)$]
+      solution: [$display(= -5)$]
     )[$display(limits("lím")_(x->0) (x^2-5x+2)/(x^2+2x) - (x^3+2x+1)/(x^3+x))$]
-    
+  ],
+  [ 
     #subquestion(
-      solution: [$display(=)$]
+      solution: [$display(=-oo)$]
     )[$display(limits("lím")_(x->1) (x^2-2x+1)/(x^4-x^3-3x^2+5x-2))$]
-    
+  ],
+  [
     #subquestion(
-      solution: [$display(=)$]
+      solution: [$display(=-1)$]
     )[$display(limits("lím")_(x->-1) [(x+1)(3x+2)/(x^3+x^2)])$]
-    
+    #solution()[     
+      $display(limits("lím")_(x->-1) [(x+1)(3x+2)/(x^3+x^2)] = [(-1+1) dot (3(-1)+2)/((-1)^3+(-1)^2)] = 0 dot (-1)/0 = 0 dot (-oo))$ (indeterminado) \ 
+      $display(limits("lím")_(x->-1) [(x+1)(3x+2)/(x^3+x^2)] = limits("lím")_(x->-1) [(cancel(x+1)(3x+2))/(x^2 dot cancel((x+1)))] = limits("lím")_(x->-1) [(3x+2)/(x^2)] = (3(-1) +2)/(-1)^2 = -1/1 = -1)$
+    ]
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->2) (x^2-4)/(x^3-8))$]
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->-4) (x^3+3x^2-24x-80)/(x^2+x-12) )$]
-
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->1) [2/(x-1)^2-1/(x(x-1))])$]
-
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->2) [3/(x^2-5x+6)-1/(x-2)])$]
-
   ])
 ],
 [
@@ -403,39 +466,48 @@
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->sqrt(5)) (x-sqrt(5)) / (x^2-5))$]
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->5) (x^2-25) / (sqrt(x)-sqrt(5)))$]
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->3) (x^2-3x)/(2-sqrt(2x-2)))$]
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->0) (sqrt(1-x)-1)/x)$]
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->3) (sqrt(x+1)-2)/(x-3))$]
-      
+  ],
+  [     
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->2) (x^2-4)/(3-sqrt(x+7)))$]
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->4) (2-sqrt(x))/(3-sqrt(x+5)))$]
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->4) (sqrt(6+x)-2)/(1-sqrt(3+x)))$]
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->-3) sqrt(x^2+2x-3)/root(3, x^3+3x^2))$]
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->1) root(4, x^3-x)/sqrt(x^2+x-2))$]
@@ -450,46 +522,46 @@
                 ) $ 
   Calcula:
   ]
-  #columns(4, [
-    
+  #questions-columns(
+  [
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->1^-) f(x))$]
-    
+  ],
+  [    
     #subquestion(
       solution: [$display(=)$]
-    )[$display(limits("lím")_(x->1^+) f(x))$]
-    
-    #colbreak()
-    
-    #subquestion(
+    )[$display(limits("lím")_(x->1^+) f(x))$]  
+  ],
+  [ 
+   #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->1) f(x))$]
-    
+  ],
+  [     
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->4^-) f(x))$]
-    
-    #colbreak()
-    
+  ],
+  [     
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->4^+) f(x))$]
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->4) f(x))$]
-    
-    #colbreak()
-    
+  ],
+  [ 
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->2) f(x))$]
-    
+  ],
+  [     
     #subquestion(
       solution: [$display(=)$]
     )[$display(limits("lím")_(x->5) f(x))$]
-
   ])
 ],
 [
