@@ -17,7 +17,7 @@
     academic-subject: "Matemáticas",
     number: "1ª evaluación - 1º parcial",
     content: "Límites y continuidad",
-    model: [Modelo $beta$],
+    model: [Modelo $gamma$],
   ),
   
   language: "es",
@@ -44,15 +44,13 @@
 
 #question()[Calcula los siguientes límites. Desarrollando los pasos que realices.]
 
- #subquestion(points:1)[$display(limits("lím")_(x->+infinity) ((2x^3+4x)/(2x^3+2))^(3x^2-4))$] // =e^6
+ #subquestion(points:1)[$display(limits("lím")_(x->+infinity) ((x^2+1)/(x^2+x))^(3x-2))$] // =e^(-3)
  
- #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (2x - sqrt(4x^2 - 2x + 3)))$] // =1/2
+ #subquestion(points:1)[$display(limits("lím")_(x->+oo) (5x - sqrt(25x^2 - 2x + 3)))$] // =1/5
 
+ #subquestion(points:1)[$display(limits("lím")_(x->5) (3/(x-5) - 30/(x^2-25)))$] //= 3/8
 
-
- #subquestion(points:1)[$display(limits("lím")_(x->4) (3/(x-4) - 24/(x^2-16)))$] //= 3/8
-
- #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (sqrt(x^4 + 2)/(3-x)+x))$] // = -3
+ #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (sqrt(x^4 -5) /(8-x)+x))$] //= -8
 
 #question(points:2)[*Estudia la continuidad* de la siguiente función en $x=1$ explicando todos las condiciones a cumplir por la función. Y indica de que *tipo de discontinuidad* se trata.
 

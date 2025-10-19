@@ -25,6 +25,7 @@
   date: datetime(year: 2025, month: 9, day: 1),
   show-student-data: "odd-pages",
   show-grade-table: true,
+  show-solution: true,
   // draft: true,
   question-points-position: right,
   // question-text-parameters: (size: 14pt, spacing:150%),
@@ -50,7 +51,21 @@
 
  #subquestion(points:1)[$display(limits("lím")_(x->3) (2/(x-3) - 12/(x^2-9)))$] // = 1/3
 
- #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (sqrt(x^4 +1)/(x-1)-x))$]
+ #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (sqrt(x^4 +1)/(x-1)-x))$] //= 1
+ #solution()[
+  $display(limits("lím")_(x->+infinity) (sqrt(x^4 +1)/(x-1)-x) = (sqrt(oo^4 +1)/(oo-1)-oo) = (sqrt(oo) / (oo))-oo = oo/oo - oo )$  (indeterminado)
+
+  $display(limits("lím")_(x->+infinity) (sqrt(x^4 +1)/(x-1)-x) = limits("lím")_(x->+infinity) (sqrt(x^4 +1) - x (x-1))/(x-1) = 
+  limits("lím")_(x->+infinity) (sqrt(x^4 +1) - (x^2 -x))/(x-1) = limits("lím")_(x->+infinity) ((sqrt(x^4 +1) - (x^2 -x))(sqrt(x^4 +1) + (x^2 -x)))/((x-1)(sqrt(x^4 +1) + (x^2 -x))) = limits("lím")_(x->+infinity) ((sqrt(x^4 +1))^2 - (x^2 -x)^2)/((x-1)(sqrt(x^4 +1) + (x^2 -x))) = 
+  limits("lím")_(x->+infinity) ((cancel(x^4) +1) - (cancel(x^4) - 2x^3 +x^2))/((x-1)(sqrt(x^4 +1) + (x^2 -x))) = 
+  limits("lím")_(x->+infinity) (2x^3 - x^2 + 1)/((x-1)(sqrt(x^4 +1) + (x^2 -x))) = 
+  limits("lím")_(x->+infinity) ((2x^3 - x^2 + 1)/x^3)/(((x-1)(sqrt(x^4 +1) + (x^2 -x)))/(x^3)) = 
+  limits("lím")_(x->+infinity) (((2x^3)/x^3 - x^2/x^3 + 1/x^3))/((x-1)/x (sqrt(x^4 +1) + (x^2 -x))/(x^2)) =
+  limits("lím")_(x->+infinity) (((2x^3)/x^3 - x^2/x^3 + 1/x^3))/((x/x-1/x) (sqrt((x^4 +1)/x^4) + (x^2 -x)/x^2)) =
+  limits("lím")_(x->+infinity) ((2 - 1/x + 1/x^3))/((1-1/x) (sqrt((1 +1/x^4)) + (1 - 1/x))) =
+  ((2 - 1/oo + 1/oo^3))/((1-1/oo) (sqrt((1 +1/oo^4)) + (1 - 1/oo))) = ((2 - 0 + 0))/((1-0) (sqrt((1 + 0)) + (1 - 0))) = 
+  (2)/(1 (sqrt(1) + 1)) = 2/2 = result(1))$
+ ]
 
  #question(points:2)[*Estudia la continuidad* de la siguiente función en $x=1$ explicando todos las condiciones a cumplir por la función. Y indica de que *tipo de discontinuidad* se trata.
 
