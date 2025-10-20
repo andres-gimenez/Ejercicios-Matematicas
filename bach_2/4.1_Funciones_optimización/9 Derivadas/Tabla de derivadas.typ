@@ -149,7 +149,7 @@
 #colbreak()
 
 #align(left)[
-  == Funciones trigonométricas inversas
+  == Func. trigonométricas inversas
     #table(
       columns: (auto, auto),
       table.header([=== Función], [=== *Derivada*]),
@@ -157,7 +157,7 @@
       [$display(f(x) = "arc" "cos" (u))$], [$display(f'(x) = -u'/sqrt(1-u^2) )$],
       [$display(f(x) = "arc" "tg" (u))$], [$display(f'(x) = u'/(1+u^2) )$],
       [$display(f(x) = "sec" (u))$], [$display(f'(x) = u'/(u sqrt(u^2 - 1)) )$],
-      [$display(f(x) = "arc" "cotg" (u))$], [$display(f'(x) = -u'/(1+u^2))) )$],
+      [$display(f(x) = "arc" "cotg" (u))$], [$display(f'(x) = -u'/(1+u^2))$],
       [$display(f(x) = "arc" "sec" (u))$], [$display(f'(x) = u'/(u sqrt(u^2 - 1)) )$],
       [$display(f(x) = "arc" "cosec" (u))$], [$display(f'(x) = -u'/(u sqrt(u^2 - 1)) )$],
     )
