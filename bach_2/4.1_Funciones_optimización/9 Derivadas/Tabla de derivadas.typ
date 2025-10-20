@@ -51,12 +51,7 @@
 
 #set page(columns: 2)
 
-// #place(
-//   top + center,
-//   scope: "parent",
-//   float: true,
-//   [= Tabla de derivadas]
-// )
+
 
 #set table.hline(stroke:0.7pt + gray)
 
@@ -83,6 +78,13 @@
   }
   }
 )
+
+// #place(
+//   top + center,
+//   scope: "parent",
+//   float: true,
+//   [= Tabla de derivadas]
+// )
 
 #align(left)[
   == Funciones algebraicas
