@@ -39,11 +39,11 @@
 
 #show heading: it => {
   if it.level == 1 {
-    text(size: 15pt, weight: "bold")[#it]
+    text(size: 22pt, weight: "bold")[#it \ ]
   } else if it.level == 2 {
-    text(fill:blue, size:11pt)[#it]
+    text(fill:blue, size:14pt)[#it]
   } else if it.level == 3 {
-    text(fill:red, size:10pt)[#it]
+    text(fill:red, size:12pt)[#it]
   } else {
     it
   }
@@ -51,18 +51,18 @@
 
 #set page(columns: 2)
 
-#place(
-  top + center,
-  scope: "parent",
-  float: true,
-  [= Tabla de derivadas]
-)
+// #place(
+//   top + center,
+//   scope: "parent",
+//   float: true,
+//   [= Tabla de derivadas]
+// )
 
 #set table.hline(stroke:0.7pt + gray)
 
 #set table(
     align: left,
-    inset: 8pt,
+    inset: 5pt,
     stroke: (x, y) => {
     if y == 0 {
       if x == 0{
@@ -92,10 +92,14 @@
       table.header([=== Función], [=== *Derivada*]),
       [$display(f(x) = u + v + ...)$], [$display(f'(x)= u' + v' + ...)$],
       table.hline(),
-      [$display(f(x) = c)$], [$display(f'(x)=0)$],
-      [$display(f(x) =x^n)$], [$display(n · x^(n-1))$],
+      [$display(f(x) = k dot u)$], [$display(f'(x) = k dot u')$],
+      [$display(f(x) = u dot v)$], [$display(f'(x) = u' dot v + u dot v')$],
       table.hline(),
-      [$f(x) =x^n$], [n · x^(n-1)],
+      [$display(f(x) = u/v)$], [$display(f'(x) = (u' dot v - u dot v')/(v^2))$],
+      [$display(f(x) = k/v)$], [$display(f'(x) = (-k v' /v^2))$],
+      [$display(f(x) = u/k )$], [$display(f'(x) = u'/k )$],
+      table.hline(),
+      [$display(f(x) = |u|)$], [$display(f'(x) = u/(|u|) dot u')$],
     )
 ]
 
@@ -103,12 +107,16 @@
   == Funciones exponeciales
     #table(
       columns: (auto, auto),
-      align: center,
-      inset: 8pt,
-      // stroke: 0.5pt,
       table.header([=== Función], [=== *Derivada*]),
-      [$f(x) = k dot x$], [k],
-      [$f(x) = x^{1/n}$], [ (1/n) · x^{(1/n)-1} ],
+      [$display(f(x) = u^n)$], [$display(f'(x) = n dot u^(n-1) dot u')$],
+      [$display(f(x) = u^(-n))$], [$display(f'(x) = (-n dot u')/u^(n+1) )$],
+      [$display(f(x) = root(n, u) = u^(1/n))$], [$display(f'(x) = u'/(n root(n, u^(n-1))) = 1/n dot u^(1/n - 1) dot u' )$],
+      table.hline(),
+      [$display(f(x) = a^u)$], [$display(f'(x) = a^u dot u' dot ln (a))$],
+      [$display(f(x) = e^u)$], [$display(f'(x) = e^u dot u' )$],
+      [$display(f(x) = u^v)$], [$display(f'(x) = v dot u^(v-1) dot u' + u^v dot v' dot ln(u) )$],      
+      
+   
     )
   ]
 
@@ -117,8 +125,8 @@
     #table(
       columns: (auto, auto),
       table.header([=== Función], [=== *Derivada*]),
-      [$f(x) = k dot x$], [k],
-      [$f(x) = x^{1/n}$], [ (1/n) · x^{(1/n)-1} ],
+      [$display(f(x) = log_a (u) )$], [$display(f'(x) = u'/(u dot ln(a)) = u'/u dot log_a e )$],
+      [$display(f(x) = ln(u) )$], [$display(f'(x) = u'/u )$],
     )
   ]
 
@@ -127,8 +135,12 @@
     #table(
       columns: (auto, auto),
       table.header([=== Función], [=== *Derivada*]),
-      [$f(x) = k dot x$], [k],
-      [$f(x) = x^{1/n}$], [ (1/n) · x^{(1/n)-1} ],
+      [$display(f(x) = "sen"(u) )$], [$display(f'(x) = "cos"(u) dot u' )$],
+      [$display(f(x) = "cos"(u))$], [$display(f'(x) = -"sen"(u) dot u')$],
+      [$display(f(x) = tg(u) )$], [$display(f'(x) = (1 + tg(x)) dot u' = sec^2(u) dot u' )$],
+      [$display(f(x) = "cotg"(u))$], [$display(f'(x) = -"cosec"^2(u) dot u' )$],
+      [$display(f(x) = "sec"(u))$], [$display(f'(x) = "sec"(u) dot tg(u) dot u' )$],
+      [$display(f(x) = "cosec"(u))$], [$display(f'(x) = -"cosec"(u) dot "cotg"(x))$],
     )
   ]
 
@@ -139,8 +151,13 @@
     #table(
       columns: (auto, auto),
       table.header([=== Función], [=== *Derivada*]),
-      [$f(x) = k dot x$], [k],
-      [$f(x) = x^{1/n}$], [ (1/n) · x^{(1/n)-1} ],
+      [$display(f(x) = "arc" "sen" (u))$], [$display(f'(x) = u'/sqrt(1-u^2) )$],
+      [$display(f(x) = "arc" "cos" (u))$], [$display(f'(x) = -u'/sqrt(1-u^2) )$],
+      [$display(f(x) = "arc" "tg" (u))$], [$display(f'(x) = u'/(1+u^2) )$],
+      [$display(f(x) = "sec" (u))$], [$display(f'(x) = u'/(u sqrt(u^2 - 1)) )$],
+      [$display(f(x) = "arc" "cotg" (u))$], [$display(f'(x) = -u'/(1+u^2))) )$],
+      [$display(f(x) = "arc" "sec" (u))$], [$display(f'(x) = u'/(u sqrt(u^2 - 1)) )$],
+      [$display(f(x) = "arc" "cosec" (u))$], [$display(f'(x) = -u'/(u sqrt(u^2 - 1)) )$],
     )
   ]
 
