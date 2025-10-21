@@ -108,11 +108,11 @@
     ],
   ],
   [
-      #question()[Demuestra que la ecuación
+    #question()[Demuestra que la ecuación
         $x^3-x = "sen"(x)$
       tiene *exactamente una* raíz real en el intervalo $[1,2]$.
     ]
-     #solution()[
+    #solution()[
       *Definición de la función:*
       $f(x)=x^{3}-x-"sin"(x)$
       
@@ -150,5 +150,77 @@
       La ecuación $x^3-x- "sen"(x)=0$ tiene exactamente una raíz real en el intervalo $(1,2)$.
 
      ]
+  ],
+  [
+    #question()[Demuestra que la función
+        $f(x) = x^2 - 2x + 3$
+      alcanza un máximo y un mínimo en el intervalo $[0, 4]$.
+    ]
+    #solution()[
+      - $f$ es un polinomio => continua en $[0,4]$.
+      - Por Weierstrass, tiene máximo y mínimo.
+      - Calculamos los extremos relativos:
+        - $f'(x) = 2x - 2$.
+          - $f'(x) = 0 => x = 1$.
+      - Evaluamos
+        - $f'(0) = 3, f(1)= 2, f(4)= 11$.
+        => Mínimo absoluto: f(1) = 2 y Máximo absoluto: f(4)=11
+    ]
+  ],
+  [
+    #question()[Demuestra que la función $display(f(x) = x + 1/x)$
+      alcanza su máximo y  mínimo en el intervalo $[1, 3]$.
+    ]
+    #solution()[
+      - $f$ es continua en $[1,3]$ (suma de funciones continuas y no hay problemas con el dominio porque $ x != 0$).
+      - Por Weierstrass, tiene máximo y mínimo.
+      - Calculamos los extremos relativos:
+        - $f'(x) = 1 - 1/x^2$.
+          - $f'(x) = 0 => x = 1$.
+      - Evaluamos
+        - $f'(1) = 2, f(3)= 3 + 1/3 = 10/3 approx 3,33$.
+        => Mínimo absoluto: f(1) = 2 y Máximo absoluto: f(3)=10/3
+    ]
+  ],
+  [
+    #question()[Demuestra que la función $display(f(x) = x^3 -3x^2 + 1)$
+        alcanza su máximo y  mínimo en $[0, 3]$.
+    ]
+    #solution()[
+      - $f$ es un polinomio => continua en $[0,3]$.
+      - Por Weierstrass, tiene máximo y mínimo.
+      - Calculamos los extremos relativos:
+        - $f'(x) = 3x^2 - 6x = 3x (x - 2)$.
+          - $f'(x) = 0 => x = 0$ ó $x = 2$.
+      - Evaluamos
+        - $f'(0) = 1, f(2)= -3, f(5)= -5$.
+        => Mínimo absoluto: $f(3) = -5$ y Máximo absoluto: $f(0)=1$.
+    ]
+  ],
+  [
+    #question()[Demuestra que $display(f(x) = "sen"(x) + "cos"(x))$
+        alcanza su máximo y  mínimo en $[0, 2 pi]$.
+    ]
+    #solution()[
+      - El seno y coseno son continuas, al ser $f(x)$ suma de funciones continuas => $f(x)$ es continua en $[0, 2 pi]$.
+      - Por Weierstrass, tiene máximo y mínimo.
+      - Calculamos los extremos relativos:
+        - $f'(x) = "cos"(x) - "sen"(x)$.
+          - $f'(x) = 0 => "tan"(x) = 1 => x = pi/4, (5 pi)/4$.
+      - Evaluamos
+        - $f'(0) = 1, f(2pi)= 1, f(pi/4)= sqrt(2), f(5pi/4) = -sqrt(2)$.
+        => Máximo absoluto: $f = sqrt(2) "en" x=pi/4$ y mínimo absoluto: $f=-sqrt(2) "en" x=(5 pi)/4$.
+    ]
+  ],
+  [
+    #question()[Demuestra que toda función continua en un intervalo cerrado y acotado alcanza un máximo y un mínimo, pero que si el intervalo no es cerrado o no es acotado, esto puede no cumplirse.],
+    #solution()[
+      $f(x) = x "en" (0, 1)$ continua, pero, no alcanza máximo ni mínimo, ya que:
+
+      $inf f = 0$, $sup f = 1$
+
+      pero ninguno de esos valores pertenece al intervalo.
+    ]
+
   ]
 )
