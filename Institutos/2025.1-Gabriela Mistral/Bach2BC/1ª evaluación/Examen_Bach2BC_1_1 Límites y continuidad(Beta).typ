@@ -1,4 +1,5 @@
-#import "@local/g-exam:0.4.4": *
+// #import "@local/g-exam:0.4.4": *
+#import "@preview/g-exam:0.4.3": *
 // #import "@preview/wrap-it:0.1.0": wrap-content
 
 #show: exam.with(

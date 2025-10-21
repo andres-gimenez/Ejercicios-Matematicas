@@ -1,4 +1,5 @@
-#import "@local/g-exam:0.4.4": *
+// #import "@local/g-exam:0.4.4": *
+#import "@preview/g-exam:0.4.3": *
 // #import "@preview/wrap-it:0.1.0": wrap-content
 
 #show: exam.with(
@@ -54,7 +55,7 @@
 
 #question(points:2)[*Estudia la continuidad* de la siguiente función en $x=1$ explicando todos las condiciones a cumplir por la función. Y indica de que *tipo de discontinuidad* se trata.
 
-    $ f(x) = (x^2-1)/(x^3+4x^2+7x-12) $
+    $ f(x) = (x^2-1)/(x^3 + 5 x^2 - 4 x - 2) $
 
  ]
 
@@ -62,12 +63,12 @@
  #question()[Estudia la continuidad de las siguientes funciones en todo $Re$.]
 
  #subquestion(points:2)[$display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
-                & x^2 - x - 2 &"si" & x < 1,
-                & sqrt(x-1)  &"si" & 1 <= x < 10,
+                & x^2 - 2x - 3 &"si" & x < 2,
+                & sqrt(x-2)  &"si" &  2 <= x < 10,
                 & 3x-27  &"si" & x >= 10,
                 ))$]
 
 #subquestion(points:2)[$display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
-                & |x - 1| &"si" & x < 3,
-                & x-3  &"si" & 0 x >= 3,
+                & |x - 1| &"si" & x < 5,
+                & x-5  &"si" & x >= 5,
                 ))$]
