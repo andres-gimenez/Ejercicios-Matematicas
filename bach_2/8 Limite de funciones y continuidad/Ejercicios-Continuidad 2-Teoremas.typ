@@ -38,7 +38,6 @@
 [
   #question()[
     Demuestra que el polinomio $P(x) = x^3-4x+1$ tiene *al menos una raíz real* en el intervalo $[0, 2]$.]
-
   #solution()[
   + *Definimos la función:*
 
@@ -75,11 +74,9 @@
   La ecuación $x^3 - 4x + 1 = 0$ tiene al menos una raíz real en el intervalo   $[0, 2]$.
   ]
 ],
-[
-  #question()[
-    Demuestra que la ecuación $ e^x = 2 $ 
+[#question()[
+    Demuestra que la ecuación $e^x = 2$ 
     tiene al menos una raíz real en el intervalo $[0,1]$.]
-
   #solution()[
     + *Definimos la función:*
 
