@@ -74,4 +74,39 @@
 
   La ecuación $ x^3 - 4x + 1 = 0 $ tiene al menos una raíz real en el intervalo 
   ]
+],
+[
+  #question()[
+    Demuestra que la ecuación $ e^{x} = 2 $ 
+    tiene al menos una raíz real en el intervalo $[0,1]$.]
+
+  #solution()[
+1. **Definimos la función:**
+
+   $ f(x) = e^{x} - 2 $
+
+2. **Comprobamos que es continua** en $[0,1]$.
+
+   La función exponencial es continua en $\mathbb{R}$, por tanto $f$ es continua en $[0,1]$.
+
+3. **Evaluamos los extremos del intervalo:**
+
+   $ f(0) = e^{0} - 2 = 1 - 2 = -1 $
+
+   $ f(1) = e^{1} - 2 = e - 2 \quad(\text{que es aproximadamente } 0{,}718\ldots) $
+
+4. **Buscamos un cambio de signo:**
+
+   $ f(0) = -1 < 0 $  
+   $ f(1) = e - 2 > 0 $
+
+   Hay cambio de signo entre $x=0$ y $x=1$.
+
+5. **Aplicamos el Teorema de Bolzano:**
+
+   Como $f$ es continua en $[0,1]$ y $f(0)\cdot f(1) < 0$, existe al menos un $c\in(0,1)$ tal que $f(c)=0$.
+
+== Conclusión
+
+La ecuación $e^{x}-2=0$ tiene al menos una raíz real en el intervalo $(0,1)$.
 ])
