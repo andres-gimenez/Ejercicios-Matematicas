@@ -83,5 +83,5 @@
 
 #subquestion(points:2)[$display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
                 & |x + 1| &"si" & x < 2,
-                & x-2  &"si" & 0 x >= 2,
+                & x-2  &"si" & x >= 2,
                 ))$]
