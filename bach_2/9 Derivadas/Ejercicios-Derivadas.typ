@@ -61,12 +61,7 @@
         $display(f'(x) = ((6x + 2)(x - 1) - (3x^2 + 2x + 1)(1))/(x - 1)^2 = ((6x^2 - 6x + 2x -2) - (3x^2 + 2x + 1))/(x-1)^2 = (3x^2 - 6x - 3)/(x - 1)^2)$
       ]
     ],
-    [
-      #subquestion()[$display(f(x) = sin(x) + cos(x))$]
-      #solution()[
-        $display(f'(x) = cos(x) - sin(x))$
-      ]
-    ],
+    
     [
       #subquestion()[$display(f(x) = tan(x) + x^2)$]
       #solution()[
@@ -85,12 +80,48 @@
       $display(f'(x) = (1/(sqrt(x^2 + 1)))  [(1/2)(x^2 + 1)^(-1/2)](2x) = x/(x^2 + 1))$
       ]
     ],
+   
     [
-      #subquestion()[$display(f(x) = e^(sin(x)))$]
+      #subquestion()[$display(f(x) = ln(x^2 + 1) + e^(x^2))$]
       #solution()[
-        $display(f'(x) = e^(sin(x)) cos(x))$
+        $display(f'(x) = (1/(x^2 + 1))(2x) + e^(x^2)(2x) = 2x(e^(x^2) + 1/(x^2 + 1)))$
       ]
-    ],
+    ],    
+    [
+      #subquestion()[$display(f(x) = "ln"("ln"(x)))$]
+      #solution()[ 
+        $display(f'(x) = (1/ln(x))(1/x) = 1/(x ln(x)))$
+      ]
+    ],    
+    )
+  ],
+  [
+    #question()[Calcula la derivada de las siguientes funciones trigonometricas:]
+    #questions-columns(
+      [
+        #subquestion()[$display(f(x) = sin(x) + cos(x))$]
+        #solution()[
+          $display(f'(x) = cos(x) - sin(x))$
+      ]
+      ],
+      [
+        #subquestion()[$display(f(x) = e^(sin(x)))$]
+        #solution()[
+          $display(f'(x) = e^(sin(x)) cos(x))$
+        ]
+      ],
+      [
+        #subquestion()[$display(f(x) = "arcsin"(x) + "arccos"(x))$]
+        #solution()[
+          $display(f'(x) = 1/sqrt(1 - x^2) - 1/sqrt(1 - x^2) = 0)$
+        ]
+      ],
+      [
+        #subquestion()[$display(f(x) = "arctan"(x^2))$]
+        #solution()[
+          $display(f'(x) = 1/(1 + x^4)(2x) = (2x)/(1 + x^4))$
+        ]
+      ]
     )
   ],
   [

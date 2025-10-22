@@ -9,7 +9,7 @@
   ),
   school: (
     name: "IES Gabriela Mistral",
-    logo:image("../../logo-ies_gabriela_mistral.png")
+    logo:image("../logo-ies_gabriela_mistral.png")
   ),
   exam-info: (
     // academic-period: "Curso 2025/2026",
@@ -139,7 +139,7 @@
       table.header([=== Función], [=== *Derivada*]),
       [$display(f(x) = "sen"(u) )$], [$display(f'(x) = "cos"(u) dot u' )$],
       [$display(f(x) = "cos"(u))$], [$display(f'(x) = -"sen"(u) dot u')$],
-      [$display(f(x) = tg(u) )$], [$display(f'(x) = (1 + tg(x)) dot u' = sec^2(u) dot u' )$],
+      [$display(f(x) = tg(u) )$], [$display(f'(x) = (1 + tg^2(u)) dot u' = sec^2(u) dot u' )$],
       [$display(f(x) = "cotg"(u))$], [$display(f'(x) = -"cosec"^2(u) dot u' )$],
       [$display(f(x) = "sec"(u))$], [$display(f'(x) = "sec"(u) dot tg(u) dot u' )$],
       [$display(f(x) = "cosec"(u))$], [$display(f'(x) = -"cosec"(u) dot "cotg"(x))$],
