@@ -22,10 +22,10 @@
   
   language: "es",
   decimal-separator: ",",
-  date: datetime(year: 2025, month: 9, day: 1),
+  date: datetime(year: 2025, month: 10, day: 22),
   show-student-data: false,
   show-grade-table: false,
-  show-solution: true,
+  show-solution: false,
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
