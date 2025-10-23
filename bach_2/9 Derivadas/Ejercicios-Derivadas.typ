@@ -110,11 +110,53 @@
       #solution()[ 
         $display(f'(x) = (1/ln(x))(1/x) = 1/(x ln(x)))$
       ]
-    ],    
+    ],
+    [
+      #subquestion()[$display(f(x) = e^(ln(x^2 + 1)))$]
+      #solution()[
+        $display(f'(x) = e^(ln(x^2 + 1)) (1/(x^2 + 1))(2x) = (2x e^(ln(x^2 + 1)))/(x^2 + 1) = (2x (x^2 + 1))/(x^2 + 1) = 2x)$
+      ]
+    ],
+    [
+      #subquestion()[$display(f(x) = (x^2 + 1)^(3x))$]
+      #solution()[
+        $display("Ln"(f(x)) = "Ln"((x^2 + 1)^(3x)) => "Ln"(f(x)) = 3x dot "Ln"(x^2 + 1) =>)$
+        
+        $display(["Ln"(f(x))]' = [3x dot "Ln"(x^2 + 1)]' => (f'(x))/(f(x)) = 3 dot "Ln"(x^2 + 1) + 3x dot 1/(x^2 + 1) dot 2x =>)$
+
+        $display((f'(x))/(f(x)) = 3 "Ln"(x^2 + 1) + (6x^2)/(x^2 + 1) => f'(x) = f(x) [3 "Ln"(x^2 + 1) + (6x^2)/(x^2 + 1)] =>)$
+
+        $display(f'(x) = (x^2 + 1)^(3x) [3 "Ln"(x^2 + 1) + (6x^2)/(x^2 + 1)])$
+      ]
+    ],
+    [
+      #subquestion()[$display(f(x) = "ln"(sin(x)))$]
+      #solution()[
+        $display(f'(x) = 1/"sen"(x) dot "cos"(x) = "cos"(x)/"sen"(x) = "cotan"(x))$
+      ]
+    ],
+    [
+      #subquestion()[$display(f(x) = e^(tan(x)))$]
+      #solution()[
+        $display(f'(x) = e^(tan(x)) sec^2(x))$
+      ]
+    ],
+    [
+      #subquestion()[$display(f(x) = "arcsin"(x^2))$]
+      #solution()[
+        $display(f'(x) = 1/sqrt(1 - x^4) dot 2x = (2x)/sqrt(1 - x^4))$
+      ]
+    ],
+    [
+      #subquestion()[$display(f(x) = "arctan"(e^x))$]
+      #solution()[
+        $display(f'(x) = 1/(1 + e^(2x)) dot e^x = (e^x)/(1 + e^(2x)))$
+      ]
+    ]
     )
   ],
   [
-    #question()[Calcula la derivada de las siguientes funciones trigonometricas:]
+    #question()[Calcula la derivada de las siguientes funciones trigonométricas:]
     #questions-columns(
       [
         #subquestion()[$display(f(x) = "sen"(x) + "cos"(x))$]
@@ -159,6 +201,59 @@
           $display(f'(x) = 1/(1 + x^4)(2x) = (2x)/(1 + x^4))$
         ]
       ]
+    )
+  ],
+   [
+    #question()[Calcula la derivada de las siguientes funciones en los puntos indicados:]
+    #questions-columns(
+    [
+      #subquestion()[$display(f(x) = "sen"(x/2) cos(x/2) "en" x=pi)$]
+      #solution()[
+        $display(f'(x) = "cos"(x/2) cos(x/2) (1/2) + "sen"(x/2)(-sin(x/2) (1/2)) = (1/2)[ "cos"^2(x/2) - "sen"^2(x/2)])$
+
+        $display(f'(pi) = (1/2)[ "cos"^2(pi/2) - "sen"^2(pi/2)] = 1/2(0-1) = -1/2)$
+      ]      
+    ],
+    [
+      #subquestion()[$display(f(x) = x "ln"(x) "en" x=1)$]
+      #solution()[
+        $display(f'(x) = 1 dot "ln"(x) + x dot (1/x) = "ln"(x) + 1)$
+
+        $display(f'(1) = "ln"(1) + 1 = 0 + 1 = 1)$
+      ]      
+    ],
+    [
+      #subquestion()[$display(f(x) = e^(2x) "en" x=0)$]
+      #solution()[
+        $display(f'(x) = 2e^(2x))$
+
+        $display(f'(0) = 2e^(0) = 2)$
+      ]      
+    ],
+    [
+      #subquestion()[$display(f(x) = (x^2 + 1)/(x - 1) "en" x=2)$]
+      #solution()[
+        $display(f'(x) = ((2x)(x - 1) - (x^2 + 1)(1))/(x - 1)^2 = (2x^2 - 2x - x^2 - 1)/(x - 1)^2 = (x^2 - 2x - 1)/(x - 1)^2)$
+
+        $display(f'(2) = (2^2 - 2 dot 2 - 1)/(2 - 1)^2 = (4 - 4 - 1)/1 = -1)$
+      ]      
+    ],
+    [
+      #subquestion()[$display(f(x) = "arctan"(x) "en" x=1)$]
+      #solution()[
+        $display(f'(x) = 1/(1 + x^2))$
+
+        $display(f'(1) = 1/(1 + 1^2) = 1/2)$
+      ]      
+    ],
+    [
+      #subquestion()[$display(f(x) = sqrt(x^2 + x + 1) "en" x=0)$]
+      #solution()[
+        $display(f'(x) = (1/2)(x^2 + x + 1)^(-1/2)(2x + 1) = (2x + 1)/(2 sqrt(x^2 + x + 1)))$
+
+        $display(f'(0) = (2 dot 0 + 1)/(2 sqrt(0^2 + 0 + 1)) = 1/2)$
+      ]   
+    ]
     )
   ],
   [
@@ -224,6 +319,21 @@
       Por tanto, la derivada enésima es:
       $display(f^(n)(x) = "sen"(x + n dot (pi/2)))$    
     ]   
+  ],
+
+  [
+    #question()[Para la predicción de la evolución de epidemias se utiliza la función de Gompertz, 
+    $ display(f(x) = a e^(-b e^(-c x))) $
+     donde a, b y c son constantes positivas. Calcula su derivada:]
+    #solution()[
+      $display(f'(x) = a dot e^(-b e^(-c x)) dot (-b) dot e^(-c x) dot (-c) = a b c e^(-c x) e^(-b e^(-c x)))$
+    ]
+  ],
+  [#question()[La función logística, curva logística o curva en forma de S es una función matemática que aparece en diversos modelos de crecimiento de poblaciones, propagación de enfermedades epidémicas y difusión en redes sociales. 
+    $ display(P(t) = 1/(1+e^(-t))) $   
+    Calcula la tasa de crecimiento de la población en función del tiempo:]
+    #solution()[  
+      $display(P'(t) = (0 dot (1 + e^(-t)) - 1 dot (-e^(-t)))/(1 + e^(-t))^2 = e^(-t)/(1 + e^(-t))^2)$]
   ]
 )
 
