@@ -298,7 +298,7 @@
     [
       #subquestion()[$display(f(x) = ("sen"(x))^(x^2))$]
       #solution()[
-        $display("ln"(f(x)) = "ln"(("sen"(x))^(x^2)) => "ln"(f(x)) = x^2 dot "Ln"("sen"(x)) =>)$
+        $display("ln"(f(x)) = "ln"(("sen"(x))^(x^2)) => "ln"(f(x)) = x^2 dot "ln"("sen"(x)) =>)$
         
         $display(["ln"(f(x))]' = [x^2 dot "ln"("sen"(x))]' => (f'(x))/(f(x)) = 2x dot "ln"("sen"(x)) + x^2 dot 1/"sen"(x) dot "cos"(x)) =>$
 
