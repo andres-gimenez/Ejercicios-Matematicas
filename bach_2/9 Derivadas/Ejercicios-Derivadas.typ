@@ -257,7 +257,7 @@
     )
   ],
   [
-    #question()[Calcula la derivada de las siguientes funciones:]
+    #question()[Calcula la derivada de las siguientes funciones, aplicando derivación logarítmica:]
     #questions-columns(
     [
       #subquestion()[$display(f(x) = (x^2 + 1)^(x))$]
@@ -270,7 +270,43 @@
 
       $display(f'(x) = (x^2 + 1)^(x) [ln(x^2 + 1) + (x(2x)/(x^2 + 1))])$
       ]
-    ]
+    ],
+    [
+      #subquestion()[$display(f(x) = x^("sen"(x)))$]
+      #solution()[
+      $display("Ln"(f(x)) = "ln"(x^("sen"(x))) => "ln"(f(x)) = "sen"(x) dot "ln"(x) =>)$
+      
+      $display(["Ln"(f(x))]' = ["sen"(x) dot "Ln"(x)]' => (f'(x))/(f(x)) = "cos"(x) dot "Ln"(x) + "sen"(x) dot 1/x) =>$
+
+      $display((f'(x))/(f(x)) = "cos"(x) dot "Ln"(x) + ("sen"(x))/x => f'(x) = f(x) ["cos"(x) dot "Ln"(x) + ("sen"(x))/x]) =>$
+
+      $display(f'(x) = x^("sen"(x)) ["cos"(x) dot "Ln"(x) + ("sen"(x))/x])$
+      ]
+    ],
+    [
+      #subquestion()[$display(f(x) = (x^2 + 1)^(sqrt(x)))$]
+      #solution()[
+        $display("ln"(f(x)) = "ln"((x^2+1)^(sqrt(x))) => "ln"(f(x)) = sqrt(x) dot "ln"((x^2+1)) =>)$
+        
+        $display(["ln"(f(x))]' = [sqrt(x) dot "ln"(x^2+1)]' => (f'(x))/(f(x)) = (1/(2 sqrt(x))) dot "ln"(x^2+1) + sqrt(x) dot 1/(x^2+1) dot 2x) =>$
+
+        $display((f'(x))/(f(x)) = (1/(2 sqrt(x))) dot "ln"(x^2+1) + (2x sqrt(x))/(x^2+1) => f'(x) = f(x) [ (1/(2 sqrt(x))) dot "ln"(x^2+1) + (2x sqrt(x))/(x^2+1)]) =>$
+
+        $display(f'(x) = (x^2 + 1)^(sqrt(x)) [ (1/(2 sqrt(x))) dot "ln"(x^2+1) + (2x sqrt(x))/(x^2+1)])$
+      ]
+    ],
+    [
+      #subquestion()[$display(f(x) = ("sen"(x))^(x^2))$]
+      #solution()[
+        $display("ln"(f(x)) = "ln"(("sen"(x))^(x^2)) => "ln"(f(x)) = x^2 dot "Ln"("sen"(x)) =>)$
+        
+        $display(["ln"(f(x))]' = [x^2 dot "ln"("sen"(x))]' => (f'(x))/(f(x)) = 2x dot "ln"("sen"(x)) + x^2 dot 1/"sen"(x) dot "cos"(x)) =>$
+
+        $display((f'(x))/(f(x)) = 2x dot "ln"("sen"(x)) + (x^2 cos(x))/"sen"(x) => f'(x) = f(x) [ 2x dot "ln"("sen"(x)) + (x^2 "cos"(x))/"sen"(x)]) =>$
+
+        $display(f'(x) = ("sen"(x))^(x^2) [ 2x dot "ln"("sen"(x)) + (x^2 "cos"(x))/"sen"(x)])$
+        ]
+      ]
     )
   ],
   [
