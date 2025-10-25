@@ -24,7 +24,7 @@
   date: datetime(year: 2025, month: 10, day: 22),
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: true,
+  show-solutions: false,
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -164,7 +164,14 @@
         (2x + 1) / ((x^2 + x) x^2)  - (2 "ln"(x^2 + x))/x^3
         )$
       ]
-    ])
+    ],
+    [ 
+      #subquestion()[$display(f(x) = |x-3| + |x|)$]
+    ],
+    [
+      #subquestion()[$display(f(x) = "ln"((x^2+1)/(x^2)))$]
+    ]
+    )
   ],
   [
     #question()[Calcula la derivada de las siguientes funciones trigonométricas:]
@@ -245,7 +252,19 @@
         e^(sin(x)) cos(x) + sec(x) "cosec"(x)
       )$
       ]
-    ]
+    ],
+    [
+      #subquestion()[$display(f(x) = "arcsen"(2x sqrt(1-x^2)))$]
+    ],
+    [
+      #subquestion()[$display(f(x) = "ln" root(3, ("sen"(x) dot cos(x))/(1-x)^2))$]
+    ],
+    [
+      #subquestion()[$display(f(x) = "arctg"(x/(sqrt(1-x^2))))$]
+    ],
+    [
+      #subquestion()[$display(f(x) = "arcsen"((x-1)/(x+1)))$]
+    ],
     )
   ],
    [
@@ -389,6 +408,158 @@
     )
   ],
   [
+    #question()[Indica los valores de $x$ donde la función $f(x)$ es derivable:
+     $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & 0 & "si" & x < -2,
+                  & 1 & "si" & -2 <= x < 1,
+                  & x & "si" & 1 <= x < 3,
+                  & x^2 - 6x +12 & "si" & x >= 3,
+                ) $
+    ]
+    #solution(color:red)[
+      La función es derivable en los intervalos abiertos $(-infinity, -2)$, $(-2, 1)$, $(1, 3)$ y $(3, infinity)$.
+
+      Ahora, comprobamos la derivabilidad en los puntos críticos $x=-2$, $x=1$ y $x=3$:
+
+      En $x=-2$:
+      La función es continua, pero las derivadas laterales son:
+      $display(f'_-(x) = 0)$
+      $display(f'_+(x) = 0)$
+      Por lo tanto, es derivable en $x=-2$.
+
+      En $x=1$:
+      La función es continua, pero las derivadas laterales son:
+      $display(f'_-(x) = 0)$
+      $display(f'_+(x) = 1)$
+      Por lo tanto, no es derivable en $x=1$.
+
+      En $x=3$:
+      La función es continua, pero las derivadas laterales son:
+      $display(f'_-(x) = 1)$
+      $display(f'_+(x) = 2x - 6 => f'_+(3) = 0)$
+      Por lo tanto, no es derivable en $x=3$.
+
+      En conclusión, la función es derivable en los intervalos:
+      $display((-oo, -2] union (-2, 1) union (1, 3) )$
+    ]
+  ],
+  [
+    #question()[Dada la función
+       $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & x^2 + 1 & "si" & x < 1,
+                  & ln(x) & "si" & x >= 1,
+                ) $ 
+    ]
+    #subquestion()[Estudia si la función es continua en $x=1$]
+    #subquestion()[Estudia si la función es derivable en $x=1$]
+  ],
+  [
+    #question()[Dada la función
+       $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & e^(-x) - 1 & "si" & x <= 0,
+                  & x^2+x & "si" & x > 0,
+                ) $ 
+    ]
+    #subquestion()[Estudia si la función es continua en $x=0$]
+    #subquestion()[Estudia si la función es derivable en $x=0$]
+  ],
+  [
+    #question()[Dada la función
+       $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & -x^2 + 2  & "si" & x < 1,
+                  & -2 "ln"(x) + 1 & "si" & x >= 1,
+                ) $ 
+    ]
+    #subquestion()[Estudia si la función es continua en $x=1$]
+    #subquestion()[Estudia si la función es derivable en $x=1$]
+  ],
+  [
+    #question()[Dada la función
+       $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & x^3 - x & "si" & x < 0,
+                  & a x + b & "si" & x >= 0,
+                ) $ ]
+    #subquestion()[Estudia para que valores de a y b la función es continua.]
+    #subquestion()[Estudia para que valores de a y b la función es derivable.]
+  ],
+  [
+    #question()[Dada la función
+       $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & -x^2 - x + a & "si" & x <= 1,
+                  & 3/(b x) & "si" & x > 1,
+                ) $ 
+    ]
+    #subquestion()[Estudia para que valores de a y b la función es continua.]
+    #subquestion()[Estudia para que valores de a y b la función es derivable.]
+  ],
+  [
+    #question()[Dada la función
+       $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & a/x & "si" & x <= -1,
+                  & (x^2 - b)/4 & "si" & x > -1,
+                ) $ 
+    ]
+    #subquestion()[Estudia para que valores de a y b la función es continua.]
+    #subquestion()[Estudia para que valores de a y b la función es derivable.]
+  ],
+  // [
+  //   #question()[(*EvAU - año 2022 - Modelo - Opción B*) Sea la función
+  //      $ f(x) = x^3 - |x| + 2 $ ]
+  //   [#subquestion()[Estudia la continuidad y derivabilidad de $f$ en $x=0$.]]
+  //   [#subquestion()[Determina los extremos relativos de $f(x)$ en la recta real.]]
+  // ],
+  [#question()[Calcula el valor de m y n para que la función $f(x)$ sea derivable en $x=2$:
+     $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & m x + 5 & "si" & x <= 2,
+                  & n x^2 + x - 1 & "si" & x > 2,
+                ) $ ]
+    #solution(color:red)[
+      Para que la función sea derivable en $x=2$, debe ser continua en ese punto y sus derivadas laterales deben coincidir.
+
+      Primero, igualamos los valores de la función en $x=1$:
+
+      $display(f(x) = )$
+      
+      $display(m dot 1 + n = 1^2 - 1 => m + n = 0 => n = -m)$
+
+      Ahora, calculamos las derivadas laterales:
+      Derivada por la izquierda:
+      $display(f'_-(x) = m)$
+
+      Derivada por la derecha:
+      $display(f'_+(x) = 2x => f'_+(1) = 2 dot 1 = 2)$
+
+      Igualamos las derivadas laterales:
+      $display(m = 2)$
+
+      Sustituyendo en la ecuación para n:
+      $display(n = -m => n = -2)$
+
+      Por lo tanto, los valores son:
+      $display(m = 2)$
+      ]
+  ],
+  [#question()[Calcula el valor de a y b para que la función $f(x)$ sea derivable en $x=1$:
+     $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & x^2 + a/x + b dot e^(x-1)  & "si" & x <= 1,
+                  & 2/(x+1) & "si" & x > 1,
+                ) $ ]
+  ],
+  [
+    #question()[Para la predicción de la evolución de epidemias se utiliza la función de Gompertz, 
+    $ display(f(x) = a e^(-b e^(-c x))) $
+     donde a, b y c son constantes positivas. Calcula su derivada:]
+    #solution()[
+      $display(f'(x) = a dot e^(-b e^(-c x)) dot (-b) dot e^(-c x) dot (-c) = a b c e^(-c x) e^(-b e^(-c x)))$
+    ]
+  ],
+  [#question()[La función logística, curva logística o curva en forma de S es una función matemática que aparece en diversos modelos de crecimiento de poblaciones, propagación de enfermedades epidémicas y difusión en redes sociales. 
+    $ display(P(t) = 1/(1+e^(-t))) $   
+    Calcula la tasa de crecimiento de la población en función del tiempo:]
+    #solution()[  
+      $display(P'(t) = (0 dot (1 + e^(-t)) - 1 dot (-e^(-t)))/(1 + e^(-t))^2 = e^(-t)/(1 + e^(-t))^2)$]
+  ],
+  [
     #question()[Calcula la derivada enésima $display(f(x) = x^n)$:]
     #solution()[
       $display(f'(x) = n x^(n-1))$
@@ -435,87 +606,5 @@
       $display(f^(n)(x) = "sen"(x + n dot (pi/2)))$    
     ]   
   ],
-
-  [
-    #question()[Para la predicción de la evolución de epidemias se utiliza la función de Gompertz, 
-    $ display(f(x) = a e^(-b e^(-c x))) $
-     donde a, b y c son constantes positivas. Calcula su derivada:]
-    #solution()[
-      $display(f'(x) = a dot e^(-b e^(-c x)) dot (-b) dot e^(-c x) dot (-c) = a b c e^(-c x) e^(-b e^(-c x)))$
-    ]
-  ],
-  [#question()[La función logística, curva logística o curva en forma de S es una función matemática que aparece en diversos modelos de crecimiento de poblaciones, propagación de enfermedades epidémicas y difusión en redes sociales. 
-    $ display(P(t) = 1/(1+e^(-t))) $   
-    Calcula la tasa de crecimiento de la población en función del tiempo:]
-    #solution()[  
-      $display(P'(t) = (0 dot (1 + e^(-t)) - 1 dot (-e^(-t)))/(1 + e^(-t))^2 = e^(-t)/(1 + e^(-t))^2)$]
-  ],
-  [#question()[Calcula el valor de m y n para que la función $f(x)$ sea derivable en $x=1$:
-     $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
-                  & m x + 5 & "si" & x <= 2,
-                  & n x^2 + x - 1 & "si" & x > 2,
-                ) $ ]
-    #solution()[
-      Para que la función sea derivable en $x=2$, debe ser continua en ese punto y sus derivadas laterales deben coincidir.
-
-      Primero, igualamos los valores de la función en $x=1$:
-
-      $display(f(x) = )$
-      
-      $display(m dot 1 + n = 1^2 - 1 => m + n = 0 => n = -m)$
-
-      Ahora, calculamos las derivadas laterales:
-      Derivada por la izquierda:
-      $display(f'_-(x) = m)$
-
-      Derivada por la derecha:
-      $display(f'_+(x) = 2x => f'_+(1) = 2 dot 1 = 2)$
-
-      Igualamos las derivadas laterales:
-      $display(m = 2)$
-
-      Sustituyendo en la ecuación para n:
-      $display(n = -m => n = -2)$
-
-      Por lo tanto, los valores son:
-      $display(m = 2)$
-      ]
-  ],
-  [
-    #question()[Indica los valores de $x$ donde la función $f(x)$ es derivable:
-     $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
-                  & 0 & "si" & x < -2,
-                  & 1 & "si" & -2 <= x < 1,
-                  & x & "si" & 1 <= x < 3,
-                  & x^2 - 6x +12 & "si" & x >= 3,
-                ) $
-    ]
-    #solution()[
-      La función es derivable en los intervalos abiertos $(-infinity, -2)$, $(-2, 1)$, $(1, 3)$ y $(3, infinity)$.
-
-      Ahora, comprobamos la derivabilidad en los puntos críticos $x=-2$, $x=1$ y $x=3$:
-
-      En $x=-2$:
-      La función es continua, pero las derivadas laterales son:
-      $display(f'_-(x) = 0)$
-      $display(f'_+(x) = 0)$
-      Por lo tanto, es derivable en $x=-2$.
-
-      En $x=1$:
-      La función es continua, pero las derivadas laterales son:
-      $display(f'_-(x) = 0)$
-      $display(f'_+(x) = 1)$
-      Por lo tanto, no es derivable en $x=1$.
-
-      En $x=3$:
-      La función es continua, pero las derivadas laterales son:
-      $display(f'_-(x) = 1)$
-      $display(f'_+(x) = 2x - 6 => f'_+(3) = 0)$
-      Por lo tanto, no es derivable en $x=3$.
-
-      En conclusión, la función es derivable en los intervalos:
-      $display((-oo, -2] union (-2, 1) union (1, 3) )$
-    ]
-  ]
 )
 
