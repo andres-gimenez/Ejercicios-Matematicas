@@ -13,7 +13,7 @@
   exam-info: (
     academic-period: "Curso 2025/2026",
     academic-level: "2º Bachillerato",
-    academic-subject: "Matemáticas",
+    academic-subject: "Matemáticas II",
     number: [Derivadas],
     // content: [($X->infinity$)],
     model: [v1],
@@ -545,20 +545,20 @@
                   & 2/(x+1) & "si" & x > 1,
                 ) $ ]
   ],
-  [
-    #question()[Para la predicción de la evolución de epidemias se utiliza la función de Gompertz, 
-    $ display(f(x) = a e^(-b e^(-c x))) $
-     donde a, b y c son constantes positivas. Calcula su derivada:]
-    #solution()[
-      $display(f'(x) = a dot e^(-b e^(-c x)) dot (-b) dot e^(-c x) dot (-c) = a b c e^(-c x) e^(-b e^(-c x)))$
-    ]
-  ],
-  [#question()[La función logística, curva logística o curva en forma de S es una función matemática que aparece en diversos modelos de crecimiento de poblaciones, propagación de enfermedades epidémicas y difusión en redes sociales. 
-    $ display(P(t) = 1/(1+e^(-t))) $   
-    Calcula la tasa de crecimiento de la población en función del tiempo:]
-    #solution()[  
-      $display(P'(t) = (0 dot (1 + e^(-t)) - 1 dot (-e^(-t)))/(1 + e^(-t))^2 = e^(-t)/(1 + e^(-t))^2)$]
-  ],
+  // [#question()[Para la predicción de la evolución de epidemias se utiliza la función de Gompertz, 
+  //   $ display(f(x) = a e^(-b e^(-c x))) $
+  //    donde a, b y c son constantes positivas. Calcula su derivada:]
+  //   #solution()[
+  //     $display(f'(x) = a dot e^(-b e^(-c x)) dot (-b) dot e^(-c x) dot (-c) = a b c e^(-c x) e^(-b e^(-c x)))$
+  //   ]
+  // ],
+  // [#question()[La función logística, curva logística o curva en forma de S es una función matemática que aparece en diversos modelos de       crecimiento de poblaciones, propagación de enfermedades epidémicas y difusión en redes sociales. 
+  //   $ display(P(t) = 1/(1+e^(-t))) $   
+  //   Calcula la tasa de crecimiento de la población en función del tiempo:]
+  //   #solution()[  
+  //     $display(P'(t) = (0 dot (1 + e^(-t)) - 1 dot (-e^(-t)))/(1 + e^(-t))^2 = e^(-t)/(1 + e^(-t))^2)$
+  //   ]
+  // ],
   [
     #question()[Calcula la derivada enésima $display(f(x) = x^n)$:]
     #solution()[

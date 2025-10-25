@@ -14,7 +14,7 @@
   exam-info: (
     academic-period: "Curso 2025/2026",
     academic-level: "2º Bachillerato",
-    academic-subject: "Matemáticas",
+    academic-subject: "Matemáticas II",
     number: [Límites 2  ],
     content: [($X->c$)],
     model: [(v3)],
