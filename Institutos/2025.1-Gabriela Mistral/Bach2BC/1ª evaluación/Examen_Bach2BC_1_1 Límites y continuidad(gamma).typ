@@ -34,7 +34,7 @@
   clarifications: (
     [Se puede utilizar calculadoras científicas básicas, que no sean programables resuelvan operaciones complejas como limites, derivadas, primitivas, ...],
     [El uso de teléfono móvil durante el examen, se valorará con un cero. El móvil ha de estar apagado durante el examen.],
-    [Copiar, hablar, levantarse de la silla o molestar a al resto de la clase pueden ser motivos de la retirada del examen que se valorará con un cero.],
+    [Copiar, hablar, levantarse de la silla o molestar al resto de la clase pueden ser motivos de la retirada del examen que se valorará con un cero.],
     [La sospecha de que en un examen se ha copiado o se ha utilizado material no permitido se valorará con un cero.],
     [Deben aparecer todas las operaciones, no vale solo con indicar el resultado.],
     [Se ha de llegar a la solución más reducida posible.],
@@ -64,7 +64,7 @@
 
  #subquestion(points:2)[$display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
                 & x^2 - 2x - 3 &"si" & x < 2,
-                & sqrt(x-2)  &"si" &  2 <= x < 10,
+                & sqrt(x-1)  &"si" &  2 <= x < 10,
                 & 3x-27  &"si" & x >= 10,
                 ))$]
 
