@@ -14,7 +14,7 @@
   exam-info: (
     // academic-period: "Curso 2025/2026",
     academic-level: "2º Bachillerato",
-    academic-subject: "Matemáticas",
+    academic-subject: "Matemáticas II",
     // number: "Versión 1",
     content: "Límites 3 (v1)",   // L'Hopital
     // model: [Modelo $alpha$],

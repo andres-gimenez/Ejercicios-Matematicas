@@ -14,7 +14,7 @@
   exam-info: (
     academic-period: "Curso 2025/2026",
     academic-level: "2º Bachillerato",
-    academic-subject: "Matemáticas",
+    academic-subject: "Matemáticas II",
     number: [Continuidad 2],
     content: [Teoremas de Bolzano y del Valor Medio],
     model: [v1],
