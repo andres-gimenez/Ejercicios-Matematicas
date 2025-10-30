@@ -22,7 +22,7 @@
 
   language: "es",
   decimal-separator: ",",
-  date: datetime(year: 2025, month: 1, day: 3),
+  date: datetime(year: 2025, month: 11, day: 3),
   show-student-data: "odd-pages",
   show-grade-table: true,
   // draft: true,
@@ -34,35 +34,37 @@
 
 #question(points: 1.5)[Simplifica la siguiente fracción, descomponiendo previamente en factores primos y cancelando posteriormente.
 
-$display(4032/3920=)$
-]
+$display(1008/2520=)$]
+
+
 #v(1fr)
 
 // #subquestion(points: 0.5)[$display(396/660=)$]
 // #v(1fr)
 
-#question(points:1.5)[Resuelve la siguiente operación combinada]
+#question(points:1.5)[Resuelve la siguiente operación combinada:]
 #v(2mm)
-$display(3/6 - 5/6 dot (3/5 + 7/2) - (3/10 + 7/5)) =$
+$display(5/6 - 7/6 dot (2/5 + 5/2) - (7/10 + 3/5)) =$
 #v(2fr)
 
 #pagebreak()
 
 #question()[Resuelve las siguientes operaciones combinadas:]
-#subquestion(points: 1.5)[$display((5/3 + 12/15)+sqrt(52/7 -  48/14))=$]
+#subquestion(points: 1.5)[$display((2/3 + 7/21)+sqrt(52/7 + 22/14))=$]
 #v(1fr)
 
-#subquestion(points: 0.5)[$display(2/3 dot 3/5 +13/7 dot 7/5 + 7/9 dot 9/13 - 13/3 dot 3/5 - 2/4 dot 4/5)=$]
+#subquestion(points: 0.5)[$display(2/7 dot 7/3 + 2/11 dot 11/3 + 7/9 dot 9/3 - 2/5 dot 5/3 - 4/9 dot 9/3)=$]
 #v(1fr)
 
 #question()[Resuelve las siguientes operaciones combinadas, indicando todos los pasos:]
-#subquestion(points:1)[$display(3-4dot[9 + 5 dot (5-8) + (2-4))])=$]
+#subquestion(points:1)[$display(5-2dot[4 + 7 dot (2-7) + (3-7))])=$]
 #v(1fr)
 
-#subquestion(points:1)[$display((2-5)^2 + (5+2)^2 + (2-4)^2 + (5-2)^2)=$]
+#subquestion(points:1)[$display((7-2)^2 + (2+7)^2 + (5-2)^2 + (5+2)^2)=$]
 #v(1fr)
 
 #pagebreak()
+
 #question(points:0.5)[Aproxima por redondeo y truncamiento los siguientes decimales:]
 
 #align(center,
@@ -71,30 +73,33 @@ $display(3/6 - 5/6 dot (3/5 + 7/2) - (3/10 + 7/5)) =$
       if(y == 0) { luma(230) },
     columns: (3cm, 3cm,  3cm, 3cm),
     [],[Número], [Truncamiento], [Redondeo],
-    [a la milésima],  [$"5,2236"$], [], [],
-    [a la décima],    [$"26,338"$], [], [],
-    [a la centésima], [$"3,366"$], [], [],
-    [a la centésima], [$"15,"accent(6, \u{0311})$]
+    [a la milésima],  [$"2,2528"$], [], [],
+    [a la décima],    [$"63,237"$], [], [],
+    [a la centésima], [$"5,386"$], [], [],
+    [a la centésima], [$"23,"accent(7, \u{0311})$]
 ))
 
 #question(points:1)[Sin calcular el resultado final, expresa las siguientes expresiones como una sola potencia o una sola raíz:]
+#subquestion()[$display(345^3 dot 345^9 =)$]
+#v(1fr)
+#subquestion()[$display(35^5 dot 4^5 =)$]
+#v(1fr)
 
-#subquestion()[$display(212^4 dot 212^7 =)$]
-#v(1fr)
-#subquestion()[$display(32^5 dot 7^5 =)$]
-#v(1fr)
 #subquestion()[$display(sqrt(8) dot sqrt(2) =)$]
 #v(1fr)
 
 
-
 // #question(points:1)[Resuelve las siguientes operaciones]
+// #subquestion(points:1)[$display(35^5 dot 4^5 =)$]
+// #v(1fr)
 // #subquestion(points:1)[$display(sqrt(8) dot sqrt(2) =)$]
 // #v(1fr)
 // #subquestion(points:1)[$display(sqrt(27) dot sqrt(3) =)$]
 // #v(1fr)
+
+
+
 #pagebreak()
 
-#question(points:1.5)[Una tren de mercancías ha recorrido $265 "km"$ a $45 "km/h"$. ¿Cuánto tiempo ha invertido en el trayecto?]
+#question(points:1.5)[Una tren de mercancías ha recorrido $187 "km"$ a $55 "km/h"$. ¿Cuánto tiempo ha invertido en el trayecto?]
 #v(1fr)
-
