@@ -22,14 +22,14 @@
   
   language: "es",
   decimal-separator: ",",
-  date: datetime(year: 2025, month: 9, day: 1),
+  date: datetime(year: 2025, month: 10, day: 1),
   // show-student-data: "odd-pages",
   show-student-data: false,
   show-grade-table: false,
   show-solutions: true,
   // draft: true,
-  question-points-position: right,
-  // question-points-position: none,
+  // question-points-position: right,
+  question-points-position: none,
   // question-text-parameters: (size: 14pt, spacing:150%),
 
   // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
@@ -109,7 +109,37 @@
 
  ]
   #solution()[
-  
+  En este ejercicio solo nos piden estudiar la continuidad en $x=1$, así que ignoramos el resto de los números reales.
+
+  Para que una función sea continua hay que comprobar los siguientes puntos
+
+  + Existe el limite $display(limits("lím")_(x->1) f(x))$ y es finito. Para ello hay que comprobar que existen los límites laterales y coinciden.
+  + La función está bien definida en $x=1$. $display(exists f(1))$ 
+  + El limite coincide con el valor de la función en el punto $display(limits("lím")_(x->1) f(x) = f(1))$
+
+  Calculamos el límite:
+
+  $display(limits("lím")_(x->1)(x^2-1)/(x^3+7x-8) = (1^2- 1)/(1^3 + 7 dot 1 - 8) = 0/0)$ (indeterminación $0/0$)
+
+  Factorizamos numerador y denominador (lo hacemos por Fouffini, solo para $x = 1$ ya que el resto no lo vamos a necesitar y puede que no exista.):
+
+  $display(limits("lím")_(x->1)(x^2-1)/(x^3+7x-8) = limits("lím")_(x->1)(cancel((x - 1)) (x +1))/(cancel((x-1)) (x^2 + x + 8)) = limits("lím")_(x->1) (x+1)/(x^2+x+8) = (1 + 1)/(1^2+1+8) = 2/10  = 1/5)$ 
+
+  Calculamos $f(1)$:
+
+  $display(f(1) = (1^2- 1)/(1^3 + 7 dot 1 - 8)  = 0/ 0 in.not RR)$ ($0/0$ no es un número.)
+
+  Luego no está definido $f(x) "en" x=1$
+
+  Para demostrar la no continuidad de $f(x) "en" x=1$ nos bastaría solo demostrar que no se cumple uno de los puntos, pero es conveniente ir paso a paso, para poderla clasificar.
+
+  Cuando existe el limite, pero no está definida en dicho punto, es una discontinuidad evitable, ya que basta definir la función en $x=1$ para hacer que sea continua. Podemos hacerlo de dos formas, en la que la nueva función coincide en un entorno de $x=1$ y es continua:
+
+  $display(f(x) = (x+1)/(x^2+x+8))$ ó  $display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                & (x^2-1)/(x^3+7x-8) &"si" & x != 1,
+                & 1/5 &"si" & x = 1,
+                ))$
+
   ]
 
 #pagebreak()
@@ -120,7 +150,44 @@
                 & sqrt(x+1)  &"si" & 0 <= x < 3,
                 & 2x-4  &"si" & x >= 3,
                 ))$]
-  #solution()[]
+  #solution()[
+    En este ejercicio nos piden estudiar la continuidad en todo $RR$, o $forall RR$, así que hay que ir por partes.
+
+    Tenemos dos puntos donde la definición de la función cambio $x=0$ y $x=3$, lo que nos deja tres intervalos donde tambien hay que estudiar la función $(-oo, 1), (1,3), (3, +oo)$.
+    
+    En $(-oo, 1)$ es continua porque está definido con $x^2-1$ que es un polinomio, que es continua (se puede hacer una demostración más rigurosa, pero sobrepasa los objetivos de este curso).
+
+    En $(1, 3)$ es continua porque está definida como $sqrt(x+1)$, composición de $x+1$ y $sqrt(x)$, $x+1$ es continua por ser un polinomio y $sqrt(x)$ es continua si $x>0$ y como $x+1 > 0$ si $x in (1,3)$ entonces $sqrt(x+1)$ es continua si $x in (0, 3)$.
+
+    En $(3, +oo)$ es continua por esta definida con $2x-4$ que es un polinomia.
+
+    Ahora abordamos el punto $x=0$, calculando los limites laterales:
+
+    $display(limits("lím")_(x->0^-)f(x) = limits("lím")_(x->0^-) (x^2-1) = 0^2 -1 = -1)$
+
+    $display(limits("lím")_(x->0^+)f(x) = limits("lím")_(x->0^+) sqrt(x+1) = sqrt(0+1) = sqrt(1) = +1)$
+
+    Luego $display(limits("lím")_(x->0^-)f(x) != limits("lím")_(x->0^+)f(x)) =>$ La función no es continua en $x=0$ (Es una discontinuidad de salto, no evitable).
+
+    Ahora abordamos el punto $x=3$, calculando los limites laterales:
+
+    $display(limits("lím")_(x->3^-)f(x) = limits("lím")_(x->3^-) sqrt(x+1) = sqrt(3+1) = sqrt(4) = 2)$
+
+    $display(limits("lím")_(x->3^+)f(x) = limits("lím")_(x->3^+) 2x-4 = 2 dot 3 - 4 = 6 - 4 = 2)$
+
+    Existen los límites laterales y coinciden: $display(limits("lím")_(x->3^-)f(x) = limits("lím")_(x->3^+)f(x) = f(3))$
+
+    Calculamos el valor de la función en $x=3$:
+
+    $display(f(3) = 2 dot 3 - 4 = 6 - 4 = 2) =>$ $f(x)$ está bien definida.
+
+    Y ademas $limits("lím")_(x->3)f(x) = f(3)$
+
+    Luego $f(x)$ es continua en $x=3$
+
+    *Así que la función es continua en $(-oo, 0) union (0, oo) = RR \\ {0}$*
+
+  ]
 
 #subquestion(points:2)[$display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
                 & |x + 1| &"si" & x < 2,
