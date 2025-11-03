@@ -1,4 +1,6 @@
 #import "@local/g-exam:0.4.4": *
+#import "@preview/cetz:0.4.2"
+#import "@preview/cetz-plot:0.1.3"
 
 #show: exam.with(
   author: (
@@ -416,31 +418,112 @@
                   & x^2 - 6x +12 & "si" & x >= 3,
                 ) $
     ]
-    #solution(color:red)[
-      La función es derivable en los intervalos abiertos $(-infinity, -2)$, $(-2, 1)$, $(1, 3)$ y $(3, infinity)$.
+    #solution()[
+      La función es derivable en los intervalos abiertos $(-oo, -2)$, $(-2, 1)$, $(1, 3)$ y $(3, +oo)$.
 
+      $f(x) = 0$ y $ f(x) = 1$ son constantes, luego continuas y derivable en $forall RR$ $(-oo,-2)$ y $(-2, 1)$ respectivamente.
+
+      $x$ y $x^2 - 6x +12$ derivable en $forall RR$, luego derivable en $(1,3)$ y $(3, +oo)$ respectivamente.
+ 
       Ahora, comprobamos la derivabilidad en los puntos críticos $x=-2$, $x=1$ y $x=3$:
 
-      En $x=-2$:
-      La función es continua, pero las derivadas laterales son:
-      $display(f'_-(x) = 0)$
-      $display(f'_+(x) = 0)$
-      Por lo tanto, es derivable en $x=-2$.
+      *En $x=-2$*:
 
-      En $x=1$:
-      La función es continua, pero las derivadas laterales son:
-      $display(f'_-(x) = 0)$
-      $display(f'_+(x) = 1)$
-      Por lo tanto, no es derivable en $x=1$.
+      La función no es continua, luego la función no es derivable, aunque las derivadas laterales coincidan:
+      
+      $cases(reverse: #true, delim: "{", gap: #1em,
+                  display(limits("lím")_(x->-2^-) f(x) = limits("lím")_(x->-2^-) 0 = 0),
+                  display(limits("lím")_(x->-2^+) f(x) = limits("lím")_(x->-2^-) 1 = 1),
+            ) $ Luego $f(x)$ no es continua en $x=-2$.
 
-      En $x=3$:
-      La función es continua, pero las derivadas laterales son:
-      $display(f'_-(x) = 1)$
-      $display(f'_+(x) = 2x - 6 => f'_+(3) = 0)$
-      Por lo tanto, no es derivable en $x=3$.
+      #stack(dir:ltr,
+          $cases(reverse: #true, delim: "{", gap: #1em,
+                display(f'(x^-) = 0 => f'(-2^-) = 0),
+                display(f'(x^+) = 0 => f'(-2^+) = 0),
+              )$,
+          [#v(2mm) Aunque las derivadas laterales coincidan, \ no es derivable por no ser continua en  $x=-2$]
+      )
 
-      En conclusión, la función es derivable en los intervalos:
-      $display((-oo, -2] union (-2, 1) union (1, 3) )$
+      Por lo tanto, $f(x)$ no es derivable en x=-2.
+
+      *En $x=1$*:
+
+      La función es continua, pero las derivadas laterales no coinciden:
+
+      $cases(reverse: #true, delim: "{", gap: #1em,
+                  display(limits("lím")_(x->1^-) f(x) = limits("lím")_(x->1^-) 1 = 1),
+                  display(limits("lím")_(x->1^+) f(x) = limits("lím")_(x->1^-) x = 1),
+            ) $ Existe el limite $display(limits("lím")_(x->1^+) f(x) = 1)$
+            
+      La función esta bien definida en f(1) = 1 y coincide con el limite $display(limits("lím")_(x->1^+) f(x) = f(1))$, 
+      luego $f(x)$ es continua en $x=1$.
+
+      #stack(dir:ltr,
+          $cases(reverse: #true, delim: "{", gap: #1em,
+                display(f'(x^-) = 0 => f'(1^-) = 0),
+                display(f'(x^+) = 1 => f'(1^+) = 0),
+              )$,
+          [#v(2mm) Las derivadas laterales son distintas, \ ergo, no es derivable en  $x=1$]
+      )
+
+      *En $x=3$*:
+
+      La función es continua, pero las derivadas laterales son:
+
+      $cases(reverse: #true, delim: "{", gap: #1em,
+                  display(limits("lím")_(x->3^-) f(x) = limits("lím")_(x->3^-) 3 = 3),
+                  display(limits("lím")_(x->3^+) f(x) = limits("lím")_(x->3^-) 3^2 - 6 dot 3 + 12 = 9 - 18 + 12 = 3),
+            ) $ Los limites laterales coinciden,  
+            
+      luego $exists display(limits("lím")_(x->3^-) f(x) = 3)$, $f(x)$ está bien definida y coincide con el valor del limite $f(3) = 3$, luego $f(x)$ es continua en $x=3$.
+
+      #stack(dir:ltr,
+          $cases(reverse: #true, delim: "{", gap: #1em,
+                display(f'(x^-) = 0 => f'(3^-) = 1),
+                display(f'(x^+) = 2x - 6 => f'(3^+) = 2 dot 3 - 6 = 6),
+              )$,
+          [#v(2mm) Las derivadas laterales son distintas, \ luego, no es derivable en  $x=3$]
+      )
+
+      La función es continua en $display((-oo, -2) union (2,3) union (3, +oo) = RR \\ {-2, 3})$
+      
+      La función es derivable en $display(display((-oo, -2] union (-2, 1) union (1, 3) union (3, +oo)) = RR \\ {-2, 1, 3})$
+
+      #align(center, 
+        cetz.canvas({
+
+          import cetz.draw: *
+          import cetz-plot: *
+          plot.plot(
+            size: (10,5),
+            x-tick-step:1,
+            y-tick-step:1,
+            axis-style: "school-book",
+            {
+              plot.add(
+                domain: (-5, -2),
+                style: (mark:(end:"o")),
+                x=> 0
+              )
+              plot.add(
+                domain: (-2, 1),
+                style: (stroke:red, mark:(start:(symbol:"o", fill:red), end:"o"), fill:blue),
+                x=> 1
+              )
+              plot.add(
+                domain: (1, 3),
+                style: (stroke:green, mark:(start:(symbol:"o", fill:green), end:"o")),
+                x=> x
+              )
+              plot.add(
+                domain: (3, 4),
+                  x=>x*x - 6*x + 12, 
+                  style: (stroke:blue, mark:(start:(symbol:"o", fill:blue))),
+              )
+            }
+          )      
+        })
+      )
     ]
   ],
   [
@@ -513,31 +596,31 @@
                   & m x + 5 & "si" & x <= 2,
                   & n x^2 + x - 1 & "si" & x > 2,
                 ) $ ]
-    #solution(color:red)[
-      Para que la función sea derivable en $x=2$, debe ser continua en ese punto y sus derivadas laterales deben coincidir.
+    // #solution(color:red)[
+    //   Para que la función sea derivable en $x=2$, debe ser continua en ese punto y sus derivadas laterales deben coincidir.
 
-      Primero, igualamos los valores de la función en $x=1$:
+    //   Primero, igualamos los valores de la función en $x=1$:
 
-      $display(f(x) = )$
+    //   $display(f(x) = )$
       
-      $display(m dot 1 + n = 1^2 - 1 => m + n = 0 => n = -m)$
+    //   $display(m dot 1 + n = 1^2 - 1 => m + n = 0 => n = -m)$
 
-      Ahora, calculamos las derivadas laterales:
-      Derivada por la izquierda:
-      $display(f'_-(x) = m)$
+    //   Ahora, calculamos las derivadas laterales:
+    //   Derivada por la izquierda:
+    //   $display(f'_-(x) = m)$
 
-      Derivada por la derecha:
-      $display(f'_+(x) = 2x => f'_+(1) = 2 dot 1 = 2)$
+    //   Derivada por la derecha:
+    //   $display(f'_+(x) = 2x => f'_+(1) = 2 dot 1 = 2)$
 
-      Igualamos las derivadas laterales:
-      $display(m = 2)$
+    //   Igualamos las derivadas laterales:
+    //   $display(m = 2)$
 
-      Sustituyendo en la ecuación para n:
-      $display(n = -m => n = -2)$
+    //   Sustituyendo en la ecuación para n:
+    //   $display(n = -m => n = -2)$
 
-      Por lo tanto, los valores son:
-      $display(m = 2)$
-      ]
+    //   Por lo tanto, los valores son:
+    //   $display(m = 2)$
+    //   ]
   ],
   [#question()[Calcula el valor de a y b para que la función $f(x)$ sea derivable en $x=1$:
      $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
