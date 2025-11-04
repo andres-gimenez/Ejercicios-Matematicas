@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.3": *
+#import "@local/g-exam:0.4.4": *
 // #import "@preview/wrap-it:0.1.0": wrap-content
 
 #show: exam.with(
@@ -16,7 +16,7 @@
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas II",
     // number: "Versión 1",
-    content: "Límites 3 (v1)",   // L'Hopital
+    content: "Límites 3 - L'Hôpital (v1)", 
     // model: [Modelo $alpha$],
   ),
   
@@ -25,6 +25,7 @@
   date: datetime(year: 2025, month: 9, day: 1),
   show-student-data: false,
   show-grade-table: false,
+  show-solutions: true,
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -33,9 +34,16 @@
 )
 
 #question()[Calcula el valor de los siguientes límites, si existieran:]
-#columns(2, [
-  #subquestion()[$display(limits("lím")_(x->infinity) ((2^x+x)/(e^x)))$]
 
+#questions-columns([
+    #subquestion()[$display(limits("lím")_(x->+oo) ((2^x+x)/(e^x)))$]
+    #solution()[
+      $display(limits("lím")_(x->+oo) ((2^x+x)/(e^x)) = (2^oo + oo)/(e^oo) = oo/oo) $ (indeterminación $oo/oo$, podemos usar L'Hôpital)
+
+      $display(limits("lím")_(x->+oo) ((2^x+x)/(e^x)) stretch(=)^"L'Hôpital" limits("lím")_(x->+oo) ((2^x dot "Ln"(x)+1)/(e^x)))$
+    ]
+  ],
+  [
   #subquestion()[$display(limits("lím")_(x->infinity) ((3x+1)/(2x))^(1/(x-2)))$]
 
   #subquestion()[$display(limits("lím")_(x->infinity) (e^x+ e^(-x))/(e^x - e^(-x)) )$]
@@ -45,8 +53,7 @@
   #subquestion()[$display(limits("lím")_(x->1) (x^2-1)/abs(x-1) )$]
 
   #subquestion()[$display(limits("lím")_(x->-infinity) (x^2-1)/abs(x-1) )$]
-
-])
+  ])
 
 #question()[Calcula el valor de los siguientes límites, si existieran:]
 #columns(2, [

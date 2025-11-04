@@ -1,5 +1,6 @@
 #import "@local/g-exam:0.4.4": *
-// #import "@preview/wrap-it:0.1.0": wrap-content
+#import "@preview/cetz:0.4.2"
+#import "@preview/cetz-plot:0.1.3"
 
 #show: exam.with(
   author: (
@@ -45,7 +46,9 @@
 )
 #set math.cases(reverse: true)
 
-#question()[Calcula los siguientes límites. Desarrollando los pasos que realices.]
+#questions-pages(
+  [
+ #question()[Calcula los siguientes límites. Desarrollando los pasos que realices.]
 
  #subquestion(points:1)[$display(limits("lím")_(x->+oo) ((3x^4+5x)/(3x^4+7))^(6x^3-2))$] // = e^10
  #solution()[
@@ -58,7 +61,7 @@
                 limits("lím")_(x->+oo) 6x^3-2 -> 6oo^3 -2 -> oo
                 ))$
 
-    Aplicamos $display(limits("lím")_(x->+oo) f(x) = 1)$ y $display(limits("lím")_(x->+oo) g(x) = oo) => display(limits("lím")_(x->+oo) f(x)^g(x)) = display(e^(limits("lím")_(x->+oo)[f(x) -1] dot g(x)))$
+    Si $display(limits("lím")_(x->+oo) f(x) = 1)$ y $display(limits("lím")_(x->+oo) g(x) = oo) => display(limits("lím")_(x->+oo) f(x)^g(x)) = display(e^(limits("lím")_(x->+oo)[f(x) -1] dot g(x)))$
 
     $display(limits("lím")_(x->+oo) ((3x^4+5x)/(3x^4+7))^(6x^3-2) = 
         e^(limits("lím")_(x->+oo)[(3x^4+5x)/(3x^4+7) -1] dot (6x^3-2)) = 
@@ -68,7 +71,7 @@
         e^(limits("lím")_(x->+oo)(5x-7)/(3x^4+7) dot (6x^3-2))) = 
         e^(limits("lím")_(x->+oo)((5x-7)(6x^3-2))/(3x^4+7)) = 
         e^(limits("lím")_(x->+oo)(30x^4-42x^3-10x+14)/(3x^4+7)) ->
-        e^((30 oo^4-42 oo^3-10 oo+14)/(3 oo^4+7)) -> e=(oo/oo)$ (indeterminación $oo/oo$)
+        e^((30 oo^4-42 oo^3-10 oo+14)/(3 oo^4+7)) -> e^(oo/oo)$ (indeterminación $oo/oo$)
 
     $display(e^(limits("lím")_(x->+oo)(30x^4-42x^3-10x+14)/(3x^4+7)) = 
       e^(limits("lím")_(x->+oo)((30x^4)/(x^4)-(42x^3)/(x^4)-(10x)/(x^4)+(14)/(x^4))/((3x^4)/(x^4)+(7)/(x^4))) =
@@ -76,20 +79,23 @@
       e^((30-(42)/(oo)-(1)/(oo^3)+(14)/(oo^4))/(3+(7)/(oo^4))) ->
       e^((30-0-0+0)/(3+0)) = e^(30/3) = result(e^10))$
  ]
-
+  ],
+  [
  #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (sqrt(x^2 + 4x + 5) - x))$] // = 2
  #solution()[
 
  ]
-
+  ],
+  [
  #subquestion(points:1)[$display(limits("lím")_(x->3) (2/(x-3) - 12/(x^2-9)))$] // = 1/3
  #solution()[
 
  ]
-
+  ],
+  [
  #subquestion(points:1)[$display(limits("lím")_(x->+infinity) (sqrt(x^4 +1)/(x-1)-x))$] //= 1
  #solution()[
-  $display(limits("lím")_(x->+infinity) (sqrt(x^4 +1)/(x-1)-x) = (sqrt(oo^4 +1)/(oo-1)-oo) = (sqrt(oo) / (oo))-oo = oo/oo - oo )$  (indeterminado)
+  $display(limits("lím")_(x->+infinity) (sqrt(x^4 +1)/(x-1)-x) = (sqrt(oo^4 +1)/(oo-1)-oo) = (sqrt(oo) / (oo))-oo = oo/oo - oo )$  (indeterminación $oo/oo$)
 
   $display(limits("lím")_(x->+infinity) (sqrt(x^4 +1)/(x-1)-x) = limits("lím")_(x->+infinity) (sqrt(x^4 +1) - x (x-1))/(x-1) = 
   limits("lím")_(x->+infinity) (sqrt(x^4 +1) - (x^2 -x))/(x-1) = limits("lím")_(x->+infinity) ((sqrt(x^4 +1) - (x^2 -x))(sqrt(x^4 +1) + (x^2 -x)))/((x-1)(sqrt(x^4 +1) + (x^2 -x))) = limits("lím")_(x->+infinity) ((sqrt(x^4 +1))^2 - (x^2 -x)^2)/((x-1)(sqrt(x^4 +1) + (x^2 -x))) = 
@@ -102,7 +108,8 @@
   ((2 - 1/oo + 1/oo^3))/((1-1/oo) (sqrt((1 +1/oo^4)) + (1 - 1/oo))) = ((2 - 0 + 0))/((1-0) (sqrt((1 + 0)) + (1 - 0))) = 
   (2)/(1 (sqrt(1) + 1)) = 2/2 = result(1))$
  ]
-
+  ],
+  [
  #question(points:2)[*Estudia la continuidad* de la siguiente función en $x=1$ explicando todos las condiciones a cumplir por la función. Y indica de que *tipo de discontinuidad* se trata.
 
     $ f(x) = (x^2-1)/(x^3+7x-8) $
@@ -142,15 +149,15 @@
 
   ]
 
-#pagebreak()
- #question()[Estudia la continuidad de las siguientes funciones en todo $Re$.]
-
- #subquestion(points:2)[$display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+ #question()[Estudia la continuidad de las siguientes funciones en todo $RR$.]
+  #questions-pages(
+  [
+    #subquestion(points:2)[$display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
                 & x^2 - 1 &"si" & x < 0,
                 & sqrt(x+1)  &"si" & 0 <= x < 3,
                 & 2x-4  &"si" & x >= 3,
                 ))$]
-  #solution()[
+    #solution()[
     En este ejercicio nos piden estudiar la continuidad en todo $RR$, o $forall RR$, así que hay que ir por partes.
 
     Tenemos dos puntos donde la definición de la función cambio $x=0$ y $x=3$, lo que nos deja tres intervalos donde tambien hay que estudiar la función $(-oo, 1), (1,3), (3, +oo)$.
@@ -187,13 +194,127 @@
 
     *Así que la función es continua en $(-oo, 0) union (0, oo) = RR \\ {0}$*
 
-  ]
+    #align(center, 
+        cetz.canvas({
 
-#subquestion(points:2)[$display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+          import cetz.draw: *
+          import cetz-plot: *
+          plot.plot(
+            size: (7,5),
+            x-tick-step:1,
+            y-tick-step:1,
+            axis-style: "school-book",
+            {
+              plot.add(
+                domain: (-2, 0),
+                style: (stroke:red, mark:(end:"o"), fill:blue),
+                x=> x * x - 1
+              )
+              plot.add(
+                domain: (0, 3),
+                style: (stroke:green, mark:(start:(symbol:"o", fill:green), end:"o")),
+                x=> calc.sqrt(x + 1)
+              )
+              plot.add(
+                domain: (3, 5),
+                  x=>2 * x - 4, 
+                  style: (stroke:blue, mark:(start:(symbol:"o", fill:blue))),
+              )
+            }
+          )      
+        })
+      )
+  ]
+  ],
+  [
+    #subquestion(points:2)[$display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
                 & |x + 1| &"si" & x < 2,
                 & x-2  &"si" & x >= 2,
                 ))$]
+    #solution()[
+  Cuando tenemos un valor absoluto, lo más sencillo es definir la función en dos trozos, 
+  una cuando el valor es positivo y otra cuando es negativo, en nuestro caso, cambia de sigo cuando $x+1 = 0 => x = -1$.
 
-#solution()[
+  $display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                & |x + 1| &"si" & x < 2,
+                & x-2  &"si" & x >= 2,
+                )
+          = cases(reverse: #false, delim: "{", gap: #1em,
+                & -(x + 1) &"si" & x < -1,
+                & x + 1 &"si" & -1 < x < 2,
+                & x-2  &"si" & x >= 2,
+                )
+          = cases(reverse: #false, delim: "{", gap: #1em,
+                & -x - 1 &"si" & x < -1,
+                & x + 1 &"si" & -1 <= x < 2,
+                & x-2  &"si" & x >= 2,
+                )
+    )                 
+                $
 
+    En los intervalos $(-oo, -1), (-1, 2), (2, oo)$ la función es continua por estár definida con polinomios.
+
+    *En x= -1:*
+
+    Podriamos decir que la función valor absoluto es continua en todo su dominio y no derivable en el punto que cambia de signo, pero vamos a demostrarlo de forma más rigurosa.
+
+    Calculamos los limites laterales. 
+
+    $display(limits("lím")_(x->-1^-)f(x) = limits("lím")_(x->-1^-) (-x - 1) = -(-1)-1 = 0)$
+
+    $display(limits("lím")_(x->-1^+)f(x) = limits("lím")_(x->-1^+) (x + 1) = -1 + 1 = 0)$
+
+    Luego los límites laterales existen y coincide, luego existe el límite 
+    
+    $display(limits("lím")_(x->-1)f(x) = 0)$
+
+    La función está bien definida en $x=-1$, $f(-1) = 0$
+
+    Y el valor de la función coincide con el valor del $display(limits("lím")_(x->-1)f(x) = f(-1))$
+
+    Así que podemos afirmar que $f(x)$ es continua en $x=-1$
+
+    *En x= 2:*
+
+    Calculamos los límites laterales. 
+
+    $display(limits("lím")_(x->2^-)f(x) = limits("lím")_(x->2^-) (x + 1) = 2 + 1 = 3)$
+
+    $display(limits("lím")_(x->2^+)f(x) = limits("lím")_(x->-1^+) (x - 2) = 2 - 2 = 0)$
+
+    Como los límites laterales no coinciden, $exists.not limits("lím")_(x->2)f(x)$, luego la función no es continua en $x=2$
+
+    *La función es continua en $(-oo, 2) union (2, +oo) = RR \\ {2}$.*
+
+    #align(center, 
+        cetz.canvas({
+          import cetz.draw: *
+          import cetz-plot: *
+          plot.plot(
+            size: (10,5),
+            x-tick-step:1,
+            y-tick-step:1,
+            axis-style: "school-book",
+            {
+              plot.add(
+                domain: (-4, -1),
+                style: (stroke:blue),
+                x=> -x - 1
+              )
+              plot.add(
+                domain: (-1, 2),
+                style: (stroke:blue, mark:(end:"o"), fill:blue),
+                x=> x + 1
+              )
+              plot.add(
+                domain: (2, 5),
+                  x=>x - 2, 
+                  style: (stroke:red, mark:(start:(symbol:"o", fill:red))),
+              )
+            }
+          )      
+        })
+      )
 ]
+  ])
+  ])
