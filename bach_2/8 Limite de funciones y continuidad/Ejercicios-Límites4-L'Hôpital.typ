@@ -86,10 +86,34 @@
       ]
     ],
     [
-      #subquestion()[$display(limits("lím")_(x -> 0) ((1-x)/1-"sen"((pi x)/2)))$]
+      #subquestion()[$display(limits("lím")_(x -> 1) ((1-x)/(1-"sen"((pi x)/2))))$]
+      #solution()[
+        $display(limits("lím")_(x -> 1) ((1-x)/(1-"sen"((pi x)/2))) = (1-1)/(1-"sen"((pi dot 1)/2)) = (1-1)/(1-"sen"(pi/2)) = (1-1)/(1-1) = 0/0)$ #h(1mm) (Indeterminado $0/0$)
+
+        $display(limits("lím")_(x -> 1) ((1-x)/(1-"sen"((pi x)/2))) stretch(=)^"L'H" limits("lím")_(x -> 1) ((-1)/(-"cos"((pi x)/2) dot pi/2)) = limits("lím")_(x -> 1) ((1)/(pi/2 "cos"((pi x)/2))) )$
+
+        Aquí hay que tener cuidado porque $cos(x)$ cambia de signo en $pi/2$ con lo qué:
+
+        $cases(reverse: #false, delim: "{", gap: #1em,
+                  display((1)/(pi/2 "cos"((pi dot 1^-)/2)) = 1/(pi/2 "cos"((pi/2)^-)) = 1/(pi/2 dot 0^+) = 1/0^+ = +oo),
+                  display((1)/(pi/2 "cos"((pi dot 1^+)/2)) = 1/(pi/2 "cos"((pi/2)^+)) = 1/(pi/2 dot 0^-) = 1/0^- = -oo)
+                ) $ 
+      ]
     ],
     [
-      #subquestion()[$display(limits("lím")_(x -> 0) (("tg"(x)-"sen"(x))/(x-"sen"(x))))$]
+      #subquestion()[$display(limits("lím")_(x -> 0) (x dot "Ln"(x)))$]
+      #solution()[
+        $display(limits("lím")_(x -> 0) (x dot "Ln"(x)) = 0 dot "Ln"(0) = 0 dot oo)$ (Indeterminación ($0 dot oo$))
+
+        $display(limits("lím")_(x -> 0) (x dot "Ln"(x)) = limits("lím")_(x -> 0) "Ln"(x) / (1/x) stretch(=)^"L'H" limits("lím")_(x -> 0) (1/x) / (-1/x^2) = limits("lím")_(x -> 0) (-x) = 0)$
+      ]
+    ],
+    [
+      #subquestion()[$display(limits("lím")_(x -> 0) ((e^x-e^(-x)-2x)/(x-"sen"(x))))$]
+    ],
+    [
+      #subquestion()[$display(limits("lím")_(x -> 0) (("tg"(x)-"sen"(x))/(x-"sen"(x))) )$]
+      
     ],
     [
       #subquestion()[$display(limits("lím")_(x -> 0) (1/("sen"^2(x))-1/(x^2 )))$]
