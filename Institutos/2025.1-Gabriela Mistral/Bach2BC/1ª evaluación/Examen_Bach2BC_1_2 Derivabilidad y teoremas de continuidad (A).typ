@@ -64,7 +64,7 @@
     #question(points:1.5)[Estudia la continuidad y derivabilidad de las siguientes funciones en todo $RR$.
       
       $display(f(x) = cases(reverse: #false, delim: "{", gap: #0.5em,
-                & x^2  &"si" & x <= 0 ,
+                & x^2  &"si" & x < 0 ,
                 & "ln"(1+x)  &"si" & 0 <= x <= 1,
                 & sqrt(x) + "ln" 2 - 1 & "si" & x > 1,
                 ))$]
@@ -175,11 +175,11 @@
   [
     #question()[Sea la función $f(x)=ln(x-2)- x^8 + 5$:]
     #subquestion(points:1)[
-    Estudia la continuidad de la función $f(x)$ en #underline[todo] el intervalo $[-2, 0]$]
+    Estudia la continuidad de la función $f(x)$ en #underline[todo] el intervalo $[3, 5]$]
     
     #subquestion(points:0.5)[Enuncia el Teorema de Bolzano.]
 
-    #subquestion(points:1.5)[Demuestra que la ecuación $ln(x-2) = x^8 - 5$ tiene al menos una solución en el intervalo $(-2,0)$.]
+    #subquestion(points:1.5)[Demuestra que la ecuación $ln(x-2) = x^8 - 5$ tiene al menos una solución en el intervalo $(3,5)$.]
   ],
 )
 

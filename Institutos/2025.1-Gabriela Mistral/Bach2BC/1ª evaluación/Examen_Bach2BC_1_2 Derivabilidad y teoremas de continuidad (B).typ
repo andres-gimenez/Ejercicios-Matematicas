@@ -82,11 +82,11 @@
   [
     #question()[Sea la función $f(x)=ln(x+2)- x^10 +3$:]
     #subquestion(points:1)[
-    Estudia la continuidad de la función $f(x)$ en #underline[todo] el intervalo $[-3, 0]$]
+    Estudia la continuidad de la función $f(x)$ en #underline[todo] el intervalo $[-1, 5]$]
     
     #subquestion(points:0.5)[Enuncia el Teorema de Bolzano.]
 
-    #subquestion(points:1.5)[Demuestra que la ecuación $ln(x+3) = x^(10)-3$ tiene al menos una solución en el intervalo $(-3,0)$.]
+    #subquestion(points:1.5)[Demuestra que la ecuación $ln(x+3) = x^(10)-3$ tiene al menos una solución en el intervalo $(-1,5)$.]
   ]
 )
 
