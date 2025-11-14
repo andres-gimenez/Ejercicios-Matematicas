@@ -26,7 +26,7 @@
   date: datetime(year: 2025, month: 10, day: 22),
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: true,
+  show-solutions: false,
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -159,9 +159,6 @@
       $display(f'(c_2) = f'(4) = 2 dot 4 - 5 = 3 )$
 
       $ y - (-1) = 3 (x - 4)) => y + 1 = 3x - 12 => #result($y= 3x - 13 $) $
-
-
-
     ]
   ],[
     #question()[Dada la función $f(x)=x^2$, halla los puntos en los que la recta tangente es paralela a la bisectriz del primer cuadrante $f(x)=x$. Encuentra la ecuación de la recta tangente y la normal en dichos puntos.]
