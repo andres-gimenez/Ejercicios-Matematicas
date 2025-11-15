@@ -26,7 +26,7 @@
   date: datetime(year: 2025, month: 10, day: 22),
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: true,
+  show-solutions: false,
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -58,9 +58,9 @@
           - $f'(x) > 0$ en $(1,oo)$ $ => f(x)$ es creciente.
         
         - Signo de $f''(x)$
-          - $f''(x) > 0$ en $(-oo, 0)$ $=>f(x)$ es convexa.
-          - $f''(x) < 0$ en $(0, oo)$ $=>f(x)$ es cóncava.
-          - $f''(x) = 0 => x = 0$ es un punto de inflexión
+          - $f''(x) < 0$ en $(-oo, 0)$ $=>f(x)$ es convexa. $inter.big$ 
+          - $f''(x) > 0$ en $(0, oo)$ $=>f(x)$ es cóncava. $union.big$ 
+          - $f''(x) = 0 => x = 0$ es un punto de inflexión. 
 
         *Conclusión*: 
 
@@ -113,7 +113,7 @@
           - $f'(x) > 0$ en $(2,oo)$ $ => f(x)$ es creciente.
         
         - Signo de $f''(x)$
-          - $f''(x) > 0$ en $RR$ es convexa.
+          - $f''(x) > 0$ en $RR$ es cóncaba. $union.big$
 
         *Conclusión*: 
 
@@ -163,11 +163,102 @@
     [
       #subquestion()[$display(f(x) = sqrt(x)(4-x))$]
       #solution()[
+        $f(x)$ solo está definida para valores de $x>0$, solo la tenemos que estudiar en su dominio.
+
+        Derivada:
         
+        $ f'(x) = 1/(2 sqrt(x)) (4-x) + sqrt(x) (-1) = 
+          (4-x)/(2 sqrt(x)) - sqrt(x) =
+          (4-x)/(2 sqrt(x)) - (sqrt(x) dot (2sqrt(x)))/(2sqrt(x)) =  \
+          (4-x)/(2 sqrt(x)) - (2x) / (2sqrt(x)) = 
+          (4-x-2x)/(2 sqrt(x))  = (4-3x)/(2sqrt(x))
+          $
+
+        - Puntos críticos: $display(f'(x)=0 => (4-3x)/(2sqrt(x)) = 0 => 4-3x = 0 => x=4/3)$.
+          
+        En $x = 4/3$ tenemos un máximo, mínimo o punto de inflexión. 
+
+        - Segunda derivada: 
+        
+        $ f''(x)= (-3(2sqrt(x))-(4-3x)(2/(2sqrt(x))))/((2sqrt(x))^2)= (-6sqrt(x) +(3x-4) (1/sqrt(x)) )/(4x) =
+         (-6sqrt(x) /sqrt(x) + (3x-4)/sqrt(x) )/(4x) = \
+         ((-6sqrt(x) sqrt(x))/sqrt(x) + ((3x-4) )/sqrt(x) )/(4x) = 
+         ((-6x) + (3x-4) )/(4x sqrt(x)) = (-3x-4)/(4x sqrt(x))
+          $
+
+        -
+          - Puntos críticos $display(f''(x)=0 => (-3x-4)/(4x sqrt(x)) = 0 => -3x-4 = 0 => x = -4/3)$ pero como está fuera del dominio, no lo tenemos en cuenta.
+        
+        - Signo de $f'(x)$:
+        
+        Para estudiar el signo de $f'(x)$, estudiamos el signo del numerador y denominador.
+
+          #set table(
+              align: left,
+              inset: 5pt,
+              stroke: (x, y) => {
+                if x == 0 or x == 1{
+                  (bottom: 0.7pt + gray, right: 0.7pt + gray)
+                }
+                else {
+                  (bottom: 0.7pt + gray)
+                }
+            }
+          )
+
+          #align(left)[
+            #table(
+              columns: (auto, auto, auto),
+              table.header([], [$x< 4/3$], [$x > 4/3$]),
+              [$4 - 3x$], align(center+horizon)[$+$], align(center+horizon)[$-$],
+              [$4x sqrt(x)$], align(center+horizon)[$+$], align(center+horizon)[$+$],
+              [$display((4-3x)/(2sqrt(x)))$], align(center+horizon )[$+$], align(center+horizon)[$-$],
+            )
+      ]
+
+        -
+          - $f'(x) > 0$ en $(0,4/3)$ $ => f(x)$ es creciente en $(0, 4/3)$.
+          - $f'(x) < 0$ en $(4/3, +oo)$ $ => f(x)$ es decreciente en $(4/3, +oo)$.
+        
+        - Signo de $f''(x)$
+          - $f''(x) < 0 forall RR =>f(x)$ es convexa. $inter.big$
+
+        *Conclusión*: 
+
+        - Es creciente $forall x in (0,4/3)$ porque $f'(x) > 0$
+        - Es decreciente $forall x in (4/3,+oo)$ porque $f'(x) < 0$
+        - Máximo local en $x=4/3 => P(4/3, (16sqrt(3))/9)$ porque $f'(4/3) = 0$
+        - Es convexa en $forall x in (0, +oo)$ porque $f''(x) < 0$
+
+        Para  dibujar la función puede ser util calcular los puntos de corte con los ejes.
+
+        $f(x) = 0 => sqrt(x)(4-x)) = 0 => x = 4$ 
+
+        #align(center, 
+        cetz.canvas({
+
+          import cetz.draw: *
+          import cetz-plot: *
+          plot.plot(
+            size: (10,5),
+            x-tick-step:1,
+            y-tick-step:1,
+            axis-style: "school-book",
+            {
+              plot.add(
+                domain: (0, 6),
+                  x=> calc.sqrt(x) * (4-x),
+                  // style: (stroke:blue, mark:(start:(symbol:"o", fill:blue))),
+              )
+              plot.add(((4/3,3.0792),), mark-size: 0.2, mark: "o")
+              plot.add(((4,0),), mark-size: 0.2, mark: "o")
+            }
+          )      
+        }))
       ]
     ],
     [
-      #subquestion()[$display(f(x) = e^x e^-x)$]
+      #subquestion()[$display(f(x) = x^2 e^(-x))$]
       #solution()[
         
       ]

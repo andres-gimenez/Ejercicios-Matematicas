@@ -51,8 +51,6 @@
 
 #set page(columns: 2)
 
-
-
 #set table.hline(stroke:0.7pt + gray)
 
 #set table(
