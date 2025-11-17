@@ -27,7 +27,7 @@
   show-student-data: "odd-pages",
   // show-student-data: true,
   show-grade-table: true,
-  show-solutions: true,
+  show-solutions: false,
   // draft: true,
   question-points-position: right,
   // question-points-position: none,
@@ -50,7 +50,7 @@
 #questions-pages(
   [
     #question(points:2.5)[Calcula el límite de la función:
-      $ limits("lím")_(x->0) (x-"sen"(x))/(ln(1+x)-x+x^2/2) $
+      $ limits("lím")_(x->0) ((x-"sen"(x))/(ln(1+x)-x+x^2/2)) $
     ]
     #solution()[
       $display(limits("lím")_(x->0) (x-"sen"(x))/(ln(1+x)-x+x^2/2) = (0-"sen"(0))/(ln(1+0) - 0 + (0^2)/2) = 0/(0-0+0) = 0/0 )$ (Indeterminación $0/0$) 
@@ -67,6 +67,8 @@
     #question(points:2.5)[Calcula la derivada de la función:
 
       #clarification()[Intenta simplificar la función antes de derivar]
+
+      #clarification()[En $e^x^2$ lo que está elevado al cuadrado es la x, no $e^x$. $e^x^2 != (e^x)^2$ ]
 
       $ f(x) = ln(((2x^2+"cos"(x)) e^x^2)/sqrt(x-1)) $
 
@@ -86,7 +88,8 @@
   ],
   [
     #question(points:2.5)[
-      Calcula la recta tangente a la curva ... que pase por el punto.
+      Calcula las rectas tangente y normal a la curva $display(y = (x^3-2x+1)/(x+1))$ en $x=1$.
+      // y = 5x-2
     ]
   ]
 )
