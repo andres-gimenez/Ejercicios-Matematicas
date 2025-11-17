@@ -26,7 +26,7 @@
   date: datetime(year: 2025, month: 10, day: 22),
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: false,
+  show-solutions: true,
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -214,7 +214,7 @@
               [$4x sqrt(x)$], align(center+horizon)[$+$], align(center+horizon)[$+$],
               [$display((4-3x)/(2sqrt(x)))$], align(center+horizon )[$+$], align(center+horizon)[$-$],
             )
-      ]
+          ]
 
         -
           - $f'(x) > 0$ en $(0,4/3)$ $ => f(x)$ es creciente en $(0, 4/3)$.
@@ -308,7 +308,119 @@
     [
       #subquestion()[$display(f(x) = e^(-x^2)(x^2-1))$]
       #solution()[
+        $f(x)$ esta definida en $RR$
+
+        Derivada:
         
+        $ f'(x) =  e^(-x^2) (-2 x) (x^2-1) + e^(-x^2) (2x) = e^(-x^2)(-2x^3+2x + 2x) = e^(-x^2) (-2x^3+4x) $
+
+        - Puntos críticos: $display(f'(x)=0 => e^(-x^2) (-2x^3+4x) = 0 => -2 e^(-x^2) x (x^2+2) = 0)$.
+          -  $e^(-x^2) != 0 forall x$
+          -  $x = 0$
+          -  $x = plus.minus sqrt(2)$
+          
+         En $x = 0 "y" x= plus.minus sqrt(2)$ tenemos un máximo, mínimo o punto de inflexión. 
+
+      - Segunda derivada: 
+        
+      $ f''(x)= (-2) e^(-x^2)  (-2x^3+4x) + e^(-x^2) (-6x^2+4) = e^(-x^2) (2x^4-7x^4-7x^2+2) $
+
+      - Puntos críticos $display(f''(x)=0 => e^(-x^2) (2x^4-7x^4-7x^2+2) = 0)$.
+        - $e^(-x^2) != 0 forall x$
+        - $(2x^4-7x^4-7x^2+2) = 0 => cases(reverse: #false, delim: "{", gap: #1em,
+                & x = a_1 = -1/2 sqrt(7-sqrt(33)) approx -0.560232,
+                & x = a_2 = sqrt(7-sqrt(33))/2 approx 0.560232,
+                & x = a_3 = 1/2 sqrt(7+sqrt(33)) approx -1.78498,
+                & x = a_4 = sqrt(7+sqrt(33))/2 approx 1.78498,
+              ) $  
+        
+      - Signo de $f'(x)$:
+        
+      Estudiamos el signo de $f'(x)$
+         #set table(
+              align: left,
+              inset: 5pt,
+              stroke: (x, y) => {
+                if x == 0 or x == 1 or x == 2 or x == 3  or x == 4 {
+                  (bottom: 0.7pt + gray, right: 0.7pt + gray)
+                }
+                else {
+                  (bottom: 0.7pt + gray)
+                }
+            }
+          )
+
+          #align(left)[
+            #table(
+              columns: (auto, auto, auto, auto, auto),
+              table.header([], [$x< -sqrt(2)$], [$ -sqrt(2) < x < 0$], [$ 0 < x < sqrt(2)$], [$ x > sqrt(2) $] ),
+              [$f'(x)$], align(center+horizon)[$+$], align(center+horizon)[$-$] ,align(center+horizon)[$+$], align(center+horizon)[$-$], 
+          )
+          ]
+
+      - Signo de $f''(x)$:
+        
+      Estudiamos el signo de $f''(x)$
+
+        #align(left)[
+            #table(
+              columns: (auto, auto, auto, auto, auto, auto),
+              table.header([], [$x< a_1$], [$ a_1 < x < a_2$], [$ a_2 < x < a_3$], [$ a_3 < x < a_4$],  [$ x > a_4$] ),
+              [$f''(x)$], align(center+horizon)[$+$], align(center+horizon)[$-$] ,align(center+horizon)[$+$], align(center+horizon)[$-$],  align(center+horizon)[$+$]
+          )
+        ]
+         -
+           - $f'(x) > 0$ en $(-sqrt(2), 0) union (+sqrt(2), +oo) => f(x)$ es creciente.
+           - $f'(x) < 0$ en $(-oo, -sqrt(2)) union (0, +sqrt(2)) => f(x)$ es decreciente.
+        
+           - $f''(x) < 0$ en $(a_1, a_2) union (a_3, a_4)$ es convexa. $inter.big$
+           - $f''(x) > 0$ en $(-oo, a_1) union (a_2, a_3) union (a_4, oo)$ es cóncava. $union.big$
+
+        *Conclusión*: 
+
+        - Es creciente $forall x in (-sqrt(2), 0) union (+sqrt(2), +oo) => f(x)$ porque $f'(x) > 0$
+        - Es decreciente $forall x in (-oo, -sqrt(2)) union (0, +sqrt(2)) => f(x)$ porque $f'(x) < 0$
+        - Máximo local en $x=-sqrt(2) "y" x=sqrt(2) => $ porque $f'(-sqrt(2)) = 0$ y $f'(sqrt(2)) = 0$
+        - Es convexa en $forall x in (a_1, a_2) union (a_3, a_4)$ porque $f''(x) < 0$
+        - Es cóncava en $forall x in (-oo, a_1) union (a_2, a_3) union (a_4, oo)$ porque $f''(x) > 0$
+
+      Para  dibujar la función puede ser util calcular los puntos de corte con los ejes.
+
+      $f(x) = 0 => e^(-x^2)(x^2-1)) = 0 => (plus.minus 1, 0)$ 
+
+      $f(0) = e^(-0^2)(0^2-1)) = -1 => (0, -1) $ 
+
+      #align(center, 
+        cetz.canvas({
+
+          import cetz.draw: *
+          import cetz-plot: *
+          plot.plot(
+            size: (10,5),
+            x-tick-step:1,
+            y-tick-step:1,
+            axis-style: "school-book",
+            {
+              plot.add(
+                domain: (-3, 3),
+                  x=> calc.exp(-(x * x)) * (x * x - 1),
+                  // style: (stroke:blue, mark:(start:(symbol:"o", fill:blue))),
+              )
+              plot.add(((0,-1),), mark-size: 0.2, mark: "o")
+              plot.add(((-1 * calc.sqrt(2),0.13),), mark-size: 0.2, mark: "o")
+              plot.add(((calc.sqrt(2),0.13),), mark-size: 0.2, mark: "o")
+                              
+              plot.add(((-1.78498,0.09),), mark-size: 0.2, mark: "o")
+              plot.add(((-0.560232,-0.5),), mark-size: 0.2, mark: "o")
+              plot.add(((0.560232,-0.5),), mark-size: 0.2, mark: "o")
+              plot.add(((1.78498,0.09),), mark-size: 0.2, mark: "o")
+
+              plot.add(((-1,0),), mark-size: 0.2, mark: "o")
+              plot.add(((1,0),), mark-size: 0.2, mark: "o")
+            }
+          )      
+        }))
+
       ]
     ],
     [
