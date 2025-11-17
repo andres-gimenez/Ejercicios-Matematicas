@@ -25,7 +25,7 @@
   date: datetime(year: 2025, month: 10, day: 22),
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: false,
+  show-solutions: true,
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -104,13 +104,13 @@
       Como $f$ es continua en $[0,1]$ y $f(0) dot f(1) < 0$, existe al menos un $c in (0,1)$ tal que $f(c)=0$.
 
     *Conclusión*
-    La ecuación $e^x-2=0$ tiene al menos una raíz real en el intervalo $[0,1]$.
+    La función $f(x) = e^x-2$ tiene al menos una raíz real en el intervalo $(0,1)$. Luego $exists c in (0,1)$ tal que $e^c = 2 => exists c in (0,1)$ tal que $e^c = 2 $
     ],
   ],
   [
     #question()[Demuestra que la ecuación
         $x^3-x = "sen"(x)$
-      tiene *exactamente una* raíz real en el intervalo $[1,2]$.
+      tiene *exactamente una* solución real en el intervalo $[1,2]$.
     ]
     #solution()[
       *Definición de la función:*
@@ -147,7 +147,7 @@
 
       *Conclusión*
 
-      La ecuación $x^3-x- "sen"(x)=0$ tiene exactamente una raíz real en el intervalo $(1,2)$.
+      La función $f(x) = x^3-x- "sen"(x)$ tiene exactamente una raíz real en el intervalo $(1,2)$ luego $x^3-x="sen"(x)$ tiene una solución en $(1,2)$.
 
      ]
   ],
@@ -212,15 +212,15 @@
         => Máximo absoluto: $f = sqrt(2) "en" x=pi/4$ y mínimo absoluto: $f=-sqrt(2) "en" x=(5 pi)/4$.
     ]
   ],
-  [
-    #question()[Demuestra que toda función continua en un intervalo cerrado y acotado alcanza un máximo y un mínimo, pero que si el intervalo no es cerrado o no es acotado, esto puede no cumplirse.],
-    #solution()[
-      $f(x) = x "en" (0, 1)$ continua, pero, no alcanza máximo ni mínimo, ya que:
+  // [
+  //   #question()[Demuestra que toda función continua en un intervalo cerrado y acotado alcanza un máximo y un mínimo, pero que si el intervalo no es cerrado o no es acotado, esto puede no cumplirse.],
+  //   #solution()[
+  //     $f(x) = x "en" (0, 1)$ continua, pero, no alcanza máximo ni mínimo, ya que:
 
-      $inf f = 0$, $sup f = 1$
+  //     $inf f = 0$, $sup f = 1$
 
-      pero ninguno de esos valores pertenece al intervalo.
-    ]
+  //     pero ninguno de esos valores pertenece al intervalo.
+  //   ]
 
-  ]
+  // ]
 )
