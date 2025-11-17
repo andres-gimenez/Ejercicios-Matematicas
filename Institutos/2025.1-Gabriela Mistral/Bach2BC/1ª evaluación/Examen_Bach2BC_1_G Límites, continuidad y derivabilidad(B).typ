@@ -67,8 +67,7 @@
 
       #clarification()[Intenta simplificar la función antes de derivar]
 
-      #clarification()[En $e^x^2$ lo que está elevado al cuadrado es la x, no $e^x$. $e^x^2 != (e^x)^2$ ]
-
+      #clarification()[En $e^x^2$ lo que está elevado al cuadrado es la x, no $e^x$;#h(5mm) ($e^x^2 != (e^x)^2$) ]
 
       $ f(x) = ln(((2x^2+"sin"(x)) e^(x^2))/sqrt(x+1)) $
 
