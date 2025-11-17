@@ -18,7 +18,7 @@
     academic-subject: "Matemáticas",
     number: "1ª evaluación - Global",
     content: "Límites, continuidad y derivabilidad",
-    model: [Modelo $A$],
+    model: [Modelo $B$],
   ),
   
   language: "es",
@@ -50,17 +50,16 @@
 #questions-pages(
   [
     #question(points:2)[Calcula el límite de la función:
-      $ limits("lím")_(x->0) (x-"sen"(x))/(ln(1+x)-x+x^2/2) $
+      $ limits("lím")_(x->0) (x-"sen"(x))/(e^(-x)+x -1-x^2/2) $
     ]
     #solution()[
-      $display(limits("lím")_(x->0) (x-"sen"(x))/(ln(1+x)-x+x^2/2) = (0-"sen"(0))/(ln(1+0) - 0 + (0^2)/2) = 0/(0-0+0) = 0/0 )$ (Indeterminación $0/0$) 
+      $display(limits("lím")_(x->0) (x-"sen"(x))/(e^(-x)+x - 1-x^2/2) = (0-"sen"(0))/(e^(-0) + 0 - 1 - (0^2)/2) = 0/(1+0 -1-0) = 0/0 )$ (Indeterminación $0/0$) 
 
-      $display(limits("lím")_(x->0) (x-"sen"(x))/(ln(1+x)-x+x^2/2) stretch(=)^"L'H" limits("lím")_(x->0) (1-cos(x)) /(1/(1+x)-1+(2x)/2) = limits("lím")_(x->0) (1-cos(x)) /(1/(1+x)-1+x) = (1-cos(0))/(1/(1+0)-1+0) = (1-1)/(1-1+0) = 0/0)$ (Indeterminación $0/0$) 
+      $display(limits("lím")_(x->0) (x-"sen"(x))/(e^(-x)+x - 1 -x^2/2) stretch(=)^"L'H" limits("lím")_(x->0) (1-cos(x)) /(-e^(-x)+1-0-(2x)/2) = limits("lím")_(x->0) (1-cos(x)) /(-e^(-x)+1-x) = (1-cos(0))/(-e^(-0)+1-0) = (1-1)/(-1+1-0) = 0/0)$ (Indeterminación $0/0$) 
 
-      $display(limits("lím")_(x->0) (1-cos(x)) /(1/(1+x)-1+x) stretch(=)^"L'H" limits("lím")_(x->0) (-(-"sen"(x))) /(((1)'(1+x) - 1(1+x)')/(1+x)^2 - 0 +1) = limits("lím")_(x->0) ("sen"(x)) /(((0(1+x) - 1 dot 1))/(1+x)^2 - 0 +1) = limits("lím")_(x->0) ("sen"(x)) /((-1)/(1+x)^2 +1) = ("sen"(0))/(((-1)/(1+0)^2 + 1 ))) = 0/(-1+1) = 0/0 $ (Indeterminación $0/0$) 
+      $display(limits("lím")_(x->0) (1-cos(x)) /(-e^(-x)+1-x) stretch(=)^"L'H" limits("lím")_(x->0) (-(-"sen"(x))) / (-(-e^(-x))+0-1) = limits("lím")_(x->0) ("sen"(x)) /(e^(-x)-1) = ("sen"(0))/(e^0-1) = 0/(1-1) = 0/0) $ (Indeterminación $0/0$) 
 
-      $display(limits("lím")_(x->0) ("sen"(x)) /((-1)/(1+x)^2 +1) stretch(=)^"L'H" limits("lím")_(x->0) (cos(x)/ (2/(1+x)^3)) = cos(0)/(2/(1+0)^3)) = 1/(2/1) = #result($1/2$)$ 
-
+      $display(limits("lím")_(x->0) ("sen"(x)) /(e^(-x) +1) stretch(=)^"L'H" limits("lím")_(x->0) (cos(x)/ (-e^(-x)+0)) = limits("lím")_(x->0) (cos(x)/ (-e^(-x))) = cos(0)/(-e^0)) = 1/(-1) = #result($-1$)$ 
     ]
   ],
   [
