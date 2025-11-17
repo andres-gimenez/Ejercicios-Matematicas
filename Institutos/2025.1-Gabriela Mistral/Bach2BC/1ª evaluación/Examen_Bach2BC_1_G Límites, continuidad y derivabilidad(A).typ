@@ -1,0 +1,75 @@
+#import "@local/g-exam:0.4.4": *
+#import "@preview/cetz:0.4.2"
+#import "@preview/cetz-plot:0.1.3"
+
+#show: exam.with(
+  author: (
+    name: "Andrés Jorge Giménez Muñoz", 
+    email: "agimenezmunoz@educa.madrid.com", 
+    watermark: "Profesor: Andrés",
+  ),
+  school: (
+    name: "IES Gabriela Mistral",
+    logo:image("../../logo-ies_gabriela_mistral.png")
+  ),
+  exam-info: (
+    academic-period: "Curso 2025/2026",
+    academic-level: "2º Bachillerato",
+    academic-subject: "Matemáticas",
+    number: "1ª evaluación - Global",
+    content: "Límites, continuidad y derivabilidad",
+    model: [Modelo $A$],
+  ),
+  
+  language: "es",
+  decimal-separator: ",",
+  date: datetime(year: 2025, month: 11, day: 9),
+  show-student-data: "odd-pages",
+  // show-student-data: true,
+  show-grade-table: true,
+  show-solutions: false,
+  // draft: true,
+  question-points-position: right,
+  // question-points-position: none,
+  // question-text-parameters: (size: 14pt, spacing:150%),
+
+  // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
+  clarifications: (
+    [Se puede utilizar calculadoras científicas básicas, que no sean programables resuelvan operaciones complejas como limites, derivadas, primitivas, ...],
+    [El uso de teléfono móvil durante el examen, se valorará con un cero. El móvil ha de estar apagado durante el examen.],
+    [Copiar, hablar, levantarse de la silla o molestar al resto de la clase pueden ser motivos de la retirada del examen que se valorará con un cero.],
+    [La sospecha de que en un examen se ha copiado o se ha utilizado material no permitido se valorará con un cero.],
+    [Deben aparecer todas las operaciones, no vale solo con indicar el resultado.],
+    [Se ha de llegar a la solución más reducida posible.],
+    [No te conformes con llegar a un resultado, el examen está para que demuestres tus conocimientos, es preferible una explicación de más que de menos.]
+    [Se penalizara el no dar un valor exacto, por ejemplo $sqrt(2)$ es un valor exacto $1,41421$ no lo es.]
+  )
+)
+// #set math.cases(reverse: true)
+
+#questions-pages(
+  [
+    #question(points:2)[Calcula el límite de la función:
+      Límite por lopital
+    ]
+  ],
+  [
+    #question(points:2)[Calcula la derivada de la función:
+      Límite por lopital
+    ]
+  ],
+  [
+    #question(points:2)[
+      Calcula para que valores de $a$ y $b$ la siguiente función es continua y derivable en $RR$.
+    ]
+  ],
+  [
+    #question(points:2)[
+      Calcula la recta tangente a la curva ... que pase por el punto.
+    ]
+  ]
+)
+  
+
+
+
