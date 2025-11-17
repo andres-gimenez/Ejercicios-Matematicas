@@ -64,12 +64,24 @@
   ],
   [
     #question(points:2)[Calcula la derivada de la función:
-      Límite por lopital
+
+      #clarification()[Intenta simplificar la función antes de derivar]
+
+      $ f(x) = ln(((2x^2+"sin"(x)) e^(x^2))/sqrt(x+1)) $
+
     ]
   ],
   [
     #question(points:2)[
-      Calcula para que valores de $a$ y $b$ la siguiente función es continua y derivable en $RR$.
+      Calcula para que valores de $a$ y $b$ la siguiente función es continua y derivable en $RR$, dando la solución en función de $pi$ (sin decimales).
+
+       $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                & a x^2 + b x + pi^2 &"si" & x <= pi,
+                & cos(x) + 1 &"si" & x > pi,
+              ) $ 
+
+        // a = 1, b= -2 pi
+
     ]
   ],
   [

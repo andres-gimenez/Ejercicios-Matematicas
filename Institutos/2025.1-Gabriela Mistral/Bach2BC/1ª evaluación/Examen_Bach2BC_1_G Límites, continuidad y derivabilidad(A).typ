@@ -49,7 +49,7 @@
 
 #questions-pages(
   [
-    #question(points:2)[Calcula el límite de la función:
+    #question(points:2.5)[Calcula el límite de la función:
       $ limits("lím")_(x->0) (x-"sen"(x))/(ln(1+x)-x+x^2/2) $
     ]
     #solution()[
@@ -64,17 +64,28 @@
     ]
   ],
   [
-    #question(points:2)[Calcula la derivada de la función:
-      Límite por lopital
+    #question(points:2.5)[Calcula la derivada de la función:
+
+      #clarification()[Intenta simplificar la función antes de derivar]
+
+      $ f(x) = ln(((2x^2+"cos"(x)) e^x^2)/sqrt(x-1)) $
+
     ]
   ],
   [
-    #question(points:2)[
-      Calcula para que valores de $a$ y $b$ la siguiente función es continua y derivable en $RR$.
+    #question(points:2.5)[
+      Calcula para que valores de $a$ y $b$ la siguiente función es continua y derivable en $RR$, dando la solución en función de $pi$ (sin decimales).
+
+       $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                & a x^2 + b x + (pi/2)^2 &"si" & x <= pi /2,
+                & "sen"(x) - 1 &"si" & x > pi/2,
+              ) $ 
+
+        // a = 1, b= -pi
     ]
   ],
   [
-    #question(points:2)[
+    #question(points:2.5)[
       Calcula la recta tangente a la curva ... que pase por el punto.
     ]
   ]
