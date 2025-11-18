@@ -14,8 +14,8 @@
     academic-period: "Curso 2025/2026",
     academic-level: "Refuerzo 2º ESO",
     academic-subject: "Matemáticas",
-    number: "1ª evaluación - 1º parcial",
-    content: "Operaciones combinadas",
+    number: "1ª evaluación - 2º parcial",
+    content: "Operaciones combinadas y regla de tres",
     model: [Modelo ◨]
   ),
   
@@ -79,7 +79,6 @@
 
 #subquestion(points:1)[$display((3 - 2)(5 + 1) - 4(5 - 3))=$]
 #v(1fr) 
-
 
 #subquestion(points:1)[$display(2/6 - 5/2  (2/3 + 5/2))=$]
 #v(1fr) 
