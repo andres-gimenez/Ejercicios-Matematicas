@@ -49,7 +49,7 @@
 
 #questions-pages(
   [
-    #question(points:2)[Calcula el límite de la función:
+    #question(points:2.5)[Calcula el límite de la función:
       $ limits("lím")_(x->0) ((x-"sen"(x))/(e^(-x)+x -1-x^2/2)) $
     ]
     #solution()[
@@ -63,7 +63,7 @@
     ]
   ],
   [
-    #question(points:2)[Calcula la derivada de la función:
+    #question(points:2.5)[Calcula la derivada de la función:
 
       #clarification()[Intenta simplificar la función antes de derivar]
 
@@ -74,7 +74,7 @@
     ]
   ],
   [
-    #question(points:2)[
+    #question(points:2.5)[
       Calcula para que valores de $a$ y $b$ la siguiente función es continua y derivable en $RR$, dando la solución en función de $pi$ (sin decimales).
 
        $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
@@ -87,10 +87,10 @@
     ]
   ],
   [
-    #question(points:2)[
+    #question(points:2.5)[
       Calcula las recta tangente y normal a la curva $display(y = (x^3+x-2)/(x-1))$ en $x=2$.
 
-      // y = 1/2 x - 1/2
+      // y = 5x-2
     ]
   ]
 )

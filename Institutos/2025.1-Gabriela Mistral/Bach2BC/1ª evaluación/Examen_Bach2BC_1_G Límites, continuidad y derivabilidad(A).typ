@@ -89,7 +89,8 @@
   [
     #question(points:2.5)[
       Calcula las rectas tangente y normal a la curva $display(y = (x^3-2x+1)/(x+1))$ en $x=1$.
-      // y = 5x-2
+      
+      // y = 1/2 x - 1/2
     ]
   ]
 )
