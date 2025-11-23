@@ -199,14 +199,18 @@
       
       $display(y - y_0 = m (x - x_0) => y - 0 = (1/2)(x - 1) => #result($y = 1/2x - 1/2$))$
 
+      La ecuación de la recta normal es:
+
+      $display(y - y_0 = (-1)/m (x - x_0) => y - 0 = (-1)/(1/2)(x - 1) => #result($y = -2x + 2$))$
+
  #align(center, 
         cetz.canvas({
           import cetz.draw: *
           import cetz-plot: *
           plot.plot(
             size: (8,8),
-            // x-min: 0, x-max: 15,
-            // y-min: -5, y-max: 15,
+            x-min: -1, x-max: 4,
+            y-min: -2, y-max: 3,
             x-tick-step:1,
             y-tick-step:1,
             aspect-ratio:1,
@@ -221,6 +225,10 @@
               plot.add(
               domain: (-0.5, 3),
                   x=> x/2 - 1/2, 
+              )
+              plot.add(
+              domain: (-0.5, 3),
+                  x=>-2 * x + 2, 
               )
             }
           )      
