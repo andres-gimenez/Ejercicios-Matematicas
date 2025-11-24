@@ -25,7 +25,7 @@
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: true,
+  show-solutions: false,
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -61,7 +61,7 @@
         $ y = 60 - 2 dot 15 = 30 $
         
         Por tanto, las dimensiones del recinto son $15 m$ de lado perpendicular a la pared y $30 m$ de lado paralelo a la pared.
-      ],
+      ]
   ],[
      #question()[Una lata cilíndrica debe contener 500 cm³ de líquido.
         ¿Cuáles deben ser el radio y la altura del cilindro para minimizar el área de material usado en su fabricación?]
@@ -225,7 +225,7 @@
     ],
     [#question()[Una empresa tiene que transportar un producto desde un punto $A$ hasta un punto $B$.
       El punto $A$ está a $3 "km"$ de la orilla de un río y el punto $B$ está a $4 "km"$ del mismo lado del río y a $6 "km"$ de $A$.
-      El coste de transportar el producto es de $1 € / "km"$ por tierra y de $0,5 € / "km"$ por el río.
+      El coste de transportar el producto es de $1 frac("€", "km", style: "horizontal")$ por tierra y de $0,5 frac("€", "km", style: "horizontal")$ por el río.
       ¿Dónde debe llegar el transporte al río para que el coste total sea mínimo?]
       #solution()[
         Sea $x$ la distancia desde el punto $B$ hasta el punto donde el transporte llega al río.
@@ -285,7 +285,9 @@
     ],
     [
       #question()[En una carrera a trabes del desierto un automóvil debe recorrer $500 "km"$ de distancia.
-       Puede aprovechar una carretera recta que atraviesa el desierto durante los primeros $300 "km"$ a una velocidad de $100 "km"/h$, pero después debe abandonar la carretera y continuar en línea recta hasta el destino a una velocidad de $60 "km"/h$. Si la distancia más corta del oasis a la carretera es de $300 "km"$, determina la ruta que deberá seguir para ir de A a O en el menor tiempo posible.]
+       Puede aprovechar una carretera recta que atraviesa el desierto durante los primeros $300 "km"$ a una velocidad de $100 frac("km", "h", style: "horizontal")$,
+       pero después debe abandonar la carretera y continuar en línea recta hasta el destino a una velocidad de $60 frac("km", "h", style: "horizontal")$. 
+       Si la distancia más corta del oasis a la carretera es de $300 "km"$, determina la ruta que deberá seguir para ir de A a O en el menor tiempo posible.]
       #solution()[
         Sea $x$ la distancia desde el punto donde el automóvil abandona la carretera hasta el punto directamente enfrente del oasis.
         La distancia recorrida por carretera es $ 300 + x $ y la distancia recorrida por el desierto es $ sqrt(300^2 + (500 - x)^2) = sqrt(90000 + (500 - x)^2) $.
@@ -306,7 +308,7 @@
       ]
     ],
     [
-      #question()[Una fabrica elabora un producto de dos calidades. $x$ toneladas de baja calidad y $y$ toneladas de alta calidad. Relacionándose ambas producciones mediante la función $display(y=(18-5x)/(10-x))$.
+      #question()[Una fábrica elabora un producto de dos calidades. $x$ toneladas de baja calidad y $y$ toneladas de alta calidad. Relacionándose ambas producciones mediante la función $display(y=(18-5x)/(10-x))$.
 
       Hallar las cantidades que ha de producir para obtener ingresos máximos si el precio por tonelada de baja calidad es $display(1/2)$ que el de alta calidad.]
       #solution()[

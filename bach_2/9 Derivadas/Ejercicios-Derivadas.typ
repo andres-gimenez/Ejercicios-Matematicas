@@ -46,6 +46,24 @@
       ]
     ],
     [
+      #subquestion()[$display(f(x) =  x^3 + 5 x^2 - 3x + pi/2))$]
+      #solution()[
+        $display(f'(x) = 3 x^2 + 10 x - 3)$
+      ]
+    ],
+    [
+      #subquestion()[$display(f(x) =  pi x^3 + pi/2 x^2 - ln(2)x + sqrt(5))$]
+      #solution()[
+        $display(f'(x) = 3 pi x^2 + pi x - ln(2))$
+      ]
+    ],
+    [
+      #subquestion()[$display(f(x) =  (pi^3)/2 - 4 pi^2 + ln(5))$]
+      #solution()[
+        $display(f'(x) = 0)$
+      ]
+    ],
+    [
       #subquestion()[$display(f(x) = (4x-3)^2)$]
       #solution()[
         $display(f'(x) = 2(4x-3) dot 4 = 32x-24)$
@@ -169,9 +187,45 @@
     ],
     [ 
       #subquestion()[$display(f(x) = |x-3| + |x|)$]
+      #solution()[
+       
+
+        $display(f(x) = |x-3| + |x| = cases(reverse: #false, delim: "{", gap: #1em,
+                  & -&x + 3  & "si" & x < 3,
+                  &  &x - 3 & "si" & x >= 3,
+                ) + cases(reverse: #false, delim: "{", gap: #1em,
+                  & -&x & "si" & x < 0,
+                  & &x & "si" & x > 0,
+                ) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & -&2x + &3  & "si" & x < 0,
+                  & & & 3  & "si" & 0 <= x < 3,
+                  & &2x - &3 & "si" & x >= 3,
+                )) $ 
+
+        $display(f'(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                  & -&2  & "si" & x < 0,
+                  & &0  & "si" & 0 < x < 3,
+                  & &2 & "si" & x > 3,
+                )) $
+        ]
     ],
     [
       #subquestion()[$display(f(x) = "ln"((x^2+1)/(x^2)))$]
+      #solution()[
+        1º Forma
+        $display(f(x) = "ln"((x^2+1)/(x^2) ) = "ln"(x^2+1) - "ln"(x^2) = "ln"(x^2+1) - 2"ln"(x))$
+
+        $display(f'(x) = 1/(x^2+1) (2x) - 2/x = (2x)/(x^2+1) -2/x = (2x^2 - 2(x^2+1))/(x(x^2+1)) = #result($display((-2)/(x(x^2+1)))$))$
+
+        2º Forma
+
+        $display(f'(x) = 1/((x^2+1)/(x^2)) dot ((x^2)(2x) - (x^2+1)(2x))/(x^4) = 
+        (x^2/(x^2+1)) dot (2x^3 - 2x^3 - 2x)/(x^4) =  \
+        (x^2/(x^2+1)) dot (-2x)/(x^4) = 
+        (-2x^3)/(x^4(x^2+1)) = 
+        #result($display((-2)/(x(x^2+1)))$)
+        )$
+      ]
     ]
     )
   ],
@@ -257,6 +311,14 @@
     ],
     [
       #subquestion()[$display(f(x) = "arcsen"(2x sqrt(1-x^2)))$]
+      #solution()[
+        $display(f'(x) = 1/sqrt(1 - (2x sqrt(1-x^2))^2) dot (2 sqrt(1-x^2) + 2x (-1/(2 sqrt(1-x^2)))(-2x)) =  \
+        1/sqrt(1 - 4x^2(1-x^2)) dot (2 sqrt(1-x^2) + (2x^2)/(sqrt(1-x^2))) = 
+        1/sqrt(1 - 4x^2 + 4x^4) dot ( (2(1-x^2) + 2x^2)/(sqrt(1-x^2)) ) = \
+        1/sqrt((1-2x^2)^2) dot ( 2/(sqrt(1-x^2)) ) = 
+        #result($display(2/((1-2x^2)sqrt(1-x^2)))$)
+        )$
+      ]
     ],
     [
       #subquestion()[$display(f(x) = "ln" root(3, ("sen"(x) dot cos(x))/(1-x)^2))$]
@@ -337,6 +399,9 @@
       ]   
     ]
     )
+  ],
+  [
+
   ],
   [
     #question()[Calcula la derivada de las siguientes funciones, aplicando derivación logarítmica:]
