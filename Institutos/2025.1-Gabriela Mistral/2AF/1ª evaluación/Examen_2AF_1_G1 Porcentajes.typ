@@ -37,16 +37,16 @@
 #subquestion()[$21%$ d $32","43 =$ ]
 #v(1fr)
 
-#subquestion()[$56%$ de $350 =$ ]
+#subquestion()[$56%$ de $350","7 =$ ]
 #v(1fr)
 
 #question(points: 0.5)[Aumenta o disminuye las siguientes cantidades en el porcentaje indicado:]
 
-#subquestion()[Aumenta un $5%$ a $439 =$ ]
+#subquestion()[Aumenta un $5%$ a $439","80 =$ ]
 #v(1fr)
 
 #subquestion()[Disminuye un $12%$ a $2500 =$ ]
 #v(1fr)
 
-#question(points: 1)[Marcos ve unas zapatillas que cuestan $80€$. Como son de su equipo de fútbol favorito, le hacen un descuento del $25%$. ¿Cuánto pagará Marcos por las zapatillas después de aplicarle un IVA del $21%$?]
+#question(points: 1)[Marcos ve unas zapatillas que cuestan $82","32€$. Como son de su equipo de fútbol favorito, le hacen un descuento del $25%$. ¿Cuánto pagará Marcos por las zapatillas después de aplicarle un IVA del $21%$?]
 #v(5fr)
