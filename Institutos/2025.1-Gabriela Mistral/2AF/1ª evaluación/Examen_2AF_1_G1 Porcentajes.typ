@@ -34,7 +34,7 @@
 
 #question(points: 0.5)[Calcula los siguientes porcentajes:]
 
-#subquestion()[$21%$ d $32","43 =$ ]
+#subquestion()[$21%$ de $32","43 =$ ]
 #v(1fr)
 
 #subquestion()[$56%$ de $350","7 =$ ]
