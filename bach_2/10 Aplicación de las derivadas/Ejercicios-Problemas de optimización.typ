@@ -87,14 +87,14 @@
         
         $ h = 500 / (pi ((250 / pi)^(1/3))^2) = 500 / (pi (250 / pi)^(2/3)) = 500 / (250^(2/3) pi^(1/3)) $
         
-        Por tanto, las dimensiones del cilindro son $ r = (250 / pi)^(1/3) "cm" approx "4,3 cm") "y h" = 500 / (250^(2/3) pi^(1/3)) "cm" approx "8,6 cm" $
+        Por tanto, las dimensiones del cilindro son $ r = (250 / pi)^(1/3) "cm" approx "4,3 cm" "y h" = 500 / (250^(2/3) pi^(1/3)) "cm" approx "8,6 cm" $
       ]
     ],
     [
       #question()[Un punto $P(4,0)$ está fuera de la recta 
-      $r : y = 2 x + 3$. Halla el punto de la recta cuya distancia a P P sea mínima.]
+      $r : y = 2 x + 3$. Halla el punto de la recta cuya distancia a P sea mínima.]
       #solution()[
-        La distancia entre dos puntos P(x_1, y_1) y R(x_2, y_2) viene dada por $ d = sqrt((x_2 - x_1)^2 + (y_2 - y_1)^2) $.
+        La distancia entre dos puntos P($x_1$, $y_1$) y R($x_2$, $y_2$) viene dada por $ d = sqrt((x_2 - x_1)^2 + (y_2 - y_1)^2) $.
 
         La distancia entre el punto $P(4,0)$ y un punto cualquiera de la recta $r:y = 2 x + $ viene dada por
         
@@ -135,13 +135,13 @@
         $ P''(x) = 480 / x^3 > 0 $
         Por tanto, el valor de $x$ que minimiza el perímetro es $x = sqrt(120)$. Calculamos $y$:
         $ y = 120 / sqrt(120) = sqrt(120) $
-        Por tanto, las dimensiones del rectángulo exterior son $ (sqrt(120) + 2) m approx "12,95 m" $ de lado mayor y $ (sqrt(120) + 2) m  approx "12,95 m"  $ de lado menor, es decir, un cuadrado. 
+        Por tanto, las dimensiones del rectángulo exterior son $(sqrt(120) + 2) m approx "12,95 m"$ de lado mayor y $(sqrt(120) + 2) m  approx "12,95 m" $ de lado menor, es decir, un cuadrado. 
       ]
     ],[
     #question()[Se quiere diseñar una caja abierta con base cuadrada y volumen $32 "cm"^3$.
       ¿Cuáles deben ser las dimensiones de la caja para que la superficie total sea mínima?]
     #solution()[
-      Sea $x$ la longitud del lado de la base cuadrada e $h$ la altura de la caja.
+      Sea $x$ la longitud del lado de la base cuadrada y $h$ la altura de la caja.
       El volumen de la caja nos da la restricción 
       $ V = x^2 h = 32 => h = 32 / x^2 $
       La superficie total de la caja es
@@ -156,27 +156,27 @@
       ]
     ],
     [
-      #question()[Queremos fabricar una pirámide de base cuadrada sin tapa usando una lámina de cartón cuadrada de lado L.
+      #question()[Queremos fabricar una caja de base cuadrada sin tapa usando una lámina de cartón cuadrada de lado L.
       En cada esquina recortamos un cuadrado de lado $x$ y plegamos.
       Expresa el volumen en función de $x$ y halla qué valor de  $x$ maximiza el volumen.]
       #solution()[
         Sea $x$ la longitud del lado del cuadrado que recortamos en cada esquina.
-        La longitud del lado de la base de la pirámide es $ (L - 2 x) $ y la altura es $ x $.
-        El volumen de la pirámide es
-        $ V(x) = (1/3) (L - 2 x)^2 x = (1/3) (L^2 - 4 L x + 4 x^2) x = (1/3) (L^2 x - 4 L x^2 + 4 x^3) $
+        La longitud del lado de la base de la caja es $ (L - 2 x) $ y la altura es $ x $.
+        El volumen de la caja es
+        $ V(x) = (L - 2 x)^2 x = (L^2 - 4 L x + 4 x^2) x = (L^2 x - 4 L x^2 + 4 x^3) $
         Derivando e igualando a cero para buscar los puntos críticos:
-        $ V'(x) = (1/3) (L^2 - 8 L x + 12 x^2) = 0 => L^2 - 8 L x + 12 x^2 = 0 $
+        $ V'(x) = L^2 - 8 L x + 12 x^2 = 0 => L^2 - 8 L x + 12 x^2 = 0 $
         Resolviendo la ecuación cuadrática:
         $ x = (8 L ± sqrt((8 L)^2 - 4 dot 12 dot L^2)) / (2 dot 12) = (8 L ± sqrt(64 L^2 - 48 L^2)) / 24 = (8 L ± sqrt(16 L^2)) / 24 = (8 L ± 4 L) / 24 $
         $ x_1 = (12 L) / 24 = L / 2 $
         $ x_2 = (4 L) / 24 = L / 6 $
         Comprobamos cuál de los dos valores es un máximo con la segunda derivada:
         
-        $display(V''(x) = (1/3) (-8 L + 24 x))$
+        $display(V''(x) = -8 L + 24 x)$
         
-        $display(V''(L / 2) = (1/3) (-8 L + 24 (L / 2)) = (1/3) (-8 L + 12 L) = (1/3) (4 L) > 0)$ (no es máximo)
+        $display(V''(L / 2) = -8 L + 24 (L / 2) = -8 L + 12 L = 4 L > 0)$ (no es máximo)
         
-        $display(V''(L / 6) = (1/3) (-8 L + 24 (L / 6)) = (1/3) (-8 L + 4 L) = (1/3) (-4 L) < 0)$ (es máximo)
+        $display(V''(L / 6) = -8 L + 24 (L / 6) = -8 L + 4 L = -4 L < 0)$ (es máximo)
         
         Por tanto, el valor de $x$ que maximiza el volumen es $x = L / 6$.
       ] 
@@ -201,159 +201,181 @@
         ]
     ],
     [
-      #question()[El coste de fabricar $x$ unidades de un producto viene dado por $C(x)=x^3 - 12 x^2 + 60 x + 100$
+      #question()[El coste de fabricar $x$ unidades de un producto viene dado por $C(x)=x^3 - 12 x^2 + 60 x + 98$
 
-      ¿Cuántas unidades deben producirse para que el coste medio, $C_m(x)=C(x)/x$, sea mínimo?
+      ¿Cuántas unidades deben producirse para que el coste medio, $C_m (x)=C(x)/x$, sea mínimo?
       ]
       #solution()[ 
-        El coste medio viene dado por $ C_m (x) = C(x) / x = (x^3 - 12 x^2 + 60 x + 100) / x = x^2 - 12 x + 60 + 100 / x $
+        El coste medio viene dado por $ C_m (x) = C(x) / x = (x^3 - 12 x^2 + 60 x + 98) / x = x^2 - 12 x + 60 + 98 / x $
         
         Derivando e igualando a cero para buscar los puntos críticos:
         
-        $ C'_m (x) = 2 x - 12 - 100 / x^2 = 0 => 2 x^3 - 12 x^2 - 100 = 0 $
+        $ C'_m (x) = 2 x - 12 - 98 / x^2 = 0 => 2 x^3 - 12 x^2 - 98 = 0 $
         
-        Resolviendo la ecuación cúbica (por ejemplo, probando con divisores de $100$):
+        Resolviendo la ecuación cúbica (se puede resolver por Rouffini) :
         
-        $ x = 10 $
+        $ x = 7 $
         
         Comprobamos que es un mínimo con la segunda derivada:
         
-        $ C''_m (x) = 2 + 200 / x^3 > 0 $
+        $ C''_m (x) = 2 + 196 / x^3 > 0 $
 
-        Por tanto, el valor de $x$ que minimiza el coste medio es $x = 10$ unidades.
+        Por tanto, el valor de $x$ que minimiza el coste medio es $x = 7$ unidades.
       ]
     ],
     [#question()[Una empresa tiene que transportar un producto desde un punto $A$ hasta un punto $B$.
-      El punto $A$ está a $3 "km"$ de la orilla de un río y el punto $B$ está a $4 "km"$ del mismo lado del río y a $6 "km"$ de $A$.
+      El punto $A$ está a $3 "km"$ de la orilla de un río y el punto $B$ está en el rio, $6 "km"$ ria abajo, desde el punto del rio más cercano a $A$.
       El coste de transportar el producto es de $1 frac("€", "km", style: "horizontal")$ por tierra y de $0,5 frac("€", "km", style: "horizontal")$ por el río.
       ¿Dónde debe llegar el transporte al río para que el coste total sea mínimo?]
-      #solution()[
-        Sea $x$ la distancia desde el punto $B$ hasta el punto donde el transporte llega al río.
-        La distancia recorrida por tierra es $ sqrt(3^2 + x^2) = sqrt(9 + x^2) $ y la distancia recorrida por el río es $ 6 - x $.
-        El coste total del transporte es
-        $ C(x) = 1 dot sqrt(9 + x^2) + 0,5 dot (6 - x) = sqrt(9 + x^2) + 3 - 0,5 x $
-        Derivando e igualando a cero para buscar los puntos críticos:
-        $ C'(x) = (1/2) (9 + x^2)^(-1/2) dot 2 x - 0,5 = x / sqrt(9 + x^2) - 0,5 = 0 => x / sqrt(9 + x^2) = 0,5 => x = 0,5 sqrt(9 + x^2) $
-        Elevando al cuadrado ambos lados:
-        $ x^2 = 0,25 (9 + x^2) => x^2 - 0,25 x^2 = 2,25 => 0,75 x^2 = 2,25 => x^2 = 3 => x = sqrt(3) $
-        Comprobamos que es un mínimo con la segunda derivada:
-        $ C''(x) = (9 + x^2)^(-3/2) dot 9 > 0 $
-        Por tanto, el valor de $x$ que minimiza el coste total es $x = sqrt(3) "km" approx "1,73" "km"$.
-      ]
+      // #solution(show-solution: false)[
+
+      //   #cetz.canvas(length: 1cm, {
+      //     import cetz.draw: *
+          
+      //     fill(black)
+      //     circle((0, 0), radius: 0.1, name: "O")
+      //     circle((6, 0), radius: 0.1, name: "B")
+      //     circle((0, 3), radius: 0.1, name: "A")
+
+      //     // content(("A"), box(fill: white, $ A $))
+      //     // content("A.north", anchor: "1.5", box(fill: white, $ A $))
+      
+      //     content((name: "A", anchor: 1.5), $ A $)
+      //     content((name: "B", anchor: 1.5), $ B $)
+
+      //     line((0, 3), (0, 0), name: "AO")
+      //     content((name: "AO", anchor: 1.5), box(fill: white, $ 3"km" $))
+
+      //     line((0, 0), (6, 0))
+      //     line((0, 3), (2, 0), stroke: blue)
+      //   })
+
+      //   Sea $x$ la distancia desde el punto más cercano  $B$ hasta el punto donde el transporte llega al río.
+      //   La distancia recorrida por tierra es $ sqrt(3^2 + x^2) = sqrt(9 + x^2) $ y la distancia recorrida por el río es $ 6 - x $.
+      //   El coste total del transporte es
+      //   $ C(x) = 1 dot sqrt(9 + x^2) + 0,5 dot (6 - x) = sqrt(9 + x^2) + 3 - 0,5 x $
+      //   Derivando e igualando a cero para buscar los puntos críticos:
+      //   $ C'(x) = (1/2) (9 + x^2)^(-1/2) dot 2 x - 0,5 = x / sqrt(9 + x^2) - 0,5 = 0 => x / sqrt(9 + x^2) = 0,5 => x = 0,5 sqrt(9 + x^2) $
+      //   Elevando al cuadrado ambos lados:
+      //   $ x^2 = 0,25 (9 + x^2) => x^2 - 0,25 x^2 = 2,25 => 0,75 x^2 = 2,25 => x^2 = 3 => x = sqrt(3) $
+      //   Comprobamos que es un mínimo con la segunda derivada:
+      //   $ C''(x) = (9 + x^2)^(-3/2) dot 9 > 0 $
+      //   Por tanto, el valor de $x$ que minimiza el coste total es $x = sqrt(3) "km" approx "1,73" "km"$.
+      // ]
     ],
     [
       #question()[Desde un punto $P$ situado a $100 m$ de una carretera recta se quiere construir un camino hasta un punto $Q$ situado en la carretera, a $200 m$ de un punto $R$ que está frente a $P$.
         ¿Dónde debe llegar el camino a la carretera para que la longitud total del camino $P Q$ sea mínima?]
 
-        #solution()[
-        Sea $x$ la distancia desde el punto $R$ hasta el punto donde el camino llega a la carretera.
-        La distancia recorrida desde $P$ hasta la carretera es $ sqrt(100^2 + x^2) = sqrt(10000 + x^2) $ y la distancia desde la carretera hasta $Q$ es $ 200 - x $.
-        La longitud total del camino es
+        // #solution(color: red)[
+        // Sea $x$ la distancia desde el punto $R$ hasta el punto donde el camino llega a la carretera.
+        // La distancia recorrida desde $P$ hasta la carretera es $ sqrt(100^2 + x^2) = sqrt(10000 + x^2) $ y la distancia desde la carretera hasta $Q$ es $ 200 - x $.
+        // La longitud total del camino es
 
-        $ L(x) = sqrt(10000 + x^2) + (200 - x) $
+        // $ L(x) = sqrt(10000 + x^2) + (200 - x) $
 
-        Derivando e igualando a cero para buscar los puntos críticos:
+        // Derivando e igualando a cero para buscar los puntos críticos:
 
-        $ L'(x) = (1/2) (10000 + x^2)^(-1/2) dot 2 x - 1 = x / sqrt(10000 + x^2) - 1 = 0 =>  \
-        x / sqrt(10000 + x^2) = 1 => x = sqrt(10000 + x^2) $
+        // $ L'(x) = (1/2) (10000 + x^2)^(-1/2) dot 2 x - 1 = x / sqrt(10000 + x^2) - 1 = 0 =>  \
+        // x / sqrt(10000 + x^2) = 1 => x = sqrt(10000 + x^2) $
         
-        Elevando al cuadrado ambos lados:
-        $ x^2 = 10000 + x^2 => 0 = 10000 $
-        Lo que es imposible, por lo que no hay puntos críticos. Estudiamos el comportamiento en los extremos del intervalo $[0, 200]$:
-        $ L(0) = sqrt(10000 + 0^2) + (200 - 0) = 100 + 200 = 300 $
-        $ L(200) = sqrt(10000 + 200^2) + (200 - 200) = sqrt(10000 + 40000) + 0 = sqrt(50000) approx "223,61" $
-        ]
+        // Elevando al cuadrado ambos lados:
+        // $ x^2 = 10000 + x^2 => 0 = 10000 $
+        // Lo que es imposible, por lo que no hay puntos críticos. Estudiamos el comportamiento en los extremos del intervalo $[0, 200]$:
+        // $ L(0) = sqrt(10000 + 0^2) + (200 - 0) = 100 + 200 = 300 $
+        // $ L(200) = sqrt(10000 + 200^2) + (200 - 200) = sqrt(10000 + 40000) + 0 = sqrt(50000) approx "223,61" $
+        // ]
     ],
     [
       #question()[En la parábola $y = 9-x^2$ se inscribe un rectángulo cuya base está sobre el eje $x$.
       Halla las dimensiones del rectángulo de máxima área.]
-      #solution()[
-        Sea $x$ la mitad de la longitud de la base del rectángulo e $y$ la altura del rectángulo.
-        La altura del rectángulo viene dada por la ecuación de la parábola:
-        $ y = 9 - x^2 $
-        El área del rectángulo es
-        $ A(x) = 2 x dot y = 2 x (9 - x^2) = 18 x - 2 x^3 $
-        Derivando e igualando a cero para buscar los puntos críticos:
-        $ A'(x) = 18 - 6 x^2 = 0 => 6 x^2 = 18 => x^2 = 3 => x = sqrt(3) $
-        Comprobamos que es un máximo con la segunda derivada:
-        $ A''(x) = -12 x $
-        $ A''(sqrt(3)) = -12 sqrt(3) < 0 $
-        Por tanto, el valor de $x$ que maximiza el área es $x = sqrt(3)$. Calculamos $y$:
-        $ y = 9 - (sqrt(3))^2 = 9 - 3 = 6 $
-        Por tanto, las dimensiones del rectángulo son $2 sqrt(3) "unidades"$ de base y $6 "unidades"$ de altura.
-      ]
+      // #solution(color: red)[
+      //   Sea $x$ la mitad de la longitud de la base del rectángulo e $y$ la altura del rectángulo.
+      //   La altura del rectángulo viene dada por la ecuación de la parábola:
+      //   $ y = 9 - x^2 $
+      //   El área del rectángulo es
+      //   $ A(x) = 2 x dot y = 2 x (9 - x^2) = 18 x - 2 x^3 $
+      //   Derivando e igualando a cero para buscar los puntos críticos:
+      //   $ A'(x) = 18 - 6 x^2 = 0 => 6 x^2 = 18 => x^2 = 3 => x = sqrt(3) $
+      //   Comprobamos que es un máximo con la segunda derivada:
+      //   $ A''(x) = -12 x $
+      //   $ A''(sqrt(3)) = -12 sqrt(3) < 0 $
+      //   Por tanto, el valor de $x$ que maximiza el área es $x = sqrt(3)$. Calculamos $y$:
+      //   $ y = 9 - (sqrt(3))^2 = 9 - 3 = 6 $
+      //   Por tanto, las dimensiones del rectángulo son $2 sqrt(3) "unidades"$ de base y $6 "unidades"$ de altura.
+      // ]
     ],
     [
       #question()[En una carrera a trabes del desierto un automóvil debe recorrer $500 "km"$ de distancia.
        Puede aprovechar una carretera recta que atraviesa el desierto durante los primeros $300 "km"$ a una velocidad de $100 frac("km", "h", style: "horizontal")$,
        pero después debe abandonar la carretera y continuar en línea recta hasta el destino a una velocidad de $60 frac("km", "h", style: "horizontal")$. 
        Si la distancia más corta del oasis a la carretera es de $300 "km"$, determina la ruta que deberá seguir para ir de A a O en el menor tiempo posible.]
-      #solution()[
-        Sea $x$ la distancia desde el punto donde el automóvil abandona la carretera hasta el punto directamente enfrente del oasis.
-        La distancia recorrida por carretera es $ 300 + x $ y la distancia recorrida por el desierto es $ sqrt(300^2 + (500 - x)^2) = sqrt(90000 + (500 - x)^2) $.
-        El tiempo total del recorrido es
-        $ T(x) = (300 + x) / 100 + sqrt(90000 + (500 - x)^2) / 60 $
-        Derivando e igualando a cero para buscar los puntos críticos:
-        $ T'(x) = 1 / 100 + (1/2) (90000 + (500 - x)^2)^(-1/2) dot 2 (500 - x) dot (-1) / 60 = 0 => 1 / 100 - (500 - x) / (60 sqrt(90000 + (500 - x)^2)) = 0 \ 
+      // #solution(color: red)[
+      //   Sea $x$ la distancia desde el punto donde el automóvil abandona la carretera hasta el punto directamente enfrente del oasis.
+      //   La distancia recorrida por carretera es $ 300 + x $ y la distancia recorrida por el desierto es $ sqrt(300^2 + (500 - x)^2) = sqrt(90000 + (500 - x)^2) $.
+      //   El tiempo total del recorrido es
+      //   $ T(x) = (300 + x) / 100 + sqrt(90000 + (500 - x)^2) / 60 $
+      //   Derivando e igualando a cero para buscar los puntos críticos:
+      //   $ T'(x) = 1 / 100 + (1/2) (90000 + (500 - x)^2)^(-1/2) dot 2 (500 - x) dot (-1) / 60 = 0 => 1 / 100 - (500 - x) / (60 sqrt(90000 + (500 - x)^2)) = 0 \ 
         
-        => (500 - x) / (60 sqrt(90000 + (500 - x)^2)) = 1 / 100 => 100 (500 - x) = 60 sqrt(90000 + (500 - x)^2) $
+      //   => (500 - x) / (60 sqrt(90000 + (500 - x)^2)) = 1 / 100 => 100 (500 - x) = 60 sqrt(90000 + (500 - x)^2) $
 
-        Elevando al cuadrado ambos lados:
+      //   Elevando al cuadrado ambos lados:
 
-        $ 10000 (500 - x)^2 = 3600 (90000 + (500 - x)^2) => 10000 (500 - x)^2 - 3600 (500 - x)^2 = 324000000 => \ 
-        6400 (500 - x)^2 = 324000000 => (500 - x)^2 = 50625 => 500 - x = 225 => x = 275 $
-        Comprobamos que es un mínimo con la segunda derivada:
-        $ T''(x) = ... > 0 $
-        Por tanto, el valor de $x$ que minimiza el tiempo total es $x = 275 "km"$.
-      ]
+      //   $ 10000 (500 - x)^2 = 3600 (90000 + (500 - x)^2) => 10000 (500 - x)^2 - 3600 (500 - x)^2 = 324000000 => \ 
+      //   6400 (500 - x)^2 = 324000000 => (500 - x)^2 = 50625 => 500 - x = 225 => x = 275 $
+      //   Comprobamos que es un mínimo con la segunda derivada:
+      //   $ T''(x) = ... > 0 $
+      //   Por tanto, el valor de $x$ que minimiza el tiempo total es $x = 275 "km"$.
+      // ]
     ],
     [
       #question()[Una fábrica elabora un producto de dos calidades. $x$ toneladas de baja calidad y $y$ toneladas de alta calidad. Relacionándose ambas producciones mediante la función $display(y=(18-5x)/(10-x))$.
 
       Hallar las cantidades que ha de producir para obtener ingresos máximos si el precio por tonelada de baja calidad es $display(1/2)$ que el de alta calidad.]
-      #solution()[
-        Sea $x$ la cantidad de toneladas de baja calidad e $y$ la cantidad de toneladas de alta calidad.
-        La relación entre ambas producciones viene dada por la función
-        $ y = (18 - 5 x) / (10 - x) $
-        El ingreso total viene dado por
-        $ I(x) = p_b x + p_a y = (1/2) p_a x + p_a ((18 - 5 x) / (10 - x)) = p_a ((1/2) x + (18 - 5 x) / (10 - x)) $
-        Derivando e igualando a cero para buscar los puntos críticos:
-        $ I'(x) = p_a ((1/2) + ((10 - x)(-5) - (18 - 5 x)(-1)) / (10 - x)^2) = 0 => (1/2) + ((-50 + 5 x + 18 - 5 x) / (10 - x)^2) = 0 \ 
+      // #solution(color: red)[
+      //   Sea $x$ la cantidad de toneladas de baja calidad e $y$ la cantidad de toneladas de alta calidad.
+      //   La relación entre ambas producciones viene dada por la función
+      //   $ y = (18 - 5 x) / (10 - x) $
+      //   El ingreso total viene dado por
+      //   $ I(x) = p_b x + p_a y = (1/2) p_a x + p_a ((18 - 5 x) / (10 - x)) = p_a ((1/2) x + (18 - 5 x) / (10 - x)) $
+      //   Derivando e igualando a cero para buscar los puntos críticos:
+      //   $ I'(x) = p_a ((1/2) + ((10 - x)(-5) - (18 - 5 x)(-1)) / (10 - x)^2) = 0 => (1/2) + ((-50 + 5 x + 18 - 5 x) / (10 - x)^2) = 0 \ 
         
-        => (1/2) + (-32 / (10 - x)^2) = 0 => (1/2) = 32 / (10 - x)^2 => (10 - x)^2 = 64 => 10 - x = 8 => x = 2 $
+      //   => (1/2) + (-32 / (10 - x)^2) = 0 => (1/2) = 32 / (10 - x)^2 => (10 - x)^2 = 64 => 10 - x = 8 => x = 2 $
         
-        Comprobamos que es un máximo con la segunda derivada:
-        $ I''(x) = ... < 0 $
+      //   Comprobamos que es un máximo con la segunda derivada:
+      //   $ I''(x) = ... < 0 $
         
-        Por tanto, el valor de $x$ que maximiza el ingreso total es $x = 2$. Calculamos $y$:
+      //   Por tanto, el valor de $x$ que maximiza el ingreso total es $x = 2$. Calculamos $y$:
         
-        $ y = (18 - 5 dot 2) / (10 - 2) = (18 - 10) / 8 = 8 / 8 = 1 $
+      //   $ y = (18 - 5 dot 2) / (10 - 2) = (18 - 10) / 8 = 8 / 8 = 1 $
         
-        Por tanto, las cantidades que ha de producir son $2$ toneladas de baja calidad y $1$ tonelada de alta calidad.
-      ]
+      //   Por tanto, las cantidades que ha de producir son $2$ toneladas de baja calidad y $1$ tonelada de alta calidad.
+      // ]
     ],
     [
       #question()[Una estatua tiene una altura h y está sobre un pedestal de altura H. ¿A que distancia de la base del pedestal debe situarse un observador para que el ángulo de visión de la estatua sea máximo?]
-      #solution()[
-        Sea $d$ la distancia desde la base del pedestal hasta el observador.
-        El ángulo de visión de la estatua viene dado por
-        $ theta(d) = "arctan"((H + h) / d) - "arctan"(H / d) $
-        Derivando e igualando a cero para buscar los puntos críticos:
-        $ theta'(d) = - (H + h) / (d^2 + (H + h)^2) + H / (d^2 + H^2) = 0 => H / (d^2 + H^2) = (H + h) / (d^2 + (H + h)^2) $
+      // #solution(color: red)[
+      //   Sea $d$ la distancia desde la base del pedestal hasta el observador.
+      //   El ángulo de visión de la estatua viene dado por
+      //   $ theta(d) = "arctan"((H + h) / d) - "arctan"(H / d) $
+      //   Derivando e igualando a cero para buscar los puntos críticos:
+      //   $ theta'(d) = - (H + h) / (d^2 + (H + h)^2) + H / (d^2 + H^2) = 0 => H / (d^2 + H^2) = (H + h) / (d^2 + (H + h)^2) $
         
-        $ H (d^2 + (H + h)^2) = (H + h) (d^2 + H^2) => H d^2 + H (H + h)^2 = (H + h) d^2 + (H + h) H^2 \ 
+      //   $ H (d^2 + (H + h)^2) = (H + h) (d^2 + H^2) => H d^2 + H (H + h)^2 = (H + h) d^2 + (H + h) H^2 \ 
         
-        => H d^2 - (H + h) d^2 = (H + h) H^2 - H (H + h)^2 => -h d^2 = (H + h) H^2 - H (H^2 + 2 H h + h^2) \ 
+      //   => H d^2 - (H + h) d^2 = (H + h) H^2 - H (H + h)^2 => -h d^2 = (H + h) H^2 - H (H^2 + 2 H h + h^2) \ 
         
-        => -h d^2 = (H + h) H^2 - H^3 - 2 H^2 h - H h^2 => -h d^2 = H^3 + H^2 h - H^3 - 2 H^2 h - H h^2 \ 
+      //   => -h d^2 = (H + h) H^2 - H^3 - 2 H^2 h - H h^2 => -h d^2 = H^3 + H^2 h - H^3 - 2 H^2 h - H h^2 \ 
         
-        => -h d^2 = - H^2 h - H h^2 => d^2 = H^2 + H h => d = sqrt(H^2 + H h) $
+      //   => -h d^2 = - H^2 h - H h^2 => d^2 = H^2 + H h => d = sqrt(H^2 + H h) $
         
-        Comprobamos que es un máximo con la segunda derivada:
-        $ theta''(d) = ... < 0 $
+      //   Comprobamos que es un máximo con la segunda derivada:
+      //   $ theta''(d) = ... < 0 $
         
-        Por tanto, el valor de $d$ que maximiza el ángulo de visión es $d = sqrt(H^2 + H h)$.
-      ]
+      //   Por tanto, el valor de $d$ que maximiza el ángulo de visión es $d = sqrt(H^2 + H h)$.
+      // ]
     ],
     [
     //   // Para examen.
