@@ -212,12 +212,7 @@
     [
       #subquestion()[$display(f(x) = "ln"((x^2+1)/(x^2)))$]
       #solution()[
-        1º Forma
-        $display(f(x) = "ln"((x^2+1)/(x^2) ) = "ln"(x^2+1) - "ln"(x^2) = "ln"(x^2+1) - 2"ln"(x))$
-
-        $display(f'(x) = 1/(x^2+1) (2x) - 2/x = (2x)/(x^2+1) -2/x = (2x^2 - 2(x^2+1))/(x(x^2+1)) = #result($display((-2)/(x(x^2+1)))$))$
-
-        2º Forma
+        1ª Forma:
 
         $display(f'(x) = 1/((x^2+1)/(x^2)) dot ((x^2)(2x) - (x^2+1)(2x))/(x^4) = 
         (x^2/(x^2+1)) dot (2x^3 - 2x^3 - 2x)/(x^4) =  \
@@ -225,6 +220,12 @@
         (-2x^3)/(x^4(x^2+1)) = 
         #result($display((-2)/(x(x^2+1)))$)
         )$
+
+        2ª Forma:
+
+        $display(f(x) = "ln"((x^2+1)/(x^2) ) = "ln"(x^2+1) - "ln"(x^2) = "ln"(x^2+1) - 2"ln"(x))$
+
+        $display(f'(x) = 1/(x^2+1) (2x) - 2/x = (2x)/(x^2+1) -2/x = (2x^2 - 2(x^2+1))/(x(x^2+1)) = #result($display((-2)/(x(x^2+1)))$))$
       ]
     ]
     )
@@ -312,16 +313,34 @@
     [
       #subquestion()[$display(f(x) = "arcsen"(2x sqrt(1-x^2)))$]
       #solution()[
-        $display(f'(x) = 1/sqrt(1 - (2x sqrt(1-x^2))^2) dot (2 sqrt(1-x^2) + 2x (-1/(2 sqrt(1-x^2)))(-2x)) =  \
-        1/sqrt(1 - 4x^2(1-x^2)) dot (2 sqrt(1-x^2) + (2x^2)/(sqrt(1-x^2))) = 
-        1/sqrt(1 - 4x^2 + 4x^4) dot ( (2(1-x^2) + 2x^2)/(sqrt(1-x^2)) ) = \
-        1/sqrt((1-2x^2)^2) dot ( 2/(sqrt(1-x^2)) ) = 
-        #result($display(2/((1-2x^2)sqrt(1-x^2)))$)
+        $display(f'(x) = 1/sqrt(1 - (2x sqrt(1-x^2))^2) dot (2 sqrt(1-x^2) + 2x (1/(2 sqrt(1-x^2)))(-2x)) =  \
+        1/sqrt(1 - 4x^2(1-x^2)) dot (2 sqrt(1-x^2) - (2x^2)/(sqrt(1-x^2))) = 
+        1/sqrt(1 - 4x^2 + 4x^4) dot ( (2(1-x^2) - 2x^2)/(sqrt(1-x^2)) ) = \
+        1/sqrt((1-2x^2)^2) dot ( (2-4x^2)/(sqrt(1-x^2)) ) = 
+        (2(1-2x^2))/((1-2x^2)sqrt(1-x^2)) = 
+        #result($display((2)/(sqrt(1-x^2)))$)
         )$
       ]
     ],
     [
       #subquestion()[$display(f(x) = "ln" root(3, ("sen"(x) dot cos(x))/(1-x)^2))$]
+      #solution(color: red)[
+        1ª Forma:
+
+        $display(f'(x) = 1/(root(3, ("sen"(x) dot cos(x))/(1-x)^2)) dot (1/3)(("sen"(x) dot cos(x))/(1-x)^2)^(-2/3) 
+        dot ((cos^2(x) - "sen"^2(x))(1-x)^2 + ("sen"(x) dot cos(x))(-2)(1-x))/(1-x)^4 = \
+        1/(3 root(3, (("sen"(x) dot cos(x))/(1-x)^2)^2)) dot ((cos^2(x) - "sen"^2(x))(1-x)^2 - 2("sen"(x) dot cos(x))(1-x))/(1-x)^4 = \
+        1/(3 root(3, ("sen"(x) dot cos(x))^2 (1-x)^(-4))) dot ((cos^2(x) - "sen"^2(x))(1-x) - 2("sen"(x) dot cos(x)))/(1-x)^3 = \
+        1/(3 ("sen"(x)^(2/3) dot cos(x)^(2/3) dot (1-x)^(-4/3))) dot ((cos^2(x) - "sen"^2(x))(1-x) - 2("sen"(x) dot cos(x)))/(1-x)^3 = \
+        ( (cos^2(x) - "sen"^2(x))(1-x) - 2("sen"(x) dot cos(x)) ) / ( 3 ("sen"(x)^(2/3) dot cos(x)^(2/3) dot (1-x)^(5/3)) )
+        )$
+
+        2ª Forma:
+
+        $display(f(x) = "ln" root(3, ("sen"(x) dot cos(x))/(1-x)^2)) = 1/3 ["ln"("sen"(x)) + "ln"(cos(x)) - 2 "ln"(1-x)])$
+
+        $display(f'(x) = 1/3[(cos(x)/"sen"(x) + (-"sen"(x))/(cos(x)) - 2 1/(1-x) (-1))] = 1/3 [(cos^2(x) - "sen"^2(x))/("sen"(x) cos(x))+ 2/(1-x)] = 1/3[cos(2x) / (1/2 "sen"(2x)) + 2/(1-x)] = #result($display( 2/3 ("cotg"(2x) + 1/(1-x)))$))$
+      ]
     ],
     [
       #subquestion()[$display(f(x) = "arctg"(x/(sqrt(1-x^2))))$]

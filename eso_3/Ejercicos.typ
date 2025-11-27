@@ -10,7 +10,7 @@
   ),
   school: (
     name: "IES Gabriela Mistral",
-    logo:image("../logo-ies_gabriela_mistral.png")
+    // logo:image("../logo-ies_gabriela_mistral.png")
   ),
   exam-info: (
     academic-period: "Curso 2025/2026",
