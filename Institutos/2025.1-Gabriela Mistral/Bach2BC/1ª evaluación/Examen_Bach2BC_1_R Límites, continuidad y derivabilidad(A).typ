@@ -73,7 +73,7 @@
                 ))$
       #subquestion(points: 1.25)[Estudia la continuidad de $f(x)$ en $RR$. #text(0.7em)[(PAU 2022)].]
       #subquestion(points: 0.75)[Es $f(x)$ derivable en $x=0$? Justifica la respuesta. #text(0.7em)[(PAU 2022)]]
-      #subquestion(points: 2)[Determine para $x in (0, oo)$ el punto de la fráfica de $f(x)$ en el que la pendiente de la recta tangente es nula y obtenga la ecuación de la recta tangente en dicho punto. En el punto obtenido, ¿alcanza $f(x)$ algún extremo relativo? En caso afirmativo, clasifíquelo. #text(0.7em)[(PAU 2022)]]
+      #subquestion(points: 2)[Determine para $x in (0, oo)$ el punto de la gráfica de $f(x)$ en el que la pendiente de la recta tangente es nula y obtenga la ecuación de la recta tangente en dicho punto. En el punto obtenido, ¿alcanza $f(x)$ algún extremo relativo? En caso afirmativo, clasifíquelo. #text(0.7em)[(PAU 2022)]]
     ]
   ],
 )
