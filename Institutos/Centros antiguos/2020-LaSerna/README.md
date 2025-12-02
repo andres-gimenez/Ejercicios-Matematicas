@@ -1,1 +1,0 @@
-# Exámenes y ejerccicios.
