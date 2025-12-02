@@ -61,7 +61,7 @@
   ],
   [
     #question()[Dada la función $f(x) = display("sen"(pi/2 x))$, se pide:]
-    #subquestion(points:1.75)[Calcula $limits("lím")_(x->+oo)((sqrt(4-3f(x))- 2)/x)$ #text(0.7em)[(PAU 2025)]]
+    #subquestion(points:1.75)[Calcula $limits("lím")_(x->0)((sqrt(4-3f(x))- 2)/x)$ #text(0.7em)[(PAU 2025)]]
 
     #subquestion(points:1.25)[Calcula la ecuación de la recta tangente a $f(x)$ en el punto $x = 2$.]
    
