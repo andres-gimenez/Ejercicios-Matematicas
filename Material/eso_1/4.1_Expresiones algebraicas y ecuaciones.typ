@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.2": *
+#import "@preview/g-exam:0.4.3": *
 
 // #set text(font:"OpenDyslexic")
 // #set text(font: "New Computer Modern")
@@ -10,8 +10,8 @@
     watermark: "Profesor: andrés",
   ),
   school: (
-    name: "IES Fernando Fernán Gómez",
-    // logo:image("../../logo-ies_fernando_fernan_gomez.png")
+    name: "IES Gabriela Mistral",
+    logo:image("../logo.png")
   ),
   exam-info: (
     academic-period: "Curso 2024/2025",

@@ -1,7 +1,6 @@
-#import "@preview/g-exam:0.4.2": *
+#import "@preview/g-exam:0.4.3": *
 
-// #set text(font:"OpenDyslexic")
-// #set text(font: "New Computer Modern")
+#let config = yaml("../../config.yaml")
 
 #show: g-exam.with(
   author: (
@@ -10,11 +9,11 @@
     watermark: "Profesor: andrés",
   ),
   school: (
-    name: "IES Fernando Fernán Gómez",
-    // logo:image("../../logo-ies_fernando_fernan_gomez.png")
+    name: config.at("school").at("name"),
+    logo:image("../../" + config.at("school").at("logo"))
   ),
   exam-info: (
-    academic-period: "Curso 2024/2025",
+    academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
     number: "Ejercicios",
