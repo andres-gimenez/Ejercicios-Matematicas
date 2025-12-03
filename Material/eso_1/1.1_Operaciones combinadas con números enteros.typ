@@ -1,13 +1,13 @@
-#import "@preview/g-exam:0.4.2": *
+#import "@local/g-exam:0.4.4": *
 
 // #set text(font:"OpenDyslexic")
 // #set text(font: "New Computer Modern")
 
-#show: g-exam.with(
+#show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andrés",
+    watermark: "Profesor: Andrés",
   ),
   school: (
     name: "IES Fernando Fernán Gómez",
@@ -19,7 +19,6 @@
     academic-subject: "Matemáticas",
     number: "1º Evaluación",
     content: "Operaciones con números enteros",
-    // model: "Modelo A"
   ),
   
   language: "es",
@@ -27,7 +26,7 @@
   date: datetime(year:2024, month:1, day:8),
   show-student-data: false,
   show-grade-table: false,
-  question-point-position: right,
+  question-points-position: right,
   // question-text-parameters: (font:"OpenDyslexic")
 )
 

@@ -2,16 +2,7 @@
 
 #let config = yaml("../../config.yaml")
 
-
-// #let buf = string-buffer()
-// #buf.add("../")
-// #buf.add(config.at("school").at("logo"))
-// #buf.to-string()
-
-// #set text(font:"OpenDyslexic")
-// #set text(font: "New Computer Modern")
-
-#show: g-exam.with(
+#show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 

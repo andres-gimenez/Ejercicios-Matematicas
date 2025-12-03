@@ -3,7 +3,7 @@
 // #set text(font:"OpenDyslexic")
 // #set text(font: "New Computer Modern")
 
-#show: g-exam.with(
+#show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 

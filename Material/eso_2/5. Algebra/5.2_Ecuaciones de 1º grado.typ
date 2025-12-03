@@ -2,7 +2,7 @@
 
 #let config = yaml("../../config.yaml")
 
-#show: g-exam.with(
+#show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
