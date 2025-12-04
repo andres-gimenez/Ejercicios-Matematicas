@@ -23,7 +23,7 @@
   language: "es",
   decimal-separator: ",",
   show-student-data: true,
-  show-grade-table: false,
+  show-grade-table: "odd-pages",
   show-solutions: false,
   // question-text-parameters: (font:"OpenDyslexic")
 )
@@ -154,7 +154,7 @@
       ],[
         #subquestion()[$2/3 x^2 - 3/2 x^2=$]
       ],[
-        #subquestion()[$2/5}x^2 - 1/3 x + 3/8 x^2 - 2/5 x=$]
+        #subquestion()[$2/5 x^2 - 1/3 x + 3/8 x^2 - 2/5 x=$]
       ],[
         #subquestion()[$5/2 x^2 - 6x + 4/5 x^2 + 2x=$]
       ],[
