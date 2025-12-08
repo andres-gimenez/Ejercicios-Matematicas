@@ -11,6 +11,7 @@
   school: (
     name: config.at("school").at("name"),
     logo:image("../../" + config.at("school").at("logo"))
+    watermark: "Profesor: Andrés",
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
