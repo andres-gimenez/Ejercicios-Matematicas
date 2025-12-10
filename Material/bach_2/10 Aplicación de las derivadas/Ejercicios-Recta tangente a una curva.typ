@@ -2,18 +2,20 @@
 #import "@preview/cetz:0.4.2"
 #import "@preview/cetz-plot:0.1.3"
 
+#let config = yaml("../../config.yaml")
+
 #show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
     email: "agimenezmunoz@educa.madrid.com", 
     watermark: "Profesor: Andrés",
   ),
-  school: (
-    name: "IES Gabriela Mistral",
-    logo:image("../logo-ies_gabriela_mistral.png")
+ school: (
+    name: config.at("school").at("name"),
+    logo:image("../../" + config.at("school").at("logo"))
   ),
   exam-info: (
-    academic-period: "Curso 2025/2026",
+    academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas II",
     number: [Recta tangente a una curva],

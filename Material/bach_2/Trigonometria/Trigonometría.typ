@@ -1,6 +1,8 @@
 #import "@preview/g-exam:0.4.3": *
 // #import "@preview/wrap-it:0.1.0": wrap-content
 
+#let config = yaml("../../config.yaml")
+
 #show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
@@ -8,11 +10,11 @@
     watermark: "Profesor: Andrés",
   ),
   school: (
-    name: "IES Gabriela Mistral",
-    logo:image("../logo-ies_gabriela_mistral.png")
+    name: config.at("school").at("name"),
+    logo:image("../../" + config.at("school").at("logo"))
   ),
   exam-info: (
-    // academic-period: "Curso 2025/2026",
+    academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas",
     // number: "Versión 1",

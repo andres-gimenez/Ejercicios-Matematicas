@@ -1,6 +1,8 @@
 #import "@local/g-exam:0.4.4": *
 // #import "@preview/wrap-it:0.1.0": wrap-content
 
+#let config = yaml("../../config.yaml")
+
 #show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
