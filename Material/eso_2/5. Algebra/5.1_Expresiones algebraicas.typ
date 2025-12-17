@@ -33,55 +33,55 @@
 #questions-pages([
 #question()[Realiza las siguientes operaciones con monomios:]
   #questions-columns([
-    #subquestion(solution:$5x^2$)[$2x^2 + 3x^2=$] 
+    #subquestion(solution:$5x^2$)[$display(2x^2 + 3x^2)=$] 
   ],[
-    #subquestion()[$3x^2 - 5x^2=$]
+    #subquestion()[$display(3x^2 - 5x^2)=$]
   ],[
-    #subquestion()[$15x^5 - 10x^5=$]
+    #subquestion()[$display(15x^5 - 10x^5)=$]
   ],[
-    #subquestion()[$5x^2 -4x^2=$]
+    #subquestion()[$display(5x^2 -4x^2)=$]
   ],[  
-    #subquestion()[$3x y^2 + 5 x y^2=$]
+    #subquestion()[$display(3x y^2 + 5 x y^2)=$]
   ],[
-    #subquestion()[$32x^2 - 4x^2 + 5x^2=$]
+    #subquestion()[$display(32x^2 - 4x^2 + 5x^2)=$]
   ],[
-    #subquestion()[$2z + 7 z=$]
+    #subquestion()[$display(2z + 7 z)=$]
   ],[
-    #subquestion()[$5x y - 7x y=$]
+    #subquestion()[$display(5x y - 7x y)=$]
   ],[
-    #subquestion()[$-4r - 8r=$]
+    #subquestion()[$display(-4r - 8r)=$]
   ],[
-    #subquestion()[$5/7 x - 2/7 x=$]
+    #subquestion()[$display(5/7 x - 2/7 x)=$]
   ],[
-    #subquestion()[$5/4 b^5 + 7/4 b^5=$]
+    #subquestion()[$display(5/4 b^5 + 7/4 b^5)=$]
   ],[
-    #subquestion()[$1/3 x y - 2/5 x y=$]
+    #subquestion()[$display(1/3 x y - 2/5 x y)=$]
   ],[
-    #subquestion()[$2/5 x + 3/4 x=$]
+    #subquestion()[$display(2/5 x + 3/4 x)=$]
   ],[
-    #subquestion()[$1/3 x - 4/7 x + 2/6 x=$]
+    #subquestion()[$display(1/3 x - 4/7 x + 2/6 x)=$]
   ],[  
-    #subquestion()[$2/5 y - 5/2 x=$]
+    #subquestion()[$display(2/5 y - 5/2 x)=$]
   ],[
-    #subquestion()[$2 dot 4x=$]
+    #subquestion()[$display(2 dot 4x)=$]
   ],[
-    #subquestion()[$4 dot 8x^2=$]
+    #subquestion()[$display(4 dot 8x^2)=$]
   ],[
-    #subquestion()[$2 dot 4x=$]
+    #subquestion()[$display(2 dot 4x)=$]
   ],[
-    #subquestion()[$5x dot 3x=$]
+    #subquestion()[$display(5x dot 3x)=$]
   ],[
-    #subquestion()[$3t dot 8t=$]
+    #subquestion()[$display(3t dot 8t)=$]
   ],[
-    #subquestion()[$4a dot 2a=$]
+    #subquestion()[$display(4a dot 2a)=$]
   ],[
-    #subquestion()[$4x dot (-2x)=$]
+    #subquestion()[$display(4x dot (-2x))=$]
   ],[
-    #subquestion()[$5 alpha + 4 alpha=$]
+    #subquestion()[$display(5 alpha + 4 alpha)=$]
   ],[
-    #subquestion()[$6 beta^2 + 4 beta^2=$]
+    #subquestion()[$display(6 beta^2 + 4 beta^2)=$]
   ],[
-    #subquestion()[$5 delta - 6 delta=$]
+    #subquestion()[$display(5 delta - 6 delta)=$]
   ]
   )
 ],[
@@ -168,7 +168,7 @@
       ],[
         #subquestion()[$display((6x - 3) - (5x +9))=$]
       ],[
-        #subquestion()[$display(5x - [3x + 4x - (5x + 2x)))=$]
+        #subquestion()[$display(5x - [3x + 4x - (5x + 2x)])=$]
       ],[
         #subquestion()[$display(-(4x + 3x - 3) + (5x + 1))=$]
       ],[
