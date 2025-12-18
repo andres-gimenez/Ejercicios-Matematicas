@@ -465,31 +465,31 @@
     #question()[Calcula las siguientes integrales  por cambio de variable:]
     #questions-columns(
     [
-      #subquestion()[$display(limits(integral) 1/((x+1)sqrt(x))  dif x)$ (haciendo $x=t^2$)]
+      #subquestion()[$display(limits(integral) 1/((x+1)sqrt(x))  dif x)$ #h(3mm) (haciendo $x=t^2$)]
       #solution()[
         $display(a)$
       ]
     ],
     [
-      #subquestion()[$display(limits(integral) sqrt(x)/(x+1)  dif x)$ (haciendo $x=t^2$)]
+      #subquestion()[$display(limits(integral) sqrt(x)/(x+1)  dif x)$ #h(3mm) (haciendo $x=t^2$)]
       #solution()[
         $display(a)$
       ]
     ],
     [
-      #subquestion()[$display(limits(integral) x root(3, x+2)  dif x)$ (haciendo $x+2=t^3$)]
+      #subquestion()[$display(limits(integral) x root(3, x+2)  dif x)$ #h(3mm) (haciendo $x+2=t^3$)]
       #solution()[
         $display(a)$
       ]
     ],
     [
-    #subquestion()[$display(limits(integral) 2/(2+e^x))  dif x$ (haciendo $t=e^x$)]
+    #subquestion()[$display(limits(integral) 2/(2+e^x))  dif x$ #h(3mm) (haciendo $t=e^x$)]
       #solution()[
         $display(a)$
       ]
     ],
     [
-    #subquestion()[$display(limits(integral) e^x/(1-sqrt(e^x))  dif x)$ (haciendo $e^x=t^2$)]
+    #subquestion()[$display(limits(integral) e^x/(1-sqrt(e^x))  dif x)$ #h(3mm) (haciendo $e^x=t^2$)]
       #solution()[
         $display(a)$
       ]
