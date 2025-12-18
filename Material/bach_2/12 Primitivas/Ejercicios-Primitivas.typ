@@ -18,7 +18,7 @@
     academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas II",
-    number: [Primitivas],
+    number: [Cálculo de primitivas],
     // content: [($X->infinity$)],
     model: [v1],
   ),
@@ -126,7 +126,7 @@
       ]
     ],
     [
-      #subquestion()[$display(limits(integral) (root(3,2x)/sqrt(3x))  dif x)$]
+      #subquestion()[$display(limits(integral) root(3,2x)/sqrt(3x)  dif x)$]
       #solution()[
         $display(a)$
       ]
@@ -350,12 +350,12 @@
       #solution()[
         $display(a)$
       ]
-    ],
-    [
-      #subquestion()[$display(limits(integral) 1/((x+1)sqrt(x))   dif x)$]
-      #solution()[
-        $display(a)$
-      ]
+    // ],
+    // [
+    //   #subquestion()[$display(limits(integral) 1/((x+1)sqrt(x))   dif x)$]
+    //   #solution()[
+    //     $display(a)$
+    //   ]
     ],
     [
       #subquestion()[$display(limits(integral) x sqrt(x + 2)  dif x)$]
@@ -371,7 +371,7 @@
     // ],
     )
   ],
-   [
+  [
     #question()[Calcula las siguientes integrales racionales:]
     #questions-columns(
     [
@@ -379,69 +379,117 @@
       #solution()[
         $display(a)$
       ]
-    ],
-    [
-      #subquestion()[$display(limits(integral)(x+1)^2/(x^2+1)  dif x)$]
+    ],[
+      #subquestion()[$display(limits(integral)(x+1)^2/(x^(-1))  dif x)$]
       #solution()[
         $display(a)$
       ]
-    ],
-    [
+    ],[
+      #subquestion()[$display(limits(integral)(x+1)^2/(x-1)  dif x)$]
+      #solution()[
+        $display(a)$
+      ]
+    ],[
       #subquestion()[$display(limits(integral) 1/(x^2 + 4) dif x)$]
       #solution()[
         $display(a)$
       ]
-    ],
-     [
+    ],[
       #subquestion()[$display(limits(integral) (3x + 1)/(x^2 + x) dif x)$]
       #solution()[
         $display(a)$
       ]
-    ],
-     [
+    ],[
       #subquestion()[$display(limits(integral) (2x)/(x^2 - 9) dif x)$]
       #solution()[
         $display(a)$
       ]
-    ],
-     [
+    ],[
       #subquestion()[$display(limits(integral) 1/((x-1)(x+2)) dif x)$]
       #solution()[
         $display(a)$
       ]
-    ],
-     [
+     ],[
+      #subquestion()[$display(limits(integral) 1/((x+1)(x+3)) dif x)$]
+      #solution()[
+        $display(a)$
+      ]
+    ],[
+      #subquestion()[$display(limits(integral) (2x-1)/(x(x-2)) dif x)$]
+      #solution()[
+        $display(a)$
+      ]
+    ],[
+      #subquestion()[$display(limits(integral) (x^2+1)/(x-1)  dif x)$]
+      #solution()[
+        $display(a)$
+      ]
+     ],[
+      #subquestion()[$display(limits(integral) (3x^2+2)/(x)  dif x)$]
+      #solution()[
+        $display(a)$
+      ]
+    ],[
       #subquestion()[$display(limits(integral) x/(x^2 + 1)  dif x)$]
       #solution()[
         $display(a)$
       ]
-    ],
-     [
+     ],[
+      #subquestion()[$display(limits(integral) 1/(x^2 + 1)  dif x)$]
+      #solution()[
+        $display(a)$
+      ]
+    ],[
       #subquestion()[$display(limits(integral) (x^2 - 1)/(x - 1)  dif x)$]
       #solution()[
         $display(a)$
       ]
-    ],
-     [
-      #subquestion()[$display(limits(integral) 1/((x+1)sqrt(x)) dif x)$]
+    // ],[
+    //   #subquestion()[$display(limits(integral) 1/(x^2 - 4x + 5)  dif x)$]
+    //   #solution()[
+    //     $display(a)$
+    //   ]
+    ],[
+      #subquestion()[$display(limits(integral)(2x+3)/((x-1)(x^2+1)))  dif x)$]
+      #solution()[
+        $display(a)$
+      ]
+    ],[
+      #subquestion()[$display(limits(integral)(x^3+22x^2-12x+8)/(x^4-4x^2) dif x)$]
+      #solution()[
+        $display(a)$
+      ]
+    ])
+    ]
+    ,[
+    #question()[Calcula las siguientes integrales  por cambio de variable:]
+    #questions-columns(
+    [
+      #subquestion()[$display(limits(integral) 1/((x+1)sqrt(x))  dif x)$ (haciendo $x=t^2$)]
       #solution()[
         $display(a)$
       ]
     ],
-     [
-      #subquestion()[$display(limits(integral) 1/(x^2 - 4x + 5)  dif x)$]
+    [
+      #subquestion()[$display(limits(integral) sqrt(x)/(x+1)  dif x)$ (haciendo $x=t^2$)]
       #solution()[
         $display(a)$
       ]
     ],
-     [
-      #subquestion()[$display(limits(integral)()  dif x)$]
+    [
+      #subquestion()[$display(limits(integral) x root(3, x+2)  dif x)$ (haciendo $x+2=t^3$)]
       #solution()[
         $display(a)$
       ]
     ],
-     [
-      #subquestion()[$display(limits(integral)()  dif x)$]
+    [
+    #subquestion()[$display(limits(integral) 2/(2+e^x))  dif x$ (haciendo $t=e^x$)]
+      #solution()[
+        $display(a)$
+      ]
+    ],
+    [
+    #subquestion()[$display(limits(integral) e^x/(1-sqrt(e^x))  dif x)$ (haciendo $e^x=t^2$)]
       #solution()[
         $display(a)$
       ]
