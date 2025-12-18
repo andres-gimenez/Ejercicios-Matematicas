@@ -494,6 +494,12 @@
         $display(a)$
       ]
     ],
+    [
+      #subquestion()[$display(limits(integral) 1/(x ln(x)))  dif x)$ #h(3mm) (haciendo $t=ln(x)$)]
+      #solution()[
+        $display(a)$
+      ]
+    ],
     )
   ],
 )
