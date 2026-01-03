@@ -25,10 +25,9 @@
   
   language: "es",
   decimal-separator: ",",
-  date: datetime(year: 2025, month: 12, day: 08),
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: false,
+  show-solutions: true,
   // draft: true,
   question-points-position: none,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -42,63 +41,68 @@
     #question()[Integrales sencillas:]
     #questions-columns(
     [
-      #subquestion()[$display(limits(integral)3x^2 -5  dif x)$]
-      #solution()[
-        $display(a)$
+      #subquestion(solution:$display(=#result($x^3-5x + C$))$)[$display(limits(integral)(3x^2 -5) dif x)$]
+    ],
+    [
+      #subquestion(solution:$display(=#result($x^4 + 7/2 x ^2 + x +C$))$)[$display(limits(integral)(4x^3 + 7x + 1)  dif x)$]
+    ],
+    [
+      #subquestion(solution:$display(=limits(integral)x^(1/2)  dif x = x^(1/2+1)/(1/2+1) = x^(3/2)/(3/2) = #result($(2sqrt(x^3))/3+C$))$)[$display(limits(integral)sqrt(x)  dif x)$]
+    ],
+    [
+      #subquestion(solution:$=display(limits(integral)x^(-1/2)  dif x = x^(-1/2+1)/(-1/2+1) = x^(1/2)/(1/2) = #result($2sqrt(x)+C$))$)[$display(limits(integral) 1/sqrt(x)  dif x)$]
+    ],
+    [
+      #subquestion(solution:$display(=limits(integral) 2e^x dif x + limits(integral) 5 dif x = 2 limits(integral) e^x dif x + 5 limits(integral) dif x) = 2e^x + 5x + C$)[$display(limits(integral) 2e^x + 5 dif x)$]
+         #solution()[
+        $display(limits(integral) 2e^x + 5 dif x=limits(integral) 2e^x dif x + limits(integral) 5 dif x = 2 limits(integral) e^x dif x + 5 limits(integral) dif x) = \ = (2e^x + C_1) + (5x + C_2) = #result($2e^x + 5x + C$)$
       ]
     ],
     [
-      #subquestion()[$display(limits(integral)4x^3 + 7x + 1  dif x)$]
+     #subquestion()[$display(limits(integral) "sen"(x) + cos(x)  dif x)$]
       #solution()[
-        $display(a)$
+        $display(limits(integral) "sen"(x) + cos(x)  dif x=limits(integral) "sen"(x) dif x + limits(integral)cos(x)  dif x = -cos(x) + "sen"(x) = \ 
+        = #result($"sen"(x) -cos(x) + C$))$
       ]
     ],
     [
-      #subquestion()[$display(limits(integral)sqrt(x)  dif x)$]
-      #solution()[
-        $display(a)$
-      ]
-    ],
-     [
-      #subquestion()[$display(limits(integral) 1/sqrt(x)  dif x)$]
-      #solution()[
-        $display(a)$
-      ]
-    ],
-     [
-      #subquestion()[$display(limits(integral) 2e^x + 5 dif x)$]
-      #solution()[
-        $display(a)$
-      ]
-    ],
-     [
-      #subquestion()[$display(limits(integral) "sen"(x) + cos(x)  dif x)$]
-      #solution()[
-        $display(a)$
-      ]
-    ],
-     [
-      #subquestion()[$display(limits(integral) (x+1)^5 dif x)$]
-      #solution()[
-        $display(a)$
-      ]
+      #subquestion(solution: $display(=#result($1/6 (x+1)^6 + C$))$)[$display(limits(integral) (x+1)^5 dif x)$]
     ],
      [
       #subquestion()[$display(limits(integral) 2x e^(x^2) - "sen" x  dif x)$]
       #solution()[
-        $display(a)$
+        $display(limits(integral) 2x e^(x^2) - "sen" x  dif x = limits(integral) 2x e^(x^2) dif x - limits(integral) "sen" x  dif x) = e^x^2 - (-cos(x)) = #result($e^x^2 + cos(x) + C$) $
       ]
     ],
      [
       #subquestion()[$display(limits(integral)(2x^4 - 6x^3 + 5x)/(x+2)  dif x)$]
       #solution()[
-        $display(a)$
+        Dividiendo y utilizando el algoritmo de la fivisión de polinomios, podemos concluir que:
+
+        $display(2x^4 - 6x^3 + 5x = (2x^3-10x^2+20x-35)(x+2) + 70) => \ 
+        =>(2x^4 - 6x^3 + 5x)/(x+2) = (2x^3-10x^2+20x-35) + 70 / (x+2) $
+
+        $display(limits(integral)(2x^4 - 6x^3 + 5x)/(x+2)  dif x = limits(integral)((2x^3-10x^2+20x-35) + 70/(x+2)) dif x = \
+        = limits(integral)2x^3 dif x  - limits(integral) 10x^2 dif x + limits(integral)20x dif x - limits(integral) 35 dif x + limits(integral) 70/(x+2) dif x = \
+        = 2 limits(integral)x^3 dif x  -10 limits(integral) x^2 dif x + 20 limits(integral)x dif x - 35 limits(integral)  dif x + 70 limits(integral) 1/(x+2) dif x = \
+        = 2 x^4/4 -10 x^3/3 + 20 x^2/2 + 70 ln (|x+2|) \
+        = #result($1/2 x^2 -10/3x^3 + 10x^2 + 70 ln (|x+2|) + C $))
+        $ 
       ]
     ],
      [
       #subquestion()[$display(limits(integral)(root(3, x) + sqrt(5x^3))/(3x)  dif x)$]
       #solution()[
-        $display(a)$
+        $display(limits(integral)(root(3, x) + sqrt(5x^3))/(3x) dif x = 
+        limits(integral)(root(3, x)/(3x) + (sqrt(5x^3))/(3x))  dif x = 
+        limits(integral)root(3, x)/(3x) dif x + (sqrt(5x^3))/(3x)  dif x = \ 
+        limits(integral) root(3, x)/(3x) dif x + limits(integral) sqrt(5x^3)/(3x)dif x =
+        limits(integral) 1/3  x^(1/3)/x dif x + limits(integral) sqrt(5)/3 x^(3/2)/x dif x =
+        1/3 limits(integral)x^(-2/3) dif x + sqrt(5)/3 limits(integral) x^(1/2) dif x = \
+        1/3 x^(1/3)/(1/3) + sqrt(5)/3 x^(3/2)/(3/2) = 
+        root(3,x) + 2sqrt(5)/9 sqrt(x^3) =
+        #result($2/9 sqrt(5x^3) + root(3,x) + C$)
+        )$ 
       ]
     ],
      [
