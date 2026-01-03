@@ -136,7 +136,7 @@
         limits(integral) (7x^2-5+3/x-4/x^2) dif x = 
         limits(integral) 7x^2 dif x- limits(integral) 5 dif x+ limits(integral) 3/x dif x - limits(integral)4/x^2 dif x = \ =
         7/3 x^3 - 5x +3 ln|x| - 4/x =
-        #result($display(7/3 x^3 - 5x- 4/x +3 ln|x| )$))$
+        #result($display(7/3 x^3 - 5x- 4/x +3 ln|x| + C )$))$
       ]
     ],
     [
@@ -153,29 +153,8 @@
     ],
     [
       #subquestion(solution: $=#result($display(3 arctan(x)+ C)$)$)[$display(limits(integral) 3/(x^2+1)  dif x)$]
-      #solution()[
-        
-      ]
     ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
-    )
+     )
   ],
   [
     #question()[Calcula las siguientes integrales inmediatas:]
@@ -183,99 +162,66 @@
    [
       #subquestion()[$display(limits(integral) (2x+3)/sqrt(x^2 + 3x + 2)  dif x)$]
       #solution()[
-        $display(a)$
+        Como $(x^2 + 3x + 2)' = 2x+3$ la integral es inmediata.
+        
+        $display(limits(integral) (2x+3)/sqrt(x^2 + 3x + 2)  dif x = 
+        limits(integral) (2x+3)(x^2 + 3x + 2)^(-1/2)  dif x = \ =
+        (x^2+3x+2)^(1/2)/(1/2) = 
+        #result($display(2 sqrt(x^2+3x+2) + C)$) \
+        )$
       ]
     ],
      [
       #subquestion()[$display(limits(integral)(3x^2)/(x^3 + 1)  dif x)$]
       #solution()[
-        $display(a)$
+        Como $(x^3 + 1)' = 3x^2$ la integral es inmediata.
+
+        $display(limits(integral)(3x^2)/(x^3 + 1)  dif x = #result($display(ln|x^3+1|)$))$
       ]
     ],
      [
       #subquestion()[$display(limits(integral)1/sqrt(4 - x^2)  dif x)$]
       #solution()[
-        $display(a)$
+        $display(limits(integral)1/sqrt(4 - x^2)  dif x = 
+        limits(integral)1/(2sqrt((4 - x^2)/2^2))  dif x =
+        limits(integral)1/2 sqrt(1 - (x/2)^2) dif x )$
+
+        Como $display((x/2)' = 1/2)$
+
+        $display(limits(integral)1/2 sqrt(1 - (x/2)^2) dif x = #result($"arcsen" (x/2) + C$))$
+
+        Generalizando: $display(limits(integral)1/sqrt(a - x^2)  dif x = "arcsen"(x/a)) $
       ]
     ],
      [
-      #subquestion()[$display(limits(integral)cos(5x+1)  dif x)$]
-      #solution()[
-        $display(a)$
-      ]
+      #subquestion(solution: $display(=1/5 limits(integral) 5 cos(5x+1)  dif x) = #result($display(1/5 "sen"(5x+1) + C)$)$)[$display(limits(integral)cos(5x+1)  dif x)$]
     ],
      [
-      #subquestion()[$display(limits(integral) x e^(x^2)  dif x)$]
+      #subquestion(solution: $display(=1/2limits(integral) 2x e^(x^2)  dif x = #result($display((e^x^2)/2) + C$)) $)[$display(limits(integral) x e^(x^2)  dif x)$]
       #solution()[
-        $display(a)$
+        
       ]
     ],
-     [
-      #subquestion()[$display(limits(integral) 1/(2x+1)^3  dif x)$]
-      #solution()[
-        $display(a)$
-      ]
+    [
+      #subquestion(solution: $display(=1/2 dot (-(2)/(4(2x+1)^2)) = #result($display(-1/(4(2x+1)^2) + C)$))$)[$display(limits(integral) 1/(2x+1)^3 dif x)$]      
     ],
      [
-      #subquestion()[$display(limits(integral) "tan"(x)  dif x)$]
-      #solution()[
-        $display(a)$
-      ]
+      #subquestion(solution: $display(=limits(integral) "sen"(x)/cos(x)  dif x = #result($display(-ln|cos(x)| +C)$))$)[$display(limits(integral) "tan"(x)  dif x)$]
     ],
      [
-      #subquestion()[$display(limits(integral) sin^3 (x) cos(x) dif x)$]
+      #subquestion(solution: $display(=#result($display(("sen"^4(x))/4 + C)$))$)[$display(limits(integral) "sen"^3 (x) cos(x) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
      [
       #subquestion()[$display(limits(integral) (x + 3)/(x^2 + 6x + 10)  dif x)$]
       #solution()[
-        $display(a)$
+        $display(limits(integral) (x + 3)/(x^2 + 6x + 10)  dif x = 
+        limits(integral) 1/2 dot 2(x + 3)/(x^2 + 6x + 10)  dif x = \ =
+        limits(integral) 1/2 (2x + 6)/(x^2 + 6x + 10)  dif x =
+        #result($display(1/2 ln |x^2+6x+10| +C)$))$
       ]
     ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
     )
   ],
   [
@@ -284,86 +230,68 @@
     [
       #subquestion()[$display(limits(integral) x e^x   dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
      [
       #subquestion()[$display(limits(integral) x ln x dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
      [
       #subquestion()[$display(limits(integral) x cos(x)  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
      [
       #subquestion()[$display(limits(integral) e^x sin(x)  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
      [
       #subquestion()[$display(limits(integral) x^2 e^(-x)  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
      [
       #subquestion()[$display(limits(integral) sec^2 (x) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
      [
       #subquestion()[$display(limits(integral) cos^3(x)  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
      [
       #subquestion()[$display(limits(integral) sin(x) sqrt(1+cos^2 x) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
      [
       #subquestion()[$display(limits(integral) 1/(sin(x) cos(x)) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
     [
       #subquestion()[$display(limits(integral) e^(3x) cos(2x) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
     [
       #subquestion()[$display(limits(integral)  ln(x^2 + 1) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
     [
       #subquestion()[$display(limits(integral) x/sqrt(x^2 + 4)  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
     [
       #subquestion()[$display(limits(integral) e^(2x)/(1+e^(2x))  dif x)$]
       #solution()[
-        $display(a)$
       ]
     // ],
-    // [
-    //   #subquestion()[$display(limits(integral) 1/((x+1)sqrt(x))   dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
     ],
     [
       #subquestion()[$display(limits(integral) x sqrt(x + 2)  dif x)$]
@@ -371,12 +299,6 @@
         $display(a)$
       ]
     ],
-    // [
-    //   #subquestion()[$display(limits(integral)()  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
-    // ],
     )
   ],
   [
@@ -385,87 +307,66 @@
     [
       #subquestion()[$display(limits(integral) 1/(x^2+4)  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral)(x+1)^2/(x^(-1))  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral)(x+1)^2/(x-1)  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral) 1/(x^2 + 4) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral) (3x + 1)/(x^2 + x) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral) (2x)/(x^2 - 9) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral) 1/((x-1)(x+2)) dif x)$]
       #solution()[
-        $display(a)$
       ]
      ],[
       #subquestion()[$display(limits(integral) 1/((x+1)(x+3)) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral) (2x-1)/(x(x-2)) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral) (x^2+1)/(x-1)  dif x)$]
       #solution()[
-        $display(a)$
       ]
      ],[
       #subquestion()[$display(limits(integral) (3x^2+2)/(x)  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral) x/(x^2 + 1)  dif x)$]
       #solution()[
-        $display(a)$
       ]
      ],[
       #subquestion()[$display(limits(integral) 1/(x^2 + 1)  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral) (x^2 - 1)/(x - 1)  dif x)$]
       #solution()[
-        $display(a)$
       ]
-    // ],[
-    //   #subquestion()[$display(limits(integral) 1/(x^2 - 4x + 5)  dif x)$]
-    //   #solution()[
-    //     $display(a)$
-    //   ]
     ],[
       #subquestion()[$display(limits(integral)(2x+3)/((x-1)(x^2+1)))  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],[
       #subquestion()[$display(limits(integral)(x^3+22x^2-12x+8)/(x^4-4x^2) dif x)$]
       #solution()[
-        $display(a)$
       ]
     ])
     ]
@@ -475,37 +376,31 @@
     [
       #subquestion()[$display(limits(integral) 1/((x+1)sqrt(x))  dif x)$ #h(3mm) (haciendo $x=t^2$)]
       #solution()[
-        $display(a)$
       ]
     ],
     [
       #subquestion()[$display(limits(integral) sqrt(x)/(x+1)  dif x)$ #h(3mm) (haciendo $x=t^2$)]
       #solution()[
-        $display(a)$
       ]
     ],
     [
       #subquestion()[$display(limits(integral) x root(3, x+2)  dif x)$ #h(3mm) (haciendo $x+2=t^3$)]
       #solution()[
-        $display(a)$
       ]
     ],
     [
     #subquestion()[$display(limits(integral) 2/(2+e^x))  dif x$ #h(3mm) (haciendo $t=e^x$)]
       #solution()[
-        $display(a)$
       ]
     ],
     [
     #subquestion()[$display(limits(integral) e^x/(1-sqrt(e^x))  dif x)$ #h(3mm) (haciendo $e^x=t^2$)]
       #solution()[
-        $display(a)$
       ]
     ],
     [
       #subquestion()[$display(limits(integral) 1/(x ln(x)))  dif x)$ #h(3mm) (haciendo $t=ln(x)$)]
       #solution()[
-        $display(a)$
       ]
     ],
     )
