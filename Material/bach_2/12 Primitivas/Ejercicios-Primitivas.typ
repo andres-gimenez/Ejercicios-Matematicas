@@ -79,14 +79,14 @@
       #solution()[
         Dividiendo y utilizando el algoritmo de la fivisión de polinomios, podemos concluir que:
 
-        $display(2x^4 - 6x^3 + 5x = (2x^3-10x^2+20x-35)(x+2) + 70) => \ 
-        =>(2x^4 - 6x^3 + 5x)/(x+2) = (2x^3-10x^2+20x-35) + 70 / (x+2) $
+        $display(2x^4 - 6x^3 + 5x = (2x^3-10x^2+20x-35)(x+2) + 70 => \ 
+        =>(2x^4 - 6x^3 + 5x)/(x+2) = (2x^3-10x^2+20x-35) + 70 / (x+2)) $
 
         $display(limits(integral)(2x^4 - 6x^3 + 5x)/(x+2)  dif x = limits(integral)((2x^3-10x^2+20x-35) + 70/(x+2)) dif x = \
         = limits(integral)2x^3 dif x  - limits(integral) 10x^2 dif x + limits(integral)20x dif x - limits(integral) 35 dif x + limits(integral) 70/(x+2) dif x = \
         = 2 limits(integral)x^3 dif x  -10 limits(integral) x^2 dif x + 20 limits(integral)x dif x - 35 limits(integral)  dif x + 70 limits(integral) 1/(x+2) dif x = \
-        = 2 x^4/4 -10 x^3/3 + 20 x^2/2 + 70 ln (|x+2|) \
-        = #result($1/2 x^2 -10/3x^3 + 10x^2 + 70 ln (|x+2|) + C $))
+        = 2 x^4/4 -10 x^3/3 + 20 x^2/2 + 70 ln |x+2| \
+        = #result($1/2 x^2 -10/3x^3 + 10x^2 + 70 ln |x+2| + C $))
         $ 
       ]
     ],
@@ -108,13 +108,25 @@
      [
       #subquestion()[$display(limits(integral) (2x^4+6x-3)/(x-2)  dif x)$]
       #solution()[
-        $display(a)$
+            Dividiendo y utilizando el algoritmo de la fivisión de polinomios, podemos concluir que:
+
+        $display(2x^4+6x-3 = (2x^3+4x^2+8x+22)(x-2) + 41 => \
+        (2x^4+6x-3)/(x-2) = 2x^3+4x^2+8x+22 + 41/(x-2))$
+
+        $display(limits(integral) (2x^4+6x-3)/(x-2) dif x = 
+        limits(integral) (2x^3+4x^2+8x+22) + 41/(x-2) = \
+        2 x^4/4 +4 x^3/3 + 8 x^2/2 +  22 x + 41 ln|x-2|  = 
+        #result($display(1/2 x^4 + 4/3 x^3+4x^2+22x +41 ln|x-2|+C)$) ) $
       ]
     ],
     [
       #subquestion()[$display(limits(integral) root(3, (7x-6)^2) dif x)$]
       #solution()[
-        $display(a)$
+        $display(limits(integral) root(3, (7x-6)^2) dif x = 
+        limits(integral) (7x-6)^(2/3) dif x = 
+        1/7 limits(integral) 7 (7x-6)^(2/3) dif x = 1/7 (7x-6)^(5/3)/(5/3) = \
+        =#result($display(3/35 root(3,(7x-6)^5) + C)$)
+        )$ 
       ]
     ],
     [
