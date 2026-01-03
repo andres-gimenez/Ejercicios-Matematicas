@@ -27,7 +27,7 @@
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: true,
+  show-solutions: config.at("show-solutions"),
   // draft: true,
   question-points-position: none,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -230,44 +230,126 @@
     [
       #subquestion()[$display(limits(integral) x e^x   dif x)$]
       #solution()[
+        $display(
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  u = x,
+                  dif v = e^x dif x,
+                ) =>
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  dif u = dif x,
+                  v = limits(integral) e^x dif x = e^x,
+                )
+        )$
+
+        $display(limits(integral) x e^x dif x) = 
+        x e^x - limits(integral) e^x dif x = x e^x - e^x =
+        #result($(x-1) e^x + C$)$
       ]
     ],
      [
-      #subquestion()[$display(limits(integral) x ln x dif x)$]
+      #subquestion()[$display(limits(integral) x ln(x) dif x)$]
       #solution()[
+        $display(
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  u = ln(x),
+                  dif v = x dif x,
+                ) =>
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  dif u = 1/x dif x,
+                  v = limits(integral) x dif x = x^2/2,
+                )
+        )$
+
+        $display(limits(integral) x ln(x) dif x = 
+        x^2/2 ln(x) - limits(integral) x^2/2 dot 1/x dif x = 
+        x^2/2 ln(x) - limits(integral) x/2 dif x = 
+        display(x^2/2 ln(x) - x^2/4 ) = \ = 
+        #result($display(1/4 x^2(2 ln(x) - 1) + C)$)
+        )$
       ]
     ],
-     [
+    [
       #subquestion()[$display(limits(integral) x cos(x)  dif x)$]
       #solution()[
+        $display(
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  u = x,
+                  dif v = cos(x) dif x,
+                ) =>
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  dif u = dif x,
+                  v = limits(integral) cos(x) dif x = "sen"(x),
+                )
+        )$
+
+        $display(limits(integral) x cos(x) dif x = 
+        x "sen"(x) - limits(integral) "sen"(x) dif x = 
+        x "sen"(x) - (-cos(x)) =
+        #result($x "sen"(x) + cos(x) + C$))$
       ]
     ],
-     [
-      #subquestion()[$display(limits(integral) e^x sin(x)  dif x)$]
+    [
+      #subquestion()[$display(limits(integral) e^x "sen"(x)  dif x)$]
       #solution()[
+        $display(
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  u = e^x,
+                  dif v = "sen"(x) dif x,
+                ) =>
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  dif u = e^x dif x,
+                  v = limits(integral) "sen"(x) dif x = -"cos"(x),
+                )
+        )$
+
+        $display(limits(integral) e^x "sen"(x) dif x = 
+        - e^x "cos"(x) - limits(integral) e^x (-"cos"(x)) dif x = \ =
+        -e^x "cos"(x) + limits(integral) e^x cos(x) dif x)$
+
+        $display(
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  u = e^x,
+                  dif v = "cos"(x) dif x,
+                ) =>
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  dif u = e^x dif x,
+                  v = limits(integral) "cos"(x) dif x = "sen"(x),
+                )
+        )$
+
+        $display(-e^x "cos"(x) + limits(integral) e^x cos(x) dif x = - e^x "cos"(x) + e^x "sen(x)" - limits(integral) e^x "sen"(x) dif x )$
+
+        Si llamamos $display(I = limits(integral) e^x "sen"(x)  dif x)$ tenemos que:
+
+        $display(I =  - e^x "cos"(x) + e^x "sen(x)" - I => 2I = e^x ("sen(x)" - "cos"(x)) => \ =>
+        I = 1/2 e^x ("sen"(x) - "cos"(x)))$
+
+        Luego:
+
+        $#result($display(limits(integral) e^x "sen"(x)  dif x) = 1/2 e^x ("sen"(x) - "cos"(x)) +C $)$
       ]
     ],
-     [
+    [
       #subquestion()[$display(limits(integral) x^2 e^(-x)  dif x)$]
       #solution()[
       ]
     ],
-     [
+    [
       #subquestion()[$display(limits(integral) sec^2 (x) dif x)$]
       #solution()[
       ]
     ],
-     [
+    [
       #subquestion()[$display(limits(integral) cos^3(x)  dif x)$]
       #solution()[
       ]
     ],
-     [
+    [
       #subquestion()[$display(limits(integral) sin(x) sqrt(1+cos^2 x) dif x)$]
       #solution()[
       ]
     ],
-     [
+    [
       #subquestion()[$display(limits(integral) 1/(sin(x) cos(x)) dif x)$]
       #solution()[
       ]

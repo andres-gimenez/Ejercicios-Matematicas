@@ -2,6 +2,8 @@
 #import "@preview/cetz:0.4.2"
 #import "@preview/cetz-plot:0.1.3"
 
+#let config = yaml("../../config.yaml")
+
 #show: exam.with(
   author: (
     name: "Andrés Jorge Giménez Muñoz", 
@@ -9,8 +11,8 @@
     watermark: "Profesor: Andrés",
   ),
   school: (
-    name: "IES Gabriela Mistral",
-    logo:image("../logo-ies_gabriela_mistral.png")
+    name: config.at("school").at("name"),
+    logo:image("../../" + config.at("school").at("logo"))
   ),
   exam-info: (
     academic-period: "Curso 2025/2026",
@@ -23,10 +25,9 @@
   
   language: "es",
   decimal-separator: ",",
-  date: datetime(year: 2025, month: 10, day: 22),
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: true,
+  show-solutions: config.at("show-solutions"),
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -190,19 +191,23 @@
       #solution()[
        
 
-        $display(f(x) = |x-3| + |x| = cases(reverse: #false, delim: "{", gap: #1em,
+        $display(f(x) = |x-3| + |x| = 
+        cases(reverse: #false, delim: "{", gap: #1em,
                   & -&x + 3  & "si" & x < 3,
                   &  &x - 3 & "si" & x >= 3,
-                ) + cases(reverse: #false, delim: "{", gap: #1em,
+                ) 
+        + cases(reverse: #false, delim: "{", gap: #1em,
                   & -&x & "si" & x < 0,
                   & &x & "si" & x > 0,
-                ) = cases(reverse: #false, delim: "{", gap: #1em,
+                ) 
+        = cases(reverse: #false, delim: "{", gap: #1em,
                   & -&2x + &3  & "si" & x < 0,
                   & & & 3  & "si" & 0 <= x < 3,
                   & &2x - &3 & "si" & x >= 3,
                 )) $ 
 
-        $display(f'(x) = cases(reverse: #false, delim: "{", gap: #1em,
+        $display(f'(x) = 
+        cases(reverse: #false, delim: "{", gap: #1em,
                   & -&2  & "si" & x < 0,
                   & &0  & "si" & 0 < x < 3,
                   & &2 & "si" & x > 3,
