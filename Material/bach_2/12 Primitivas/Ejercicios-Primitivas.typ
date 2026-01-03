@@ -291,7 +291,6 @@
       #subquestion()[$display(limits(integral) e^(2x)/(1+e^(2x))  dif x)$]
       #solution()[
       ]
-    // ],
     ],
     [
       #subquestion()[$display(limits(integral) x sqrt(x + 2)  dif x)$]
