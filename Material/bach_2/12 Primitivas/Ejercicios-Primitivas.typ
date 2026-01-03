@@ -132,37 +132,29 @@
     [
       #subquestion()[$display(limits(integral) (7x^4-5x^2+3x-4)/x^2  dif x)$]
       #solution()[
-        $display(a)$
+        $display(limits(integral) (7x^4-5x^2+3x-4)/x^2 dif x = limits(integral) ((7x^4)/x^2-(5x^2)/x^2+3x/x^2-4/x^2) dif x = \ =
+        limits(integral) (7x^2-5+3/x-4/x^2) dif x = 
+        limits(integral) 7x^2 dif x- limits(integral) 5 dif x+ limits(integral) 3/x dif x - limits(integral)4/x^2 dif x = \ =
+        7/3 x^3 - 5x +3 ln|x| - 4/x =
+        #result($display(7/3 x^3 - 5x- 4/x +3 ln|x| )$))$
       ]
     ],
     [
       #subquestion()[$display(limits(integral) (5x^3+6x^2-sqrt(2)x+sqrt(3))/x  dif x)$]
-      #solution()[
-        $display(a)$
-      ]
     ],
     [
       #subquestion()[$display(limits(integral) root(3,2x)/sqrt(3x)  dif x)$]
-      #solution()[
-        $display(a)$
-      ]
     ],
     [
-      #subquestion()[$display(limits(integral) 5 cos(x) + 3^x  dif x)$]
-      #solution()[
-        $display(a)$
-      ]
+      #subquestion(solution: $=#result($display(5"sen"(x) + 3^x / (ln 3) + C)$)$)[$display(limits(integral) 5 cos(x) + 3^x  dif x)$]
     ],
     [
-      #subquestion()[$display(limits(integral) 10^x - 5^x  dif x)$]
-      #solution()[
-        $display(a)$
-      ]
+      #subquestion(solution: $=#result($display(10^x / (ln 10) + 5^x / (ln 5) + C)$)$)[$display(limits(integral) 10^x - 5^x  dif x)$]
     ],
     [
-      #subquestion()[$display(limits(integral) 3/(x^2+1)  dif x)$]
+      #subquestion(solution: $=#result($display(3 arctan(x)+ C)$)$)[$display(limits(integral) 3/(x^2+1)  dif x)$]
       #solution()[
-        $display(a)$
+        
       ]
     ],
     // [
