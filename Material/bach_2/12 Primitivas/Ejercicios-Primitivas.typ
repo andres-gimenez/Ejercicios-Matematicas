@@ -345,13 +345,46 @@
       ]
     ],
     [
-      #subquestion()[$display(limits(integral) sin(x) sqrt(1+cos^2 x) dif x)$]
+      #subquestion()[$display(limits(integral) "sen"(x) sqrt(1+cos^2 x) dif x)$]
       #solution()[
       ]
     ],
     [
-      #subquestion()[$display(limits(integral) 1/(sin(x) cos(x)) dif x)$]
+      #subquestion()[$display(limits(integral) 1/("sen"(x) cos(x)) dif x)$]
       #solution()[
+        *1ª Forma:*
+        Hacemos el cambio de variable $display(t = "sen"(x) => dif t = cos(x) dif x )$
+
+        $display(limits(integral) 1/("sen"(x) cos(x)) dif x = 
+        limits(integral) 1/"sen"(x) dot  cos(x)/(cos^2(x)) dif x = 
+        limits(integral) 1/"sen"(x) dot  cos(x)/(1 - "sen"^2(x)) dif x = 
+        limits(integral) 1/(t (1-t^2)) dif t)$
+
+        Si tomamos :
+
+        $display(A/t + B/(1-t^2) = (A(1-t^2) + B t) / t(1-t^2)) => 
+        A(1-t^2) + B t = 1 => A - A t^2 + B t = 1 => A= 1 "y" B = t $
+         
+        $display(limits(integral) 1/(t (1-t^2)) dif t = 
+        limits(integral) 1/t + t/(1-t^2) dif t = 
+        limits(integral) 1/t dif t + limits(integral) -1/2 (-2t)/(1-t^2) dif t = \ =
+        ln abs(t) - 1/2 ln abs(1-t^2) = 
+        ln abs("sen"(t)) - 1/2 ln abs(1-"sen"^2(x)) =
+        ln abs("sen"(t)) - 1/2 ln abs(cos^2(x)) = \ =
+        ln abs("sen"(t)) - ln sqrt(abs(cos^2(x))) = 
+        ln abs("sen"(t)) - ln abs(cos(x)) =
+        ln abs("sen"(t)/cos(x)) 
+        =#result($display(ln abs(tan(x))) + C$)  )$
+
+        *2ª Forma:*
+
+        $display(limits(integral) 1/("sen"(x) cos(x)) dif x =
+        limits(integral) ("sen"^2(x) + cos^2(x))/("sen"(x) cos(x)) dif x = 
+        limits(integral) (("sen"^2(x)) /("sen"(x) cos(x)) + ("cos"^2(x)) /("sen"(x) cos(x))) dif x = \ =
+        - limits(integral) (-"sen"(x)) /cos(x) dif x + limits(integral) ("cos"(x)) /("sen"(x)) dif x = 
+        - ln|cos(x)| + ln abs("sen"(x)) = ln abs("sen"(x)/cos(x))  = 
+        #result($display(ln|tg(x)| +C)$)  )
+        $
       ]
     ],
     [
