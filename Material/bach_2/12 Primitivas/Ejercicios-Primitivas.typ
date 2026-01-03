@@ -296,7 +296,6 @@
     [
       #subquestion()[$display(limits(integral) x sqrt(x + 2)  dif x)$]
       #solution()[
-        $display(a)$
       ]
     ],
     )
