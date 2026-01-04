@@ -490,7 +490,7 @@
           limits(integral) (1/x + 2/(x+1)) dif x =
           #result($display(ln abs(x) + 2 ln abs(x+1) + C)$))$
 
-        Resultado alternativa:
+        Resultado alternativo:
 
         $display(ln abs(x) + 2 ln abs(x+1) + C = 
           ln abs(x) + 2 ln abs(x+1) + ln K = 
