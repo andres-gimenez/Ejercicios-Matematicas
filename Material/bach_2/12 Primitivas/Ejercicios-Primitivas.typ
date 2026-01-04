@@ -533,7 +533,7 @@
         Se puede hacer de forma inmediata teniendo en cuenta que $(x^2-9)' = 2x$
 
         $display(limits(integral) (2x)/(x^2 - 9) dif x =
-          #result($display(ln abs(x^2-9) + C)))$) = 
+          #result($display(ln abs(x^2-9) + C)$) = 
           #result($display(ln abs(K(x^2+9)))$)
         )$
       ]
