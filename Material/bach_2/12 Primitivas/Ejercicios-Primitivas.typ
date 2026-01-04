@@ -196,16 +196,21 @@
      [
       #subquestion(solution: $display(=1/5 limits(integral) 5 cos(5x+1)  dif x) = #result($display(1/5 "sen"(5x+1) + C)$)$)[$display(limits(integral)cos(5x+1)  dif x)$]
     ],
-     [
+    [
       #subquestion(solution: $display(=1/2limits(integral) 2x e^(x^2)  dif x = #result($display((e^x^2)/2) + C$)) $)[$display(limits(integral) x e^(x^2)  dif x)$]
+    ],
+    [
+      #subquestion()[$display(limits(integral) 1/(2x+1)^3 dif x)$]      
       #solution()[
-        
+        $display(limits(integral) 1/(2x+1)^3 dif x =
+        limits(integral) (2x+1)^(-3) dif x = 
+        1/2 limits(integral) 2 (2x+1)^(-3) dif x =
+        1/2 (2x+1)^(-2)/(-2) = \ =
+        #result($display(-1/(4(2x+1)^2) + C)$)
+        )$
       ]
     ],
     [
-      #subquestion(solution: $display(=1/2 dot (-(2)/(4(2x+1)^2)) = #result($display(-1/(4(2x+1)^2) + C)$))$)[$display(limits(integral) 1/(2x+1)^3 dif x)$]      
-    ],
-     [
       #subquestion(solution: $display(=limits(integral) "sen"(x)/cos(x)  dif x = #result($display(-ln|cos(x)| +C)$))$)[$display(limits(integral) "tan"(x)  dif x)$]
     ],
      [
@@ -213,7 +218,8 @@
       #solution()[
       ]
     ],
-     [
+    [
+      // ToDo: Mover a integra racional
       #subquestion()[$display(limits(integral) (x + 3)/(x^2 + 6x + 10)  dif x)$]
       #solution()[
         $display(limits(integral) (x + 3)/(x^2 + 6x + 10)  dif x = 
@@ -350,6 +356,7 @@
       ]
     ],
     [
+      // ToDo: Mover a otra categoría de integrales.
       #subquestion()[$display(limits(integral) 1/("sen"(x) cos(x)) dif x)$]
       #solution()[
         *1ª Forma:*
@@ -420,26 +427,115 @@
     [
       #subquestion()[$display(limits(integral) 1/(x^2+4)  dif x)$]
       #solution()[
+        $display(limits(integral) 1/(x^2+4)  dif x = 
+        limits(integral) (1/4)/((1/4)(x^2+4)) dif x =
+        limits(integral) (1/4)/((x^2+4)/4) dif x =
+        limits(integral) (1/4)/(((x/2)^2+4/4)) dif x =
+        limits(integral) 1/2 (1/2)/(((x/2)^2+1)) dif x = \ =
+        1/2  limits(integral) (1/2)/((1+(x/2)^2)) dif x =
+        #result($display(1/2 arctan(x/2) + C)$)
+        )$
       ]
     ],[
       #subquestion()[$display(limits(integral)(x+1)^2/(x^(-1))  dif x)$]
       #solution()[
+        $display(limits(integral)(x+1)^2/(x^(-1)) dif x = 
+        limits(integral)(x(x+1)^2)) dif x = 
+        limits(integral)(x(x^2+2X+1)) dif x = 
+        limits(integral)(x^3+2x^2+x) dif x = \ =
+        #result($display(1/4 x^4 + 2/3 x^3 + x^2/x + C)$)
+        $
       ]
     ],[
       #subquestion()[$display(limits(integral)(x+1)^2/(x-1)  dif x)$]
       #solution()[
+        $display(limits(integral)(x+1)^2/(x-1)  dif x =
+        limits(integral)(x^2+2x+1)/(x-1) dif x) $
+
+        Usando el algoritmo de la división:
+
+        $display(x^2 +2x+1 = (x+3)(x-1) + 4 => (x^2 +2x+1)/(x-1) = (x+3) + 4/(x-1))$
+
+        $display(limits(integral)(x^2+2x+1)/(x-1) dif x =
+        limits(integral) (x+3) + 4/(x-1) dif x =
+        #result($display(x^2/2 + 3x + 4 ln abs(x-1) + C)$)
+        ) $
       ]
     ],[
+      // ToDo: Quitar por estar repetida.
       #subquestion()[$display(limits(integral) 1/(x^2 + 4) dif x)$]
       #solution()[
       ]
     ],[
       #subquestion()[$display(limits(integral) (3x + 1)/(x^2 + x) dif x)$]
       #solution()[
+        $display(limits(integral) (3x + 1)/(x^2 + x) dif x = 
+        limits(integral) (3x + 1)/(x(x + 1)) dif x)$
+
+        Tenemos que poner $display((3x + 1)/(x(x + 1)) = A/x + B/(x+1))$
+
+        $display(A/x + B/(x+1) = (A(x+1) + B x)/ (x(x+1)) = 
+        (A x + A + B x) / (x(x+1)) = ((A + B) x + A) / (x(x+1)) =>
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  A + B = 3,
+                  A = 1,
+                ) =>
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  A = 1,
+                  B = 2,
+                ) 
+                )$
+
+        $display(limits(integral) (3x + 1)/(x(x + 1)) dif x = 
+          limits(integral) (1/x + 2/(x+1)) dif x =
+          #result($display(ln abs(x) + 2 ln abs(x+1) + C)$))$
+
+        Resultado alternativa:
+
+        $display(ln abs(x) + 2 ln abs(x+1) + C = 
+          ln abs(x) + 2 ln abs(x+1) + ln K = 
+          ln (K x (x+1)^2 ) =
+          #result($display(ln abs(K (x^3 + 2x^2 +x)))$))$
+
       ]
     ],[
       #subquestion()[$display(limits(integral) (2x)/(x^2 - 9) dif x)$]
       #solution()[
+        *Forma 1:*
+        $display(limits(integral) (2x + 1)/(x^2 - 9) dif x = 
+        limits(integral) (2x + 1)/(x^2 - 3^2) dif x = 
+        limits(integral) (2x + 1)/((x+3)(x - 3)) dif x = 
+        )$
+
+        Tenemos que poner $display((2x + 1)/((x+3)(x - 3)) = A/(x+3) + B/(x-3))$
+
+        $display(A/(x+3) + B/(x-3) = (A(x-3) + B (x+3))/ ((x+3)(x-3)) = 
+        (A x - 3 A + B x + 3 B) / ((x+3)(x-3)) = ((A + B) x + (-3 A + 3B)) / ((x+3)(x-3)) =>
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  & &  &A  &+ &B = 2,
+                  &-&3 &A  &+ 3 &B = 0,
+                ) =>
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  A = 1,
+                  B = 1,
+                ) 
+                )$
+
+        $display(limits(integral) (2x)/(x(x + 1)) dif x = 
+          limits(integral) (1/(x+3) + 1/(x-3)) dif x =
+          ln abs(x+3) + ln  abs(x-3) = 
+          ln abs((x+3)(x-3)) = \
+          ln abs(x^2+3^2) = 
+          #result($display(ln abs(x^2+9) + C)$) = 
+          #result($display(ln abs(K(x^2+9)))$))$
+
+        *Forma 2:*
+        Se puede hacer de forma inmediata teniendo en cuenta que $(x^2-9)' = 2x$
+
+        $display(limits(integral) (2x)/(x^2 - 9) dif x =
+          #result($display(ln abs(x^2-9) + C)))$) = 
+          #result($display(ln abs(K(x^2+9)))$)
+        )$
       ]
     ],[
       #subquestion()[$display(limits(integral) 1/((x-1)(x+2)) dif x)$]
