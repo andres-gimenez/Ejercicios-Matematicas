@@ -570,8 +570,33 @@
       #solution()[
       ]
     ],[
-      #subquestion()[$display(limits(integral)(2x+3)/((x-1)(x^2+1)))  dif x)$]
+      #subquestion()[$display(limits(integral)(2x+3)/((x-1)(x^2+1)) dif x)$]
       #solution()[
+        Tenemos que poner $display((2x+3)/((x-1)(x^2+1)) = A /(x-1) + (B x + C)/(x^2 + 1))$
+
+        $display((2x+3)/((x-1)(x^2+1)) = A /(x-1) + (B x + C)/(x^2 + 1) = 
+          (A(x^2 + 1) + (B x + C)(x - 1))/((x-1)(x^2+1)) = \ =
+          (A x^2 + A + B x^2 - B x + C x - C)/((x-1)(x^2+1)) = 
+          ((A + B) x^2 + (- B + C) x + A - C)/((x-1)(x^2+1)) => \
+           cases(reverse: #false, delim: "{", gap: #1em,
+                  & &A + B &= 0, 
+                  &-&B + C &= 2,
+                  & &A - C &=3
+                ) =>
+            cases(reverse: #false, delim: "{", gap: #1em,
+                  &A &= 5/2, 
+                  &B &= -5/2,
+                  &C &= -1/2
+                )
+        )$
+
+        $display(limits(integral)(2x+3)/((x-1)(x^2+1)) dif x = 
+        limits(integral) (5/2 /(x-1) + (-5/2 x - 1/2)/(x^2 + 1)) dif x =
+        limits(integral) (5/2 /(x-1) - (5/2 x)/(x^2 + 1) - (1/2)/(x^2 + 1)) dif x = \ =
+
+        5/2 limits(integral) 1/(x-1) dif x - 5/4 limits(integral) (2x)/(x^2 + 1) dif x - 1/2 limits(integral) 1/(x^2+1) dif x = \ =
+        #result($display(5/2 ln abs(x) - 5/4 ln abs(x^2+1) -1/2 arctan(x) +C )$)
+        )$
       ]
     ],[
       #subquestion()[$display(limits(integral)(x^3+22x^2-12x+8)/(x^4-4x^2) dif x)$]
@@ -585,11 +610,43 @@
     [
       #subquestion()[$display(limits(integral) 1/((x+1)sqrt(x))  dif x)$ #h(3mm) (haciendo $x=t^2$)]
       #solution()[
+        Hace os el cambio de variable $display(x= t^2 => t = sqrt(x) => dif t = 1/(2 sqrt(x)) dif x)$
+
+        $display(limits(integral) 1/((x+1)sqrt(x))  dif x = 
+        limits(integral) (2)/((x+1)(2sqrt(x))) dif x = 
+        limits(integral) (2)/(x+1) dot 1/(2sqrt(x)) dif x = 
+        limits(integral) (2)/(t^2+1) dif t = 
+        2 limits(integral) 1/(t^2+1) dif t =\ =
+        2 arctan(t)
+        )$
+
+        Deshaciendo el cambio de variable:
+        
+        $display(2 arctan(t) = #result($display(2 arctan(sqrt(x)) + C)$))$
       ]
     ],
     [
       #subquestion()[$display(limits(integral) sqrt(x)/(x+1)  dif x)$ #h(3mm) (haciendo $x=t^2$)]
       #solution()[
+        Hace os el cambio de variable $display(x= t^2 => t = sqrt(x) => dif t = 1/(2 sqrt(x)) dif x)$
+
+        $display(limits(integral) sqrt(x)/(x+1)  dif x = 
+        limits(integral) (sqrt(x))^2/((x+1)sqrt(x)) dif x = 
+        limits(integral) x/((x+1)sqrt(x)) dif x = 
+        limits(integral) (2x)/((x+1)(2sqrt(x))) dif x = 
+        limits(integral) (2x)/(x+1) dot 1/(2sqrt(x)) dif x = \ =
+        limits(integral) (2t^2)/(t^2+1) dif t = 
+        2 limits(integral) t^2/(t^2+1) dif t =
+        2 limits(integral) (t^2 +1 - 1)/(t^2+1) dif t =
+        2 limits(integral) ((t^2 +1)/(t^2+1) - 1/(t^2+1)) dif t = \ =
+        2 limits(integral) (1 - 1/(t^2+1)) dif t =
+        2 (limits(integral) 1 - limits(integral) 1/(t^2+1)) dif t =
+        2 (t - arctan(t)) = 
+        )$
+
+        Deshaciendo el cambio de variable:
+        
+        $display(2 (t - arctan(t)) = #result($display(2 (sqrt(x) - arctan(sqrt(x))) + C)$))$
       ]
     ],
     [
