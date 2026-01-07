@@ -1,5 +1,15 @@
 # EjerciciosMatematicas
 
+## Explorta typst 
+
+```bash
+typst compile ./Pruebas/pruebahtml.typ --format html --features html prueba.html  --root .
+```
+
+```bash
+typst compile ./Material/bach_2/9\ Derivadas/Ejercicios-Derivadas.typ --format svg  prueba{0p}-{t}.svg  --root .
+```
+
 ## Instalar LaTeX
 
 #### Document Viewer:
