@@ -82,7 +82,7 @@
         $display(2x^4 - 6x^3 + 5x = (2x^3-10x^2+20x-35)(x+2) + 70 => \ 
         =>(2x^4 - 6x^3 + 5x)/(x+2) = (2x^3-10x^2+20x-35) + 70 / (x+2)) $
 
-        $display(limits(integral)(2x^4 - 6x^3 + 5x)/(x+2)  dif x = limits(integral)((2x^3-10x^2+20x-35) + 70/(x+2)) dif x = \
+        $display(limits(integral)(2x^4 - 6x^3 + 5x)/(x+2)  dif x = limits(integral)(2x^3-10x^2+20x-35) + 70/(x+2) dif x = \
         = limits(integral)2x^3 dif x  - limits(integral) 10x^2 dif x + limits(integral)20x dif x - limits(integral) 35 dif x + limits(integral) 70/(x+2) dif x = \
         = 2 limits(integral)x^3 dif x  -10 limits(integral) x^2 dif x + 20 limits(integral)x dif x - 35 limits(integral)  dif x + 70 limits(integral) 1/(x+2) dif x = \
         = 2 x^4/4 -10 x^3/3 + 20 x^2/2 + 70 ln |x+2| \
@@ -94,7 +94,7 @@
       #subquestion()[$display(limits(integral)(root(3, x) + sqrt(5x^3))/(3x)  dif x)$]
       #solution()[
         $display(limits(integral)(root(3, x) + sqrt(5x^3))/(3x) dif x = 
-        limits(integral)(root(3, x)/(3x) + (sqrt(5x^3))/(3x))  dif x = 
+        limits(integral)root(3, x)/(3x) + (sqrt(5x^3))/(3x) dif x = 
         limits(integral)root(3, x)/(3x) dif x + (sqrt(5x^3))/(3x)  dif x = \ 
         limits(integral) root(3, x)/(3x) dif x + limits(integral) sqrt(5x^3)/(3x)dif x =
         limits(integral) 1/3  x^(1/3)/x dif x + limits(integral) sqrt(5)/3 x^(3/2)/x dif x =
@@ -132,8 +132,9 @@
     [
       #subquestion()[$display(limits(integral) (7x^4-5x^2+3x-4)/x^2  dif x)$]
       #solution()[
-        $display(limits(integral) (7x^4-5x^2+3x-4)/x^2 dif x = limits(integral) ((7x^4)/x^2-(5x^2)/x^2+3x/x^2-4/x^2) dif x = \ =
-        limits(integral) (7x^2-5+3/x-4/x^2) dif x = 
+        $display(limits(integral) (7x^4-5x^2+3x-4)/x^2 dif x = 
+        limits(integral) (7x^4)/x^2-(5x^2)/x^2+3x/x^2-4/x^2 dif x = \ =
+        limits(integral) 7x^2-5+3/x-4/x^2 dif x = 
         limits(integral) 7x^2 dif x- limits(integral) 5 dif x+ limits(integral) 3/x dif x - limits(integral)4/x^2 dif x = \ =
         7/3 x^3 - 5x +3 ln|x| - 4/x =
         #result($display(7/3 x^3 - 5x- 4/x +3 ln|x| + C )$))$
@@ -147,6 +148,9 @@
     ],
     [
       #subquestion(solution: $=#result($display(5"sen"(x) + 3^x / (ln 3) + C)$)$)[$display(limits(integral) 5 cos(x) + 3^x  dif x)$]
+    ],
+    [
+      #subquestion(solution: $display(=tan(x) +C)$)[$display(limits(integral) sec^2 (x) dif x)$]
     ],
     [
       #subquestion(solution: $=#result($display(10^x / (ln 10) + 5^x / (ln 5) + C)$)$)[$display(limits(integral) 10^x - 5^x  dif x)$]
@@ -219,7 +223,6 @@
       ]
     ],
     [
-      // ToDo: Mover a integra racional
       #subquestion()[$display(limits(integral) (x + 3)/(x^2 + 6x + 10)  dif x)$]
       #solution()[
         $display(limits(integral) (x + 3)/(x^2 + 6x + 10)  dif x = 
@@ -341,18 +344,59 @@
       ]
     ],
     [
-      #subquestion()[$display(limits(integral) sec^2 (x) dif x)$]
-      #solution()[
-      ]
-    ],
-    [
       #subquestion()[$display(limits(integral) cos^3(x)  dif x)$]
       #solution()[
-      ]
-    ],
-    [
-      #subquestion()[$display(limits(integral) "sen"(x) sqrt(1+cos^2 x) dif x)$]
-      #solution()[
+        *1ª Forma*
+        $display(limits(integral) cos^3(x)  dif x =
+          limits(integral) cos^2(x) cos(x)  dif x)$
+
+        $display(
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  u = cos^2(x),
+                  dif v = "cos"(x) dif x,
+                ) =>
+          cases(reverse: #false, delim: "{", gap: #1em,
+                  dif u = -2cos(x)"sen"(x) dif x,
+                  v = limits(integral) "cos"(x) dif x = "sen"(x),
+                )
+        )$
+
+        $display(limits(integral) cos^2(x) cos(x) dif x =
+          cos^2(x)"sen"(x) - limits(integral) -2 cos(x) "sen"^2(x) dif x = \ =
+          cos^2(x)"sen"(x) + 2 limits(integral) cos(x) "sen"^2(x) dif x =
+          cos^2(x)"sen"(x) + 2 ("sen"^3(x))/3 = \ = 
+          (1- "sen"^2(x)) "sen"(x) + 2/3 "sen"^3(x) = "sen"(x)- "sen"^3(x) + 2/3 "sen"^3(x) = \ =
+          #result($display("sen"(x) - ("sen"^3(x))/3) + C$)          
+        )$
+
+
+        *2ª Forma*
+
+        $display(limits(integral) cos^3(x)  dif x = 
+          limits(integral) cos^2(x) cos(x) dif x =
+          limits(integral) (1-"sen"^2(x)) cos(x) dif x)$
+
+        Hacemos el cambio de variable $t = "sen"(x) =>dif t = cos(x) dif x$
+
+        $display(limits(integral) (1-"sen"^2(x)) dot cos(x) dif x =
+          limits(integral) 1-t^2 dif t = t - (t^3)/3 + C
+          )$
+
+        Deshaciendo el cambio de variable
+
+        $display(t - (t^3)/3 + C = #result($display("sen"(x) - ("sen"^3(x))/3) + C$)
+        )$
+
+        *3ª Forma*
+
+        $display(limits(integral) cos^3(x)  dif x = 
+          limits(integral) cos(x) cos^2(x)  dif x =
+          limits(integral) cos(x) (1-"sen"^2(x))  dif x = \ =
+          limits(integral) cos(x) - cos(x) "sen"^2(x)  dif x =
+          limits(integral) cos(x) dif x - limits(integral) cos(x) "sen"^2(x)  dif x =
+          #result($display("sen"(x) - ("sen"^3(x))/3) + C$)
+          )$
+
       ]
     ],
     [
@@ -387,7 +431,7 @@
 
         $display(limits(integral) 1/("sen"(x) cos(x)) dif x =
         limits(integral) ("sen"^2(x) + cos^2(x))/("sen"(x) cos(x)) dif x = 
-        limits(integral) (("sen"^2(x)) /("sen"(x) cos(x)) + ("cos"^2(x)) /("sen"(x) cos(x))) dif x = \ =
+        limits(integral) ("sen"^2(x)) /("sen"(x) cos(x)) + ("cos"^2(x)) /("sen"(x) cos(x)) dif x = \ =
         - limits(integral) (-"sen"(x)) /cos(x) dif x + limits(integral) ("cos"(x)) /("sen"(x)) dif x = 
         - ln|cos(x)| + ln abs("sen"(x)) = ln abs("sen"(x)/cos(x))  = 
         #result($display(ln|tg(x)| +C)$)  )
@@ -440,10 +484,10 @@
       #subquestion()[$display(limits(integral)(x+1)^2/(x^(-1))  dif x)$]
       #solution()[
         $display(limits(integral)(x+1)^2/(x^(-1)) dif x = 
-        limits(integral)(x(x+1)^2)) dif x = 
-        limits(integral)(x(x^2+2X+1)) dif x = 
-        limits(integral)(x^3+2x^2+x) dif x = \ =
-        #result($display(1/4 x^4 + 2/3 x^3 + x^2/x + C)$)
+        limits(integral)x(x+1)^2 dif x = 
+        limits(integral)x(x^2+2x+1) dif x = 
+        limits(integral)x^3+2x^2+x dif x = \ =
+        #result($display(1/4 x^4 + 2/3 x^3 + x^2/x + C)$))
         $
       ]
     ],[
@@ -487,7 +531,7 @@
                 )$
 
         $display(limits(integral) (3x + 1)/(x(x + 1)) dif x = 
-          limits(integral) (1/x + 2/(x+1)) dif x =
+          limits(integral) 1/x + 2/(x+1) dif x =
           #result($display(ln abs(x) + 2 ln abs(x+1) + C)$))$
 
         Resultado alternativo:
@@ -522,7 +566,7 @@
                 )$
 
         $display(limits(integral) (2x)/(x(x + 1)) dif x = 
-          limits(integral) (1/(x+3) + 1/(x-3)) dif x =
+          limits(integral) 1/(x+3) + 1/(x-3) dif x =
           ln abs(x+3) + ln  abs(x-3) = 
           ln abs((x+3)(x-3)) = \
           ln abs(x^2+3^2) = 
@@ -591,9 +635,8 @@
         )$
 
         $display(limits(integral)(2x+3)/((x-1)(x^2+1)) dif x = 
-        limits(integral) (5/2 /(x-1) + (-5/2 x - 1/2)/(x^2 + 1)) dif x =
-        limits(integral) (5/2 /(x-1) - (5/2 x)/(x^2 + 1) - (1/2)/(x^2 + 1)) dif x = \ =
-
+        limits(integral) 5/2 /(x-1) + (-5/2 x - 1/2)/(x^2 + 1) dif x =
+        limits(integral) 5/2 /(x-1) - (5/2 x)/(x^2 + 1) - (1/2)/(x^2 + 1) dif x = \ =
         5/2 limits(integral) 1/(x-1) dif x - 5/4 limits(integral) (2x)/(x^2 + 1) dif x - 1/2 limits(integral) 1/(x^2+1) dif x = \ =
         #result($display(5/2 ln abs(x) - 5/4 ln abs(x^2+1) -1/2 arctan(x) +C )$)
         )$
@@ -638,7 +681,7 @@
         limits(integral) (2t^2)/(t^2+1) dif t = 
         2 limits(integral) t^2/(t^2+1) dif t =
         2 limits(integral) (t^2 +1 - 1)/(t^2+1) dif t =
-        2 limits(integral) ((t^2 +1)/(t^2+1) - 1/(t^2+1)) dif t = \ =
+        2 limits(integral) (t^2 +1)/(t^2+1) - 1/(t^2+1) dif t = \ =
         2 limits(integral) (1 - 1/(t^2+1)) dif t =
         2 (limits(integral) 1 - limits(integral) 1/(t^2+1)) dif t =
         2 (t - arctan(t)) = 
