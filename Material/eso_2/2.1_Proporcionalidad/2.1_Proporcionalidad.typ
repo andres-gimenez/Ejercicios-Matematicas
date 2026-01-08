@@ -4,9 +4,9 @@
 
 #show: exam.with(
   author: (
-    name: "Andrés Jorge Giménez Muñoz", 
-    email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andrés",
+    name: config.at("author").at("name"),
+    email: config.at("author").at("email"),
+    watermark: config.at("author").at("watermark"),
   ),
   school: (
    name: config.at("school").at("name"),
