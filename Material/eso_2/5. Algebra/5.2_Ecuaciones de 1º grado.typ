@@ -4,9 +4,9 @@
 
 #show: exam.with(
   author: (
-    name: "Andrés Jorge Giménez Muñoz", 
-    email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andrés",
+    name: config.at("author").at("name"),
+    email: config.at("author").at("email"),
+    watermark: config.at("author").at("watermark"),
   ),
   school: (
     name: config.at("school").at("name"),
@@ -26,7 +26,7 @@
   date: datetime(year:2025, month:1, day:8),
   show-student-data: false,
   show-grade-table: false,
-  question-point-position: right,
+  question-points-position: none,
   // question-text-parameters: (font:"OpenDyslexic")
 )
 
@@ -36,39 +36,6 @@
 // #set text(font:"OpenDyslexic")
 
 #set math.cases(reverse: true)
-
-#question()[Escribe las siguientes expresiones en notación algebraica:]
-#columns(2, gutter: 11pt)[
-  #subquestion()[El doble de un número.]
-  #subquestion()[La mitad de un número.]
-  #subquestion()[El doble de un número más su mitad.]
-  #subquestion()[La mitad de un número menos dos.]
-  #subquestion()[La mitad de un número, menos dos.]
-
-  #subquestion()[El triple de la mitad de un número.]
-#colbreak()
-  #subquestion()[La mitad del triple de un número.]
-  #subquestion()[El siguiente número a uno dado.]
-  #subquestion()[El triple de un número al sumarle siete.]
-
-  #subquestion()[Un número par.]
-  #subquestion()[Un número impar.]
-]
-
-#question()[Siendo los polinomios: 
-
-  $P[x] = 3x^4+5x^3-2x^2+4x-2$
-
-  $Q[x] = 5x^4-2x^3+5x^2-2x+4$
-
-  $R[x] = 3x^2+2x+3$
-
-  Calcula:
-  #subquestion()[$P[x] + Q[x] = $]
-  #subquestion()[$P[x] - Q[x] = $]
-  #subquestion()[$P[x] dot R[x] = $]
-  #subquestion()[$P[x] + Q[x] dot R[x] = $]
-]
 
 #question()[Resuelve las siguientes ecuaciones:]
 #columns(2, gutter: 11pt)[
