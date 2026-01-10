@@ -1,20 +1,19 @@
-#import "@preview/g-exam:0.4.2": *
+#import "@preview/g-exam:0.4.3": *
 
-// #set text(font:"OpenDyslexic")
-// #set text(font: "New Computer Modern")
+#let config = yaml("../../config.yaml")
 
 #show: exam.with(
   author: (
-    name: "Andrés Jorge Giménez Muñoz", 
-    email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andrés",
+    name: config.at("author").at("name"),
+    email: config.at("author").at("email"),
+    watermark: config.at("author").at("watermark"),
   ),
   school: (
-    name: "IES Fernando Fernán Gómez",
-    // logo:image("../../logo-ies_fernando_fernan_gomez.png")
+    name: config.at("school").at("name"),
+    logo:image("../../" + config.at("school").at("logo"))
   ),
   exam-info: (
-    academic-period: "Curso 2024/2025",
+    academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
     number: "Ejercicios",
@@ -27,7 +26,7 @@
   date: datetime(year:2025, month:1, day:21),
   show-student-data: false,
   show-grade-table: false,
-  question-point-position: right,
+  question-points-position: none,
   // question-text-parameters: (font:"OpenDyslexic")
 )
 

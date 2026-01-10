@@ -4,14 +4,13 @@
 
 #show: exam.with(
   author: (
-    name: "Andrés Jorge Giménez Muñoz", 
-    email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andrés",
+    name: config.at("author").at("name"),
+    email: config.at("author").at("email"),
+    watermark: config.at("author").at("watermark"),
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../../" + config.at("school").at("logo")),
-    watermark: "Profesor: Andrés",
+    logo:image("../../" + config.at("school").at("logo"))
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
