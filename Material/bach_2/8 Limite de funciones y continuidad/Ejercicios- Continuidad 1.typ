@@ -10,8 +10,8 @@
     watermark: "Profesor: Andrés",
   ),
   school: (
-    name: "IES Gabriela Mistral",
-    logo:image("../logo-ies_gabriela_mistral.png")
+    name: config.at("school").at("name"),
+    logo:image("../../" + config.at("school").at("logo"))
   ),
   exam-info: (
     // academic-period: "Curso 2025/2026",
