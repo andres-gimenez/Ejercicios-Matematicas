@@ -28,7 +28,7 @@
   date: datetime(year: 2025, month: 10, day: 22),
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: false,
+  show-solutions: config.at("show-solutions"),
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
@@ -123,7 +123,7 @@
       #solution()[]
     ],
     [
-      #subquestion()[$f(x) = |x+3|+|x-1|+|2x+4|)$]
+      #subquestion()[$f(x) = |x+3|+|x-1|+|2x+4|$]
       #solution()[]
     ],
     [

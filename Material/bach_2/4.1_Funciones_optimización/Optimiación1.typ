@@ -1,17 +1,17 @@
-#import "@preview/g-exam:0.4.3": *
+#import "@local/g-exam:0.4.4": *
 // #import "@preview/wrap-it:0.1.0": wrap-content
 
 #let config = yaml("../../config.yaml")
 
 #show: exam.with(
   author: (
-    name: "Andrés Jorge Giménez Muñoz", 
-    email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: Andrés",
+    name: config.at("author").at("name"),
+    email: config.at("author").at("email"),
+    watermark: config.at("author").at("watermark"),
   ),
   school: (
-    // name: "IES Gabriela Mistral",
-    // logo:image("../../logo-ies_gabriela_mistral.png")
+    name: config.at("school").at("name"),
+    logo:image("../../" + config.at("school").at("logo"))
   ),
   exam-info: (
     // academic-period: "Curso 2025/2026",

@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.3": *
+#import "@local/g-exam:0.4.4": *
 // #import "@preview/wrap-it:0.1.0": wrap-content
 
 #let config = yaml("../../config.yaml")
@@ -27,6 +27,7 @@
   date: datetime(year: 2025, month: 9, day: 1),
   show-student-data: false,
   show-grade-table: false,
+  show-solutions: config.at("show-solutions"),
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)

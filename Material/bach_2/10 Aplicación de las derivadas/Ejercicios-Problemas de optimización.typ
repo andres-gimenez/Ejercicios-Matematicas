@@ -28,7 +28,7 @@
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: false,
+  show-solutions: config.at("show-solutions"),
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
