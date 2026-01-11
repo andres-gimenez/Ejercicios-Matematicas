@@ -361,26 +361,26 @@
     ],
     [
       #question()[Una estatua tiene una altura h y está sobre un pedestal de altura H. ¿A que distancia de la base del pedestal debe situarse un observador para que el ángulo de visión de la estatua sea máximo?]
-      // #solution(color: red)[
-      //   Sea $d$ la distancia desde la base del pedestal hasta el observador.
-      //   El ángulo de visión de la estatua viene dado por
-      //   $ theta(d) = "arctan"((H + h) / d) - "arctan"(H / d) $
-      //   Derivando e igualando a cero para buscar los puntos críticos:
-      //   $ theta'(d) = - (H + h) / (d^2 + (H + h)^2) + H / (d^2 + H^2) = 0 => H / (d^2 + H^2) = (H + h) / (d^2 + (H + h)^2) $
+      #solution(color: red)[
+        Sea $d$ la distancia desde la base del pedestal hasta el observador.
+        El ángulo de visión de la estatua viene dado por
+        $ theta(d) = "arctan"((H + h) / d) - "arctan"(H / d) $
+        Derivando e igualando a cero para buscar los puntos críticos:
+        $ theta'(d) = - (H + h) / (d^2 + (H + h)^2) + H / (d^2 + H^2) = 0 => H / (d^2 + H^2) = (H + h) / (d^2 + (H + h)^2) $
         
-      //   $ H (d^2 + (H + h)^2) = (H + h) (d^2 + H^2) => H d^2 + H (H + h)^2 = (H + h) d^2 + (H + h) H^2 \ 
+        $ H (d^2 + (H + h)^2) = (H + h) (d^2 + H^2) => H d^2 + H (H + h)^2 = (H + h) d^2 + (H + h) H^2 \ 
         
-      //   => H d^2 - (H + h) d^2 = (H + h) H^2 - H (H + h)^2 => -h d^2 = (H + h) H^2 - H (H^2 + 2 H h + h^2) \ 
+        => H d^2 - (H + h) d^2 = (H + h) H^2 - H (H + h)^2 => -h d^2 = (H + h) H^2 - H (H^2 + 2 H h + h^2) \ 
         
-      //   => -h d^2 = (H + h) H^2 - H^3 - 2 H^2 h - H h^2 => -h d^2 = H^3 + H^2 h - H^3 - 2 H^2 h - H h^2 \ 
+        => -h d^2 = (H + h) H^2 - H^3 - 2 H^2 h - H h^2 => -h d^2 = H^3 + H^2 h - H^3 - 2 H^2 h - H h^2 \ 
         
-      //   => -h d^2 = - H^2 h - H h^2 => d^2 = H^2 + H h => d = sqrt(H^2 + H h) $
+        => -h d^2 = - H^2 h - H h^2 => d^2 = H^2 + H h => d = sqrt(H^2 + H h) $
         
-      //   Comprobamos que es un máximo con la segunda derivada:
-      //   $ theta''(d) = ... < 0 $
+        Comprobamos que es un máximo con la segunda derivada:
+        $ theta''(d) = ... < 0 $
         
-      //   Por tanto, el valor de $d$ que maximiza el ángulo de visión es $d = sqrt(H^2 + H h)$.
-      // ]
+        Por tanto, el valor de $d$ que maximiza el ángulo de visión es $d = sqrt(H^2 + H h)$.
+      ]
     ],
     [
     //   // Para examen.
