@@ -26,7 +26,7 @@ jobs:
         run: |
           for archivo in $(ls -1 ./Material/**/*.typ); do
               echo "$archivo"
-              typst compile $archivo --root . --input show-solutions=true
+              typst compile '$archivo' --root . --input show-solutions=true
               
               if [ $? -eq 0 ]; then
                   echo "Compilación exitosa: $archivo"
