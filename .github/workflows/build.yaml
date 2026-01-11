@@ -24,7 +24,7 @@ jobs:
       - name: Compile Typst examples to PDF
         shell: bash
         run: |
-          for archivo in ./Material/**/*.typ do
+          for archivo in ./Material/**/*.typ; do
               echo "$archivo"
               typst compile "$archivo" --root . --input show-solutions=true
               
