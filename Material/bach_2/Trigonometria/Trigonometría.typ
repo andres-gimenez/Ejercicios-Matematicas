@@ -27,7 +27,7 @@
   date: datetime(year: 2025, month: 10, day: 20),
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: config.at("show-solutions"),
+  show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
   // draft: true,
   question-points-position: right,
 //   question-text-parameters: (size: 14pt, spacing:150%)
