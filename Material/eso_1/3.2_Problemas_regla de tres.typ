@@ -27,7 +27,7 @@
   date: datetime(year:2024, month:1, day:8),
   show-student-data: false,
   show-grade-table: false,
-  question-point-position: right,
+  question-points-position: right,
   // question-text-parameters: (font:"OpenDyslexic")
 )
 
