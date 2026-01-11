@@ -227,44 +227,46 @@
       ]
     ],
     [#question()[Una empresa tiene que transportar un producto desde un punto $A$ hasta un punto $B$.
-      El punto $A$ está a $3 "km"$ de la orilla de un río y el punto $B$ está en el rio, $6 "km"$ ria abajo, desde el punto del rio más cercano a $A$.
+      El punto $A$ está a $3 "km"$ de la orilla de un río y el punto $B$ está en el rio, $6 "km"$ rio abajo, desde el punto del rio más cercano a $A$.
       El coste de transportar el producto es de $1 frac("€", "km", style: "horizontal")$ por tierra y de $0,5 frac("€", "km", style: "horizontal")$ por el río.
       ¿Dónde debe llegar el transporte al río para que el coste total sea mínimo?]
-      // #solution(show-solution: false)[
+      #solution(show-solution: false)[
 
-      //   #cetz.canvas(length: 1cm, {
-      //     import cetz.draw: *
+        #cetz.canvas(length: 1cm, {
+          import cetz.draw: *
           
-      //     fill(black)
-      //     circle((0, 0), radius: 0.1, name: "O")
-      //     circle((6, 0), radius: 0.1, name: "B")
-      //     circle((0, 3), radius: 0.1, name: "A")
+          fill(black)
+          circle((0, 0), radius: 0.1, name: "O")
+          circle((6, 0), radius: 0.1, name: "B")
+          circle((0, 3), radius: 0.1, name: "A")
 
-      //     // content(("A"), box(fill: white, $ A $))
-      //     // content("A.north", anchor: "1.5", box(fill: white, $ A $))
+          // content(("A"), box(fill: white, $ A $))
+          // content("A.north", anchor: "1.5", box(fill: white, $ A $))
       
-      //     content((name: "A", anchor: 1.5), $ A $)
-      //     content((name: "B", anchor: 1.5), $ B $)
+          content((name: "A", anchor: 1.5), $ #h(0.6cm) A $)
+          content((name: "B", anchor: 90deg), $ #h(0.6cm) B $)
 
-      //     line((0, 3), (0, 0), name: "AO")
-      //     content((name: "AO", anchor: 1.5), box(fill: white, $ 3"km" $))
+          line((0, 3), (0, 0), name: "AO")
+          line((0, 0), (6, 0), name: "OB")
+          content((name: "AO", anchor: 1.5), box(fill: white, $ 3"km" $))
+          content((name: "OB", anchor: 3.5), box(fill: white, $ 6"km" $))
 
-      //     line((0, 0), (6, 0))
-      //     line((0, 3), (2, 0), stroke: blue)
-      //   })
+          // line((0, 0), (6, 0))
+          line((0, 3), (2, 0), stroke: blue)
+        })
 
-      //   Sea $x$ la distancia desde el punto más cercano  $B$ hasta el punto donde el transporte llega al río.
-      //   La distancia recorrida por tierra es $ sqrt(3^2 + x^2) = sqrt(9 + x^2) $ y la distancia recorrida por el río es $ 6 - x $.
-      //   El coste total del transporte es
-      //   $ C(x) = 1 dot sqrt(9 + x^2) + 0,5 dot (6 - x) = sqrt(9 + x^2) + 3 - 0,5 x $
-      //   Derivando e igualando a cero para buscar los puntos críticos:
-      //   $ C'(x) = (1/2) (9 + x^2)^(-1/2) dot 2 x - 0,5 = x / sqrt(9 + x^2) - 0,5 = 0 => x / sqrt(9 + x^2) = 0,5 => x = 0,5 sqrt(9 + x^2) $
-      //   Elevando al cuadrado ambos lados:
-      //   $ x^2 = 0,25 (9 + x^2) => x^2 - 0,25 x^2 = 2,25 => 0,75 x^2 = 2,25 => x^2 = 3 => x = sqrt(3) $
-      //   Comprobamos que es un mínimo con la segunda derivada:
-      //   $ C''(x) = (9 + x^2)^(-3/2) dot 9 > 0 $
-      //   Por tanto, el valor de $x$ que minimiza el coste total es $x = sqrt(3) "km" approx "1,73" "km"$.
-      // ]
+        Sea $x$ la distancia desde el punto más cercano a $A$ hasta el punto donde el transporte llega al río.
+        La distancia recorrida por tierra es $ sqrt(3^2 + x^2) = sqrt(9 + x^2) $ y la distancia recorrida por el río es $ 6 - x $.
+        El coste total del transporte es
+        $ C(x) = 1 dot sqrt(9 + x^2) + 0,5 dot (6 - x) = sqrt(9 + x^2) + 3 - 0,5 x $
+        Derivando e igualando a cero para buscar los puntos críticos:
+        $ C'(x) = (1/2) (9 + x^2)^(-1/2) dot 2 x - 0,5 = x / sqrt(9 + x^2) - 0,5 = 0 => x / sqrt(9 + x^2) = 0,5 => x = 0,5 sqrt(9 + x^2) $
+        Elevando al cuadrado ambos lados:
+        $ x^2 = 0,25 (9 + x^2) => x^2 - 0,25 x^2 = 2,25 => 0,75 x^2 = 2,25 => x^2 = 3 => x = sqrt(3) $
+        Comprobamos que es un mínimo con la segunda derivada:
+        $ C''(x) = (9 + x^2)^(-3/2) dot 9 > 0 $
+        Por tanto, el valor de $x$ que minimiza el coste total es $x = sqrt(3) "km" approx "1,73" "km"$.
+      ]
     ],
     [
       #question()[Desde un punto $P$ situado a $100 m$ de una carretera recta se quiere construir un camino hasta un punto $Q$ situado en la carretera, a $200 m$ de un punto $R$ que está frente a $P$.
