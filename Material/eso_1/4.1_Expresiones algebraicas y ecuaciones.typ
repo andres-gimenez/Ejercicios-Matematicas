@@ -2,9 +2,6 @@
 
 #let config = yaml("../config.yaml")
 
-// #set text(font:"OpenDyslexic")
-// #set text(font: "New Computer Modern")
-
 #show: exam.with(
   author: (
     name: config.at("author").at("name"),
@@ -16,12 +13,12 @@
     logo:image("../" + config.at("school").at("logo"))
   ),
   exam-info: (
-    academic-period: "Curso 2024/2025",
+    academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
     number: "Ejercicios",
     content: "Expresiones algebraicas y ecuaciones",
-    // model: "Modelo A"
+    // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
   ),
   
   language: "es",
@@ -30,8 +27,6 @@
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  question-points-position: right,
-  // question-text-parameters: (font:"OpenDyslexic")
 )
 
 // #text(font: "Linux Libertine", style: "italic")[Italic]

@@ -1,20 +1,19 @@
 #import "@preview/g-exam:0.4.2": *
 
-// #set text(font:"OpenDyslexic")
-// #set text(font: "New Computer Modern")
+#let config = yaml("../config.yaml")
 
 #show: exam.with(
   author: (
-    name: "Andrés Jorge Giménez Muñoz", 
-    email: "agimenezmunoz@educa.madrid.com", 
-    watermark: "Profesor: andrés",
+    name: config.at("author").at("name"),
+    email: config.at("author").at("email"),
+    watermark: config.at("author").at("watermark"),
   ),
   school: (
-    name: "IES Fernando Fernán Gómez",
-    // logo:image("../../logo-ies_fernando_fernan_gomez.png")
+    name: config.at("school").at("name"),
+    logo:image("../" + config.at("school").at("logo"))
   ),
   exam-info: (
-    academic-period: "Curso 2024/2025",
+    academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "1º ESO",
     academic-subject: "Matemáticas",
     number: "1º Evaluación",
@@ -24,17 +23,11 @@
   
   language: "es",
   decimal-separator: ",",
-  date: datetime(year:2024, month:1, day:8),
   show-student-data: false,
   show-grade-table: false,
   question-points-position: right,
-  // question-text-parameters: (font:"OpenDyslexic")
+  // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
 )
-
-// #text(font: "Linux Libertine", style: "italic")[Italic]
-// #set text(font:"Linux Libertine", style: "italic")
-// #set text(font:"Open Dyslexic")
-// #set text(font:"OpenDyslexic")
 
 #set math.cases(reverse: true)
 
