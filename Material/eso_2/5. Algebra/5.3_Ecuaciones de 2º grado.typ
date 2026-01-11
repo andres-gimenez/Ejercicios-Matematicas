@@ -17,17 +17,15 @@
     academic-level: "2º ESO",
     academic-subject: "Matemáticas",
     number: "Ejercicios",
-    content: "Ecuaciones de 2º grado",
-    // model: "Modelo A"
+    content: "Ecuaciones de 2º grado",    
   ),
   
   language: "es",
   decimal-separator: ",",
-  date: datetime(year:2025, month:1, day:8),
   show-student-data: false,
   show-grade-table: false,
   question-points-position: none,
-  // question-text-parameters: (font:"OpenDyslexic")
+// show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
 )
 
 // #text(font: "Linux Libertine", style: "italic")[Italic]

@@ -25,7 +25,7 @@
   show-student-data: "odd-pages",
   show-grade-table: false,
   show-solutions: false,
-//   // question-text-parameters: (font:"OpenDyslexic")
+// show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
 )
 
 // #set math.cases(reverse: true)

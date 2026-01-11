@@ -1,8 +1,6 @@
 #import "@preview/g-exam:0.4.3": *
 
 #let config = yaml("../config.yaml")
-// #set text(font:"OpenDyslexic")
-// #set text(font: "New Computer Modern")
 
 #show: exam.with(
   author: (
@@ -20,7 +18,6 @@
     academic-subject: "Matemáticas",
     number: "2º Evaluación",
     content: "Regla de tres",
-    // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
   ),
   
   language: "es",

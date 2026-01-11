@@ -10,7 +10,7 @@
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../" + config.at("school").at("logo"))
+    logo: image("../" + config.at("school").at("logo"))
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
@@ -28,11 +28,6 @@
   question-points-position: right,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
 )
-
-// #text(font: "Linux Libertine", style: "italic")[Italic]
-// #set text(font:"Linux Libertine", style: "italic")
-// #set text(font:"Open Dyslexic")
-// #set text(font:"OpenDyslexic")
 
 #set math.cases(reverse: true)
 

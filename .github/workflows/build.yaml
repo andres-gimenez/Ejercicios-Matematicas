@@ -24,15 +24,9 @@ jobs:
       - name: Compile Typst examples to PDF
         shell: bash
         run: |
-          for archivo in ./Material/**/*.typ; do
-              echo "$archivo"
-              typst compile "$archivo" --root . --input show-solutions=true || true
-              
-              if [ $? -eq 0 ]; then
-                  echo "Compilación exitosa: $archivo"
-              else
-                  echo "Error al compilar: $archivo"
-              fi
+          find ./Material -type f -name "*.typ" | while read -r archivo; do
+              echo "Compilando: $archivo"
+              typst compile "$archivo" --root . --input show-solutions=true || echo "Error en $archivo, continuando..."
           done
 
       - name: Upload PDF file

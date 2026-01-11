@@ -18,7 +18,6 @@
     academic-subject: "Matemáticas",
     number: "Ejercicios",
     content: "Regla de tres",
-    // model: "Modelo A"
   ),
   
   language: "es",
@@ -27,13 +26,8 @@
   show-student-data: false,
   show-grade-table: false,
   question-points-position: none,
-  // question-text-parameters: (font:"OpenDyslexic")
+  // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
 )
-
-// #text(font: "Linux Libertine", style: "italic")[Italic]
-// #set text(font:"Linux Libertine", style: "italic")
-// #set text(font:"Open Dyslexic")
-// #set text(font:"OpenDyslexic")
 
 #set math.cases(reverse: true)
 

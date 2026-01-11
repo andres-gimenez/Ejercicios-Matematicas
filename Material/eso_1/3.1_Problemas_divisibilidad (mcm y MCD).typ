@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.2": *
+#import "@preview/g-exam:0.4.3": *
 
 #let config = yaml("../config.yaml")
 
@@ -10,7 +10,7 @@
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../" + config.at("school").at("logo"))
+    logo: image("../" + config.at("school").at("logo"))
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
@@ -18,7 +18,6 @@
     academic-subject: "Matemáticas",
     number: "1º Evaluación",
     content: "Operaciones con números enteros",
-    // model: "Modelo A"
   ),
   
   language: "es",
