@@ -3,15 +3,37 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - approx
+  - arctan
   - binomial
+  - black
+  - blue
   - Bolzano
+  - bottom
+  - canvas
+  - cetz
+  - circle
   - derivabilidad
   - derivable
+  - draw
   - Fernán
+  - fill
   - IES
   - inecuaciones
   - Inecuaciones
+  - length
+  - line
+  - math
+  - north
+  - padding
+  - pages
+  - question
+  - questions
+  - stroke
   - StudentData
+  - style
+  - theta
+  - white
 ignoreWords: []
 import: []
 language: es-ES,en-UK

@@ -138,7 +138,7 @@
         $ P''(x) = 480 / x^3 > 0 $
         Por tanto, el valor de $x$ que minimiza el perímetro es $x = sqrt(120)$. Calculamos $y$:
         $ y = 120 / sqrt(120) = sqrt(120) $
-        Por tanto, las dimensiones del rectángulo exterior son $(sqrt(120) + 2) m approx "12,95 m"$ de lado mayor y $(sqrt(120) + 2) m  approx "12,95 m" $ de lado menor, es decir, un cuadrado. 
+        Por tanto, las dimensiones del rectángulo exterior son $(sqrt(120) + 2) m approx "12,95 m"$ de lado mayor y $(sqrt(120) + 2) m approx "12,95 m" $ de lado menor, es decir, un cuadrado. 
       ]
     ],[
     #question()[Se quiere diseñar una caja abierta con base cuadrada y volumen $32 "cm"^3$.
@@ -243,12 +243,13 @@
           // content(("A"), box(fill: white, $ A $))
           // content("A.north", anchor: "1.5", box(fill: white, $ A $))
       
-          content((name: "A", anchor: 1.5), $ #h(0.6cm) A $)
-          content((name: "B", anchor: 90deg), $ #h(0.6cm) B $)
+          content("A",  [$A$], anchor:"south-west", padding: (bottom: 5pt), name: "label-a" )
+          // content((name: "B", anchor: 90deg), $ #h(0.6cm) B $)
+          content("B", [$B$], anchor: "south", padding: (bottom: 5pt), name: "label-b")
 
           line((0, 3), (0, 0), name: "AO")
           line((0, 0), (6, 0), name: "OB")
-          content((name: "AO", anchor: 1.5), box(fill: white, $ 3"km" $))
+          content("AO", [#box(fill: white, $ 3"km" $)], anchor:"east", name:"label-AO")
           content((name: "OB", anchor: 3.5), box(fill: white, $ 6"km" $))
 
           // line((0, 0), (6, 0))
@@ -361,20 +362,28 @@
     ],
     [
       #question()[Una estatua tiene una altura h y está sobre un pedestal de altura H. ¿A que distancia de la base del pedestal debe situarse un observador para que el ángulo de visión de la estatua sea máximo?]
-      #solution(color: red)[
+      #solution()[
         Sea $d$ la distancia desde la base del pedestal hasta el observador.
         El ángulo de visión de la estatua viene dado por
+
         $ theta(d) = "arctan"((H + h) / d) - "arctan"(H / d) $
+
+        Calculamos la siguiente derivada
+
+        $display(f(x) = arctan(k/x) => f'(x) = 1/(1 + (k/x)^2) dot (k/x)' = 1/(1 + (k/x)^2)) dot (-k/(2x^2)) = (-k)/((1 + (k^2)/x^2) x^2) = (-k)/(x^2+k^2)  $
+
         Derivando e igualando a cero para buscar los puntos críticos:
-        $ theta'(d) = - (H + h) / (d^2 + (H + h)^2) + H / (d^2 + H^2) = 0 => H / (d^2 + H^2) = (H + h) / (d^2 + (H + h)^2) $
-        
-        $ H (d^2 + (H + h)^2) = (H + h) (d^2 + H^2) => H d^2 + H (H + h)^2 = (H + h) d^2 + (H + h) H^2 \ 
-        
-        => H d^2 - (H + h) d^2 = (H + h) H^2 - H (H + h)^2 => -h d^2 = (H + h) H^2 - H (H^2 + 2 H h + h^2) \ 
-        
-        => -h d^2 = (H + h) H^2 - H^3 - 2 H^2 h - H h^2 => -h d^2 = H^3 + H^2 h - H^3 - 2 H^2 h - H h^2 \ 
-        
-        => -h d^2 = - H^2 h - H h^2 => d^2 = H^2 + H h => d = sqrt(H^2 + H h) $
+
+        $display(theta'(d) = - (H + h) / (d^2 + (H + h)^2) + H / (d^2 + H^2) = 0 => \ 
+        H / (d^2 + H^2) = (H + h) / (d^2 + (H + h)^2) => \ =>
+        H (d^2 + (H + h)^2) = (H + h) (d^2 + H^2) => \ => 
+        H d^2 + H (H + h)^2 = (H + h) d^2 + (H + h) H^2 => \ =>
+        H d^2 - (H + h) d^2 = (H + h) H^2 - H (H + h)^2 => \ => 
+        -h d^2 = (H + h) H^2 - H (H^2 + 2 H h + h^2) => \ => 
+        -h d^2 = (H + h) H^2 - H^3 - 2 H^2 h - H h^2 => \ =>
+        -h d^2 = H^3 + H^2 h - H^3 - 2 H^2 h - H h^2  => \ => 
+        -h d^2 = - H^2 h - H h^2 => d^2 = H^2 + H h => \ => 
+        d = sqrt(H^2 + H h)) $
         
         Comprobamos que es un máximo con la segunda derivada:
         $ theta''(d) = ... < 0 $
