@@ -47,7 +47,7 @@
       #subquestion()[Un cuadrado aumenta su lado en $2x$. El lado original era $5$. Expresa el área del cuadrado final en función de $x$.]
     ],
     [
-      #subquestion()[En una papelería, una libreta cuesta $x$ € y un bolígrafo cuesta 2 € menos. Escribe una expresión para el coste total de *3 libretas y 5 bolígrafos*. ¿Cuanto cuestan las 3 libretas y 5 bolígrafos si el precio de la libreta son 3€ y si son 5€-']
+      #subquestion()[En una papelería, una libreta cuesta $x$ € y un bolígrafo cuesta 2 € menos. Escribe una expresión para el coste total de *3 libretas y 5 bolígrafos*. ¿Cuanto cuestan las 3 libretas y 5 bolígrafos si el precio de la libreta son 3€ y si son 5€.]
     ],
     [
       #subquestion()[Ana compra $x$ caramelos y cada caramelo cuesta 0,10 €.
@@ -74,6 +74,9 @@
     ],
     [
       #subquestion()[Una cuerda mide $5x+10$ cm. Se corta en dos trozos: uno mide $2x-3$ y el otro lo que falta. *Expresa la longitud del segundo trozo.*]
+    ],
+    [
+      #subquestion()[El precio de la bajada de bandera un taxi son 7€, más 3€ por kilómetro recorrido. Expresa el coste del precio del taxi en función de los kilómetros recorridos. ]
     ])
   ]
 )

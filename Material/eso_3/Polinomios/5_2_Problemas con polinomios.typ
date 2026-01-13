@@ -58,6 +58,9 @@
     [
       #subquestion()[Los ingresos de una empresa vienen dados por $I(x) = 5x^3 - x + 7$ y los gastos por $G(x) = 3x^3 + 2x^2 - 4$. Calcula el beneficio $B(x) = I(x) - G(x)$.]
     ],
+    [
+      #subquestion()[El precio de la bajada de bandera un taxi son 7€, más 3€ por kilómetro recorrido. Expresa el coste del precio del taxi en función de los kilómetros recorridos. ]
+    ]
     )
   ]
 )

@@ -4,7 +4,6 @@
 
 #let config = yaml("../../config.yaml")
 
-
 #show: exam.with(
   author: (
     name: config.at("author").at("name"),
@@ -336,29 +335,37 @@
       // ]
     ],
     [
-      #question()[Una fábrica elabora un producto de dos calidades. $x$ toneladas de baja calidad y $y$ toneladas de alta calidad. Relacionándose ambas producciones mediante la función $display(y=(18-5x)/(10-x))$.
+      #question()[Una fábrica elabora un producto de dos calidades. $x$ toneladas de baja calidad e $y$ toneladas de alta calidad. Relacionándose ambas producciones mediante la función $display(y=(18-5x)/(10-x))$.
 
       Hallar las cantidades que ha de producir para obtener ingresos máximos si el precio por tonelada de baja calidad es $display(1/2)$ que el de alta calidad.]
-      // #solution(color: red)[
-      //   Sea $x$ la cantidad de toneladas de baja calidad e $y$ la cantidad de toneladas de alta calidad.
-      //   La relación entre ambas producciones viene dada por la función
-      //   $ y = (18 - 5 x) / (10 - x) $
-      //   El ingreso total viene dado por
-      //   $ I(x) = p_b x + p_a y = (1/2) p_a x + p_a ((18 - 5 x) / (10 - x)) = p_a ((1/2) x + (18 - 5 x) / (10 - x)) $
-      //   Derivando e igualando a cero para buscar los puntos críticos:
-      //   $ I'(x) = p_a ((1/2) + ((10 - x)(-5) - (18 - 5 x)(-1)) / (10 - x)^2) = 0 => (1/2) + ((-50 + 5 x + 18 - 5 x) / (10 - x)^2) = 0 \ 
+      #solution(color: red)[
+        Sea $x$ la cantidad de toneladas de baja calidad e $y$ la cantidad de toneladas de alta calidad.
+        La relación entre ambas producciones viene dada por la función
         
-      //   => (1/2) + (-32 / (10 - x)^2) = 0 => (1/2) = 32 / (10 - x)^2 => (10 - x)^2 = 64 => 10 - x = 8 => x = 2 $
+        $ y = (18 - 5 x) / (10 - x) $
         
-      //   Comprobamos que es un máximo con la segunda derivada:
-      //   $ I''(x) = ... < 0 $
+        El ingreso total viene dado por
+
+        $display(I(x) = p_b x + p_a y = 1/2 p_a x + p_a ((18 - 5 x) / (10 - x)) = p_a (1/2 x + (18 - 5 x) / (10 - x)))$
+
+        Derivando e igualando a cero para buscar los puntos críticos:
         
-      //   Por tanto, el valor de $x$ que maximiza el ingreso total es $x = 2$. Calculamos $y$:
+        $display(I'(x) = p_a (1/2 + ((10 - x)(-5) - (18 - 5 x)(-1)) / (10 - x)^2) = 0 => \ =>
+        (1/2) + ((-50 + 5 x + 18 - 5 x) / (10 - x)^2) = 0 => \ => 
+        (1/2) + (-32 / (10 - x)^2) = 0 => \ =>
+        (1/2) = 32 / (10 - x)^2 => \ =>
+         (10 - x)^2 = 64 => \ => 
+         10 - x = 8 => \ => x = 2)$
         
-      //   $ y = (18 - 5 dot 2) / (10 - 2) = (18 - 10) / 8 = 8 / 8 = 1 $
+        Comprobamos que es un máximo con la segunda derivada:
+        $ I''(x) = ... < 0 $
         
-      //   Por tanto, las cantidades que ha de producir son $2$ toneladas de baja calidad y $1$ tonelada de alta calidad.
-      // ]
+        Por tanto, el valor de $x$ que maximiza el ingreso total es $x = 2$. Calculamos $y$:
+        
+        $ y = (18 - 5 dot 2) / (10 - 2) = (18 - 10) / 8 = 8 / 8 = 1 $
+        
+        Por tanto, las cantidades que ha de producir son $2$ toneladas de baja calidad y $1$ tonelada de alta calidad.
+      ]
     ],
     [
       #question()[Una estatua tiene una altura h y está sobre un pedestal de altura H. ¿A que distancia de la base del pedestal debe situarse un observador para que el ángulo de visión de la estatua sea máximo?]
