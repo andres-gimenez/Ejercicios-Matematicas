@@ -54,23 +54,9 @@
     )
   ],
   [
-    #question()[Teorema Fundamental del Cálculo:]
-    #questions-columns(
-    [
-      #subquestion()[Sabiendo que $display(F'(x)=4x^3-2x)$, calcula $display(∫_0^1 4x^3 - 2x dif x)$]
-    ],
-    [
-      #subquestion()[Calcula $display(∫_a^b 6x^2 + 1 dif x)$]
-    ],
-    [
-      #subquestion()[Si $display(F(x)=x^3-5x)$, evalúa $display(∫_(-2)^1 3x^2 - 5 dif x)$]
-    ],
-    )
-  ],
-  [
     #question()[Si $display(∫_1^4 f(x) dif x = 6)$ y $display(∫_4^6 f(x) dif x = -2)$, calcula:]
     #questions-columns(
-   
+    
     [
       #subquestion()[$display(∫_1^6 f(x) dif x)$]
     ],
@@ -78,6 +64,39 @@
       #subquestion()[$display(∫_6^1 f(x) dif x)$]
     ],
     )
+  ],
+  [
+    #question()[Calcula el valor de las siguientes integrales de la función:
+      
+      $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                & x^2 & "si" & x < 2,
+                & 2x  & "si" & 0 <= x < 2,
+                & 10-3x  & "si" & 0 <= x < 2,
+              ) $
+    ]
+    #questions-columns(
+    [
+      #subquestion()[$display(∫_(-2)^1 f(x) dif x)$]
+    ], [
+      #subquestion()[$display(∫_(1)^4 f(x) dif x)$]
+    ], [
+      #subquestion()[$display(∫_(-2)^4 f(x) dif x)$]
+    ],
+    )
+  ],
+  [
+    #question()[Calcula las derivadas de las siguientes funciones utilizando el *teorema fundamental del calculo*:
+    \ #clarification()[La (d) es muy fácil]]
+    #questions-columns(
+    [
+      #subquestion()[$display(F(x) = ∫_0^x cos(t) dif t)$.]
+    ], [
+      #subquestion()[$display(F(x) = ∫_3^x (t^2+1)^4 dif t)$.]
+    ], [
+      #subquestion()[$display(F(x) = ∫_0^x e^(-t)^2 dif t)$.]
+    ], [
+      #subquestion()[$display(F(x) = ∫_3^5 (t^2+1)^4 dif t)$. ]
+    ],)
   ],
   [
     #question()[Área entre dos curvas:]
@@ -92,19 +111,10 @@
       #subquestion()[Área encerrada entre $y = x^2$ y $y = 4 - x^2$.]
     ],
     [
-      #subquestion()[Área comprendida entre $y = e^x$ y $y = 2x + 1$.]
-    ],
-    [
-      #subquestion()[Área limitada por $y = |x|$ y $y = 2 - x$.]
+      #subquestion()[Área limitada por $y = |x|$ y $y = 5$.]
     ],
     [
       #subquestion()[Área entre $y = x^2 - 4$ y el eje $x$.]
-    ],
-    [
-      #subquestion()[Área entre $y = sin(x)$ y $y = cos(x)$ en $[0, π]$.]
-    ],
-    [
-      #subquestion()[Área encerrada entre $y = x^2$ y $y = 2x$.]
     ],
     [
       #subquestion()[Área comprendida entre $y = sin(x)$ y el eje $x$ en $[-π, π]$.]
@@ -117,4 +127,38 @@
     ],
     )
   ],
+  [
+    #question()[Calcula los siguientes áreas:]
+    #subquestion()[Área entre la curva f(x) = x^2, su perpendicular en x=2 y el eje de abscisas.]
+    #subquestion()[Área entre la curva f(x) = x^2, su tangente en x=2 y el eje de abscisas.]
+  ],
+  [
+    #question()[Calcula el volumen generado por las siguientes funciones al girar sobre el eje x:]
+    #subquestion()[f(x) = x^2, entre $x=0$ y $x=5$.]
+    
+    #subquestion()[$f(x) = sqrt(r^2-x^2)$, entre $x=-r$ y $x=r$.]
+  ],
+  [
+    #question()[Sabemos que $display(∫_0^x f(t) dif t = x^2(1+x))$, siendo continua en $RR$. Calcula $f(2)$.]
+    #solution()[
+        Tenemos:
+        $ F(x)= ∫_0^x f(t) dif t = x^2(1+x) = x^2 + x^3 $
+
+        Como f es continua en R, aplicamos el Teorema Fundamental del Cálculo:
+        $ F'(x) = ∫_0^x f(t) dif t = f(x) $
+
+        Derivamos el segundo miembro:
+        $ (x^2 + x^3)' = 2x + 3x^2 $
+
+        Por tanto:
+        $ f(x) = 2x + 3x^2 $
+
+        Evaluamos en x = 2:
+        $ f(2) = 2·2 + 3·2^2 = 4 + 12 = 16 $
+
+        Con lo que: 
+        
+        $ #result($f(2) = 16$) $
+    ]
+  ]
 )
