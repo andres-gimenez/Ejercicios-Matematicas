@@ -3,8 +3,10 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - academic
   - approx
   - arctan
+  - author
   - binomial
   - black
   - blue
@@ -13,11 +15,15 @@ words:
   - canvas
   - cetz
   - circle
+  - columns
   - derivabilidad
   - derivable
   - draw
+  - Dyslexic
+  - exam
   - Fernán
   - fill
+  - font
   - IES
   - inecuaciones
   - Inecuaciones
@@ -27,12 +33,19 @@ words:
   - north
   - padding
   - pages
+  - plot
   - question
   - questions
+  - school
+  - separator
   - stroke
+  - student
   - StudentData
   - style
+  - subject
+  - subquestion
   - theta
+  - watermark
   - white
 ignoreWords: []
 import: []
