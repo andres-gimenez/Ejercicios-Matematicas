@@ -26,6 +26,11 @@
   show-grade-table: "odd-pages",
   show-solutions: false,
   // question-text-parameters: (font:"OpenDyslexic")
+  clarifications: 
+    (
+    [Realiza los ejercicios que te indique el profesor en tu cuaderno y envíalas al aula virtual],
+    [El fin de realizar estos ejercicios está destinado a tu aprendizaje, si te ayudan a hacerlos, entera té lo que estás poniendo. Si te los hacen o utilizas alguna herramienta que los haga, estás perdiendo el tiempo en un trabajo improductivo.]
+    ) 
 )
 
 // #set math.cases(reverse: true)
