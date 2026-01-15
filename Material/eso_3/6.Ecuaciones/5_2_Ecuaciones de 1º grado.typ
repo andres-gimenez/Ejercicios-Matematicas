@@ -145,70 +145,126 @@
       #subquestion()[$display(2[3(x+5)-9]=-3(2x-4))$]
     ]
     )
-  ]
-)
-
-
-//             \part $7(x-1)-2(x+8)=3(x-3)$   \phantom{1}   \ifprintanswers $(\text{Sol: } x=7 )$ \fi
-//             \part $2(3x+2)=4[2x-5(x-2)]$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=2 )$ \fi
-//             \part $15x=2(1+9x)-3$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=\sfrac{1}{3} )$ \fi
-//             \part $3(12-x)-4x=2(11-x)+9x$   \phantom{1}   \ifprintanswers $(\text{Sol: } x=1 )$ \fi
-//             \part $2(1+x)-3(x-1)-6=x-11$   \phantom{1}   \ifprintanswers $(\text{Sol: } x=5 )$ \fi
-//             \part $5-[3-2(4-x)]=2(4x+4)$   \phantom{1}   \ifprintanswers $(\text{Sol: } x=\sfrac{1}{5} )$ \fi            
-//             \part $-3x=2x+4x-x$   \phantom{123}    \phantom{123}   \ifprintanswers $(\text{Sol: } x=0 )$ \fi
-//             \part $11-5(3x+2)+7x=1-8x$    \phantom{123}   \ifprintanswers $(\text{Indentidad})$ \fi
-//             \part $3x+5(2x-1)=8-3(4-5x)$   \phantom{1}   \ifprintanswers $(\text{Sol: } x=\sfrac{1}{2} )$ \fi
-//             \part $x-7(2x+1)=2(6-5x)-13$   \phantom{1}   \ifprintanswers $(\text{Sol: } x=-2 )$ \fi
-//             \part $5x-9=4x-20$   \phantom{123}   \ifprintanswers $(\text{Sol: } x= -11 )$ \fi
-//             \part $2x-7=x+5$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=12 )$ \fi
-//             \part $\frac{x}{5}=-30$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=-150 )$ \fi
-//             \part $2x+6=3x-1$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=7 )$ \fi
-//             \part $x-3 = x-3$   \phantom{123}   \ifprintanswers $(\text{Indeterminada} )$ \fi
-//             \part $x-3 = x-4$   \phantom{123}   \ifprintanswers $(\text{Sin solución} )$ \fi
-//             \part $3x + 1 = 3 - (2- 2x)$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=0 )$ \fi
-//         \end{multicols}
-//         \part $3[x+(14-x)]=2[x-(2x-21)]$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=0 )$ \fi
-//         \part $-2+5[-6x+3(5-x)]=20-(x+1)$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=\sfrac{27}{22} )$ \fi
-//         \part $-5(2-x)+3(2x+4)=(4x-2) \cdot 5$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=\sfrac{4}{3} )$ \fi
-//         \part $3x+5(12-x)=-3x+4-2(7-3x)$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=14 )$ \fi
-//         % \part $5(x-3)-4(x-1)=2x-3(x+2)$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=\sfrac{5}{2} )$ \fi
-//         \part $13x-5(x+2)=4(2x-1)+7$   \phantom{123}   \ifprintanswers $(\text{Sin solución} )$ \fi
-//     \end{parts}
-
-//     \question Resuelve las siguientes ecuaciones:
-//     \begin{parts}
-//         \begin{multicols}{2}
-//             \part $3x+\frac{1}{2}x+6=2x$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=-4 )$ \fi
-//             \part $\frac{3}{2}x+8=\frac{3}{5}x-1$   \phantom{123}   \ifprintanswers $(\text{Sol: } x=-10 )$ \fi
-//             \part $\frac{4}{3}(x+1)=2x-1$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=\frac{7}{2} )$ \fi
-//             \part $\frac{x}{2}+\frac{2x}{3}-\frac{5x}{6}=5x-14$ \phantom{14} \ifprintanswers $(\text{Sol: } x=3 )$ \fi
-//             \part $\frac{x-2}{4}-\frac{2x+6}{3}=0$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=-6 )$ \fi
-//             \part $\frac{x+1}{4}-\frac{x-2}{6}=1$   \phantom{1234} \ifprintanswers $(\text{Sol: } x=\frac{34}{11} )$ \fi
-//             \part $\frac{1}{x}+1=\frac{3}{x}-3$  \phantom{123456} \ifprintanswers $(\text{Sol: } x=\frac{1}{2} )$ \fi           
-//             \part $\frac{5x}{6}-\frac{3}{6}=\frac{2}{4}+\frac{x}{4}$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=\frac{12}{7} )$ \fi
-//             \part $\frac{x+2}{x}-\frac{1}{3}=\frac{4}{x}$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=3 )$ \fi
-//             \part $\frac{x+2}{3}-\frac{5x-3}{4}-2x=5$ \ifprintanswers $(\text{Sol: } x=-\frac{43}{35} )$ \fi
-//             \part $\frac{5+2x}{x}-\frac{1}{x^2}=2$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=\frac{1}{5} )$ \fi            
-//             \part $\frac{x-1}{4}-\frac{x-5}{36}=\frac{x-5}{9}$ \phantom{1} \ifprintanswers $(\text{Sol: } x=-4 )$ \fi
-//             \part $5x-3(2x-4)=9$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=3 )$ \fi
-//             \part $\frac{3}{2}+3x=\frac{5x}{9}-\frac{2x+1}{6}$ \phantom{1} \ifprintanswers $(\text{Sol: } x=\frac{-3}{5} )$ \fi
-//             \part $\frac{8x}{2}-3=3x+1$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=4 )$ \fi
-//             \part $\frac{3}{2}+\frac{3x}{2}-\frac{5x}{6}=15$ \phantom{1234} \ifprintanswers $(\text{Sol: } x= \frac{81}{4} )$ \fi
-//             \part $2+\frac{3x-1}{15}+\frac{x-4}{5}=\frac{x+4}{3}$ \ifprintanswers $(\text{Sol: } x=1 )$ \fi
-//             \part $\frac{5x+7}{2}-\frac{3x+9}{4}=\frac{2x+5}{3}+5$ \ifprintanswers $(\text{Sol: } x=5 )$ \fi
-//             \part $\frac{x-5}{2}-\frac{8-3x}{2}=2-\frac{9x}{2}$ \ifprintanswers $(\text{Sol: } x=\frac{17}{13} )$ \fi
-//             \part $5-\frac{2x-8}{2}=\frac{3x}{2}-\frac{3-x}{5}$ \ifprintanswers $(\text{Sol: } x=\frac{32}{9} )$ \fi
-//             \part $\frac{x-2}{6}-\frac{3-2x}{5}=6-\frac{5x}{5}$ \ifprintanswers $(\text{Sol: } x=\frac{208}{47} )$ \fi
-//             \part $\frac{x-5}{9}-\frac{4-2x}{2}=8-\frac{8x}{2}$ \phantom{1} \ifprintanswers $(\text{Sol: } x=\frac{95}{46} )$ \fi
-            
-            
-//             \part $\frac{x}{3}-\frac{13-2x}{2}=\frac{1}{6}$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=5 )$ \fi
-//             \part $\frac{15x-35}{10}+\frac{4-x}{3}=\frac{20}{4}+\frac{3x-3}{18}$ \ifprintanswers $(\text{Sol: } x=7 )$ \fi
-//             \part $\frac{4x}{2}+x=\frac{6x}{3}+7$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=7 )$ \fi
+  ],
+  [#question()[Resuelve las siguientes ecuaciones:]
+    #questions-columns(
+      [
+      #subquestion()[$display(7(x-1)-2(x+8)=3(x-3))$)]
+      ], [
+      #subquestion()[$display(7(x-1)-2(x+8)=3(x-3))$]
+      ], [
+      #subquestion()[$display(2(3x+2)=4[2x-5(x-2)])$]
+      ], [
+      #subquestion()[$display(15x=2(1+9x)-3)$]
+      ], [
+      #subquestion()[$display(3(12-x)-4x=2(11-x)+9x)$]
+      ], [
+      #subquestion()[$display(2(1+x)-3(x-1)-6=x-11)$]
+      ], [
+      #subquestion()[$display(5-[3-2(4-x)]=2(4x+4))$]          
+      ], [
+      #subquestion()[$display(-3x=2x+4x-x))$]
+      ], [
+      #subquestion()[$display(11-5(3x+2)+7x=1-8x)$]
+      ], [
+      #subquestion()[$display(3x+5(2x-1)=8-3(4-5x))$]
+      ], [
+      #subquestion()[$display(x-7(2x+1)=2(6-5x)-13)$]
+      ], [
+      #subquestion()[$display(5x-9=4x-20)$]
+      ], [
+      #subquestion()[$display(2x-7=x+5)$]
+      ], [
+      #subquestion()[$display(x/5=-30)$]
+      ], [
+      #subquestion()[$display(2x+6=3x-1)$]
+      ], [
+      #subquestion()[$display(x-3 = x-3)$]
+      ], [
+      #subquestion()[$display(x-3 = x-4)$]
+      ], [
+      #subquestion()[$display(3x + 1 = 3 - (2- 2x))$]
+      ], [
+      #subquestion()[$display(3[x+(14-x)]=2[x-(2x-21)])$]
+      ], [
+      #subquestion()[$display(-2+5[-6x+3(5-x)]=20-(x+1))$]
+      ], [
+      #subquestion()[$display(-5(2-x)+3(2x+4)=(4x-2) dot 5)$]
+      ], [
+      #subquestion()[$display(3x+5(12-x)=-3x+4-2(7-3x))$]
+      ], [
+      #subquestion()[$display(5(x-3)-4(x-1)=2x-3(x+2))$]
+      ], [
+      #subquestion()[$display(13x-5(x+2)=4(2x-1)+7)$]
+      ]
+    )
+  ],
+    [#question()[Resuelve las siguientes ecuaciones:]
+    #questions-columns(
+      [
+        #subquestion()[$display(3x+1/2x+6=2x)$]
+      ], [
+        #subquestion()[$display(3/2 x+8=3/5 x-1)$]
+      ], [
+        #subquestion()[$display(4/3(x+1)=2x-1)$]
+      ], [
+        #subquestion()[$display(x/2+2x/3-5x/6=5x-14)$]
+      ], [
+        #subquestion()[$display((x-2)/4-(2x+6)/3=0)$]
+      ], [
+        #subquestion()[$display((x+1)/4-(x-2)/6=1)$]
+      ], [
+        #subquestion()[$display(1/x+1=3/x-3)$]
+      ],[
+        #subquestion()[$display((5x)/6-3/6=2/4+x/4)$]
+      ], [
+        #subquestion()[$display((x+2)/x-1/3=4/x)$]
+      ], [
+        #subquestion()[$display((x+2)/3-(5x-3)/4-2x=5)$]
+      ], [
+        #subquestion()[$display((5+2x)/x-1/(x^2)=2)$)]            
+      ], [
+        #subquestion()[$display((x-1)/4-(x-5)/(36)=(x-5)/9)$]
+      ], [
+        #subquestion()[$display(5x-3(2x-4)=9)$]
+      ], [
+        #subquestion()[$display(3/2+3x=(5x)/9-(2x+1)/6)$]
+      ], [
+        #subquestion()[$display((8x)/2-3=3x+1)$]
+      ], [
+        #subquestion()[$display(3/2+(3x)/2-(5x)/6=15)$]
+      ], [
+        #subquestion()[$display(2+(3x-1)/(15)+(x-4)/5=(x+4)/3)$]
+      ], [
+        #subquestion()[$display((5x+7)/2-(3x+9)/4=(2x+5)/3+5)$]
+      ], [
+        #subquestion()[$display((x-5)/2-(8-3x)/2=2-(9x)/2)$]
+      ], [
+        #subquestion()[$display(5-(2x-8)/2=(3x)/2-(3-x)/5)$]
+      ], [
+        #subquestion()[$display((x-2)/6-(3-2x)/5=6-(5x)/5)$]
+      ], [
+        #subquestion()[$display((x-5)/9-(4-2x)/2=8-(8x)/2)$]
+      ], [
+        #subquestion()[$display(x/3-(13-2x)/2=1/6)$]
+      ], [
+        #subquestion()[$display((15x-35)/(10)+(4-x)/3=20/4+(3x-3)/18)$]
+ ], [
+        #subquestion()[$display((4x)/2+x=(6x)/3+7)$]
 //             \part $\frac{3x+1}{3}-\frac{5x-4}{7}=\frac{25}{21}$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=1 )$ \fi
             
 //             \part $\frac{3x}{2} + \frac{2x}{3} = \frac{1 + 3x}{2}$ \phantom{12} \ifprintanswers $(\text{Sol: } x=\frac{3}{4} )$ \fi
-//         \end{multicols}
+      ]
+    )
+  ],
+  [#question()[Resuelve las siguientes ecuaciones:]
+    #questions-columns(
+      [
+        #subquestion()[$display(3x+1/2x+6=2x)$]
+      ], [
+      ])
+  ]
+)
 
 //         \part $\frac{x-4}{6}+\frac{2x-4}{8}=\frac{5x}{10}-\frac{5x-6}{12}$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=5 )$ \fi
 //         \part $\frac{2x+4}{4}-2(x-3)=5-\frac{7x}{2}$ \phantom{1234} \ifprintanswers $(\text{Sol: } x=-1 )$ \fi
