@@ -1,6 +1,6 @@
 #import "@preview/g-exam:0.4.4": *
 
-#let config = yaml("../config.yaml")
+#let config = yaml("../../config.yaml")
 
 #show: exam.with(
   author: (
@@ -10,7 +10,7 @@
   ),
   school: (
     name: config.at("school").at("name"),
-    logo: image("../" + config.at("school").at("logo"))
+    logo: image("../../" + config.at("school").at("logo"))
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),

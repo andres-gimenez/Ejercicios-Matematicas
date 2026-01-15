@@ -47,8 +47,6 @@
     ], [
       #subquestion()[$display(x-3=4-x)$]
     ], [
-      #subquestion()[$display(x-3=4-x)$]
-    ], [
       #subquestion()[$display(x-3=4-2x)$]
     ], [
       #subquestion()[$display(2x+34=-20)$]
@@ -63,11 +61,7 @@
     ], [
       #subquestion()[$display(x+1=2x-7)$]
     ], [
-      #subquestion()[$display(6x+6=4+8x)$]
-    ], [
       #subquestion()[$display(9+9x=17+5x)$]
-    ], [
-      #subquestion()[$display(2x+3=3x)$]
     ], [
       #subquestion()[$display(25-2x=3x+20)$]
     ], [
