@@ -1,4 +1,4 @@
-#import "@local/g-exam:0.4.4": *
+#import "@preview/g-exam:0.4.4": *
 #import "@preview/mannot:0.2.2": markrect
 
 #let config = yaml("../../config.yaml")

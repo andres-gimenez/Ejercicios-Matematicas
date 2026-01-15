@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.3": *
+#import "@preview/g-exam:0.4.4": *
 
 #let config = yaml("../config.yaml")
 
@@ -23,7 +23,6 @@
   
   language: "es",
   decimal-separator: ",",
-  date: datetime(year:2024, month:1, day:8),
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
