@@ -14,10 +14,10 @@
   ),
   exam-info: (
     academic-period: "Curso 2025/2026",
-    academic-level: "2º Bachillerato",
+    academic-level: "3º ESO",
     academic-subject: "Matemáticas II",
-    number: [Crecimiento, decrecimiento, curvatura ],
-    content: [máximos, mínimos y curvatura],
+    number: [Ejercicios variados],
+    // content: [],
     model: [v1],
   ),
   
