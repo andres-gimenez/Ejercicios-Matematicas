@@ -36,7 +36,7 @@
  
   [#question()[Resuelve las siguientes ecuaciones:]
     #questions-columns(
-      [#subquestion()[$display(7(x-1)-2(x+8)=3(x-3))$)]],
+      [#subquestion()[$display(7(x-1)-2(x+8)=3(x-3))$]],
       [#subquestion()[$display(2(3x+2)=4[2x-5(x-2)])$]],
       [#subquestion()[$display(3(12-x)-4x=2(11-x)+9x)$]],
       [#subquestion()[$display(2(1+x)-3(x-1)-6=x-11)$]], 
