@@ -51,3 +51,7 @@
 ]
 
 #question()[Un rectángulo tiene una área de 24 m². Su base mide 6 m más que su altura. Calcula las dimensiones del rectángulo resolviendo una ecuación de segundo grado.]
+
+#question()[El área de un rectángulo es 180 m².La base mide 5 m más que la altura. Calcula las dimensiones del rectángulo.]
+
+#question()[El perímetro de un cuadrado es igual al perímetro de un rectángulo cuya base mide 6 cm más que su altura, y cuyo área es 96 cm². Calcular el lado del cuadrado.]
