@@ -18,7 +18,7 @@
     academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas II",
-    number: [Crecimiento, decrecimiento, curvatura ],
+    number: [Crecimiento, decrecimiento, curvatura],
     content: [máximos, mínimos y curvatura],
     model: [v1],
   ),
