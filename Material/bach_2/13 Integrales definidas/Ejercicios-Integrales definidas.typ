@@ -164,12 +164,12 @@
   ],
   [
     #question()[Calcula los siguientes áreas:]
-    #subquestion()[Área entre la curva f(x) = x^2, su perpendicular en x=2 y el eje de abscisas.]
-    #subquestion()[Área entre la curva f(x) = x^2, su tangente en x=2 y el eje de abscisas.]
+    #subquestion()[Área entre la curva $f(x) = x^2$, su perpendicular en $x=2$ y el eje de abscisas.]
+    #subquestion()[Área entre la curva $f(x) = x^2$, su tangente en $x=2$ y el eje de abscisas.]
   ],
   [
     #question()[Calcula el volumen generado por las siguientes funciones al girar sobre el eje x:]
-    #subquestion()[f(x) = x^2, entre $x=0$ y $x=5$.]
+    #subquestion()[$f(x) = x^2$, entre $x=0$ y $x=5$.]
     
     #subquestion()[$f(x) = sqrt(r^2-x^2)$, entre $x=-r$ y $x=r$.]
   ],
