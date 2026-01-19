@@ -1,18 +1,16 @@
+
 #import "lib.typ": html-export-template
 #show: html-export-template
 
-// = Definición
+= Primitivas
 
-// La integral es la operación contraria de la derivada.
-= Integrales indefinidas
+== Primitiva de una función
 
-== Primitiva 
+Si $f(x)$ es una función definida en un intervalo, una *primitiva de $f(x)$* es ese intervalo es otra función $F(x)$ tal que $F'(x)=f(x)$ para tofo x de ese intervalo.
 
 == Integrales indefinidas
 
-Llamamos *integrales indefinidas* de una función $f(x)$
-al conjunto de todas las funciones cuya derivada
-es la propia función $f(x)$.
+El conjunto de todas las primitivas de una función $f(x)$ se llama *integral indefinida* de $f(x)$ y se denota por:
 
 $∫ f(x) dif x = F(x) + C$
 
@@ -20,35 +18,9 @@ $∫ f(x) dif x = F(x) + C$
 
 1.$display(∫ f(x) + g(x) dif x = ∫ f(x) dif x + ∫ g(x)  dif x)$
 
-2.$display(∫ k · f(x) dif x = k · ∫ f(x) dif x)$
+2.$display(∫ k f(x) dif x = k ∫ f(x) dif x)$ con $k in RR$.
 
-// 3.$display(∫ f'(x) dif x = f(x) + C)$
-
-// 4.$∫ [f(x) · g(x)] dif x ≠ ∫ f(x) dif x · ∫ g(x) dif x$
-
-== Cálculo de integrales definidas
-
-1. Cuando nos convenga, podemos sacar el número
-   que está multiplicando o dividiendo al integrando
-   fuera de la integral, pero *no podemos hacer lo mismo con las $x$*.
-
-$∫ k · f(x) dif x = k · ∫ f(x) dif x$
-
-
-=== 2. Función camuflada con su derivada
-
-En el integrando hay una función $f(x)$ camuflada con su derivada.
-
-$ ∫ f(x) dif x = 1/k ∫ k · f(x) dif x $
-
-Esto solo es aplicable a números, pero no a las $x$.
-
-Si un número está multiplicando o dividiendo dentro de una integral,  
-podremos “sacarlo” fuera con la misma operación,  
-pero si realizamos nosotros la operación dentro de la integral,  
-el número tendrá que operar fuera a la inversa.
-
-=== 3. Uso de integrales de la tabla
+== Tabla de integrales inmediatas
 
 == Reglas de integración inmediata
 
@@ -64,106 +36,64 @@ $ ∫ 5 dif x = 5x + C $
 
 === 2. Potencias
 
-$ ∫ (f(x))^n · f'(x) dif x = (f(x))^(n+1)/(n+1) + C $
+$ ∫ [f(x)]^n · f'(x) dif x = [f(x)]^(n+1)/(n+1) + C $
 
-Ejemplo:
+Ejemplos 1:
 
-$ ∫ 7(3x + 2)^5 dif x $
+$ ∫ 7(3x + 2)^5 dif x  = 7 ∫ (3x + 2)^5 dif x = 7/3 ∫ 3(3x + 2)^5 dif x = 7/3 (3x + 2)^6/6 + C $
 
-1.  
-$ 7 ∫ (3x + 2)^5 dif x $
-
-2.  
-$ 7/3 ∫ 3(3x + 2)^5 dif x $
-
-3.  
-$ 7/3 · (3x + 2)^6/6 + C $
-
-Otro ejemplo:
-
-$ ∫ 3x (x^2 + 6)^3 dif x $
-
-$ 3 ∫ x (x^2 + 6)^3 dif x = 3/2 ∫ 2x (x^2 + 6)^3 dif x $
-
-$ 3/2 · (x^2 + 6)^4/4 + C $
+Ejemplos 2:
+$ ∫ 3x (x^2 + 6)^3 dif x = 3 ∫ x (x^2 + 6)^3 dif x = 3/2 ∫ 2x (x^2 + 6)^3 dif x = 3/2 (x^2 + 6)^4/4 + C $
 
 === 3. Logaritmo neperiano
 
 $ ∫ (f'(x))/f(x) dif x = ln(|f(x)|) + C $
 
-Ejemplo:
+Ejemplo 1:
 
-$ ∫ 6/(5x - 3) dif x $
+$ ∫ 6/(5x - 3) dif x = 6 ∫ 1/(5x - 3) dif x = 6/5 ∫ 5/(5x - 3) dif x = 6/5 ln(|5x - 3|) + C $
 
-$ = 6 ∫ 1/(5x - 3) dif x $
+Ejemplo 2:
 
-$ = 6/5 ∫ 5/(5x - 3) dif x $
+$ ∫ (-2)/(3x + 7) dif x = -2 ∫ 1/(3x + 7) dif x = -2/3 ∫ 3/(3x + 7) dif x = -2/3 ln(|3x + 7|) + C $
 
-$ = 6/5 ln(|5x - 3|) + C $
+== 4. Exponenciales con base e
 
-== Ejemplo (logaritmo)
-
-$ ∫ (-2)/(3x + 7) dif x $
-
-$ = -2 ∫ 1/(3x + 7) dif x $
-
-$ = -2/3 ∫ 3/(3x + 7) dif x $
-
-$ = -2/3 ln(|3x + 7|) + C $
-
-== 4. Exponenciales en base e
-
-$ ∫ e^{f(x)} · f'(x) dif x = e^{f(x)} + C $
+$ ∫ e^(f(x)) · f'(x) dif x = e^(f(x)) + C $
 
 Ejemplo:
 
-$ ∫ 5e^{2x} dif x $
+$ ∫ 5e^(2x) dif x = 5 ∫ e^(2x) dif x = 5/2 ∫ 2e^(2x) dif x = 5/2 e^(2x) + C $
 
-$ = 5 ∫ e^{2x} dif x $
-
-$ = 5/2 ∫ 2e^(2x) dif x $
-
-$ = 5/2 e^{2x} + C $
-
-== 5. Exponenciales en base a
+== 5. Exponenciales con base a
 
 $ ∫ a^f(x) · f'(x) dif x = a^(f(x))/(ln(a)) + C $
 
-Ejemplo:
+Ejemplo 1:
 
-$ ∫ 3x · 2^{x^2} dif x $
+$ ∫ 3x · 2^(x^2) dif x = 3 ∫ x · 2^(x^2) dif x = 3/2 ∫ 2x · 2^(x^2) dif x = 3/2 · 2^(x^2/(ln(2)) + C $
 
-$ = 3 ∫ x · 2^{x^2} dif x $
+Ejemplo 2:
 
-$ = 3/2 ∫ 2x · 2^(x^2) dif x $
-
-$ = 3/2 · 2^(x^2/(ln(2)) + C $
-
-Otro ejemplo:
-
-$ ∫ 5x^2 · 7/(x^3) dif x $
-
-$ = 5 ∫ x^2 · 7/(x^3) dif x $
-
-$ = 5/3 ∫ 3x^2 · 7/(x^3) dif x $
-
-$ = 5/3 · 7x^3/(ln(7)) + C $
+$ ∫ 5x^2 · 7/(x^3) dif x = 5 ∫ x^2 · 7/(x^3) dif x = 5/3 ∫ 3x^2 · 7/(x^3) dif x = 5/3 · 7x^3/(ln(7)) + C $
 
 == Integrales racionales
 
-→ *Caso 1*: el grado del numerador es mayor o igual que el del denominador.  
-→ *Caso 2*: el grado del denominador es mayor que el del numerador.  
+$ ∫ D(x) / d(x) dif x $ 
 
-→ *2.1*: el denominador tiene raíces reales simples (no se repiten).  
-→ *2.2*: el denominador tiene alguna raíz real múltiple (se repiten).
+- *Caso 1*: el grado del numerador es $>=$ que el del denominador.  
 
-=== Caso 1
+- *Caso 2*: el grado del denominador es mayor que el del numerador.  
 
-$ ∫ D(x)/d(x) dif x  →  "Gr"_"num" ≥ "Gr"_"den" $
+   - *2.1*: el denominador tiene raíces reales simples (no se repiten).     
+   - *2.2*: el denominador tiene alguna raíz real múltiple (se repiten).
+   - *2.3*: el denominador tiene raíces complejas.
+
+=== Caso 1: Grado del numerador $>=$ grado del denominador.
 
 Hacemos la división:
 
-$ D(x) = d(x) · C(x) + R(x) $
+$ D(x) = d(x) · C(x) + R(x) => D(x)/d(x) = C(x) + R(x)/d(x) $
 
 Entonces:
 
@@ -172,17 +102,9 @@ $ ∫ (D(x))/(d(x)) dif x
 
 Ejemplo:
 
-$ ∫ (x + 2)/(x - 2) dif x $
+$ ∫ (x + 2)/(x - 2) dif x = ∫ 1 dif x + ∫ 4/(x - 2) dif x = x + 4 ∫ 1/(x - 2) dif x = x + 4 ln(|x - 2|) + C $
 
-$ = ∫ 1 dif x + ∫ 4/(x - 2) dif x $
-
-$ = x + 4 ∫ 1/(x - 2) dif x $
-
-$ = x + 4 ln(|x - 2|) + C $
-
-== Caso 2.1
-
-$ ∫ D(x) / d(x) dif x → "Gr"_("deno") > "Gr"_("nume") $
+== Caso 2.1 grado del numerador $<$ grado del denominador.
 
 === Paso 1
 
@@ -205,19 +127,16 @@ Despejamos y calculamos $A, B, …, N$.
 Sacamos mínimo común múltiplo de la suma de fracciones  
 y las expresamos como una sola:
 
-$ D(x) / ((x - x_1) · (x - x_2) · … · (x - x_n))  = (A(x - x_2)(x - x_n)
-  + B(x - x_1)(x - x_n)
-  + … 
-  + N(x - x_1)(x - x_2))
-  / ((x - x_1)(x - x_2)…(x - x_n)) $
+$ D(x)/((x - x_1) · (x - x_2) · … · (x - x_n))  = 
+   (A(x - x_2)(x - x_n) + B(x - x_1)(x - x_n) + … + N(x - x_1)(x - x_2))/((x - x_1)(x - x_2)…(x - x_n)) $
 
 Eliminamos denominadores a ambos lados de la igualdad:
 
-$ D(x)
-= A(x - x_2)(x - x_n)
-+ B(x - x_1)(x - x_n)
-+ …
-+ N(x - x_1)(x - x_2) $
+// $ D(x) 
+// = A(x - x_2)(x - x_n)
+// + B(x - x_1)(x - x_n)
+// + …
+// + N(x - x_1)(x - x_2) $
 
 Despejamos y calculamos $A, B, …, N$ asignando valores a x. El truco es el siguiente:
 
@@ -225,11 +144,7 @@ Despejamos y calculamos $A, B, …, N$ asignando valores a x. El truco es el sig
 
 Asignamos a x el valor de la raíz x_1.
 
-$ D(x_1)
-= A(x_1 - x_2)(x_1 - x_n)
-+ B(x_1 - x_1)(x_1 - x_n)
-+ …
-+ N(x_1 - x_1)(x_1 - x_2) $
+$ D(x_1) = A(x_1 - x_2)(x_1 - x_n) + B(x_1 - x_1)(x_1 - x_n) + … + N(x_1 - x_1)(x_1 - x_2) $
 
 Se anulan todos los términos salvo el de A:
 
@@ -243,11 +158,7 @@ $ A = D(x_1) / ((x_1 - x_2)(x_1 - x_n)) $
 
 Asignamos a x el valor de la raíz x_2.
 
-$ D(x_2)
-= A(x_2 - x_2)(x_2 - x_n)
-+ B(x_2 - x_1)(x_2 - x_n)
-+ …
-+ N(x_2 - x_2)(x_2 - x_1) $
+$ D(x_2) = A(x_2 - x_2)(x_2 - x_n) + B(x_2 - x_1)(x_2 - x_n) + … + N(x_2 - x_2)(x_2 - x_1) $
 
 Se anulan todos los términos salvo el de B:
 
@@ -261,11 +172,7 @@ $ B = D(x_2) / ((x_2 - x_1)(x_2 - x_n)) $
 
 Asignamos a x el valor de la raíz x_n.
 
-$ D(x_n)
-= A(x_n - x_2)(x_n - x_n)
-+ B(x_n - x_1)(x_n - x_n)
-+ …
-+ N(x_n - x_1)(x_n - x_2) $
+$ D(x_n) = A(x_n - x_2)(x_n - x_n) + B(x_n - x_1)(x_n - x_n) + … + N(x_n - x_1)(x_n - x_2) $
 
 Se anulan todos los términos salvo el de N:
 
@@ -280,11 +187,7 @@ $ N = D(x_n) / ((x_n - x_1)(x_n - x_2)) $
 Sustituimos los valores de A, B, …, N  
 y calculamos las integrales inmediatas logarítmicas:
 
-$ ∫ D(x) / d(x) dif x
-= ∫ A / (x - x_1) dif x
-+ ∫ B / (x - x_2) dif x
-+ …
-+ ∫ N / (x - x_n) dif x $
+$ ∫ D(x) / d(x) dif x = ∫ A / (x - x_1) dif x + ∫ B / (x - x_2) dif x + …+ ∫ N / (x - x_n) dif x $
 
 Resultado final:
 
@@ -295,33 +198,19 @@ $ ∫ D(x) / d(x) dif x
 + N ln(|x - x_n|)
 + C $
 
-== Caso 2.2
+== Caso 2.2 : Denominador con *raíces múltiples*.
 
-$ ∫ D(x) / d(x) dif x → "grado" D > "grado" d $
+$ D(x) / d(x) = A / (x - x_1) + B / (x - x_2) + … + N_1 / (x - x_n) + N_2 / (x - x_n)^2 + … + N_k / (x - x_n)^k $
 
-Denominador con *raíces múltiples*.
-
-$ D(x) / d(x)
-= A / (x - x_1)
-+ B / (x - x_2)
-+ …
-+ N_1 / (x - x_n)
-+ N_2 / (x - x_n)^2
-+ …
-+ N_k / (x - x_n)^k $
-
-Las raíces simples aparecen una sola vez  
-y las raíces múltiples se repiten k veces.
+Las raíces simples aparecen una sola vez  y las raíces múltiples se repiten k veces.
 
 === Ejemplo
 
 $ ∫ (2x + 3) / (x^2 - 2x + 1) dif x $
 
-Como:
+=== Paso 1. 
 
-$ "grado"\;D > "grado"\;d $
-
-=== Paso 1. Igualamos el denominador a 0
+Igualamos el denominador a 0
 
 $ x^2 - 2x + 1 = 0 $
 
@@ -335,23 +224,26 @@ Raíz doble:
 
 $ (x - 1)(x - 1) = (x - 1)^2 $
 
-=== Paso 2. Expresamos el integrando
+=== Paso 2. 
+Expresamos el integrando
 
 $ (2x + 3) / (x^2 - 2x + 1)
-= (2x + 3) / ((x - 1)(x - 1)) $
-
-$ = (2x + 3) / (x - 1)^2 $
+= (2x + 3) / ((x - 1)(x - 1)) 
+= (2x + 3) / (x - 1)^2 $
 
 Descomponemos en fracciones simples:
 
 $ (2x + 3) / (x - 1)^2
 = A / (x - 1) + B / (x - 1)^2 $
 
-=== Paso 3. Despejamos y calculamos A y B
+=== Paso 3. 
+Despejamos y calculamos A y B
 
 $ (2x + 3) / cancel((x - 1)^2) = A / (x - 1) + B / cancel((x - 1)^2) => 2x +3 = A(x-1) + B $
 
-=== Paso 3. Despejamos A y B
+=== Paso 3. 
+
+Despejamos A y B
 
 Partimos de:
 
@@ -366,37 +258,28 @@ $ 2x + 3 = A(x - 1) + B $
 
 Asignamos x = 1:
 
-$ 2·1 + 3 = A(1 - 1) + B $
-
-$ 5 = B $
+$ 2·1 + 3 = A(1 - 1) + B => 5 = B $
 
 ==== Despejar A
 
 Asignamos x = 0:
 
-$ 2·0 + 3 = A(0 - 1) + B $
-
-$ 3 = -A + B $
+$ 2·0 + 3 = A(0 - 1) + B => 3 = -A + B $
 
 Sustituimos B = 5:
 
-$ 3 = -A + 5 $
+$ 3 = -A + 5 => A = 2 $
 
-$ A = 2 $
+=== Paso 4. 
+Calculamos la integral
 
-=== Paso 4. Calculamos la integral
-
-$ ∫ (2x + 3) / (x^2 - 2x + 1) dif x $
-
-$ = ∫ 2 / (x - 1) dif x + ∫ 5 / (x - 1)^2 dif x $
-
-$ = 2 ∫ 1 / (x - 1) dif x
-+ 5 ∫ (x - 1)^(-2) dif x $
+$ ∫ (2x + 3) / (x^2 - 2x + 1) dif x 
+= ∫ 2 / (x - 1) dif x + ∫ 5 / (x - 1)^2 dif x 
+= 2 ∫ 1 / (x - 1) dif + 5 ∫ (x - 1)^(-2) dif x $
 
 Resultado final:
 
 $ 2 ln(|x - 1|) - 5 / (x - 1) + C $
-
 
 = Integrales por partes
 
@@ -405,23 +288,23 @@ la tenemos que resolver con el método de integración por partes.
 
 == Tipos de integrales por partes
 
-→ *Tipo 1*
+*Tipo 1*
 
 $ ∫ "polinomio" · "seno" o "coseno" dif x $
 
-→ *Tipo 2*
+*Tipo 2*
 
 $ ∫ "polinomio" · "exponencial" dif x $
 
-→ *Tipo 3*
+*Tipo 3*
 
 $ ∫ "polinomio" · "logaritmo" dif x $
 
-→ *Tipo 4*
+*Tipo 4*
 
 $ ∫ "polinomio" · arccos dif x $
 
-→ *Tipo 5*
+*Tipo 5*
 
 $ ∫ "exponencial" · "seno" o "coseno" dif x $
 
@@ -455,8 +338,8 @@ será dv.
 
 === 2. Determinamos du y v
 
-→ Determinamos du calculando la derivada de u.  
-→ Determinamos v calculando la integral de dv.
+→ Determinamos $dif u$ calculando la derivada de $u$.  
+→ Determinamos $v$ calculando la integral de $dif v$.
 
 === Ejemplo
 
@@ -487,23 +370,23 @@ $ (x + 2) · "sen" x + cos x + C $
 
 = Integrales por cambio de variable
 
-→ Si en el integrando aparece un cambio de variable sugerido.
+Si en el integrando aparece un cambio de variable sugerido.
 
-→ Raíces cuadradas  
-→ $ t = sqrt("polinomio") $
+- Raíces cuadradas  
+$ t = sqrt("polinomio") $
 
-→ Raíces no cuadradas  
-→ $ t = root(m, "polinomio") $
+- Raíces no cuadradas  
+$ t = root(m, "polinomio") $
 
 siendo m el mínimo común múltiplo de los índices de las raíces.
 
-→ Funciones exponenciales  
-→ $ t = e^(n dot x) $
+- Funciones exponenciales  
+$ t = e^(n dot x) $
 
 n es el menor índice de los exponentes del integrando.
 
-→ Funciones logarítmicas  
-→ $ t = ln x $
+- Funciones logarítmicas  
+$ t = ln x $
 
 == Pasos
 
@@ -545,17 +428,14 @@ $ dif x = 2t dif t $
 Sustituimos en la integral:
 
 $ ∫ x · sqrt(x + 3) dif x
-= ∫ (t^2 - 3) · t · 2t dif t $
-
-$ = ∫ 2(t^4 - 3t^2) dif t $
+= ∫ (t^2 - 3) · t · 2t dif t
+= ∫ 2(t^4 - 3t^2) dif t $
 
 === Paso 5
 
-$ 2 ∫ (t^4 - 3t^2) dif t $
-
-$ = 2(t^5 / 5 - t^3) + C $
-
-$ = 2t^5 / 5 - 2t^3 + C $
+$ 2 ∫ (t^4 - 3t^2) dif t 
+= 2(t^5 / 5 - t^3) + C 
+= 2t^5 / 5 - 2t^3 + C $
 
 === Paso 6
 
@@ -589,8 +469,7 @@ $ f'(x) = ∫ f''(x) dif x $
 
 == Ejemplo
 
-$ f(x) = (x + 2) ln x $
-con $ x > 0 $, pasando por el punto $ P(1, 0) $.
+$ f(x) = (x + 2) ln x "con" x > 0 ", pasando por el punto" P(1, 0) $.
 
 === Cálculo de la primitiva
 
@@ -644,8 +523,4 @@ $ C = 9 / 4 $
 
 == Primitiva final
 
-$ F(x)
-= (x^2 / 2 + 2x) ln x
-- x^2 / 4
-- 2x
-+ 9 / 4 $
+$ F(x) = (x^2 / 2 + 2x) ln x - x^2 / 4 - 2x + 9 / 4 $
