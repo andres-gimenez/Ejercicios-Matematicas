@@ -89,13 +89,13 @@
     \ #clarification()[La (d) es muy fácil]]
     #questions-columns(
     [
-      #subquestion()[$display(F(x) = ∫_0^x cos(t) dif t)$.]
+      #subquestion()[$display(F(x) = ∫_0^x cos(t) dif t)$]
     ], [
-      #subquestion()[$display(F(x) = ∫_3^x (t^2+1)^4 dif t)$.]
+      #subquestion()[$display(F(x) = ∫_3^x (t^2+1)^4 dif t)$]
     ], [
-      #subquestion()[$display(F(x) = ∫_0^x e^(-t)^2 dif t)$.]
+      #subquestion()[$display(F(x) = ∫_0^x e^(-t)^2 dif t)$]
     ], [
-      #subquestion()[$display(F(x) = ∫_3^5 (t^2+1)^4 dif t)$. ]
+      #subquestion()[$display(F(x) = ∫_3^5 (t^2+1)^4 dif t)$]
     ],)
   ],
   [
