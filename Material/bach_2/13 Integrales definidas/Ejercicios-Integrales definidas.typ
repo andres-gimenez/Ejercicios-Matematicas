@@ -36,21 +36,46 @@
   [
     #question()[Calcula el valor de las siguientes integrales definidas:]
     #questions-columns(
-    [
-      #subquestion()[$display(∫_0^2 (3x^2 - 4x + 1) dif x)$]
+    [#subquestion()[$display(∫_0^2 (3x^2 - 4x + 1) dif x)$]],
+    [#subquestion()[$display(∫_(-1)^1 (x^3 + x) dif x)$]],
+    [#subquestion()[$display(∫_1^3 1/x dif x)$]],
+    [#subquestion()[$display(∫_1^2 (2x + 3) dif x)$]],
+    [#subquestion()[$display(∫_(-2)^2 (x^5 - 3x^3) dif x)$]],
+    [#subquestion()[$display(∫_(0)^1 x arctan(x) dif x)$]
+     #solution()[
+      Integramos por partes:
+
+      $ ∫u dif v = u v - ∫v dif u $
+
+      Elegimos:
+
+      $display(cases(reverse: #false, delim: "{", gap: #1em,
+                &u = arctan (x) & => dif u = 1/(1+x^2) dif x,
+                &dif v = x dif x & => v = x^2/2,
+              ))$
+
+      $display(∫ x arctan(x) dif x =
+       arctan(x) dot x^2/2 - ∫ x^2/2 dot 1/(1+x^2) dif x =
+       x^2 arctan (x) - 1/2 ∫ x^2 /(1+x^2) dif x = \ =
+       x^2 arctan (x) - 1/2 ∫ ((1+x^2) - 1)/(1+x^2) dif x  =
+       x^2 arctan (x) - 1/2 ∫ 1 - 1/(1+x^2) dif x = \ =
+       x^2 arctan (x) - 1/2 [∫ 1 dif x - ∫ 1/(1+x^2) dif x] =
+       x^2 arctan (x) - 1/2 [x - arctan (x)] = \
+       x^2 arctan (x) - x/2 - (arctan (x))/2 =
+       (x^2 + 1) arctan (x) - x/2  + C)$
+
+      Aplicando la regla de Barrow:
+
+      $display(∫_(0)^1 x arctan(x) dif x =
+      (x^2 + 1) arctan (x) - x/2 limits(])_0^1 = \ =
+      ((1^2 + 1) arctan (1) - 1/2) - ((0^2 + 1) arctan (0) - 0/2) =
+      (2 pi/4 - 1/2) - (1 dot 0 -1 ) = 
+      #result($display(pi/2 - 1/2)$)) $
+     ],
     ],
-    [
-      #subquestion()[$display(∫_(-1)^1 (x^3 + x) dif x)$]
-    ],
-    [
-      #subquestion()[$display(∫_1^3 1/x dif x)$]
-    ],
-    [
-      #subquestion()[$display(∫_1^2 (2x + 3) dif x)$]
-    ],
-    [
-      #subquestion()[$display(∫_(-2)^2 (x^5 - 3x^3) dif x)$]
-    ],
+    [#subquestion()[$display(∫_(-pi)^pi x^2 "sen"(x) dif x)$]],
+    [#subquestion()[$display(∫_(-1)^1 x e^x dif x)$]],
+    [#subquestion()[$display(∫_(0)^2 (2x+1)/(x^2+x+1)^2 dif x)$]],
     )
   ],
   [
@@ -69,9 +94,9 @@
     #question()[Calcula el valor de las siguientes integrales de la función:
       
       $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
-                & x^2 & "si" & x < 2,
+                & x^2 & "si" & x < 0,
                 & 2x  & "si" & 0 <= x < 2,
-                & 10-3x  & "si" & 0 <= x < 2,
+                & 10-3x  & "si" & x > 2,
               ) $
     ]
     #questions-columns(
@@ -85,18 +110,28 @@
     )
   ],
   [
+    #question()[Siendo la función:
+      
+      $ display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
+                & "sen"(x) & "si" & x < pi/2,
+                & e^x      & "si" & pi/2<= x < 1 ,
+                & cos(x)  & "si" & x >= 1 
+              )) $
+
+      Calcula 
+    
+     $ ∫_(-pi)^pi f(x) dif x $
+     ]
+  ],
+  [
     #question()[Calcula las derivadas de las siguientes funciones utilizando el *teorema fundamental del calculo*:
     \ #clarification()[La (d) es muy fácil]]
     #questions-columns(
-    [
-      #subquestion()[$display(F(x) = ∫_0^x cos(t) dif t)$]
-    ], [
-      #subquestion()[$display(F(x) = ∫_3^x (t^2+1)^4 dif t)$]
-    ], [
-      #subquestion()[$display(F(x) = ∫_0^x e^(-t)^2 dif t)$]
-    ], [
-      #subquestion()[$display(F(x) = ∫_3^5 (t^2+1)^4 dif t)$]
-    ],)
+    [#subquestion()[$display(F(x) = ∫_0^x cos(t) dif t)$.]],
+    [#subquestion()[$display(F(x) = ∫_3^x (t^2+1)^4 dif t)$.]],
+    [#subquestion()[$display(F(x) = ∫_0^x e^(-t)^2 dif t)$.]], 
+    [#subquestion()[$display(F(x) = ∫_3^5 (t^2+1)^4 dif t)$.]],
+    )
   ],
   [
     #question()[Área entre dos curvas:]
@@ -129,12 +164,12 @@
   ],
   [
     #question()[Calcula los siguientes áreas:]
-    #subquestion()[Área entre la curva f(x) = x^2, su perpendicular en x=2 y el eje de abscisas.]
-    #subquestion()[Área entre la curva f(x) = x^2, su tangente en x=2 y el eje de abscisas.]
+    #subquestion()[Área entre la curva $f(x) = x^2$, su perpendicular en $x=2$ y el eje de abscisas.]
+    #subquestion()[Área entre la curva $f(x) = x^2$, su tangente en $x=2$ y el eje de abscisas.]
   ],
   [
     #question()[Calcula el volumen generado por las siguientes funciones al girar sobre el eje x:]
-    #subquestion()[f(x) = x^2, entre $x=0$ y $x=5$.]
+    #subquestion()[$f(x) = x^2$, entre $x=0$ y $x=5$.]
     
     #subquestion()[$f(x) = sqrt(r^2-x^2)$, entre $x=-r$ y $x=r$.]
   ],

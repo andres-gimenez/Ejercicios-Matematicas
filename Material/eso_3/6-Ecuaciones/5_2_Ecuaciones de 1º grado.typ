@@ -20,7 +20,7 @@
     content: "Ecuaciones de 1º grado",
   ),
   
-  language: "es",
+  language: "es",  
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: "odd-pages",
