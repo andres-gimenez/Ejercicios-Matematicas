@@ -57,17 +57,21 @@ jobs:
               typst compile "$archivo" --root . --input show-solutions=false || echo "Error en $archivo, continuando..."
           done
 
-
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
           name: Material
           path: ./Material/**/*.pdf
 
+      - name: Copy files
+        run: |
+          mkdir -p ./public/Material
+          cp ./Material/**/*.pdf ./public/Material/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ./Material/**/*.pdf
+          path: ./public/Material/
 
       - name: Deploy to GitHub Pages
         id: deployment
