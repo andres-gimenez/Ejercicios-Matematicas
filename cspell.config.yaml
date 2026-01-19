@@ -5,6 +5,7 @@ dictionaries: []
 words:
   - academic
   - approx
+  - arccos
   - arctan
   - author
   - Barrow
@@ -49,6 +50,7 @@ words:
   - subject
   - subquestion
   - theta
+  - typst
   - watermark
   - white
 ignoreWords: []
