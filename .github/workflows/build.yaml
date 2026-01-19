@@ -64,6 +64,11 @@ jobs:
           name: Material
           path: ./Material/**/*.pdf
 
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./Material/**/*.pdf
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
