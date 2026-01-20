@@ -584,6 +584,27 @@
     ],[
       #subquestion()[$display(limits(integral) 1/((x-1)(x+2)) dif x)$]
       #solution()[
+        Primero descomponemos en fracciones simples:
+
+        $display(1/((x-1)(x+2)) = 
+        frac(A, x - 1) + frac(B, x + 2) = 
+        (A (x+2) + B (x-1))/ ((x-1)(x+2)) = 
+        (A x + 2A + B x - B )/((x-1)(x+2)) = 
+        ((A - B) x + (2A + B ))/((x-1)(x+2)) =>
+
+        cases(reverse: #false, delim: "{", gap: #1em, 
+              & &A + B &= 0, 
+              & &2A - B &= 1
+            ) => 
+        cases(reverse: #false, delim: "{", gap: #1em, 
+              &A &= 1/3, 
+              &B &= -1/3
+            ))$
+        
+        $display(integral frac(1, (x - 1)(x + 2)) dif x =
+            integral frac(1/3, x - 1) - frac(1/3, x + 2) dif x  = \ =
+            1/3 ln|x - 1| - 1/3 ln|x + 2| + C  = 
+            #result($display(1/3 ln abs((x - 1)/(x + 2)) + C)$))$
       ]
      ],[
       #subquestion()[$display(limits(integral) 1/((x+1)(x+3)) dif x)$]
@@ -644,6 +665,67 @@
     ],[
       #subquestion()[$display(limits(integral)(x^3+22x^2-12x+8)/(x^4-4x^2) dif x)$]
       #solution()[
+        Dividimos el denominador (por Ruffini):
+
+        $display((x^4-4x^2) = x^2(x-2)(x+2))$
+
+        Descomponemos la fracción:
+
+        $display(frac(x^3 + 22x^2 - 12x + 8, x^4 - 4x^2) = 
+        frac(x^3 + 22x^2 - 12x + 8, x^2(x - 2)(x + 2)) =
+        frac(A, x) + frac(B, x^2) + frac(C, x - 2) + frac(D, x + 2))$
+
+        Multiplicamos toda la igualdad por $ x^2(x - 2)(x + 2) $:
+
+        $ x^3 + 22x^2 - 12x + 8 $
+
+        $ = A x(x - 2)(x + 2) + B(x - 2)(x + 2) + C x^2(x + 2) + D x^2(x - 2) $
+
+// Desarrollamos cada término:
+
+// $ = A(x^3 - 4x)
+// + B(x^2 - 4)
+// + C(x^3 + 2x^2)
+// + D(x^3 - 2x^2) $
+
+// Agrupamos por potencias de $x$:
+
+// $ = (A + C + D)x^3
+// + (B + 2C - 2D)x^2
+// - 4A x
+// - 4B $
+
+// Igualamos coeficientes con:
+
+// $ x^3 + 22x^2 - 12x + 8 $
+
+// Sistema resultante:
+
+// $ A + C + D = 1 $
+// $ B + 2C - 2D = 22 $
+// $ -4A = -12 $
+// $ -4B = 8 $
+
+// Resolviendo:
+
+// $ A = 3 $
+// $ B = -2 $
+// $ C = -1 $
+// $ D = -1 $
+
+// Sustituimos en la descomposición:
+
+// $ frac(x^3 + 22x^2 - 12x + 8, x^4 - 4x^2)
+// = frac(3, x)
+// - frac(2, x^2)
+// - frac(1, x - 2)
+// - frac(1, x + 2) $
+
+        Resolvemos la integral:
+
+        $display(integral frac(x^3 + 22x^2 - 12x + 8, x^4 - 4x^2) dif x =
+         integral (- frac(3, x) - frac(2, x^2) + frac(8, x - 2) - frac(2, x + 2)) dif x  = \ =
+         #result($display(-3 ln|x| + frac(2, x) + 8 ln|x - 2| - 2 ln|x + 2| + C)$))$
       ]
     ])
     ]
