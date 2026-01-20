@@ -12,6 +12,11 @@ permissions:
   id-token: write
   contents: read
 
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+  
 environment:
   name: github-pages
   url: ${{ steps.deployment.outputs.page_url }}
