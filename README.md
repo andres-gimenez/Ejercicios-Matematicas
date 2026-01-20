@@ -3,6 +3,13 @@
 ## Explorta typst 
 
 ```bash
+typst compile ./Pruebas/pruebahtml.typ --format html --features html
+
+typst watch ./Pruebas/pruebahtml.typ --format html --features html
+```
+
+
+```bash
 typst compile ./Pruebas/pruebahtml.typ --format html --features html prueba.html  --root .
 ```
 
