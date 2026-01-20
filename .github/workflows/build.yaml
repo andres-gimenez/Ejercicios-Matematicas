@@ -60,8 +60,8 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
-          name: Material
-          path: ./Material/**/*.pdf
+          name: material
+          path: ./material/**/*.pdf
 
       # - name: Copy files
       #   run: |
@@ -78,5 +78,5 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          artifact_name: Material
+          artifact_name: material
 
