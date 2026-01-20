@@ -63,17 +63,19 @@ jobs:
           name: Material
           path: ./Material/**/*.pdf
 
-      - name: Copy files
-        run: |
-          mkdir -p ./public/Material
-          cp ./Material/**/*.pdf ./public/Material/
+      # - name: Copy files
+      #   run: |
+      #     mkdir -p ./public/Material
+      #     cp ./Material/**/*.pdf ./public/Material/
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: ./public/Material/
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v4
+      #   with:
+      #     name: MaterialPublish
+      #     path: ./public/Material/
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        artifact_name: Material
 
