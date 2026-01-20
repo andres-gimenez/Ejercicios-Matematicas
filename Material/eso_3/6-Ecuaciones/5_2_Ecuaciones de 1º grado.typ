@@ -100,7 +100,7 @@
       ], [
         #subquestion()[$display((2x-1)/3-(5x-4)/7=(x+5)2-5)$]
       ], [
-        #subquestion()[$display((3x-11)/20-(5x-1)/14=(x-7)/10-(5x-6)/21))$]
+        #subquestion()[$display((3x-11)/20-(5x-1)/14=(x-7)/10-(5x-6)/21)$]
       // ], [
       //   #subquestion()[$display(2 (2+x)-(6-7x) = 13x - (1 + 4x ))$] 
       ], [
@@ -110,7 +110,7 @@
       ], [
         #subquestion()[$display((-6)/2+(5+x)/3=1/3 (4-(4x)/2)+(3x)/2)$]
       ], [
-        #subquestion()[$display(4/3((2+x)/5)=1/5 (8-(6x)/3)+(5x)/3)$)]
+        #subquestion()[$display(4/3((2+x)/5)=1/5 (8-(6x)/3)+(5x)/3)$]
       ], [
         #subquestion()[$display(5/2 (7+x)/3 = 1/3 (5-(5x)/2)+(3x)/2)$]
       ], [
