@@ -103,6 +103,18 @@
         root(3,x) + 2sqrt(5)/9 sqrt(x^3) =
         #result($2/9 sqrt(5x^3) + root(3,x) + C$)
         )$ 
+
+        *Por cambio de variable:*
+
+        Hacemos el cambio de variable $x = t^6 => dif x =6t^5 dif t$
+
+        $display(limits(integral)(root(3, x) + sqrt(5x^3))/(3x)  dif x = 
+        
+        ∫ frac(root(3, t^6) + sqrt(5 (t^6)^3), 3 t^6) 6t^5 dif x = 
+        ∫ frac(t^2 + sqrt(5 t^9), 3 * t^6) dif x
+        = frac(2 * (t^2 + sqrt(5) * t^9), 3 * t^6)
+        = frac(2 * t + sqrt(5) * t^8, 3 * t^6))
+        $
       ]
     ],
      [
@@ -790,7 +802,7 @@
       ]
     ],
     [
-      #subquestion()[$display(limits(integral) 1/(x ln(x)))  dif x)$ #h(3mm) (haciendo $t=ln(x)$)]
+      #subquestion()[$display(limits(integral) 1/(x ln(x))  dif x)$ #h(3mm) (haciendo $t=ln(x)$)]
       #solution()[
       ]
     ],
