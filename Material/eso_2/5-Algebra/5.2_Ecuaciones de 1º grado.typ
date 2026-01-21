@@ -39,44 +39,44 @@
 
 #question()[Resuelve las siguientes ecuaciones:]
 #columns(2, gutter: 11pt)[
-  #subquestion()[$x-3=5$] //(sol: x= 8)
-  #subquestion()[$x-6=3$] //(sol: x= 9)
-  #subquestion()[$2x+3=13$] //(sol: x=)
-  // #subquestion()[$x-6=3x$] //(sol: x=)
-  // #subquestion()[$x+6=9$] //(sol: x=)
-  // #subquestion()[$x+9=3$] //(sol: x=)
-  // #subquestion()[$x-3=4-x$] //(sol: x=)
-  // #subquestion()[$x-3=4-2x$] //(sol: x=)
-  #subquestion()[$2x+34=-20$] //(sol: x=)
-  // #subquestion()[$4x+3=3x+5$] //(sol: x=)
-  // #subquestion()[$x-8=2x-11$] //(sol: x=)
-  // #subquestion()[$9x+8=7x+6$] //(sol: x=)
-  // #subquestion()[$7x+9=3+9x$] //(sol: x=)
+  #subquestion()[$x-3=5$]
+  #subquestion()[$x-6=3$]
+  #subquestion()[$2x+3=13$]
+  // #subquestion()[$x-6=3x$]
+  // #subquestion()[$x+6=9$]
+  // #subquestion()[$x+9=3$]
+  // #subquestion()[$x-3=4-x$]
+  // #subquestion()[$x-3=4-2x$]
+  #subquestion()[$2x+34=-20$]
+  // #subquestion()[$4x+3=3x+5$]
+  // #subquestion()[$x-8=2x-11$]
+  // #subquestion()[$9x+8=7x+6$]
+  // #subquestion()[$7x+9=3+9x$]
   
-  // #subquestion()[$x+1=2x-7$] //(sol: x=)
-  // #subquestion()[$6x+6=4+8x$] //(sol: x=)
-  #subquestion()[$9+9x=17+5x$] //(sol: x=)
+  // #subquestion()[$x+1=2x-7$]
+  // #subquestion()[$6x+6=4+8x$]
+  #subquestion()[$9+9x=17+5x$]
   
-  #subquestion()[$2x+3=3x$] //(sol: x=)
+  #subquestion()[$2x+3=3x$]
 
-  // #subquestion()[$25-2x=3x+20$] //(sol: x=)
-  // #subquestion()[$4x+1=3x+3$] //(sol: x=)
-  // #subquestion()[$5x-3=10x-6$] //(sol: x=)
+  // #subquestion()[$25-2x=3x+20$]
+  // #subquestion()[$4x+1=3x+3$]
+  // #subquestion()[$5x-3=10x-6$]
 #colbreak()
-  // #subquestion()[$1+8x=-16x+31$] //(sol: x=)
-  // #subquestion()[$5x-11=15x-19$ ] //(sol: x=)
-  // #subquestion()[$12x-48=-15x-30$] //(sol: x=)
-  // #subquestion()[$2x+17=3x+7$] //(sol: x=)
-  // #subquestion()[$5x-9=4x-20$ ] //(sol: x=)
-  #subquestion()[$2x-7=x+5$] //(sol: x=)
-  #subquestion()[$display(x/5=-30)$] //(sol: x=)
-  // #subquestion()[$2x+6=3x-1$] //(sol: x=)
-  // #subquestion()[$x-3 = x-3$] //(sol: x=)
-  // #subquestion()[$x-3 = x-4$] //(sol: x=)
-  #subquestion()[$3x + 1 = 3 - (2- 2x)$] //(sol: x=)
+  // #subquestion()[$1+8x=-16x+31$]
+  // #subquestion()[$5x-11=15x-19$ ]
+  // #subquestion()[$12x-48=-15x-30$]
+  // #subquestion()[$2x+17=3x+7$]
+  // #subquestion()[$5x-9=4x-20$ ]
+  #subquestion()[$2x-7=x+5$]
+  #subquestion()[$display(x/5=-30)$]
+  // #subquestion()[$2x+6=3x-1$]
+  // #subquestion()[$x-3 = x-3$]
+  // #subquestion()[$x-3 = x-4$]
+  #subquestion()[$3x + 1 = 3 - (2- 2x)$]
 
-  #subquestion()[$display(3/2 x + 1/3 = 3/5 - (2- 2x)/3)$] //(sol: x=)
-  #subquestion()[$display(1/5 x + 2/7 = (2x - 1)/2) + 2/3$] //(sol: x=)
+  #subquestion()[$display(3/2 x + 1/3 = 3/5 - (2- 2x)/3)$]
+  #subquestion()[$display(1/5 x + 2/7 = (2x - 1)/2 + 2/3)$]
 ]
 
 #question()[Halla la solución de las ecuaciones propuestas:]
@@ -95,28 +95,28 @@
 #question()[Resuelve las siguientes ecuaciones:]
 #columns(2, gutter: 11pt)[
   #subquestion()[$display((3x)/2 + (2x)/3 = (1 + 3x)/2)$ ] //(sol: x=3/4)
-  #subquestion()[$display((x-4)/6+(2x-4)/8=(5x)/10-(5x-6)/12)$] //(sol: x=)
+  #subquestion()[$display((x-4)/6+(2x-4)/8=(5x)/10-(5x-6)/12)$]
     
-  // #subquestion()[$display((2x+4)/4-2(x-3)=5-(7x)/2)$] //(sol: x=)
-  // #subquestion()[$display(x(x-1)-(x-3)=x^2-1-(x-2))$] //(sol: x=)
-  // #subquestion()[$display((x-5)/2-(2x-4)/12=(5-x)/4-x/3)$] //(sol: x=)
-  #subquestion()[$display((2x-1)/3-(5x-4)/7=(x+5)/2-5)$] //(sol: x=)
-  // #subquestion()[$display((3x-11)/20-(5x-1)/14=(x-7)/10-(5x-6)/21)$] //(sol: x=)
-  // #subquestion()[$display(2 (2+x)-(6-7x) = 13x - (1 + 4x))$] //(sol: x=)
+  // #subquestion()[$display((2x+4)/4-2(x-3)=5-(7x)/2)$]
+  // #subquestion()[$display(x(x-1)-(x-3)=x^2-1-(x-2))$]
+  // #subquestion()[$display((x-5)/2-(2x-4)/12=(5-x)/4-x/3)$]
+  #subquestion()[$display((2x-1)/3-(5x-4)/7=(x+5)/2-5)$]
+  // #subquestion()[$display((3x-11)/20-(5x-1)/14=(x-7)/10-(5x-6)/21)$]
+  // #subquestion()[$display(2 (2+x)-(6-7x) = 13x - (1 + 4x))$]
   #colbreak()
-  #subquestion()[$display((3x-17)/8-(1-4x)/3=(1-x)/4-(9+x)/6)$] //(sol: x=)
-  // #subquestion()[$display(3 (x+1)-2x=x-[2+3(3-x)])$] //(sol: x=)
-  // #subquestion()[$display((-6)/2 ((5+x)/3)=1/3 (4-(4x)/2) + (3x)/2)$] //(sol: x=)
-  // #subquestion()[$display(4/3 ((2+x)/5) = 1/5 (8 - (6x)/3 )+ (5x)/3)$] //(sol: x=)
-  // #subquestion()[$display(5/2 ((7+x)/3) = 1/3 (5 - (5x)/2) + (3x)/2)$] //(sol: x=)
-  // #subquestion()[$display(-1/2 (4 - (6x)/3) + (5x)/3 = -5/3 ((2+x)/2))$] //(sol: x=)
-  // #subquestion()[$display((-1)/2 (1 - (3x)/2) + (6x)/2 = (-3)/2 ((6+x)/2))$] //(sol: x=)
-  // #subquestion()[$display((-1)/3 (8 - (4x)/2) + (2x)/2 = (-6)/2 ((7+x)/3))$] //(sol: x=)
-  // #subquestion()[$display(18 + (3x+4)/5 = (5x+4)/2 - (2x-5)/2)$] //(sol: x=)
-  // #subquestion()[$display(1 - 2 [1 + 3x - 2 (x+2) + 3x] = -1)$] //(sol: x=)
-  #subquestion()[$display(5 (x+1) - (1-x) = 2 (x-1) - 4 (1-x))$] //(sol: x=)
-  // #subquestion()[$display(2 - [3 - 2 (x+1)] = 3x + 2 [x - (3+2x)])$] //(sol: x=)
-  #subquestion()[$display(x + 1/2 [x - 3/2 (4 -3x)] = 2/3 (1 - (5x)/2))$] //(sol: x=)
+  #subquestion()[$display((3x-17)/8-(1-4x)/3=(1-x)/4-(9+x)/6)$]
+  // #subquestion()[$display(3 (x+1)-2x=x-[2+3(3-x)])$]
+  // #subquestion()[$display((-6)/2 ((5+x)/3)=1/3 (4-(4x)/2) + (3x)/2)$]
+  // #subquestion()[$display(4/3 ((2+x)/5) = 1/5 (8 - (6x)/3 )+ (5x)/3)$]
+  // #subquestion()[$display(5/2 ((7+x)/3) = 1/3 (5 - (5x)/2) + (3x)/2)$]
+  // #subquestion()[$display(-1/2 (4 - (6x)/3) + (5x)/3 = -5/3 ((2+x)/2))$]
+  // #subquestion()[$display((-1)/2 (1 - (3x)/2) + (6x)/2 = (-3)/2 ((6+x)/2))$]
+  // #subquestion()[$display((-1)/3 (8 - (4x)/2) + (2x)/2 = (-6)/2 ((7+x)/3))$]
+  // #subquestion()[$display(18 + (3x+4)/5 = (5x+4)/2 - (2x-5)/2)$]
+  // #subquestion()[$display(1 - 2 [1 + 3x - 2 (x+2) + 3x] = -1)$]
+  #subquestion()[$display(5 (x+1) - (1-x) = 2 (x-1) - 4 (1-x))$]
+  // #subquestion()[$display(2 - [3 - 2 (x+1)] = 3x + 2 [x - (3+2x)])$]
+  #subquestion()[$display(x + 1/2 [x - 3/2 (4 -3x)] = 2/3 (1 - (5x)/2))$]
 ]
    
 #question()[Una empresa de transporte nos cobra 5€ por paquete más 3€ por kg enviado. Si nos ha cobrado 40€ por un porte ¿Cuanto pesaba el el paquete? ]
