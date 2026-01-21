@@ -83,25 +83,33 @@ jobs:
         run: |
           INDEX=public/index.html
 
-          echo '<!doctype html>' > "$INDEX"
-          echo '<html>' >> "$INDEX"
-          echo '<head>' >> "$INDEX"
-          echo '  <meta charset="utf-8">' >> "$INDEX"
-          echo '  <title>Ejercicios de Matemáticas</title>' >> "$INDEX"
-          echo '</head>' >> "$INDEX"
-          echo '<body>' >> "$INDEX"
-          echo '  <h1>Material</h1>' >> "$INDEX"
-          echo '  <ul>' >> "$INDEX"
+          {
+            echo '<!doctype html>'
+            echo '<html>'
+            echo '<head>'
+            echo '  <meta charset="utf-8">'
+            echo '  <title>Ejercicios de Matemáticas</title>'
+            echo '  <style>'
+            echo '    body { font-family: sans-serif; }'
+            echo '    ul { line-height: 1.6; }'
+            echo '    code { background: #f5f5f5; padding: 2px 4px; }'
+            echo '  </style>'
+            echo '</head>'
+            echo '<body>'
+            echo '  <h1>Material</h1>'
+            echo '  <ul>'
+          } > "$INDEX"
 
           find public -name "*.pdf" | sort | while read -r f; do
             rel="${f#public/}"
-            name="$(basename "$f")"
-            echo "    <li><a href=\"$rel\">$name</a></li>" >> "$INDEX"
+            echo "    <li><a href=\"$rel\"><code>$rel</code></a></li>" >> "$INDEX"
           done
 
-          echo '  </ul>' >> "$INDEX"
-          echo '</body>' >> "$INDEX"
-          echo '</html>' >> "$INDEX"
+          {
+            echo '  </ul>'
+            echo '</body>'
+            echo '</html>'
+          } >> "$INDEX"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
