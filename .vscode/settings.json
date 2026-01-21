@@ -3,7 +3,8 @@
     "cSpell.language": "es-ES,en-UK",
     "cSpell.words": [
 		"browser",
-		"IES"
+		"IES",
+		"latest"
 	],
     // "go.formatTool": "goimports",
 	// "go.docsTool": "guru",

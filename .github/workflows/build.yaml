@@ -20,11 +20,11 @@ concurrency:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -73,25 +73,19 @@ jobs:
           name: material
           path: ./Material/**/*.pdf
 
-      # - name: Copy files
-      #   run: |
-      #     mkdir -p ./public/Material
-      #     cp ./Material/**/*.pdf ./public/Material/
+      - name: Copy files
+        run: |
+          rm -rf ./public
+          mkdir -p ./public/Material
+          cp _L --parents ./Material/**/*.pdf ./public
 
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v4
-      #   with:
-      #     name: MaterialPublish
-      #     path: ./public/Material/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
           name: MaterialPublish
-          path: ./Material/**/*.pdf
+          path: ./public
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: material
 
