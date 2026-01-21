@@ -77,7 +77,7 @@ jobs:
         run: |
           rm -rf ./public
           mkdir --parents ./public
-          cp --dereference --parents ./Material/**/*.pdf ./public
+          cp ./Material/**/*.pdf ./public
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
