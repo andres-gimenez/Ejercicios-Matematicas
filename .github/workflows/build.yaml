@@ -77,7 +77,7 @@ jobs:
         run: |
           rm -rf ./public
           mkdir -p ./public
-          cp _L --parents ./Material/**/*.pdf ./public
+          cp -L --parents ./Material/**/*.pdf ./public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
