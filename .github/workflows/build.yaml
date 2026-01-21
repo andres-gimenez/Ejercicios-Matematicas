@@ -7,11 +7,12 @@ on:
     - 'Material/**/*.yaml'
     - 'Material/**/*.toml'
 
+  workflow_dispatch:
+
 permissions:
   pages: write
   id-token: write
   contents: read
-
 
 concurrency:
   group: 'pages'
@@ -19,6 +20,10 @@ concurrency:
 
 jobs:
   build:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
 
     steps:
