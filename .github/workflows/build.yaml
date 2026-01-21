@@ -79,6 +79,30 @@ jobs:
           mkdir --parents ./public
           rsync -avL --include='*/' --include='*.pdf' --exclude='*' Material/ public/
 
+      - name: Generate index.html
+        run: |
+          INDEX=public/index.html
+
+          echo '<!doctype html>' > "$INDEX"
+          echo '<html>' >> "$INDEX"
+          echo '<head>' >> "$INDEX"
+          echo '  <meta charset="utf-8">' >> "$INDEX"
+          echo '  <title>Ejercicios de Matemáticas</title>' >> "$INDEX"
+          echo '</head>' >> "$INDEX"
+          echo '<body>' >> "$INDEX"
+          echo '  <h1>Material</h1>' >> "$INDEX"
+          echo '  <ul>' >> "$INDEX"
+
+          find public -name "*.pdf" | sort | while read -r f; do
+            rel="${f#public/}"
+            name="$(basename "$f")"
+            echo "    <li><a href=\"$rel\">$name</a></li>" >> "$INDEX"
+          done
+
+          echo '  </ul>' >> "$INDEX"
+          echo '</body>' >> "$INDEX"
+          echo '</html>' >> "$INDEX"
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
