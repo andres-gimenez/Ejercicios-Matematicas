@@ -43,11 +43,14 @@
   #subquestion()[$display(x^2+4x+4 = 0)$] //(sol: x=)
   #subquestion()[$display(x^2-7x = 0)$] //(sol: x=)
   #subquestion()[$display(x^2+1 = 0)$] //(sol: x=)
-  #colbreak()
   #subquestion()[$display(x dot (x+2) = 0)$] //(sol: x=)
+    #colbreak()
   #subquestion()[$display(3 dot (x-2)^2 = 0)$] //(sol: x=)
   #subquestion()[$display((x-2) dot (x+1) = 0)$] //(sol: x=)
-  #subquestion()[$display(5x dot (2x-1) = -1)$] //(sol: x=)
+  #subquestion()[$display(5x^2  dot (2x-1) = -1)$] //(sol: x=)
+  #subquestion()[$display((x - 3)^2 = 2x + 7)$]
+  #subquestion()[$display((2x + 1)^2 = x^2 + 9)$]
+  #subquestion()[$display((x + 4)(x - 1) = 3x + 2)$]
 ]
 
 #question()[Un rectángulo tiene una área de 24 m². Su base mide 6 m más que su altura. Calcula las dimensiones del rectángulo resolviendo una ecuación de segundo grado.]
