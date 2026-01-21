@@ -76,7 +76,7 @@ jobs:
       - name: Copy files
         run: |
           rm -rf ./public
-          mkdir -p ./public/Material
+          mkdir -p ./public
           cp _L --parents ./Material/**/*.pdf ./public
 
       - name: Upload artifact
