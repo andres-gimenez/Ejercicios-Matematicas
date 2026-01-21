@@ -83,6 +83,11 @@ jobs:
       #   with:
       #     name: MaterialPublish
       #     path: ./public/Material/
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          name: MaterialPublish
+          path: ./Material/**/*.pdf
 
       - name: Deploy to GitHub Pages
         id: deployment
