@@ -79,10 +79,12 @@ jobs:
           mkdir --parents ./public
           cp --dereference --parents ./Material/**/*.pdf ./public
 
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          name: MaterialPublish
           path: ./public
 
       - name: Deploy to GitHub Pages
