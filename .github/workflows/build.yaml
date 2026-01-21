@@ -67,17 +67,17 @@ jobs:
               typst compile "$archivo" --root . --input show-solutions=false || echo "Error en $archivo, continuando..."
           done
 
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v4
-        with:
-          name: material
-          path: ./Material/**/*.pdf
+      # - name: Upload PDF file
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: material
+      #     path: ./Material/**/*.pdf
 
       - name: Copy files
         run: |
           rm -rf ./public
-          mkdir -p ./public
-          cp -L --parents ./Material/**/*.pdf ./public
+          mkdir --parents ./public
+          cp --dereference --parents ./Material/**/*.pdf ./public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
