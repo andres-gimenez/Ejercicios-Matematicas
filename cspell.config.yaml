@@ -21,15 +21,21 @@ words:
   - clarification
   - clarifications
   - columns
+  - community
   - derivabilidad
   - derivable
+  - dispatch
   - draw
   - Dyslexic
   - exam
+  - examples
   - Fernán
   - fill
+  - find
   - font
+  - github
   - IES
+  - iname
   - inecuaciones
   - Inecuaciones
   - length
@@ -39,12 +45,14 @@ words:
   - padding
   - pages
   - plot
+  - print
   - question
   - questions
   - right
   - Ruffini
   - school
   - separator
+  - setup
   - stroke
   - student
   - StudentData
@@ -54,6 +62,7 @@ words:
   - theta
   - typst
   - watermark
+  - while
   - white
 ignoreWords: []
 import: []

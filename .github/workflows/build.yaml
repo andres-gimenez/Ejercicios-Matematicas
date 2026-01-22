@@ -20,11 +20,11 @@ concurrency:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
-    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -73,20 +73,53 @@ jobs:
           name: material
           path: ./Material/**/*.pdf
 
-      # - name: Copy files
-      #   run: |
-      #     mkdir -p ./public/Material
-      #     cp ./Material/**/*.pdf ./public/Material/
+      - name: Copy files
+        run: |
+          rm -rf ./public
+          mkdir --parents ./public
+          rsync -avL --include='*/' --include='*.pdf' --exclude='*' Material/ public/
 
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v4
-      #   with:
-      #     name: MaterialPublish
-      #     path: ./public/Material/
+      - name: Generate index.html
+        run: |
+          INDEX=public/index.html
+
+          {
+            echo '<!doctype html>'
+            echo '<html>'
+            echo '<head>'
+            echo '  <meta charset="utf-8">'
+            echo '  <title>Ejercicios de Matemáticas</title>'
+            echo '  <style>'
+            echo '    body { font-family: sans-serif; }'
+            echo '    ul { line-height: 1.6; }'
+            echo '    code { background: #f5f5f5; padding: 2px 4px; }'
+            echo '  </style>'
+            echo '</head>'
+            echo '<body>'
+            echo '  <h1>Material</h1>'
+            echo '  <ul>'
+          } > "$INDEX"
+
+          find public -name "*.pdf" | sort | while read -r f; do
+            rel="${f#public/}"
+            echo "    <li><a href=\"$rel\"><code>$rel</code></a></li>" >> "$INDEX"
+          done
+
+          {
+            echo '  </ul>'
+            echo '</body>'
+            echo '</html>'
+          } >> "$INDEX"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./public
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: material
 

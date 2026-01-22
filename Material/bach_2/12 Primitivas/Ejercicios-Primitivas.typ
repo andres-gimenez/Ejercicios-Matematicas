@@ -90,7 +90,7 @@
         $ 
       ]
     ],
-     [
+    [
       #subquestion()[$display(limits(integral)(root(3, x) + sqrt(5x^3))/(3x)  dif x)$]
       #solution()[
         $display(limits(integral)(root(3, x) + sqrt(5x^3))/(3x) dif x = 
@@ -108,19 +108,23 @@
 
         Hacemos el cambio de variable $x = t^6 => dif x =6t^5 dif t$
 
-        $display(limits(integral)(root(3, x) + sqrt(5x^3))/(3x)  dif x = 
-        
-        ∫ frac(root(3, t^6) + sqrt(5 (t^6)^3), 3 t^6) 6t^5 dif x = 
-        ∫ frac(t^2 + sqrt(5 t^9), 3 * t^6) dif x
-        = frac(2 * (t^2 + sqrt(5) * t^9), 3 * t^6)
-        = frac(2 * t + sqrt(5) * t^8, 3 * t^6))
+        $display(limits(integral)(root(3, x) + sqrt(5x^3))/(3x)  dif t =         
+        ∫ frac(root(3, t^6) + sqrt(5 (t^6)^3), 3 t^6) 6t^5 dif t = 
+        ∫ frac(2(t^2 + sqrt(5 t^18)), t) dif t = \ =
+        2 ∫ frac((t^2 + sqrt(5) t^9), t) dif t = 
+        2 ∫ t^2/t + sqrt(5) t^9/t dif t = 
+        2 [∫ t dif x + sqrt(5) ∫ t^8 dif t] =
+        2 [t^2/2 + sqrt(5) t^9/9]) = \ =
+        2 [root(6, x)^2/2 + sqrt(5) root(6, x)^9/9] =
+        2 [root(3, x)/2 + sqrt(5) sqrt(x^3)/9] =
+        #result($2/9 sqrt(5x^3) + root(3,x) + C$)
         $
       ]
     ],
-     [
+    [
       #subquestion()[$display(limits(integral) (2x^4+6x-3)/(x-2)  dif x)$]
       #solution()[
-            Dividiendo y utilizando el algoritmo de la fivisión de polinomios, podemos concluir que:
+            Dividiendo y utilizando el algoritmo de la división de polinomios, podemos concluir que:
 
         $display(2x^4+6x-3 = (2x^3+4x^2+8x+22)(x-2) + 41 => \
         (2x^4+6x-3)/(x-2) = 2x^3+4x^2+8x+22 + 41/(x-2))$
@@ -237,9 +241,9 @@
     [
       #subquestion()[$display(limits(integral) (x + 3)/(x^2 + 6x + 10)  dif x)$]
       #solution()[
-        $display(limits(integral) (x + 3)/(x^2 + 6x + 10)  dif x = 
-        limits(integral) 1/2 dot 2(x + 3)/(x^2 + 6x + 10)  dif x = \ =
-        limits(integral) 1/2 (2x + 6)/(x^2 + 6x + 10)  dif x =
+        $display(limits(integral) (x + 3)/(x^2 + 6x + 10) dif x = 
+        limits(integral) 1/2 dot 2(x + 3)/(x^2 + 6x + 10) dif x = \ =
+        limits(integral) 1/2 (2x + 6)/(x^2 + 6x + 10) dif x =
         #result($display(1/2 ln |x^2+6x+10| +C)$))$
       ]
     ],
