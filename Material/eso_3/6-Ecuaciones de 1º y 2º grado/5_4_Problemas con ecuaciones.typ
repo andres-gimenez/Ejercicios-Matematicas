@@ -1,0 +1,145 @@
+#import "@preview/g-exam:0.4.4": *
+
+#let config = yaml("../../config.yaml")
+
+#show: exam.with(
+  author: (
+    name: "Andrés Jorge Giménez Muñoz", 
+    email: "agimenezmunoz@educa.madrid.com", 
+    watermark: "Profesor: andrés",
+  ),
+  school: (
+    name: config.at("school").at("name"),
+    logo:image("../../" + config.at("school").at("logo"))
+  ),
+  exam-info: (
+    academic-period: config.at("exam-info").at("academic-period"),
+    academic-level: "3º ESO",
+    academic-subject: "Matemáticas",
+    number: "Ejercicios",
+    content: "Problemas con ecuaciones de 1º y 2º grado",
+  ),
+  
+  language: "es",  
+  decimal-separator: ",",
+  show-student-data: false,
+  show-grade-table: "odd-pages",
+  show-solutions: false,
+  clarifications: 
+    (
+    [Realiza los ejercicios que te indique el profesor en tu cuaderno y envíalas al aula virtual],
+    [El fin de realizar estos ejercicios está destinado a tu aprendizaje, si te ayudan a hacerlos, entera té lo que estás poniendo. Si te los hacen o utilizas alguna herramienta que los haga, estás perdiendo el tiempo en un trabajo improductivo.]
+    ) 
+)
+
+#questions-pages(
+      question()[La suma de un número y su inverso es $5$. Halla el número.],
+      question()[El área de un rectángulo es $60$ y su base mide $x + 2$ y su altura $x - 1$. Halla $x$.],
+      question()[Escribe una ecuación de segundo grado que tenga como soluciones $3$ y $-2$.],
+      question()[El área de un cuadrado es igual al área de un rectángulo de lados $x$ y $x + 6$. Si el lado del cuadrado mide $x + 1$, halla el valor de $x$.],
+      question()[Un rectángulo tiene base $2x$ y altura $x - 3$. Si su área es $70$, halla $x$.],
+      question()[ Un jardín rectangular tiene largo $x + 5$ y ancho $x - 2$. En su interior hay un camino cuadrado de lado $2$. Si el área útil del jardín es $60$, halla $x$.],
+      question()[Un marco rectangular rodea un cuadro cuadrado de lado $x$. El marco tiene anchura $1$ por todos los lados. Si el área del marco es $44$, halla $x$.],
+      question()[¿Cuántos centímetros hay que sumar a la base y a la altura de un rectángulo de $7 "cm"$ de base y $3 "cm"$ de altura 
+                para que el área del nuevo rectángulo sea de $96 "cm"^2$?],
+
+      question()[Un padre tiene 47 años y su hijo 11. ¿Cuántos años han de transcurrir para que la edad del padre sea triple que la del hijo?],
+      question()[En un rectángulo la base mide 18 cm más que la altura y el perímetro mide 76 cm. ¿Cuáles son las dimensiones del rectángulo?],
+      question()[Calcula tres números consecutivos cuya suma sea 51.],
+      question()[Halla los números que sumados con su anterior y con su siguiente sea 114.],
+      question()[Calcula el número que se triplica al sumarle 26.],
+      question()[La tercera parte de un número es 45 unidades menor que su doble. ¿Cuál es el número?],
+      question()[¿Qué edades tiene Rosa sabiendo que dentro de 56 años tendrá el quíntuplo de su edad actual?],
+      question()[Tres hermanos se reparten 1.300\euro{}. El mayor recibe doble que el mediano y este el cuádruple que el pequeño. ¿Cuánto recibe cada uno?],
+      question()[Si a la edad de Rodrigo se le suma su mitad se obtiene la edad de Andrea. ¿Cuál es la edad de Rodrigo si Andrea tiene 24 años?],
+      question()[Un camión sale de una ciudad a una velocidad de 60Km/h. Dos horas más tarde sale en su persecución un coche a 100 km/h ¿cuánto tardarán en encontrase?],
+      question()[En un rectángulo la base mide 18 cm más que la altura y el perímetro mide 76 cm. ¿Cuáles son las dimensiones del rectángulo?],
+      question()[En un control de Biología había que contestar 20 preguntas. Por cada pregunta bien contestada dan tres puntos y por cada fallo restan dos. 
+              ¿Cuántas preguntas acertó Elena sabiendo que ha obtenido 30 puntos y que contestó todas?],
+      question()[En un rectángulo la base mide 18 cm más que la altura y el perímetro mide 76 cm. ¿Cuáles son las dimensiones del rectángulo?
+              Cada vez que un jugador gana una partida recibe 7€ y cada vez que pierde paga 3€. 
+              Al cabo de 15 partidas ha ganado 55€. ¿Cuántas partidas ha ganado y cuántas ha perdido?],
+      question()[La mitad de un número multiplicada por su quinta parte es igual a 160. ¿Cuál es ese número?],
+      question()[Un granjero lleva al mercado una cesta de huevos, de tan mala suerte que tropieza y se le rompen 2/5 partes de la mercancía. 
+              Entonces vuelve al gallinero y recoge 21 huevos más, con lo que ahora tiene 1/8 más de la cantidad inicial. ¿Cuántos huevos tenía al principio?],
+      question()[En un rectángulo la base mide 18 cm más que la altura y el perímetro mide 76 cm. ¿Cuáles son las dimensiones del rectángulo?
+          De un barril lleno de agua se saca la mitad de contenido y después un tercio del resto, quedando en él 200 litros. Calcula la capacidad del barril.],
+      question()[Un reloj marca las 4 de la tarde. ¿A qué hora se superpondrán las manecillas?],
+      question()[Se han consumido las 7/8 partes de un bidón de gasolina. Añadiendo 38 litros se llena hasta las 3/5 partes. Calcula la capacidad del bidón.],
+      question()[En un rectángulo la base mide 18 cm más que la altura y el perímetro mide 76 cm. ¿Cuáles son las dimensiones del rectángulo?],
+      question()[Un padre tiene 35 años y su hijo 5. ¿Al cabo de cuántos años la edad del padre será tres veces mayor que la del hijo?],
+      question()[Si al doble de un número le sumas su mitad resulta 90. ¿Cuál es el número?],
+      question()[La base de un rectángulo es doble que su altura. ¿Cuáles son sus dimensiones si el perímetro mide 30 cm?],
+      question()[Luis hizo un viaje en el coche, en el cuál consumió 20 litros de gasolina. 
+              El trayecto lo hizo en 2 etapas, en la primera consumió 2/3 de la gasolina que tenía el depósito y en la segunda etapa la mitad de lo que le quedaba. 
+              ¿Cuántos litros tenía? ¿Cuántos litros consumió en cada etapa?],
+
+      question()[En una librería Ana compra un libro con la tercera parte de su dinero y un comic con las dos terceras partes de lo que le quedaba. 
+              Al salir de la librería tenía 12€. ¿Cuánto dinero tenía Ana?],
+      question()[Halla el valor de los tres ángulos de un triángulo sabiendo que B mide 40º más que C y que A mide 40º más que B.],
+      question()[Una madre tiene 60 años y su hijo la mitad. ¿Cuántos años hace que la madre tenía tres veces la edad del hijo?],
+      question()[Ana tiene 7 años más que su hermano Juan. Dentro de dos años la edad de Ana será el doble de la de Juan. ¿Qué edad tiene cada uno en la actualidad?],
+      question()[La edad de una madre y un hijo suman 40 años y dentro de 14 años la edad de la madre será el triple de la del hijo. Calcula la edad actual de cada uno.],
+      question()[Un padre tiene 37 años y las edades de sus tres hijos suman 25 años. 
+              ¿Dentro de cuántos años las edades de los hijos sumarán como la edad del padre?],
+      question()[Preguntado el padre por la edad de su hijo contesta: 
+              "si el doble de los años que tiene se le quitan el triple de los que tenía hace 6 años se tendrá su edad actual". 
+              Halla la edad del hijo en el momento actual.],
+    
+      question()[Una madre es 21 años mayor que su hijo y en 6 años el niño será 5 veces menor que ella. ¿Qué edad tiene el hijo?],
+      question()[Un granjero tiene 12 caballos de 9 y 11 años. La suma de sus edades es de 122 años. ¿Cuántos caballos había de cada edad?],    
+      question()[En una empresa trabajan 160 personas y todas ellas deben someterse a un reconocimiento médico en el plazo de tres días. 
+                El primer día lo hace la tercera parte de los que lo hacen durante los otros dos días. 
+                El segundo día y el tercero lo hacen el mismo número de personas. 
+                Calcule el número de trabajadores que acuden al reconocimiento cada día.],
+    
+      question()[Trabajando juntos, 2 obreros tardan en hacer un trabajo 17 horas. 
+                ¿Cuánto tardarán en hacerlo por separado si uno es el doble de rápido que el otro?],
+
+      question()[Marta tiene que leer un libro para la clase de Lengua. 
+                  La primera semana leyó las $frac(2,7, style:"horizontal")$ partes del libro, la segunda semana las $frac(2,5, style:"horizontal")$ partes de lo que le quedaba y la tercera semana las 60 páginas restantes.
+                  ¿Cuántas páginas tiene el libro? 
+                  ¿Cuántas páginas leyó las dos primeras semanas?],
+      
+      question()[Hace 4 años la edad de Manuel era la mitad de la edad que tendrá dentro de 7 años.
+                  ¿Qué edad tiene Manuel hoy?],
+
+      question()[Una habitación de $13,5m^2$ de superficie mide un metro y medio más de largo que de ancho.
+                ¿Cuáles son las dimensiones exactas de la habitación?],
+
+      question()[Un rectángulo de $20"cm"$ de perímetro tiene una superficie de $21"cm"^2$. 
+                ¿Cuánto miden los lados?],
+
+      question()[Cristina ha diseñado una pancarta para celebrar el 40º aniversario del instituto.
+                Calcula el perímetro y el área de la pancarta, sabiendo que la diagonal mide $17"dm"$ y el ancho $7"dm"$ más que el alto.],
+
+      question()[Mercedes quiere cercar una finca. Sabe que la razón entre sus lados es de 2 a 1 y su superficie mide $450m^2$.
+                ¿Cuántos metros de valla necesita comprar?],
+
+    // % Ecuaciones de segundo grado
+
+    question()[Queremos poner una cerca a una finca rectangular de $7.000 m^2$ y sabemos que la finca mide $30m$ más de largo que de ancho 
+                ¿Cuánto nos costara la cerca si la valla metálica tiene un precio de 5€/m.],
+
+    question()[Ecuaciones de tercer grado (solución, x=3, (3m x 6m x 1,5m))
+              Queremos poner una piscina en el jardín y tenemos permiso del ayuntamiento para que la piscina no exceda de $23 m^3$.
+              Queremos que la piscina sea rectangular, que el largo tenga 3 m más que el ancho y la profundidad sea la mitad del ancho.
+              Calcula las dimensiones de la piscina.],
+
+    question()[Marta, Mercedes y María están organizando sus colecciones de dados.
+                Mercedes tiene 3 dados más que María y Marta tiene el doble de dados que Mercedes.
+                Si el producto de las tres cantidades es igual a 100.
+                ¿Cuántos dados tiene cada una?],
+
+    question()[El producto de cuatro números consecutivos es 360. 
+              ¿Puedes determinar de forma exacta los cuatro números?],
+
+    // % Sistemas de ecuaciones
+    question()[Seis amigos han alquilado un apartamento en la playa para las vacaciones.
+              Cuándo llegan las vacaciones uno de ellos no puede ir y los demás deberán pagar 20€ más cada uno.
+              ¿Cuánto les ha costado el apartamento?]
+)
+
+
+
+

@@ -91,6 +91,19 @@
           [#subquestion()[$display((2x^2 - 1)(x^2 - 3) = 0)$]],
         )
       ],
+      question()[Resuelve las siguientes ecuaciones bicuadradas:
+        #questions-columns(
+          [#subquestion()[$display((2x - 3)^2 - (x - 1)(x - 5) = 4)$]],
+          [#subquestion()[$display((x+3)(x-3)=5x-15)$]],
+          [#subquestion()[$display((x+5)^2 -35 = 7x)$]],
+          [#subquestion()[$display((x + 5)^2 - 3(x - 2)(x + 1) = 0)$]],
+          [#subquestion()[$display((x - 2)^4 - 25(x - 2)^2 = 0)$]],
+          [#subquestion()[$display(x^2 = 3 + 4/(x^2))$]],
+          [#subquestion()[$display((x^2-1)/(x+1)+2 = x)$]],
+          [#subquestion()[$display((x - 1)^2 + (x - 3)^2 = 10)$]],
+          [#subquestion()[$display(1/x + 1/(x-2) = 1)$]],
+        )
+      ],
       question()[La suma de un número y su inverso es $5$. Halla el número.],
       question()[El área de un rectángulo es $60$ y su base mide $x + 2$ y su altura $x - 1$. Halla $x$.],
       question()[Escribe una ecuación de segundo grado que tenga como soluciones $3$ y $-2$.],
