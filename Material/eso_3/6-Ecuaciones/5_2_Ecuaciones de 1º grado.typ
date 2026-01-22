@@ -132,7 +132,8 @@
       ]
     )
   ],
-    [#question()[Resuelve las siguientes ecuaciones:]
+  [
+    #question()[Resuelve las siguientes ecuaciones:]
     #questions-columns(
       [#subquestion()[$display(3/x + 5/x = 6)$]],
       [#subquestion()[$display((x-1)/(x-1) = 3)$]],
@@ -144,4 +145,7 @@
       [#subquestion()[$display((2x-5)/(x+3)+1 = x/(x+3))$]],
     )
   ],
+  question()[Una empresa de transporte por cada envío cobra 20 euros fijos más 2 euros por kilo enviado. ¿Cuantos kilos puede enviar un cliente por 40 euros?],
+  question()[Un agricultor vende manzanas a $2$ euros el kilo.  
+      Si decide aumentar el precio en $1$ euro por kilo, vende $10$ kilos menos, pero obtiene el mismo ingreso total. ¿Cuantos kilos vendía al principio? ],
 )
