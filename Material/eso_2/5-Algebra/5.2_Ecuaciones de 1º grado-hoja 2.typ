@@ -23,7 +23,6 @@
   
   language: "es",
   decimal-separator: ",",
-  date: datetime(year:2025, month:1, day:8),
   show-student-data: false,
   show-grade-table: false,
   question-points-position: none,
