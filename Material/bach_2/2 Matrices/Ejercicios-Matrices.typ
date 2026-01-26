@@ -69,12 +69,38 @@
          B = mat(7, 0; 5, 10) $]
   ],
   [
-    #question()[Calcula el rango de la matriz 
-        $ A = mat(1, 2, 3; 2, 4, 6; 1, 1, 1) $]
+    #question()[Calcula el rango de las siguientes matrices]
+    #questions-columns(
+      [#subquestion()[$display(mat(1, 2, 3; 2, 4, 6; 1, 1, 1))$]],
+      [#subquestion()[$display(mat(1, -2, 0, -3; -1, 3, 1, 4; 2, 1, 5, -1))$]],
+      [#subquestion()[$display(mat(1, 0, 2, 1, -1; 0, 2, -1, 1, 2; -1, 1, 3, 2,0; 0,8,7,9,4))$]],
+    )
+  ],
+  [
+    #question()[Hallar la matriz $X$ que verifica:  
+
+        $ A X + B = I $
+
+      donde  
+        $ A = mat(3, 0; 1, 3) $]
+  ],
+  [
+    #question()[Hallar la matriz $X$ que verifica:  
+
+        $ A X + A^t = 2 I $
+
+      donde  
+        $ A = mat(1, 0; -1, -1) $]
   ],
   [
     #question()[Estudia el rango de la matriz según el parámetro $k$: 
        $ A = mat(1, k, 2; 2, 2k, 4; 1, 1, k) $]
+  ],
+  [
+    #question()[Dada la matriz: 
+       $ A = mat(1, 0, 1; 0,1,0;1, 0, 1) $
+       
+       Calcula la potencia enésima de $A$.]
   ],
   [
     #question()[Resolver el sistema mediante matrices:
