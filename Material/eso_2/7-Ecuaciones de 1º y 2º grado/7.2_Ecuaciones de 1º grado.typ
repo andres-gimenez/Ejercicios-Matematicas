@@ -124,9 +124,10 @@
 #question()[Un taxista nos cobra 7€ de bajada de bandera más 4€ por kilómetro recorrido. ¿Cuantos kilómetros podemos hace en el taxi por 55€?]
 
 #question()[Dos personas salen al mismo tiempo desde dos puntos separados 120 km, y caminan una hacia la otra.
-Una camina a 4 km/h y la otra a 6 km/h.]
+Una camina a 4 km/h y la otra a 6 km/h. 
+¿Donde se encuentran?]
 
-#question()[Una máquina A tarda 6 horas menos que otra máquina B en realizar un trabajo.
-Trabajando juntas tardan 4 horas en hacerlo. ¿Cuánto tarda cada máquina por separado?]
+// #question()[Una máquina A tarda 6 horas menos que otra máquina B en realizar un trabajo.
+// Trabajando juntas tardan 4 horas en hacerlo. ¿Cuánto tarda cada máquina por separado?]
 
 #question()[Un artículo tiene un IVA del 21 % y, tras aplicarlo, se hace un descuento de 10 %, quedando el precio final en 108,90 €. Calcular el precio original.]
