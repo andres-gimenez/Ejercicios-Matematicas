@@ -81,8 +81,8 @@
     #question()[Calcula el rango de las siguientes matrices]
     #questions-columns(
       [#subquestion()[$display(mat(1, 2, 3; 2, 4, 6; 1, 1, 1))$]],
-      [#subquestion()[$display(mat(&1, -&2, &0, -&3; -&1, &3, &1, &4; &2, &1, &5, -&1))$]],
-      [#subquestion()[$display(mat(&1, &0, &2, &1, -&1; &0, &2, -&1, &1, &2; -&1, &1, &3, &2, &0; &0, &8, &7, &9, &4))$]],
+      [#subquestion()[$display(mat(&1, -&2, " "&0, -&3; -&1, &3, &1, &4; &2, &1, &5, -&1))$]],
+      [#subquestion()[$display(mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; -&1, &1, &3, &2, &0; &0, &8, &7, &9, &4))$]],
     )
   ],
   [
@@ -121,10 +121,10 @@
   ],
   [
     #question()[Sea la matriz $ A = mat(&2, -&1; &1, &3) $. Calcula $A^n$ para $forall n in NN$.]
-    #questions-columns(max-columns: 1,
-      subquestion()[Calcula $A^2$, $A^3$ y $A^4$.],
-      subquestion()[Conjetura una expresión para $A^n$.],
-      subquestion()[Demuestra por inducción tu conjetura.],
-    )
+    // #questions-columns(max-columns: 1,
+      #subquestion()[Calcula $A^2$, $A^3$ y $A^4$.]
+      #subquestion()[Conjetura una expresión para $A^n$.]
+      #subquestion()[Demuestra por inducción tu conjetura.]
+    // )
   ]
 )
