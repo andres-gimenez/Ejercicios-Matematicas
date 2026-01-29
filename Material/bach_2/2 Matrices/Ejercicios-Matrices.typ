@@ -155,10 +155,35 @@
   [
     #question()[Hallar la matriz $X$ que verifica:  
 
-        $ A X + A^t = 2 I $
+        $ X A + A^t = 2 I $
 
       donde  
         $ A = mat(&1, &0; -&1, -&1) $]
+    #solution(color:red)[
+      Para despejar la $X$, hay que tener cuidado porque el producto de matrices  
+      
+      $display(X A + A^t = 2 I => X A = 2 I - A^t => X A A^(-1) = (2 I - A^t) A^(-1) => X = (2 I - A^t) A^(-1))$
+      
+      Necesitamos calcular $A^t$, $A^(-1)$ y $2 I - A^t$:
+
+      $display(A^t = mat(&1, -&1; &0, -&1))$
+
+      $display(mat(augment: #2, &1, &0, &1, &0; -&1, -&1, &0, &1) 
+      stretch(=)^(f_2 <- f_2 + f_1)  
+      mat(augment: #2, &1, &0, &1, &0; &0, -&1, &1, &1)
+      stretch(=)^(f_2 &<- -f_2)  
+      mat(augment: #2, &1, &0, &1, &0; &0, &1, -&1, -&1) 
+      )$
+
+      $display(A^(-1) = mat(&1, &0; -&1, -&1))$
+      
+      $display(2 I - A^t = 
+      2 mat(&1, &0; &0, &1) - mat(&1, -&1; &0, -&1) =
+      mat(&2, &0; &0, &2) - mat(&1, -&1; &0, -&1) = 
+      mat(&1, &1; &0, &3))$
+      
+      $display(X = (2 I - A^t) A^(-1) = mat(&1, &1; &0, &3) dot mat(&1, &0; -&1, -&1) = mat(&2, -&1; -&3, -&3))$
+    ]
   ],
   [
     #question()[Estudia el rango de la matriz según el parámetro $k$: 
