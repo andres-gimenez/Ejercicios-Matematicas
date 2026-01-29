@@ -114,9 +114,9 @@
       #solution()[
         $display("rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; -&1, &1, &3, &2, &0; &0, &8, &7, &9, &4) 
         stretch(=)^(f_3 <- f_3 + f_1 \ f_4 <- f_4 - 4 f_2)
-          "rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; &0, &1, &5, &3, -&1; &0, &0, &11, &5, -&4)
+          "rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; &0, &1, &5, &3, -&1; &0, &0, 1&1, &5, -&4)
         stretch(=)^(f_4 <- f_4 - 11 f_3) \
-          "rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; &0, &1, &5, &3, -&1; &0, &0, &0, -&28, &7)
+          "rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; &0, &1, &5, &3, -&1; &0, &0, &0, -2&8, &7)
         )$
 
         Tenemos cuatro filas linealmente independientes, luego el rango es 4.
@@ -131,6 +131,26 @@
 
       donde  
         $ A = mat(3, 0; 1, 3) "y" B = mat(1, 2; 5, 4) $]
+    #solution()[
+      Para despejar la $X$, hay que tener cuidado porque el producto de matrices
+      
+      $display(A X + B = I => A X = I - B => A^(-1) A X = A^(-1)(I - B) => X = A^(-1)(I - B))$
+
+      Necesitamos calcular $A^(-1)$ y $I - B$:
+
+      $display(mat(augment: #2, &3, 0, 1, 0; &1, 3, 0, 1) 
+      stretch(=)^(f_2 <- f_1 - 3f_2)  
+      mat(augment: #2, &3, &0, &1, &0; &0, -&9, &1, -&3)
+      stretch(=)^(f_1 &<- &1/3f_1 \ f_2 &<- -&1/9f_2)  
+      mat(augment: #2, &1, &0, &1/3, &0; &0, &1, -&1/9, &1/3) 
+      )$
+
+      $display(A^(-1) = mat(&1/3, 0; -&1/9, 1/3))$
+
+      $display(I - B = mat(1, 0; 0, 1) - mat(&1, &2; &5, &4) = mat(&0, -&2; -&5, -&3))$
+
+      $display(X = A^(-1)(I - B) = mat(&1/3, 0; -&1/9, 1/3) dot mat(&0, -&2; -&5, -&3) = mat(&0, -&2/3; -&5/9, -&7/9))$
+    ]
   ],
   [
     #question()[Hallar la matriz $X$ que verifica:  
