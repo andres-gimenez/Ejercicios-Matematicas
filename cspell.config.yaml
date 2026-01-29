@@ -40,9 +40,11 @@ words:
   - iname
   - inecuaciones
   - Inecuaciones
+  - infinity
   - length
   - line
   - math
+  - none
   - north
   - padding
   - pages
@@ -55,6 +57,7 @@ words:
   - school
   - separator
   - setup
+  - stretch
   - stroke
   - student
   - StudentData
