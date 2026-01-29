@@ -160,7 +160,7 @@
       donde  
         $ A = mat(&1, &0; -&1, -&1) $]
     #solution(color:red)[
-      Para despejar la $X$, hay que tener cuidado porque el producto de matrices  
+      Para despejar la $X$, hay que tener cuidado porque el producto de matrices no es conmutativo.  
       
       $display(X A + A^t = 2 I => X A = 2 I - A^t => X A A^(-1) = (2 I - A^t) A^(-1) => X = (2 I - A^t) A^(-1))$
       
@@ -188,13 +188,24 @@
   [
     #question()[Estudia el rango de la matriz según el parámetro $k$: 
        $ A = mat(1, &k, 2; 2, 2&k, 4; 1, &1, k) $]
+    #solution(color:red)[
+      Calculamos el rango de la matriz: 
+
+      $display("rango"mat(1, &k, 2; 2, 2&k, 4; 1, &1, k) 
+      stretch(=)^(f_2 <- f_2 - 2 f_1 \ f_3 <- f_3 - f_1)
+        "rango"mat(1, &k, 2; 0, &0, 0; 0, 1 - &k, k - 2)
+      )$      
+      - Si $k = 1$, la tercera fila es nula, luego el rango es 1.
+      - Si $k = 2$, la tercera fila es nula, luego el rango es 2.
+      - Si $k != 1$ y $k != 2$, la tercera fila no es nula, luego el rango es 3.
+    ] 
   ],
-  [
-    #question()[Dada la matriz: 
-       $ A = mat(1, 0, 1; 0,1,0;1, 0, 1) $
+  // [
+  //   #question()[Dada la matriz: 
+  //      $ A = mat(1, 0, 1; 0,1,0;1, 0, 1) $
        
-       Calcula la potencia enésima de $A$.]
-  ],
+  //      Calcula la potencia enésima de $A$.]
+  // ],
   [
     #question()[Resolver el sistema mediante matrices:
     $ cases(
@@ -202,6 +213,26 @@
       2&x &+ &5y &+ &z  &= &4,
       &x  &+ &3y &+ 2&z &= &5
     ) $]
+    #solution(color: red)[
+      El sistema lo podemos poner en forma matricial como:
+      $display(mat(augment: #3, &1, &2, -&1, &1; 2, &5, &1, &4; &1, &3, &2, &5))$
+      Calculamos la inversa de la matriz de los coeficientes:
+      $display(mat(augment: #3, &1, &2, -&1, &1; 2, &5, &1, &0; &1, &3, &2, &0) 
+      stretch(=)^(f_2 <- f_2 - 2 f_1 \ f_3 <- f_3 - f_1)
+        mat(augment: #3, &1, &2, -&1, &1; 0, &1,  &3, -&2; 0, &1, &3, -&1)
+      stretch(=)^(f_3 <- f_3 - f_2)
+        mat(augment: #3, &1, &2, -&1, &1; 0, &1,  &3, -&2; 0, &0, &0, &1)
+      stretch(=)^(f_2 <- f_2 - 3 f_3 \ f_1 <- f_1 + f_3)
+        mat(augment: #3, &1, &0, -&10, &2; 0, &1, &0, &1; 0, &0, &1, -&1)
+      stretch(=)^(f_1 <- f_1 / &1)  
+        mat(augment: #3, &1, &0, -&10, &2; 0, &1, &0, &1; 0, &0, &1, -&1)
+      )$  
+      $display(A^(-1) = mat(&1, &0, -&10; &0, &1, &0; &0, &0, &1))$
+      Ahora multiplicamos por la matriz de términos independientes:
+      $display(mat(&1, &0, -&10; &0, &1, &0; &0, &0, &1) dot mat(&1; &4; &5) = mat(-&41; &4; &5))$
+      Luego la solución del sistema es:
+      $display(x = -&41 "," y = 4 "," z = 5)$   
+    ]
   ],
   [
     #question()[Sea la matriz $ A = mat(&1, &1; &0, &1) $. Calcula $A^n$ para $forall n in NN$.]
