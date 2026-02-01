@@ -95,7 +95,7 @@
         
         Al tener una fila de ceros, el rango no puede ser 3.
 
-        Como no podemos poner  la fila 3 como combinación lineal de las otras dos, el rango es 1, son linealmente independientes. Luego tenemos dos filas linealmente independientes, lo que implica que el rango es 2.
+        Como no podemos obtener la tercera fila como combinación lineal de las dos primeras, el rango es 2.
         ]
       ],
       [#subquestion()[$display(mat(&1, -&2, " "&0, -&3; -&1, &3, &1, &4; &2, &1, &5, -&1))$]
