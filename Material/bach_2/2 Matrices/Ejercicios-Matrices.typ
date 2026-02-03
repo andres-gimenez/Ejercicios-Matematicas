@@ -112,14 +112,20 @@
       ],
       [#subquestion()[$display(mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; -&1, &1, &3, &2, &0; &0, &8, &7, &9, &4))$]
       #solution()[
+        (\*) Como el rango por filas y por columnas es el mismo, podemos hace convinaciones lineales por filas o por columnas.
+
         $display("rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; -&1, &1, &3, &2, &0; &0, &8, &7, &9, &4) 
         stretch(=)^(f_3 <- f_3 + f_1 \ f_4 <- f_4 - 4 f_2)
           "rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; &0, &1, &5, &3, -&1; &0, &0, 1&1, &5, -&4)
-        stretch(=)^(f_4 <- f_4 - 11 f_3) \
-          "rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; &0, &1, &5, &3, -&1; &0, &0, &0, -2&8, &7)
+        stretch(=)^(f_3 <- 2f_3)
+        "rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; &0, &2, 1&0, 6, -&2; &0, &0, 1&1, &5, -&4)
+        stretch(=)^(f_3 <- f_3 - f_2)
+        "rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; &0, &0, 1&2, &5, -&4; &0, &0, 1&1, &5, -&4)
+        stretch(=)^(f_4 <- 12 f_4 - 11 f_3)
+        "rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; &0, &0, 1&2, &5, -&4; &0, &0, &0, &5, -&4)
         )$
 
-        Tenemos cuatro filas linealmente independientes, luego el rango es 4.
+        Como tenemos una diagonal de cuatro elementos distintos de cero, tenemos cuatro filas linealmente independientes, luego el rango es 4.
       ]
       ],
     )
@@ -159,7 +165,7 @@
 
       donde  
         $ A = mat(&1, &0; -&1, -&1) $]
-    #solution(color:red)[
+    #solution()[
       Para despejar la $X$, hay que tener cuidado porque el producto de matrices no es conmutativo.  
       
       $display(X A + A^t = 2 I => X A = 2 I - A^t => X A A^(-1) = (2 I - A^t) A^(-1) => X = (2 I - A^t) A^(-1))$
@@ -167,6 +173,8 @@
       Necesitamos calcular $A^t$, $A^(-1)$ y $2 I - A^t$:
 
       $display(A^t = mat(&1, -&1; &0, -&1))$
+
+      (\*) Para calcular la inversa, hacemos combinaciones lineales por fila.
 
       $display(mat(augment: #2, &1, &0, &1, &0; -&1, -&1, &0, &1) 
       stretch(=)^(f_2 <- f_2 + f_1)  
@@ -188,7 +196,7 @@
   [
     #question()[Estudia el rango de la matriz según el parámetro $k$: 
        $ A = mat(1, &k, 2; 2, 2&k, 4; 1, &1, k) $]
-    #solution(color:red)[
+    #solution()[
       Calculamos el rango de la matriz: 
 
       $display("rango"mat(1, &k, 2; 2, 2&k, 4; 1, &1, k) 
@@ -211,28 +219,31 @@
     $ cases(
       &x  &+ &2y &- &z  &= &1,
       2&x &+ &5y &+ &z  &= &4,
-      &x  &+ &3y &+ 2&z &= &5
+      &x  &+ &3y &+ 6&z &= &5
     ) $]
-    #solution(color: red)[
-      El sistema lo podemos poner en forma matricial como:
-      $display(mat(augment: #3, &1, &2, -&1, &1; 2, &5, &1, &4; &1, &3, &2, &5))$
-      Calculamos la inversa de la matriz de los coeficientes:
-      $display(mat(augment: #3, &1, &2, -&1, &1; 2, &5, &1, &0; &1, &3, &2, &0) 
-      stretch(=)^(f_2 <- f_2 - 2 f_1 \ f_3 <- f_3 - f_1)
-        mat(augment: #3, &1, &2, -&1, &1; 0, &1,  &3, -&2; 0, &1, &3, -&1)
-      stretch(=)^(f_3 <- f_3 - f_2)
-        mat(augment: #3, &1, &2, -&1, &1; 0, &1,  &3, -&2; 0, &0, &0, &1)
-      stretch(=)^(f_2 <- f_2 - 3 f_3 \ f_1 <- f_1 + f_3)
-        mat(augment: #3, &1, &0, -&10, &2; 0, &1, &0, &1; 0, &0, &1, -&1)
-      stretch(=)^(f_1 <- f_1 / &1)  
-        mat(augment: #3, &1, &0, -&10, &2; 0, &1, &0, &1; 0, &0, &1, -&1)
-      )$  
-      $display(A^(-1) = mat(&1, &0, -&10; &0, &1, &0; &0, &0, &1))$
-      Ahora multiplicamos por la matriz de términos independientes:
-      $display(mat(&1, &0, -&10; &0, &1, &0; &0, &0, &1) dot mat(&1; &4; &5) = mat(-&41; &4; &5))$
-      Luego la solución del sistema es:
-      $display(x = -&41 "," y = 4 "," z = 5)$   
-    ]
+    // #solution(color: red)[
+    //   El sistema lo podemos poner en forma matricial como:
+
+    //    $display(mat(&1, &2, -&1; &2, &5, &1; &1, &3, &6) mat(x; y; z) = mat(&1; &4; &5))$
+
+    //    Y lo resolvemos como $display(A dot X = B => A^(-1)A X = A^(-1)B => X = A^(-1) B) $
+
+    //   Ahora calculamos $A^(-1)$
+
+    //   (\*) Hacemos combinaciones lineales por filas.
+
+    //   $display(mat(augment: #3, &1, &2, -&1, &1, &0, &0; &2, &5, &1, &0, &1, &0 ; &1, &3, &6, &0, &0, &1) 
+    //   stretch(=)^(f_2 <- f_2 - 2 f_1 \ f_3 <- f_3 - f_1)
+    //   mat(augment: #3, &1, &2, -&1, &1, &0, &0; &0, &1, &3, -&2, &1, &0 ; &0, &1, &7, -&1, &0, &1)
+    //   stretch(=)^(f_3 <- f_3 - f_2)
+    //   mat(augment: #3, &1, &2, -&1, &1, &0, &0; &0, &1, &3, -&2, &1, &0 ; &0, &0, &4, &1, -&1, &1)
+    //   stretch(=)^(f_1 <- f_1 - 2f_2)
+    //   mat(augment: #3, &1, &0, -&5, &5, -&2, &0; &0, &1, &3, -&2, &1, &0; &0, &0, &4, &1, -&1, &1)
+    //   stretch(=)^(f_1 <- f_1 - 2f_2)
+
+    //   )$ 
+      
+    // ]
   ],
   [
     #question()[Sea la matriz $ A = mat(&1, &1; &0, &1) $. Calcula $A^n$ para $forall n in NN$.]
