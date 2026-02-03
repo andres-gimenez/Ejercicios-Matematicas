@@ -112,83 +112,38 @@
     ],
     )
   ],
-  // [
-  //   #question()[Dadas las matrices  
-  //     $ A = mat(&1, 0, &2; -&1, 3, &1) #h(3cm)B = mat(2, &1; 0, -&1; 1, &4) $
+  [
+     #question()[Calcula la inversa de las siguientes matrices, si existe:]
+      #questions-columns(
+        [
+          #subquestion()[$display(mat(&1, &2; &3, &4))$]
+          #solution()[
+            Calculamos el determinante:
 
-  //     Calcula:
-  //   ]
-  //   #questions-columns(
-  //   [#subquestion()[$display(A dot B =)$]],
-  //   [#subquestion()[¿Existe $display( B dot A)$?]],
-  //   )
-  // ],
-  // [
-  //   #question()[Hallar la matriz $X$ que verifica:  
+            $display(mat(delim: "|", &1, &2; &3, &4) = 1 dot 4 - 2 dot 3 = 4 - 6 = -2)$
 
-  //       $ 2X + A = B $
+            Calculamos la transpuesta:
+            $display(mat(&1, &2; &3, &4)^t = mat(&1, &3; &2, &4))$
 
-  //     donde  
-  //       $ A = mat(3, -&2; 1, &4) #h(3cm)  
-  //        B = mat(7, &0; 5, 1&0) $]
-  // ],
-  // [
-  //   #question()[Calcula $A dot B $, siendo:  
+            Calculamos la adjunta de la transpuesta:
+            $display("adj" mat(&1, &3; &2, &4) = mat(&4, -&2; -&3, &1))$
 
-  //       $ A= mat(3, -&2, 5; 1, &4, 5; 2, -&1, 3) #h(3cm) 
-  //         B= mat(5, &2, -&5; 3, &2, &8; 1, -&3, &5) $
+            Calculamos la inversa:
 
-  //   ]
-  // ],
+            $display(mat(&1, &2; &3, &4) ^(-1) = 1/(-2) mat(&4, -&2; -&3, &1) = mat(1/(-2) dot 4, 1/(-2) dot  -2; 1/(-2) dot  -3, 1/(-2) dot 1) = 
+            mat(-&2, &1; &3/2, -&1/2))$
+          ]
+        ],
+        [
+          #subquestion()[$display(mat(&2, &1; &4, &2))$]
+          #solution()[
+            $display(mat(delim: "|", &2, &1; &4, &2) = 2 dot 2 - 1 dot 4 = 4 - 4 = 0)$
 
-  // [
-  //   #question()[Calcula el rango de las siguientes matrices]
-  //   #questions-columns(
-  //     [#subquestion()[$display(mat(1, 2, 3; 2, 4, 6; 1, 1, 1))$]],
-  //     [#subquestion()[$display(mat(&1, -&2, &0, -&3; -&1, &3, &1, &4; &2, &1, &5, -&1))$]],
-  //     [#subquestion()[$display(mat(&1, &0, &2, &1, -&1; &0, &2, -&1, &1, &2; -&1, &1, &3, &2, &0; &0, &8, &7, &9, &4))$]],
-  //   )
-  // ],
-  // [
-  //   #question()[Hallar la matriz $X$ que verifica:  
+            *El determinante es cero, luego la matriz no es invertible.*
 
-  //       $ A X + B = I $
-
-  //     donde  
-  //       $ A = mat(3, 0; 1, 3) $]
-  // ],
-  // [
-  //   #question()[Hallar la matriz $X$ que verifica:  
-
-  //       $ A X + A^t = 2 I $
-
-  //     donde  
-  //       $ A = mat(1, 0; -1, -1) $]
-  // ],
-  // [
-  //   #question()[Estudia el rango de la matriz según el parámetro $k$: 
-  //      $ A = mat(1, &k, 2; 2, 2&k, 4; 1, &1, k) $]
-  // ],
-  // [
-  //   #question()[Dada la matriz: 
-  //      $ A = mat(1, 0, 1; 0,1,0;1, 0, 1) $
-       
-  //      Calcula la potencia enésima de $A$.]
-  // ],
-  // [
-  //   #question()[Resolver el sistema mediante matrices:
-  //   $ cases(
-  //     &x  &+ &2y &- &z  &= &1,
-  //     2&x &+ &5y &+ &z  &= &4,
-  //     &x  &+ &3y &+ 2&z &= &5
-  //   ) $]
-  // ],
-  // [
-  //   #question()[Sea la matriz $ A = mat(&2, -&1; &1, &3) $. Calcula $A^n$ para $forall n in NN$.]
-  //   #questions-columns(max-columns: 1,
-  //     subquestion()[Calcula $A^2$, $A^3$ y $A^4$.],
-  //     subquestion()[Conjetura una expresión para $A^n$.],
-  //     subquestion()[Demuestra por inducción tu conjetura.],
-  //   )
-  // ]
+            $display(mat(&2, &1; &4, &2)^(-1))$ no existe
+          ]
+        ],
+      )
+  ],
 )
