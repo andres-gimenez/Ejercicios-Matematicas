@@ -45,6 +45,7 @@ words:
   - length
   - line
   - math
+  - month
   - none
   - north
   - padding
@@ -59,6 +60,8 @@ words:
   - school
   - separator
   - setup
+  - space
+  - spacex
   - stretch
   - stroke
   - student
@@ -71,6 +74,7 @@ words:
   - watermark
   - while
   - white
+  - year
 ignoreWords: []
 import: []
 language: es-ES,en-UK
