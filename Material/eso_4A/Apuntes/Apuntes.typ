@@ -1,7 +1,6 @@
-#import "@preview/showybox:2.0.1": *
+#import "@preview/showybox:2.0.4": *
 
 = Teoria de conjuntos
-
 
 #showybox(
    frame: (
@@ -44,51 +43,51 @@ Se dice que un elemento (o miembro) pertenece al conjunto si está definido como
 
 == Correspondencia
 
-Dados dos conjuntos: $X$ e $Y$ , se entiende como una correspondencia entre $X$ e $Y$ a una relación en la que asocia elementos de X con elemtos de $Y$.
+Dados dos conjuntos: $X$ e $Y$ , se entiende como una correspondencia entre $X$ e $Y$ a una relación en la que asocia elementos de X con elementos de $Y$.
 
 
 == Función
 
-Una función estre $X$ e $Y$ es una correspondencia en la que a cada elemento del conjunto imagen $X$ le corresponde un unico elemento del conjunto destino $Y$. \
+Una función entre $X$ e $Y$ es una correspondencia en la que a cada elemento del conjunto imagen $X$ le corresponde un único elemento del conjunto destino $Y$. \
 
 A los elementos del conjunto $X$ se les llama variable independiente, mientras que a cada elemento del conjunto $Y$ se le llama variable dependiente.
 
 Ejemplo 
 
-=== Gráfica de conrrespodencias y funciones
+=== Gráfica de correspondencias y funciones
 
 === Eje de coordenadas
-Los *ejes de coordenadas* son dos rectas perpendicuales que dividen el plano en cuatro cuadrantes. \
+Los *ejes de coordenadas* son dos rectas perpendiculares que dividen el plano en cuatro cuadrantes. \
 
 El *origen de coordenadas* es el punto donde se cortan las dos rectas. \
 
-El *eje de abcisas* es la recta horizontal, y se representa con la letra $x$.
+El *eje de abscisas* es la recta horizontal, y se representa con la letra $x$.
 
-El *eje de ordenads* es la recta vertical, y se repreenta con la letra $y$.
+El *eje de ordenadas* es la recta vertical, y se representa con la letra $y$.
 
-Las *coordenadas* de un punto son el par de valores $(x, y)$. La *abcisa* es el valor $x$ y la *ordenada* es el valor $y$.
+Las *coordenadas* de un punto son el par de valores $(x, y)$. La *abscisa* es el valor $x$ y la *ordenada* es el valor $y$.
 
-Las coordenadas del origne son $(0, 0)$
+Las coordenadas del origen son $(0, 0)$
 
-La *grafica* de una función es la representación de los pares de valores (x, y) en los ejes de coordenadas. Permitiendo estudiar facilmente una función.
+La *gráfica* de una función es la representación de los pares de valores (x, y) en los ejes de coordenadas. Permitiendo estudiar fácilmente una función.
 
 
 #pagebreak()
 
 = Estadística
 
-Def: La estadística es la rama de las matemáticas que studia conjuntos de datos con el objetivo de resumirlos, organizarlos, representarlos y analizarlos y , de esta forma, facilitar su interpretación.
+Def: La estadística es la rama de las matemáticas que estudia conjuntos de datos con el objetivo de resumirlos, organizarlos, representarlos y analizarlos y , de esta forma, facilitar su interpretación.
 
 
-Una *población* es el conjunto de individuos del que se va a hacer el estudio estadistico.
+Una *población* es el conjunto de individuos del que se va a hacer el estudio estadístico.
 
-*individuos* son cada entidad, persona u objeto sobre los que se puede realizar el esdudio estádistico.
+*individuos* son cada entidad, persona u objeto sobre los que se puede realizar el estudio estadístico.
 
-Un *carácter estadístico o variable estadística* es una propiedad que se estuia de los individuos de una población.
+Un *carácter estadístico o variable estadística* es una propiedad que se estudia de los individuos de una población.
 
-Llamamos *muestra* a un subconjunto de una población, que utilizaremos para realizar el estudio estadistico. En ocasiones, cuando la población es muy grande, es inviable hacer el estudio sobre toda la población y se hace sobre una muestra de esta. 
+Llamamos *muestra* a un subconjunto de una población, que utilizaremos para realizar el estudio estadístico. En ocasiones, cuando la población es muy grande, es inviable hacer el estudio sobre toda la población y se hace sobre una muestra de esta. 
 
-El *tamaño de una población* o *tamaño de la muestra* es el número total de indifiduos que se va a considerar para el estudio. Se suele indicar con la letra N.
+El *tamaño de una población* o *tamaño de la muestra* es el número total de individuos que se va a considerar para el estudio. Se suele indicar con la letra N.
 
 Puede ser:
   - *Cualitativo*:  si indica una cualidad no medible. 
@@ -96,15 +95,15 @@ Puede ser:
     - *Discreto*: Si sus valores son el resultado de un recuento. Toma los valores $1, 2, 3, ...$
     - *Continuo*: Si sus valores son el resultado de una medida. Su valor es un número real $RR$.
 
-== Tablas de frecuncia
+== Tablas de frecuencia
 
 Son tablas con los valores de la variable y sus frecuencias. \
 
 La *frecuencia absoluta de un valor* es el número de individuos de la población para los que la variable toma ese valor. 
-Se representa por $n_j$. La suma de todas las frecuencas absolutas es igual a ltotal de los individuos, y se representa por $N$.\
+Se representa por $n_j$. La suma de todas las frecuencias absolutas es igual al total de los individuos, y se representa por $N$.\
 
-La *frecuencia relativa de una valor* es el cociente entre la frecuencia asboluta y el número total de individuos. 
-Se representa por $f_i=n_j/N$. La suma de toas las recuencias relativas es $1$.
+La *frecuencia relativa de una valor* es el cociente entre la frecuencia absoluta y el número total de individuos. 
+Se representa por $f_i=n_j/N$. La suma de toas las frecuencias relativas es $1$.
 
 == Diagramas:
 
@@ -128,9 +127,9 @@ Tiempo de espera en una fila en un supermercado.
 
 Precio de las acciones de una empresa en la bolsa de valores.
 
-Edades de los estudantes en una escuela.
+Edades de los estudiantes en una escuela.
 
-Teimpo de respuesta de un servidor de internet.
+Tiempo de respuesta de un servidor de internet.
 
 Ventas diarias de una tienda minorista.
 
