@@ -31,24 +31,92 @@
 
 #set math.cases(reverse: true)
 
+#question()[Resuelve los siguientes sistemas de ecuaciones por el método de sustitución:]
 
-
-
-#question()[Resuelve los siguientes sistemas de ecuaciones:]
 #columns(2, gutter: 11pt)[
- #subquestion()[
+  #subquestion()[
+    $display(cases( delim: "{",
+              4&x - &y &= 1&8 ,
+              2&x - 3&y &= &4
+            ))$
+  ]
+
+  #subquestion()[
+    $display(cases( delim: "{",
+              &x + 3&y  &= &9 ,
+              2&x - 2&y  &= &2
+            ))$
+  ]
+  #colbreak()
+
+  #subquestion()[
     $display(cases( delim: "{",
               2&x - 3&y  &= -&1 ,
               3&x + 2&y  &= &5
             ))$
   ]
-  
+
   #subquestion()[
     $display(cases( delim: "{",
              -3&x &- 4&y &= &5 ,
               -2&x &+ 3&y &= &9
             ))$
   ]
+]
+
+#question()[Resuelve los siguientes sistemas de ecuaciones por el método de igualación:]
+
+#columns(2, gutter: 11pt)[
+  #subquestion()[
+    $display(cases( delim: "{",
+              4&x - &y &= 1&8 ,
+              2&x - 3&y &= &4
+            ))$
+  ]
+
+  #subquestion()[
+    $display(cases( delim: "{",
+              3&x - &y  &= &5 ,
+              4&x + &y  &= &9
+            ))$
+  ]
+  
+
+  #subquestion()[
+    $display(cases( delim: "{",
+              2&x - 3&y  &= -&1 ,
+              3&x + 2&y  &= &5
+            ))$
+  ]
+
+  #colbreak()
+  #subquestion()[
+    $display(cases( delim: "{",
+             -3&x &- 4&y &= &5 ,
+              -2&x &+ 3&y &= &9
+            ))$
+  ]
+
+  #subquestion()[
+    $display(cases( delim: "{",
+             -3&x &- 4&y &= &5 ,
+              -2&x &+ 3&y &= &9
+            ))$
+  ]
+]
+
+#question()[Resuelve los siguientes sistemas de ecuaciones por el método de reducción:]
+
+#columns(2, gutter: 11pt)[
+ 
+  #subquestion()[
+    $display(cases( delim: "{",
+              3&x - &y  &= &5 ,
+              4&x + &y  &= &9
+            ))$
+  ]
+  
+
 
   #subquestion()[
     $display(cases( delim: "{",
