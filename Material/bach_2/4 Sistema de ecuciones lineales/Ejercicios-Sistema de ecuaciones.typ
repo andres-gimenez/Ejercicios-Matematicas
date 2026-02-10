@@ -35,7 +35,50 @@
 
 #questions-pages(
   [
-    
+    #question()[Obtener el valor de $k$ para el sistema sea compatible determinado:
+
+        $display(cases( delim: "{",
+               &x &  & &   &+ 2&z   &=  &3 ,
+              3&x &+ & &y  &+  &z   &= -&1 ,
+               &  &  &2&y  &-  &z   &= -&2 ,
+               &x &- & &y  &+  k&z  &= -&5
+            ))$
+    ]
+    #solution()[
+        Para que el sistema sea compatible determinado, el rango de la matriz de los coeficientes debe ser igual al rango de la matriz ampliada, y ambos deben ser iguales al número de incógnitas.
+
+        Calculamos el rango de la matriz de los coeficientes y el de la matriz ampliada:
+
+        $display(mat(augment: #3, &1, &0, &2, &3; &3, &1, &1, -&1; &0, &2, -&1, -&2; &1, -&1, &k, -&5))$
+
+        Aplicamos operaciones elementales para llevar la matriz a una forma escalonada:
+
+        $display(mat(augment: #3, &1, &0, &2, &3; &3, &1, &1, -&1; &0, &2, -&1, -&2; &1, -&1, &k, -&5)
+        stretch(=)^(f_2 <- f_2 - 3f_1 \ f_4 <- f_4 - f_1)
+        mat(augment: #3, &1, &0, &2, &3; &0, &1, -&5, -1&0; &0, &2, -&1, -&2; &0, -&1, k-&2, -&8)
+        stretch(=)^(f_3 <- f_3 - 2f_2 \ f_4 <- f_4 + f_2)
+        mat(augment: #3, &1, &0, &2, &3; &0, &1, -&5, -1&0; &0, &0, &9, 1&8; &0, &0, k&-7, -1&8)
+        )$
+
+        $display(mat(delim: "|",&1, &0; &0, &1) = 1 != 0)$
+
+        Tenemos un menor de orden $2$ distinto de cero, luego el rango de la matriz de los coeficientes es al menos $2$ para todo valor de $k$.
+
+        $display(mat(delim: "|",&1, &0, &2; &0, &1, -&5; &0, &0, &9) = 9 != 0)$
+
+        Tenemos un menor de orden $3$ distinto de cero, luego el rango de la matriz de los coeficientes es $3$ para todo valor de $k$.
+
+        Calculamos el menor de orden $4$ para la matriz ampliada:
+        
+          $display(mat(delim: "|", &1, &0, &2, &3; &0, &1, -&5, -1&0; &0, &0, &9, 1&8; &0, &0, k&-7, -1&8) =
+          mat(delim: "|", &9, 1&8; k&-7, -1&8) =
+          -18mat(delim: "|", &9, -&1; k&-7, &1) =
+          -18(9 - (-1)(k-7))= -18(k+2))$
+
+        Si $k = -2$ el rango de la matriz ampliada es $3$, mientras que el rango de la matriz de los coeficientes es $3$, luego el sistema sería compatible y como el rango es igual al número de incógnitas, es compatible determinado.
+
+        Si $k != -2$ el rango de la matriz ampliada es $4$, mientras que el rango de la matriz de los coeficientes es $3$, luego el sistema sería incompatible.
+    ]
   ]
   // [
   //   #question()[Calcula el valor de los siguientes determinantes:]
