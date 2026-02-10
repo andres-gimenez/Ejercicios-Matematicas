@@ -17,12 +17,20 @@
     academic-level: "3º ESO",
     academic-subject: "Matemáticas",
     number: "Ejercicios",
+<<<<<<< HEAD
     content: "Sistema de ecuaciones lineales",
+=======
+    content: "Sistema de ecuaciones",
+>>>>>>> 345afa32cb36361b0f01dbee72c680b88d3afb47
   ),
   
   language: "es",
   decimal-separator: ",",
+<<<<<<< HEAD
   date: datetime(year:2026, month:2, day:5),
+=======
+  date: datetime(year:2025, month:1, day:8),
+>>>>>>> 345afa32cb36361b0f01dbee72c680b88d3afb47
   show-student-data: false,
   show-grade-table: false,
   question-points-position: none,
@@ -31,24 +39,106 @@
 
 #set math.cases(reverse: true)
 
+<<<<<<< HEAD
 
 
 
 #question()[Resuelve los siguientes sistemas de ecuaciones:]
 #columns(2, gutter: 11pt)[
  #subquestion()[
+=======
+#question()[Resuelve los siguientes sistemas de ecuaciones por el método de sustitución:]
+
+#columns(2, gutter: 11pt)[
+  #subquestion()[
+    $display(cases( delim: "{",
+              4&x - &y &= 1&8 ,
+              2&x - 3&y &= &4
+            ))$
+  ]
+
+  #subquestion()[
+    $display(cases( delim: "{",
+              &x + 3&y  &= &9 ,
+              2&x - 2&y  &= &2
+            ))$
+  ]
+  #colbreak()
+
+  #subquestion()[
+>>>>>>> 345afa32cb36361b0f01dbee72c680b88d3afb47
     $display(cases( delim: "{",
               2&x - 3&y  &= -&1 ,
               3&x + 2&y  &= &5
             ))$
   ]
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 345afa32cb36361b0f01dbee72c680b88d3afb47
   #subquestion()[
     $display(cases( delim: "{",
              -3&x &- 4&y &= &5 ,
               -2&x &+ 3&y &= &9
             ))$
   ]
+<<<<<<< HEAD
+=======
+]
+
+#question()[Resuelve los siguientes sistemas de ecuaciones por el método de igualación:]
+
+#columns(2, gutter: 11pt)[
+  #subquestion()[
+    $display(cases( delim: "{",
+              4&x - &y &= 1&8 ,
+              2&x - 3&y &= &4
+            ))$
+  ]
+
+  #subquestion()[
+    $display(cases( delim: "{",
+              3&x - &y  &= &5 ,
+              4&x + &y  &= &9
+            ))$
+  ]
+  
+
+  #subquestion()[
+    $display(cases( delim: "{",
+              2&x - 3&y  &= -&1 ,
+              3&x + 2&y  &= &5
+            ))$
+  ]
+
+  #colbreak()
+  #subquestion()[
+    $display(cases( delim: "{",
+             -3&x &- 4&y &= &5 ,
+              -2&x &+ 3&y &= &9
+            ))$
+  ]
+
+  #subquestion()[
+    $display(cases( delim: "{",
+             -3&x &- 4&y &= &5 ,
+              -2&x &+ 3&y &= &9
+            ))$
+  ]
+]
+
+#question()[Resuelve los siguientes sistemas de ecuaciones por el método de reducción:]
+
+#columns(2, gutter: 11pt)[
+ 
+  #subquestion()[
+    $display(cases( delim: "{",
+              3&x - &y  &= &5 ,
+              4&x + &y  &= &9
+            ))$
+  ]
+>>>>>>> 345afa32cb36361b0f01dbee72c680b88d3afb47
 
   #subquestion()[
     $display(cases( delim: "{",
@@ -80,12 +170,17 @@
 
   #subquestion()[
     $display(cases( delim: "{",
+<<<<<<< HEAD
               5&x &+ 2&y &= &18 ,
+=======
+              5&x &+ 2&y &= 1&8 ,
+>>>>>>> 345afa32cb36361b0f01dbee72c680b88d3afb47
               3&x &- &y &= &7
             ))$
   ]
 ]
 
+<<<<<<< HEAD
 #question()[Una tienda vende camisetas y pantalones. 
 Si una persona compra 3 camisetas y 2 pantalones y paga 80€, 
 su amiga compra 4 camisetas y un pantalón y paga 65€.
@@ -106,3 +201,37 @@ En total hay 20 animales y entre todos tienen 56 patas.
 #question()[En un partido de baloncesto, un equipo anotó 76 puntos. 
 Este equipo consiguió un total de 30 canastas, algunas de 2 puntos y otras de 3 puntos. 
 ¿Cuántas canastas de cada tipo marcaron?]
+=======
+#question()[Resuelve los siguientes sistemas de ecuaciones por el método gráfico:]
+
+#columns(2, gutter: 11pt)[
+  #subquestion()[
+    $display(cases( delim: "{",
+             2&x &- &y &= -&1 ,
+             &x &+ &y &= &4
+            ))$
+  ]
+
+  #subquestion()[
+    $display(cases( delim: "{",
+             &x &- &y &= &3 ,
+             2&x &+ &y &= &6
+            ))$
+  ]
+  #colbreak()
+    #subquestion()[
+    $display(cases( delim: "{",
+             &x &+ &y &= &2 ,
+             3&x &- &y &= &6
+            ))$
+    ]
+    
+    #subquestion()[
+    $display(cases( delim: "{",
+             2&x &- &y &= &4 ,
+             &x &+ &y &= &5
+            ))$
+    ]
+]
+
+>>>>>>> 345afa32cb36361b0f01dbee72c680b88d3afb47

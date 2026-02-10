@@ -28,6 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  // show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)
@@ -146,4 +147,96 @@
         ],
       )
   ],
+  [
+    #question()[Estudio el rango de las siguientes matrices según el valor de sus parámetros $k$:]
+    #questions-columns(
+      [
+        #subquestion()[$display(mat(&1, &2, &3; &4, &5, &6; &k, &k, &k))$]
+        #solution()[
+          Calculamos el determinante:
+
+          $display(mat(delim: "|", &1, &2, &3; &4, &5, &6; &k, &k, &k) = 
+          stretch(=)^(f_2 <- f_2 - f_1)
+          mat(delim: "|", &1, &2, &3; &3, &3, &3; &k, &k, &k)
+          stretch(=)^(f_3 <- f_3 - k f_1)
+          mat(delim: "|", &1, &2, &3; &3, &3, &3; &0, &0, &0)
+          = 0
+          )$
+
+          *El determinante es cero para todo valor de $k$, luego el rango es menor que $3$.*
+
+          Calculamos los menores de orden $2$:
+
+          $display(mat(delim: "|", &1, &2; &4, &5) = 1 dot 5 - 2 dot 4 = 5 - 8 = -3 != 0)$
+
+          *El menor de orden $2$ no es nulo para ningún valor de $k$, luego el rango es $2$ para todo valor de $k$.*
+        ]
+      ],
+      [
+        #subquestion()[$display(mat(&1, -&1, -&1; &1, -&1, &2; &2, &1, &k))$]
+        #solution()[
+        Calculamos el determinante:
+
+        $display(mat(delim: "|", &1, -&1, -&1; &1, -&1, &2; &2, &1, &k) = -k-4-1-2+k-2 = -9 !=0 #h(3mm) forall k)$
+
+        El determinante es distinto de cero para todo valor de $k$, luego el rango es $3$ para todo valor de $k$.
+        ]
+      ],
+      [
+          #subquestion()[$display(mat(&1, -&k, &3, -&2; -&3, &6, -&9, &6; &k, -&4, &6, -&4))$]
+      ],
+      [
+          #subquestion()[$display(mat(&1, -&1, &0, &5; &0, &1, &1, &k; &1, &0, -&2, &3; &2, &0, -&3, &k))$]
+      ]
+
+    )
+  ],
+  [
+  #question()[Dadas las matrices $display(A = mat(&1, &0, -&1; &0, &m, &3; &4, &1, -&m))$, $display(B = mat(&1, &0; &3, &2; -&1, &1))$ y $display(c= mat(&5, -&3, 4; -&3, -&2, &2))$]
+    
+      #subquestion()[Indica los valores de m para los que la matriz $A$ es invertible.]
+      #solution()[
+        Para que la matriz $A$ sea invertible, su determinante debe ser distinto de cero:
+
+        $display(mat(delim: "|", &1, &0, -&1; &0, &m, &3; &4, &1, -&m) = -m^2 + 4m -3 != 0 => m!=1 " y " m!=3)$
+
+        Para $m!=1 " y " m!=3$ la matriz tiene inversa.
+      ]
+      #subquestion()[Resuelve la siguiente ecuación matricial: $X A - B^t = C$ para $m = 0$.]
+      #solution()[
+        Despejamos $X$:
+
+        $display(X A - B^t = C => X A = C + B^t => X A A^(-1) = (C + B^t) A^(-1) => X = (C + B^t) A^(-1))$
+
+        Calculamos $B^t$:
+
+        $display(B^t = mat(&1, &3, -&1; &0, &2, &1))$
+
+        Calculamos $C + B^t$:
+
+        $display(C + B^t = mat(&5, -&3, &4; -&3, -&2, &2) + mat(&1, &3, -&1; &0, &2, &1) = mat(&6, 0, 3; -&3, 0, 3))$
+
+        Calculamos $|A|$ para $m=0$:
+
+        $display(mat(delim: "|", &1, &0, -&1; &0, &0, &3; &4, &1, &0) = -m^2 + 4m - 3 = -3 != 0)$
+
+        Calculamos $A^(-1)$ para $m=0$:
+
+        $display(A^(-1) = 1/abs(A) (A d)^t)$
+
+        $display((A d) = mat(
+          &mat(delim: "|", &0, &3; &1, &0), -&mat(delim: "|", &0, &3; &4, &0), &mat(delim: "|", 0, 0; 4, 1);
+          -&mat(delim: "|", 0, -&1; 1, &0), &mat(delim: "|", &1, -&1; &4, &0), -&mat(delim: "|", 1, 0; 4, 1);
+          &mat(delim: "|", 0, -&1; 0, &3), - &mat(delim: "|", 1, -&1; 0, &3), &mat(delim: "|", 1, 0; 0, 0))
+        ) =
+        mat(-&3, 1&2, &0; -&1, &4, -&1; 0, -&3, &0)
+        $
+
+        $display((A d)^t = mat(-&3, -&1, &0; 1&2, &4, -&3; &0, -&1, &0)) $
+
+        $display(A^(-1) = 1/(-3) mat(-&3, -&1, &0; 1&2, &4, -&3; &0, -&1, &0) = mat(1, 1/3, 0; -4, -4/3, 1; 0, 1/3, 0))$
+
+        $display(X = (C + B^t) A^(-1) = mat(&6, 0, 3; -&3, 0, 3) mat(1, 1/3, 0; -4, -4/3, 1; 0, 1/3, 0) = mat(&6, &3, &0; -&3, &0, &0))$
+      ]
+  ]
 )
