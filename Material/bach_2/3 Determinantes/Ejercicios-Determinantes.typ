@@ -198,7 +198,7 @@
       #solution()[
         Para que la matriz $A$ sea invertible, su determinante debe ser distinto de cero:
 
-        $display(mat(delim: "|", &1, &0, -&1; &0, &m, &3; &4, &1, -&m) = -m^2 + 4m -3 != 0 => m!=1 " y " m!=3)$
+        $display(mat(delim: "|", &1, &0, -&1; &0, &m, &3; &4, &1, -&m) = -m^2 + 4m -3 != 0 => m!=1 " o " m!=3)$
 
         Para $m!=1 " y " m!=3$ la matriz tiene inversa.
       ]
