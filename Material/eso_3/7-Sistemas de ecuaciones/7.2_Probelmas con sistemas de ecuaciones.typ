@@ -12,7 +12,7 @@
     name: config.at("school").at("name"),
     logo:image("../../" + config.at("school").at("logo"))
   ),
-  exam-info: (
+  exam-info: ( 
     academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "3º ESO",
     academic-subject: "Matemáticas",

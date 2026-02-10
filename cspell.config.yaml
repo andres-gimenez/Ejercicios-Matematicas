@@ -46,6 +46,7 @@ words:
   - length
   - line
   - math
+  - month
   - none
   - north
   - padding
@@ -73,6 +74,7 @@ words:
   - watermark
   - while
   - white
+  - year
 ignoreWords: []
 import: []
 language: es-ES,en-UK
