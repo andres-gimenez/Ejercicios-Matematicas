@@ -1,4 +1,3 @@
-#import "@preview/g-exam:0.4.4": *
 
 #let config = yaml("../../config.yaml")
 
@@ -19,7 +18,7 @@
     number: "Ejercicios",
     content: "Sistema de ecuaciones",
   ),
-  
+
   language: "es",
   decimal-separator: ",",
   date: datetime(year:2025, month:1, day:8),
@@ -32,7 +31,7 @@
 #set math.cases(reverse: true)
 
 #questions-pages([
-  question()[Resuelve los siguientes sistemas de ecuaciones, por el método de sustitución:]
+  #question()[Resuelve los siguientes sistemas de ecuaciones, por el método de sustitución:]
   #questions-columns([
     #subquestion()[
       $display(cases( delim: "{",
