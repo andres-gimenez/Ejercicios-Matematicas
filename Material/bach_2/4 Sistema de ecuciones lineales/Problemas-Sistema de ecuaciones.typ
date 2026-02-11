@@ -62,7 +62,7 @@ El número de miembros de la orquesta excedía en 21 unidades a la doceava parte
 // #subquestion()[Haciendo un análisis más detallado, Sara encuentra que la resistencia es mayor si la viga añadida es perpendicular tanto a $V_1$ como a $V_2$. Calcule, en el caso de que sea posible, las coordenadas de los extremos de la viga añadida si se adopta esta solución.]
 
 #question()[En el baloncesto existen canastas que valen un punto, otras que valen dos y otras
-que valen tres puntos. Calcule el numero de lanzamientos de uno, de dos y de tres puntos que realizó un equipo en un partido sabiendo que:]
+que valen tres puntos. Calcule el numero de lanzamientos de uno, de dos y de tres puntos que realizó un equipo en un partido sabiendo que: (EVAU 2025)]
 
 #subquestion()[El equipo anotó ́80 puntos con un acierto del 80% en tiros de uno, del 50% en tiros de dos y del 40% en tiros de tres.]
 
