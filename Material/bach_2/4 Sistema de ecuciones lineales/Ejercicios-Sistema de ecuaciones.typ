@@ -35,6 +35,48 @@
 
 #questions-pages(
   [
+    #question()[Resuelve los siguientes sistemas de ecuaciones lineales:]
+    #questions-columns(
+    [#subquestion()[
+        $display(cases(delim: "{",
+          2&x &+ &3&y  &=  &5 ,
+         -&x &+ &4&y  &= -&1
+        ))$]
+    ],
+    [
+        #subquestion()[
+        $display(cases(delim: "{",
+          & &x &- & &y &+ 3&z=  &1 ,
+          &3&x &+ & &y &+ 2&z= &3,
+          & &  &- & 2&y &+ 7&z= 1&0
+        ))$
+        ]
+        #solution()[$x=λ, y = 7 λ - 7, z = 2 λ - 2$]
+    ],
+    [
+        #subquestion()[
+        $display(cases(delim: "{",
+           &x &+ &  &y &  &z= &3,
+           &  &  &  &y &+ &z= &5,
+           &x &  &  &  &+ &z= &4,
+          5&x &- &  &y &+ &z= &6
+        ))$
+        ]
+        #solution()[$x=1, y = 2, z = 3$]
+    ],
+    [
+        #subquestion()[
+        $display(cases(delim: "{",
+           &3&x &+ & 4&y &= &4,
+           &2&x &+ & 6&y &= 2&3,
+          -&2&x &+ & 3&y &= &1,
+        ))$
+        ]
+        #solution()[$x=1, y = 2, z = 3$]
+    ],
+    )
+  ],
+  [
     #question()[Obtener el valor de $k$ para el sistema sea compatible determinado:
 
         $display(cases( delim: "{",
