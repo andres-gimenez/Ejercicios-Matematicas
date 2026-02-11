@@ -27,8 +27,8 @@
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  // show-solutions: false,
+  // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)
