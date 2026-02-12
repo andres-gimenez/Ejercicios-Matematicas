@@ -1,4 +1,5 @@
 
+#import "@preview/g-exam:0.4.4": *
 #let config = yaml("../../config.yaml")
 
 #show: exam.with(
