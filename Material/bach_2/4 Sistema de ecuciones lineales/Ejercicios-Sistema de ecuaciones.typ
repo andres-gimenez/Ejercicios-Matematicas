@@ -74,7 +74,48 @@
         ]
         #solution()[$x=1, y = 2, z = 3$]
     ],
+    [
+        #subquestion()[
+        $display(cases(delim: "{",
+           & &x &+ &  &y +& &z  &-& &t &= &0,
+           & &x &+ &  &y  & &   &-& &t &= -&1,
+           &2&x &+ & 2&y +& &z  &-&2&t &= -&1,
+        ))$
+        ]
+        #solution()[$x=-1 + λ - μ , y = μ, z = -4 μ + 3, t = λ$]
+    ], 
+
     )
+  ],
+  [
+    #question()[Discutir y resolver el siguiente sistema en función de los valores de $m$:
+
+     $display(cases(delim: "{",
+           &3&x &+ & 2&y - &m&z &= &4,
+           & &x &- &  &y + & &z &= &1,
+           &2&x &- &  &y + & &z &= &m,
+        ))$
+    ]
+  ],
+  [
+    #question()[Discutir y resolver el siguiente sistema en función de los valores de $a$:
+
+     $display(cases(delim: "{",
+           &a&x &- &  &y &+ & &z &= &2,
+           & &x &+ & a&y &- & &z &= &1,
+           & &x &  &  &  &- & &z &= &0,
+        ))$
+    ]
+  ],
+  [
+    #question()[Discutir y resolver el siguiente sistema en función de los valores de $a$:
+
+     $display(cases(delim: "{",
+           &a&x &+ &  &y &+ & &z &= &1,
+           & &x &+ & a&y &+ & &z &= &a,
+           & &x &+ &  &y &+ & a&z &= &a^2,
+        ))$
+    ]
   ],
   [
     #question()[Obtener el valor de $k$ para el sistema sea compatible determinado:

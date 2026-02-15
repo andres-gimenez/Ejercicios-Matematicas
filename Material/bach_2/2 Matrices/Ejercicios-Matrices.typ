@@ -193,21 +193,25 @@
       $display(X = (2 I - A^t) A^(-1) = mat(&1, &1; &0, &3) dot mat(&1, &0; -&1, -&1) = mat(&2, -&1; -&3, -&3))$
     ]
   ],
-  [
-    #question()[Estudia el rango de la matriz según el parámetro $k$: 
-       $ A = mat(1, &k, 2; 2, 2&k, 4; 1, &1, k) $]
-    #solution()[
-      Calculamos el rango de la matriz: 
+  // [
+  //   #question()[Estudia el rango de la matriz según el parámetro $k$: 
+  //      $ A = mat(1, &k, 2; 2, 2&k, 4; 1, &1, k) $]
+  //   #solution()[
+  //     Calculamos el rango de la matriz: 
 
-      $display("rango"mat(1, &k, 2; 2, 2&k, 4; 1, &1, k) 
-      stretch(=)^(f_2 <- f_2 - 2 f_1 \ f_3 <- f_3 - f_1)
-        "rango"mat(1, &k, 2; 0, &0, 0; 0, 1 - &k, k - 2)
-      )$      
-      - Si $k = 1$, la tercera fila es nula, luego el rango es 1.
-      - Si $k = 2$, la tercera fila es nula, luego el rango es 2.
-      - Si $k != 1$ y $k != 2$, la tercera fila no es nula, luego el rango es 3.
-    ] 
-  ],
+  //     $display("rango"mat(1, &k, 2; 2, 2&k, 4; 1, &1, k) 
+  //     stretch(=)^(f_2 <- f_2 - 2 f_1 \ f_3 <- f_3 - f_1)
+  //       "rango"mat(1, &k, 2; 0, &0, 0; 0, 1 - &k, k - 2)
+  //       stretch(=)^(f_3 <- f_3 - 2 f_1 \ f_3 <- f_3 - f_1)
+  //     )$      
+
+  //     - Como la segunda fila es nula, el rango no puede ser 3.
+  //     - 
+  //     // - Si $k = 1$, la tercera fila es nula, luego el rango es 1.
+  //     // - Si $k = 2$, la tercera fila es nula, luego el rango es 2.
+  //     // - Si $k != 1$ y $k != 2$, la tercera fila no es nula, luego el rango es 3.
+  //   ] 
+  // ],
   // [
   //   #question()[Dada la matriz: 
   //      $ A = mat(1, 0, 1; 0,1,0;1, 0, 1) $
