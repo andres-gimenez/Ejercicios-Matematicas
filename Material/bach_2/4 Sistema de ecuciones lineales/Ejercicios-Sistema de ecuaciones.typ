@@ -27,8 +27,8 @@
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: false,
-  // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  show-solutions: false,
+  show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  // show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)
@@ -95,6 +95,29 @@
            & &x &- &  &y + & &z &= &1,
            &2&x &- &  &y + & &z &= &m,
         ))$
+    ]
+    #solution()[
+       Definimos la matriz del sistema y su ampliada:
+        $display((A | B) = mat(augment: #3, &3, &2, -&m, &4; &1, -&1, &1, &1; &2, -&1, &1, &m))$
+
+        *Calculamos el rango de A*
+
+        Para calcular el rango de A, calculamos el valor de un menor de orden 3 de A:
+
+        $display(mat(delim: "|", &3, &2, -&m; &1, -&1, &1; &2, -&1, &1) = \ = 
+        3 dot (-1) dot 1 + 2 dot 2 dot 1 + (-m) dot (-1) dot 1  - (-m) dot (-1)dot 2 - 2 dot 1 dot 1 - 3 dot 1 dot (-1) = \ =
+        -3 + 4 +m -2m - 2 + 3 = m - 2)$
+
+        - Si $m != 2$ el menor de orden 3 es cero, luego el rango de $A <  3$.
+  
+        - Si $m = 2$ el menor de orden 3 es distinto de cero, luego el rango de A = 3. Tenemos que buscar un menor de orden 2, de A, distinto de cero.
+  
+           $mat(delim: "|", &3, &2; &1, -&1) = -3 -2 = -5 != 0$
+
+           Luego el rango de A, si $m = 2$ es 2. 
+
+
+
     ]
   ],
   [
