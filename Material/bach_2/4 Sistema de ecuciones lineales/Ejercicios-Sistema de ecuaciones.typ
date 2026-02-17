@@ -27,8 +27,8 @@
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  // show-solutions: false,
+  // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)
@@ -46,33 +46,23 @@
     [
         #subquestion()[
         $display(cases(delim: "{",
-          & &x &- & &y &+ 3&z=  &1 ,
-          &3&x &+ & &y &+ 2&z= &3,
-          & &  &- & 2&y &+ 7&z= 1&0
+          & &x &- & &y &+ 3&z= &1 ,
+          &3&x &+ &2&y &+ 2&z= &4,
+          & &  &- &5&y &+ 7&z= -&1
         ))$
         ]
-        #solution()[$x=λ, y = 7 λ - 7, z = 2 λ - 2$]
+        #solution()[$display(x=λ "," y = 5/4 - 7/8 λ "," z = 3/4 - 5/8 λ)$]
     ],
     [
         #subquestion()[
         $display(cases(delim: "{",
-           &x &+ &  &y &  &z= &3,
+           &x &+ &  &y &+ &z= &3,
            &  &  &  &y &+ &z= &5,
            &x &  &  &  &+ &z= &4,
-          5&x &- &  &y &+ &z= &6
+          2&x &  &  &  &+ &z= &2
         ))$
         ]
-        #solution()[$x=1, y = 2, z = 3$]
-    ],
-    [
-        #subquestion()[
-        $display(cases(delim: "{",
-           &3&x &+ & 4&y &= &4,
-           &2&x &+ & 6&y &= 2&3,
-          -&2&x &+ & 3&y &= &1,
-        ))$
-        ]
-        #solution()[$x=1, y = 2, z = 3$]
+        #solution()[$x=-2, y = -1, z = 6$]
     ],
     [
         #subquestion()[
@@ -82,9 +72,8 @@
            &2&x &+ & 2&y +& &z  &-&2&t &= -&1,
         ))$
         ]
-        #solution()[$x=-1 + λ - μ , y = μ, z = -4 μ + 3, t = λ$]
-    ], 
-
+        #solution()[$x=λ, y = μ - λ -1, z = 1, t = μ$]
+    ]
     )
   ],
   [
@@ -108,16 +97,45 @@
         3 dot (-1) dot 1 + 2 dot 2 dot 1 + (-m) dot (-1) dot 1  - (-m) dot (-1)dot 2 - 2 dot 1 dot 1 - 3 dot 1 dot (-1) = \ =
         -3 + 4 +m -2m - 2 + 3 = m - 2)$
 
-        - Si $m != 2$ el menor de orden 3 es cero, luego el rango de $A <  3$.
-  
-        - Si $m = 2$ el menor de orden 3 es distinto de cero, luego el rango de A = 3. Tenemos que buscar un menor de orden 2, de A, distinto de cero.
+        - Si *$m = 2$* el menor de orden 3 es cero, luego el rango de $A < 2$. 
+          - Tenemos que buscar un menor de orden 2, de A, distinto de cero.
   
            $mat(delim: "|", &3, &2; &1, -&1) = -3 -2 = -5 != 0$
 
            Luego el rango de A, si $m = 2$ es 2. 
+          - Ahora calculamos el rango de B para $m = 2$:
 
 
+            $B = display(mat(&3, &2, -&2, &4; &1, -&1, &1, &1; &2, -&1, &1, &2))$
 
+            Tomamos el menor de orden 3 de B:
+
+             $display(mat(delim: "|", &3, &2, &4; &1, -&1, &1; &2, -&1, &1) = -6+4-4+8-4+3 = 3)$
+  
+            Al ser el menor de orden 3 distinto de cero, el rango de B es 3.
+
+            Si el rango de A es distinto que el rango de B, el sistema es incompatible. Luego para $m = 2$ *el sistema es incompatible*.
+
+        - Si *$m != 2$* el menor de orden 3 es distinto de cero, luego el rango de $A = 3$. Si el rango de A es 3, el rango de B también es 3, ya que podemos tomar el mismo menor de orden 3 para la matriz ampliada. 
+          - Si rango A = rango B = nº de incógnitas, *el sistema es compatible determinado*. 
+  
+      Resolvemos el sistema para $m!=2$:
+
+      Tenemos $|A| = m - 2$, calculado anteriormente:
+
+      $display(Delta_x = mat(delim: "|", &4, &2, -&m; &1, -&1, &1; &m, -&1, &1) =
+      -4+2m+m-m^2-2+4 = -m^2+3m-2 )$
+
+      $display(Delta_y = mat(delim: "|", &3, &4, -&m; &1, &1, &1; &2, &m, &1) =
+      3 +8-m^2+2m-4-3m = -m^2-m+7
+      )$
+
+      $display(Delta_z = mat(delim: "|", &3, &2, &4; &1, -&1, &1; &2, -&1, &m) = 
+      -3m+4-4+8-2m+3 = -5m+11 )$
+
+      $display(x = Delta_x/Delta = (-m^2+3m-2)/(m-2) \
+       y = Delta_y/Delta = (-m^2-m+7)/(m-2) \
+        z = Delta_z/Delta = (-5m+11)/(m-2))$
     ]
   ],
   [
@@ -128,6 +146,66 @@
            & &x &+ & a&y &- & &z &= &1,
            & &x &  &  &  &- & &z &= &0,
         ))$
+    ]
+  ],
+  [
+    #question()[Discutir el siguiente sistema en función de los valores de $a$ y $b$:
+
+     $display(cases(delim: "{",
+           & &x &+& a&y &+& 2&z &= &3,
+           & &x &-& 3&y &-& &z &= -&1,
+           &-&x &+& 8&y &+&4&z &= &b,
+        ))$
+    ]
+    #solution()[
+      Definimos la matriz del sistema y su ampliada:
+      $display((A | B) = mat(augment: #3, &1, &a, &2, &3; &1, -&3, -&1, -&1; -&1, &8, &4, &b))$
+
+      Calculamos el rango de A:
+
+      Para calcular el rango de A, calculamos el valor de un menor de orden 3 de A:
+
+      $display(mat(delim: "|", &1, &a, &2; &1, -&3, -&1; -&1, &8, &4) = \ =
+      1 dot (-3) dot 4 + a dot (-1) dot (-1) + (-1) dot 1 dot 8 - 2 dot (-3) dot (-1) - a dot 1 dot 4 - 1 dot (-1) dot 8 = \ =
+      -12 + a - 8 + 6 - 4a + 8 = 6 - 3a)$
+
+      Igualamos el menor de orden 3 a cero para encontrar los valores de $a$ para los que el rango de A es menor que 3:
+
+       $display(6 - 3a = 0 => a = 6/3 = 2)$
+
+      - Si *$a != 2$ * el menor de orden 3 es distinto de cero, luego el rango de $A = 3$. Si el rango de A es 3, el rango de B también es 3, ya que podemos tomar el mismo menor de orden 3 para la matriz ampliada. 
+        
+        Si rango A = rango B = nº de incógnitas, *el sistema es compatible determinado*.
+
+      - Si *$a = 2$* el menor de orden 3 es cero, luego el rango de $A < 3$. 
+        Tenemos que buscar un menor de orden 2, de A, distinto de cero.
+
+        Ahora tenemos:
+
+        $display((A | B) = mat(augment: #3, &1, &2, &2, &3; &1, -&3, -&1, -&1; -&1, &8, &4, &b))$
+
+        Tomamos un menor de orden 2 de A, que también será de B:
+
+        $display(mat(delim: "|", &1, &2; &1, -&3) = -3-2 = -5 !=0)$
+
+        Luego el rango de A para $a = 2$, es $2$. 
+
+        Ahora calculamos el rango de B para $a = 2$:
+
+        $B = display(mat(&1, &2, &2, &3; &1, -&3, -&1, -&1; -&1, &8, &4, &b))$
+
+        Tomamos el menor de orden 3 de B:
+
+        $display(mat(delim: "|", &1, &2, &3; &1, -&3, -&1; -&1, &8, &b) = 
+         1 dot (-3) dot b + 2 dot (-1) dot (-1) + 3 dot 1 dot 8 - 3 dot (-3) dot (-1) - 2 dot 1 dot b - 1 dot (-1) dot 8 = \ =
+         -3b + 2 + 24 - 9 - 2b + 8 = 25-5b)$
+
+        Igualamos el valor del menor a cero:
+
+        $display(25-5b = 0 => b = 25/5 = 5)$ 
+
+        - Si $a = 2$ y $b = 5$ rango A = 2 y rango B = 2 < nº de incógnitas, luego *el sistema es compatible indeterminado*.
+        - Si $a = 2$ y $b != 5$ rango A = 2 y rango B = 3, luego *el sistema es incompatible*.
     ]
   ],
   [
