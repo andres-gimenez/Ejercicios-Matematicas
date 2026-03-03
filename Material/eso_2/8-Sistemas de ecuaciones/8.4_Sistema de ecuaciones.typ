@@ -154,11 +154,6 @@
   ]
 ]
 
-#question()[Una tienda vende camisetas y pantalones. 
-Si una persona compra 3 camisetas y 2 pantalones y paga 80€, 
-su amiga compra 4 camisetas y un pantalón y paga 65€.
-¿Cuánto cuesta comprar una camiseta y un pantalón juntos?]
-
 #question()[Un autobús transporta 72 personas. 
 Hay adultos y niños en el autobús. 
 Si el número de adultos es el doble que el de los niños, ¿cuántos adultos y niños hay en el autobús?]
@@ -174,3 +169,8 @@ En total hay 20 animales y entre todos tienen 56 patas.
 #question()[En un partido de baloncesto, un equipo anotó 76 puntos. 
 Este equipo consiguió un total de 30 canastas, algunas de 2 puntos y otras de 3 puntos. 
 ¿Cuántas canastas de cada tipo marcaron?]
+
+#question()[Una tienda vende camisetas y pantalones. 
+Si una persona compra 3 camisetas y 2 pantalones y paga 80€, 
+su amiga compra 4 camisetas y un pantalón y paga 65€.
+¿Cuánto cuesta comprar una camiseta y un pantalón juntos?]
