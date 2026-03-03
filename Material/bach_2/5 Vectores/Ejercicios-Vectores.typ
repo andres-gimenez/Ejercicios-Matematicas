@@ -28,7 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  show-solutions: false,
+  // show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)
@@ -53,7 +53,7 @@
     [#subquestion()[$arrow(u) times arrow(v) dot arrow(w) = $]],
     [#subquestion()[$mat(delim: "|", arrow(u); arrow(v); arrow(w)) = $]],
     [#subquestion()[$arrow(u) dot ( arrow(v) times arrow(w)) = $]],
-    [#subquestion()[$arrow(w) times arrow(u) times arrow(v) = $]],
+    // [#subquestion()[$arrow(w) times arrow(u) times arrow(v) = $]],
     [#subquestion()[$arrow(w) times arrow(w) = $]],
     [#subquestion()[$arrow(u) dot arrow(u) = $]],
     )
@@ -172,6 +172,16 @@
     $A(4, 2, 8)$, $B(6, 4, 12)$, $C(6, 0, 10)$ y $D(8, 2, 14)$.
 
     Si el punto $E(6, 8, 28)$ es otro vértice, hallar el volumen de $H$.]
+
+    #solution()[
+      $arrow(A B) = arrow(C D) = (2, 2, 4)$
+
+      $arrow(A C) = arrow(B D) = (2, -2, 2) $
+
+      $arrow(A E) = (2, 6, 20) $
+
+      $ V = |arrow(A B) dot (arrow(A C) times arrow(A E))| = mat(delim: "|", &2, &2, &4; &2, -&2, &2; &2, &6, 2&0) = 112 u^2 $ 
+    ]
   ],
   [
     #question()[*EvAU(Año 2013 — Extraordinaria — Opción A)*
@@ -179,8 +189,32 @@
     Dados los puntos $A(2, -2, 1)$, $B(0, 1, -2)$, $C(-2, 0, -4)$, $D(2, -6, 2)$, se pide:
 
     #questions-columns(
-      [#subquestion()[Probar que $A B C D$ es un trapecio (tiene los lados paralelos) y hallar la distancia entre los lados paralelos.  ]],
-      [#subquestion()[Hallar el área del triángulo $A B C$.]],
+      [#subquestion()[Probar que $A B C D$ es un trapecio (tiene los lados paralelos) y hallar la distancia entre los lados paralelos.]
+       #solution()[
+        $arrow(A B) = (-2, 3, -3) "," arrow(B C) = (-2, -1, -2) "y" arrow(C D) = (-4, -6, 6) = -2(-2, 3, -3)$
+
+        Los vectores $arrow(A B)$ y $arrow(C D)$ son paralelos, luego $A B C D$ es un trapecio.
+
+         La distancia será la de A sobre el vector $arrow(C D)$. Construimos el vector $arrow(C A) = (4, -2, 5)$:
+
+      $ S =  | arrow(C D) times arrow(C A) | = | mat(delim: "|", &arrow(i), &arrow(j), &arrow(k); &4, -&6, &6; &4, -&2, &5) | = |(-18, 4, 16)| = 2 sqrt(149) u^2 $ 
+
+      $ |arrow(C D) | = 2 sqrt(22)) $
+
+      $ S = | arrow(C D) | dot h => h = (2 sqrt(149)) / (2 sqrt(22) ) = sqrt(149/22) $
+      ]
+      ],
+      
+      [#subquestion()[Hallar el área del triángulo $A B C$.
+      #solution()[
+      
+      $ arrow(A B) = (-2, 3, -3) "," arrow(A C) = (-4, -2, -5) $
+
+      $ S_T = 1/2 | arrow(A B) times arrow(A C) | = | mat(delim: "|", &arrow(i), &arrow(j), &arrow(k); -&2, &3, -&3; -&4, -&2, -&5) | = 1/2 |(-9, 2, 8)| = sqrt(149)/2 u^2 $ 
+
+      ]
+      ]
+      ],
      )  
   ]
   ]
