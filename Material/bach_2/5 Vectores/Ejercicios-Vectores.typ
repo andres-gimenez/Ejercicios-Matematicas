@@ -28,7 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  // show-solutions: false,
+  show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)
@@ -160,9 +160,70 @@
     Dados $arrow(u) = (a, 1 + a, 2a)$, $arrow(v) = (a, 1, a)$, $arrow(w) = (1, a, 1)$:
     ]
      #questions-columns(
-      [#subquestion()[Determinar los valores de $a$ para que los vectores $arrow(u)$, $arrow(v)$ y $arrow(w)$ sean linealmente dependientes.]],
-      [#subquestion()[Estudiar si $arrow(c) = (3, 3, 0)$ depende linealmente de $arrow(u)$, $arrow(v)$ y $arrow(w)$ para el caso $a = 2$. Justifica la respuesta.]],
-      [#subquestion()[Justificar razonadamente si para $a = 0$ se cumple la igualdad $arrow(u) dot (arrow(v) times arrow(w)) = 0$.]],
+      [#subquestion()[Determinar los valores de $a$ para que los vectores $arrow(u)$, $arrow(v)$ y $arrow(w)$ sean linealmente dependientes.]
+       #solution()[
+        Calculamos el determinante:
+
+        $display(mat(delim: "|", &a, &a, &1; 1 &+ a, &1, &a; &2a, &a, &1) =
+        a (a^2 -1) = 0 => a = 0 "o" a = ± 1 
+        )$
+
+        Si $a != 0$ y $a != ± 1 =>$, $arrow(u)$, $arrow(v)$ y $arrow(w)$ son linealmente independientes.
+
+        Si $a = 0$ o $a = ± 1 => $  $arrow(u)$, $arrow(v)$ y $arrow(w)$ son linealmente dependientes.
+       
+      ]
+      ],
+      [#subquestion()[Estudiar si $arrow(c) = (3, 3, 0)$ depende linealmente de $arrow(u)$, $arrow(v)$ y $arrow(w)$ para el caso $a = 2$. Justifica la respuesta.]
+      #solution()[
+        Para $a = 2$ los tres vectores son linealmente independientes y, por tanto, forman una base.
+        Luego el vector $arrow(c)=(3, 3, 0)$ es combinación lineal de $arrow(u)$, $arrow(v)$ y $arrow(w)$ si el determinante de la matriz formada por $arrow(u)$, $arrow(v)$, $arrow(w)$ y $arrow(c)$ es cero. Veamos de que combinación lineal se trata, tenemos:
+
+        #set math.cases(reverse: false)
+        $ display(cases(delim: "{",
+          arrow(u) = (2, 3, 4),
+          arrow(v) = (2, 1, 2),
+          arrow(w) = (1, 2, 1)
+        )) $
+
+        $ (3, 3, 0) = a (2, 3, 4) + b (2, 1, 2) + c (1, 2, 1) => $
+
+        $ display(cases(delim: "{",
+          2a + 2&b +  &c &= 3,
+          3a +  &b + 2&c &= 3,
+          4a + 2&b +  &c &= 0
+        )) => 
+        display(cases(delim: "{",
+          a = -3/2,
+          b = 3/2,
+          c = 3
+        )) $
+
+        $ arrow(c) = -3/2 arrow(u) + 3/2 arrow(v) + 3 arrow(w) $
+
+      ]
+      
+      ],
+      [#subquestion()[Justificar razonadamente si para $a = 0$ se cumple la igualdad 
+      $ arrow(u) dot (arrow(v) times arrow(w)) = 0 $.
+      #solution()[
+        Si $a = 0$, tenemos:
+
+        $ display(cases(delim: "{",
+          arrow(u) = (0, 1, 0),
+          arrow(v) = (0, 1, 0),
+          arrow(w) = (1, 0, 1)
+        )) $
+
+        sabemos que $[arrow(u), arrow(v), arrow(w))] = arrow(u) dot (arrow(v) times arrow(w))$. Pero 
+
+        $ [arrow(u), arrow(v), arrow(w)] = mat(delim: "|", 0, 1, 0; 0, 1, 0; 1, 0, 1) = 0 $
+
+        Luego $[arrow(u) dot (arrow(v) times arrow(w))] = 0 $
+
+      ]
+      ]
+      ]
      )  
   ],
   [
