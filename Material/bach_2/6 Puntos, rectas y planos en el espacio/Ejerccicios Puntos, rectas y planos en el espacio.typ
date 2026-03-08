@@ -28,7 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  show-solutions: false,
+  // show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: false)
@@ -83,7 +83,78 @@
         )) $
     ]],
     )
-  ]
+  ],
+  [
+    #question()[Halla unas ecuaciones implícitas para cada una de las rectas sobre las que descansan los tres lados del triángulo de vértices $A = (1, -1, 1)$, $B = (0, 1, 2)$ y $C = (1, 2, -3)$.]
+  ],
+  [
+    #question()[Dada la recta 
+      $ r equiv display(cases(delim: "{",
+           x = y,
+           x + z = 0
+        )) $ 
+    ]
+    #questions-columns(
+      [#subquestion()[calcula dos puntos de ella y los simétricos de ellos respecto del origen de coordenadas.]],
+      [#subquestion()[Calcula la recta simétrica de $r$ respecto del origen de coordenadas.]],
+    )
+  ],
+  [
+    #question()[Comprueba si los puntos $A=(1, 2, 0)$, $B=(2, 3, 4)$ y $C=(3, 4, -4)$ pertenecen o no al plano que pasa por el punto $P=(1, 1, 1)$ y tiene como vectores directores $arrow(u) = (1, 0, -1)$ y $arrow(v) = (0, 1, -1)$. Calcula dos puntos más de este plano.]
+  ],
+  [
+    #question()[Comprueba si los puntos $A=(3, -2, -2)$, $B=(1, 0, 1)$ y $C=(2, 1, -1)$ pertenecen de ecuaciones paramétricas:
+      $ pi equiv display(cases(delim: "{",
+           x = 1 - lambda + mu,
+           y = lambda - mu,
+           z = 2 - lambda + mu
+        )) $
+    ]
+  ],
+  [
+    #question()[Calcula las ecuaciones paramétricas y la ecuación implícita del plano que pasa por el punto $A=(2, 2, 2)$ y tiene como vectores de dirección $arrow(u) = (-3, -2, 1)$ y $arrow(A B)$ donde $B=(1, 2, -1)$.]
+  ],
+  [ 
+    #question()[Calcula unas ecuaciones paramétricas del plano $x + y + z = 3$ e indica uno de sus puntos y vectores de dirección independientes.]
+  ],
+  [
+    #question()[Comprueba que las siguientes ecuaciones paramétricas representan el mismo plano. Para ello, obtén tres puntos no alineados del primero y comprueba que pertenecen al segundo plano.
+    
+      $ pi equiv display(cases(delim: "{",
+           x = 2 + lambda + mu,
+           y = - mu,
+           z = 2 - lambda + mu
+        )) 
+        #h(1cm)  
+        pi' equiv display(cases(delim: "{",
+           x = s,
+           y = t - s,
+           z = 4 - 2t + s
+        ))         
+      $
+    ]
+    #solution[
+        Calculamos tres puntos no alineados del plano $pi$ y comprobamos que pertenecen al plano $pi'$:
+
+        - Si $lambda = 0 "y" mu = 0$, entonces $P_1 = (2, 0, 2)$  
+        - Si $lambda = 1 "y" mu = 0$, entonces $P_2 = (3, 0, 1)$  
+        - Si $lambda = 0 "y" mu = 1$, entonces $P_3 = (3, -1, 3)$
+
+        Ahora comprobamos que los puntos $P_1$, $P_2$ y $P_3$ pertenecen al plano $pi'$:
+
+        - Para $P_1$, $s = 2$ y $t = 2$ cumplen las ecuaciones paramétricas de $pi'$. Por tanto, $P_1$ pertenece a $pi'$.
+        - Para $P_2$, $s = 3$ y $t = 3$ cumplen las ecuaciones paramétricas de $pi'$. Por tanto, $P_2$ pertenece a $pi'$.
+        - Para $P_3$, $s = 3$ y $t = 2$ cumplen las ecuaciones paramétricas de $pi'$. Por tanto, $P_3$ pertenece a $pi'$.
+    ]
+  ],
+  [
+    #question()[En la figura aparece un tetraedro de vértices los punto $O , A, B "y" C$. Calcula las ecuaciones de los planos que contienen a las cuatro caras del tetraedro.
+    #align(center, image("Figura01.png", width: 20%))
+    ]
+  ],
+  [
+    #question()[Halla la ecuación del plano que pasa por los puntos $A=(2, -2, 1)$, $B=(1, -2, -1)$ y $C=(0, -1, 2)$.]
+  ],
 )
  
 
