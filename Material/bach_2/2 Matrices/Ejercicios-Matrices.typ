@@ -20,7 +20,7 @@
     academic-subject: "Matemáticas II",
     number: [Álgebra de matrices],
     // content: [($X->infinity$)],
-    model: [v1],
+    model: [v2],
   ),
   
   language: "es",
@@ -28,6 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  // show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)
@@ -281,5 +282,33 @@
         Por lo tanto, por el principio de inducción, la conjetura es cierta $forall n in NN$.
       ]
     // )
+  ],
+  [
+    #question()[(EVaU 2013 - Model) De las matrices cuadradas $A$ y $B$ se sabe que:
+    
+    $ A + B = mat(2, 1, 0; 2, 0, 0; -1, 0, 2)",  " A^2-A B + B A - B^2 = mat(-&2, &0, &0; &0, &2, &0; &2, -&1, &0) $
+    ]
+    #subquestion()[Calcula $A - B$.]
+    #solution()[
+      $ A^2 - A B + B A - B^2 = (A+B)(A-B) = mat(-&2, &0, &0; &0, &2, &0; &2, -&1, &0) => $
+
+      $ A - B = (A + B) ^(-1) mat(-&2, &0, &0; &0, &2, &0; &2, -&1, &0) => $
+
+      $ A -B = mat(0, 1/2, 0; 1, -1, 0; 0 , 1/4, 1/2) mat(-&2, &0, &0; &0, &2, &0; &2, -&1, &0) = mat(&0, &1, &0; -&2, -&2, &0; &1, &0, &0) $
+    ]
+    #subquestion()[Calcula las matrices $A$ y $B$.]
+    #solution()[
+      #set math.cases(reverse: false)
+        $ cases(
+          A + B = mat(&2, &1, &0; &2, &0, &0; -&1, &0, &2),
+          A - B = mat(&0, &1, &0; -&2, -&2, &0; &1, &0, &0)
+        ) => 
+
+        cases(
+          A = mat(&1, &1, &0; &0, -&1, &0; &0, &0, &1),
+          B = mat(&1, &0, &0; &2, &1, &0; -&1, &0, &1)
+        )
+       $
+    ]
   ]
 )
