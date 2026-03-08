@@ -166,9 +166,26 @@
     #align(center, image("Figura01.png", width: 20%))
     ]
   ],
-  [Question()[Halla un vector director y otro normal del plano que pasa por los punto 
-    $display(A =(-1, 2, 1/3))$, $display(B=(1/2, -1, 0))$ y el origen de coordenadas].
+  [#question()[Halla un vector director y otro normal del plano que pasa por los punto $display(A =(-1, 2, 1/3))$, $display(B=(1/2, -1, 0))$ y el origen de coordenadas].
+  ],
+  [
+    #question()[Un plano tiene como vector normal $arrow(n) = (2, -3, 2)$ y pasa por el punto $A=(-1, 2, -5)$. Escribe su ecuación normal, su ecuación implícita y sus ecuaciones paramétricas.]
+  ],
+  [
+    #question()[Halla la recta perpendicular al plano $x+z = 2$ y que pasa por el punto $A=(1, 2, 0)$.]
+  ],
+  [
+    #question()[Halla el plano perpendicular a la recta $display(x/2=y =z)$ y que pase por origen de coordenadas].
+  ],
+  [
+    #question()[Estudia la posición relativa de los planos $pi$ y $pi'$ en los siguientes casos:]
+    
+    #questions-columns(
+      [#subquestion()[$pi equiv 2x-y-z =0$ #h(5mm) $pi' equiv -6x + 3y +3z-3=0$]],
+      [#subquestion()[$pi equiv 2x-y-z =0$ #h(5mm) $pi' equiv 2x + y -z-3=0$]],
+    )
   ]
+
 )
  
 
