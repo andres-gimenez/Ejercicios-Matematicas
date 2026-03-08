@@ -148,13 +148,27 @@
     ]
   ],
   [
+    #question()[Halla la ecuación del plano que pasa por los puntos $A=(2, -2, 1)$, $B=(1, -2, -1)$ y $C=(0, -1, 2)$.]
+  ],
+  [
+    #question()[Halla la ecuación de los siguientes planos:]
+    #questions-columns(
+      [#subquestion()[Paralelo a $X Y$ y que pasa por el punto $A=(-1, 2, -2)$.]],
+      [#subquestion()[Paralelo a $X Z$ y que pasa por el punto $B=(3, -2, 0)$.]],
+      [#subquestion()[Paralelo a $Y Z$ y que pasa por el punto $C=(0, -2, -2)$.]],
+    )
+  ],
+  [
+    #question()[Indica un vector director y otro normal a $pi equiv -2x + 2y +z = 0$]
+  ],
+  [
     #question()[En la figura aparece un tetraedro de vértices los punto $O , A, B "y" C$. Calcula las ecuaciones de los planos que contienen a las cuatro caras del tetraedro.
     #align(center, image("Figura01.png", width: 20%))
     ]
   ],
-  [
-    #question()[Halla la ecuación del plano que pasa por los puntos $A=(2, -2, 1)$, $B=(1, -2, -1)$ y $C=(0, -1, 2)$.]
-  ],
+  [Question()[Halla un vector director y otro normal del plano que pasa por los punto 
+    $display(A =(-1, 2, 1/3))$, $display(B=(1/2, -1, 0))$ y el origen de coordenadas].
+  ]
 )
  
 
