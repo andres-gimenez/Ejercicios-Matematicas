@@ -184,6 +184,73 @@
       [#subquestion()[$pi equiv 2x-y-z =0$ #h(5mm) $pi' equiv -6x + 3y +3z-3=0$]],
       [#subquestion()[$pi equiv 2x-y-z =0$ #h(5mm) $pi' equiv 2x + y -z-3=0$]],
     )
+  ],
+  [#question()[Estudia la posición relativa de los siguientes planos:]
+    #questions-columns(
+      [#subquestion()[$pi equiv x-3y-2z =2$ #h(5mm) $pi' equiv -2x+6y+4z=-4$ #h(5mm) $pi'' equiv 3x-9y-6z=6$]],
+      [#subquestion()[$pi equiv x-y-3z = 1$ #h(5mm) $pi' equiv -2x+2y+6z=-2$ #h(5mm) $pi'' equiv x+y+z=0$]],
+      [#subquestion()[$pi equiv x-y-2z = 1 $ #h(5mm) $pi' equiv 2x-3y+z=15$ #h(5mm) $pi'' equiv x+z=-4$]],
+    )
+  ],
+  [
+    #question()[Estudia la posición relativa de la recta $r$ y el plano $pi$ en los siguientes casos:]
+
+    #questions-columns(
+      [#subquestion()[
+        $ r equiv display(cases(delim: "{",
+           x = 2 + 3 lambda,
+           y = 2 lambda,
+           z = -2 + lambda
+        )) 
+        #h(1cm)  
+        pi equiv 3x - y +2z +1 = 0         
+        $
+      ]],
+      [#subquestion()[
+        $ r equiv display(cases(delim: "{",
+           x = 3 + 2 lambda,
+           y = -1 + lambda,
+           z = 2 + lambda
+        )) 
+        #h(1cm)  
+        pi equiv x - 3y + z - 8 = 0         
+        $
+      ]],
+    )
+  ],
+  [
+    #question()[Estudia la posición relativa de la rectas:]
+
+    #questions-columns(max-columns:1,
+      [#subquestion()[
+        $ r equiv display(cases(delim: "{",
+           x = 1 + lambda,
+           y = -2 + lambda,
+           z = 3 lambda
+        )) 
+        #h(1cm)  
+        s equiv display(cases(delim: "{",
+           x = -2 + 2 mu,
+           y = -1 + mu,
+           z = 1 - 3 mu
+        ))
+        $
+      ]],
+      [#subquestion()[
+        $ r equiv display(cases(delim: "{",
+           x = 1 + lambda,
+           y = 2 lambda,
+           z = 2 + 3 lambda
+        )) 
+        #h(1cm)  
+        s equiv display(cases(delim: "{",
+           x = 3 mu,
+           y = -2 + 4 mu,
+           z = -1
+        ))
+        $
+      ]],
+    )
   ]
 
 )
