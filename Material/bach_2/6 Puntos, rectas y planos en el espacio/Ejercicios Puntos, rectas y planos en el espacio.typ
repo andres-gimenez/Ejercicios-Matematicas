@@ -251,8 +251,152 @@
         $
       ]],
     )
-  ]
+  ],
+[
+    #question()[Estudia laposiciónrelativa de los siguientes pares de rectas.Halla el punto de corte si se da el caso:]
 
+    #questions-columns(max-columns:1,
+      [#subquestion()[
+        $ r equiv display(cases(delim: "{",
+           2&x +  &y - &z &= 1,
+            &x - 2&y   &  &= 0
+          )) 
+        #h(1cm)  
+        s equiv display(cases(delim: "{",
+           x = -2 + 2 lambda,
+           y = -1 + lambda,
+           z = 1 + 5 lambda
+        ))
+        $
+      ]],
+      [#subquestion()[
+        $ r equiv display(cases(delim: "{",
+          &x + &y &-&z &= 2,
+          2&x  &  &-&z &= 3
+        )) 
+        #h(1cm)  
+        s equiv display(cases(delim: "{",
+          &x  -2&y &-2&z &= 3,
+          2&x -3&y  && &= 0
+        ))
+        $
+      ]],
+      [#subquestion()[
+        $ r equiv display(cases(delim: "{",
+          &x + &y &-&z &= -4,
+          2&x  &  &-&z &= -5
+        )) 
+        #h(1cm)  
+        s equiv display(cases(delim: "{",
+          x = -2 + 2 lambda,
+          y = -1 + lambda,
+          z = 1 + 5 lambda
+        ))
+        $
+      ]],
+    )
+  ],
+  [
+    #question()[Calcula la ecuación de la recta perpendicular al plano $pi equiv x -y - 3z = 6$ y que pasa por el punto $A=(-2, 3, 4)$.]
+  ],
+  [
+    #question()[Calcula la ecuación del plano perpendicular a $pi equiv x-y+3z=4$ y que contiene a la recta de ecuaciones paramétricas.
+
+    $ r equiv display(cases(delim: "{",
+          x = 1 + lambda,
+          y = 2 - lambda,
+          z = 3 + 2 lambda
+        )) $
+        .
+    ]
+  ],
+  [#question()[Verifica si los puntos $A$, $B$, $C$ y $D$ son o no complanarios:]
+    #questions-columns(
+      [#subquestion()[
+        $A = (2, -2, 1), B = (1, -2, -1), C = (0, -1, 2) "y" D = (1, 2, 0)$
+      ]],
+      [#subquestion()[
+        $A = (1, 1,1 ), B = (2, 2, -1), C = (-1, 2, 2) "y" D = (2, 1, 2)$
+      ]],
+    )
+  ],
+  [#question()[Calcula la ecuación del plano que contiene al punto $A = (2, 2, -2)$ y la recta 
+    $ r equiv display(cases(delim: "{",
+          x - 2y + 3z = 6,
+          x = z
+        )) $
+  ]],
+  [
+    #question()[Calcula todos los valores de $m$ que hacen que los puntos del espacio $A=(0, 2, 2)$,  $B=(1, 1, m^2-1)$ y $C=(2, 0, 2m)$ pertenezcan a una misma recta. Escribe unas ecuaciones implícitas para esa recta]
+  ],
+  [
+    #question()[Dadas las rectas 
+    $r equiv display(cases(delim: "{",
+          x + 2z = 1,
+          y + z = 2
+        )) $ y 
+    $s equiv display(cases(delim: "{",
+          x = -3 + 2 lambda,
+          y = 2 - lambda,
+          z = 1 + lambda
+        ))$
+     se pide:]
+    #subquestion()[Determina la posición relativa de $r$ y $s$.]
+    #subquestion()[Escribe la ecuación del plano que contiene a la recta $r$ y al vector perpendicular a $r$ y $s$.]
+  ],
+  [
+    #question()[Dada las rectas 
+    $r equiv display(cases(delim: "{",
+          x = -3 + a lambda,
+          y = 2 - lambda,
+          z = 1 + lambda
+        )) $ y 
+    $s equiv display(cases(delim: "{",
+          x = -5 - 4 mu,
+          y = 2 - 2 mu,
+          z = 1 - 2 mu
+        ))$
+     se pide:]
+    #subquestion()[Calcular el valor de $a$ para que las rectas sean ortogonales.]
+    #subquestion()[Calcular el valor de $a$ para que las rectas sean paralelas.]
+  ],
+  [#question()[*(EvAU Año 2014 - Modelo - Opción A)*
+
+  Dado el punto $P(1, 1, 1)$ y los planos, 
+
+  $ pi_1 equiv 3x + a y + z = 0";" pi_2 equiv a x - y + z = 0";" pi_3 equiv x + y - z = 0 $
+
+  se pide:]
+    #questions-columns(
+      [#subquestion()[Calcular los valores de $a$ para los que los planos se cortan en una recta.]],
+      [#subquestion()[Para $a=2$, hallar la ecuación del plano que pasa por el punto $P$ y es perpendicular a la recta intersección de los planos $pi_i$ y $pi_2$.]]
+    )
+  ],
+  [#question()[*(EvAU Año 2014 - Modelo - Opción B)*
+
+  Determinar si se puede construir un triángulo que tenga dos de sus lados sobre las rectas,
+
+  $ r equiv display(cases(delim: "{",
+          x = -2 + lambda,
+          y = -6 + 2 lambda,
+          z = 1 + lambda
+        )) 
+    "   "
+    s equiv display(cases(delim: "{",
+          x + y -4 = 0,
+          2x +z -6 = 0
+        )) $
+  ]],
+  [#question()[*(EvAU Año 2017 - Modelo - Opción B)*
+  
+  Dados los puntos $A(2, 1, 1)$, $B=(0, 0, -3)$ y \ $P=(1, 1, 1)$, se pide:]
+    #questions-columns(
+      [#subquestion()[Hallar la ecuación del plano que contiene a los tres puntos.]],
+      [#subquestion()[Hallar el área del triángulo formado por $A$, $B$ y $P$.]],
+      [#subquestion()[Hallar la distancia del punto $P$ a la recta que pasa por $A$ y $B$.]]
+    )
+  ]
+ 
 )
  
 
