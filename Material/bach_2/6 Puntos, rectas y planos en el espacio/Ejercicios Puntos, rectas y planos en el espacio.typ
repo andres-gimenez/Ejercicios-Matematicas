@@ -71,16 +71,16 @@
     #question()[Para cada una de las siguientes rectas, calcula dos puntos y halla unas ecuaciones paramétricas:]
     #questions-columns(
     [#subquestion()[ 
-      $ r equiv display(cases(delim: "{",
+      $display( r equiv cases(delim: "{",
            &x &+ &y & & &= 0,
           2&x &- &y &+ &z &= 0
-        )) $ 
+        ))$ 
     ]],
     [#subquestion()[
-      $ s equiv display(cases(delim: "{",
+      $display(s equiv cases(delim: "{",
           3&x &+ 2&y &- &z &= 0,
            &x &+  &y &+ &z -3 &= 0
-        )) $
+        )))$
     ]],
     )
   ],
@@ -89,10 +89,10 @@
   ],
   [
     #question()[Dada la recta 
-      $ r equiv display(cases(delim: "{",
+      $ r equiv cases(delim: "{",
            x = y,
            x + z = 0
-        )) $ 
+        ) $ 
     ]
     #questions-columns(
       [#subquestion()[calcula dos puntos de ella y los simétricos de ellos respecto del origen de coordenadas.]],
@@ -104,11 +104,11 @@
   ],
   [
     #question()[Comprueba si los puntos $A=(3, -2, -2)$, $B=(1, 0, 1)$ y $C=(2, 1, -1)$ pertenecen de ecuaciones paramétricas:
-      $ pi equiv display(cases(delim: "{",
+      $ pi equiv cases(delim: "{",
            x = 1 - lambda + mu,
            y = lambda - mu,
            z = 2 - lambda + mu
-        )) $
+        ) $
     ]
   ],
   [
@@ -120,17 +120,17 @@
   [
     #question()[Comprueba que las siguientes ecuaciones paramétricas representan el mismo plano. Para ello, obtén tres puntos no alineados del primero y comprueba que pertenecen al segundo plano.
     
-      $ pi equiv display(cases(delim: "{",
+      $ pi equiv cases(delim: "{",
            x = 2 + lambda + mu,
            y = - mu,
            z = 2 - lambda + mu
-        )) 
+        )
         #h(1cm)  
-        pi' equiv display(cases(delim: "{",
+        pi' equiv cases(delim: "{",
            x = s,
            y = t - s,
            z = 4 - 2t + s
-        ))         
+        )
       $
     ]
     #solution[
@@ -197,23 +197,23 @@
 
     #questions-columns(
       [#subquestion()[
-        $ r equiv display(cases(delim: "{",
+        $display(r equiv cases(delim: "{",
            x = 2 + 3 lambda,
            y = 2 lambda,
            z = -2 + lambda
-        )) 
+        )
         #h(1cm)  
-        pi equiv 3x - y +2z +1 = 0         
+        pi equiv 3x - y +2z +1 = 0)
         $
       ]],
       [#subquestion()[
-        $ r equiv display(cases(delim: "{",
+        $display(r equiv cases(delim: "{",
            x = 3 + 2 lambda,
            y = -1 + lambda,
            z = 2 + lambda
-        )) 
+        )
         #h(1cm)  
-        pi equiv x - 3y + z - 8 = 0         
+        pi equiv x - 3y + z - 8 = 0)
         $
       ]],
     )
@@ -223,46 +223,46 @@
 
     #questions-columns(max-columns:1,
       [#subquestion()[
-        $ r equiv display(cases(delim: "{",
+        $ r equiv cases(delim: "{",
            x = 1 + lambda,
            y = -2 + lambda,
            z = 3 lambda
-        )) 
+        )
         #h(1cm)  
-        s equiv display(cases(delim: "{",
+        s equiv cases(delim: "{",
            x = -2 + 2 mu,
            y = -1 + mu,
            z = 1 - 3 mu
-        ))
+        )
         $
       ]],
       [#subquestion()[
-        $ r equiv display(cases(delim: "{",
+        $ r equiv cases(delim: "{",
            x = 1 + lambda,
            y = 2 lambda,
            z = 2 + 3 lambda
-        )) 
+        ) 
         #h(1cm)  
-        s equiv display(cases(delim: "{",
+        s equiv cases(delim: "{",
            x = 3 mu,
            y = -2 + 4 mu,
            z = -1
-        ))
+        )
         $
       ]],
     )
   ],
 [
-    #question()[Estudia laposiciónrelativa de los siguientes pares de rectas.Halla el punto de corte si se da el caso:]
+    #question()[Estudia la posición relativa de los siguientes pares de rectas.Halla el punto de corte si se da el caso:]
 
     #questions-columns(max-columns:1,
       [#subquestion()[
-        $ r equiv display(cases(delim: "{",
+        $display(r equiv cases(delim: "{",
            2&x +  &y - &z &= 1,
             &x - 2&y   &  &= 0
-          )) 
+          )
         #h(1cm)  
-        s equiv display(cases(delim: "{",
+        s equiv cases(delim: "{",
            x = -2 + 2 lambda,
            y = -1 + lambda,
            z = 1 + 5 lambda
@@ -270,24 +270,24 @@
         $
       ]],
       [#subquestion()[
-        $ r equiv display(cases(delim: "{",
+        $display(r equiv cases(delim: "{",
           &x + &y &-&z &= 2,
           2&x  &  &-&z &= 3
-        )) 
+        )
         #h(1cm)  
-        s equiv display(cases(delim: "{",
+        s equiv cases(delim: "{",
           &x  -2&y &-2&z &= 3,
           2&x -3&y  && &= 0
         ))
         $
       ]],
       [#subquestion()[
-        $ r equiv display(cases(delim: "{",
+        $display(r equiv cases(delim: "{",
           &x + &y &-&z &= -4,
           2&x  &  &-&z &= -5
-        )) 
+        )
         #h(1cm)  
-        s equiv display(cases(delim: "{",
+        s equiv cases(delim: "{",
           x = -2 + 2 lambda,
           y = -1 + lambda,
           z = 1 + 5 lambda
@@ -302,12 +302,11 @@
   [
     #question()[Calcula la ecuación del plano perpendicular a $pi equiv x-y+3z=4$ y que contiene a la recta de ecuaciones paramétricas.
 
-    $ r equiv display(cases(delim: "{",
+    $ r equiv cases(delim: "{",
           x = 1 + lambda,
           y = 2 - lambda,
           z = 3 + 2 lambda
-        )) $
-        .
+        ) $
     ]
   ],
   [#question()[Verifica si los puntos $A$, $B$, $C$ y $D$ son o no complanarios:]
@@ -321,41 +320,41 @@
     )
   ],
   [#question()[Calcula la ecuación del plano que contiene al punto $A = (2, 2, -2)$ y la recta 
-    $ r equiv display(cases(delim: "{",
+    $ r equiv cases(delim: "{",
           x - 2y + 3z = 6,
           x = z
-        )) $
+        ) $
   ]],
   [
     #question()[Calcula todos los valores de $m$ que hacen que los puntos del espacio $A=(0, 2, 2)$,  $B=(1, 1, m^2-1)$ y $C=(2, 0, 2m)$ pertenezcan a una misma recta. Escribe unas ecuaciones implícitas para esa recta]
   ],
   [
     #question()[Dadas las rectas 
-    $r equiv display(cases(delim: "{",
+    $ r equiv cases(delim: "{",
           x + 2z = 1,
           y + z = 2
-        )) $ y 
-    $s equiv display(cases(delim: "{",
+        )  " y "
+     s equiv cases(delim: "{",
           x = -3 + 2 lambda,
           y = 2 - lambda,
           z = 1 + lambda
-        ))$
+        ) $
      se pide:]
     #subquestion()[Determina la posición relativa de $r$ y $s$.]
     #subquestion()[Escribe la ecuación del plano que contiene a la recta $r$ y al vector perpendicular a $r$ y $s$.]
   ],
   [
     #question()[Dada las rectas 
-    $r equiv display(cases(delim: "{",
+    $ r equiv cases(delim: "{",
           x = -3 + a lambda,
           y = 2 - lambda,
           z = 1 + lambda
-        )) $ y 
-    $s equiv display(cases(delim: "{",
+        ) " y "
+     s equiv cases(delim: "{",
           x = -5 - 4 mu,
           y = 2 - 2 mu,
           z = 1 - 2 mu
-        ))$
+        ) $
      se pide:]
     #subquestion()[Calcular el valor de $a$ para que las rectas sean ortogonales.]
     #subquestion()[Calcular el valor de $a$ para que las rectas sean paralelas.]
@@ -376,16 +375,16 @@
 
   Determinar si se puede construir un triángulo que tenga dos de sus lados sobre las rectas,
 
-  $ r equiv display(cases(delim: "{",
+  $ r equiv cases(delim: "{",
           x = -2 + lambda,
           y = -6 + 2 lambda,
           z = 1 + lambda
-        )) 
+        ) 
     "   "
-    s equiv display(cases(delim: "{",
+    s equiv cases(delim: "{",
           x + y -4 = 0,
           2x +z -6 = 0
-        )) $
+        ) $
   ]],
   [#question()[*(EvAU Año 2017 - Modelo - Opción B)*
   
