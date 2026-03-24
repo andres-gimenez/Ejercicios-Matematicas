@@ -1,6 +1,6 @@
 # EjerciciosMatematicas
 
-## Explorta typst 
+## Exporta typst
 
 ```bash
 typst compile ./Pruebas/pruebahtml.typ --format html --features html

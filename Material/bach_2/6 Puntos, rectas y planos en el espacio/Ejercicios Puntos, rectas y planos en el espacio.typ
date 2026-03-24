@@ -368,27 +368,31 @@
   se pide:]
     #questions-columns(
       [#subquestion()[Calcular los valores de $a$ para los que los planos se cortan en una recta.]],
-      [#subquestion()[Para $a=2$, hallar la ecuación del plano que pasa por el punto $P$ y es perpendicular a la recta intersección de los planos $pi_i$ y $pi_2$.]]
+      [#subquestion()[Para $a=2$, hallar la ecuación del plano que pasa por el punto $P$ y es perpendicular a la recta intersección de los planos $pi_1$ y $pi_2$.]]
     )
   ],
   [#question()[*(EvAU Año 2014 - Modelo - Opción B)*
-
-  Determinar si se puede construir un triángulo que tenga dos de sus lados sobre las rectas,
-
-  $ r equiv cases(delim: "{",
+    Dadas las rectas:
+      $ r equiv cases(delim: "{",
           x = -2 + lambda,
           y = -6 + 2 lambda,
           z = 1 + lambda
-        ) 
-    "   "
-    s equiv cases(delim: "{",
-          x + y -4 = 0,
-          2x +z -6 = 0
-        ) $
-  ]],
+          ) 
+      "   "
+      s equiv cases(delim: "{",
+            x + y -4 = 0,
+            2x +z -6 = 0
+          ) $
+    ]
+  #questions-columns(
+      [#subquestion()[
+        Determinar si se puede construir un triángulo que tenga dos de sus lados sobre las rectas.]],
+      [#subquestion()[Encontrar la ecuación de la recta perpendicular común a las dos rectas anteriores.]]
+    )
+  ],
   [#question()[*(EvAU Año 2017 - Modelo - Opción B)*
   
-  Dados los puntos $A(2, 1, 1)$, $B=(0, 0, -3)$ y \ $P=(1, 1, 1)$, se pide:]
+  Dados los puntos $A(2, 1, 1)$, $B=(0, 0, -3)$ y $P=(1, 1, 1)$, se pide:]
     #questions-columns(
       [#subquestion()[Hallar la ecuación del plano que contiene a los tres puntos.]],
       [#subquestion()[Hallar el área del triángulo formado por $A$, $B$ y $P$.]],
