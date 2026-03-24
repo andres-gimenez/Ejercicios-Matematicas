@@ -64,7 +64,7 @@
     #questions-columns(
     [#subquestion()[Pasa por $A=(-1, -2, 3)$ y lleva la dirección de $arrow(u) = (-1, -2, 4)$.]],
     [#subquestion()[Pasa por los puntos $A=(1,1,3)$ y $B=(-3, 1, 5)$.]],
-    [#subquestion()[Pasa por el punto $A=(-1, -2, 0)$ y es paralela al segmento de extremos $B=(0, -3, 1)$ y $B=(1, 1, 0)$.]],
+    [#subquestion()[Pasa por el punto $A=(-1, -2, 0)$ y es paralela al segmento de extremos $B=(0, -3, 1)$ y $B'=(1, 1, 0)$.]],
     [#subquestion()[Pasa por el punto $A=(2, -2, -3)$ y es paralela al eje $Y$.]],
     )
   ], [
@@ -80,7 +80,7 @@
       $display(s equiv cases(delim: "{",
           3&x &+ 2&y &- &z &= 0,
            &x &+  &y &+ &z -3 &= 0
-        )))$
+        ))$
     ]],
     )
   ],
