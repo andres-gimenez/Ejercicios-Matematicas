@@ -47,6 +47,21 @@
         )
         $
   ]
+  #solution()[
+    Tomamos los vectores directores de cada recta, $u_r = (1, 1, -1)$ 
+    
+    Para obtener el vector director de la recta $s$, escribimos su ecuación en forma paramétrica (para ello despejamos la $y$  y la $z$ en función de la $x$):
+    $ display(s equiv cases(delim: "{",
+           x = lambda
+           y = -3 + 2 lambda,
+           z = -3 + 2 lambda
+        )) $
+
+    Otra forma es tomar los vecto
+
+    y $u_s = (1, 0, -2)$. El ángulo entre ambas rectas se calcula mediante la fórmula:
+     
+  ]
   ],
   [#question()[Halla los vectores directores de las rectas y el ángulo que forman ambas rectas.
       $ r equiv cases(delim: "{",
