@@ -52,15 +52,32 @@
     
     Para obtener el vector director de la recta $s$, escribimos su ecuación en forma paramétrica (para ello despejamos la $y$  y la $z$ en función de la $x$):
     $ display(s equiv cases(delim: "{",
-           x = lambda
-           y = -3 + 2 lambda,
+           x = lambda,
+           y = -3 - 2 lambda,
            z = -3 + 2 lambda
         )) $
 
-    Otra forma es tomar los vecto
+    Otra forma es tomar los verlo. Tomamos los vectores normales a los planos que definen la recta $s$ y calculamos el producto vectorial.
 
-    y $u_s = (1, 0, -2)$. El ángulo entre ambas rectas se calcula mediante la fórmula:
+      $n_1 = (2, 1, 0)$ y $n_2 = (2, 0, -1)$
+  
+      $u_s = n_1 times n_2 = mat(delim: "|", i, j, k; 2, 1, 0; 2, 0, -1) = -i + 2 j - 2k$
+
+    Luego podemos tomar el vector director $u_s = (-1, 2, -2)$. 
+    
+    Note se que los vectores $(1, -2, 2)$ y $(-1, 2, -2)$ son linealmente dependientes, con lo que marcan la misma dirección. 
+    
+    El ángulo entre ambas rectas se calcula mediante:
      
+    $ cos(alpha) = (|v_r dot n_s|)/(|v_r||v_s|) $
+
+    $v_r dot v_s = (1, 1, -1) dot (-1, 2, -2) = -1 + 2 + 2 = 3$
+
+    $|v_r| = sqrt(1^2 + 1^2 + (-1)^2) = sqrt(3)$
+
+    $|v_s| = sqrt((-1)^2 + 2^2 + (-2)^2) = sqrt(9) = 3$
+
+    $display("cos"(alpha) = (3)/(sqrt(3) dot 3) = 1/sqrt(3) => alpha = arccos(1/sqrt(3)) approx 0","955 "rad" approx 54","7º )$
   ]
   ],
   [#question()[Halla los vectores directores de las rectas y el ángulo que forman ambas rectas.
