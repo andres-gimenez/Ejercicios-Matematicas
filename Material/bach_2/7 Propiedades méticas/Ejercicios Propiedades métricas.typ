@@ -136,12 +136,49 @@
       ]],
     )
   ],
-  [#question()[Calcula el valor de &m& para que los planos.
+  [#question()[Calcula el valor de $m$ para que los planos.
     $ pi equiv 2x - 3y + z = 1 " y " pi' equiv x - 2y + m z = 0 $
   ]
     #questions-columns(
-      [#subquestion()[Sean perpendiculares.]],
-      [#subquestion()[Formen un ángulo de 60º.]],
+      [#subquestion()[Sean perpendiculares.]
+      #solution()[
+        Tomamos los vectores normales a los planos dados:
+        
+        $n_pi = (2, -3, 1)$ y $n_(pi')= (1, -2, m)$
+
+        Para que los planos sean perpendiculares, sus vectores normales deben ser ortogonales, es decir, su producto escalar debe ser 0.
+
+        $n_pi dot n_(pi') = (2, -3, 1) dot (1, -2, m) = 2 + 6 + m = 0 => #result($m = -8$)$
+      ]],
+      [#subquestion()[Formen un ángulo de 60º.]
+      #solution()[
+        Tomamos los vectores normales a los planos dados:
+        
+        $n_pi = (2, -3, 1)$ y $n_(pi')= (1, -2, m)$
+
+        Para que los planos formen un ángulo de 60º, el coseno del ángulo entre sus vectores normales debe ser igual a $cos(60º) = 1/2$.
+
+        $ cos(alpha) = (|n_pi dot n_(pi')|)/(|n_pi||n_(pi')|) = 1/2 $
+
+        $n_pi dot n_(pi') = (2, -3, 1) dot (1, -2, m) = 2 + 6 + m = 8 + m$
+        
+        $|n_pi| = sqrt(2^2 + (-3)^2 + 1^2) = sqrt(14)$
+        
+        $|n_(pi')| = sqrt(1^2 + (-2)^2 + m^2) = sqrt(5 + m^2)$
+
+        $display((abs(8 + m))/(sqrt(14) dot sqrt(5 + m^2)) = 1/2 => abs(8 + m) = (sqrt(14) dot sqrt(5 + m^2))/2 =>  
+
+        (8 + m)^2 = (14 dot (5 + m^2))/4 => \ 
+        
+        4(8 + m)^2 = 14(5 + m^2) => 4(64 + 16m + m^2) = 70 + 14m^2 => 256 + 64m + 4m^2 = 70 + 14m^2 => \
+         10m^2 - 64m -186 = 0 => 
+         cases(reverse: #false, delim: "{", gap: #1em,
+                 #result($m = 16/5 - sqrt(721)/5$),
+                 #result($m = 16/5 + sqrt(721)/5$)
+                ) 
+         )$
+      ]
+      ],
     )
   ],
   [#question()[Calcula el ángulo formado por $r$ y $pi$ en los siguientes casos.]
