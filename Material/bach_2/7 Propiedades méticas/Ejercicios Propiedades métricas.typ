@@ -63,8 +63,45 @@
   ],
   [#question()[Calcula el ángulo formado por los planos:]
     #questions-columns(
-      [#subquestion()[$pi equiv 2x+3y-z+6=0 " y " pi' equiv 2x+3y-z+6 =0 $ ]],
-      [#subquestion()[$pi equiv 2x-3y-2z-6=0 " y " pi' equiv 3x+6y+6z-1 =0 $]]
+      [#subquestion()[$pi equiv 2x+3y-z+6=0 " y " pi' equiv 2x+3y-z+7 =0 $ ]
+      
+      #solution()[
+        Tomamos los vectores normales a los lados dados:
+        
+        $n_pi = (2, 3, -1)$ y $n_(pi')= (2, 3, -1)$
+
+        Calculamos el angulo entre los vectores normales.
+
+        $ cos(alpha) = (|n_pi dot n_(pi')|)/(|n_pi||n_(pi')|) $ 
+
+        $n_pi dot N_(pi') = (2, 3, -1) dot (2, 3, -1) = 4 + 9 + 1 = 14$
+        
+        $|n_pi| = sqrt(2^2 + 3^2 + (-1)^2) = sqrt(14)$
+        
+        $|n_(pi')| = sqrt(2^2 + 3^2 + (-1)^2) = sqrt(14)$
+
+        $display("sen"(alpha) = (14)/(sqrt(14) dot sqrt(14)) = 14/14 = 1 => alpha = 0))$
+
+        Note se, que al tener los dos planos el mismo vector normal, el angulo entre ellos es 0, es decir, son paralelos.
+      ]],
+      [#subquestion()[$pi equiv 2x-3y-2z-6=0 " y " pi' equiv 3x+6y+6z-1 =0 $]
+      #solution()[
+        Tomamos los vectores normales a los lados dados:
+        
+        $n_pi = (2, -3, -2)$ y $n_(pi')= (3, 6, 6)$
+
+        Calculamos el angulo entre los vectores normales.
+
+        $ cos(alpha) = (|n_pi dot n_(pi')|)/(|n_pi||n_(pi')|) $ 
+
+        $n_pi dot N_(pi') = (2, -3, -2) dot (3, 6, 6) = 6 - 18 - 12 = -24$
+        
+        $|n_pi| = sqrt(2^2 + (-3)^2 + (-2)^2) = sqrt(17)$
+        
+        $|n_(pi')| = sqrt(3^2 + 6^2 + 6^2) = sqrt(81) = 9$
+
+        $display("sen"(alpha) = (abs(-24))/(sqrt(17) dot 9) = 24/(9 dot sqrt(17)) => alpha = arccos(24/(9  sqrt(17))) approx 0","86 "rad" approx 49","7º  )$
+      ]],
     )
   ],
   [#question()[Calcula el valor de &m& para que los planos.
