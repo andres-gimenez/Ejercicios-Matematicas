@@ -218,12 +218,11 @@
     )
   ],
   [
-    #question()[Calcula la proyección ortogonal de $P = (2,-2,0)$ sobre el plano $π equiv y + 2z - 3 = 0$ y sobre la recta 
-    $display(r equiv cases(delim: "{",
-         3x + 4y = 8,
-         x +4z = -20
-        ))$]
-    #solution()[
+    #question()[Calcula la proyección ortogonal de $P = (2,-2,0)$]
+    #questions-columns(
+      [
+        #subquestion()[Sobre el plano $π equiv y + 2z - 3 = 0$]
+        #solution()[
       Para calcular la proyección ortogonal de un punto sobre un plano, necesitamos el vector normal al plano y el punto dado. 
 
       El vector normal al plano $pi$ es $n_pi = (0, 1, 2)$.
@@ -244,58 +243,72 @@
       Sustituyendo el valor de $lambda$ en la ecuación de $s_n$, obtenemos el punto de intersección, que es la proyección ortogonal de $P$ sobre el plano $pi$: 
 
       $#result($P' = (2, -1, 2)$)$
+      ]],
+      [
+      #subquestion()[Sobre la recta $display(r equiv cases(delim: "{",
+         3x + 4y = 8,
+         x +4z = -20
+        ))$] 
+        #solution()[
+          Para calcular la proyección ortogonal de un punto sobre una recta, necesitamos el vector director de la recta y el punto dado.
 
-      Para calcular la proyección ortogonal de un punto sobre una recta, necesitamos el vector director de la recta y el punto dado.
+          Para obtener el vector director de la recta $r$, escribimos su ecuación en forma paramétrica (para ello despejamos la $y$  y la $z$ en función de la $x$):
 
-      Para obtener el vector director de la recta $r$, escribimos su ecuación en forma paramétrica (para ello despejamos la $y$  y la $z$ en función de la $x$):
+          $ display(r equiv cases(delim: "{",
+            x = lambda,
+            y = 2 - 3/4 lambda,
+            z = -5 - 1/4 lambda
+            )) $
 
-      $ display(r equiv cases(delim: "{",
-         x = lambda,
-         y = 2 - 3/4 lambda,
-         z = -5 - 1/4 lambda
-        )) $
+          Podemos hace un cambio de variable para obtener un vector director con coordenadas enteras:
 
-      Podemos hace un cambio de variable para obtener un vector director con coordenadas enteras:
+          $ display(r equiv cases(delim: "{",
+            x = 4 lambda,
+            y = 2 - 3 lambda,
+            z = -5 - lambda
+            )) $
 
-      $ display(r equiv cases(delim: "{",
-         x = 4 lambda,
-         y = 2 - 3 lambda,
-         z = -5 - lambda
-        )) $
+            Calculamos el plano que contiene a P y es perpendicular a la recta, o lo que es lo mismo contiene a P y tiene como vector normal el vector director de la recta:
 
-        Calculamos el plano que contiene a P y es perpendicular a la recta, o lo que es lo mismo contiene a P y tiene como vector normal el vector director de la recta:
+          $ pi_n equiv 4 x - 3 y - z + d = 0 $
+            
+          Calculamos el valor de $d$ sustituyendo las coordenadas de $P$ en la ecuación del plano:
 
-      $ pi_n equiv 4 x - 3 y - z + d = 0 $
-        
-      Calculamos el valor de $d$ sustituyendo las coordenadas de $P$ en la ecuación del plano:
+          $ 4 dot 2 - 3 dot (-2) - 0 + d = 0 => d = -14$
 
-      $ 4 dot 2 - 3 dot (-2) - 0 + d = 0 => d = -14$
+          Luego el plano es $ pi_n equiv 4 x - 3 y - z - 14 = 0 $
 
-      Luego el plano es $ pi_n equiv 4 x - 3 y - z - 14 = 0 $
+          Ahora calculamos la intersección entre $r$ y $pi_n$:
 
-      Ahora calculamos la intersección entre $r$ y $pi_n$:
+          $ 4 dot 4 lambda - 3(2 - 3 lambda) - (-4 - lambda) - 14 = 0 =>  \
+          16 lambda - 6 + 9 lambda + 4 + lambda -14 = 0 => \
+            26 lambda - 16 = 0 => lambda = 8/13$
 
-      $ 4 dot 4 lambda - 3(2 - 3 lambda) - (-4 - lambda) - 14 = 0 =>  \
-       16 lambda - 6 + 9 lambda + 4 + lambda -14 = 0 => \
-        26 lambda - 16 = 0 => lambda = 8/13$
+          Sustituyendo el valor de $lambda$ en la ecuación de $r$, obtenemos el punto de intersección, que es la proyección ortogonal de $P$ sobre la recta $r$:
 
-      Sustituyendo el valor de $lambda$ en la ecuación de $r$, obtenemos el punto de intersección, que es la proyección ortogonal de $P$ sobre la recta $r$:
-
-      $display(P'' = (32/13, 2 - 3/4 dot 8/13, -5 - 1/4 dot 8/13) = #result($display((32/13, 10/13, -73/52))$))$
-    ]  
+          $display(P'' = (32/13, 2 - 3/4 dot 8/13, -5 - 1/4 dot 8/13) = #result($display((32/13, 10/13, -73/52))$))$
+        ] 
+    ])
   ],
   [
-    #question()[Halla el simétrico de $P = (1,1,−2)$ respecto del plano $π equiv x - 3y + 4z − 16 = 0$ y respecto a la recta $display(r equiv cases(delim: "{",
+    #question()[Halla el simétrico de $P = (1,1,−2)$]
+    
+    #questions-columns(
+      [#subquestion()[Respecto del plano $π equiv x - 3y + 4z - 16 = 0$]],
+      [#subquestion()[Respecto a la recta $display(r equiv cases(delim: "{",
          24x-36y=-7,
          2z = 1
         ))$.]
+      ]
+    )
   ],
   [
     #question()[Halla la recta simétrica de $display(r equiv cases(delim: "{",
          x = 2 + lambda,
          y= -2 + lambda,
          z = - lambda
-        ))$ respecto al plano $π equiv x - 3y + 4z - 16 = 0$ y respecto a la recta .]
+        ))$] 
+      Respecto al plano $π equiv x - 3y + 4z - 16 = 0$
   ],
   [
     #question()[Comprueba si el triángulo de vértices $A = (2,-1,4)$, $B = (1,3,-4)$ y $C = (-3,-1,3)$ es equilátero, isósceles o escaleno y halla su perímetro.]
