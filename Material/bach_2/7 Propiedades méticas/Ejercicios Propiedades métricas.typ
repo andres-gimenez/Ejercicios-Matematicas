@@ -28,7 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  // show-solutions: false,
+  show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: false)
@@ -303,12 +303,110 @@
     )
   ],
   [
+    #question()[Hallar la ecuación implícita de la proyección de la recta $r$ sobre el plano $pi$:
+
+      $ r equiv cases(delim: "{",
+         x = -1 &- &lambda,
+         y = &- &lambda,
+         z = &2 &lambda
+        ) "     " 
+        
+        pi equiv 2x - 3y + z +1 = 0 $
+    ]
+    #solution()[
+      La recta que buscamos, $r'$, es la intersección del plano $pi$ con el plano que contiene a $r$ y es perpendicular a $pi$.
+
+      Tomamos el vector normal a $pi$: $n_pi = (2, -3, 1)$.
+
+      Tomamos un vector director de $r$: $d_r = (-1, -1, 2)$.
+
+      Tomamos un punto de $r$: por ejemplo, el punto que se obtiene al sustituir $lambda = 0$ en la ecuación de $r$: $P = (-1, 0, 0)$.
+
+      El vector normal al plano que contiene a $r$ y es perpendicular a $pi$ se obtiene mediante el producto vectorial entre el vector normal a $pi$ y el vector director de $r$:
+
+      $display(n_p equiv n_pi times d_r = mat(delim: "|", i, j, k; 2, -3, 1; -1, -1, 2) = -5 i - 5 j - 5 k)$
+
+      Luego el plano que buscamos es $display(delta equiv -5 x - 5 y - 5 z + d = 0)$
+
+      Como el plano $delta$ contiene a $P$, sustituimos las coordenadas de $P$ en la ecuación de $delta$ para calcular el valor de $d$:
+
+      $-5 dot (-1) + 5 dot 0 - 5 dot 0 + d = 0 => d = -5$
+
+      Luego el plano $delta$ es $display(delta equiv -5 x + 5 y - 5 z - 5 = 0 => x + y + z + 1 = 0)$
+
+      Podemos definir la recta como intersección de dos planos $pi$ y $delta$.
+
+      $ #result($display(r' equiv cases(delim: "{",
+         2&x - 3&y + &z + &1 = &0,
+          &x +  &y + &z + &1 = &0
+        ))$) $
+    ]
+
+  ],
+  [
     #question()[Halla la recta simétrica de $display(r equiv cases(delim: "{",
          x = 2 + lambda,
          y= -2 + lambda,
          z = - lambda
-        ))$] 
-      Respecto al plano $π equiv x - 3y + 4z - 16 = 0$
+        ))$
+      respecto al plano $π equiv x - 3y + 4z - 16 = 0$]
+      #solution()[
+        Para hallar la recta simétrica de una recta respecto a un plano, necesitamos el vector normal al plano y un punto de la recta.
+
+        El vector normal al plano $pi$ es $n_pi = (1, -3, 4)$.
+
+        Tomamos un punto de la recta $r$, por ejemplo, el punto que se obtiene al sustituir $lambda = 0$ en la ecuación de $r$: $P = (2, -2, 0)$.
+
+        Calculamos el simétrico de $P$ respecto al plano $pi$:
+
+        Para ello calculamos la recta que pase por P y es perpendicular al plano,  o lo que es lo mismo contiene a P y tiene como vector director el vector normal al plano:
+
+        $ s_n equiv cases(delim: "{",
+         x = 2 + lambda,
+         y = -2 - 3 lambda,
+         z= 4 lambda
+        ) $ 
+        Calculamos la intersección de $s_n$ con el plano $pi$: 
+
+        $(2 + lambda) - 3(-2 - 3 lambda) + 4(4 lambda) - 16 = 0 => \
+        2 + lambda + 6 + 9 lambda + 16 lambda - 16 = 0 => \
+        26 lambda - 8 = 0 => lambda = 4/13$
+
+        Sustituyendo el valor de $lambda$ en la ecuación de $s_n$, obtenemos el punto de intersección, que es el simétrico de $P$ respecto al plano $pi$:
+
+        $display(P' = (2 + 4/13, -2 - 3 dot 4/13, 4 dot 4/13) = (30/13, -38/13, 16/13))$
+
+        Ahora $P'$ es el punto medio entre $P$ y su simétrico, por lo que podemos calcular el simétrico de $P$ respecto al plano $pi$:
+
+        Tomamos $P'' = (x, y, z)$
+
+        $display(P' equiv (P + P'')/2 => (30/13, -38/13, 16/13) = ((2 + x)/2, (-2 + y)/2, (0 + z)/2) => 
+        cases(delim: "{",
+         30/13 = (2 + x)/2,
+         -38/13 = (-2 + y)/2,
+         16/13 = (0 + z)/2
+        ) => 
+        cases(delim: "{",
+         x = 2 dot 30/13 - 2 = 58/13,
+         y = 2 dot (-38/13) + 2 = -14/13,
+         z = 2 dot 16/13 = 32/13
+        )
+        )$
+
+        Luego el punto simétrico de $P$ respecto al plano $pi$ es $display(P'' = (58/13, -14/13, 32/13))$.
+
+        La recta que buscamos es la que pasa por $P$ y $P''$, con lo que tiene vector director 
+        
+        $display(arrow(P P'') = (2 - 58/13, 2 -14/13,  0 - 32/13) = (-32/13, -12/13, -32/13))$.
+
+        Si multiplicamos el vector $arrow(P P'')$ por una constante, obtenemos un vector con la misma dirección. Con lo que podemos multiplicar por $-13/4$ y obtenemos el vector director $d_r = (8, 3, 8)$.
+
+        Luego la recta simétrica de $r$ respecto al plano $pi$ es $display(r' equiv cases(delim: "{",
+         x = &2 &- &8 &lambda,
+         y = -&2 &- &3 &lambda,
+         z = & &- &8 &lambda
+        ))$
+      ]
   ],
   [
     #question()[Comprueba si el triángulo de vértices $A = (2,-1,4)$, $B = (1,3,-4)$ y $C = (-3,-1,3)$ es equilátero, isósceles o escaleno y halla su perímetro.]
