@@ -52,7 +52,7 @@
     [#subquestion()[Calcula las coordenadas del punto $N$ tal que $arrow(A N) = 2/3 arrow(A B)$]],
     )
   ], [
-    #question()[Comprueba si los puntos $A=(-3, 1, 3)$, $B=(3, 1, 5)$ y $C=(1, -1, 2)$ pertenecen o no a la recta que pasa $P=(-1, 1, -1)$ y tiene como vector director $arrow(v) = (-2, 0, -3)$. Calcula dos puntos más de esta recta.]
+    #question()[Comprueba si los puntos $A=(-3, 1, 3)$, $B=(3, 1, 5)$ y $C=(1, -1, 2)$ pertenecen o no a la recta que pasa por $P=(-1, 1, -1)$ y tiene como vector director $arrow(v) = (-2, 0, -3)$. Calcula dos puntos más de esta recta.]
   ], [
     #question()[Considera la recta que pasa por el punto $S= (1, -2,5)$ y lleva la dirección del vector $arrow(v) = (-2, 2, 0)$:]
     #questions-columns(
@@ -340,8 +340,82 @@
           z = 1 + lambda
         ) $
      se pide:]
-    #subquestion()[Determina la posición relativa de $r$ y $s$.]
-    #subquestion()[Escribe la ecuación del plano que contiene a la recta $r$ y al vector perpendicular a $r$ y $s$.]
+     #questions-columns(max-columns:1,
+       [#subquestion()[Determina la posición relativa de $r$ y $s$.]
+       #solution()[Para determinar la posición relativa de las rectas $r$ y $s$, primero obtenemos sus vectores directores.
+       La recta $r$ se puede escribir en forma paramétrica como:
+        $
+        r equiv cases(delim: "{",
+        x = 1 - 2 lambda,
+        y = 2 - lambda,
+        z = lambda
+        )
+        $
+      lo que implica que su vector director es $arrow(v_r) = (-2, -1, 1)$. 
+
+        La recta $s$ ya está dada en forma paramétrica, por lo que su vector director es $arrow(v_s) = (2, -1, 1)$. 
+
+    //   Calculamos el producto escalar de los vectores directores:
+
+    // $arrow(v_r) dot arrow(v_s) = (-2)(2) + (-1)( -1) + (1)(1) = -4 + 1 + 1 = -2 != 0$
+
+    // Dado que el producto escalar no es cero, las rectas no son ortogonales. 
+    Calculamos el producto vectorial de los vectores directores:
+    
+      $ arrow(v_r) times arrow(v_s) =
+      mat(delim: "|", &i, &j, &k; -&2, -&1, &1; &2, -&1, &1) = 0 i - (-4) j + 0 k = (0, 4, 0) $
+      
+      Dado que el producto vectorial no es el vector nulo, las rectas no son ni paralelas, ni coincidentes.
+
+    Calculamos el punto de corte de las rectas $r$ y $s$:
+
+    Tenemos: 
+
+     $
+        r equiv cases(delim: "{",
+        x = 1 - 2 lambda,
+        y = 2 - lambda,
+        z = lambda
+        )
+      #h(2cm)
+        s equiv cases(delim: "{",
+          x = -3 + 2 lambda,
+          y = 2 - lambda,
+          z = 1 + lambda
+        )
+        $
+
+        Igualamos coordenadas (con cuidado ya que los paramtetros de distintas rectas no tienen porque coincidir, por lo que usamos $lambda$ para $r$ y $mu$ para $s$):
+
+      $
+        cases(delim: "{",
+        1 - 2 lambda = -3 + 2 mu,
+         2 - lambda = 2 - mu,
+         lambda = 1 + mu
+        )
+       $
+
+        De la 2º ecuación podemos deducir que $lambda = mu$, pero se ve claramente que no cumple la 3º ecuación, por lo que las rectas no se cortan.
+
+        *Luego las rectas se cruzan.*
+       ]],
+       [#subquestion()[Escribe la ecuación del plano que contiene a la recta $r$ y al vector perpendicular a $r$ y $s$.]
+       #solution()[El vector perpendicular a $r$ y $s$ es el producto vectorial de sus vectores directores, que ya hemos calculado en el partido anterior: $arrow(n) = (0, 4, 0)$.
+
+      Para escribir la ecuación del plano que contiene a la recta $r$ y al vector perpendicular a $r$ y $s$, necesitamos un punto que contenga  el plano. Podemos tomar cualquier punto de la recta $r$, por ejemplo, el punto que obtenemos al tomar $lambda = 0$: $P = (1, 2, 0)$.       
+       
+      La ecuación del plano que tiene como vector normal $arrow(n)$ es:
+    
+      // $0(x - 1) + 4(y - 2) + 0(z - 0) = 0 => y = 2$, lo que implica que el plano buscado es el plano paralelo al eje $X Z$ que pasa por el punto $P_0$.
+
+      $0 x + 4 y + 0 z + d = 0 ) => 4y +d = 0$
+
+      Si tiene que contener a  $P = (1, 2, 0)$
+
+      $4 dot 2 + d = 0 => d = -8$, lo que implica que la ecuación del plano buscado es $4y - 8 = 0$ o simplemente $y = 2$.
+       ]
+    ]
+    )
   ],
   [
     #question()[Dada las rectas 
@@ -352,12 +426,35 @@
         ) " y "
      s equiv cases(delim: "{",
           x = -5 - 4 mu,
-          y = 2 - 2 mu,
+          y = 2 + 2 mu,
           z = 1 - 2 mu
         ) $
      se pide:]
-    #subquestion()[Calcular el valor de $a$ para que las rectas sean ortogonales.]
-    #subquestion()[Calcular el valor de $a$ para que las rectas sean paralelas.]
+     #questions-columns(max-columns:1,
+       [
+        #subquestion()[Calcular el valor de $a$ para que las rectas sean ortogonales.]
+        #solution()[Para que sean ortogonales, el producto escalar de sus vectores directores debe ser cero. El vector director de $r$ es $arrow(v_r) = (a, -1, 1)$ y el vector director de $s$ es $arrow(v_s) = (-4, +2, -2)$. Calculamos el producto escalar:
+        
+        $arrow(v_r) dot arrow(v_s) = a(-4) + (-1)(+2) + 1(-2) = -4a - 2 - 2 = -4a - 4 $. Para que el producto escalar sea cero, debe cumplirse que $-4a - 4 = 0 => a = -1$, lo que implica que para $a = -1$ las rectas son ortogonales.
+        ]
+       ],
+       [
+        #subquestion()[Calcular el valor de $a$ para que las rectas sean paralelas.]
+        #solution()[Para que las rectas sean paralelas, sus vectores directores deben ser proporcionales. 
+        El vector director de $r$ es $arrow(v_r) = (a, -1, 1)$ y el vector director de $s$ es $arrow(v_s) = (-4, 2, -2)$. 
+        Para que sean proporcionales, debe existir un escalar $k$ tal que:
+        $arrow(v_r) = k arrow(v_s)$, lo que implica que:
+        - $a = -4k$
+        - $-1 = 2k$
+        - $1 = -2k$ 
+        De la segunda ecuación, obtenemos que $k = -1/2$. 
+        Sustituyendo este valor en la primera ecuación, obtenemos que $a = -4(-1/2) = 2$.
+        Comprobamos que en la tercera ecuación también se cumple con $k = -1/2$: $1 = -2(-1/2) = 1$, lo que confirma que para $a = 2$ las rectas son paralelas. 
+
+        $arrow(v_r) = -1/2 arrow(v_s)$ si $a = 2$, lo que implica que para $a = 2$ las rectas son paralelas.
+        ]    
+       ]
+     )
   ],
   [#question()[*(EvAU Año 2014 - Modelo - Opción A)*
 

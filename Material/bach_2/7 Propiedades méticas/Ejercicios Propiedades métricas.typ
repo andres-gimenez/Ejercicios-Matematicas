@@ -183,8 +183,8 @@
   ],
   [#question()[Calcula el ángulo formado por $r$ y $pi$ en los siguientes casos.]
     #questions-columns(
-      [#subquestion()[$display(r equiv = (x-1)/1 = y/1 = (z-10)/(-2) " y " pi equiv 2x-y = 0)$ ]],
-      [#subquestion()[$display(r equiv = (x-1) = (y+2)/sqrt(2) = (z-10)/(-2) " y " pi equiv 2z-3 = 0)$]],
+      [#subquestion()[$display(r equiv (x-1)/1 = y/1 = (z-10)/(-2) " y " pi equiv 2x-y = 0)$ ]],
+      [#subquestion()[$display(r equiv (x-1) = (y+2)/sqrt(2) = (z-10)/(-2) " y " pi equiv 2z-3 = 0)$]],
       [#subquestion()[$display(r equiv cases(delim: "{",
            x=2+ lambda,
            y = -2 + lambda,
@@ -308,7 +308,7 @@
          y= -2 + lambda,
          z = - lambda
         ))$] 
-      Respecto al plano $π equiv x - 3y + 4z - 16 = 0$
+      respecto al plano $π equiv x - 3y + 4z - 16 = 0$
   ],
   [
     #question()[Comprueba si el triángulo de vértices $A = (2,-1,4)$, $B = (1,3,-4)$ y $C = (-3,-1,3)$ es equilátero, isósceles o escaleno y halla su perímetro.]
