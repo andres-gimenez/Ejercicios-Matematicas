@@ -28,7 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  // show-solutions: false,
+  show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: false)
@@ -301,6 +301,47 @@
         ))$.]
       ]
     )
+  ],
+  [
+    #question()[Hallar la ecuación implícita de la proyección de la recta $r$ sobre el plano $pi$:
+
+      $ r equiv cases(delim: "{",
+         x = -1 &- &lambda,
+         y = &- &lambda,
+         z = &2 &lambda
+        ) "     " 
+        
+        pi equiv 2x - 3y + z +1 = 0 $
+    ]
+    #solution()[
+      La recta que buscamos, $r'$, es la intersección del plano $pi$ con el plano que contiene a $r$ y es perpendicular a $pi$.
+
+      Tomamos el vector normal a $pi$: $n_pi = (2, -3, 1)$.
+
+      Tomamos un vector director de $r$: $d_r = (-1, -1, 2)$.
+
+      Tomamos un punto de $r$: por ejemplo, el punto que se obtiene al sustituir $lambda = 0$ en la ecuación de $r$: $P = (-1, 0, 0)$.
+
+      El vector normal al plano que contiene a $r$ y es perpendicular a $pi$ se obtiene mediante el producto vectorial entre el vector normal a $pi$ y el vector director de $r$:
+
+      $display(n_p equiv n_pi times d_r = mat(delim: "|", i, j, k; 2, -3, 1; -1, -1, 2) = -5 i - 5 j - 5 k)$
+
+      Luego el plano que buscamos es $display(delta equiv -5 x - 5 y - 5 z + d = 0)$
+
+      Como el plano $delta$ contiene a $P$, sustituimos las coordenadas de $P$ en la ecuación de $delta$ para calcular el valor de $d$:
+
+      $-5 dot (-1) + 5 dot 0 - 5 dot 0 + d = 0 => d = -5$
+
+      Luego el plano $delta$ es $display(delta equiv -5 x + 5 y - 5 z - 5 = 0 => x + y + z + 1 = 0)$
+
+      Podemos definir la recta como intersección de dos planos $pi$ y $delta$.
+
+      $ #result($display(r' equiv cases(delim: "{",
+         2&x - 3&y + &z + &1 = &0,
+          &x +  &y + &z + &1 = &0
+        ))$) $
+    ]
+
   ],
   [
     #question()[Halla la recta simétrica de $display(r equiv cases(delim: "{",
