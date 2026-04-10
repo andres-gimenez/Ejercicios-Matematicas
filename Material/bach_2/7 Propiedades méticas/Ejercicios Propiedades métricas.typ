@@ -390,7 +390,7 @@
   [
     #question()[Dadas las rectas,
     
-    $ r equiv x/2= y/1 = z/-1 ";  "  display(s equiv cases(delim: "{",
+    $ r equiv x/2= y/1 = z/(-1) ";  "  display(s equiv cases(delim: "{",
          x = 1 + t,
          y= t,
          z = t
@@ -412,6 +412,63 @@
          x+y=0,
         ) $
       ]
+      #solution()[ 
+        Para comprobar que las rectas se cruzan, calculamos el plano que contiene a $r$ y es paralelo a $s$ y comprobamos que $s$ corta a dicho plano.
+
+        Tomamos un vector director de $r$: $arrow(v_r) = (2, -1, 1)$
+
+        Tomamos un punto de $r$: por ejemplo, el punto que se obtiene al sustituir $lambda = 0$ en la ecuación de $r$: $P = (1, 1, 1)$.
+
+        El plano que buscamos es el plano que contiene a $P$ y tiene como vector normal el vector director de $s$. 
+
+        Para obtener el vector normal de $s$, tomamos los vectores normales a los planos que definen a $s$ y calculamos su producto vectorial:
+
+        Tomamos los vectores normales a los planos que definen la recta $s$: $n_1 = (2, 3, 1)$ y $n_2 = (1, 1, 0)$
+
+        El vector normal a $s$ es entonces: 
+
+        $display(arrow(v_s) = n_1 times n_2 = mat(delim: "|", i, j, k; 2, 3, 1; 1, 1, 0) = -i + j - k = ( -1, 1, -1 ))$
+
+        El plano que buscamos es 
+
+        $display(pi equiv cases(delim: "{",
+         x = 1 + 2 lambda - mu,
+         y = 1 - lambda + mu,
+         z = 1 + lambda + mu
+        ))$
+
+        Como $arrow(v_s)$ y $arrow(v_r)$ son linealmente independientes, las rectas $r$ y $s$ se cruzan o se cortan.
+
+        Comprobamos si $s$ corta a $pi$ sustituyendo la ecuación de $s$ en la ecuación de $pi$:
+
+        $ cases(delim: "{",
+         2 dot (1 + 2 lambda - mu) + 3 dot (1 - lambda + mu) + (1 + lambda + mu) = -2,
+         (1 + 2 lambda - mu) + (1 - lambda + mu) = 0
+        )  =>  \
+        
+        cases(delim: "{",
+         2 + 4 lambda - 2 mu + 3 - 3 lambda + 3 mu + 1 + lambda + mu = -2,
+         1 + 2 lambda - mu + 1 - lambda + mu = 0
+        )  => \
+        cases(delim: "{",
+         6 + 2 lambda + 2 mu = -2,
+         2 + lambda = 0
+        )  => 
+        cases(delim: "{",
+         lambda = -2,
+         mu = 0
+        ) $
+
+        Luego $s$ corta a $pi$ y por tanto las rectas $r$ y $s$ se cruzan.
+
+        La distancia entre las dos rectas, es la misma que entre la recta $r$ y el plano $pi$, ya que $pi$ es paralelo a $r$ y contiene a $s$.
+
+        Tomamos un punto de $r$: por ejemplo, el punto que se obtiene al sustituir $lambda = 0$ en la ecuación de $r$: $P = (1, 1, 1)$.
+
+        Utilizamos la fórmula de la distancia entre un punto y un plano para calcular la distancia entre $P$ y $pi$:
+
+        $display("dist"(P, pi) = abs(a P_x + b P_y + c P_z + d)/(sqrt(a^2 + b^2 + c^2)) = (|2 dot 1 - 1 dot 1 + 1 dot 1 - 6|)/sqrt(2^2 + (-1)^2 + 1^2) = 4/sqrt(6) = 2 sqrt(6)/3 approx 1.63)$
+        ]
   ],
   [
     #question()[Comprueba que la recta $r$ es paralela al plano $π$ y calcula la distancia que los separa.
