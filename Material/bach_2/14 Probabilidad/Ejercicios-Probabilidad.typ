@@ -290,10 +290,45 @@
    Calcula $P(A | overline(B))$ y $P(B | overline(A))$.]
   ],
   [
-    #question()[En una población de cierta especie de cérvidos, el 43 % de los adultos son machos y el 57 % hembras. Se sabe que el 11 % de los machos adultos y el 4% de las hembras adultas sufre alguna afección ocular. Se supone que se captura al azar un ejemplar adulto y se pide:]
+    #question()[En una población de cierta especie de cérvidos, el 43% de los adultos son machos y el 57% hembras. Se sabe que el 11% de los machos adultos y el 4% de las hembras adultas sufre alguna afección ocular. Se supone que se captura al azar un ejemplar adulto y se pide:]
     #questions-columns(
-      [#subquestion()[Determina la probabilidad de que tenga alguna afección ocular.]],
-      [#subquestion()[Si el ejemplar capturado padeciera una afección ocular, ¿cuál sería la probabilidad de que fuera un macho?]],
+      [#subquestion()[Determina la probabilidad de que tenga alguna afección ocular.]
+      #solution()[
+        Sea:
+
+        *$M$*: “el ejemplar es un macho”
+
+        *$H$*: “el ejemplar es una hembra”
+
+        *$A$*: “el ejemplar padece alguna afección ocular”
+
+        Datos:
+
+        $P(M) = 0,43$
+
+        $P(H) = 0,57$
+
+        $P(A|M) = 0,11$
+
+        $P(A|H) = 0,04$
+
+        Para calcular la probabilidad de que el ejemplar capturado padezca alguna afección ocular, podemos usar la fórmula de la probabilidad total:
+
+        $ P(A) = P(A|M) dot P(M) + P(A|H) dot P(H) $
+
+        $ P(A) = 0,11 dot 0,43 + 0,04 dot 0,57 = 0,0473 + 0,0228 = 0,0701 $]
+      ],
+      [#subquestion()[Si el ejemplar capturado padeciera una afección ocular, ¿cuál sería la probabilidad de que fuera un macho?]
+      #solution()[
+        Para calcular la probabilidad de que el ejemplar capturado sea un macho, dado que padece una afección ocular, es decir, $P(M|A)$, podemos usar la fórmula de Bayes:
+
+        $ P(M|A) = (P(A|M) dot P(M))/P(A) $
+
+        Ya hemos calculado $P(A)$ en el apartado anterior, por lo que podemos sustituir los valores:
+
+        $ P(M|A) = (0,11 dot 0,43)/0,0701 approx 0,6762 $
+      ]
+      ]
     )
   ],
   [
