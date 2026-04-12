@@ -143,6 +143,39 @@
   ],
   [
     #question()[El porcentaje de pacientes que sobreviven a una determinada enfermedad cuando es tratada en su estadio inicial es del 80 % a los dos años y del 60 % a los seis años. Calcula la probabilidad de que un paciente que ha sobrevivido a los dos años sobreviva a los seis años.]
+    #solution()[
+          Sea:
+
+          *$A$*: “sobrevive 2 años”
+
+          *$B$*: “sobrevive 6 años”
+
+          Datos:
+
+          $P(A) = 0,8$
+
+          $P(B) = 0,6$
+
+          Si un paciente sobrevive 6 años necesariamente ha sobrevivido 2 años, por lo que:
+
+          $B subset A$
+
+          Entonces:
+
+          $P(A ∩ B) = P(B) = 0,6$
+
+          La probabilidad pedida es la probabilidad condicionada:
+
+          $display(P(B | A) = (P(A ∩ B)) / P(A))$
+
+          Sustituyendo:
+
+          $display(P(B | A) = (0","6) / (0","8) = 0","75)$
+
+          Por tanto,
+
+          $P(B | A) = 0,75 = 75 \%$
+    ]
   ],
   [
     #question()[Un local comercial dispone de dos sistemas de alarma A y B interconectados.  
@@ -152,9 +185,45 @@
 
    Calcula la probabilidad de que:]
     #questions-columns(
-      [#subquestion()[El sistema B no funcione.]],
-      [#subquestion()[No funcione ninguno de los sistemas.]],
-      [#subquestion()[Funcione al menos uno de los sistemas.]],
+      [#subquestion()[El sistema B no funcione.]
+      #solution()[
+        Sea:
+
+        *$A$*: “el sistema A funciona”
+
+        *$B$*: “el sistema B funciona”
+
+        Datos:
+
+        $P(A) = 0,9 => P(overline(A)) = 1- P(A) = 1 - 0,9 = 0,1$
+
+        $P(overline(B)|overline(A)) = 0,5$
+
+        $P(overline(A)|overline(B)) = 0,25$
+
+        Nos piden calcular $P(overline(B))$. 
+
+        $display(P(overline(B)|overline(A)) = P(overline(A) ∩ overline(B)) / P(overline(A)) => 
+        P(overline(A) ∩ overline(B)) = P(overline(B)|overline(A)) dot P(overline(A)) = 0","5 dot 0","1 = 0","05)$
+
+        $display(P(overline(A)|overline(B)) = P(overline(A) ∩ overline(B)) / P(overline(B)) =>
+        P(overline(B)) = P(overline(A) ∩ overline(B)) / P(overline(A)|overline(B)) = (0","05) / (0","25) = 0","2)$
+
+      ]
+      ],
+      [#subquestion()[No funcione ninguno de los sistemas.]
+      #solution()[
+        Para calcular la probabilidad de que no funcione ninguno de los sistemas, es decir, $P(overline(A) ∩ overline(B))$, ya la hemos calculado en el apartado anterior:
+
+        $P(overline(A) ∩ overline(B)) = 0,05$ ]
+      ],
+      [#subquestion()[Funcione al menos uno de los sistemas.]
+        #solution()[
+          Que funcione al menos uno de los sistemas es el suceso contrario a que no funcione ninguno de los sistemas, por lo que:
+
+          $P("Al menos uno funciona") = 1 - P(overline(A) ∩ overline(B)) = 1 - 0,05 = 0,95$
+        ]
+      ],
     )
   ],
   [
@@ -162,9 +231,56 @@
 
     Eligiendo una persona al azar del congreso, calcula la probabilidad de que:]
     #questions-columns(
-      [#subquestion()[No contrate sus viajes por internet.]],
-      [#subquestion()[Use internet para contratar los viajes, si la persona elegida es una mujer.]],
-      [#subquestion()[Sea hombre, sabiendo que contrata sus viajes por internet.]],
+      [#subquestion()[No contrate sus viajes por internet.]
+        #solution()[
+          Tenemos los sucesos:
+          - *$H$*: “la persona es un hombre”
+          - *$M$*: “la persona es una mujer”
+          - *$I$*: “la persona contrata sus viajes por internet”
+          Datos:
+
+          $display(P(H) = 120/200 = 3/5)$
+
+          $display(P(M) = 80/200 = 2/5)$
+
+          $display(P(I|H) = 84/120 = 7/10 => P(overline(I)|H) = 1- P(I|H) = 1 - 7/10 = 3/10)$
+
+          $display(P(overline(I)|M) = 24/80 = 3/10)$
+
+          Nos están pidiendo calcular $P(overline(I))$, es decir, la probabilidad de que una persona elegida al azar no contrate sus viajes por internet.
+
+          Podemos usar la formula de la probabilidad total.
+
+          $  P(overline(I)) = P(overline(I)|H)P(H) + P(overline(I)|M)P(M) $
+
+          $ P(overline(I)) = 3/10 dot  3/5 + 3/10 dot 2/5 = 3/10 $
+        ]
+      ],
+      [#subquestion()[Use internet para contratar los viajes, si la persona elegida es una mujer.]
+        #solution()[ 
+          Para calcular la probabilidad de que una persona contrate sus viajes por internet, dado que es una mujer, es decir, $P(I|M)$, podemos usar la probabilidad complementaria, ya que conocemos $P(overline(I)|M)$:
+
+          $ P(I|M) = 1 - P(overline(I)|M) = 1 - 3/10 = 7/10 $
+
+        ]
+      ],
+      [#subquestion()[Sea hombre, sabiendo que contrata sus viajes por internet.]
+        #solution()[
+          Nos están pidiendo calcular $P(H|I)$, es decir, la probabilidad de que una persona sea un hombre, dado que contrata sus viajes por internet.
+
+          Para calcular esta probabilidad, podemos usar la fórmula de Bayes:
+
+          $ P(H|I) = (P(I|H) dot P(H))/P(I) $
+
+          Necesitamos calcular $P(I)$, la probabilidad de que una persona contrate sus viajes por internet. 
+
+          $display(P(I) = 1 - P(overline(I)) = 1 - 3/10 = 7/10)$
+
+          Sustituyendo en la fórmula de Bayes:
+
+          $ P(H|I) = (P(I|H) dot P(H))/P(I) = (7/10 dot 3/5)/(7/10) = 3/5 $
+        ]
+      ],
     )
   ],
   [
