@@ -49,12 +49,16 @@ words:
   - inecuaciones
   - Inecuaciones
   - infinity
+  - inter
   - length
   - line
   - math
   - month
+  - muestral
   - none
   - north
+  - octaédrico
+  - overline
   - padding
   - pagebreak
   - pages
@@ -79,6 +83,7 @@ words:
   - Thales
   - theta
   - typst
+  - union
   - watermark
   - while
   - white
