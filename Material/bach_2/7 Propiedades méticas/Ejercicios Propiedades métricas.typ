@@ -28,7 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  show-solutions: false,
+  // show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: false)
@@ -98,6 +98,8 @@
       [#subquestion()[$pi equiv 2x+3y-z+6=0 " y " pi' equiv 2x+3y-z+7 =0 $ ]
       
       #solution()[
+        El angulo entre dos planos, es el mismo que el angulo entre sus vectores normales.
+
         Tomamos los vectores normales a los lados dados:
         
         $n_pi = (2, 3, -1)$ y $n_(pi')= (2, 3, -1)$
@@ -201,6 +203,25 @@
         pi equiv x + y -2z = 3
         $
   ]
+  #solution()[
+    Primero calculamos el angulo entre r y el vector normal al plano $pi$.
+
+    Para obtener un vector director director de $r$, calculamos el producto vectorial de los vectores normales a los planos que definen $r$.
+
+    $ arrow(v_r) = (2, -4, 1) times (-1, 1, -4) = mat(delim: "|", &arrow(i), &arrow(j), &arrow(k); &2, -&4, &1; -&1, &1, -&4) = 15 arrow(i) + 7 arrow(j) + 6 arrow(k) $
+
+    Calculamos el angulo entre $arrow(v_r)$ y $arrow(n_pi)$ siendo $arrow(n_pi) = (1, 1, -2)$ 
+
+    $ cos(alpha) = abs((arrow(v_r) dot arrow(n_pi)))/(abs(arrow(v_r)) dot abs(arrow(n_pi))) = abs((2 dot (-1) + (-4) dot 1 + 1 dot (-2)))/(sqrt(2^2 + (-4)^2 + 1^2) dot sqrt(1^2 + 1^2 + (-2)^2)) = (abs(-8))/(sqrt(21) dot sqrt(6)) = 8/(sqrt(126)) $
+
+    $ alpha = arccos(8/(sqrt(126))) approx 56.31º $
+
+    El angulo entre la recta y el plano es el complemento del angulo entre la recta y el vector normal al plano, es decir, $90º - 56.31º approx 33.69º$.
+
+    También podemos calcular el angulo entre $r$ y $pi$ mediante la formula 
+    $ "sen"(alpha) = (abs(arrow(v_r) dot arrow(n_pi)))/(abs(arrow(v_r)) dot abs(arrow(n_pi))) $
+     y obtenemos el mismo resultado.
+  ]
   ],
   [
     #question()[Calcula el valor de $m$, si es que existe, para que la recta y el plano siguientes,
@@ -213,8 +234,52 @@
         $
     ]
      #questions-columns(
-      [#subquestion()[Sean paralelos.]],
-      [#subquestion()[Formen perpendiculares.]],
+      [#subquestion()[Sean paralelos.]
+      #solution()[
+        Para que la recta y el plano sean paralelos, el vector director de la recta debe ser ortogonal al vector normal del plano.
+
+        Para tomar un vector director de la recta $r$ tenemos dos opciones: 
+          - Opción 1: \
+              Tomamos los vectores normales a los planos que definen a $r$ y calculamos su producto vectorial.
+
+              $display(arrow(v_r) = mat(delim: "|", &arrow(i), &arrow(j), &arrow(k); &1, &0, -&m; &0, &1, -&1) = m arrow(i) + arrow(j) + 1 arrow(k) = (m, 1, 1))$
+          - Opción 2:
+              En este caso es fácil obtener las ecuaciones paramétricas se la recta $r$ despejando $z=lambda$:
+              $display(r equiv cases(delim: "{",
+                 x = 2 + m lambda,
+                 y = 1 + lambda,
+                 z = lambda
+                ))$
+              con lo que obtenemos un vector director de la recta $r$: $arrow(v_r) = (m, 1, 1)$
+
+        Tomamos el vector director de $r$: $arrow(v_r) = (m, 1, 1)$
+
+        Tomamos el vector normal de $pi$: $arrow(n_pi) = (1, -3, 0)$
+
+        Calculamos el producto escalar entre ambos vectores:
+
+        $arrow(v_r) dot arrow(n_pi) = m dot 1 + 1 dot (-3) + 1 dot 0 = m - 3$
+
+        Para que sean paralelos, el producto escalar debe ser 0:
+
+        $m - 3 = 0 => #result($m = 3$)$]
+      ],
+      [#subquestion()[Sean perpendiculares.]
+      #solution()[
+        Para que la recta y el plano sean perpendiculares, el vector director de la recta debe ser paralelo al vector normal del plano.
+
+        Tomamos el vector director de $r$: $arrow(v_r) = (m, 1, 1)$
+
+        Tomamos el vector normal de $pi$: $arrow(n_pi) = (1, -3, 0)$
+
+        Para que sean paralelos, ambos vectores han de ser linealmente dependientes.
+
+        $mat(delim: "|", &arrow(i), &arrow(j), &arrow(k); &m, &1, &1; &1, -&3, &0) = 0 =>
+        3 arrow(i)- arrow(j) + (-3m - 1) arrow(k) = (3, -1, -3m-1) != (0, 0, 0) forall m in RR. $
+
+        No existe ningún valor de $m$ para que la recta y el plano sean perpendiculares.
+      ]
+      ],
     )
   ],
   [
@@ -316,15 +381,15 @@
     #solution()[
       La recta que buscamos, $r'$, es la intersección del plano $pi$ con el plano que contiene a $r$ y es perpendicular a $pi$.
 
-      Tomamos el vector normal a $pi$: $n_pi = (2, -3, 1)$.
+      Tomamos el vector normal a $pi$: $arrow(n_pi) = (2, -3, 1)$.
 
-      Tomamos un vector director de $r$: $d_r = (-1, -1, 2)$.
+      Tomamos un vector director de $r$: $arrow(d_r) = (-1, -1, 2)$.
 
       Tomamos un punto de $r$: por ejemplo, el punto que se obtiene al sustituir $lambda = 0$ en la ecuación de $r$: $P = (-1, 0, 0)$.
 
       El vector normal al plano que contiene a $r$ y es perpendicular a $pi$ se obtiene mediante el producto vectorial entre el vector normal a $pi$ y el vector director de $r$:
 
-      $display(n_p equiv n_pi times d_r = mat(delim: "|", i, j, k; 2, -3, 1; -1, -1, 2) = -5 i - 5 j - 5 k)$
+      $display(arrow(n_p) equiv arrow(n_pi) times arrow(d_r) = mat(delim: "|", arrow(i), arrow(j), arrow(k); 2, -3, 1; -1, -1, 2) = -5 arrow(i) - 5 arrow(j) - 5 arrow(k))$
 
       Luego el plano que buscamos es $display(delta equiv -5 x - 5 y - 5 z + d = 0)$
 
@@ -348,8 +413,67 @@
          x = 2 + lambda,
          y= -2 + lambda,
          z = - lambda
-        ))$] 
-      respecto al plano $π equiv x - 3y + 4z - 16 = 0$
+        ))$
+        respecto al plano $π equiv x - 3y + 4z - 16 = 0$.
+        ] 
+    #solution()[
+    Calculamos la intersección de $r$ con el plano $pi$:
+
+    Para ello, sustituimos las ecuaciones de $r$ en la ecuación de $pi$:
+
+    $ (2 + lambda) - 3(-2 + lambda) + 4(- lambda) - 16 = 0 => \
+    2 + lambda + 6 - 3 lambda - 4 lambda - 16 = 0 => \
+    -6 lambda - 8 = 0 => lambda = -4$
+
+    Sustituyendo el valor de $lambda$ en la ecuación de $r$, obtenemos el punto de intersección, que es el punto medio entre la recta dada y su simétrica:
+
+    $display(P = (2 - 4, -2 - 4, 4) = (-2, -6, 4))$
+
+    Ahora tomamos un punto de $r$, por ejemplo el punto que se obtiene al sustituir $lambda = 0$ en la ecuación de $r$: $P_0 = (2, -2, 0)$ y calculamos su simétrico respecto al plano $pi$.
+
+    Para calcular el simétrico de un punto respecto a un plano, necesitamos el vector normal al plano y el punto dado.
+
+    El vector normal al plano $pi$ es $arrow(n_pi) = (1, -3, 4)$.
+
+    Calculamos la recta que pase por $P_0$ y es perpendicular al plano,  o lo que es lo mismo contiene a $P_0$ y tiene como vector director el vector normal al plano:
+
+    $ s_n equiv cases(delim: "{",
+       x = 2 + lambda,
+       y = -2 - 3 lambda,
+       z= 4 lambda
+      )
+     $
+    Calculamos la intersección de $s_n$ con el plano $pi$:
+
+    $(2 + lambda) - 3(-2 - 3 lambda) + 4(4 lambda) - 16 = 0 => \
+    2 + lambda + 6 + 9 lambda + 16 lambda - 16 = 0 => \
+    26 lambda - 8 = 0 => lambda = 4/13$ 
+
+    Sustituyendo el valor de $lambda$ en la ecuación de $s_n$, obtenemos el punto de intersección, que es la proyección ortogonal de $P_0$ sobre el plano $pi$:
+
+    $display(P' = (2 + 4/13, -2 - 3 dot 4/13, 4 dot 4/13) = (32/13, -34/13, 16/13))$
+
+    El simétrico de $P_0$ respecto al plano $pi$ es el simétrico de $P_0$ respecto a $P'$, luego $P'$ es el punto medio entre $P_0$ y su simétrico, con lo que podemos calcular el simétrico de $P_0$ respecto al plano $pi$ mediante:
+
+    $display(P' = (P_0 + P'')/2 => P'' = 2P' - P_0)$
+
+    $display(P'' = 2 dot (32/13, -34/13, 16/13) - (2, -2, 0) = (64/13 - 2, -68/13 + 2, 32/13) = (62/13, -58/13, 32/13))$
+    
+    Luego la recta simétrica de $r$ respecto al plano $pi$ es la recta que pasa por el punto $P_0$ y $P''$
+
+    Calculamos el vector director de la recta
+    
+    $display(arrow(P_0 P'') = (62/13 - 2, -58/13 + 2, 32/13) = (36/13, -52/13, 32/13) = (36/13, -52/13, 32/13))$
+
+    Luego la recta simétrica de $r$ respecto al plano $pi$ es:
+
+    $ r' equiv cases(delim: "{",
+         x = 2 + 36/13 lambda,
+         y = -2 - 52/13 lambda,
+         z = 32/13 lambda
+        ) $
+    
+    ]
   ],
   [
     #question()[Comprueba si el triángulo de vértices $A = (2,-1,4)$, $B = (1,3,-4)$ y $C = (-3,-1,3)$ es equilátero, isósceles o escaleno y halla su perímetro.]
@@ -357,7 +481,14 @@
   [
     #question()[Calcula la distancia del punto P al plano π:]
     #questions-columns(
-      [#subquestion()[$P = (1, -2,6)$; #h(1cm) $π : 2x + y - 2z + 3 = 0$ ]],
+      [#subquestion()[$P = (1, -2,6)$; #h(1cm) $π : 2x + y - 2z + 3 = 0$ ]
+      #solution()[
+        Para calcular la distancia de un punto a un plano, podemos usar la fórmula de la distancia entre un punto y un plano:
+
+        $display(d(P, pi) = abs(2 dot 1 + 1 dot (-2) - 2 dot 6 + 3)/(sqrt(2^2 + 1^2 + (-2)^2)) = abs(-7)/3 = 7/3)
+      $
+      ]
+      ],
       [#subquestion()[$P = (1/2, -1,-2/3)$; #h(1cm) $π : -3x - y - 2z - 16 = 0$]],
       [#subquestion()[$P = (4,-1,3)$; #h(1cm) $π : x + y - 2z + 3 = 0$]]
     )
@@ -367,6 +498,17 @@
 
       $π : x - 3y - 3z - 2 = 0$; #h(1cm)	$π′ : x - 3y - 3z - 17 = 0$
     ]
+    #solution()[
+      Podemos ver que los planos dados son paralelos, ya que tienen el mismo vector normal, $n_pi = n_(pi') = (1, -3, -3)$.
+
+      Para calcular la distancia, calculamos la distancia de un punto de un plano al otro plano.
+
+      Tomamos un punto de $pi$, por ejemplo, el punto que se obtiene al sustituir $y = 0$ y $z = 0$ en la ecuación de $pi$: $P = (2, 0, 0)$.
+
+      Calculamos la distancia de $P$ a $pi'$:
+
+      $display(d(P, pi') = abs(1 dot 2 - 3 dot 0 - 3 dot 0 - 17)/(sqrt(1^2 + (-3)^2 + (-3)^2)) = abs(-15)/sqrt(19) = 15/sqrt(19) = 15 sqrt(19)/19)$
+    ]
   ],
   [
     #question()[Calcula la distancia del punto $P = (-2,3,5)$ a la recta r en los siguientes casos.]
@@ -374,13 +516,47 @@
       [#subquestion()[$display(r equiv cases(delim: "{",
          2x - y + z = 2,
          x + 2y + 6z = 9,
-        ))$]],
+        ))$]
+        #solution()[
+          Necesitamos el vector director de la recta $r$ y un punto de $r$ para calcular la distancia entre el punto $P$ y la recta $r$.
+
+          Para obtener el vector director de la recta $r$, calculamos el producto vectorial de los vectores normales a los planos que definen $r$.
+
+          Tomamos los vectores normales a los planos que definen la recta $r$: $arrow(n_1) = (2, -1, 1)$ y $arrow(n_2) = (1, 2, 6)$
+
+          $display(arrow(v_r) = arrow(n_1) times arrow(n_2) = mat(delim: "|", &arrow(i), &arrow(j), &arrow(k); &2, -&1, &1; &1, &2, &6) = -8 arrow(i) - 11 arrow(j) + 5 arrow(k) = (-8, -11, 5))$
+
+          Para obtener un punto de $r$, suponemos que $z = 0$ y resolvemos el sistema de ecuaciones:
+
+          $display(cases(delim: "{",
+           2x - y = 2,
+           x + 2y = 9
+          ) => 
+          cases(delim: "{",
+            x = 13/5,  
+            y = 16/5
+          ))$
+
+          Luego el punto $P_r = (13/5, 16/5, 0)$ es un punto de $r$.
+
+          Ahora podemos calcular la distancia entre el punto $P$ y la recta $r$ mediante la fórmula de la distancia entre un punto y una recta:
+
+          $display(d(P, r) = abs(arrow(P - P_r) times arrow(v_r))/abs(arrow(v_r)))$
+
+          $display(arrow(P - P_r) = ( -2 - 13/5, 3 - 16/5, 5 - 0) = ( -23/5, -1/5, 5))$
+
+          $display(arrow(P - P_r) times arrow(v_r) = mat(delim: "|", arrow(i), arrow(j), arrow(k); -23/5, -1/5, 5; -8, -11, 5 )) = 54 arrow(i) - 17 arrow(j) + 49 arrow(k) = (54, -17, 49)$
+
+          $display(d(P, r) = abs(arrow(P - P_r) times arrow(v_r))/abs(arrow(v_r)) = sqrt(54^2 + (-17)^2 + 49^2)/sqrt((-8)^2 + (-11)^2 + 5^2) = sqrt(2914)/sqrt(210) = sqrt(2914/210) = sqrt(1457/105) approx 3","74)$
+
+        ]
+        ],
       [#subquestion()[$display(r equiv cases(delim: "{",
          x = 2 - lambda,
          y = 2 + 2 lambda,
          z = 2 + 3 lambda
         ))$]],
-      [#subquestion()[$display(r (x-2)/3 = y/4 = (z-1)/(-3))$]],
+      [#subquestion()[$display(r equiv (x-2)/3 = y/4 = (z-1)/(-3))$]],
       [#subquestion()[$display(r equiv cases(delim: "{",
          x = 2,
          y= -2,
