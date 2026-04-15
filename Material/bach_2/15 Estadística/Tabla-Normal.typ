@@ -19,7 +19,6 @@
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas II",
     number: [Tabla Normal(0,1)],
-    // content: [($X->infinity$)],
     model: [v1],
   ),
   
