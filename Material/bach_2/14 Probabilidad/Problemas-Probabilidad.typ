@@ -18,7 +18,7 @@
     academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas II",
-    number: [Probabilidad],
+    number: [Problemas de probabilidad],
     // content: [($X->infinity$)],
     model: [v1],
   ),
@@ -27,7 +27,8 @@
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)

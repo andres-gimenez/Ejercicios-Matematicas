@@ -18,7 +18,7 @@
     academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas II",
-    number: [Probabilidad],
+    number: [Ejercicios de probabilidad],
     // content: [($X->infinity$)],
     model: [v1],
   ),
@@ -28,7 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  show-solutions: true,
+  // show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)
@@ -312,7 +312,7 @@
     )
   ],
   [
-    #question()[*Año 2025 - Ordinaria - Bloque 4* 
+    #question()[*Año 2024 - Ordinaria - Opción A* 
     Sabiendo que: $display(P(overline(L)) = 11/20)$, $display(P(A|B) - P(B|A) = 1/24)$ y \ $display(P(A inter overline(B)) = 3/10)$, se pide: ]
     #questions-columns(
       [
