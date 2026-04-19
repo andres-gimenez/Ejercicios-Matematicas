@@ -588,44 +588,185 @@
          x+y=0,
         ) $
       ]
-      // #solution()[ 
-      //   Para comprobar que las rectas se cruzan, calculamos el plano que contiene a $r$ y es paralelo a $s$ y comprobamos que $s$ corta a dicho plano.
+      #solution()[ 
+          Tomamos un punto y un vector director de $r$:
 
-      //   Tomamos un vector director de $r$: $arrow(v_r) = (2, -1, 1)$
+          $
+          P_r = (1,1,1)
+          $
 
-      //   Tomamos un punto de $r$: por ejemplo, el punto que se obtiene al sustituir $lambda = 0$ en la ecuación de $r$: $P_r = (1, 1, 1)$.
+          $
+          arrow(v_r) = (2,-1,1)
+          $
 
-      //   El plano que buscamos es el plano que contiene a $P_r$ y tiene como vector normal el vector director de $s$. 
 
-      //   Para obtener el vector normal de $s$, tomamos los vectores normales a los planos que definen a $s$ y calculamos su producto vectorial:
+          Calculamos la forma paramétrica de $s$:
 
-      //   Tomamos los vectores normales a los planos que definen la recta $s$: $n_1 = (2, 3, 1)$ y $n_2 = (1, 1, 0)$
+          $
+          x + y = 0 => x = -y
+          $
 
-      //   El vector director a $s$ es: 
+          Sustituyendo en el otro plano
 
-      //   $display(arrow(v_s) = n_1 times n_2 = mat(delim: "|", i, j, k; 2, 3, 1; 1, 1, 0) = -i + j - k = ( -1, 1, -1 ))$
+          $
+          2(-y) + 3y + z = -2
+          $
 
-      //   Ahora buscamos el vector paralelo a $s$, que contiene 
-      //   // El plano que buscamos es 
+          $
+          y + z = -2
+          $
 
-      //   // $display(-x + y -z + d = 0)$ 
-        
-      //   // Como tiene que contener a $P_r =>$ $-1+1-1+d = 0 => d = 1$
+          Tomamos $y = t$
 
-      //   // Luego $display(pi equiv -x +y-z+1 = 0)$
+          $
+          s equiv cases(
+          x = -t,
+          y = t,
+          z = -2 - t
+          )
+          $
 
-      //   // Buscamos un punto de $s$
+          Tomamos un punto y un vector director de $s$
 
-      //   // Como $x + y = 0$ una solución es $x= 0; y=0$
-      //   // Como $2x+3y+z=-2 => 2 dot 0 + 3 dot 0 + z = -2 => z=-2$
+          $
+          P_s = (0,0,-2)
+          $
 
-      //   // Luego podemos tomar $P_s = (0, 0, -2)$
+          $
+          arrow(v_s) = (-1,1,-1)
+          $
 
-      //   // La distancia entre las dos rectas, será la distancia entre $Pi$ y $P_s$. Podemos usar la formula de distancia de plano a punto:
+          Para comprobar que se cruzan, igualamos las ecuaciones paramétricas
 
-      //   // $display("dist"(r, s) = "dist"(pi, P_s) = abs(-0+ 0 -(-2) +1)/sqrt((-1)^2 + 1^2 + (-1)^2) = 1/sqrt(3)   ) $
-        
-      //   ]
+          $
+          (1+2t, 1-t, 1+t) = (-u, u, -2-u)
+          $
+
+          Sistema
+
+          $
+          cases(
+          1 + 2t = -u,
+          1 - t = u,
+          1 + t = -2 - u
+          )
+          $
+
+          De la segunda
+
+          $
+          u = 1 - t
+          $
+
+          Sustituyendo en la primera
+
+          $
+          1 + 2t = -1 + t
+          $
+
+          $
+          t = -2
+          $
+
+          Entonces
+
+          $
+          u = 3
+          $
+
+          Comprobando en la tercera ecuación
+
+          $
+          1 + t = -1
+          $
+
+          $
+          -2 - u = -5
+          $
+
+          No coinciden.
+
+          Por tanto, las rectas *no se cortan* y como sus vectores directores no son proporcionales, *se cruzan*.
+
+          Para calcular la distancia mínima entre las rectas vamos a ver varios métodos 
+          
+          *Método 1*:
+          Mediante la formula.
+
+          $
+          d(r, s) = abs((arrow(P_s P_r) dot (arrow(v_r) times arrow(v_s))))/abs(arrow(v_r) times arrow(v_s))
+          $
+
+          Vector entre puntos
+
+          $
+          arrow(P_s P_r) = (1,1,3)
+          $
+
+          Producto vectorial
+
+          $
+          arrow(v_r) times arrow(v_s) =
+          mat(delim: "|",
+          1,1,1;
+          2,-1,1;
+          -1,1,-1
+          ) = (0,1,1)
+          $
+
+          Producto escalar
+
+          $
+          (1,1,3) dot (0,1,1) = 4
+          $
+
+          Módulo 
+
+          $
+          |(0,1,1)| = sqrt(2)
+          $
+
+          Distancia
+
+          $
+          d(r, s) = 4 / sqrt(2) = #result()[$2 sqrt(2)$]
+          $
+
+          *Métodos 2:* 
+          Calculando un plano paralelo a $r$ que contenga a $s$ y luego calculando la distancia de un punto de $s$ a $r$.
+
+          Para calcular el plano $p$, tomamos el punto $P_s$ y los vectores directores $arrow(v_r)$ y $arrow(v_s)$ 
+
+          $display(arrow(n_pi) =  mat(delim: "|", arrow(i), arrow(j), arrow(k); 2, -1, 1; -1, 1, -1) = 0 arrow(i) + 1 arrow(j) + 1 arrow(k) = (0, 1, 1))$
+
+          Luego el plano que buscamos es 
+
+          $pi equiv y + z + d = 0$ Como tiene que contener $P_s => -2 +d = 0 => d = 2$
+
+          Luego el plano buscado es $y + z +2 = 0$  
+
+          Ahora calculamos la distancia de $P_s$ al plano $pi$
+
+          $display("dis"(P_s, pi) = abs(1 - 1 + 2)/sqrt(1^2 + 1^2) = 2/sqrt(2) = #result()[$sqrt(2)$])$
+
+          // *Método 3*
+          // Tomamos dos puntos genéricos de $r$ y $s$
+
+          // $R (1 - 2 nu, 1 - nu, 1 + nu)$ y $S(-mu, mu, -2 - mu)$
+
+          // Un vector genérico $arrow(R S) = (1 - 2 nu + mu, 1 - nu - mu, 3 +nu - mu)$
+
+          // De los posibles vectores $arrow(R S)$ buscamos el que sea perpendicular a $r$ y $s$.
+
+          // $display(cases(
+          // (1 - 2 nu + mu, 1 - nu - mu, 3 +nu - mu) dot (2, -1, 1) = 0,
+
+          // (1 - 2 nu + mu, 1 - nu - mu, 3 +nu - mu) dot (-1, 1, -1) = 0
+          // ) =>
+          // cases(
+
+          // ))$
+      ]
   ],
   [
     #question()[Comprueba que la recta $r$ es paralela al plano $π$ y calcula la distancia que los separa.
