@@ -152,7 +152,7 @@
       [#subquestion()[Un mes, por motivos logísticos, se cambió la producción, de modo que se fabricaron exclusivamente productos de tipo A. Sabiendo que se fabricaron 6000 unidades, determinar, aproximando la distribución por una normal, la probabilidad de que haya más de 160 unidades defectuosas.]],
     )
   ],
-    [
+  [
     #question()[*Año 2019 - Modelo - Opción A*
      El examen de oposición a la Administración Local de cierta ciudad consta de 300 preguntas, con respuesta verdadero o falso. Un opositor responde al azar todas las preguntas. Se considera la variable aleatoria $X$ como “número de respuestas acertadas” y se pide:]
     #questions-columns(
@@ -160,4 +160,49 @@
       [#subquestion()[Utilizando la aproximación por la normal, hallar la probabilidad de que el opositor acierte a lo sumo 130 preguntas y la probabilidad de que acierte exactamente 160 preguntas.]],
     )
   ],
+  [
+    #question()[*Año 2025 - Ordinaria - Bloque 4* 
+    Entre los ciudadanos de 13 años o más de cierto país, el 20% de la población tiene entre 13 y 24 años, el 50% entre 25 y 64 y el resto más de 64 años. Según datos recogidos por el ministerio de cultura de ese país, el 74% de sus ciudadanos de entre 14y 24 años es lector habitual, mientras que el porcentaje decrece hasta el 65,8% entre los de 25 y 64 años y al 53,7% entre los mayores de 64 años. Elegido un ciudadano al azar del país en cuestión de 14 años o más, se pide:]
+    #questions-columns(
+      [#subquestion()[Calcular la probabilidad de que sea lector habitual.]
+      #solution()[
+        Tenemos los sucesos:
+        - $A$: el ciudadano tiene entre 14 y 24 años.
+        - $B$: el ciudadano tiene entre 25 y 64 años.
+        - $C$: el ciudadano tiene más de 64 años.
+        - $L$: el ciudadano es lector habitual.
+      
+      Con las probabilidades que nos da el problema:
+      - $P(A) = 0,2$
+      - $P(B) = 0,5$
+      - $P(C) = 0,3$
+      - $P(L | A) = 0,74$
+      - $P(L | B) = 0,658$
+      - $P(L | C) = 0.537$
+  
+      Podemos calcular la probabilidad de que un ciudadano sea lector habitual utilizando la fórmula de la probabilidad total:
+      
+      $P(L) = P(L | A)P(A) + P(L | B)P(B) + P(L | C)P(C) = \ 0,74 dot 0,2) + 0,658 dot 0,5 + 0,537 dot 0,3 = 0,148 + 0,329 + 0,1611 = 0,6381$
+      ]
+      ],
+      [#subquestion()[Si no es lector habitual, calcula la probabilidad de que tenga entre 25 y 64 años.]
+      #solution()[
+        Nos están pidiendo calcular $P(B | overline(L))$  
+
+        Para calcular esta probabilidad, necesitamos calcular primero la probabilidad de que un ciudadano no sea lector habitual, que es el complemento de la probabilidad de que sea lector habitual:
+        
+        $P(overline(L)) = 1 - P(L) = 1 - 0,6381 = 0,3619$
+        
+        Ahora podemos utilizar la fórmula de Bayes para calcular la probabilidad de que un ciudadano tenga entre 25 y 64 años dado que no es lector habitual:
+        
+        $display(P(B | overline(L)) = (P(overline(L) | B) P(B))/P(overline(L)))$
+        
+        Sabemos que $P(overline(L) | B) = 1 - P(L | B) = 1 - 0,658 = 0,342$. 
+        
+        Por lo tanto:
+        
+        $display(P(B | overline(L)) = (0","342 dot 0","5)/(0","3619) = (0","171)/(0","3619) approx 0","4728)$]
+      ]
+    )
+  ]
 )
