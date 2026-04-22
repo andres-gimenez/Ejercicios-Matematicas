@@ -28,7 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  show-solutions: false,
+  // show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)
@@ -402,10 +402,62 @@
     #question()[*EvAU 2021 - Modelo - Opción B*
         Una prueba diagnóstica para una enfermedad da resultado negativo el 5 % de las veces que se aplica a un individuo que la padece y da resultado positivo el 10 % de las veces que se aplica a un individuo que no la padece. Las estadísticas muestran que dicha enfermedad afecta a 50 de cada diez mil personas. Si una persona elegida al azar se somete a la prueba diagnóstica, calcule la probabilidad de:]
     #questions-columns(
-      [#subquestion()[Que la prueba dé positivo.]],
-      [#subquestion()[Que la persona tenga la enfermedad, si el resultado es positivo.]],
-      [#subquestion()[Que la persona no padezca la enfermedad, si el resultado de la prueba ha sido negativo]],
-      [#subquestion()[Que el resultado de la prueba diagnóstica sea erróneo.]],
+      [#subquestion()[Que la prueba dé positivo.]
+      #solution()[
+        Sea:
+
+        - *$E$*: “la persona tiene la enfermedad”
+        
+        - *$S$*: “la persona no tiene la enfermedad”
+
+        - *$+$*: “la prueba da positivo”
+        
+        - *$-$*: “la prueba da negativo”
+
+
+        Datos:
+
+        $P(E) = 50/10000 = 0,005$
+
+        $P(S) = 1 - P(E) = 1 - 0,005 = 0,995$
+
+        $P(+|E) = 0,95$
+
+        $P(+|S) = 0,10$
+
+        Para calcular la probabilidad de que la prueba dé positivo, podemos usar la fórmula de la probabilidad total:
+
+        $ P(P) = P(P|E) dot P(E) + P(P|S) dot P(S)$
+
+        $ P(P) = 0,95 dot 0,005 + 0,10 dot 0,995 = 0,00475 + 0,0995 = 0,10425 $
+        ]
+      ],
+      [#subquestion()[Que la persona tenga la enfermedad, si el resultado es positivo.]
+      #solution()[
+        Para calcular la probabilidad de que la persona tenga la enfermedad, dado que el resultado de la prueba es positivo, es decir, $P(E|+)$, podemos usar la fórmula de Bayes:
+
+        $ P(E|+) = (P(+|E) dot P(E))/P(+) $
+
+        Ya hemos calculado $P(+)$ en el apartado anterior, por lo que podemos sustituir los valores:
+
+        $ P(E|+) = (0,95 dot 0,005)/(0","10425) approx 0,0455 $
+      ]],
+      [#subquestion()[Que la persona no padezca la enfermedad, si el resultado de la prueba ha sido negativo]
+      #solution()[
+        Para calcular la probabilidad de que la persona no tenga la enfermedad, dado que el resultado de la prueba es negativo, es decir, $P(S|-)$, podemos usar la fórmula de Bayes:
+
+        $ P(S|-) = (P(-|S) dot P(S))/P(-) $
+
+        Ya hemos calculado $P(-)$ en el apartado anterior, por lo que podemos sustituir los valores:
+
+        $ P(S|-) = (0,90 dot 0,995)/(0,89575) approx 0,9997 $
+      ]],
+      [#subquestion()[Que el resultado de la prueba diagnóstica sea erróneo.]
+      #solution()[
+        $ P("Erróneo") = P(E inter -) + P(S inter +) = 
+        P(-|E) dot P(E) + P(+|S) dot P(S) = \ 
+        0,05 dot 0,005 + 0,10 dot 0,995 = 0,09975 $
+      ]],
     )
   ],
   [
