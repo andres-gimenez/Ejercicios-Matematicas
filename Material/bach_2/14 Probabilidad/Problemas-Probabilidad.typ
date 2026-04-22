@@ -400,17 +400,10 @@
   ],
   [
     #question()[*EvAU 2021 - Modelo - Opción B*
-        Una prueba diagnóstica:
-
-        - Falso negativo: 5 %  
-        - Falso positivo: 10 %  
-        - Prevalencia: 50 de cada 10 000
-
-        Calcular la probabilidad de:   
-    ]
+        Una prueba diagnóstica para una enfermedad da resultado negativo el 5 % de las veces que se aplica a un individuo que la padece y da resultado positivo el 10 % de las veces que se aplica a un individuo que no la padece. Las estadísticas muestran que dicha enfermedad afecta a 50 de cada diez mil personas. Si una persona elegida al azar se somete a la prueba diagnóstica, calcule la probabilidad de:]
     #questions-columns(
       [#subquestion()[Que la prueba dé positivo.]],
-      [#subquestion()[Que la persona tenga la enfermedad si el resultado es positivo.]],
+      [#subquestion()[Que la persona tenga la enfermedad, si el resultado es positivo.]],
       [#subquestion()[Que la persona no padezca la enfermedad, si el resultado de la prueba ha sido negativo]],
       [#subquestion()[Que el resultado de la prueba diagnóstica sea erróneo.]],
     )
