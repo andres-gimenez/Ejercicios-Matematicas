@@ -15,6 +15,7 @@ words:
   - Barrow
   - Bayes
   - bicuadradas
+  - binom
   - binomial
   - black
   - blue
@@ -66,6 +67,7 @@ words:
   - padding
   - pagebreak
   - pages
+  - percentil
   - plot
   - print
   - question
@@ -82,11 +84,13 @@ words:
   - student
   - StudentData
   - style
+  - subapartado
   - subject
   - subquestion
   - subset
   - Thales
   - theta
+  - tipificación
   - typst
   - union
   - watermark

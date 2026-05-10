@@ -1,6 +1,4 @@
 #import "@preview/g-exam:0.4.4": *
-#import "@preview/cetz:0.4.2"
-#import "@preview/cetz-plot:0.1.3"
 
 #let config = yaml("../../config.yaml")
 
