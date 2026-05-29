@@ -413,7 +413,7 @@
          x = 2 + lambda,
          y= -2 + lambda,
          z = - lambda
-        ))$
+        ))$ #h(3mm)
         respecto al plano $π equiv x - 3y + 4z - 16 = 0$.
         ] 
     #solution()[
@@ -421,13 +421,19 @@
 
     Para ello, sustituimos las ecuaciones de $r$ en la ecuación de $pi$:
 
-    $ (2 + lambda) - 3(-2 + lambda) + 4(- lambda) - 16 = 0 => \
+    $ display((2 + lambda) - 3(-2 + lambda) + 4(- lambda) - 16 = 0 => \
     2 + lambda + 6 - 3 lambda - 4 lambda - 16 = 0 => \
-    -6 lambda - 8 = 0 => lambda = -4$
+    -6 lambda - 8 = 0 => lambda = 8/(-6) = -4/3)$
 
     Sustituyendo el valor de $lambda$ en la ecuación de $r$, obtenemos el punto de intersección, que es el punto medio entre la recta dada y su simétrica:
 
-    $display(P = (2 - 4, -2 - 4, 4) = (-2, -6, 4))$
+      $display(cases(delim: "{",
+         x = 2 + (-4/3) = 2 - 4/3 = 2/3,
+         y= -2 + (-4/3) = -2 - 4/3 = -10/3,
+         z = - (-4/3) = 4/3
+        ))$
+
+    $display(P = (2/3, -10/3, 4/3))$
 
     Ahora tomamos un punto de $r$, por ejemplo el punto que se obtiene al sustituir $lambda = 0$ en la ecuación de $r$: $P_0 = (2, -2, 0)$ y calculamos su simétrico respecto al plano $pi$.
 
@@ -437,21 +443,21 @@
 
     Calculamos la recta que pase por $P_0$ y es perpendicular al plano,  o lo que es lo mismo contiene a $P_0$ y tiene como vector director el vector normal al plano:
 
-    $ s_n equiv cases(delim: "{",
-       x = 2 + lambda,
-       y = -2 - 3 lambda,
-       z= 4 lambda
-      )
+    $ display(s_n equiv cases(delim: "{",
+       x = 2/3 + lambda,
+       y = -10/3 - 3 lambda,
+       z= 4/3 + 4 lambda
+      ))
      $
     Calculamos la intersección de $s_n$ con el plano $pi$:
 
-    $(2 + lambda) - 3(-2 - 3 lambda) + 4(4 lambda) - 16 = 0 => \
-    2 + lambda + 6 + 9 lambda + 16 lambda - 16 = 0 => \
+    $(2/3 + lambda) - 3(-10/3 - 3 lambda) + 4(4/3 + 4 lambda) - 16 = 0 => \
+    2/3 + lambda + 10/3 + 9 lambda + 16/3 - 16 = 0 => \
     26 lambda - 8 = 0 => lambda = 4/13$ 
 
     Sustituyendo el valor de $lambda$ en la ecuación de $s_n$, obtenemos el punto de intersección, que es la proyección ortogonal de $P_0$ sobre el plano $pi$:
 
-    $display(P' = (2 + 4/13, -2 - 3 dot 4/13, 4 dot 4/13) = (32/13, -34/13, 16/13))$
+    $display(P' = (2/3 + 4/13, -10/3 - 3 dot 4/13, 4/3 + 4 dot 4/13) = (32/13, -34/13, 16/13))$
 
     El simétrico de $P_0$ respecto al plano $pi$ es el simétrico de $P_0$ respecto a $P'$, luego $P'$ es el punto medio entre $P_0$ y su simétrico, con lo que podemos calcular el simétrico de $P_0$ respecto al plano $pi$ mediante:
 
@@ -473,10 +479,34 @@
          z = 32/13 lambda
         ) $
     
+    Podemos hacer un cambio de variable, ya que los vectores $(36/13, -52/13, 32/13)$ y $(36, -52, 32)$ son linealmente dependientes, con lo que marcan la misma dirección:
+
+    $ r' equiv cases(delim: "{",
+         x = 2 + 36 lambda,
+         y = -2 - 52 lambda,
+         z = 32 lambda
+        ) $
     ]
+
+    
   ],
   [
     #question()[Comprueba si el triángulo de vértices $A = (2,-1,4)$, $B = (1,3,-4)$ y $C = (-3,-1,3)$ es equilátero, isósceles o escaleno y halla su perímetro.]
+    #solution()[
+      Para clasificar el triángulo, calculamos la distancia entre cada par de vértices.
+
+      $display(d(A, B) = sqrt((2 - 1)^2 + (-1 - 3)^2 + (4 - (-4))^2) = sqrt(1 + 16 + 64) = sqrt(81) = 9)$
+
+      $display(d(B, C) = sqrt((1 - (-3))^2 + (3 - (-1))^2 + (-4 - 3)^2) = sqrt(16 + 16 + 49) = sqrt(81) = 9)$
+
+      $display(d(A, C) = sqrt((2 - (-3))^2 + (-1 - (-1))^2 + (4 - 3)^2) = sqrt(25 + 0 + 1) = sqrt(26))$
+
+      El triángulo es isósceles, ya que tiene dos lados iguales ($d(A, B) = d(B, C)$).
+
+      El perímetro del triángulo es la suma de las longitudes de sus lados:
+
+      $display(P = d(A, B) + d(B, C) + d(A, C) = 9 + 9 + sqrt(26) = 18 + sqrt(26))$
+    ]
   ],
   [
     #question()[Calcula la distancia del punto P al plano π:]

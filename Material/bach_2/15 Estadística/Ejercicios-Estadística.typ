@@ -28,7 +28,7 @@
   show-student-data: false,
   show-grade-table: false,
   // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
-  show-solutions: false,
+  // show-solutions: false,
   question-points-position: none,
 )
 #set math.cases(reverse: true)
@@ -234,26 +234,129 @@
   [
     #question()[Una encuesta reciente revela que en una ciudad el 35% de los adultos aprueba la gestión del equipo de gobierno municipal, mientras el resto la desaprueba. Si de la población se eligen al azar 8 personas, calcula:]
     #questions-columns(
-      [#subquestion()[La probabilidad de que ninguno apruebe la gestión.]],
-      [#subquestion()[La probabilidad de que la aprueben exactamente 4.]],
-      [#subquestion()[El número esperado de personas que la aprueba.]],
-      [#subquestion()[La desviación típica del número de personas que aprueban la gestión.]],
+      [#subquestion()[La probabilidad de que ninguno apruebe la gestión.]
+      #solution()[
+        La variable aleatoria $X$ que representa el número de personas que aprueban la gestión sigue una distribución binomial con parámetros $n = 8$ y $p = 0,35$ $~ B(8; "0,35")$.
+
+        La probabilidad de que ninguno apruebe la gestión es:
+
+        $display(P(X = 0) = binom(8, 0) ("0,35")^0 (1-"0,35")^8 =binom(8, 0) dot ("0,35")^0 dot ("0,65")^8 = 8!/(0! dot 8!) dot "1" dot "0,06561025" = "0,06561025")$]
+      ],
+      [#subquestion()[La probabilidad de que la aprueben exactamente 4.]
+      #solution()[
+        La variable aleatoria $X$ que representa el número de personas que aprueban la gestión sigue una distribución binomial con parámetros $n = 8$ y $p = 0,35$ $~ B(8; "0,35")$.
+
+        La probabilidad de que la aprueben exactamente 4 es:
+
+        $display(P(X = 4) = binom(8, 4) ("0,35")^4 (1-"0,35")^4 =70 dot ("0,35")^4 dot ("0,65")^4 = \ =
+         70 dot "0,015" dot "0,1785" approx "0,1874")$]
+      ],
+      [#subquestion()[El número esperado de personas que la aprueba.]
+      #solution()[
+        El número esperado de personas que la aprueba es:
+
+        $display(E(X) = n p = 8 dot "0,35" = "2,8")$]
+      ],
+      [#subquestion()[La desviación típica del número de personas que aprueban la gestión.]
+      #solution()[
+        La desviación típica del número de personas que aprueban la gestión es:
+
+        $display(sigma = sqrt(n p (1-p)) = sqrt(8 dot "0,35" dot "0,65") = sqrt("1,82") approx "1,349")$]
+      ],
     )
   ],
   [
     #question()[El 2% de los artículos producidos por una fábrica son defectuosos. Se envió un cargamento de 15 artículos a unos almacenes.]
     #questions-columns(
-      [#subquestion()[Calcula la probabilidad de que al menos dos artículos sean defectuosos.]],
-      [#subquestion()[Halla el número esperado de artículos defectuosos, la varianza y la desviación típica.]],
-      [#subquestion()[Se envía otro cargamento de 10000 artículos a otro almacén. Calcula de nuevo el número esperado de artículos defectuosos, la varianza y la desviación típica.]],
-    )
+      [#subquestion()[Calcula la probabilidad de que al menos dos artículos sean defectuosos.]
+      #solution()[
+        La variable aleatoria $X$ que representa el número de artículos defectuosos sigue una distribución binomial con parámetros $n = 15$ y $p = 0,02$ $~ B(15; "0,02")$.
+
+        La probabilidad de que al menos dos artículos sean defectuosos es el complemento de la probabilidad de que haya cero o un artículo defectuoso:
+
+        $display(P(X ≥ 2) = 1 - P(X ≤ 1) = 1 - (P(X = 0) + P(X = 1)))$
+
+        Calculamos cada una de estas probabilidades utilizando la fórmula de la distribución binomial:
+
+        $display(P(X = 0) = binom(15, 0) ("0,02")^0 (1-"0,02")^15 =binom(15, 0) dot ("0,02")^0 dot ("0,98")^15 = \ = 15!/(0! dot 15!) dot "1" dot "0,741"= "0,741")$
+
+        $display(P(X = 1) = binom(15, 1) ("0,02")^1 (1-"0,02")^14 =binom(15, 1) dot ("0,02")^1 dot ("0,98")^14 = \ =
+         15!/(1! dot 14!) dot "0,02" dot "0,755" = "0,226")$
+
+        Por lo tanto:
+
+        $display(P(X ≥ 2) = 1 - ("0,741" + "0,227") = "0,032")$
+      ]
+      ]
+      ,
+      [#subquestion()[Halla el número esperado de artículos defectuosos, la varianza y la desviación típica.]
+      #solution()[
+        El número esperado de artículos defectuosos es:
+
+        $display(E(X) = n p = 15 dot "0,02" = "0,3")$
+
+        La varianza es:
+
+        $display(V(X) = n p (1-p) = 15 dot "0,02" dot "0,98" = "0,294")$
+
+        La desviación típica es:
+
+        $display(sigma = sqrt(V(X)) = sqrt("0,294") approx "0,5422")$]
+      ],
+      [#subquestion()[Se envía otro cargamento de 10000 artículos a otro almacén. Calcula de nuevo el número esperado de artículos defectuosos, la varianza y la desviación típica.]
+      #solution()[
+        El número esperado de artículos defectuosos es:
+
+        $display(E(X) = n p = 10000 dot "0,02" = "200")$
+
+        La varianza es:
+
+        $display(V(X) = n p (1-p) = 10000 dot "0,02" dot "0,98" = "196")$
+
+        La desviación típica es:
+
+        $display(sigma = sqrt(V(X)) = sqrt("196") = "14")$
+      ]
+      ])
   ],  [
     #question()[Halla en cada caso la probabilidad indicada.]
     #questions-columns(
-      [#subquestion()[$Z ~ N(0, 1)$, $P(Z < 2, 72)$]],
-      [#subquestion()[$Z ~ N(0, 1)$, $P(Z > 1, 51)$]],
-      [#subquestion()[$Z ~ N(0, 1)$, $P(-2 < Z < 1, 92)$]],
-      [#subquestion()[$Z ~ N(0, 1)$, $P(-0, 24 ≤ Z < 2, 71)$]],
+      [#subquestion()[$Z ~ N(0, 1)$, $P(Z < 2, 72)$]
+      #solution()[
+        La variable aleatoria $Z$ que representa la distribución normal estándar sigue una distribución normal con media 0 y desviación típica 1 $~ N(0, 1)$.
+
+        La probabilidad de que $Z < 2,72$ es:
+
+        $display(P(Z < 2,72) = Phi(2,72) approx "0,99665")$
+      ]],
+      [#subquestion()[$Z ~ N(0, 1)$, $P(Z > 1, 51)$]
+      #solution()[
+        La variable aleatoria $Z$ que representa la distribución normal estándar sigue una distribución normal con media 0 y desviación típica 1 $~ N(0, 1)$.
+
+        La probabilidad de que $Z > 1,51$ es:
+
+        $display(P(Z > 1,51) = 1- P(Z<1,51) = 1 - Phi(1,51) approx 1 - "0,93448" = "0,06552")$
+      ]],
+      [#subquestion()[$Z ~ N(0, 1)$, $P(-2 < Z < 1, 92)$]
+      #solution()[
+        La variable aleatoria $Z$ que representa la distribución normal estándar sigue una distribución normal con media 0 y desviación típica 1 $~ N(0, 1)$.
+
+        La probabilidad de que $-2 < Z < 1,92$ es:
+
+        $display(P(-2 < Z < 1,92) = Phi(1,92) - Phi(-2) = Phi(1,92) - (1 - Phi(2)) = \ =
+        Phi(1,92) - 1 + Phi(2) = Phi(1,92) + Phi(2) - 1 = \ =
+        0.97260 + 0.97725 - 1 = 0.94985)$
+      ]],
+      [#subquestion()[$Z ~ N(0, 1)$, $P(-0, 24 ≤ Z < 2, 71)$]
+      #solution()[
+        La variable aleatoria $Z$ que representa la distribución normal estándar sigue una distribución normal con media 0 y desviación típica 1 $~ N(0, 1)$.
+
+        La probabilidad de que $-0,24 ≤ Z < 2,71$ es:
+
+        $display(P(-0,24 ≤ Z < 2,71) = Phi(2,71) - Phi(-0,24) = Phi(2,71) - (1 - Phi(0,24)) = \ =
+        Phi(2,71) - 1 + Phi(0,24) = Phi(2,71) + Phi(0,24) - 1 = \ =
+        0.99656 + 0.59483 - 1 = 0.59139)$]
+      ]
     )
   ],  [
     #question()[Halla en cada caso la probabilidad indicada.]
