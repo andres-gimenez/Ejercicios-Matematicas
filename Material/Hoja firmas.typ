@@ -10,7 +10,7 @@
 
 #align(center)[
   #text(size: 20pt, weight: "bold")[
-    HOJA DE CONTROL
+    Alumnos presentados a examen
   ]
 ]
 
@@ -21,9 +21,9 @@
 #v(1cm)
 
 #let fila() = (
-  table.cell(inset: (x: 6pt, y: 10pt))[],
-  table.cell(inset: (x: 6pt, y: 10pt))[],
-  table.cell(inset: (x: 6pt, y: 10pt))[],
+  table.cell(inset: (x: 6pt, y: 17pt))[],
+  table.cell(inset: (x: 6pt, y: 17pt))[],
+  table.cell(inset: (x: 6pt, y: 17pt))[],
 )
 
 #table(
@@ -32,7 +32,22 @@
 
   [*Nombre del alumno*], [*Grupo*], [*Firma*],
 
-  ..for _ in range(29) {
+  ..for _ in range(17) {
+    (
+      fila()
+    )
+  }
+)
+
+#pagebreak()
+
+#table(
+  columns: (6fr, 2fr, 3fr),
+  stroke: 0.9pt,
+
+  [*Nombre del alumno*], [*Grupo*], [*Firma*],
+
+  ..for _ in range(21) {
     (
       fila()
     )
