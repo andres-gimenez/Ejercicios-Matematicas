@@ -1,9 +1,9 @@
-name: Build Typst document (CI)
+name: Crear documentos de ejercicios Typst (CI)
 on: 
   push:
     paths: 
     - '.github/workflows/build.yaml'
-    - 'Material/**/*.typ'
+    - 'Material/**/Ejercicios-*.typ'
     - 'Material/**/*.yaml'
     - 'Material/**/*.toml'
 
@@ -41,7 +41,7 @@ jobs:
       - name: Compile Typst examples with solution to PDF
         shell: bash
         run: |
-          find ./Material -type f -name "*.typ" | while read -r archivo; do
+          find ./Material -type f -name "Ejercicios-*.typ" | while read -r archivo; do
               echo "Compilando: $archivo"
               typst compile "$archivo" --root . --input show-solutions=true || echo "Error en $archivo, continuando..."
           done
