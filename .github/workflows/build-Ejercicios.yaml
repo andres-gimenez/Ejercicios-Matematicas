@@ -58,7 +58,7 @@ jobs:
                 continue
             fi
 
-            mv "$f" "$dir/$base (soluciones).pdf"
+            mv "$f" "$dir/$base (Soluciones).pdf"
           done
 
       - name: Compile Typst examples without solution to PDF
