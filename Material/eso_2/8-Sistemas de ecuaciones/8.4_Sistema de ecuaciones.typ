@@ -1,4 +1,4 @@
-#import "@preview/g-exam:0.4.4": *
+#import "@local/g-exam:0.4.5": *
 
 #let config = yaml("../../config.yaml")
 

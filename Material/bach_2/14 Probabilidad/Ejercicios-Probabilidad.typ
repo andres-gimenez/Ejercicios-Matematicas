@@ -1,4 +1,4 @@
-#import "@local/g-exam:0.4.4": *
+#import "@local/g-exam:0.4.5": *
 #import "@preview/cetz:0.4.2"
 #import "@preview/cetz-plot:0.1.3"
 
