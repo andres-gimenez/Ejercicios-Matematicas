@@ -4,6 +4,10 @@ dictionaryDefinitions: []
 dictionaries:
   - es
   - en
-words: []
+words:
+  - colbreak
+  - pagebreak
+  - subquestion
+  - typst
 ignoreWords: []
 import: []
