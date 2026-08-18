@@ -113,7 +113,7 @@
       ],
       [#subquestion()[$display(mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; -&1, &1, &3, &2, &0; &0, &8, &7, &9, &4))$]
       #solution()[
-        (\*) Como el rango por filas y por columnas es el mismo, podemos hace convinaciones lineales por filas o por columnas.
+        (\*) Como el rango por filas y por columnas es el mismo, podemos hace combinaciones lineales por filas o por columnas.
 
         $display("rango"mat(&1, " "&0, &2, " "&1, -&1; &0, &2, -&1, &1, &2; -&1, &1, &3, &2, &0; &0, &8, &7, &9, &4) 
         stretch(=)^(f_3 <- f_3 + f_1 \ f_4 <- f_4 - 4 f_2)
