@@ -1,10 +1,10 @@
 author: 
   name: "Andrés Jorge Giménez Muñoz"
   email: "agimenezmunoz@educa.madrid.com" 
-  watermark: "Profesor: andrés"
+  watermark: "Profesor: Andrés"
 school:
-  name: "IES Gabriela Mistral"
-  logo: logo-ies_gabriela_mistral.png
+  name: "IES Humanes"
+  logo: logo-ies_humanes.png
 exam-info:
-   academic-period: "Curso 2025/2026"
+   academic-period: "Curso 2026/2027"
 show-solutions: true
