@@ -1,4 +1,4 @@
-#import "@local/g-exam:0.4.5": *
+#import "@preview/g-exam:0.4.5": *
 
 #let config = yaml("../../config.yaml")
 
@@ -10,7 +10,7 @@
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../../" + config.at("school").at("logo"))
+    logo: image("../../" + config.at("school").at("logo")),
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
@@ -19,12 +19,12 @@
     number: [Tabla Normal(0,1)],
     model: [v1],
   ),
-  
+
   language: "es",
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  show-solutions: sys.inputs.at("show-solutions", default: config.at("show-solutions")),
   question-points-position: none,
 )
 // #set math.cases(reverse: true)
@@ -32,7 +32,7 @@
 #set table(
   columns: 11,
   align: center,
-  stroke: 0.5pt
+  stroke: 0.5pt,
 )
 
 = Tabla de la Normal Estándar
@@ -61,9 +61,14 @@ $Z ~ N(0,1)$.
 
   let t = 1 / (1 + p * ax)
 
-  let y = 1 - (
-    (((a5*t + a4)*t + a3)*t + a2)*t + a1
-  ) * t * calc.exp(-ax*ax)
+  let y = (
+    1
+      - (
+        (((a5 * t + a4) * t + a3) * t + a2) * t + a1
+      )
+        * t
+        * calc.exp(-ax * ax)
+  )
 
   sign * y
 }
@@ -76,8 +81,7 @@ $Z ~ N(0,1)$.
 #let fmt(val, d) = {
   let s = str(calc.round(val, digits: d))
   let parts = s.split(".")
-  if parts.len() == 1 { s + "." + "0" * d }
-  else { s + "0" * (d - parts.at(1).len()) }
+  if parts.len() == 1 { s + "." + "0" * d } else { s + "0" * (d - parts.at(1).len()) }
 }
 
 #table(
@@ -86,23 +90,24 @@ $Z ~ N(0,1)$.
   stroke: 0.5pt + gray,
   // Cebra y encabezados
   fill: (x, y) => if y == 0 or x == 0 { gray.lighten(80%) },
-  
+
   table.header(
-    [*z*], 
-    ..range(0, 10).map(c => [*#fmt(c/100, 2)*])
+    [*z*],
+    ..range(0, 10).map(c => [*#fmt(c / 100, 2)*]),
   ),
 
   ..{
     let cells = ()
-    for r in range(0, 46) { // Hasta z = 3.0
+    for r in range(0, 46) {
+      // Hasta z = 3.0
       let base = r / 10
       cells.push([*#calc.round(base, digits: 2)*])
-      
+
       for c in range(0, 10) {
-        let z = base + c/100
+        let z = base + c / 100
         cells.push([#fmt(phi(z), 5)])
       }
     }
     cells
-  }
+  },
 )

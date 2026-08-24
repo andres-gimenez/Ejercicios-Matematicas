@@ -1,17 +1,17 @@
-#import "@local/g-exam:0.4.5": *
+#import "@preview/g-exam:0.4.5": *
 // #import "@preview/wrap-it:0.1.0": wrap-content
 
 #let config = yaml("../../config.yaml")
 
 #show: exam.with(
   author: (
-    name: "Andrés Jorge Giménez Muñoz", 
-    email: "agimenezmunoz@educa.madrid.com", 
+    name: "Andrés Jorge Giménez Muñoz",
+    email: "agimenezmunoz@educa.madrid.com",
     watermark: "Profesor: Andrés",
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../../" + config.at("school").at("logo"))
+    logo: image("../../" + config.at("school").at("logo")),
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
@@ -21,16 +21,16 @@
     content: "Trigonometría",
     model: [v1],
   ),
-  
+
   language: "es",
   decimal-separator: ",",
   date: datetime(year: 2025, month: 10, day: 20),
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  show-solutions: sys.inputs.at("show-solutions", default: config.at("show-solutions")),
   // draft: true,
   question-points-position: right,
-//   question-text-parameters: (size: 14pt, spacing:150%)
+  //   question-text-parameters: (size: 14pt, spacing:150%)
 
   // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
@@ -44,9 +44,9 @@
   if it.level == 1 {
     text(size: 22pt, weight: "bold")[#it \ ]
   } else if it.level == 2 {
-    text(fill:blue, size:14pt)[#it]
+    text(fill: blue, size: 14pt)[#it]
   } else if it.level == 3 {
-    text(fill:red, size:12pt)[#it]
+    text(fill: red, size: 12pt)[#it]
   } else {
     it
   }
@@ -68,11 +68,11 @@
 //         (bottom: 0.7pt + gray)
 //       }
 
-//     } 
+//     }
 //     else {
 //       if x == 0 {
 //         (right: 0.7pt + gray)
-//     } 
+//     }
 //     else {
 //       none
 //     }
@@ -84,21 +84,21 @@
   top + center,
   scope: "parent",
   float: true,
-  [= Trigonometría]
+  [= Trigonometría],
 )
 
 == Tabla trigonometrica
-    #table(
-      columns: (auto, auto, auto, auto, auto, auto),
-        [Grados], [$0$], [$30º$],  [$45º$],  [$60º$], [$90º$],
-        [Radianes], [0], [$pi/6$], [$pi/4$], [$pi/3$], [$pi/2$],
-        [$"sen"(x)$],           [$0$], [$1/2$],  [$sqrt(2)/2$],  [$sqrt(3)/2$], [$1$],
-        [$"cos"(x)$],           [$1$], [$sqrt(3)/2$], [$sqrt(2)/2$],  [$1/2$], [$0$],
-        [$"tg"(x)$],            [$0$], [$sqrt(3)/3$],  [$1$],  [$sqrt(3)$],  [$exists.not$],
-        [$"cotg"(x)$],          [$exists.not$], [$sqrt(3)$],   [$sqrt(2)/2$],  [$sqrt(3)/3$], [$1$],
-        [$"sec"(x)$],           [$1$], [$(2sqrt(3))/3$],  [$sqrt(2)$],  [$2$], [$exists.not$],
-        [$"cosec"(x)$],         [$exists.not$], [$2$],  [$sqrt(2)$],  [$(2sqrt(3))/3$], [$1$],
-    )
+#table(
+  columns: (auto, auto, auto, auto, auto, auto),
+  [Grados], [$0$], [$30º$], [$45º$], [$60º$], [$90º$],
+  [Radianes], [0], [$pi/6$], [$pi/4$], [$pi/3$], [$pi/2$],
+  [$"sen"(x)$], [$0$], [$1/2$], [$sqrt(2)/2$], [$sqrt(3)/2$], [$1$],
+  [$"cos"(x)$], [$1$], [$sqrt(3)/2$], [$sqrt(2)/2$], [$1/2$], [$0$],
+  [$"tg"(x)$], [$0$], [$sqrt(3)/3$], [$1$], [$sqrt(3)$], [$exists.not$],
+  [$"cotg"(x)$], [$exists.not$], [$sqrt(3)$], [$sqrt(2)/2$], [$sqrt(3)/3$], [$1$],
+  [$"sec"(x)$], [$1$], [$(2sqrt(3))/3$], [$sqrt(2)$], [$2$], [$exists.not$],
+  [$"cosec"(x)$], [$exists.not$], [$2$], [$sqrt(2)$], [$(2sqrt(3))/3$], [$1$],
+)
 
 
 
@@ -132,9 +132,9 @@
 //       table.hline(),
 //       [$display(f(x) = a^u)$], [$display(f'(x) = a^u dot u' dot ln (a))$],
 //       [$display(f(x) = e^u)$], [$display(f'(x) = e^u dot u' )$],
-//       [$display(f(x) = u^v)$], [$display(f'(x) = v dot u^(v-1) dot u' + u^v dot v' dot ln(u) )$],      
-      
-   
+//       [$display(f(x) = u^v)$], [$display(f'(x) = v dot u^(v-1) dot u' + u^v dot v' dot ln(u) )$],
+
+
 //     )
 //   ]
 

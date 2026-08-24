@@ -1,4 +1,4 @@
-#import "@local/g-exam:0.4.5": *
+#import "@preview/g-exam:0.4.5": *
 
 #let config = yaml("../../config.yaml")
 
@@ -10,7 +10,7 @@
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../../" + config.at("school").at("logo"))
+    logo: image("../../" + config.at("school").at("logo")),
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
@@ -20,10 +20,10 @@
     content: "Expresiones algebraicas y ecuaciones",
     // model: "Modelo A"
   ),
-  
+
   language: "es",
   decimal-separator: ",",
-  date: datetime(year:2025, month:1, day:8),
+  date: datetime(year: 2025, month: 1, day: 8),
   show-student-data: false,
   show-grade-table: false,
   question-points-position: none,
@@ -52,17 +52,17 @@
   // #subquestion()[$x-8=2x-11$] //(sol: x=)
   // #subquestion()[$9x+8=7x+6$] //(sol: x=)
   // #subquestion()[$7x+9=3+9x$] //(sol: x=)
-  
+
   // #subquestion()[$x+1=2x-7$] //(sol: x=)
   // #subquestion()[$6x+6=4+8x$] //(sol: x=)
   #subquestion()[$9+9x=17+5x$] //(sol: x=)
-  
+
   #subquestion()[$2x+3=3x$] //(sol: x=)
 
   // #subquestion()[$25-2x=3x+20$] //(sol: x=)
   // #subquestion()[$4x+1=3x+3$] //(sol: x=)
   // #subquestion()[$5x-3=10x-6$] //(sol: x=)
-#colbreak()
+  #colbreak()
   // #subquestion()[$1+8x=-16x+31$] //(sol: x=)
   // #subquestion()[$5x-11=15x-19$ ] //(sol: x=)
   // #subquestion()[$12x-48=-15x-30$] //(sol: x=)
@@ -85,7 +85,7 @@
   #subquestion()[$display(7x - 5 + 5x = 5 + 3x - 3)$]
   #subquestion()[$display(7 (5x + 3) = 5 + 3x)$]
   #subquestion()[$display(3 (2x + 5) = 4 (x - 2))$]
-#colbreak()
+  #colbreak()
   #subquestion()[$display((2x + 2)/5 = (x - 2) / 3)$]
   #subquestion()[$display((3x + 5)/7 = (2x - 3) / 4)$]
   #subquestion()[$display((2x+4)/5 = 5 - (3x+5)/3)$]
@@ -96,7 +96,7 @@
 #columns(2, gutter: 11pt)[
   #subquestion()[$display((3x)/2 + (2x)/3 = (1 + 3x)/2)$ ] //(sol: x=3/4)
   #subquestion()[$display((x-4)/6+(2x-4)/8=(5x)/10-(5x-6)/12)$] //(sol: x=)
-    
+
   // #subquestion()[$display((2x+4)/4-2(x-3)=5-(7x)/2)$] //(sol: x=)
   // #subquestion()[$display(x(x-1)-(x-3)=x^2-1-(x-2))$] //(sol: x=)
   // #subquestion()[$display((x-5)/2-(2x-4)/12=(5-x)/4-x/3)$] //(sol: x=)
@@ -118,7 +118,7 @@
   // #subquestion()[$display(2 - [3 - 2 (x+1)] = 3x + 2 [x - (3+2x)])$] //(sol: x=)
   #subquestion()[$display(x + 1/2 [x - 3/2 (4 -3x)] = 2/3 (1 - (5x)/2))$] //(sol: x=)
 ]
-    
+
 #question()[Resuelve las siguientes ecuaciones de 2º grados:]
 #columns(2, gutter: 11pt)[
   #subquestion()[$display(x^2-5x+6 = 0)$] //(sol: x=)
@@ -138,73 +138,94 @@
 
 #question()[Resuelve los siguientes sistemas de ecuaciones:]
 #columns(2, gutter: 11pt)[
- #subquestion()[
-    $display(cases( delim: "{",
-              2&x - 3&y  &= -&1 ,
-              3&x + 2&y  &= &5
-            ))$
-  ]
-  
   #subquestion()[
-    $display(cases( delim: "{",
-             -3&x &- 4&y &= &5 ,
-              -2&x &+ 3&y &= &9
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        2&x - 3&y &= -&1,
+        3&x + 2&y &= &5
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-             &x &+ &y &= &7 ,
-             &x &- &y &= &1
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        -3&x &- 4&y &= &5,
+        -2&x &+ 3&y &= &9
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-             2&x &+ &y &= &5 ,
-              &x &- &y &= &3
-            ))$
-  ]
-#colbreak()
-  #subquestion()[
-    $display(cases( delim: "{",
-              3&x &- &y &= &4 ,
-              2&x &+ &y &= &7
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        &x &+ &y &= &7,
+        &x &- &y &= &1
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-              4&x &- 3&y &= &2 ,
-              2&x &+ &y &= &9
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        2&x &+ &y &= &5,
+        &x &- &y &= &3
+      )
+    )$
+  ]
+  #colbreak()
+  #subquestion()[
+    $display(
+      cases(
+        delim: "{",
+        3&x &- &y &= &4,
+        2&x &+ &y &= &7
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-              5&x &+ 2&y &= &18 ,
-              3&x &- &y &= &7
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        4&x &- 3&y &= &2,
+        2&x &+ &y &= &9
+      )
+    )$
+  ]
+
+  #subquestion()[
+    $display(
+      cases(
+        delim: "{",
+        5&x &+ 2&y &= &18,
+        3&x &- &y &= &7
+      )
+    )$
   ]
 ]
 
-#question()[Una tienda vende camisetas y pantalones. 
-Si una persona compra 3 camisetas y 2 pantalones y paga 80€, 
-su amiga compra 4 camisetas y un pantalón y paga 65€.
-¿Cuánto cuesta comprar una camiseta y un pantalón juntos?]
+#question()[Una tienda vende camisetas y pantalones.
+  Si una persona compra 3 camisetas y 2 pantalones y paga 80€,
+  su amiga compra 4 camisetas y un pantalón y paga 65€.
+  ¿Cuánto cuesta comprar una camiseta y un pantalón juntos?]
 
-#question()[Un autobús transporta 72 personas. 
-Hay adultos y niños en el autobús. 
-Si el número de adultos es el doble que el de los niños, ¿cuántos adultos y niños hay en el autobús?]
+#question()[Un autobús transporta 72 personas.
+  Hay adultos y niños en el autobús.
+  Si el número de adultos es el doble que el de los niños, ¿cuántos adultos y niños hay en el autobús?]
 
-#question()[En una frutería, dos kilos de manzanas y tres kilos de naranjas cuestan 12 euros. 
-Tres kilos de manzanas y un kilo de naranjas cuestan 10 euros. 
-¿Cuánto cuesta cada kilo de manzanas y de naranjas?]
+#question()[En una frutería, dos kilos de manzanas y tres kilos de naranjas cuestan 12 euros.
+  Tres kilos de manzanas y un kilo de naranjas cuestan 10 euros.
+  ¿Cuánto cuesta cada kilo de manzanas y de naranjas?]
 
-#question()[En una granja hay gallinas y conejos. 
-En total hay 20 animales y entre todos tienen 56 patas. 
-¿Cuántas gallinas y cuántos conejos hay en la granja?]
+#question()[En una granja hay gallinas y conejos.
+  En total hay 20 animales y entre todos tienen 56 patas.
+  ¿Cuántas gallinas y cuántos conejos hay en la granja?]
 
-#question()[En un partido de baloncesto, un equipo anotó 76 puntos. 
-Este equipo consiguió un total de 30 canastas, algunas de 2 puntos y otras de 3 puntos. 
-¿Cuántas canastas de cada tipo marcaron?]
+#question()[En un partido de baloncesto, un equipo anotó 76 puntos.
+  Este equipo consiguió un total de 30 canastas, algunas de 2 puntos y otras de 3 puntos.
+  ¿Cuántas canastas de cada tipo marcaron?]

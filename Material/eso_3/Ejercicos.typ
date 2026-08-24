@@ -1,11 +1,11 @@
-#import "@local/g-exam:0.4.5": *
+#import "@preview/g-exam:0.4.5": *
 #import "@preview/cetz:0.4.2"
 #import "@preview/cetz-plot:0.1.3"
 
 #show: exam.with(
   author: (
-    name: "Andrés Jorge Giménez Muñoz", 
-    email: "agimenezmunoz@educa.madrid.com", 
+    name: "Andrés Jorge Giménez Muñoz",
+    email: "agimenezmunoz@educa.madrid.com",
     watermark: "Profesor: Andrés",
   ),
   school: (
@@ -20,7 +20,7 @@
     // content: [],
     model: [v1],
   ),
-  
+
   language: "es",
   decimal-separator: ",",
   date: datetime(year: 2025, month: 10, day: 22),
@@ -29,7 +29,7 @@
   show-solutions: true,
   // draft: true,
   question-points-position: right,
-//   question-text-parameters: (size: 14pt, spacing:150%)
+  //   question-text-parameters: (size: 14pt, spacing:150%)
 
   // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )

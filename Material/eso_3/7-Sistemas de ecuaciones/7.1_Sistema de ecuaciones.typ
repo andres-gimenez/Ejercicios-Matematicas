@@ -1,4 +1,4 @@
-#import "@local/g-exam:0.4.5": *
+#import "@preview/g-exam:0.4.5": *
 
 #let config = yaml("../../config.yaml")
 
@@ -10,7 +10,7 @@
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../../" + config.at("school").at("logo"))
+    logo: image("../../" + config.at("school").at("logo")),
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
@@ -18,15 +18,14 @@
     academic-subject: "Matemáticas",
     number: "Ejercicios",
     content: "Sistema de ecuaciones lineales",
-
   ),
-  
+
   language: "es",
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: false,
   question-points-position: none,
-// show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  // show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
 )
 
 #set math.cases(reverse: true)
@@ -35,31 +34,43 @@
 
 #columns(2, gutter: 11pt)[
   #subquestion()[
-    $display(cases( delim: "{",
-              4&x - &y &= 1&8 ,
-              2&x - 3&y &= &4
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        4&x - &y &= 1&8,
+        2&x - 3&y &= &4
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-              &x + 3&y  &= &9 ,
-              2&x - 2&y  &= &2
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        &x + 3&y &= &9,
+        2&x - 2&y &= &2
+      )
+    )$
   ]
   #colbreak()
 
   #subquestion()[
-    $display(cases( delim: "{",
-              2&x - 3&y  &= -&1 ,
-              3&x + 2&y  &= &5
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        2&x - 3&y &= -&1,
+        3&x + 2&y &= &5
+      )
+    )$
   ]
   #subquestion()[
-    $display(cases( delim: "{",
-             -3&x &- 4&y &= &5 ,
-              -2&x &+ 3&y &= &9
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        -3&x &- 4&y &= &5,
+        -2&x &+ 3&y &= &9
+      )
+    )$
   ]
 ]
 
@@ -67,87 +78,120 @@
 
 #columns(2, gutter: 11pt)[
   #subquestion()[
-    $display(cases( delim: "{",
-              4&x - &y &= 1&8 ,
-              2&x - 3&y &= &4
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        4&x - &y &= 1&8,
+        2&x - 3&y &= &4
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-              3&x - &y  &= &5 ,
-              4&x + &y  &= &9
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        3&x - &y &= &5,
+        4&x + &y &= &9
+      )
+    )$
   ]
-  
+
 
   #subquestion()[
-    $display(cases( delim: "{",
-              2&x - 3&y  &= -&1 ,
-              3&x + 2&y  &= &5
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        2&x - 3&y &= -&1,
+        3&x + 2&y &= &5
+      )
+    )$
   ]
 
   #colbreak()
   #subquestion()[
-    $display(cases( delim: "{",
-             -3&x &- 4&y &= &5 ,
-              -2&x &+ 3&y &= &9
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        -3&x &- 4&y &= &5,
+        -2&x &+ 3&y &= &9
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-             -3&x &- 4&y &= &5 ,
-              -2&x &+ 3&y &= &9
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        -3&x &- 4&y &= &5,
+        -2&x &+ 3&y &= &9
+      )
+    )$
   ]
 ]
 
 #question()[Resuelve los siguientes sistemas de ecuaciones por el método de reducción:]
 
 #columns(2, gutter: 11pt)[
- 
+
   #subquestion()[
-    $display(cases( delim: "{",
-              3&x - &y  &= &5 ,
-              4&x + &y  &= &9
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        3&x - &y &= &5,
+        4&x + &y &= &9
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-             &x &+ &y &= &7 ,
-             &x &- &y &= &1
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        &x &+ &y &= &7,
+        &x &- &y &= &1
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-             2&x &+ &y &= &5 ,
-              &x &- &y &= &3
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        2&x &+ &y &= &5,
+        &x &- &y &= &3
+      )
+    )$
   ]
-#colbreak()
+  #colbreak()
   #subquestion()[
-    $display(cases( delim: "{",
-              3&x &- &y &= &4 ,
-              2&x &+ &y &= &7
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        3&x &- &y &= &4,
+        2&x &+ &y &= &7
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-              4&x &- 3&y &= &2 ,
-              2&x &+ &y &= &9
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        4&x &- 3&y &= &2,
+        2&x &+ &y &= &9
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-              5&x &+ 2&y &= 1&8 ,
-              3&x &- &y &= &7
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        5&x &+ 2&y &= 1&8,
+        3&x &- &y &= &7
+      )
+    )$
   ]
 ]
 
@@ -155,31 +199,43 @@
 
 #columns(2, gutter: 11pt)[
   #subquestion()[
-    $display(cases( delim: "{",
-             2&x &- &y &= -&1 ,
-             &x &+ &y &= &4
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        2&x &- &y &= -&1,
+        &x &+ &y &= &4
+      )
+    )$
   ]
 
   #subquestion()[
-    $display(cases( delim: "{",
-             &x &- &y &= &3 ,
-             2&x &+ &y &= &6
-            ))$
+    $display(
+      cases(
+        delim: "{",
+        &x &- &y &= &3,
+        2&x &+ &y &= &6
+      )
+    )$
   ]
   #colbreak()
-    #subquestion()[
-    $display(cases( delim: "{",
-             &x &+ &y &= &2 ,
-             3&x &- &y &= &6
-            ))$
-    ]
-    
-    #subquestion()[
-    $display(cases( delim: "{",
-             2&x &- &y &= &4 ,
-             &x &+ &y &= &5
-            ))$
-    ]
+  #subquestion()[
+    $display(
+      cases(
+        delim: "{",
+        &x &+ &y &= &2,
+        3&x &- &y &= &6
+      )
+    )$
+  ]
+
+  #subquestion()[
+    $display(
+      cases(
+        delim: "{",
+        2&x &- &y &= &4,
+        &x &+ &y &= &5
+      )
+    )$
+  ]
 ]
 

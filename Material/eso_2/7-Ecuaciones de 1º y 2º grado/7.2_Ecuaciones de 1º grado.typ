@@ -1,4 +1,4 @@
-#import "@local/g-exam:0.4.5": *
+#import "@preview/g-exam:0.4.5": *
 
 #let config = yaml("../../config.yaml")
 
@@ -10,7 +10,7 @@
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../../" + config.at("school").at("logo"))
+    logo: image("../../" + config.at("school").at("logo")),
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
@@ -20,10 +20,10 @@
     content: "Ecuaciones de 1º grado",
     // model: "Modelo A"
   ),
-  
+
   language: "es",
   decimal-separator: ",",
-  date: datetime(year:2025, month:1, day:8),
+  date: datetime(year: 2025, month: 1, day: 8),
   show-student-data: false,
   show-grade-table: false,
   question-points-position: none,
@@ -52,17 +52,17 @@
   // #subquestion()[$x-8=2x-11$]
   // #subquestion()[$9x+8=7x+6$]
   // #subquestion()[$7x+9=3+9x$]
-  
+
   // #subquestion()[$x+1=2x-7$]
   // #subquestion()[$6x+6=4+8x$]
   #subquestion()[$9+9x=17+5x$]
-  
+
   #subquestion()[$2x+3=3x$]
 
   // #subquestion()[$25-2x=3x+20$]
   // #subquestion()[$4x+1=3x+3$]
   // #subquestion()[$5x-3=10x-6$]
-#colbreak()
+  #colbreak()
   // #subquestion()[$1+8x=-16x+31$]
   // #subquestion()[$5x-11=15x-19$ ]
   // #subquestion()[$12x-48=-15x-30$]
@@ -85,7 +85,7 @@
   #subquestion()[$display(7x - 5 + 5x = 5 + 3x - 3)$]
   #subquestion()[$display(7 (5x + 3) = 5 + 3x)$]
   #subquestion()[$display(3 (2x + 5) = 4 (x - 2))$]
-#colbreak()
+  #colbreak()
   #subquestion()[$display((2x + 2)/5 = (x - 2) / 3)$]
   #subquestion()[$display((3x + 5)/7 = (2x - 3) / 4)$]
   #subquestion()[$display((2x+4)/5 = 5 - (3x+5)/3)$]
@@ -96,7 +96,7 @@
 #columns(2, gutter: 11pt)[
   #subquestion()[$display((3x)/2 + (2x)/3 = (1 + 3x)/2)$ ] //(sol: x=3/4)
   #subquestion()[$display((x-4)/6+(2x-4)/8=(5x)/10-(5x-6)/12)$]
-    
+
   // #subquestion()[$display((2x+4)/4-2(x-3)=5-(7x)/2)$]
   // #subquestion()[$display(x(x-1)-(x-3)=x^2-1-(x-2))$]
   // #subquestion()[$display((x-5)/2-(2x-4)/12=(5-x)/4-x/3)$]
@@ -118,14 +118,14 @@
   // #subquestion()[$display(2 - [3 - 2 (x+1)] = 3x + 2 [x - (3+2x)])$]
   #subquestion()[$display(x + 1/2 [x - 3/2 (4 -3x)] = 2/3 (1 - (5x)/2))$]
 ]
-   
+
 #question()[Una empresa de transporte nos cobra 5€ por paquete más 3€ por kg enviado. Si nos ha cobrado 40€ por un porte ¿Cuanto pesaba el el paquete? ]
 
 #question()[Un taxista nos cobra 7€ de bajada de bandera más 4€ por kilómetro recorrido. ¿Cuantos kilómetros podemos hace en el taxi por 55€?]
 
 #question()[Dos personas salen al mismo tiempo desde dos puntos separados 120 km, y caminan una hacia la otra.
-Una camina a 4 km/h y la otra a 6 km/h. 
-¿Donde se encuentran?]
+  Una camina a 4 km/h y la otra a 6 km/h.
+  ¿Donde se encuentran?]
 
 // #question()[Una máquina A tarda 6 horas menos que otra máquina B en realizar un trabajo.
 // Trabajando juntas tardan 4 horas en hacerlo. ¿Cuánto tarda cada máquina por separado?]

@@ -1,4 +1,4 @@
-#import "@local/g-exam:0.4.5": *
+#import "@preview/g-exam:0.4.5": *
 #import "@preview/cetz:0.4.2"
 #import "@preview/cetz-plot:0.1.3"
 
@@ -12,7 +12,7 @@
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../../" + config.at("school").at("logo"))
+    logo: image("../../" + config.at("school").at("logo")),
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
@@ -22,7 +22,7 @@
     // content: [($X->infinity$)],
     model: [v1],
   ),
-  
+
   language: "es",
   decimal-separator: ",",
   show-student-data: false,
@@ -37,125 +37,155 @@
   [
     #question()[Resuelve los siguientes sistemas de ecuaciones lineales:]
     #questions-columns(
-    [#subquestion()[
-        $display(cases(delim: "{",
-          2&x &+ &3&y  &=  &5 ,
-         -&x &+ &4&y  &= -&1
-        ))$]
-    ],
-    [
+      [#subquestion()[
+          $display(
+            cases(
+              delim: "{",
+              2&x &+ &3&y &= &5,
+              -&x &+ &4&y &= -&1
+            )
+          )$]
+      ],
+      [
         #subquestion()[
-        $display(cases(delim: "{",
-          & &x &- & &y &+ 3&z= &1 ,
-          &3&x &+ &2&y &+ 2&z= &4,
-          & &  &- &5&y &+ 7&z= -&1
-        ))$
+          $display(
+            cases(
+              delim: "{",
+              & &x &- & &y &+ 3&z= &1,
+              &3&x &+ &2&y &+ 2&z= &4,
+              & & &- &5&y &+ 7&z= -&1
+            )
+          )$
         ]
         #solution()[$display(x=λ "," y = 5/4 - 7/8 λ "," z = 3/4 - 5/8 λ)$]
-    ],
-    [
+      ],
+      [
         #subquestion()[
-        $display(cases(delim: "{",
-           &x &+ &  &y &+ &z= &3,
-           &  &  &  &y &+ &z= &5,
-           &x &  &  &  &+ &z= &4,
-          2&x &  &  &  &+ &z= &2
-        ))$
+          $display(
+            cases(
+              delim: "{",
+              &x &+ & &y &+ &z= &3,
+              & & & &y &+ &z= &5,
+              &x & & & &+ &z= &4,
+              2&x & & & &+ &z= &2
+            )
+          )$
         ]
         #solution()[$x=-2, y = -1, z = 6$]
-    ],
-    [
+      ],
+      [
         #subquestion()[
-        $display(cases(delim: "{",
-           & &x &+ &  &y +& &z  &-& &t &= &0,
-           & &x &+ &  &y  & &   &-& &t &= -&1,
-           &2&x &+ & 2&y +& &z  &-&2&t &= -&1,
-        ))$
+          $display(
+            cases(
+              delim: "{",
+              & &x &+ & &y +& &z &-& &t &= &0,
+              & &x &+ & &y & & &-& &t &= -&1,
+              &2&x &+ & 2&y +& &z &-&2&t &= -&1,
+            )
+          )$
         ]
         #solution()[$x=λ, y = μ - λ -1, z = 1, t = μ$]
-    ]
+      ],
     )
   ],
   [
     #question()[Discutir y resolver el siguiente sistema en función de los valores de $m$:
 
-     $display(cases(delim: "{",
-           &3&x &+ & 2&y - &m&z &= &4,
-           & &x &- &  &y + & &z &= &1,
-           &2&x &- &  &y + & &z &= &m,
-        ))$
+      $display(
+        cases(
+          delim: "{",
+          &3&x &+ & 2&y - &m&z &= &4,
+          & &x &- & &y + & &z &= &1,
+          &2&x &- & &y + & &z &= &m,
+        )
+      )$
     ]
     #solution()[
-       Definimos la matriz del sistema y su ampliada:
-        $display((A | B) = mat(augment: #3, &3, &2, -&m, &4; &1, -&1, &1, &1; &2, -&1, &1, &m))$
+      Definimos la matriz del sistema y su ampliada:
+      $display((A | B) = mat(augment: #3, &3, &2, -&m, &4; &1, -&1, &1, &1; &2, -&1, &1, &m))$
 
-        *Calculamos el rango de A*
+      *Calculamos el rango de A*
 
-        Para calcular el rango de A, calculamos el valor de un menor de orden 3 de A:
+      Para calcular el rango de A, calculamos el valor de un menor de orden 3 de A:
 
-        $display(mat(delim: "|", &3, &2, -&m; &1, -&1, &1; &2, -&1, &1) = \ = 
-        3 dot (-1) dot 1 + 2 dot 2 dot 1 + (-m) dot (-1) dot 1  - (-m) dot (-1)dot 2 - 2 dot 1 dot 1 - 3 dot 1 dot (-1) = \ =
-        -3 + 4 +m -2m - 2 + 3 = m - 2)$
+      $display(
+        mat(delim: "|", &3, &2, -&m; &1, -&1, &1; &2, -&1, &1) = \ =
+        3 dot (-1) dot 1 + 2 dot 2 dot 1 + (-m) dot (-1) dot 1 - (-m) dot (-1)dot 2 - 2 dot 1 dot 1 - 3 dot 1 dot (-1) = \ =
+        -3 + 4 +m -2m - 2 + 3 = m - 2
+      )$
 
-        - Si *$m = 2$* el menor de orden 3 es cero, luego el rango de $A < 2$. 
-          - Tenemos que buscar un menor de orden 2, de A, distinto de cero.
-  
-           $mat(delim: "|", &3, &2; &1, -&1) = -3 -2 = -5 != 0$
+      - Si *$m = 2$* el menor de orden 3 es cero, luego el rango de $A < 2$.
+        - Tenemos que buscar un menor de orden 2, de A, distinto de cero.
 
-           Luego el rango de A, si $m = 2$ es 2. 
-          - Ahora calculamos el rango de B para $m = 2$:
+          $mat(delim: "|", &3, &2; &1, -&1) = -3 -2 = -5 != 0$
+
+          Luego el rango de A, si $m = 2$ es 2.
+        - Ahora calculamos el rango de B para $m = 2$:
 
 
-            $B = display(mat(&3, &2, -&2, &4; &1, -&1, &1, &1; &2, -&1, &1, &2))$
+          $B = display(mat(&3, &2, -&2, &4; &1, -&1, &1, &1; &2, -&1, &1, &2))$
 
-            Tomamos el menor de orden 3 de B:
+          Tomamos el menor de orden 3 de B:
 
-             $display(mat(delim: "|", &3, &2, &4; &1, -&1, &1; &2, -&1, &1) = -6+4-4+8-4+3 = 3)$
-  
-            Al ser el menor de orden 3 distinto de cero, el rango de B es 3.
+          $display(mat(delim: "|", &3, &2, &4; &1, -&1, &1; &2, -&1, &1) = -6+4-4+8-4+3 = 3)$
 
-            Si el rango de A es distinto que el rango de B, el sistema es incompatible. Luego para $m = 2$ *el sistema es incompatible*.
+          Al ser el menor de orden 3 distinto de cero, el rango de B es 3.
 
-        - Si *$m != 2$* el menor de orden 3 es distinto de cero, luego el rango de $A = 3$. Si el rango de A es 3, el rango de B también es 3, ya que podemos tomar el mismo menor de orden 3 para la matriz ampliada. 
-          - Si rango A = rango B = nº de incógnitas, *el sistema es compatible determinado*. 
-  
+          Si el rango de A es distinto que el rango de B, el sistema es incompatible. Luego para $m = 2$ *el sistema es incompatible*.
+
+      - Si *$m != 2$* el menor de orden 3 es distinto de cero, luego el rango de $A = 3$. Si el rango de A es 3, el rango de B también es 3, ya que podemos tomar el mismo menor de orden 3 para la matriz ampliada.
+        - Si rango A = rango B = nº de incógnitas, *el sistema es compatible determinado*.
+
       Resolvemos el sistema para $m!=2$:
 
       Tenemos $|A| = m - 2$, calculado anteriormente:
 
-      $display(Delta_x = mat(delim: "|", &4, &2, -&m; &1, -&1, &1; &m, -&1, &1) =
-      -4+2m+m-m^2-2+4 = -m^2+3m-2 )$
-
-      $display(Delta_y = mat(delim: "|", &3, &4, -&m; &1, &1, &1; &2, &m, &1) =
-      3 +8-m^2+2m-4-3m = -m^2-m+7
+      $display(
+        Delta_x = mat(delim: "|", &4, &2, -&m; &1, -&1, &1; &m, -&1, &1) =
+        -4+2m+m-m^2-2+4 = -m^2+3m-2
       )$
 
-      $display(Delta_z = mat(delim: "|", &3, &2, &4; &1, -&1, &1; &2, -&1, &m) = 
-      -3m+4-4+8-2m+3 = -5m+11 )$
+      $display(
+        Delta_y = mat(delim: "|", &3, &4, -&m; &1, &1, &1; &2, &m, &1) =
+        3 +8-m^2+2m-4-3m = -m^2-m+7
+      )$
 
-      $display(x = Delta_x/Delta = (-m^2+3m-2)/(m-2) \
-       y = Delta_y/Delta = (-m^2-m+7)/(m-2) \
-        z = Delta_z/Delta = (-5m+11)/(m-2))$
+      $display(
+        Delta_z = mat(delim: "|", &3, &2, &4; &1, -&1, &1; &2, -&1, &m) =
+        -3m+4-4+8-2m+3 = -5m+11
+      )$
+
+      $display(
+        x = Delta_x/Delta = (-m^2+3m-2)/(m-2) \
+        y = Delta_y/Delta = (-m^2-m+7)/(m-2) \
+        z = Delta_z/Delta = (-5m+11)/(m-2)
+      )$
     ]
   ],
   [
     #question()[Discutir y resolver el siguiente sistema en función de los valores de $a$:
 
-     $display(cases(delim: "{",
-           &a&x &- &  &y &+ & &z &= &2,
-           & &x &+ & a&y &- & &z &= &1,
-           & &x &  &  &  &- & &z &= &0,
-        ))$
+      $display(
+        cases(
+          delim: "{",
+          &a&x &- & &y &+ & &z &= &2,
+          & &x &+ & a&y &- & &z &= &1,
+          & &x & & & &- & &z &= &0,
+        )
+      )$
     ]
   ],
   [
     #question()[Discutir el siguiente sistema en función de los valores de $a$ y $b$:
 
-     $display(cases(delim: "{",
-           & &x &+& a&y &+& 2&z &= &3,
-           & &x &-& 3&y &-& &z &= -&1,
-           &-&x &+& 8&y &+&4&z &= &b,
-        ))$
+      $display(
+        cases(
+          delim: "{",
+          & &x &+& a&y &+& 2&z &= &3,
+          & &x &-& 3&y &-& &z &= -&1,
+          &-&x &+& 8&y &+&4&z &= &b,
+        )
+      )$
     ]
     #solution()[
       Definimos la matriz del sistema y su ampliada:
@@ -165,19 +195,21 @@
 
       Para calcular el rango de A, calculamos el valor de un menor de orden 3 de A:
 
-      $display(mat(delim: "|", &1, &a, &2; &1, -&3, -&1; -&1, &8, &4) = \ =
-      1 dot (-3) dot 4 + a dot (-1) dot (-1) + (-1) dot 1 dot 8 - 2 dot (-3) dot (-1) - a dot 1 dot 4 - 1 dot (-1) dot 8 = \ =
-      -12 + a - 8 + 6 - 4a + 8 = 6 - 3a)$
+      $display(
+        mat(delim: "|", &1, &a, &2; &1, -&3, -&1; -&1, &8, &4) = \ =
+        1 dot (-3) dot 4 + a dot (-1) dot (-1) + (-1) dot 1 dot 8 - 2 dot (-3) dot (-1) - a dot 1 dot 4 - 1 dot (-1) dot 8 = \ =
+        -12 + a - 8 + 6 - 4a + 8 = 6 - 3a
+      )$
 
       Igualamos el menor de orden 3 a cero para encontrar los valores de $a$ para los que el rango de A es menor que 3:
 
-       $display(6 - 3a = 0 => a = 6/3 = 2)$
+      $display(6 - 3a = 0 => a = 6/3 = 2)$
 
-      - Si *$a != 2$ * el menor de orden 3 es distinto de cero, luego el rango de $A = 3$. Si el rango de A es 3, el rango de B también es 3, ya que podemos tomar el mismo menor de orden 3 para la matriz ampliada. 
-        
+      - Si *$a != 2$ * el menor de orden 3 es distinto de cero, luego el rango de $A = 3$. Si el rango de A es 3, el rango de B también es 3, ya que podemos tomar el mismo menor de orden 3 para la matriz ampliada.
+
         Si rango A = rango B = nº de incógnitas, *el sistema es compatible determinado*.
 
-      - Si *$a = 2$* el menor de orden 3 es cero, luego el rango de $A < 3$. 
+      - Si *$a = 2$* el menor de orden 3 es cero, luego el rango de $A < 3$.
         Tenemos que buscar un menor de orden 2, de A, distinto de cero.
 
         Ahora tenemos:
@@ -188,7 +220,7 @@
 
         $display(mat(delim: "|", &1, &2; &1, -&3) = -3-2 = -5 !=0)$
 
-        Luego el rango de A para $a = 2$, es $2$. 
+        Luego el rango de A para $a = 2$, es $2$.
 
         Ahora calculamos el rango de B para $a = 2$:
 
@@ -196,13 +228,15 @@
 
         Tomamos el menor de orden 3 de B:
 
-        $display(mat(delim: "|", &1, &2, &3; &1, -&3, -&1; -&1, &8, &b) = 
-         1 dot (-3) dot b + 2 dot (-1) dot (-1) + 3 dot 1 dot 8 - 3 dot (-3) dot (-1) - 2 dot 1 dot b - 1 dot (-1) dot 8 = \ =
-         -3b + 2 + 24 - 9 - 2b + 8 = 25-5b)$
+        $display(
+          mat(delim: "|", &1, &2, &3; &1, -&3, -&1; -&1, &8, &b) =
+          1 dot (-3) dot b + 2 dot (-1) dot (-1) + 3 dot 1 dot 8 - 3 dot (-3) dot (-1) - 2 dot 1 dot b - 1 dot (-1) dot 8 = \ =
+          -3b + 2 + 24 - 9 - 2b + 8 = 25-5b
+        )$
 
         Igualamos el valor del menor a cero:
 
-        $display(25-5b = 0 => b = 25/5 = 5)$ 
+        $display(25-5b = 0 => b = 25/5 = 5)$
 
         - Si $a = 2$ y $b = 5$ rango A = 2 y rango B = 2 < nº de incógnitas, luego *el sistema es compatible indeterminado*.
         - Si $a = 2$ y $b != 5$ rango A = 2 y rango B = 3, luego *el sistema es incompatible*.
@@ -211,59 +245,68 @@
   [
     #question()[Discutir y resolver el siguiente sistema en función de los valores de $a$:
 
-     $display(cases(delim: "{",
-           &a&x &+ &  &y &+ & &z &= &1,
-           & &x &+ & a&y &+ & &z &= &a,
-           & &x &+ &  &y &+ & a&z &= &a^2,
-        ))$
+      $display(
+        cases(
+          delim: "{",
+          &a&x &+ & &y &+ & &z &= &1,
+          & &x &+ & a&y &+ & &z &= &a,
+          & &x &+ & &y &+ & a&z &= &a^2,
+        )
+      )$
     ]
   ],
   [
     #question()[Obtener el valor de $k$ para el sistema sea compatible determinado:
 
-        $display(cases( delim: "{",
-               &x &  & &   &+ 2&z   &=  &3 ,
-              3&x &+ & &y  &+  &z   &= -&1 ,
-               &  &  &2&y  &-  &z   &= -&2 ,
-               &x &- & &y  &+  k&z  &= -&5
-            ))$
+      $display(
+        cases(
+          delim: "{",
+          &x & & & &+ 2&z &= &3,
+          3&x &+ & &y &+ &z &= -&1,
+          & & &2&y &- &z &= -&2,
+          &x &- & &y &+ k&z &= -&5
+        )
+      )$
     ]
     #solution()[
-        Para que el sistema sea compatible determinado, el rango de la matriz de los coeficientes debe ser igual al rango de la matriz ampliada, y ambos deben ser iguales al número de incógnitas.
+      Para que el sistema sea compatible determinado, el rango de la matriz de los coeficientes debe ser igual al rango de la matriz ampliada, y ambos deben ser iguales al número de incógnitas.
 
-        Calculamos el rango de la matriz de los coeficientes y el de la matriz ampliada:
+      Calculamos el rango de la matriz de los coeficientes y el de la matriz ampliada:
 
-        $display(mat(augment: #3, &1, &0, &2, &3; &3, &1, &1, -&1; &0, &2, -&1, -&2; &1, -&1, &k, -&5))$
+      $display(mat(augment: #3, &1, &0, &2, &3; &3, &1, &1, -&1; &0, &2, -&1, -&2; &1, -&1, &k, -&5))$
 
-        Aplicamos operaciones elementales para llevar la matriz a una forma escalonada:
+      Aplicamos operaciones elementales para llevar la matriz a una forma escalonada:
 
-        $display(mat(augment: #3, &1, &0, &2, &3; &3, &1, &1, -&1; &0, &2, -&1, -&2; &1, -&1, &k, -&5)
+      $display(
+        mat(augment: #3, &1, &0, &2, &3; &3, &1, &1, -&1; &0, &2, -&1, -&2; &1, -&1, &k, -&5)
         stretch(=)^(f_2 <- f_2 - 3f_1 \ f_4 <- f_4 - f_1)
         mat(augment: #3, &1, &0, &2, &3; &0, &1, -&5, -1&0; &0, &2, -&1, -&2; &0, -&1, k-&2, -&8)
         stretch(=)^(f_3 <- f_3 - 2f_2 \ f_4 <- f_4 + f_2)
         mat(augment: #3, &1, &0, &2, &3; &0, &1, -&5, -1&0; &0, &0, &9, 1&8; &0, &0, k&-7, -1&8)
-        )$
+      )$
 
-        $display(mat(delim: "|",&1, &0; &0, &1) = 1 != 0)$
+      $display(mat(delim: "|", &1, &0; &0, &1) = 1 != 0)$
 
-        Tenemos un menor de orden $2$ distinto de cero, luego el rango de la matriz de los coeficientes es al menos $2$ para todo valor de $k$.
+      Tenemos un menor de orden $2$ distinto de cero, luego el rango de la matriz de los coeficientes es al menos $2$ para todo valor de $k$.
 
-        $display(mat(delim: "|",&1, &0, &2; &0, &1, -&5; &0, &0, &9) = 9 != 0)$
+      $display(mat(delim: "|", &1, &0, &2; &0, &1, -&5; &0, &0, &9) = 9 != 0)$
 
-        Tenemos un menor de orden $3$ distinto de cero, luego el rango de la matriz de los coeficientes es $3$ para todo valor de $k$.
+      Tenemos un menor de orden $3$ distinto de cero, luego el rango de la matriz de los coeficientes es $3$ para todo valor de $k$.
 
-        Calculamos el menor de orden $4$ para la matriz ampliada:
-        
-          $display(mat(delim: "|", &1, &0, &2, &3; &0, &1, -&5, -1&0; &0, &0, &9, 1&8; &0, &0, k&-7, -1&8) =
-          mat(delim: "|", &9, 1&8; k&-7, -1&8) =
-          -18mat(delim: "|", &9, -&1; k&-7, &1) =
-          -18(9 - (-1)(k-7))= -18(k+2))$
+      Calculamos el menor de orden $4$ para la matriz ampliada:
 
-        Si $k = -2$ el rango de la matriz ampliada es $3$, mientras que el rango de la matriz de los coeficientes es $3$, luego el sistema sería compatible y como el rango es igual al número de incógnitas, es compatible determinado.
+      $display(
+        mat(delim: "|", &1, &0, &2, &3; &0, &1, -&5, -1&0; &0, &0, &9, 1&8; &0, &0, k&-7, -1&8) =
+        mat(delim: "|", &9, 1&8; k&-7, -1&8) =
+        -18mat(delim: "|", &9, -&1; k&-7, &1) =
+        -18(9 - (-1)(k-7))= -18(k+2)
+      )$
 
-        Si $k != -2$ el rango de la matriz ampliada es $4$, mientras que el rango de la matriz de los coeficientes es $3$, luego el sistema sería incompatible.
+      Si $k = -2$ el rango de la matriz ampliada es $3$, mientras que el rango de la matriz de los coeficientes es $3$, luego el sistema sería compatible y como el rango es igual al número de incógnitas, es compatible determinado.
+
+      Si $k != -2$ el rango de la matriz ampliada es $4$, mientras que el rango de la matriz de los coeficientes es $3$, luego el sistema sería incompatible.
     ]
-  ]
+  ],
   // [
   //   #question()[Calcula el valor de los siguientes determinantes:]
   //   #questions-columns(
@@ -288,16 +331,16 @@
 
   //     $display(mat(delim: "|", &1, &2, &3; &0, -&1, &4; &5, &2, &1)
   //       = 1 dot (-1) dot 1 + 2 dot 4 dot 5 + 3 dot 0 dot 2 - 3 dot (-1) dot 5 - 2 dot 0 dot 1 - 1 dot 4 dot 2 = #result(46))$
-      
+
   //      *Por adjuntos:*
-       
+
   //      $display(mat(delim: "|", &1, &2, &3; &0, -&1, &4; &5, &2, &1)
   //       = 1 mat(delim:"|", -&1, &4; &2, &1) - 0 mat(delim: "|", 2, 3;2, 1) + 5 mat(delim: "|", &2, &3; -&1, &4) =
   //       1 mat(delim:"|", 2, 3;2, 1) + 5 mat(delim: "|", &2, &3; -&1, &4) =
   //       1[-1 dot 1 - 4 dot 2] + 5[&2 dot &4 - (-&1) dot &3] = \ =
   //       1 dot (-1 - 8) + 5 dot (8 + 3) =
   //         1 dot (-9) + 5 dot 11 =
-  //         -9 + 55 = 
+  //         -9 + 55 =
   //        #result(46))$
   //     ]
   //   ],
@@ -318,7 +361,7 @@
 
   //       *Por adjuntos:*
 
-  //       $display(mat(delim: "|", &2, &3, &5, &4; &0, -&1, &4, &3; &4, -&2, &1, &9; &0, &2, &3, &4) = 
+  //       $display(mat(delim: "|", &2, &3, &5, &4; &0, -&1, &4, &3; &4, -&2, &1, &9; &0, &2, &3, &4) =
   //       2 mat(delim: "|", -&1, &4, &3; -&2, &1, &9; &2, &3, &4) + 0 mat(delim: "|", &3, &5, &4; -&2, &1, &9; &2, &3, &4) +4 mat(delim: "|", &3, &5, &4; -&1, &4, &3; &2, &3, &4) + 0 mat(delim: "|", &3, &5, &4; -&1, &4, &3; -&2, &1, &9) = \ =
   //       2 mat(delim: "|", -&1, &4, &3; -&2, &1, &9; &2, &3, &4) + 4 mat(delim: "|", &3, &5, &4; -&1, &4, &3; &2, &3, &4) = \
   //       2[(-1) dot 1 dot 4 + 4 dot 9 dot 2 + 3 dot (-2) dot 3 - 3 dot 1 dot 2 - 4 dot (-2) dot 4 - (-1) dot 3 dot 9  ] + \ +
@@ -329,7 +372,7 @@
   //   [
   //     #subquestion()[$display(mat(delim: "|", &2, &1, &0, &3; &1, &0, &4, &2; &4, &2, &0, &6; &2, &0, &8, &4))$]
   //     #solution()[La primera y tercera fila son linealmente dependientes, ya que la $f_2 = 2f_1$, luego el determinante vale $0$.
-      
+
   //     $display(mat(delim: "|", &2, &1, &0, &3; &1, &0, &4, &2; &4, &2, &0, &6; &2, &0, &8, &4) = 0)$
   //     ]
   //   ],
@@ -337,7 +380,7 @@
   //     #subquestion()[$display(mat(delim: "|", &3, &5, -&2, &3, &3, &7; -&1, &0, &4, &2, -&1, -&9; &0, &3, -&2, &1, &0, &4; &2, &0, &8, &4, &2, &1; -&2, &7, &3, &1, -&2, &0; -&5,&4,&2,&5,-&5,&8))$]
   //     #solution()[La primera y la quinta columna son iguales,
   //     luego el determinante vale $0$.
-      
+
   //     $display(mat(delim: "|", &3, &5, -&2, &3, &3, &7; -&1, &0, &4, &2, -&1, -&9; &0, &3, -&2, &1, &0, &4; &2, &0, &8, &4, &2, &1; -&2, &7, &3, &1, -&2, &0; -&5,&4,&2,&5,-&5,&8) = 0)$
   //     ]
   //   ],
@@ -361,7 +404,7 @@
 
   //           Calculamos la inversa:
 
-  //           $display(mat(&1, &2; &3, &4) ^(-1) = 1/(-2) mat(&4, -&2; -&3, &1) = mat(1/(-2) dot 4, 1/(-2) dot  -2; 1/(-2) dot  -3, 1/(-2) dot 1) = 
+  //           $display(mat(&1, &2; &3, &4) ^(-1) = 1/(-2) mat(&4, -&2; -&3, &1) = mat(1/(-2) dot 4, 1/(-2) dot  -2; 1/(-2) dot  -3, 1/(-2) dot 1) =
   //           mat(-&2, &1; &3/2, -&1/2))$
   //         ]
   //       ],
@@ -385,7 +428,7 @@
   //       #solution()[
   //         Calculamos el determinante:
 
-  //         $display(mat(delim: "|", &1, &2, &3; &4, &5, &6; &k, &k, &k) = 
+  //         $display(mat(delim: "|", &1, &2, &3; &4, &5, &6; &k, &k, &k) =
   //         stretch(=)^(f_2 <- f_2 - f_1)
   //         mat(delim: "|", &1, &2, &3; &3, &3, &3; &k, &k, &k)
   //         stretch(=)^(f_3 <- f_3 - k f_1)
@@ -423,7 +466,7 @@
   // ],
   // [
   // #question()[Dadas las matrices $display(A = mat(&1, &0, -&1; &0, &m, &3; &4, &1, -&m))$, $display(B = mat(&1, &0; &3, &2; -&1, &1))$ y $display(c= mat(&5, -&3, 4; -&3, -&2, &2))$]
-    
+
   //     #subquestion()[Indica los valores de m para los que la matriz $A$ es invertible.]
   //     #solution()[
   //       Para que la matriz $A$ sea invertible, su determinante debe ser distinto de cero:

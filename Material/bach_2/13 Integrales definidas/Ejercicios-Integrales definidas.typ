@@ -1,4 +1,4 @@
-#import "@local/g-exam:0.4.5": *
+#import "@preview/g-exam:0.4.5": *
 #import "@preview/cetz:0.4.2"
 #import "@preview/cetz-plot:0.1.3"
 
@@ -12,7 +12,7 @@
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../../" + config.at("school").at("logo"))
+    logo: image("../../" + config.at("school").at("logo")),
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
@@ -22,12 +22,12 @@
     // content: [($X->infinity$)],
     model: [v1],
   ),
-  
+
   language: "es",
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: false,
-  show-solutions: sys.inputs.at("show-solutions", default:config.at("show-solutions")),
+  show-solutions: sys.inputs.at("show-solutions", default: config.at("show-solutions")),
   question-points-position: none,
 )
 #set math.cases(reverse: true)
@@ -36,130 +36,146 @@
   [
     #question()[Calcula el valor de las siguientes integrales definidas:]
     #questions-columns(
-    [#subquestion()[$display(∫_0^2 (3x^2 - 4x + 1) dif x)$]],
-    [#subquestion()[$display(∫_(-1)^1 (x^3 + x) dif x)$]],
-    [#subquestion()[$display(∫_1^3 1/x dif x)$]],
-    [#subquestion()[$display(∫_1^2 (2x + 3) dif x)$]],
-    [#subquestion()[$display(∫_(-2)^2 (x^5 - 3x^3) dif x)$]],
-    [#subquestion()[$display(∫_(0)^1 x arctan(x) dif x)$]
-     #solution()[
-      Integramos por partes:
+      [#subquestion()[$display(∫_0^2 (3x^2 - 4x + 1) dif x)$]],
+      [#subquestion()[$display(∫_(-1)^1 (x^3 + x) dif x)$]],
+      [#subquestion()[$display(∫_1^3 1/x dif x)$]],
+      [#subquestion()[$display(∫_1^2 (2x + 3) dif x)$]],
+      [#subquestion()[$display(∫_(-2)^2 (x^5 - 3x^3) dif x)$]],
+      [#subquestion()[$display(∫_(0)^1 x arctan(x) dif x)$]
+        #solution()[
+          Integramos por partes:
 
-      $ ∫u dif v = u v - ∫v dif u $
+          $ ∫u dif v = u v - ∫v dif u $
 
-      Elegimos:
+          Elegimos:
 
-      $display(cases(reverse: #false, delim: "{", gap: #1em,
-                &u = arctan (x) & => dif u = 1/(1+x^2) dif x,
-                &dif v = x dif x & => v = x^2/2,
-              ))$
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              &u = arctan (x) & => dif u = 1/(1+x^2) dif x,
+              &dif v = x dif x & => v = x^2/2,
+            )
+          )$
 
-      $display(∫ x arctan(x) dif x =
-       arctan(x) dot x^2/2 - ∫ x^2/2 dot 1/(1+x^2) dif x =
-       x^2 arctan (x) - 1/2 ∫ x^2 /(1+x^2) dif x = \ =
-       x^2 arctan (x) - 1/2 ∫ ((1+x^2) - 1)/(1+x^2) dif x  =
-       x^2 arctan (x) - 1/2 ∫ 1 - 1/(1+x^2) dif x = \ =
-       x^2 arctan (x) - 1/2 [∫ 1 dif x - ∫ 1/(1+x^2) dif x] =
-       x^2 arctan (x) - 1/2 [x - arctan (x)] = \
-       x^2 arctan (x) - x/2 - (arctan (x))/2 =
-       (x^2 + 1) arctan (x) - x/2  + C)$
+          $display(
+            ∫ x arctan(x) dif x =
+            arctan(x) dot x^2/2 - ∫ x^2/2 dot 1/(1+x^2) dif x =
+            x^2 arctan (x) - 1/2 ∫ x^2 /(1+x^2) dif x = \ =
+            x^2 arctan (x) - 1/2 ∫ ((1+x^2) - 1)/(1+x^2) dif x =
+            x^2 arctan (x) - 1/2 ∫ 1 - 1/(1+x^2) dif x = \ =
+            x^2 arctan (x) - 1/2 [∫ 1 dif x - ∫ 1/(1+x^2) dif x] =
+            x^2 arctan (x) - 1/2 [x - arctan (x)] = \
+            x^2 arctan (x) - x/2 - (arctan (x))/2 =
+            (x^2 + 1) arctan (x) - x/2 + C
+          )$
 
-      Aplicando la regla de Barrow:
+          Aplicando la regla de Barrow:
 
-      $display(∫_(0)^1 x arctan(x) dif x =
-      (x^2 + 1) arctan (x) - x/2 limits(])_0^1 = \ =
-      ((1^2 + 1) arctan (1) - 1/2) - ((0^2 + 1) arctan (0) - 0/2) =
-      (2 pi/4 - 1/2) - (1 dot 0 -1 ) = 
-      #result($display(pi/2 - 1/2)$)) $
-     ],
-    ],
-    [#subquestion()[$display(∫_(-pi)^pi x^2 "sen"(x) dif x)$]],
-    [#subquestion()[$display(∫_(-1)^1 x e^x dif x)$]],
-    [#subquestion()[$display(∫_(0)^2 (2x+1)/(x^2+x+1)^2 dif x)$]],
+          $display(
+            ∫_(0)^1 x arctan(x) dif x =
+            (x^2 + 1) arctan (x) - x/2 limits(])_0^1 = \ =
+            ((1^2 + 1) arctan (1) - 1/2) - ((0^2 + 1) arctan (0) - 0/2) =
+            (2 pi/4 - 1/2) - (1 dot 0 -1 ) =
+            #result($display(pi/2 - 1/2)$)
+          )$
+        ],
+      ],
+      [#subquestion()[$display(∫_(-pi)^pi x^2 "sen"(x) dif x)$]],
+      [#subquestion()[$display(∫_(-1)^1 x e^x dif x)$]],
+      [#subquestion()[$display(∫_(0)^2 (2x+1)/(x^2+x+1)^2 dif x)$]],
     )
   ],
   [
     #question()[Si $display(∫_1^4 f(x) dif x = 6)$ y $display(∫_4^6 f(x) dif x = -2)$, calcula:]
     #questions-columns(
-    
-    [
-      #subquestion()[$display(∫_1^6 f(x) dif x)$]
-    ],
-    [
-      #subquestion()[$display(∫_6^1 f(x) dif x)$]
-    ],
+      [
+        #subquestion()[$display(∫_1^6 f(x) dif x)$]
+      ],
+      [
+        #subquestion()[$display(∫_6^1 f(x) dif x)$]
+      ],
     )
   ],
   [
     #question()[Calcula el valor de las siguientes integrales de la función:
-      
-      $ f(x) = cases(reverse: #false, delim: "{", gap: #1em,
-                & x^2 & "si" & x < 0,
-                & 2x  & "si" & 0 <= x < 2,
-                & 10-3x  & "si" & x > 2,
-              ) $
+
+      $
+        f(x) = cases(
+          reverse: #false, delim: "{", gap: #1em,
+          & x^2 & "si" & x < 0,
+          & 2x & "si" & 0 <= x < 2,
+          & 10-3x & "si" & x > 2,
+        )
+      $
     ]
     #questions-columns(
-    [
-      #subquestion()[$display(∫_(-2)^1 f(x) dif x)$]
-    ], [
-      #subquestion()[$display(∫_(1)^4 f(x) dif x)$]
-    ], [
-      #subquestion()[$display(∫_(-2)^4 f(x) dif x)$]
-    ],
+      [
+        #subquestion()[$display(∫_(-2)^1 f(x) dif x)$]
+      ],
+      [
+        #subquestion()[$display(∫_(1)^4 f(x) dif x)$]
+      ],
+      [
+        #subquestion()[$display(∫_(-2)^4 f(x) dif x)$]
+      ],
     )
   ],
   [
     #question()[Siendo la función:
-      
-      $ display(f(x) = cases(reverse: #false, delim: "{", gap: #1em,
-                & "sen"(x) & "si" & x < pi/2,
-                & e^x      & "si" & pi/2<= x < 1 ,
-                & cos(x)  & "si" & x >= 1 
-              )) $
 
-      Calcula 
-    
-     $ ∫_(-pi)^pi f(x) dif x $
-     ]
+      $
+        display(
+          f(x) = cases(
+            reverse: #false, delim: "{", gap: #1em,
+            & "sen"(x) & "si" & x < pi/2,
+            & e^x & "si" & pi/2<= x < 1,
+            & cos(x) & "si" & x >= 1
+          )
+        )
+      $
+
+      Calcula
+
+      $ ∫_(-pi)^pi f(x) dif x $
+    ]
   ],
   [
     #question()[Calcula las derivadas de las siguientes funciones utilizando el *teorema fundamental del calculo*:
-    \ #clarification()[La (d) es muy fácil]]
+      \ #clarification()[La (d) es muy fácil]]
     #questions-columns(
-    [#subquestion()[$display(F(x) = ∫_0^x cos(t) dif t)$.]],
-    [#subquestion()[$display(F(x) = ∫_3^x (t^2+1)^4 dif t)$.]],
-    [#subquestion()[$display(F(x) = ∫_0^x e^(-t)^2 dif t)$.]], 
-    [#subquestion()[$display(F(x) = ∫_3^5 (t^2+1)^4 dif t)$.]],
+      [#subquestion()[$display(F(x) = ∫_0^x cos(t) dif t)$.]],
+      [#subquestion()[$display(F(x) = ∫_3^x (t^2+1)^4 dif t)$.]],
+      [#subquestion()[$display(F(x) = ∫_0^x e^(-t)^2 dif t)$.]],
+      [#subquestion()[$display(F(x) = ∫_3^5 (t^2+1)^4 dif t)$.]],
     )
   ],
   [
     #question()[Área entre dos curvas:]
     #questions-columns(
-    [
-      #subquestion()[Área comprendida entre $y = x^2$ y $y = 2x + 3$.]
-    ],
-    [
-      #subquestion()[Área limitada por $y = √x$ y $y = x$.]
-    ],
-    [
-      #subquestion()[Área encerrada entre $y = x^2$ y $y = 4 - x^2$.]
-    ],
-    [
-      #subquestion()[Área limitada por $y = |x|$ y $y = 5$.]
-    ],
-    [
-      #subquestion()[Área entre $y = x^2 - 4$ y el eje $x$.]
-    ],
-    [
-      #subquestion()[Área comprendida entre $y = sin(x)$ y el eje $x$ en $[-π, π]$.]
-    ],
-    [
-      #subquestion()[Área comprendida entre $y = |sin(x)|$ y el eje $x$ en $[0, 2π]$.]
-    ],
-    [
-      #subquestion()[Región limitada por $y = x^2$, $y = 4$ y el eje $y$.]
-    ],
+      [
+        #subquestion()[Área comprendida entre $y = x^2$ y $y = 2x + 3$.]
+      ],
+      [
+        #subquestion()[Área limitada por $y = √x$ y $y = x$.]
+      ],
+      [
+        #subquestion()[Área encerrada entre $y = x^2$ y $y = 4 - x^2$.]
+      ],
+      [
+        #subquestion()[Área limitada por $y = |x|$ y $y = 5$.]
+      ],
+      [
+        #subquestion()[Área entre $y = x^2 - 4$ y el eje $x$.]
+      ],
+      [
+        #subquestion()[Área comprendida entre $y = sin(x)$ y el eje $x$ en $[-π, π]$.]
+      ],
+      [
+        #subquestion()[Área comprendida entre $y = |sin(x)|$ y el eje $x$ en $[0, 2π]$.]
+      ],
+      [
+        #subquestion()[Región limitada por $y = x^2$, $y = 4$ y el eje $y$.]
+      ],
     )
   ],
   [
@@ -170,30 +186,30 @@
   [
     #question()[Calcula el volumen generado por las siguientes funciones al girar sobre el eje x:]
     #subquestion()[$f(x) = x^2$, entre $x=0$ y $x=5$.]
-    
+
     #subquestion()[$f(x) = sqrt(r^2-x^2)$, entre $x=-r$ y $x=r$.]
   ],
   [
     #question()[Sabemos que $display(∫_0^x f(t) dif t = x^2(1+x))$, siendo continua en $RR$. Calcula $f(2)$.]
     #solution()[
-        Tenemos:
-        $ F(x)= ∫_0^x f(t) dif t = x^2(1+x) = x^2 + x^3 $
+      Tenemos:
+      $ F(x)= ∫_0^x f(t) dif t = x^2(1+x) = x^2 + x^3 $
 
-        Como f es continua en R, aplicamos el Teorema Fundamental del Cálculo:
-        $ F'(x) = ∫_0^x f(t) dif t = f(x) $
+      Como f es continua en R, aplicamos el Teorema Fundamental del Cálculo:
+      $ F'(x) = ∫_0^x f(t) dif t = f(x) $
 
-        Derivamos el segundo miembro:
-        $ (x^2 + x^3)' = 2x + 3x^2 $
+      Derivamos el segundo miembro:
+      $ (x^2 + x^3)' = 2x + 3x^2 $
 
-        Por tanto:
-        $ f(x) = 2x + 3x^2 $
+      Por tanto:
+      $ f(x) = 2x + 3x^2 $
 
-        Evaluamos en x = 2:
-        $ f(2) = 2·2 + 3·2^2 = 4 + 12 = 16 $
+      Evaluamos en x = 2:
+      $ f(2) = 2·2 + 3·2^2 = 4 + 12 = 16 $
 
-        Con lo que: 
-        
-        $ #result($f(2) = 16$) $
+      Con lo que:
+
+      $ #result($f(2) = 16$) $
     ]
-  ]
+  ],
 )

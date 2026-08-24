@@ -1,16 +1,16 @@
-#import "@local/g-exam:0.4.5": *
+#import "@preview/g-exam:0.4.5": *
 
 #let config = yaml("../../config.yaml")
 
 #show: exam.with(
   author: (
-    name: "Andrés Jorge Giménez Muñoz", 
-    email: "agimenezmunoz@educa.madrid.com", 
+    name: "Andrés Jorge Giménez Muñoz",
+    email: "agimenezmunoz@educa.madrid.com",
     watermark: "Profesor: andrés",
   ),
   school: (
     name: config.at("school").at("name"),
-    logo:image("../../" + config.at("school").at("logo"))
+    logo: image("../../" + config.at("school").at("logo")),
   ),
   exam-info: (
     academic-period: config.at("exam-info").at("academic-period"),
@@ -19,14 +19,14 @@
     number: "Ejercicios",
     content: "Reto matemático",
   ),
-  
+
   language: "es",
   decimal-separator: ",",
   show-student-data: false,
   show-grade-table: "odd-pages",
   show-solutions: false,
 )
-  
+
 $ a = b $
 
 Multiplicamos ambos lados por $a$:
