@@ -77,12 +77,45 @@
   },
 )
 
-// #place(
-//   top + center,
-//   scope: "parent",
-//   float: true,
-//   [= Tabla de derivadas]
-// )
+#place(
+  top + center,
+  scope: "parent",
+  float: true,
+  [= Tabla de derivadas],
+)
+
+#align(left)[
+  == Funciones simples
+  #table(
+    columns: (auto, auto),
+    table.header([=== Función], [=== *Derivada*]),
+    [$display(f(x) = k)$], [$display(f(x) = 0)$],
+    [$display(f(x) = x)$], [$display(f'(x) = 1)$],
+    [$display(f(x) = k x)$], [$display(f'(x) = k)$],
+    table.hline(),
+    [$display(f(x) = x/k)$], [ $display(f'(x) = 1/k)$ ],
+    [$display(f(x) = k/x)$], [ $display(f'(x) = -k/x^2)$ ],
+    table.hline(),
+    [$display(f(x) = x^n)$], [$display(f'(x) = n k^(n-1))$ ],
+    [$display(f(x) = x^(-n))$], [$display(f'(x) = - n/(x^(n-1)))$ ],
+    [$display(f(x) = sqrt(x))$], [$display(f'(x) = 1/(2 sqrt(x)))$ ],
+    [$display(f(x) = root(k, x))$], [$display(f'(x) = 1/(k root(k, x^(k-1))))$],
+    [$display(f(x) = a^x)$], [$display(f'(x) = a^x dot ln(a))$ ],
+    [$display(f(x) = e^x)$], [$display(f'(x) = e^x)$ ],
+    [$display(f(x) = x^x)$], [$display(f'(x) = x^x dot (1+ln(x)))$ ],
+    table.hline(),
+    [$display(f(x) = log_a (x))$], [$display(f'(x) = 1/(x ln(a)) "si" x >0)$ ],
+    [$display(f(x) = log_a |x|)$], [$display(f'(x) = 1/(x ln(a)))$ ],
+    [$display(f(x) = ln (x))$], [$display(f'(x) = 1/(x) "si" x >0)$ ],
+    [$display(f(x) = ln |x|)$], [$display(f'(x) = 1/(x))$ ],
+    table.hline(),
+    [$display(f(x) = "sen" (x))$], [$display(f'(x) = "cos" (x))$ ],
+    [$display(f(x) = "cos" (x))$], [$display(f'(x) = -"sen" (x))$ ],
+    [$display(f(x) = tg (x))$], [$display(f'(x) = 1 + tg^2 (x) = sec^2(x))$ ],
+  )
+]
+
+#colbreak()
 
 #align(left)[
   == Funciones algebraicas
@@ -128,6 +161,8 @@
   )
 ]
 
+#colbreak()
+
 #align(left)[
   == Funciones trigonométricas
   #table(
@@ -142,7 +177,7 @@
   )
 ]
 
-#colbreak()
+
 
 #align(left)[
   == Func. trigonométricas inversas
@@ -159,33 +194,5 @@
   )
 ]
 
-#align(left)[
-  == Funciones simples
-  #table(
-    columns: (auto, auto),
-    table.header([=== Función], [=== *Derivada*]),
-    [$display(f(x) = k)$], [$display(f(x) = 0)$],
-    [$display(f(x) = x)$], [$display(f'(x) = 1)$],
-    [$display(f(x) = k x)$], [$display(f'(x) = k)$],
-    table.hline(),
-    [$display(f(x) = x/k)$], [ $display(f'(x) = 1/k)$ ],
-    [$display(f(x) = k/x)$], [ $display(f'(x) = -k/x^2)$ ],
-    table.hline(),
-    [$display(f(x) = x^n)$], [$display(f'(x) = n k^(n-1))$ ],
-    [$display(f(x) = x^(-n))$], [$display(f'(x) = - n/(x^(n-1)))$ ],
-    [$display(f(x) = sqrt(x))$], [$display(f'(x) = 1/(2 sqrt(x)))$ ],
-    [$display(f(x) = root(k, x))$], [$display(f'(x) = 1/(k root(k, x^(k-1))))$],
-    [$display(f(x) = a^x)$], [$display(f'(x) = a^x dot ln(a))$ ],
-    [$display(f(x) = e^x)$], [$display(f'(x) = e^x)$ ],
-    [$display(f(x) = x^x)$], [$display(f'(x) = x^x dot (1+ln(x)))$ ],
-    table.hline(),
-    [$display(f(x) = log_a (x))$], [$display(f'(x) = 1/(x ln(a)) "si" x >0)$ ],
-    [$display(f(x) = log_a |x|)$], [$display(f'(x) = 1/(x ln(a)))$ ],
-    [$display(f(x) = ln (x))$], [$display(f'(x) = 1/(x) "si" x >0)$ ],
-    [$display(f(x) = ln |x|)$], [$display(f'(x) = 1/(x))$ ],
-    table.hline(),
-    [$display(f(x) = "sen" (x))$], [$display(f'(x) = "cos" (x))$ ],
-    [$display(f(x) = "cos" (x))$], [$display(f'(x) = -"sen" (x))$ ],
-    [$display(f(x) = tg (x))$], [$display(f'(x) = 1 + tg^2 (x) = sec^2(x))$ ],
-  )
-]
+#colbreak()
+
