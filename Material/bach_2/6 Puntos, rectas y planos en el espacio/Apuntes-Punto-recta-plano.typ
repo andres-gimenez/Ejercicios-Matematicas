@@ -1,5 +1,29 @@
 // #import "lib.typ": html-export-template
 // #show: html-export-template
+#import "@preview/typstage:0.1.0": *
+
+#show: presentation.with(
+  title: [Punto, Recta y Plano en el Espacio],
+  author: [Andrés Jorge Giménez Muñoz],
+  transition: "slide",
+  theme: themes.lesson + (accent: blue),
+  width: 800pt,
+  height: 600pt,
+  speaker-view: (
+    clock: false, // no class clock
+    pen: (colors: (red, green, blue)), // your own pen colours
+  ),
+  // pen: (colors: (red, green, blue)),
+  // clock:false
+  // palette: palettes.light,
+)
+
+
+
+#for element in ("Water", "Air", "Earth") [
+  == #element
+  Something about #element.
+]
 
 = Punto, Recta y Plano en el Espacio
 
@@ -17,7 +41,6 @@ Dados $A(x_1, y_1, z_1)$ y $B(x_2, y_2, z_2)$:
 
 $d(A,B) = sqrt((x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2)$
 
-
 == 2. Recta en el espacio
 
 Una recta queda definida por:
@@ -29,14 +52,14 @@ $arrow(r) = (x_0, y_0, z_0) + t(a, b, c)$
 
 === Ecuaciones paramétricas
 $
-x = x_0 + a t \
-y = y_0 + b t \
-z = z_0 + c t
+  x = x_0 + a t \
+  y = y_0 + b t \
+  z = z_0 + c t
 $
 
 === Ecuación continua
 $
-(x - x_0)/a = (y - y_0)/b = (z - z_0)/c
+  (x - x_0)/a = (y - y_0)/b = (z - z_0)/c
 $
 
 === Posición relativa de rectas
@@ -62,7 +85,7 @@ $A(x - x_0) + B(y - y_0) + C(z - z_0) = 0$
 === Ecuación paramétrica
 Si $arrow(u)$ y $arrow(v)$ son dos vectores del plano:
 $
-(x, y, z) = (x_0, y_0, z_0) + s arrow(u) + t arrow(v)
+  (x, y, z) = (x_0, y_0, z_0) + s arrow(u) + t arrow(v)
 $
 
 == 4. Posiciones relativas
@@ -81,7 +104,7 @@ $
 
 === Ángulo entre dos vectores
 $
-cos(theta) = (arrow(u) dot arrow(v)) / (|arrow(u)| |arrow(v)|)
+  cos(theta) = (arrow(u) dot arrow(v)) / (|arrow(u)| |arrow(v)|)
 $
 
 === Ángulo entre rectas
