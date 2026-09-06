@@ -69,6 +69,14 @@ jobs:
               typst compile "$archivo" --root . --input show-solutions=false || echo "Error en $archivo, continuando..."
           done
 
+      - name: Compile Typst Apuntes to PDF
+        shell: bash
+        run: |
+          find ./Material -type f -name "Apuntes-*.typ" | while read -r archivo; do
+              echo "Compilando: $archivo"
+              typst compile "$archivo" --root . --input show-solutions=false || echo "Error en $archivo, continuando..."
+          done
+
       - name: Upload PDF file
         uses: actions/upload-artifact@v6
         with:
