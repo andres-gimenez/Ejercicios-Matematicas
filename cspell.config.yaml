@@ -1,9 +1,13 @@
 version: "0.2"
 ignorePaths: []
-dictionaryDefinitions: []
+dictionaryDefinitions:
+  - name: custom-dictionary
+    path: ./.cspell/custom-dictionary.txt
+    addWords: true
 dictionaries:
   - es
   - en
+  - custom-dictionary
 words:
   - cetz
   - colbreak
