@@ -2,12 +2,12 @@ name: Delete old workflow runs
 
 on:
   schedule:
-    - cron: "7 3 * * 0"   # Todos los domingos a las 03:07 UTC
+    - cron: "7 6 * * 3"   # Todos los martes a las 06:07 UTC
   workflow_dispatch:
 
 jobs:
   cleanup:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     permissions:
       actions: write
       contents: read
