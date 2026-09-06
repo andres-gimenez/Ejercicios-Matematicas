@@ -2,7 +2,7 @@ name: Crear documentos de ejercicios Typst (CI)
 on: 
   push:
     paths: 
-    - '.github/workflows/build.yaml'
+    - '.github/workflows/build-Ejercicios.yaml'
     - 'Material/**/Ejercicios-*.typ'
     - 'Material/**/Apuntes-*.typ'
     - 'Material/**/*.yaml'
