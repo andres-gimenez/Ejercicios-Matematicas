@@ -89,6 +89,7 @@
               {
                 plot.add(
                   domain: (-2, 2),
+                  samples: 200,
                   x => x * x * x - 3 * x,
                   // style: (stroke:blue, mark:(start:(symbol:"o", fill:blue))),
                 )
@@ -137,6 +138,7 @@
                 {
                   plot.add(
                     domain: (-3, 7),
+                    samples: 200,
                     x => x * x - 4 * x + 1,
                     // style: (stroke:blue, mark:(start:(symbol:"o", fill:blue))),
                   )
@@ -244,6 +246,7 @@
               {
                 plot.add(
                   domain: (0, 6),
+                  samples: 200,
                   x => calc.sqrt(x) * (4 - x),
                   // style: (stroke:blue, mark:(start:(symbol:"o", fill:blue))),
                 )
@@ -407,6 +410,7 @@
               {
                 plot.add(
                   domain: (-3, 3),
+                  samples: 200,
                   x => calc.exp(-(x * x)) * (x * x - 1),
                   // style: (stroke:blue, mark:(start:(symbol:"o", fill:blue))),
                 )
