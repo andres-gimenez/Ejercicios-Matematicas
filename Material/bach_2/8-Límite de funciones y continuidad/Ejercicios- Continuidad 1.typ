@@ -107,6 +107,27 @@
   [
     #question()[Estudia la continuidad de la función $display(f(x) = (|x-1|)/(x-1))$ en el punto $x=1$. (Estudia primero los límites laterales en $x=1$).]
     #solution[
+      La función se puede interpretar como
+
+      $
+        f(x) = (|x-1|)/(x-1) = cases(
+          reverse: #false, delim: "{", gap: #1em,
+          & (-(x-1))/(x-1) & "si" & x < 1,
+          & (x-1)/(x-1) & "si" & x > 1,
+        ) = cases(
+          reverse: #false, delim: "{", gap: #1em,
+          - & 1 & "si" & x < 1,
+          & 1 & "si" & x > 1,
+        )
+      $
+
+      Teniendo en cuenta que $f(1)$ no está definida, la función no puede ser continua en $x=1$.
+
+      Calculamos los limites laterales en $x=1$:
+
+      $limits("lím")_(x->1^-) = -1$ y $limits("lím")_(x->1^+) = 1$, como los limites laterales no coincide, podemos decir que el límite no existe.
+
+      Podemos ver, de forma intuitiva, la gráfica de la función.
       #align(left, cetz.canvas({
         import cetz.draw: *
         import cetz-plot: *
@@ -165,6 +186,19 @@
           & 3x-4 & "si" & x >= 2,
         )
       $
+    ]
+    #solution()[
+      El dominio de la función es $RR$.
+
+      Para $x<2$,   $x^2-1$ es continua por ser un polinomio y en $x >=2$, es continua, por ser $3x-4$ un polinomio.
+
+      Estudiamos la continuidad en $x=2$, estudiando los limites laterales.
+
+      $limits("lím")_(x->2^-) f(x) = 2^2 - 1 = 4 -1 = 3$
+
+      $limits("lím")_(x->2^+) f(x) = 3 dot 2 - 4 = 6 -4 = 2$
+
+      Como limites laterales son distintos, no existe el límite en $x=2$, luego no es continua.
     ]
   ],
   [
