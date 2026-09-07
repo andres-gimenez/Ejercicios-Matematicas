@@ -1,5 +1,6 @@
 #import "@preview/g-exam:0.4.5": *
-// #import "@preview/wrap-it:0.1.0": wrap-content
+#import "@preview/cetz:0.4.2"
+#import "@preview/cetz-plot:0.1.3"
 
 #let config = yaml("../../config.yaml")
 
@@ -34,6 +35,11 @@
 
   // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
+
+#let styleBlue = (stroke: (paint: blue, thickness: 1pt))
+#let styleRed = (stroke: (paint: red, thickness: 1pt))
+#let styleGreen = (stroke: (paint: green, thickness: 1pt))
+#let styleYellow = (stroke: (paint: yellow, thickness: 1pt))
 
 #questions-pages(
   [
@@ -100,6 +106,55 @@
   ],
   [
     #question()[Estudia la continuidad de la función $display(f(x) = (|x-1|)/(x-1))$ en el punto $x=1$. (Estudia primero los límites laterales en $x=1$).]
+    #solution[
+      #align(left, cetz.canvas({
+        import cetz.draw: *
+        import cetz-plot: *
+        plot.plot(
+          size: (4, 4),
+          x-max: 5,
+          x-min: -5,
+          y-max: 2,
+          y-min: -2,
+          x-grid: "both",
+          y-grid: "both",
+          x-tick-step: 2,
+          y-tick-step: 2,
+          x-minor-tick-step: 1,
+          y-minor-tick-step: 1,
+          axis-style: "school-book",
+          {
+            plot.add(((0, 0),))
+            plot.add(
+              style: styleBlue,
+              domain: (-5, 0.9999),
+              samples: 4,
+              x => calc.abs(x - 1) / (x - 1),
+            )
+            plot.add(
+              ((1, -1),),
+              style: (stroke: none),
+              mark: "o",
+              mark-size: 0.158,
+              mark-style: (stroke: blue, fill: color.white),
+            )
+            plot.add(
+              style: styleBlue,
+              domain: (1.001, 5),
+              samples: 4,
+              x => calc.abs(x - 1) / (x - 1),
+            )
+            plot.add(
+              ((1, 1),),
+              style: (stroke: none),
+              mark: "o",
+              mark-size: 0.158,
+              mark-style: (stroke: blue, fill: color.white),
+            )
+          },
+        )
+      }))
+    ]
   ],
   [
     #question()[Estudia la continuidad de la siguiente función en todo su dominio:
