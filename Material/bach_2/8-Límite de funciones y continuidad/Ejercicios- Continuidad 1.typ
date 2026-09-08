@@ -48,7 +48,7 @@
     #questions-columns(
       [
         #subquestion()[Si una función es continua en un punto, entonces existen los límites laterales en ese punto.]
-        #solution()[*Verdadero*: Porque el requisito para que una función sea continua es que tenga limites laterales y que conincidan:
+        #solution()[*Verdadero*: Porque el requisito para que una función sea continua es que tenga limites laterales y que coincidan:
           $ limits("lím")_(x->a^-) f(x) = limits("lím")_(x->a^+) f(x) = f(a) $
         ]
       ],
@@ -90,7 +90,7 @@
       ],
       [
         #subquestion()[Si $limits("lím")_(x->a^-) f(x) = limits("lím")_(x->a^+) f(x) = L$ existen $f(a) = L$.]
-        #solution[*Falso*: La función $display(f(x) = (x^2 - 1) / (x - 1)),$ tiene límites laterales en $x=1$, pero no está definia en $f(1)$
+        #solution[*Falso*: La función $display(f(x) = (x^2 - 1) / (x - 1)),$ tiene límites laterales en $x=1$, pero no está definida en $f(1)$
 
           $exists limits("lím")_(x->a^+) f(x) "y" limits("lím")_(x->a^-) f(x)$ pero $exists! f(1)$]
       ],
@@ -211,6 +211,40 @@
         )
       $
     ]
+    #solution()[
+      Para $x<1$ la función es continua por ser $2x+1$ un polinomio.
+
+      Para $x>1$ la función es continua por ser $k x^2$ un polinomio.
+
+      Para que la función sea continua en $forall RR$, debemos comprobar
+      el punto $x = 1$, donde cambia su definición.
+
+      $
+        limits("lím")_(x -> 1^-) f(x)
+        = limits("lím")_(x -> 1^-) (2x + 1)
+        = 3
+      $
+
+      Por la derecha:
+
+      $
+        limits("lím")_(x -> 1^+) f(x)
+        = limits("lím")_(x -> 1^+) k x^2
+        = k
+      $
+
+      Además, como $x = 1$ pertenece al segundo tramo:
+
+      $
+        f(1) = k dot 1^2 = k
+      $
+
+      Para que sea continua debe cumplirse:
+
+      $
+        3 = k
+      $
+    ]
   ],
   [
     #question()[Determina el valor de $k$ para que la siguiente función sea continua en todo $RR$.
@@ -222,9 +256,74 @@
         )
       $
     ]
-    #subquestion()[Estudia la continuidad de $f(x)$ en todo su dominio]
+    #questions-columns(
+      [
+        #subquestion()[Estudia la continuidad de $f(x)$ en todo su dominio]
+        #solution()[
+          Para $x != 2$ la función es continua en todos sus puntos, ya el el único punto problemático, seria el $x=2$ ya que el denominador de (x^2-4)/(x-2) se hace cero y no estaría bien definida.
 
-    #subquestion()[Si $a=5$, que tipo de discontinuidad tiene $f(x)$ en $x=2$?]
+          Para $x=2$ tenemos que mira el valor de los limites laterales.
+
+          $display(limits("lím")_(x -> 2^-) f(x) = limits("lím")_(x -> 2^-) (x^2-4)/(x-2) = limits("lím")_(x -> 2^-) ((x+2)(x-2))/(x-2) = limits("lím")_(x -> 2^-) (x+2) = 4)$
+
+          $display(limits("lím")_(x -> 2^+) f(x) = limits("lím")_(x -> 2^+) (x^2-4)/(x-2) = limits("lím")_(x -> 2^+) ((x+2)(x-2))/(x-2) = limits("lím")_(x -> 2^+) (x+2) = 4)$
+
+          Luego si $a=4$ la función es continua en $RR$, si $a!=4$ la función es continua en $RR \\ {4}$
+        ]
+      ],
+      [
+        #subquestion()[Si $a=5$, que tipo de discontinuidad tiene $f(x)$ en $x=2$?]
+        #solution()[Si $a=5$ la función no es continua en $x=2$, tiene una discontinuidad evitable, ya que, cambiando el valor de un punto, la función seria continua.
+          #align(left, cetz.canvas({
+            import cetz.draw: *
+            import cetz-plot: *
+            plot.plot(
+              size: (6, 6),
+              x-max: 6,
+              x-min: -6,
+              y-max: 6,
+              y-min: -6,
+              x-grid: "both",
+              y-grid: "both",
+              x-tick-step: 2,
+              y-tick-step: 2,
+              x-minor-tick-step: 1,
+              y-minor-tick-step: 1,
+              axis-style: "school-book",
+              {
+                plot.add(((0, 0),))
+                plot.add(
+                  style: styleBlue,
+                  domain: (-6, -0.0001),
+                  samples: 4,
+                  x => x + 2,
+                )
+                plot.add(
+                  style: styleBlue,
+                  domain: (0.001, 5),
+                  samples: 4,
+                  x => x + 2,
+                )
+                plot.add(
+                  ((0, 2),),
+                  style: (stroke: none),
+                  mark: "o",
+                  mark-size: 0.158,
+                  mark-style: (stroke: blue, fill: color.white),
+                )
+                plot.add(
+                  ((0, 5),),
+                  style: (stroke: none),
+                  mark: "o",
+                  mark-size: 0.158,
+                  mark-style: (stroke: blue, fill: color.blue),
+                )
+              },
+            )
+          }))
+        ]
+      ],
+    )
   ],
   [
     #question()[Estudia la continuidad de las siguientes funciones:]
