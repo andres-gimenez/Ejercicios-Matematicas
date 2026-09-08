@@ -102,7 +102,7 @@
   ],
   [
     #question()[Estudia la continuidad de la función $display(f(x) = (x^2 - 5x + 6)/(x - 3))$ en el punto $x=3$.]
-    #solution[Las fracciones algebraicas está definidas en $RR$, salvo en los puntos donde el denominador se hace $0$ como en $f(3)$ el denominador es cero, la función no está definida, con lo que no puede ser continua. ]
+    #solution[Las fracciones algebraicas está definidas en $RR$, salvo en los puntos donde el denominador se hace $0$ como en $f(3)$ el denominador es cero, la función no está definida, con lo que no puede ser continua.]
   ],
   [
     #question()[Estudia la continuidad de la función $display(f(x) = (|x-1|)/(x-1))$ en el punto $x=1$. (Estudia primero los límites laterales en $x=1$).]
@@ -190,7 +190,7 @@
     #solution()[
       El dominio de la función es $RR$.
 
-      Para $x<2$,   $x^2-1$ es continua por ser un polinomio y en $x >=2$, es continua, por ser $3x-4$ un polinomio.
+      Para $x<2$, $x^2-1$ es continua por ser un polinomio y en $x >=2$, es continua, por ser $3x-4$ un polinomio.
 
       Estudiamos la continuidad en $x=2$, estudiando los limites laterales.
 
