@@ -27,7 +27,7 @@ $ f: RR -> RR $
 La composición de dos funciones $f$ y $g$ es una función que se obtiene
 aplicando primero $g$ y después $f$.
 
-$ (f dot g)(x) = f(g(x)) $
+$ (f compose g)(x) = f(g(x)) $
 
 *Ejemplo:*
 
@@ -43,14 +43,14 @@ $ g(x) = x + 1 $
 
 Por tanto:
 
-$ (f dot g)(3) = f(g(3)) = 16 $
+$ (f compose g)(3) = f(g(3)) = 16 $
 
 Y en general:
 
-$ (f dot g)(x) = f(x + 1) = (x + 1)^2 = x^2 + 2x + 1 $
+$ (f compose g)(x) = f(x + 1) = (x + 1)^2 = x^2 + 2x + 1 $
 
-- En general, $f dot g != g dot f$.
-- El dominio de $f dot g$ está formado por todos los valores $x$ que
+- En general, $f compose g != g compose f$.
+- El dominio de $f compose g$ está formado por todos los valores $x$ que
   pertenecen al dominio de $g$ y para los que $g(x)$ pertenecen al
   dominio de $f$.
 
@@ -84,7 +84,7 @@ $RR$ si es continua en cada punto del intervalo.
 - $sqrt(x)$: continua en $x >= 0$.
 - $e^x$: continua en $RR$.
 - $ln(x)$: continua en $x > 0$.
-- $P(x) / Q(x)$: continua si $Q(x) != 0$.
+- $display(P(x) / Q(x))$: continua si $Q(x) != 0$.
 - $sin(x)$ y $cos(x)$: continuas en $RR$.
 - $tan(x)$: continua en
   $RR in {pi/2 + k pi : k in ZZ}$.
