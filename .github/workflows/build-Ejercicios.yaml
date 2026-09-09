@@ -5,6 +5,7 @@ on:
     - '.github/workflows/build-Ejercicios.yaml'
     - 'Material/**/Ejercicios-*.typ'
     - 'Material/**/Apuntes-*.typ'
+    - 'Material/**/Html-*.typ'
     - 'Material/**/*.yaml'
     - 'Material/**/*.toml'
 
@@ -77,18 +78,33 @@ jobs:
               echo "Compilando: $archivo"
               typst compile "$archivo" --root . --input show-solutions=false || echo "Error en $archivo, continuando..."
           done
+      
+      - name: Compile Typst Apuntes to html
+        shell: bash
+        run: |
+          find ./Material -type f -name "Html-*.typ" | while read -r archivo; do
+              echo "Compilando: $archivo"
+              typst compile "$archivo" --format html --features html --root . --input show-solutions=false || echo "Error en $archivo, continuando..."
+          done
 
       - name: Upload PDF file
         uses: actions/upload-artifact@v6
         with:
           name: material
-          path: ./Material/**/*.pdf
+          path: |
+            ./Material/**/*.pdf
+            ./Material/**/*.html
 
       - name: Copy files
         run: |
           rm -rf ./public
           mkdir --parents ./public
-          rsync -avL --include='*/' --include='*.pdf' --exclude='*' Material/ public/
+          rsync -avL \
+            --include='*/' \
+            --include='*.pdf' \
+            --include='*.html' \
+            --exclude='*' \
+             Material/ public/
 
       - name: Generate index.html
         run: |
