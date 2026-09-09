@@ -241,8 +241,11 @@
 
       Para que sea continua debe cumplirse:
 
+      $ limits("lím")_(x -> 1^-) f(x) = limits("lím")_(x -> 1^+) f(x) = f(1) $
+
+      Que se cumple para
       $
-        3 = k
+        k = 3
       $
     ]
   ],
@@ -331,12 +334,33 @@
     #questions-columns(
       [
         #subquestion()[$display(f(x) = (x^2 - 4)/(x^2 - x - 6))$]
+        #solution()[
+          Tanto el  numerador $x^2-4$ como el denominador $x^2-x-6$ son continua en $RR$. Así que solo tenemos que mirar cuando el denominador se hace 0.
+
+          Tenemos que buscar donde $x^2-x-6=0$. Resolviendo la ecuación obtenemos que ocurre para $x=-2$ y $x=3$ el denominador se hace cero, luego la función es continua en:
+
+          $ {x in RR | x!=-2 "y" x !=3 } = (-oo, -2) union (-2, 3) union (3, +oo) $
+        ]
       ],
       [
         #subquestion()[$display(f(x) = (2x - 1)/(x^2 - 4x + 4))$]
+        #solution()[
+          Tanto el  numerador $2x -1$ como el denominador $x^2-4x+4$ son continua en $RR$. Así que solo tenemos que mirar cuando el denominador se hace 0.
+
+          Tenemos que buscar donde $x^2-4x+4=0$. Resolviendo la ecuación obtenemos que ocurre para $x=2$ el denominador se hace cero, luego la función es continua en:
+
+          $ {x in RR | x!=2 } = (-oo, 2) union (2, +oo) $
+        ]
       ],
       [
         #subquestion()[$display(f(x) = (x^2 - 3x + 2)/(x^2 - 1))$]
+        #solution()[
+          Tanto el  numerador $x^2 - 3x +2$ como el denominador $x^2-1$ son continua en $RR$. Así que solo tenemos que mirar cuando el denominador se hace 0.
+
+          Tenemos que buscar donde $x^2-1$. Resolviendo la ecuación obtenemos que ocurre para $x=-1$ y $x=-1$ el denominador se hace cero, luego la función es continua en:
+
+          $ {x in RR | x!=-1 "y" x!=1 } = (-oo, -1) union (-1, 1) union (1, +oo) $
+        ]
       ],
       [
         #subquestion()[$display(f(x) = (x^2 - 4)/(x - 2))$]
@@ -346,7 +370,30 @@
       ],
       [
         #subquestion()[$display(f(x) = ln(x-3))$]
+        #solution()[
+          La función $ln(x)$, está definida y es continua cuando $x>0$.
+
+          $x-3$ es continua en $RR$ luego tenemos que buscar donde $x-3>0$, que ocurre en $x>3$.
+
+          Luego la función es continua en:
+
+          $ {x in RR | x > 3} = (3, oo) $
+        ]
       ],
+      [
+        #subquestion()[$display(f(x) = sqrt(x-3))$]
+        #solution()[
+          La función $sqrt(x)$, está definida y es continua cuando $x>=0$,
+
+          $x-3$ es continua en $RR$ luego tenemos que buscar donde $x-3>=0$, que ocurre en $x>=3$
+
+          Luego la función es continua en:
+
+          $ {x in RR | x >= 3} = [3, oo) $
+        ]
+
+      ],
+
       [
         #subquestion()[$display(f(x) = sqrt(4 - x^2))$]
       ],
