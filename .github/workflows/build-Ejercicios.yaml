@@ -87,7 +87,7 @@ jobs:
               typst compile "$archivo" --format html --features html --root . --input show-solutions=false || echo "Error en $archivo, continuando..."
           done
 
-      - name: Upload PDF file
+      - name: Upload files
         uses: actions/upload-artifact@v6
         with:
           name: material
@@ -127,7 +127,7 @@ jobs:
             echo '  <ul>'
           } > "$INDEX"
 
-          find public -name "*.pdf" | sort | while read -r f; do
+          find public \( -name "*.pdf" -o -name "*.html" \) | sort | while read -r f; do
             rel="${f#public/}"
             echo "    <li><a href=\"$rel\"><code>$rel</code></a></li>" >> "$INDEX"
           done
