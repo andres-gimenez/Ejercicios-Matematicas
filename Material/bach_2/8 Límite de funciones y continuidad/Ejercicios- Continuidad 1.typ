@@ -194,9 +194,9 @@
 
       Estudiamos la continuidad en $x=2$, estudiando los limites laterales.
 
-      $limits("lím")_(x->2^-) f(x) = 2^2 - 1 = 4 -1 = 3$
+      $limits("lím")_(x->2^-) f(x) = limits("lím")_(x->2^-) x^2-1 = 2^2 - 1 = 4 -1 = 3$
 
-      $limits("lím")_(x->2^+) f(x) = 3 dot 2 - 4 = 6 -4 = 2$
+      $limits("lím")_(x->2^+) f(x) = limits("lím")_(x->2^-) 3x-4 = 3 dot 2 - 4 = 6 -4 = 2$
 
       Como limites laterales son distintos, no existe el límite en $x=2$, luego no es continua.
     ]
