@@ -398,12 +398,12 @@
       [
         #subquestion(
           solution: [$display(= +infinity)$],
-        )[$display(limits("lím")_(x->+infinity) sqrt(x^2+1) + sqrt(x+1)))$]
+        )[$display(limits("lím")_(x->+infinity) sqrt(x^2+1) + sqrt(x+1))$]
       ],
       [
         #subquestion(
           solution: [$display(= -infinity)$],
-        )[$display(limits("lím")_(x->-infinity) sqrt(1-x) - e^x + e^(-x)))$]
+        )[$display(limits("lím")_(x->-infinity) sqrt(1-x) - e^x + e^(-x))$]
       ],
     )
   ],
