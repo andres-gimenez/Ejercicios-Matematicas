@@ -32,6 +32,8 @@
   $=>$ $l = m$
 ]
 
+#image("Apuntes-Limites_1.png")
+
 #definition[Límite igual a $+oo$][
   $
     limits("lím")_(x->a) f(x) = +infinity
