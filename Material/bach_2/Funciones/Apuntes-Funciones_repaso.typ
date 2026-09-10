@@ -92,9 +92,9 @@ $RR$ si es continua en cada punto del intervalo.
   - *$display(sqrt(x))$*: El dominio son los puntos ${forall x in RR | x >= 0}$ y es continua en todo su dominio.
   - *$display(e^x)$*: Su dominio es ${forall RR}$.
   - *$ln(x)$*: El dominio es ${forall x in RR | x> 0}$ y es continua todo su dominio.
-  - $display(P(x) / Q(x))$: El dominio es ${forall x in RR | Q(x) != 0}$ y es continua en todo su dominio.
-  - $sin(x)$ y $cos(x)$: El dominio es ${forall x in RR | Q(x) != 0}$ y continua en todo su dominio.
-  - $tan(x)$: El dominio es dominio es $RR in {pi/2 + k pi : k in ZZ}$ y continua en todo su dominio.
+  - *$display(P(x) / Q(x))$*: El dominio es ${forall x in RR | Q(x) != 0}$ y es continua en todo su dominio.
+  - *$sin(x)$ y $cos(x)$*: El dominio es ${forall x in RR | Q(x) != 0}$ y continua en todo su dominio.
+  - *$tan(x)$*: El dominio es dominio es $RR in {pi/2 + k pi : k in ZZ}$ y continua en todo su dominio.
 ]
 
 #example[Función de Dirichlet][
