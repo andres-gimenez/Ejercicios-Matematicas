@@ -27,12 +27,12 @@
   $
 ]
 
+#image("Apuntes-Limites_1.png")
+
 #proposition[El límite es único][
   Si $display(limits("lím")_(x -> a) f(x) = l)$ y $display(limits("lím")_(x -> a) f(x) = m)$
   $=>$ $l = m$
 ]
-
-#image("Apuntes-Limites_1.png")
 
 #definition[Límite igual a $+oo$][
   $
