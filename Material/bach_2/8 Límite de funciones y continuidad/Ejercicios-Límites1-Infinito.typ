@@ -40,15 +40,38 @@
   [
     #question()[Si $limits("lím")_(x->1) f(x) = 4$ y $limits("lím")_(x->1) g(x) = 2$, di el valor del límite cuando $x$ tiende a 1 de las siguientes funciones:]
 
-    #columns(2, [
-      #subquestion()[$display(f(x)+g(x))$]
-      #subquestion()[$display(f(x) dot g(x))$]
-      #subquestion()[$display(f(x)/g(x))$]
-      #colbreak()
-      #subquestion()[$display(f(x)^g(x))$]
-      #subquestion()[$display(sqrt(g(x)))$]
-      #subquestion()[$display(4f(x)-5g(x))$]
-    ])
+    #questions-columns(
+      [
+        #subquestion(
+          solution: [=$display(limits("lím")_(x->1)f(x) + limits("lím")_(x->1)g(x)) = 4 +2 = #result[6]$],
+        )[$display(limits("lím")_(x->1)[f(x)+g(x)])$]
+      ],
+      [
+        #subquestion(
+          solution: [=$display(limits("lím")_(x->1)f(x) dot limits("lím")_(x->1)g(x)) = 4 dot 2 = #result[8]$],
+        )[$display(limits("lím")_(x->1)[f(x) dot g(x)])$]
+      ],
+      [
+        #subquestion(
+          solution: [=$display((limits("lím")_(x->1)f(x)) / (limits("lím")_(x->1)g(x)) = 4 / 2 = #result[2])$],
+        )[$display(limits("lím")_(x->1) f(x)/g(x))$]
+      ],
+      [
+        #subquestion(
+          solution: [=$display((limits("lím")_(x->1)f(x))^(limits("lím")_(x->1)g(x)) = 4^2 = #result[16])$],
+        )[$display(limits("lím")_(x->1) f(x)^g(x))$]
+      ],
+      [
+        #subquestion(
+          solution: [=$display(sqrt(limits("lím")_(x->1)g(x)) = #result[$sqrt(2)$])$],
+        )[$display(limits("lím")_(x->1)sqrt(g(x)))$]
+      ],
+      [
+        #subquestion(
+          solution: [=$display(4dot limits("lím")_(x->1)f(x) -5 dot limits("lím")_(x->1)g(x)) = 4 dot 4 - 5 dot 2 = #result[6]$],
+        )[$display(limits("lím")_(x->1)[4f(x)-5g(x)])$]
+      ],
+    )
   ],
   [
     #question()[Si $limits("lím")_(x->2) p(x) = +infinity$, $limits("lím")_(x->2) q(x) = +infinity$, $limits("lím")_(x->2) r(x) = 3$, $limits("lím")_(x->2) s(x) = 0$, di, en los casos en que sea posible, el valor del $limits("lím")_(x->2)$ de las siguientes funciones:
@@ -56,109 +79,143 @@
       \[Recuerda que las expresiones $(+infinity)slash(+infinity)$, $(+infinity)-(+infinity)$, $(0) dot (+infinity)$, $(1)^((+infinity))$, $(0)slash(0)$ son indeterminaciones \].
     ]
 
-    #columns(3, [
-      #subquestion()[$display(2p(x) + q(x))$]
-      #subquestion()[$display(p(x)-3q(x))$]
-      #subquestion()[$display(r(x)/p(x))$]
-      #subquestion()[$display(p(x)/p(x))$]
-      #subquestion()[$display(s(x) dot q(x))$]
-      #colbreak()
-      #subquestion()[$display(s(x)^(s(x)))$]
-      #subquestion()[$display(p(x)^(r(x)))$]
-      #subquestion()[$display(r(x)^(s(x)))$]
-      #subquestion()[$display((3-r(x))/s(x))$]
-      #subquestion()[$display([r(x)/3]^(s(x)))$]
-      #colbreak()
-      #subquestion()[$display(r(x)^(p(x)))$]
-      #subquestion()[$display(r(x)^(-q(x)))$]
-      #subquestion()[$display((r(x)/3)^(p(x)))$]
-      #subquestion()[$display((r(x)/3)^(-p(x)))$]
-    ])
+    #questions-columns(
+      [
+        #subquestion(
+          solution: [=$display(2 limits("lím")_(x->2) p(x) + limits("lím")_(x->2) q(x)] = 2(+oo) + (+oo)=#result[+oo])$],
+        )[$display(limits("lím")_(x->2) [2p(x) + q(x)])$]
+      ],
+      [
+        #subquestion(
+          solution: [=$display(limits("lím")_(x->2) p(x) - 3 limits("lím")_(x->2)q(x) = (+oo) - 3(+oo) = (+oo) - (+oo))$ Indeterminado.],
+        )[$display(limits("lím")_(x->2) [p(x)-3q(x)])$]
+      ],
+      [
+        #subquestion(
+          solution: [=$display((limits("lím")_(x->2)r(x))/(limits("lím")_(x->2)p(x)) = 3/(+oo)) = #result[0]$],
+        )[$display(limits("lím")_(x->2) r(x)/p(x))$]
+      ],
+      [
+        #subquestion(
+          solution: [=> $display(= limits("lím")_(x->2) 1) = #result[1]$],
+        )[$display(limits("lím")_(x->2) p(x)/p(x))$]
+      ],
+      [
+        #subquestion()[$display(limits("lím")_(x->2) [s(x) dot q(x)])$]
+      ],
+      [
+        #subquestion()[$display(limits("lím")_(x->2)[s(x)^(s(x))])$]
+      ],
+      [
+        #subquestion()[$display(limits("lím")_(x->2)[p(x)^(r(x))])$]
+      ],
+      [
+        #subquestion()[$display(limits("lím")_(x->2)[r(x)^(s(x))])$]
+      ],
+      [
+        #subquestion()[$display(limits("lím")_(x->2)[(3-r(x))/s(x)])$]
+      ],
+      [
+        #subquestion()[$display(limits("lím")_(x->2)[r(x)/3]^(s(x)))$]
+      ],
+      [
+        #subquestion()[$display(limits("lím")_(x->2)[r(x)^(p(x))])$]
+      ],
+      [
+        #subquestion()[$display(limits("lím")_(x->2)[r(x)^(-q(x))])$]
+      ],
+      [
+        #subquestion()[$display(limits("lím")_(x->2)[(r(x)/3)^(p(x))])$]
+      ],
+      [
+        #subquestion()[$display(limits("lím")_(x->2)[(r(x)/3)^(-p(x))])$]
+      ],
+    )
   ],
   [
     #question()[Calcula el valor de los siguientes límites, si existieran:]
     #questions-columns(
       [
         #subquestion(
-          solution: [$display(= 5 (+infinity)^2 + 3 (+infinity) + 2) = (+infinity)$],
+          solution: [$display(= 5 (+infinity)^2 + 3 (+infinity) + 2) = #result[$(+infinity)$]$],
         )[$display(limits("lím")_(x->+infinity) (5x^2+3x+2))$]
       ],
       [
         #subquestion(
-          solution: [$display(= 2 (+infinity) + sqrt(2 (+infinity)^2 + 6 (+infinity) - 5)) = +infinity$],
+          solution: [$display(= 2 (+infinity) + sqrt(2 (+infinity)^2 + 6 (+infinity) - 5)) = #result[$(+infinity)$]$],
         )[$display(limits("lím")_(x->+infinity) (2x+sqrt(2x^2+6x-5)))$]
       ],
       [
         #subquestion(
-          solution: [$display(= (3 (+infinity)^2+5 (+infinity)-3)/4 = (+infinity) / 4 = +infinity)$],
+          solution: [$display(= (3 (+infinity)^2+5 (+infinity)-3)/4 = (+infinity) / 4 = #result[$(+infinity)$])$],
         )[$display(limits("lím")_(x->+infinity) (3x^2+5x-3)/4)$]
       ],
       [
         #subquestion(
-          solution: [$display(= sqrt(3 (+infinity)^2 + 5 (+infinity) - 3) / 4 = sqrt(+infinity) / 4 = (+infinity) /4 = +infinity)$],
+          solution: [$display(= sqrt(3 (+infinity)^2 + 5 (+infinity) - 3) / 4 = sqrt(+infinity) / 4 = (+infinity) /4 = #result[$(+infinity)$])$],
         )[$display(limits("lím")_(x->+infinity) sqrt(3x^2+5x-3) / 4)$]
       ],
       [
         #subquestion(
-          solution: [$display(= +infinity + e^(+infinity) = (+infinity) + (+infinity) = +infinity)$],
+          solution: [$display(= +infinity + e^(+infinity) = (+infinity) + (+infinity) = #result[$(+infinity)$])$],
         )[$display(limits("lím")_(x->+infinity) x+e^x)$]
       ],
       [
         #subquestion(
-          solution: [$display(= +infinity - e^(infinity) = infinity - infinity = -infinity)$ (Ya que la exponencial crece más rápido que cualquier polinómica, se dice que es un infinito de orden superior.) ],
+          solution: [$display(= +infinity - e^(infinity) = infinity - infinity = #result[$(-infinity)$])$ (Ya que la exponencial crece más rápido que cualquier polinómica, se dice que es un infinito de orden superior.) ],
         )[$display(limits("lím")_(x->+infinity) x - e^x)$]
       ],
       [
         #subquestion(
-          solution: [$display(= 2^(+infinity) = +infinity)$],
+          solution: [$display(= 2^(+infinity) = = #result[$(+infinity)$])$],
         )[$display(limits("lím")_(x->+infinity) 2^x)$]
       ],
       [
         #subquestion(
-          solution: [$display(= e^(+infinity) = +infinity)$],
+          solution: [$display(= e^(+infinity) = = #result[$(+infinity)$])$],
         )[$display(limits("lím")_(x->+infinity) e^x)$]
       ],
       [
         #subquestion(
-          solution: [$display(= limits("lím")_(x->+infinity) 1/2^x = 1/2^(+infinity) = 1/(+infinity) = 0)$ (Ya que $f(x)=1/2$, es una función decreciente que tiende a 0 cuando $x -> +infinity$, o lo que es lo mismo, al ser $1/2 < 1$ el limite $-> 0$).],
+          solution: [$display(= limits("lím")_(x->+infinity) 1/2^x = 1/2^(+infinity) = 1/(+infinity) = #result[$0$])$ (Ya que $f(x)=1/2$, es una función decreciente que tiende a 0 cuando $x -> +infinity$, o lo que es lo mismo, al ser $1/2 < 1$ el limite $-> 0$).],
         )[$display(limits("lím")_(x->+infinity) (1/2)^x)$]
       ],
       [
         #subquestion(
-          solution: [$display(= limits("lím")_(x->+infinity) (1/2)^(x) = limits("lím")_(x->+infinity) 1/2^x = 1/2^(+infinity) = 1/(+infinity) = 0)$ (Ya que $f(x)=1/2$, es una función decreciente que tiende a 0 cuando $x -> +infinity$, o lo que es lo mismo, al ser $1/2 < 1$ el limite $-> 0$. Por tanto, cuando $x -> -infinity$, el límite $->0$).],
+          solution: [$display(= limits("lím")_(x->+infinity) (1/2)^(x) = limits("lím")_(x->+infinity) 1/2^x = 1/2^(+infinity) = 1/(+infinity) = #result[$0$])$ (Ya que $f(x)=1/2$, es una función decreciente que tiende a 0 cuando $x -> +infinity$, o lo que es lo mismo, al ser $1/2 < 1$ el limite $-> 0$. Por tanto, cuando $x -> -infinity$, el límite $->0$).],
         )[$display(limits("lím")_(x->-infinity) (1/2)^(-x))$]
       ],
       [
         #subquestion(
-          solution: [$display(= limits("lím")_(x->+infinity) (1/2)^(-x) = limits("lím")_(x->+infinity) 2^x = 2^(+infinity)= +infinity)$.],
+          solution: [$display(= limits("lím")_(x->+infinity) (1/2)^(-x) = limits("lím")_(x->+infinity) 2^x = 2^(+infinity)= #result[$+infinity$])$.],
         )[$display(limits("lím")_(x->-infinity) (1/2)^x)$]
       ],
       [
         #subquestion(
-          solution: [$display(= limits("lím")_(x->+infinity) 2^x = 2^(+infinity) = +infinity)$.],
+          solution: [$display(= limits("lím")_(x->+infinity) 2^x = 2^(+infinity) = #result[$+infinity$])$.],
         )[$display(limits("lím")_(x->+infinity) (1/2)^(-x))$]
       ],
       [
         #subquestion(
           solution: [$display(
               = limits("lím")_(x->+infinity) (1/2)^x = limits("lím")_(x->+infinity) 1/2^x
-              = 1/2^(+infinity) = 1/(+infinity) = 0
+              = 1/2^(+infinity) = 1/(+infinity) = #result[0]
             )$.],
         )[$display(limits("lím")_(x->-infinity) (1/2)^(-x))$]
       ],
       [
         #subquestion(
-          solution: [$display(= 0)$. (Ya que al ser $0,5 < 1$, el límite de la exponencial cuando $x -> +infinity$, tiende a 0).],
+          solution: [$display(= #result[0])$. (Ya que al ser $0,5 < 1$, el límite de la exponencial cuando $x -> +infinity$, tiende a 0).],
         )[$display(limits("lím")_(x->+infinity) (0,5)^x)$]
       ],
       [
         #subquestion(
-          solution: [$display(=4/(3(+infinity)^2+5(+infinity)-3) = 4 / (+infinity) = 0)$],
+          solution: [$display(=4/(3(+infinity)^2+5(+infinity)-3) = 4 / (+infinity) = #result[0])$],
         )[$display(limits("lím")_(x->+infinity) 4/(3x^2+5x-3))$]
       ],
       [
         #subquestion(
-          solution: [$display(=4/sqrt(3(+infinity)^2+5(+infinity)-3) = 4 / sqrt(+infinity) = 4 / (+infinity) = 0)$],
+          solution: [$display(=4/sqrt(3(+infinity)^2+5(+infinity)-3) = 4 / sqrt(+infinity) = 4 / (+infinity) = #result[0])$],
         )[$display(limits("lím")_(x->+infinity) 4/sqrt(3x^2+5x-3))$]
       ],
       [
@@ -175,7 +232,7 @@
             = limits("lím")_(x->+infinity) (-1 + 5/x - 3/x^2)/(sqrt(3/x^2 + 5/x^3 - 3/x^4) + 2/x)
             = (-1 + 5/(+infinity) - 3/(+infinity)^2)/(sqrt(3/(+infinity)^2 + 5/(+infinity)^3 - 3/(+infinity)^4) + 2/(+infinity)) = (-1 + 0 - 0)/(sqrt(0 + 0 - 0) + 0)
             = (-1+0-0)/(sqrt(0) + 0)
-            = (-1)/0^+ = -infinity
+            = (-1)/0^+ = #result[$(-infinity)$]
           )$]
       ],
       [
@@ -183,7 +240,7 @@
 
         #solution()[$display(
             limits("lím")_(x->-infinity) (3x^2+5x-3)/4 = limits("lím")_(x->infinity) (3x^2-5x-3)/4 = ((+infinity)^2 - 5(+infinity)-3)/4
-            = ((+infinity)-(+infinity))/4 = (+infinity)/4= +infinity
+            = ((+infinity)-(+infinity))/4 = (+infinity)/4= #result[$+infinity$]
           )$
 
           (El $(+infinity) - (+infinity) = (+infinity)$ porque la potencia de mayor grado es de orden superior).]
@@ -193,7 +250,7 @@
 
         #solution()[$display(
             limits("lím")_(x->-infinity) sqrt(3x^2+5x-3)/4 = limits("lím")_(x->infinity) sqrt(3x^2-5x-3)/4 = sqrt((+infinity)^2 - 5(+infinity)-3)/4
-            = sqrt((+infinity)-(+infinity))/4 = sqrt(+infinity)/4= (+infinity)/4 = +infinity
+            = sqrt((+infinity)-(+infinity))/4 = sqrt(+infinity)/4= (+infinity)/4 = #result[$( +infinity)$]
           )$
 
           (El $(+infinity) - (+infinity) = (+infinity)$ porque la potencia de mayor grado es de orden superior).]
@@ -202,17 +259,17 @@
         #subquestion(
           solution: [$=display(limits("lím")_(x->infinity) (-x)-e^(x))
           = (-infinity) - e^(+infinity) = (-infinity)-(+infinity)
-          = (-infinity)$],
+          = #result[$(-infinity)$]$],
         )[$display(limits("lím")_(x->-infinity) x-e^(-x))$]
       ],
       [
         #subquestion(
-          solution: [$display(= limits("lím")_(x->infinity) 2^x = 2^(+infinity) = +infinity)$],
+          solution: [$display(= limits("lím")_(x->infinity) 2^x = 2^(+infinity) = #result[$+infinity$])$],
         )[$display(limits("lím")_(x->-infinity) 2^(-x))$]
       ],
       [
         #subquestion(
-          solution: [$display(= limits("lím")_(x->infinity) e^x = e^(+infinity) = +infinity)$],
+          solution: [$display(= limits("lím")_(x->infinity) e^x = e^(+infinity) = #result[$+infinity$])$],
         )[$display(limits("lím")_(x->-infinity) e^(-x))$]
       ],
       [
@@ -230,7 +287,7 @@
           = limits("lím")_(x->+infinity) ((1/x + 3/x^2)/(3 + 5/x^2))^(2 sqrt(x))
           = ((1/(+infinity) + 3/(+infinity)^2)/(3 + 5/(+infinity)^2))^(2 sqrt(+infinity))
           = ((0 + 0)/(3 + 0))^(+infinity)
-          = (0/3)^(+infinity) = (0)^(+infinity) = 0
+          = (0/3)^(+infinity) = (0)^(+infinity) = #result[0]
         )$]
       ],
     )
