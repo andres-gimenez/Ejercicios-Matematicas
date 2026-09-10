@@ -1361,6 +1361,7 @@
     }))
   ],
 
+  [#v(2cm)], [#v(2cm)],
   [
     #align(center, [
       $f(x) = "arccosec"(x)$ \
