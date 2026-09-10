@@ -10,24 +10,22 @@
 #set text(lang: "en")
 #set par(first-line-indent: 1em, justify: true)
 
-== Funciones (repaso)
+== Repaso de funciones
 
-#numbering("1.")
+#definition[
+  Una *función* es una relación entre dos conjuntos en la que a cada
+  elemento del conjunto origen le corresponde un solo elemento del
+  conjunto imagen.
 
-=== Función (En matemáticas)
+  $ f: RR -> RR $
+]
 
-Una función es una relación entre dos conjuntos en la que a cada
-elemento del conjunto origen le corresponde un solo elemento del
-conjunto imagen.
+#definition[
+  La *composición de dos funciones* $f$ y $g$ es una función que se obtiene
+  aplicando primero $g$ y después $f$.
 
-$ f: RR -> RR $
-
-=== Composición de funciones
-
-La composición de dos funciones $f$ y $g$ es una función que se obtiene
-aplicando primero $g$ y después $f$.
-
-$ (f compose g)(x) = f(g(x)) $
+  $ (f compose g)(x) = f(g(x)) $
+]
 
 *Ejemplo:*
 
@@ -38,7 +36,7 @@ $ g(x) = x + 1 $
 1. Primero aplicamos $g$:
   $ g(3) = 3 + 1 = 4 $
 
-2. Después aplicamos $f$:
+1. Después aplicamos $f$:
   $ f(4) = 16 $
 
 Por tanto:
