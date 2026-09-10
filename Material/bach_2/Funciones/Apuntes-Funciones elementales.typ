@@ -872,7 +872,7 @@
     }))
   ],
   [
-    #align(center, $f(x) = (-1)/x$)
+    #align(center, $f(x) = root(3, x)$)
 
     #align(left, cetz.canvas({
       import cetz.draw: *
