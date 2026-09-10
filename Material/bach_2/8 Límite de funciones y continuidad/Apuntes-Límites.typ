@@ -72,7 +72,7 @@
 
 #pagebreak()
 
-== Operaciones con límites
+== Operaciones con límites (finitos)
 
 #proposition[
   Si $display(limits("lím")_(x -> a) f(x) = a)$ y $display(limits("lím")_(x -> a) g(x) = b)$
@@ -142,4 +142,150 @@
     log_alpha [limits("lím")_(x -> a) f(x)]
     =
     log_alpha a$
+]
+
+== Operaciones con límites (infinitos)
+
+#proposition[
+  Si $display(limits("lím")_(x -> a) f(x) = +infinity)$ y $display(limits("lím")_(x -> a) g(x) = +infinity)$
+
+  - $limits("lím")_(x -> a) [f(x) + g(x)] = (+infinity) + (+infinity)$
+]
+
+#proposition[Sumas][
+
+  $
+    (+infinity) + l = (+infinity)
+  $
+
+  $
+    (+infinity) + (+infinity) = (+infinity)
+  $
+
+  $
+    (-infinity) + l = (-infinity)
+  $
+
+  $
+    (-infinity) + (-infinity) = (-infinity)
+  $
+
+  $
+    -(-infinity) = (+infinity)
+  $
+]
+
+#proposition[Productos][
+
+  $
+    (+infinity) dot (+infinity) = (+infinity)
+  $
+
+  $
+    (+infinity) dot (-infinity) = (-infinity)
+  $
+
+  $
+    "Si" l > 0:
+    cases(
+      (+infinity) dot l = (+infinity),
+      (-infinity) dot l = (-infinity)
+    )
+  $
+
+  $
+    "Si" l < 0:
+    cases(
+      (+infinity) dot l = (-infinity),
+      (-infinity) dot l = (+infinity)
+    )
+  $
+]
+
+#proposition[Cocientes][
+  $
+    frac(l, (+infinity)) = 0
+  $
+
+  $
+    frac(l, 0) = cases(
+      (+infinity) & "si" l > 0,
+      (-infinity) & "si" l < 0
+    )
+  $
+
+  $
+    frac(0, (+infinity)) = 0
+  $
+]
+
+#proposition[Potencias][
+
+  $
+    (+infinity)^(+oo) = (+infinity)
+  $
+
+  $
+    (+infinity)^(-oo) = 0
+  $
+
+  $ "Si" l > 0: (+infinity)^l = (+infinity) $
+
+  $ "Si" l < 0: (+infinity)^l = 0 $
+
+  $ "Si" l != 0: l^0 = 1 $
+
+  $
+    limits("lím")_(x -> 0^+) x^x = 1
+  $
+
+  $
+    limits("lím")_(x -> 0^+) 0^x = 0
+  $
+
+  $
+    "Si" l > 1:
+    cases(
+      l^(+infinity) = (+infinity),
+      l^(-infinity) = 0
+    )
+  $
+
+  $
+    "Si" 0 < l < 1:
+    cases(
+      l^(+infinity) = 0,
+      l^(-infinity) = (+infinity)
+    )
+  $
+]
+
+#proposition[Indeterminaciones][
+  $
+    frac(plus.minus infinity, plus.minus infinity)
+  $
+
+  $
+    frac(0, 0)
+  $
+
+  $
+    (plus.minus infinity) dot 0
+  $
+
+  $
+    (plus.minus infinity) - (plus.minus infinity)
+  $
+
+  $
+    (plus.minus infinity)^0
+  $
+
+  $
+    0^0
+  $
+
+  $
+    1^(plus.minus infinity)
+  $
 ]
