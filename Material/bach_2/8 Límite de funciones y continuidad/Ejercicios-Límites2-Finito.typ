@@ -130,8 +130,7 @@
       ],
       [
         #subquestion(
-          solution: [
-            $display(
+          solution: [$=display(
               limits("lím")_(x -> 1^-) ln(x^2 + 2x - 3)
               = limits("lím")_(x -> 1^-) ln((x + 3)(x - 1))
             )$
@@ -144,8 +143,7 @@
       ],
       [
         #subquestion(
-          solution: [
-            $display(
+          solution: [$=display(
               limits("lím")_(x -> 1) ln(x^2 + 2x - 3)
               = limits("lím")_(x -> 1) ln((x + 3)(x - 1))
             )$
@@ -335,7 +333,7 @@
       [
 
         #subquestion(
-          solution: [$display(= (-2)/2 - ((-2)+2)/5 = result(-))$],
+          solution: [$display(= (-2)/2 - ((-2)+2)/5 = result(0))$],
         )[$display(limits("lím")_(x->a) [f(x)/g(x) - (f(x) + g(x))/h(x)])$]
       ],
     )
@@ -459,18 +457,19 @@
         )[$display(limits("lím")_(x->1) (x^2-2x+1)/(x^4-x^3-3x^2+5x-2))$]
       ],
       [
-        #subquestion(
-          solution: [$display(=-1)$],
-        )[$display(limits("lím")_(x->-1) [(x+1)(3x+2)/(x^3+x^2)])$]
+        #subquestion()[$display(limits("lím")_(x->-1) [(x+1)(3x+2)/(x^3+x^2)])$]
         #solution()[
           $display(limits("lím")_(x->-1) [(x+1)(3x+2)/(x^3+x^2)] = [(-1+1) dot (3(-1)+2)/((-1)^3+(-1)^2)] = 0 dot (-1)/0 = 0 dot (-oo))$ (indeterminado) \
-          $display(limits("lím")_(x->-1) [(x+1)(3x+2)/(x^3+x^2)] = limits("lím")_(x->-1) [(cancel(x+1)(3x+2))/(x^2 dot cancel((x+1)))] = limits("lím")_(x->-1) [(3x+2)/(x^2)] = (3(-1) +2)/(-1)^2 = -1/1 = -1)$
+          $display(limits("lím")_(x->-1) [(x+1)(3x+2)/(x^3+x^2)] = limits("lím")_(x->-1) [(cancel((x+1))(3x+2))/(x^2 dot cancel((x+1)))] = limits("lím")_(x->-1) [(3x+2)/(x^2)] = (3(-1) +2)/(-1)^2 = -1/1 = #result[-1])$
         ]
       ],
       [
-        #subquestion(
-          solution: [$display(=)$],
-        )[$display(limits("lím")_(x->2) (x^2-4)/(x^3-8))$]
+        #subquestion[$display(limits("lím")_(x->2) (x^2-4)/(x^3-8))$]
+        #solution[
+          $display(limits("lím")_(x->2) (x^2-4)/(x^3-8) = (2^2-4)/(2^3-8) = 0/0)$ (indeterminación)
+
+          $display(limits("lím")_(x->2) (x^2-4)/(x^3-8) = limits("lím")_(x->2) (cancel((x-2))(x+2))/(cancel((x-2))(x^2+2x+4)) = limits("lím")_(x->2) (x+2)/(x^2+2x+4) = (2+2)/(2^2+2 dot 2 + 4) = 4/(4+4+4) = 4/12 = #result[$display(1/3)$])$
+        ]
       ],
       [
         #subquestion(
