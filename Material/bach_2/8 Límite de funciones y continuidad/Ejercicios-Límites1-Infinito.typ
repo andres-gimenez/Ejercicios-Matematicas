@@ -193,12 +193,12 @@
       ],
       [
         #subquestion(
-          solution: [$display(= 2^(+infinity) = = #result[$(+infinity)$])$],
+          solution: [$display(= 2^(+infinity) = #result[$(+infinity)$])$],
         )[$display(limits("lím")_(x->+infinity) 2^x)$]
       ],
       [
         #subquestion(
-          solution: [$display(= e^(+infinity) = = #result[$(+infinity)$])$],
+          solution: [$display(= e^(+infinity) = #result[$(+infinity)$])$],
         )[$display(limits("lím")_(x->+infinity) e^x)$]
       ],
       [
