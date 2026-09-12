@@ -87,7 +87,8 @@
       ],
       [
         #subquestion(
-          solution: [=$display(limits("lím")_(x->2) p(x) - 3 limits("lím")_(x->2)q(x) = (+oo) - 3(+oo) = (+oo) - (+oo))$ Indeterminado.],
+          solution: [=$display(limits("lím")_(x->2) p(x) - 3 limits("lím")_(x->2)q(x) = (+oo) - 3(+oo) = (+oo) - (+oo))$; \
+            (Indeterminado).],
         )[$display(limits("lím")_(x->2) [p(x)-3q(x)])$]
       ],
       [
@@ -97,38 +98,63 @@
       ],
       [
         #subquestion(
-          solution: [=> $display(= limits("lím")_(x->2) 1) = #result[1]$],
+          solution: [$display(= limits("lím")_(x->2) 1) = #result[1]$],
         )[$display(limits("lím")_(x->2) p(x)/p(x))$]
       ],
       [
-        #subquestion()[$display(limits("lím")_(x->2) [s(x) dot q(x)])$]
+        #subquestion(
+          solution: [$display(= limits("lím")_(x->2) s(x) dot limits("lím")_(x->2) q(x) = 0 dot (+inf))$; (indeterminado)],
+        )[$display(limits("lím")_(x->2) [s(x) dot q(x)])$]
       ],
       [
-        #subquestion()[$display(limits("lím")_(x->2)[s(x)^(s(x))])$]
+        #subquestion(
+          solution: [$display(= limits("lím")_(x->2) s(x)^(limits("lím")_(x->2) s(x)) = 0^0)$; (indeterminado)],
+        )[$display(limits("lím")_(x->2)[s(x)^(s(x))])$]
       ],
       [
-        #subquestion()[$display(limits("lím")_(x->2)[p(x)^(r(x))])$]
+        #subquestion(
+          solution: [$display(= limits("lím")_(x->2) p(x)^(limits("lím")_(x->2) r(x)) = (+oo)^3 = #result($(+oo)$))$],
+        )[$display(limits("lím")_(x->2)[p(x)^(r(x))])$]
       ],
       [
-        #subquestion()[$display(limits("lím")_(x->2)[r(x)^(s(x))])$]
+        #subquestion(
+          solution: [$display(= limits("lím")_(x->2) r(x)^(limits("lím")_(x->2) s(x)) = 3^0 = #result($1$))$],
+        )[$display(limits("lím")_(x->2)[r(x)^(s(x))])$]
       ],
       [
-        #subquestion()[$display(limits("lím")_(x->2)[(3-r(x))/s(x)])$]
+        #subquestion(
+          solution: [$display(= (limits("lím")_(x->2)3 - limits("lím")_(x->2)r(x))/(limits("lím")_(x->2)s(x))] = limits("lím")_(x->2) (3-3)/0 = 0/0)$; (indeterminado)],
+        )[$display(limits("lím")_(x->2)[(3-r(x))/s(x)])$]
       ],
       [
-        #subquestion()[$display(limits("lím")_(x->2)[r(x)/3]^(s(x)))$]
+        #subquestion(
+          solution: [$display(= [(limits("lím")_(x->2) r(x))/(limits("lím")_(x->2) 3)]^(limits("lím")_(x->2) s(x)) = (3/3)^0 = 1^0 = #result($1$))$],
+        )[$display(limits("lím")_(x->2)[r(x)/3]^(s(x)))$]
       ],
       [
-        #subquestion()[$display(limits("lím")_(x->2)[r(x)^(p(x))])$]
+        #subquestion(
+          solution: [$display(= [(limits("lím")_(x->2) r(x))/(limits("lím")_(x->2) 3)]^(limits("lím")_(x->2) p(x)) = (3/3)^(+oo) = 1^(+oo))$; (indeterminado)],
+        )[$display(limits("lím")_(x->2)[r(x)/3]^(p(x)))$]
       ],
       [
-        #subquestion()[$display(limits("lím")_(x->2)[r(x)^(-q(x))])$]
+        #subquestion(
+          solution: [$display(= (limits("lím")_(x->2)r(x))^(limits("lím")_(x->2) p(x)) = 3^(+oo) = #result($(+oo)$))$],
+        )[$display(limits("lím")_(x->2)[r(x)^(p(x))])$]
       ],
       [
-        #subquestion()[$display(limits("lím")_(x->2)[(r(x)/3)^(p(x))])$]
+        #subquestion(
+          solution: [$display(= (limits("lím")_(x->2)r(x))^(limits("lím")_(x->2) -q(x)) = (limits("lím")_(x->2)r(x))^(- limits("lím")_(x->2) q(x)) = 3^(-oo) = 1/3^(+oo) = 1/(+oo) = #result($0$))$],
+        )[$display(limits("lím")_(x->2)[r(x)^(-q(x))])$]
       ],
       [
-        #subquestion()[$display(limits("lím")_(x->2)[(r(x)/3)^(-p(x))])$]
+        #subquestion(
+          solution: [$display(= ((limits("lím")_(x->2)r(x))/(limits("lím")_(x->2) 3))^(limits("lím")_(x->2) p(x)) = (3/3)^(+oo) = 1^(+oo))$; \ (indeterminado) ],
+        )[$display(limits("lím")_(x->2)[(r(x)/3)^(p(x))])$]
+      ],
+      [
+        #subquestion(
+          solution: [$display(= ((limits("lím")_(x->2)r(x))/(limits("lím")_(x->2) 3))^(limits("lím")_(x->2) -p(x)) = ((limits("lím")_(x->2)r(x))/(limits("lím")_(x->2) 3))^(- limits("lím")_(x->2) p(x)) = (3/3)^(-oo) = 1^(-oo))$; \ (indeterminado)],
+        )[$display(limits("lím")_(x->2)[(r(x)/3)^(-p(x))])$]
       ],
     )
   ],
