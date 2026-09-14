@@ -428,9 +428,28 @@
     #question()[Calcula el valor de los siguientes límites, si existieran:]
     #questions-columns(
       [
-        #subquestion(
-          solution: [$display(= -1 #h(10cm))$],
-        )[$display(limits("lím")_(x->+infinity) x^2/(x-1)- x^2/(x-2))$]
+        #subquestion()[$display(limits("lím")_(x->+infinity) x^2/(x-1)- x^2/(x-2))$]
+        #solution[
+          $display(
+            limits("lím")_(x->+infinity) x^2/(x-1)- x^2/(x-2) =
+            oo^2/(oo-1)- oo^2/(oo-2) = (+oo)/(+oo) - (+oo)/(+oo)
+          )$ $("Indeterminación" display((+oo)/(+oo)))$
+
+          $display(limits("lím")_(x->+infinity) x^2/(x-1)- x^2/(x-2) = ... = (+oo) - (+oo))$ (Indeterminación)
+
+          $display(
+            limits("lím")_(x->+infinity) x^2/(x-1)- x^2/(x-2) =
+            limits("lím")_(x->+infinity) ((x^2)(x-2)-(x^2)(x-1))/((x-1)(x-2)) = \ =
+            limits("lím")_(x->+infinity) (x^3 - 2x^2 -x^3+x^2)/(x^2-3x+2) =
+            limits("lím")_(x->+infinity) (- x^2 )/(x^2-3x+2) =
+            limits("lím")_(x->+infinity) -(x^2 )/(x^2-3x+2) = \ =
+            -limits("lím")_(x->+infinity) (x^2 / x^2 )/((x^2-3x+2)/x^2) =
+            -limits("lím")_(x->+infinity) 1/(x^2 / x^2 -3x /x^2+2/x^2) =
+            -limits("lím")_(x->+infinity) 1/(1 -3 /x+2/x^2) =
+            - 1/(1 -3 /(oo)+2/(oo)^2) = \ =
+            - 1/(1-0-0) = #result($-1$)
+          )$
+        ]
       ],
       [
         #subquestion(
@@ -528,9 +547,30 @@
     #question()[Calcula los siguientes límites:]
     #questions-columns(
       [
-        #subquestion(
-          solution: [$display(= e)$],
-        )[$display(limits("lím")_(x->infinity) ((x+4)/(x+3))^(x+3))$]
+        #subquestion[$display(limits("lím")_(x->infinity) ((x+4)/(x+3))^(x+3))$]
+        #solution()[
+          $display(
+            limits("lím")_(x->infinity) ((x+4)/(x+3))^(x+3) =
+            (((+oo)+4)/((+oo)+3))^((+oo)+3)
+          )$ $display("(Indeterminación)" (+oo)/(+oo))$
+
+          $display(
+            limits("lím")_(x->infinity) ((x+4)/(x+3))^(x+3) =
+            limits("lím")_(x->infinity) ((x/x + 4/x)/(x/x+3/x))^(x+3) =
+            limits("lím")_(x->infinity) ((1+4/x)/(1+3/x))^(x+3) = \ =
+            ((1+4/(+oo))/(1+3/(+oo)))^((+oo)+3) =
+            ((1+0)/(1+0))^(+oo) = 1^(+oo) "(Indeterminación)"
+          )$
+
+          $display(
+            limits("lím")_(x -> infinity) ((x + 4)/(x + 3))^(x + 3) =
+            limits("lím")_(x -> infinity) (((x + 3) + 1)/(x + 3))^(x + 3) =
+            limits("lím")_(x -> infinity) ((x + 3)/(x + 3) + 1 /(x+3))^(x + 3) = \ =
+            limits("lím")_(x -> infinity) (1 + 1/(x + 3))^(x + 3) stretch(=)^"t=x+3"
+            limits("lím")_(t -> infinity) (1 + 1/(t))^(t) =
+            #result[$e$]
+          )$
+        ]
       ],
       [
         #subquestion(
