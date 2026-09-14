@@ -308,12 +308,12 @@
       ],
       [
         #solution()[$display(
-          limits("lím")_(x->+infinity) ((x+3)/(3x^2+5))^(2 sqrt(x))
-          = limits("lím")_(x->+infinity) ((x/x^2 + 3/x^2)/((3x^2)/x^2 + 5/x^2))^(2 sqrt(x))
-          = limits("lím")_(x->+infinity) ((1/x + 3/x^2)/(3 + 5/x^2))^(2 sqrt(x))
-          = ((1/(+infinity) + 3/(+infinity)^2)/(3 + 5/(+infinity)^2))^(2 sqrt(+infinity))
-          = ((0 + 0)/(3 + 0))^(+infinity)
-          = (0/3)^(+infinity) = (0)^(+infinity) = #result[0]
+          limits("lím")_(x->+infinity) ((x+3)/(3x^2+5))^(2 sqrt(x)) =
+          limits("lím")_(x->+infinity) ((x/x^2 + 3/x^2)/((3x^2)/x^2 + 5/x^2))^(2 sqrt(x)) =
+          limits("lím")_(x->+infinity) ((1/x + 3/x^2)/(3 + 5/x^2))^(2 sqrt(x)) = \ =
+          ((1/(+infinity) + 3/(+infinity)^2)/(3 + 5/(+infinity)^2))^(2 sqrt(+infinity)) =
+          ((0 + 0)/(3 + 0))^(+infinity) =
+          (0/3)^(+infinity) = (0)^(+infinity) = #result[0]
         )$]
       ],
     )
@@ -322,19 +322,65 @@
     #question()[Calcula el valor de los siguientes límites, si existieran:]
     #questions-columns(
       [
-        #subquestion(
-          solution: [$display(=-2)$],
-        )[$display(limits("lím")_(x->+infinity) (2x^3+x^2-1)/(-x^3+3))$]
+        #subquestion()[$display(limits("lím")_(x->+infinity) (2x^3+x^2-1)/(-x^3+3))$]
+        #solution()[
+          $display(
+            limits("lím")_(x->+infinity) (2x^3+x^2-1)/(-x^3+3) =
+            limits("lím")_(x->+infinity) -(2x^3+x^2-1)/(x^3-3) = \ =
+            limits("lím")_(x->+infinity) -(2(oo)^3+(oo)^2-1)/((oo)^3-3) =
+            -((+oo)) / ((+oo)) "(Indeterminación)"
+          )$
+
+          $display(
+            limits("lím")_(x->+infinity) (2x^3+x^2-1)/(-x^3+3) =
+            limits("lím")_(x->+infinity) -(2x^3+x^2-1)/(x^3-3) =
+            limits("lím")_(x->+infinity) -((2x^3+x^2-1)/x^3)/((x^3-3)/x^3) =
+            limits("lím")_(x->+infinity) -((2x^3)/(x^3)+(x^2)/(x^3)-1/(x^3))/((-x^3)/(x^3)-3/(x^3)) = \ =
+            limits("lím")_(x->+infinity) -(2+1/x-1/(x^3))/(1-3/(x^3)) =
+            -(2+1/(oo)-1/((oo)^3))/(1-3/((oo)^3)) =
+            -(2+1/(oo)-1/(oo))/(1-3/(oo)) = -(2+ 0 - 0)/(1-0) = -2 / (1) = #result($-2$)
+          )$
+        ]
       ],
       [
-        #subquestion(
-          solution: [$display(=-infinity)$],
-        )[$display(limits("lím")_(x->+infinity) (2x^3+2x+3)/(-x^2+3))$]
+        #subquestion()[$display(limits("lím")_(x->+infinity) (2x^3+2x+3)/(-x^2+3))$]
+        #solution()[
+          $display(
+            limits("lím")_(x->+infinity) -(2x^3+2x+3)/(x^2-3) =
+            (2(oo)^3+2(oo)+3)/((oo)^2-3) = -(+oo)/(+oo)
+          )$ (Indeterminación)
+
+          $display(
+            limits("lím")_(x->+infinity) (2x^3+2x+3)/(-x^2+3) =
+            limits("lím")_(x->+infinity) -(2x^3+2x+3)/(x^2-3) =
+            - limits("lím")_(x->+infinity) ((2x^3+2x+3)/(x^3))/((x^2-3)/x^3) =
+            - limits("lím")_(x->+infinity) ((2x^3)/(x^3)+(2x)/x^3+3/x^3)/(x^2/x^3-3/x^3) = \ =
+            - limits("lím")_(x->+infinity) (2+2/x^2+3/x^3)/(1/x-3/x^3) =
+            - (2 + 2/(oo) +3 / (oo)^3)/(1/(oo)-3/(oo)^3) = -(2+0+0)/(0-0) = -2/0 = (-oo)
+          )$
+        ]
       ],
       [
-        #subquestion(
-          solution: [$display(=infinity)$],
-        )[$display(limits("lím")_(x->-infinity) (4x^3+3x^2-2)/(5-x^2))$]
+        #subquestion()[$display(limits("lím")_(x->-infinity) (4x^3+3x^2-2)/(5-x^2))$]
+        #solution()[
+          $display(
+            limits("lím")_(x->-infinity) (4x^3+3x^2-2)/(5-x^2) =
+            limits("lím")_(x->infinity) (4(-x)^3+3(-x)^2-2)/(5-(-x)^2) =
+            limits("lím")_(x->infinity) (-4x^3+3x^2-2)/(5-x^2) = \ =
+            limits("lím")_(x->infinity) (-(4x^3-3x^2+2))/(-(x^2-5)) =
+            limits("lím")_(x->infinity) (4x^3-3x^2+2)/(x^2-5) = \ =
+            limits("lím")_(x->infinity) (4(oo)^3-3(oo)^2+2)/((oo)^2 - 5) =
+            -(+oo)/(+oo) "(Indeterminación)"
+          )$
+
+          $display(
+            limits("lím")_(x->infinity) (4x^3-3x^2+2)/(x^2-5) =
+            limits("lím")_(x->infinity) ((4x^3-3x^2+2)/x^3)/((x^2-5)/x^3) =
+            limits("lím")_(x->infinity) ((4x^3)/(x^3)-(3x^2)/(x^3)+2/(x^3))/((x^2)/(x^3) - 5/(x^3)) =
+            limits("lím")_(x->infinity) (4-(3)/(x)+2/(x^3))/((1)/(x) - 5/(x^3)) = \ =
+            ( 4 - 3/oo + 2/oo^3)/(1/oo - 5/oo^3 ) = (4 - 0 + 0)/(0-0) = 4/0 = +oo
+          )$
+        ]
       ],
       [
         #subquestion(
