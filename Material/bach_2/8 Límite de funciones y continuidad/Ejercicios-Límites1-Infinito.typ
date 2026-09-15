@@ -393,9 +393,25 @@
         )[$display(limits("lím")_(x->+infinity) (sqrt(2x^2+2x+3))/(2x+3))$]
       ],
       [
-        #subquestion(
-          solution: [$display(= root(3, -2))$],
-        )[$display(limits("lím")_(x->+infinity) (root(3, 2x^2+3)-5)/(sqrt(x+5)+root(3, 1-x^2)))$]
+        #subquestion[$display(limits("lím")_(x->+infinity) (root(3, 2x^2+3)-5)/(sqrt(x+5)+root(3, 1-x^2)))$]
+        #solution()[
+          $display(
+            limits("lím")_(x->+infinity) (root(3, 2x^2+3)-5)/(sqrt(x+5)+root(3, 1-x^2)) =
+            (root(3, 2(+oo)^2+3)-5)/(sqrt((+oo)+5)+root(3, 1-(+oo)^2)) =
+            (root(3, (+oo)^2)-5)/(sqrt((+oo)+5)+root(3, -(+oo)^2)) =
+            (+oo)/((+oo)+(+oo)) = (+oo)/(+oo)
+          )$ (Indeterminación)
+
+          $display(
+            limits("lím")_(x->+infinity) (root(3, 2x^2+3)-5)/(sqrt(x+5)+root(3, 1-x^2)) =
+            limits("lím")_(x->+infinity) (root(3, 2x^2+3)-5)/(x^(2/3))/((sqrt(x+5)+root(3, 1-x^2))/(x^(2/3))) =
+            limits("lím")_(x->+infinity) (root(3, ((2x^2+3))/x^2)- 5/x^(2/3))/(sqrt((x+5)/x^(4/3))+root(3, (1-x^2)/x^2)) = \ =
+            limits("lím")_(x->+infinity) (root(3, 2 + 3/x^2)- 5/x^(2/3))/(sqrt(1/x^(1/3) + 5/x^(4/3))+root(3, 1/x^2 - 1)) =
+            (root(3, 2 + 3/(+oo)^2)- 5/(+oo)^(2/3))/(sqrt(1/(+oo)^(1/3) + 5/(+oo)^(4/3))+root(3, 1/(+oo)^2 - 1)) =
+            (root(3, 2 + 0)- 0)/(0 + 0+root(3, 0 - 1)) = \ =
+            root(3, 2)/root(3, -1) = root(3, -2) = #result($- root(3, 2)$)
+          )$
+        ]
       ],
       [
         #subquestion(
