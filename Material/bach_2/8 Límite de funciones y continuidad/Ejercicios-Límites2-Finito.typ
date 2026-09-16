@@ -331,7 +331,6 @@
         )[$display(limits("lím")_(x->a) sqrt(f(x)^2 + g(x)^2))$]
       ],
       [
-
         #subquestion(
           solution: [$display(= (-2)/2 - ((-2)+2)/5 = result(0))$],
         )[$display(limits("lím")_(x->a) [f(x)/g(x) - (f(x) + g(x))/h(x)])$]
@@ -343,9 +342,19 @@
     #questions-columns(
       max-columns: 1,
       [
-        #subquestion(
-          solution: [$display(=0)$],
-        )[$display(limits("lím")_(x->0) (3x^4)/(x^3+x^2))$]
+        #subquestion[$display(limits("lím")_(x->0) (3x^4)/(x^3+x^2))$]
+        #solution()[
+          $display(
+            limits("lím")_(x->0) (3x^4)/(x^3+x^2) =
+            0/0
+          )$ (Indeterminación)
+
+          $display(
+            limits("lím")_(x->0) (3x^4)/(x^3+x^2) =
+            limits("lím")_(x->0) (3x^2 dot cancel(x^2))/((x+1) cancel(x^2)) =
+            0/1 = #result(0)
+          )$
+        ]
       ],
       [
         #subquestion(
@@ -356,10 +365,10 @@
         #subquestion(
           solution: [#h(0.1cm) $display(exists.not)$],
         )[$display(limits("lím")_(x->3) (2x+1)/(3-x))$]
-        #solution()[ // no se muestra en columna, cuando no se define max-columns.
+        #solution()[
           $display(
-            limits("lím")_(x->3^+) (2x+1)/(3-x) = -infinity \
-            limits("lím")_(x->3^-) (2x+1)/(3-x) = +infinity
+            limits("lím")_(x->3^+) (2x+1)/(3-x) = (2 dot 3 +1)/(3 - 3) = 7/(-0) = -infinity \
+            limits("lím")_(x->3^-) (2x+1)/(3-x) = (2 dot 3 +1)/(3 - 3) = 7/(0) = +infinity
           )$
         ]
       ],
