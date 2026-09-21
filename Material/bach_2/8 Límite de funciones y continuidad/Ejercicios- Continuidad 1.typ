@@ -391,17 +391,43 @@
 
           $ {x in RR | x >= 3} = [3, oo) $
         ]
-
       ],
-
       [
         #subquestion()[$display(f(x) = sqrt(4 - x^2))$]
+        #solution()[
+          La función $sqrt(x)$, está definida y es continua cuando $x>=0$,
+
+          $4-x^2$ es continua en $RR$ luego tenemos que buscar donde $4 - x^2>=0$, que ocurre cuando $x in [-2, 2]$
+
+          Luego la función es continua en:
+
+          $ {x in RR | -2 <= x <= 2} = [-2, 2] $
+        ]
       ],
       [
         #subquestion()[$display(f(x) = sqrt(x^2 - 4))$]
+        #solution()[
+          La función $sqrt(x)$, está definida y es continua cuando $x>=0$,
+
+          $x^2-4$ es continua en $RR$ luego tenemos que buscar donde $x^2-4>=0$, que ocurre cuando $x in (-oo, -2] union [2, oo)]$
+
+          Luego la función es continua en:
+
+          $ {x in RR | x <= -2 "y" x >= 2 } = (-oo, -2] union [2, oo) = RR \\ (-2, 2) $
+        ]
       ],
       [
         #subquestion()[$display(f(x) = ln(x^2-4))$]
+        #solution()[
+          La función $ln(x)$, está definida y es continua cuando $x>0$,
+
+          $x^2-4$ es continua en $RR$ luego tenemos que buscar donde $x^2-4>0$, que ocurre cuando $x in (-oo, -2) union (2, oo)]$
+
+          Luego la función es continua en:
+
+          $ {x in RR | x < -2 "y" x > 2 } = (-oo, -2) union (2, oo) = RR \\ [-2, 2] $
+        ]
+
       ],
       [
         #subquestion()[$display(f(x) = 1/sqrt(x-2))$]
