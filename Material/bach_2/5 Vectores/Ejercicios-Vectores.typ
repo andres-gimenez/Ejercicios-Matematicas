@@ -1,6 +1,6 @@
 #import "@preview/g-exam:0.4.5": *
-#import "@preview/cetz:0.4.2"
-#import "@preview/cetz-plot:0.1.3"
+#import "@preview/cetz:0.5.2"
+#import "@preview/cetz-plot:0.1.4"
 
 #let config = yaml("../../config.yaml")
 
@@ -198,9 +198,9 @@
             display(
               cases(
                 delim: "{",
-                2a + 2&b + &c &= 3,
-                3a + &b + 2&c &= 3,
-                4a + 2&b + &c &= 0
+                2a + 2 & b + & c & = 3,
+                3a + & b + 2 & c & = 3,
+                4a + 2 & b + & c & = 0
               )
             ) =>
             display(
