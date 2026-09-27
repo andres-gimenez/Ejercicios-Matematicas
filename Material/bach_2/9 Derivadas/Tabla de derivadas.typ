@@ -137,7 +137,7 @@
 ]
 
 #align(left)[
-  == Funciones exponeciales
+  == Funciones exponenciales
   #table(
     columns: (auto, auto),
     table.header([=== Función], [=== *Derivada*]),
@@ -152,7 +152,7 @@
 ]
 
 #align(left)[
-  == Funciones logaritmicas
+  == Funciones logarítmicas
   #table(
     columns: (auto, auto),
     table.header([=== Función], [=== *Derivada*]),
@@ -177,6 +177,7 @@
   )
 ]
 
+#colbreak()
 
 
 #align(left)[

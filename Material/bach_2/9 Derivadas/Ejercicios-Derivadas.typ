@@ -345,19 +345,19 @@
       ],
       [
         #subquestion()[$display(f(x) = "ln" root(3, ("sen"(x) dot cos(x))/(1-x)^2))$]
-        #solution(color: red)[
-          1ª Forma:
+        #solution()[
+          // 1ª Forma:
 
-          $display(
-            f'(x) = 1/(root(3, ("sen"(x) dot cos(x))/(1-x)^2)) dot (1/3)(("sen"(x) dot cos(x))/(1-x)^2)^(-2/3)
-            dot ((cos^2(x) - "sen"^2(x))(1-x)^2 + ("sen"(x) dot cos(x))(-2)(1-x))/(1-x)^4 = \
-            1/(3 root(3, (("sen"(x) dot cos(x))/(1-x)^2)^2)) dot ((cos^2(x) - "sen"^2(x))(1-x)^2 - 2("sen"(x) dot cos(x))(1-x))/(1-x)^4 = \
-            1/(3 root(3, ("sen"(x) dot cos(x))^2 (1-x)^(-4))) dot ((cos^2(x) - "sen"^2(x))(1-x) - 2("sen"(x) dot cos(x)))/(1-x)^3 = \
-            1/(3 ("sen"(x)^(2/3) dot cos(x)^(2/3) dot (1-x)^(-4/3))) dot ((cos^2(x) - "sen"^2(x))(1-x) - 2("sen"(x) dot cos(x)))/(1-x)^3 = \
-            ( (cos^2(x) - "sen"^2(x))(1-x) - 2("sen"(x) dot cos(x)) ) / ( 3 ("sen"(x)^(2/3) dot cos(x)^(2/3) dot (1-x)^(5/3)) )
-          )$
+          // $display(
+          //   f'(x) = 1/(root(3, ("sen"(x) dot cos(x))/(1-x)^2)) dot (1/3)(("sen"(x) dot cos(x))/(1-x)^2)^(-2/3)
+          //   dot ((cos^2(x) - "sen"^2(x))(1-x)^2 - ("sen"(x) dot cos(x))(-2)(1-x))/(1-x)^4 = \
+          //   1/(3 root(3, (("sen"(x) dot cos(x))/(1-x)^2)^2)) dot ((cos^2(x) - "sen"^2(x))(1-x)^2 + 2("sen"(x) dot cos(x))(1-x))/(1-x)^4 = \
+          //   1/(3 root(3, ("sen"(x) dot cos(x))^2 (1-x)^(-4))) dot ((cos^2(x) - "sen"^2(x))(1-x) + 2("sen"(x) dot cos(x)))/(1-x)^3 = \
+          //   1/(3 ("sen"(x)^(2/3) dot cos(x)^(2/3) dot (1-x)^(-4/3))) dot ((cos^2(x) - "sen"^2(x))(1-x) + 2("sen"(x) dot cos(x)))/(1-x)^3 = \
+          //   ( (cos^2(x) - "sen"^2(x))(1-x) + 2("sen"(x) dot cos(x)) ) / ( 3 ("sen"(x)^(2/3) dot cos(x)^(2/3) dot (1-x)^(5/3)) )
+          // )$
 
-          2ª Forma:
+          // 2ª Forma:
 
           $display(f(x) = "ln" root(3, ("sen"(x) dot cos(x))/(1-x)^2)) = 1/3 ["ln"("sen"(x)) + "ln"(cos(x)) - 2 "ln"(1-x)])$
 
