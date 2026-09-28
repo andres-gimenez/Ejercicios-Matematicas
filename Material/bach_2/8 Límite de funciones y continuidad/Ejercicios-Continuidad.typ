@@ -449,6 +449,58 @@
       ],
     )
   ],
+  [
+    #question[
+      Halla $b$ para que la función $f(x)$ sea continua en $RR$
+
+      $
+        f(x) = cases(
+          reverse: #false, delim: "{", gap: #1em,
+          & x^2 + 2x + b & "si" & x <= 0,
+          & ln(1+x)/(2x) & "si" & x > 0,
+        )
+      $
+    ]
+    #solution[
+
+      Para $x<0$ la función es un polinomio, luego es continua en $(-oo, 0)$.
+
+      Para $x>0$ ln(1+x) es continua, ya que si $x>0 => 1+x>0$ y $1/2x$ es continua si $x>0$.
+
+      *Estudiamos el caso $x=0$:*
+
+      Primero vemos si existen los límites laterales:
+
+      $display(
+        limits("lím")_(x->0^-) f(x) =
+        limits("lím")_(x->0^-) (x^2 + 2x + b) = b
+      )$
+
+      $display(
+        limits("lím")_(x->0^+) f(x) =
+        limits("lím")_(x->0^-) ln(1+x)/(2x) = ln(1+0)/(2 dot 0) = 0/0
+      )$
+
+      Usamos L'Hôpital
+
+      $display(
+        limits("lím")_(x->0^-) ln(1+x)/(2x) =
+        limits("lím")_(x->0^-) 1/(1+x)/(2) =
+        limits("lím")_(x->0^-) 1/(2(1+x)) = 1/2
+      )$
+
+      Para que exista $display(limits("lím")_(x->0) f(x))$, se tiene que cumplir  $display(limits("lím")_(x->0^+) f(x)) = limits("lím")_(x->0^-) f(x)$
+
+      Luego si  $display(b = 1/2)$  existe el límite.
+
+      Tenemos que ver que $f(0)$ esté bien definido.
+
+      $display(f(0) = 0^2 + 2 dot 0 + 1/2 = 1/2)$
+
+
+    ]
+  ],
+
   // [
   //   #question[Dada la función:
 
