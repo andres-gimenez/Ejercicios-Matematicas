@@ -449,211 +449,179 @@
       ],
     )
   ],
-  [
-    // #question[Dada la función:
+  // [
+  //   #question[Dada la función:
 
-    //   $ f(x) = x - 4/(x-1)^2 $
+  //     $ f(x) = x - 4/(x-1)^2 $
 
-    //   Halla el dominio de $f(x)$ y determinar las asíntotas en caso de que existan.
-    // ]
-    // #solution[
-    //   *Dominio:*
+  //     Halla el dominio de $f(x)$ y determinar las asíntotas en caso de que existan.
+  //   ]
+  //   #solution[
+  //     *Dominio:*
 
-    //   La función es continua en $RR$, menos cuando $x-1 = 0$
+  //     La función es continua en $RR$, menos cuando $x-1 = 0$
 
-    //   $display(D = {forall x in RR | x-1 = 0} = RR \\ {1})$
+  //     $display(D = {forall x in RR | x-1 = 0} = RR \\ {1})$
 
-    //   *Asíntota horizontal:*
+  //     *Asíntota horizontal:*
 
-    //   // Para $x -> +oo$:
+  //     // Para $x -> +oo$:
 
-    //   $display(
-    //     limits("lím")_(x -> +oo) f(x)
-    //     = limits("lím")_(x -> +oo) (x - frac(4, (x - 1)^2))
-    //     = oo - 4/(oo-1)^2
-    //     = oo - 4/oo
-    //     = oo - 0
-    //     = +oo
-    //   )$
+  //     $display(
+  //       limits("lím")_(x -> +oo) f(x)
+  //       = limits("lím")_(x -> +oo) (x - frac(4, (x - 1)^2))
+  //       = oo - 4/(oo-1)^2
+  //       = oo - 4/oo
+  //       = oo - 0
+  //       = +oo
+  //     )$
 
-    //   Por tanto, *no tiene asíntota horizontal por la derecha*.
+  //     Por tanto, *no tiene asíntota horizontal por la derecha*.
 
-    //   // Para $x -> -oo$:
+  //     // Para $x -> -oo$:
 
-    //   $display(
-    //     limits("lím")_(x -> -oo) f(x)
-    //     = limits("lím")_(x -> +oo) f(-x)
-    //     = limits("lím")_(x -> +oo) [-x - frac(4, (-x - 1)^2)]
-    //     = limits("lím")_(x -> +oo) [-x - frac(4, (x + 1)^2)] = \
-    //     = -oo - 4/(oo+1)^2
-    //     = -oo - 4/oo
-    //     = -oo - 0
-    //     = -oo
-    //   )$
+  //     $display(
+  //       limits("lím")_(x -> -oo) f(x)
+  //       = limits("lím")_(x -> +oo) f(-x)
+  //       = limits("lím")_(x -> +oo) [-x - frac(4, (-x - 1)^2)]
+  //       = limits("lím")_(x -> +oo) [-x - frac(4, (x + 1)^2)] = \
+  //       = -oo - 4/(oo+1)^2
+  //       = -oo - 4/oo
+  //       = -oo - 0
+  //       = -oo
+  //     )$
 
-    //   Por tanto, *no tiene asíntota horizontal por la izquierda*.
+  //     Por tanto, *no tiene asíntota horizontal por la izquierda*.
 
+  //     *Asíntota vertical:*
 
-    //   *Asíntota vertical:*
+  //     Como el dominio de la función es $display(D = RR \\ {1})$
 
-    //   Como el dominio de la función es $display(D = RR \\ {1})$
+  //     Estudiamos el comportamiento cuando $x -> 1$.
 
-    //   Estudiamos el comportamiento cuando $x -> 1$.
+  //     Por la *izquierda*:
 
-    //   Por la *izquierda*:
+  //     $display(
+  //       limits("lím")_(x -> 1^-) f(x)
+  //       = limits("lím")_(x -> 1^-) [x - frac(4, (x - 1)^2)]
+  //       = 1 - frac(4, 0)
+  //       = -oo
+  //     )$
 
-    //   $display(
-    //     limits("lím")_(x -> 1^-) f(x)
-    //     = limits("lím")_(x -> 1^-) [x - frac(4, (x - 1)^2)]
-    //     = 1 - frac(4, 0)
-    //     = -oo
-    //   )$
+  //     Por la *derecha*:
 
-      // Por la derecha:
+  //     $display(
+  //       limits("lím")_(x -> 1^+) f(x)
+  //       = limits("lím")_(x -> 1^+) (x - frac(4, (x - 1)^2))
+  //       = 1 - frac(4, 0)
+  //       = -oo
+  //     )$
 
-      // $
-      // lim_(x -> 1^+) f(x)
-      // = lim_(x -> 1^+) (x - frac(4, (x - 1)^2))
-      // = 1 - frac(4, 0)
-      // = -oo
-      // $
+  //     Como los dos límites laterales coinciden,
 
-      // Como los dos límites laterales coinciden,
+  //     $
+  //       limits("lím")_(x -> 1) f(x) = -oo
+  //     $
 
-      // $
-      // lim_(x -> 1) f(x) = -oo
-      // $
+  //     Por tanto, tiene una *asíntota vertical* en *$x=1$*
 
-      // Por tanto, tiene una **asíntota vertical** en
+  //     *Asíntota oblicua:*
 
-      // $
-      // boxed(x = 1)
-      // $
+  //     Una posible asíntota oblicua tiene la forma: *$display(y = m x + n)$*
 
+  //     Calculamos primero la pendiente:
 
-      // == Asíntota oblicua
+  //     Para $x -> +oo$:
 
-      // Una posible asíntota oblicua tiene la forma
+  //     $display(
+  //       m = limits("lím")_(x -> +oo) frac(x - frac(4, (x - 1)^2), x) =
+  //       lim_(x -> +oo) (1 - frac(4, x (x - 1)^2)) =
+  //       1 - 5/ oo(oo-1)^2=
+  //       1 - 5/oo =
+  //       1 - 0 =
+  //       1
+  //     )$
 
-      // $
-      // y = mx + n
-      // $
+  //     Para $x -> -oo$:
 
-      // Calculamos primero la pendiente:
+  //     $display(
+  //       m' = limits("lím")_(x -> -oo) frac(x - frac(4, (x - 1)^2), x) =
+  //       limits("lím")_(x -> oo) frac(-x - frac(4, (-x - 1)^2), -x) =
+  //       limits("lím")_(x -> oo) frac(-x - frac(4, (x + 1)^2), -x) =
+  //       limits("lím")_(x -> +oo) (1 + frac(4, x (x + 1)^2)) = \
+  //       1 + 5/ oo(oo+1)^2=
+  //       1 + 5/oo =
+  //       1 + 0 =
+  //       1
+  //     )$
 
-      // Para $x -> +oo$:
+  //     Por tanto, tenemos dos asíntotas con pendiente *$m = 1$*
 
-      // $
-      // m = lim_(x -> +oo) frac(f(x), x)
-      // $
+  //     Calculamos ahora la ordenada $n$.
 
-      // $
-      // = lim_(x -> +oo)
-      // frac(
-      //   x - frac(4, (x - 1)^2),
-      //   x
-      // )
-      // $
+  //     Para $x -> +oo$:
 
-      // $
-      // = lim_(x -> +oo)
-      // left(
-      //   1 - frac(4, x (x - 1)^2)
-      // right)
-      // = 1
-      // $
+  //     $display(
+  //       n = limits("lím")_(x -> +oo) [f(x) - x] =
+  //       limits("lím")_(x -> +oo) [ x - frac(4, (x - 1)^2) - x ] =
+  //       limits("lím")_(x -> +oo) -frac(4, (x - 1)^2) =
+  //       1/oo^2 = 1/oo = 0
+  //     )$
 
-      // Para $x -> -oo$:
+  //     Para $x -> -oo$:
 
-      // $
-      // m' = lim_(x -> -oo) frac(f(x), x)
-      // $
+  //     $display(
+  //       n = limits("lím")_(x -> -oo) [f(x) - x] =
+  //       limits("lím")_(x -> -oo) [ x - frac(4, (x - 1)^2) - x ] =
+  //       limits("lím")_(x -> +oo) [ -x - frac(4, (-x - 1)^2) + x ] =
+  //       limits("lím")_(x -> +oo) [ - frac(4, (x + 1)^2)] =
+  //       1/oo^2 = 1/oo = 0
+  //     )$
 
-      // Haciendo el cambio $t = -x$, tenemos:
+  //     Luego tenemos la asíntota *$y = x$* a la que se acerca la función tanto por la derecha como por la izquierda.
 
-      // $
-      // m'
-      // = lim_(x -> +oo)
-      // frac(f(-x), -x)
-      // $
-
-      // $
-      // = lim_(x -> +oo)
-      // frac(
-      //   -x - frac(4, (-x - 1)^2),
-      //   -x
-      // )
-      // $
-
-      // $
-      // = lim_(x -> +oo)
-      // left(
-      //   1 + frac(4, x (x + 1)^2)
-      // right)
-      // = 1
-      // $
-
-      // Por tanto, la pendiente es
-
-      // $
-      // m = 1
-      // $
-
-
-      // Calculamos ahora la ordenada $n$.
-
-      // Para $x -> +oo$:
-
-      // $
-      // n = lim_(x -> +oo) [f(x) - x]
-      // $
-
-      // $
-      // = lim_(x -> +oo)
-      // left[
-      //   x - frac(4, (x - 1)^2) - x
-      // right]
-      // $
-
-      // $
-      // = lim_(x -> +oo)
-      // -frac(4, (x - 1)^2)
-      // = 0
-      // $
-
-      // Para $x -> -oo$:
-
-      // $
-      // n' = lim_(x -> -oo) [f(x) - x]
-      // $
-
-      // $
-      // = lim_(x -> -oo)
-      // left[
-      //   x - frac(4, (x - 1)^2) - x
-      // right]
-      // $
-
-      // $
-      // = lim_(x -> -oo)
-      // -frac(4, (x - 1)^2)
-      // = 0
-      // $
-
-      // Por tanto, en ambos extremos:
-
-      // $
-      // m = 1, \
-      // n = 0
-      // $
-
-      // Luego la función tiene una **asíntota oblicua**
-
-      // $
-      // boxed(y = x)
-      // $
-
-      // tanto cuando $x -> +oo$ como cuando $x -> -oo$.
-    ]
-  ],
+  //     #align(center, cetz.canvas({
+  //       import cetz.draw: *
+  //       import cetz-plot: *
+  //       plot.plot(
+  //         size: (6, 6),
+  //         x-max: 10,
+  //         x-min: -10,
+  //         y-max: 10,
+  //         y-min: -10,
+  //         // x-grid: "both",
+  //         // y-grid: "both",
+  //         grid: none,
+  //         x-tick-step: 2,
+  //         y-tick-step: 2,
+  //         x-minor-tick-step: 1,
+  //         y-minor-tick-step: 1,
+  //         axis-style: "school-book",
+  //         {
+  //           plot.add(
+  //             domain: (-10, 0.9),
+  //             x => x - 4 / ((x - 1) * (x - 1)),
+  //             style: (stroke: blue),
+  //             samples: 200,
+  //           )
+  //           plot.add(
+  //             domain: (1.1, 10),
+  //             x => x - 4 / ((x - 1) * (x - 1)),
+  //             style: (stroke: blue),
+  //           )
+  //           plot.add(
+  //             domain: (-10, 10),
+  //             x => x,
+  //             style: (stroke: yellow + 1pt, dash: (6pt, 5pt)),
+  //             samples: 200,
+  //           )
+  //           plot.add-vline(
+  //             1,
+  //             style: (stroke: yellow + 1pt, dash: (6pt, 5pt)),
+  //           )
+  //         },
+  //       )
+  //     }))
+  //   ]
+  // ],
 )
