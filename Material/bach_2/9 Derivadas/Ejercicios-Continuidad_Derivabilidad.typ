@@ -312,10 +312,10 @@
 
       $display(f'''(x) = n(n-1)(n-2) x^(n-3))$
 
-      $display(f^(4)(x) = n(n-1)(n-2)(n-3) x^(n-4))$
+      $display(f^("iv")(x) = n(n-1)(n-2)(n-3) x^(n-4))$
 
       Por tanto, la derivada enésima es:
-      $display(f^(n)(x) = n! x^(n-n) = n!)$
+      $display(f^((n)4)(x) = n! x^(n-n) = n!)$
     ]
   ],
   [
@@ -327,12 +327,12 @@
 
       $display(f'''(x) = 2/x^3)$
 
-      $display(f^(4)(x) = -6/x^4)$
+      $display(f^("iv")(x) = -6/x^4)$
 
-      $display(f^(5)(x) = 24/x^5)$
+      $display(f^(v)(x) = 24/x^5)$
 
       Por tanto, la derivada enésima es:
-      $display(f^(n)(x) = (-1)^(n-1) dot (n-1)!/x^n)$
+      $display(f^((n))(x) = (-1)^(n-1) dot (n-1)!/x^n)$
     ]
   ],
   [
@@ -344,10 +344,10 @@
 
       $display(f'''(x) = "cos"(x) = "sen"(x + (3pi)/2))$
 
-      $display(f^(4)(x) = "sen"(x) = "sen"(x + 2pi))$
+      $display(f^("iv")(x) = "sen"(x) = "sen"(x + 2pi))$
 
       Por tanto, la derivada enésima es:
-      $display(f^(n)(x) = "sen"(x + n dot (pi/2)))$
+      $display(f^((n))(x) = "sen"(x + n dot (pi/2)))$
     ]
   ],
 )
