@@ -154,6 +154,55 @@
     ]
   ],
   [
+    #question[
+      Demuestra que la siguiente función corta al eje $X$ en algún punto $c in (-1, 1)$
+
+      $
+        f(x) = cases(
+          reverse: #false, delim: "{", gap: #1em,
+          & x^3 + 2x + 1 & "si" & x <= 0,
+          & e^x & "si" & x > 0,
+        )
+      $
+    ]
+    #solution[
+      Comprobamos que la función es continua en $[-1, 1]$
+
+      $f(x)$ es continua para $x!=0$ ya que es un polinomio y una función exponencial, que son continuas en $RR$.
+
+      Comprobamos que es existe el límite en $X=0$, mara ello calculamos los límites laterales.
+
+      $display(
+        limits("lím")_(x->0^-) f(x) =
+        limits("lím")_(x->0^-) x^3 + 2x + 1 = 1
+      )$
+
+      $display(
+        limits("lím")_(x->0^+) f(x) =
+        limits("lím")_(x->0^+) e^x = e^0 = 1
+      )$
+
+      Luego existe el límite $display(limits("lím")_(x->0)) f(0)$
+
+      Comprobamos que $display(limits("lím")_(x->0)) = f(0) = 1$
+
+      *Luego la función es continua en [-1, 1].*
+
+      Ahora comprobamos que la función tiene signo contrario en los bordes del intervalo.
+
+      $f(-1) = (-1)^3 + 2(-1) + 1 = -2$
+
+      $f(1) = (1)^3 + 2(1) + 1 = 4$
+
+      *Luego $"sig" [f(-1)] != "sig" [f(1)]$*
+
+      Como cumple todas las hipótesis del teorema de Bolzano, podemos afirmar que
+
+      $exists c in (-1, 1) | f(c) = 0$
+
+    ]
+  ],
+  [
     #question()[Demuestra que la función
       $f(x) = x^2 - 2x + 3$
       alcanza un máximo y un mínimo en el intervalo $[0, 4]$.
