@@ -449,4 +449,211 @@
       ],
     )
   ],
+  [
+    // #question[Dada la función:
+
+    //   $ f(x) = x - 4/(x-1)^2 $
+
+    //   Halla el dominio de $f(x)$ y determinar las asíntotas en caso de que existan.
+    // ]
+    // #solution[
+    //   *Dominio:*
+
+    //   La función es continua en $RR$, menos cuando $x-1 = 0$
+
+    //   $display(D = {forall x in RR | x-1 = 0} = RR \\ {1})$
+
+    //   *Asíntota horizontal:*
+
+    //   // Para $x -> +oo$:
+
+    //   $display(
+    //     limits("lím")_(x -> +oo) f(x)
+    //     = limits("lím")_(x -> +oo) (x - frac(4, (x - 1)^2))
+    //     = oo - 4/(oo-1)^2
+    //     = oo - 4/oo
+    //     = oo - 0
+    //     = +oo
+    //   )$
+
+    //   Por tanto, *no tiene asíntota horizontal por la derecha*.
+
+    //   // Para $x -> -oo$:
+
+    //   $display(
+    //     limits("lím")_(x -> -oo) f(x)
+    //     = limits("lím")_(x -> +oo) f(-x)
+    //     = limits("lím")_(x -> +oo) [-x - frac(4, (-x - 1)^2)]
+    //     = limits("lím")_(x -> +oo) [-x - frac(4, (x + 1)^2)] = \
+    //     = -oo - 4/(oo+1)^2
+    //     = -oo - 4/oo
+    //     = -oo - 0
+    //     = -oo
+    //   )$
+
+    //   Por tanto, *no tiene asíntota horizontal por la izquierda*.
+
+
+    //   *Asíntota vertical:*
+
+    //   Como el dominio de la función es $display(D = RR \\ {1})$
+
+    //   Estudiamos el comportamiento cuando $x -> 1$.
+
+    //   Por la *izquierda*:
+
+    //   $display(
+    //     limits("lím")_(x -> 1^-) f(x)
+    //     = limits("lím")_(x -> 1^-) [x - frac(4, (x - 1)^2)]
+    //     = 1 - frac(4, 0)
+    //     = -oo
+    //   )$
+
+      // Por la derecha:
+
+      // $
+      // lim_(x -> 1^+) f(x)
+      // = lim_(x -> 1^+) (x - frac(4, (x - 1)^2))
+      // = 1 - frac(4, 0)
+      // = -oo
+      // $
+
+      // Como los dos límites laterales coinciden,
+
+      // $
+      // lim_(x -> 1) f(x) = -oo
+      // $
+
+      // Por tanto, tiene una **asíntota vertical** en
+
+      // $
+      // boxed(x = 1)
+      // $
+
+
+      // == Asíntota oblicua
+
+      // Una posible asíntota oblicua tiene la forma
+
+      // $
+      // y = mx + n
+      // $
+
+      // Calculamos primero la pendiente:
+
+      // Para $x -> +oo$:
+
+      // $
+      // m = lim_(x -> +oo) frac(f(x), x)
+      // $
+
+      // $
+      // = lim_(x -> +oo)
+      // frac(
+      //   x - frac(4, (x - 1)^2),
+      //   x
+      // )
+      // $
+
+      // $
+      // = lim_(x -> +oo)
+      // left(
+      //   1 - frac(4, x (x - 1)^2)
+      // right)
+      // = 1
+      // $
+
+      // Para $x -> -oo$:
+
+      // $
+      // m' = lim_(x -> -oo) frac(f(x), x)
+      // $
+
+      // Haciendo el cambio $t = -x$, tenemos:
+
+      // $
+      // m'
+      // = lim_(x -> +oo)
+      // frac(f(-x), -x)
+      // $
+
+      // $
+      // = lim_(x -> +oo)
+      // frac(
+      //   -x - frac(4, (-x - 1)^2),
+      //   -x
+      // )
+      // $
+
+      // $
+      // = lim_(x -> +oo)
+      // left(
+      //   1 + frac(4, x (x + 1)^2)
+      // right)
+      // = 1
+      // $
+
+      // Por tanto, la pendiente es
+
+      // $
+      // m = 1
+      // $
+
+
+      // Calculamos ahora la ordenada $n$.
+
+      // Para $x -> +oo$:
+
+      // $
+      // n = lim_(x -> +oo) [f(x) - x]
+      // $
+
+      // $
+      // = lim_(x -> +oo)
+      // left[
+      //   x - frac(4, (x - 1)^2) - x
+      // right]
+      // $
+
+      // $
+      // = lim_(x -> +oo)
+      // -frac(4, (x - 1)^2)
+      // = 0
+      // $
+
+      // Para $x -> -oo$:
+
+      // $
+      // n' = lim_(x -> -oo) [f(x) - x]
+      // $
+
+      // $
+      // = lim_(x -> -oo)
+      // left[
+      //   x - frac(4, (x - 1)^2) - x
+      // right]
+      // $
+
+      // $
+      // = lim_(x -> -oo)
+      // -frac(4, (x - 1)^2)
+      // = 0
+      // $
+
+      // Por tanto, en ambos extremos:
+
+      // $
+      // m = 1, \
+      // n = 0
+      // $
+
+      // Luego la función tiene una **asíntota oblicua**
+
+      // $
+      // boxed(y = x)
+      // $
+
+      // tanto cuando $x -> +oo$ como cuando $x -> -oo$.
+    ]
+  ],
 )
