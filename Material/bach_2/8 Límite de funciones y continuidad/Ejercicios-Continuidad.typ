@@ -497,7 +497,9 @@
 
       $display(f(0) = 0^2 + 2 dot 0 + 1/2 = 1/2)$
 
+      Y por ultimo comprobar que *$display(limits("lím")_(x->0) f(x) = f(0))$* $display(=1/2)$
 
+      *Luego la función es continua en $RR$ si $display(b = 1/2)$*
     ]
   ],
 
