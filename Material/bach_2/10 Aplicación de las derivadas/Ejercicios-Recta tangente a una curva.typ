@@ -35,7 +35,7 @@
 
   // question-text-parameters: (size: 16pt, spacing:200%, font:"OpenDyslexic")
 )
-#set math.cases(reverse: true)
+// #set math.cases(reverse: false)
 
 #questions-pages(
   [
@@ -173,6 +173,78 @@
   ],
   [
     #question()[Dada la función $f(x)=x^2$, halla los puntos en los que la recta tangente es paralela a la bisectriz del primer cuadrante $f(x)=x$. Encuentra la ecuación de la recta tangente y la normal en dichos puntos.]
+  ],
+  [
+    #question[Hallar los puntos de la curva
+
+      $ f(x) = 1/(x-1) $
+
+      en los que la recta tangente a ella pase por el punto $P(-3,2)$
+    ]
+    #solution[
+      Consideramos el punto de tangencia $display(Q(a, 1/(a-1)))$
+
+      Calculamos la pendiente de $f(x)$ en $Q$:
+
+      Si $display(f'(x) = (-1)/(x-1)^2)$, entonces $display(f'(a) = (-1)/(a-1)^2)$
+
+      Calculamos la pendiente del segmento $overline(P Q)$
+
+      $"Pendiente de" display(overline(P Q) = (P_y- Q_y)/(P_x-Q_x) = (2 - 1/(a-1))/(-3 - a) = ((2a- 2 -1)/(a-1))/(-3-a) = (2a-3)/((-3-a)(a-1)))$
+
+      Igualamos la pendiente de $display(overline("PQ"))$ con la pendiente de $f(x)$ en Q:
+
+      $display(
+        (2a-3)/((-3-a)(a-1)) = (-1)/(a-1)^2 =>
+        (2a-3)/((-3-a)) = (-1)/(a-1) =>
+        (2a-3)(a-1) = 3+a => \
+        2a^2-2a-3a+3 = 3+a =>
+        2a^2-6a = 0 => cases(a = 0, a=3)
+      )$
+
+      Tenemos dos soluciones:
+
+      Para $a=0$; $f(0) = -1$; $f'(0) = -1$
+
+      Si $y=m x + n => -1 = -1 dot 0 +n => n = -1 => #result[$y=-x-1$]$
+
+      Para $a=3$; $f(3) = 1/2$; $display(f'(3) = -1/4)$
+
+      Si $display(y=m x + n => 1/2 = -1/4 dot 3 + n => n = 1/2+3/4 = 5/4 => #result[$display(y=-1/4x+5/4)$])$
+    ]
+  ],
+  [
+    #question[Si $P$ es un punto cualquiera de la gráfica de $x y=1$, probar que el triángulo formado por la recta $overline(O P)$, la tangente a esa gráfica en $P$ y el eje $y=0$ es isósceles]
+    #solution[
+      Tomamos un punto cualquiera de la curva $y=1/x$, que tiene las coordenadas $display((a, 1/a))$.
+
+      Calculamos la tangente en $P$:
+
+      $display(f'(x) = -1/x^2 => f'(a) = -1/a^2)$
+
+      La recta tangente a la curva en P es:
+
+      $display(y = m x + n => 1/a = -1/a^2 dot a + n => n = 2/a)$
+
+      $y = -1/a^2 x + 2/a$
+
+      Calculamos el punto de corte de la recta con el eje $y=0$
+
+      $display(0 = -1/a^2 x + 2/a => x = (-2/a)/(-1/a^2) = 2a)$
+
+      Tenemos el punto $Q (2a, 0)$
+
+      Comprobamos si dos de los lados del triangulo $O P Q$ son iguales.
+
+      $display(|arrow(O P)| = sqrt(a^2 + (1/a)^2) = sqrt((a^4 + 1) / a^2) = sqrt(a^4) / a)$
+
+      $display(
+        |arrow(P Q)| = sqrt((2a-a)^2 + (0 - 1/a)^2) =
+        sqrt(4a+a^2 - 4a + 1/a^2) = sqrt((a^4 + 1) / a^2) = sqrt(a^4) / a
+      )$
+
+      Como $display(|arrow(O P)| = |arrow(P Q)|)$ el triángulo $O P Q$ es isósceles.
+    ]
   ],
 )
 

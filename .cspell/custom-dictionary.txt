@@ -1,3 +1,4 @@
 cotg
 derivabilidad
+L'Hôpital
 vline

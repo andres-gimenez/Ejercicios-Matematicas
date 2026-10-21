@@ -61,14 +61,14 @@
   [
     #question()[Calcula en cada caso el valor de $x$, para que $arrow(u)$ y $arrow(v)$ sean perpendiculares:]
     #questions-columns(
-      [#subquestion()[$u = (2x, -1, 5)$, $v = (x, x + 1, -1)$ ]],
-      [#subquestion()[$u = (2x + 1, -3, x - 1)$, $v = (1, x, x)$ ]],
-      [#subquestion()[$u = (2x, -x, x + 2)$, $v = (x + 3, 1, -4x)$ ]],
-      [#subquestion()[$u = (3x, -1, 4x + 2)$, $v = (x - 3, 3, -3x)$  ]],
+      [#subquestion()[$arrow(u) = (2x, -1, 5)$, $arrow(v) = (x, x + 1, -1)$ ]],
+      [#subquestion()[$arrow(u) = (2x + 1, -3, x - 1)$, $arrow(v) = (1, x, x)$ ]],
+      [#subquestion()[$arrow(u) = (2x, -x, x + 2)$, $arrow(v) = (x + 3, 1, -4x)$ ]],
+      [#subquestion()[$arrow(u) = (3x, -1, 4x + 2)$, $arrow(v) = (x - 3, 3, -3x)$  ]],
     )
   ],
   [
-    #question()[Calcula el ángulo que forman $u = (-sqrt(2), sqrt(2), 0)$ y $v = (sqrt(2), sqrt(2), -1)$.]
+    #question()[Calcula el ángulo que forman $arrow(u) = (-sqrt(2), sqrt(2), 0)$ y $arrow(v) = (sqrt(2), sqrt(2), -1)$.]
   ],
   [
     #question()[Dados los vectores $arrow(u) = (3, 1, -2)$, $arrow(v) = (-3, alpha, 2)$, calcula:]
@@ -85,7 +85,7 @@
   ],
   [
     #question()[Comprueba que no existe ningún valor de $k$ para el cual
-      $u = (k, 1, 1)$ y $v = (-1, sqrt(2), k)$ formen un ángulo de $45°$.]
+      $arrow(u) = (k, 1, 1)$ y $arrow(v) = (-1, sqrt(2), k)$ formen un ángulo de $45°$.]
   ],
   [
     #question()[Haya la proyección del vector $arrow(u) = (3, 1, 2)$ sobre el vector $arrow(v) = (1, -1, 2)$.]
