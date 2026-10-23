@@ -4,6 +4,11 @@
 
 #let config = yaml("../../config.yaml")
 
+#let styleBlue = (stroke: (paint: blue, thickness: 1pt))
+#let styleRed = (stroke: (paint: red, thickness: 1pt))
+#let styleGreen = (stroke: (paint: green, thickness: 1pt))
+#let styleYellow = (stroke: (paint: yellow, thickness: 1pt))
+
 #show: exam.with(
   author: (
     name: config.at("author").at("name"),
@@ -231,8 +236,8 @@
           aspect-ratio: 1,
           axis-style: "school-book",
           {
-            plot.add(((0, 0), (0.7, 1 / 0.7)))
-            plot.add(((0.7, 1 / 0.7), (1.4, 0)))
+            plot.add(((0, 0), (0.7, 1 / 0.7)), style: styleBlue)
+            plot.add(((0.7, 1 / 0.7), (1.4, 0)), style: styleBlue)
 
             plot.add(((0, 0),), mark-size: 0.2, mark: "o")
             plot.add(((0.7, 1 / 0.7),), mark-size: 0.2, mark: "o")
@@ -250,10 +255,12 @@
             plot.add(
               domain: (-5, -0.001),
               x => 1 / x,
+              style: styleRed,
             )
             plot.add(
               domain: (0.0001, 5),
               x => 1 / x,
+              style: styleRed,
             )
           },
           line("plot.P", "plot.Q"),
