@@ -216,6 +216,50 @@
   [
     #question[Si $P$ es un punto cualquiera de la gráfica de $x y=1$, probar que el triángulo formado por la recta $overline(O P)$, la tangente a esa gráfica en $P$ y el eje $y=0$ es isósceles]
     #solution[
+      #align(center, cetz.canvas({
+        import cetz.draw: *
+        import cetz-plot: *
+        plot.plot(
+          name: "plot",
+          size: (8, 8),
+          x-min: -3,
+          x-max: 3,
+          y-min: -3,
+          y-max: 3,
+          x-tick-step: 30,
+          y-tick-step: 30,
+          aspect-ratio: 1,
+          axis-style: "school-book",
+          {
+            plot.add(((0, 0), (0.7, 1 / 0.7)))
+            plot.add(((0.7, 1 / 0.7), (1.4, 0)))
+
+            plot.add(((0, 0),), mark-size: 0.2, mark: "o")
+            plot.add(((0.7, 1 / 0.7),), mark-size: 0.2, mark: "o")
+            plot.add(((1.4, 0),), mark-size: 0.2, mark: "o")
+            plot.add-anchor("O", (0, 0))
+            plot.add-anchor("P", (0.7, 1 / 0.7))
+            plot.add-anchor("Q", (1.7, 0))
+            plot.annotate({
+              content((0.9, 1 / 0.7 + .2), [$P$])
+            })
+            plot.annotate({
+              content((01.5, .3), [$Q$])
+            })
+
+            plot.add(
+              domain: (-5, -0.001),
+              x => 1 / x,
+            )
+            plot.add(
+              domain: (0.0001, 5),
+              x => 1 / x,
+            )
+          },
+          line("plot.P", "plot.Q"),
+        )
+      }))
+
       Tomamos un punto cualquiera de la curva $y=1/x$, que tiene las coordenadas $display((a, 1/a))$.
 
       Calculamos la tangente en $P$:

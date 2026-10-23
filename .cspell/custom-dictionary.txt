@@ -1,3 +1,4 @@
+arccos
 cotg
 derivabilidad
 L'Hôpital
