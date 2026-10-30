@@ -344,13 +344,13 @@
     #question()[Una fábrica elabora un producto de dos calidades. $x$ toneladas de baja calidad e $y$ toneladas de alta calidad. Relacionándose ambas producciones mediante la función $display(y=(18-5x)/(10-x))$.
 
       Hallar las cantidades que ha de producir para obtener ingresos máximos si el precio por tonelada de baja calidad es $display(1/2)$ que el de alta calidad.]
-    #solution(color: red)[
+    #solution()[
       Sea $x$ la cantidad de toneladas de baja calidad e $y$ la cantidad de toneladas de alta calidad.
-      La relación entre ambas producciones viene dada por la función
+      La relación entre ambas producciones viene dada por la función:
 
       $ y = (18 - 5 x) / (10 - x) $
 
-      El ingreso total viene dado por
+      El ingreso total viene dado por:
 
       $display(I(x) = p_b x + p_a y = 1/2 p_a x + p_a ((18 - 5 x) / (10 - x)) = p_a (1/2 x + (18 - 5 x) / (10 - x)))$
 
@@ -366,9 +366,12 @@
       )$
 
       Comprobamos que es un máximo con la segunda derivada:
-      $ I''(x) = ... < 0 $
 
-      Por tanto, el valor de $x$ que maximiza el ingreso total es $x = 2$. Calculamos $y$:
+      $ I''(x) = (2(18-5x))/(10-x)^3 - 10/(10-x)^2 => I''(2) < 0 $
+
+      Por tanto, el valor de $x$ que maximiza el ingreso total es $x = 2$.
+
+      Calculamos $y$:
 
       $ y = (18 - 5 dot 2) / (10 - 2) = (18 - 10) / 8 = 8 / 8 = 1 $
 
