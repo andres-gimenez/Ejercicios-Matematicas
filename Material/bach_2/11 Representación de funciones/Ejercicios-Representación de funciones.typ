@@ -171,6 +171,26 @@
         ]
       ],
       [
+        #subquestion()[$f(x) = sqrt(x + 2)$]
+        // #solution()[
+        //   La función es una raíz cuadrada desplazada 2 unidades a la izquierda. Su dominio es $x \geq -2$.
+
+
+        // ]
+      ],
+      [
+        #subquestion()[$f(x) = 1/(x-1)$]
+        // #solution()[
+        //   La función es una función racional con una asíntota vertical en $x = 1$ y una asíntota horizontal en $y = 0$.
+
+
+        // ]
+      ],
+      [
+        #subquestion()[$f(x) = (x^4)/(x^2-1)$]
+        #solution()[]
+      ],
+      [
         #subquestion()[$f(x) = x^3/(x-2)^2$]
         #solution()[
 
@@ -440,30 +460,6 @@
             })
           }))
         ]
-      ],
-      [
-        #subquestion()[$f(x) = sqrt(x + 2)$]
-        // #solution()[
-        //   La función es una raíz cuadrada desplazada 2 unidades a la izquierda. Su dominio es $x \geq -2$.
-
-
-        // ]
-      ],
-      [
-        #subquestion()[$f(x) = 1/(x-1)$]
-        // #solution()[
-        //   La función es una función racional con una asíntota vertical en $x = 1$ y una asíntota horizontal en $y = 0$.
-
-
-        // ]
-      ],
-      [
-        #subquestion()[$f(x) = (x^4)/(x^2-1)$]
-        #solution()[]
-      ],
-      [
-        #subquestion()[$f(x) = (x^3)/(x-2)^2$]
-        #solution()[]
       ],
       [
         #subquestion()[$f(x) = sqrt(x^2-2x)$]
