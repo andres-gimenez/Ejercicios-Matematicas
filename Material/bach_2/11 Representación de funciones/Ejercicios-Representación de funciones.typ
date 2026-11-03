@@ -159,13 +159,14 @@
           #align(center, cetz.canvas({
             import cetz.draw: *
             import cetz-plot: *
-            plot.plot(size: (5, 5), x-tick-step: 2, y-tick-step: 2, axis-style: "school-book", {
+            plot.plot(size: (10, 10), x-tick-step: 2, y-tick-step: 2, axis-style: "school-book", {
               plot.add(
                 domain: (-4, 4),
                 samples: 200,
                 x => x * x - 4,
                 // style: (stroke:blue, mark:(start:(symbol:"o", fill:blue))),
               )
+              plot.add(((0, -4),), mark-size: 0.2, mark: "o")
             })
           }))
         ]
