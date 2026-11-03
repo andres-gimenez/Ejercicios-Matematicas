@@ -65,7 +65,7 @@
       $cases(
         reverse: #true, delim: "{", gap: #1em,
         display(limits("lím")_(x->-2^-) f(x) = limits("lím")_(x->-2^-) 0 = 0),
-        display(limits("lím")_(x->-2^+) f(x) = limits("lím")_(x->-2^-) 1 = 1),
+        display(limits("lím")_(x->-2^+) f(x) = limits("lím")_(x->-2^+) 1 = 1),
       )$ Luego $f(x)$ no es continua en $x=-2$.
 
       #stack(
@@ -87,10 +87,10 @@
       $cases(
         reverse: #true, delim: "{", gap: #1em,
         display(limits("lím")_(x->1^-) f(x) = limits("lím")_(x->1^-) 1 = 1),
-        display(limits("lím")_(x->1^+) f(x) = limits("lím")_(x->1^-) x = 1),
-      )$ Existe el limite $display(limits("lím")_(x->1^+) f(x) = 1)$
+        display(limits("lím")_(x->1^+) f(x) = limits("lím")_(x->1^+) x = 1),
+      )$ Existe el límite $display(limits("lím")_(x->1^+) f(x) = 1)$
 
-      La función esta bien definida en f(1) = 1 y coincide con el limite $display(limits("lím")_(x->1^+) f(x) = f(1))$,
+      La función está bien definida en f(1) = 1 y coincide con el límite $display(limits("lím")_(x->1^+) f(x) = f(1))$,
       luego $f(x)$ es continua en $x=1$.
 
       #stack(
@@ -98,36 +98,37 @@
         $cases(
           reverse: #true, delim: "{", gap: #1em,
           display(f'(x^-) = 0 => f'(1^-) = 0),
-          display(f'(x^+) = 1 => f'(1^+) = 0),
+          display(f'(x^+) = 1 => f'(1^+) = 1),
         )$,
-        [#v(2mm) Las derivadas laterales son distintas, \ ergo, no es derivable en  $x=1$],
+        [#v(2mm) Las derivadas laterales son distintas, \ luego, no es derivable en  $x=1$],
       )
 
+      #v(1cm)
       *En $x=3$*:
 
-      La función es continua, pero las derivadas laterales son:
+      Veamos si es continua:
 
       $cases(
         reverse: #true, delim: "{", gap: #1em,
         display(limits("lím")_(x->3^-) f(x) = limits("lím")_(x->3^-) 3 = 3),
-        display(limits("lím")_(x->3^+) f(x) = limits("lím")_(x->3^-) 3^2 - 6 dot 3 + 12 = 9 - 18 + 12 = 3),
-      )$ Los limites laterales coinciden,
+        display(limits("lím")_(x->3^+) f(x) = limits("lím")_(x->3^+) 3^2 - 6 dot 3 + 12 = 9 - 18 + 12 = 3),
+      )$ Los límites laterales coinciden,
 
-      luego $exists display(limits("lím")_(x->3^-) f(x) = 3)$, $f(x)$ está bien definida y coincide con el valor del limite $f(3) = 3$, luego $f(x)$ es continua en $x=3$.
+      luego $exists display(limits("lím")_(x->3) f(x) = 3)$, $f(x)$ está bien definida y coincide con el valor del limite $f(3) = 3$, luego $f(x)$ es continua en $x=3$.
 
       #stack(
         dir: ltr,
         $cases(
           reverse: #true, delim: "{", gap: #1em,
-          display(f'(x^-) = 0 => f'(3^-) = 1),
-          display(f'(x^+) = 2x - 6 => f'(3^+) = 2 dot 3 - 6 = 6),
+          display(f'(x^-) = 1 => f'(3^-) = 1),
+          display(f'(x^+) = 2x - 6 => f'(3^+) = 2 dot 3 - 6 = 0),
         )$,
         [#v(2mm) Las derivadas laterales son distintas, \ luego, no es derivable en  $x=3$],
       )
 
-      La función es continua en $display((-oo, -2) union (2,3) union (3, +oo) = RR \\ {-2, 3})$
+      La función es continua en $display((-oo, -2) union (-2,3) union {3} union (3, +oo) = RR \\ {-2})$
 
-      La función es derivable en $display(display((-oo, -2] union (-2, 1) union (1, 3) union (3, +oo)) = RR \\ {-2, 1, 3})$
+      La función es derivable en $display(display((-oo, -2) union (-2, 1) union (1, 3) union (3, +oo)) = RR \\ {-2, 1, 3})$
 
       #align(center, cetz.canvas({
         import cetz.draw: *
