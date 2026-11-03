@@ -274,7 +274,7 @@
 
           Calculamos los límites en el infinito:
 
-          $ limits("lím")_(x -> oo) frac(x^3, (x-2)^2) = +oo $
+          $ limits("lím")_(x -> +oo) frac(x^3, (x-2)^2) = +oo $
 
           $ limits("lím")_(x -> -oo) frac(x^3, (x-2)^2) = -oo $
 
