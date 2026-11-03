@@ -392,7 +392,7 @@
 
           $ frac(24x, (x-2)^4) = 0 $
 
-          $ 24x = 0 quad arrow.r quad x=0 $
+          $ 24x = 0 quad => quad x=0 $
 
           La segunda derivada cambia de signo al pasar por $x=0$, por lo que existe un punto de inflexión.
 
