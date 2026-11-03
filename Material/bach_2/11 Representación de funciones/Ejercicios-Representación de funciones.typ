@@ -479,10 +479,6 @@
         #solution()[]
       ],
       [
-        #subquestion()[$display(f(x) = e^x/x)$]
-        #solution()[]
-      ],
-      [
         #subquestion()[$display(f(x) = x^3/(3(x+1)))$]
         #solution()[]
       ],
