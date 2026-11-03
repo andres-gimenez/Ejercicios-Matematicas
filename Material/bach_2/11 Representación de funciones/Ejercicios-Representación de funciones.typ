@@ -44,18 +44,133 @@
       [
         #subquestion()[$f(x) = x^2 - 4$]
         #solution()[
-          La función es un polinomio de segundo grado, por lo que su gráfica es una parábola con vértice en el punto $(0, -4)$ y que abre hacia arriba.
 
-          // #plot(
-          //   function: (x) -> x * x - 4,
-          //   range-x: [-5, 5],
-          //   range-y: [-5, 5],
-          //   width: 300pt,
-          //   height: 300pt,
-          //   grid: true,
-          //   axes: true,
-          //   title: "$f(x) = x^2 - 4$",
-          // )
+          *1. Dominio*
+
+          Es una función polinómica, por lo que está definida para cualquier número real.
+
+          $ D(f) = RR $
+
+          *2. Simetría*
+
+          Calculamos $f(-x)$:
+
+          $ f(-x) = (-x)^2 - 4 = x^2 - 4 = f(x) $
+
+          Por tanto, es una función *par*, simétrica respecto al eje $Y$.
+
+          *3. Puntos de corte con los ejes*
+
+          *Eje de abscisas ($y= 0$):*
+
+          Igualamos la función a cero:
+
+          $ x^2 - 4 = 0 => x = plus.minus 2 $
+
+          Los puntos de corte son:
+
+          $ (-2, 0) quad "y" quad (2, 0) $
+
+          *Eje de ordenadas ($x = 0$):*
+
+          Hacemos $x = 0$:
+
+          $ f(0) = 0^2 - 4 = -4 $
+
+          El punto de corte es $(0, -4)$.
+
+          *4. Signo de la función*
+
+          Estudiamos dónde la función es positiva, negativa o nula.
+
+          #table(
+            columns: (1fr, 1fr),
+            align: center,
+            stroke: 0.5pt,
+            [*Intervalo*], [*Signo*],
+            [$(-oo, -2)$], [Positiva],
+            [$x = -2$], [Nula],
+            [$(-2, 2)$], [Negativa],
+            [$x = 2$], [Nula],
+            [$(2, +oo)$], [Positiva],
+          )
+
+          *5. Continuidad*
+
+          Al ser una función polinómica, es continua en todo su dominio.
+
+          $ "Continua en " RR $
+
+          *6. Asíntotas*
+
+          Las funciones polinómicas no tienen asíntotas.
+
+          Por tanto, no tiene asíntotas verticales, horizontales ni oblicuas.
+
+          *7. Monotonía: crecimiento y decrecimiento*
+
+          Calculamos la primera derivada:
+
+          $ f'(x) = 2x $
+
+          Igualamos a cero:
+
+          $ 2x = 0 quad => quad x = 0 $
+
+          Estudiamos el signo de la derivada:
+
+          - Si $x < 0$, entonces $f'(x) < 0$: decreciente.
+          - Si $x > 0$, entonces $f'(x) > 0$: creciente.
+
+          Por tanto:
+
+          - Decreciente en $(-oo, 0)$.
+          - Creciente en $(0, +oo)$.
+
+          *8. Extremos relativos y absolutos*
+
+          En $x = 0$, la función pasa de decreciente a creciente.
+
+          Por tanto, tiene un mínimo relativo y absoluto:
+
+          $ f(0) = -4 $
+
+          El mínimo absoluto se alcanza en el punto $(0, -4)$.
+
+          No tiene máximo.
+
+          *9. Curvatura: concavidad y convexidad*
+
+          Calculamos la segunda derivada:
+
+          $ f''(x) = 2 $
+
+          Como $f''(x) > 0$ para todo $x in RR$, la función es convexa (cóncava hacia arriba) en todo su dominio.
+
+          No tiene puntos de inflexión.
+
+          *10. Recorrido o imagen*
+
+          Como el valor mínimo es $-4$ y la función crece indefinidamente:
+
+          $ "Im"(f) = [-4, +oo) $
+
+          *11.  Representación gráfica*
+
+          La gráfica es una parábola con vértice en $(0, -4)$, abierta hacia arriba y simétrica respecto al eje $Y$.
+
+          #align(center, cetz.canvas({
+            import cetz.draw: *
+            import cetz-plot: *
+            plot.plot(size: (5, 5), x-tick-step: 2, y-tick-step: 2, axis-style: "school-book", {
+              plot.add(
+                domain: (-4, 4),
+                samples: 200,
+                x => x * x - 4,
+                // style: (stroke:blue, mark:(start:(symbol:"o", fill:blue))),
+              )
+            })
+          }))
         ]
       ],
       [
