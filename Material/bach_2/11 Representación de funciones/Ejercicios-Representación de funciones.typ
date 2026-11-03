@@ -84,15 +84,12 @@
           Estudiamos dónde la función es positiva, negativa o nula.
 
           #table(
-            columns: (1fr, 1fr),
+            columns: (1fr, 1fr, 1fr, 1fr),
             align: center,
             stroke: 0.5pt,
-            [*Intervalo*], [*Signo*],
-            [$(-oo, -2)$], [Positiva],
-            [$x = -2$], [Nula],
-            [$(-2, 2)$], [Negativa],
-            [$x = 2$], [Nula],
-            [$(2, +oo)$], [Positiva],
+
+            [$x$], [$(-oo, -2)$], [$(-2, 2)$], [$(2, +oo)$],
+            [$f(x)$], [$plus$], [$minus$], [$plus$],
           )
 
           *5. Continuidad*
@@ -174,38 +171,291 @@
         ]
       ],
       [
-        #subquestion()[$f(x) = sqrt(x + 2)$]
+        #subquestion()[$f(x) = x^3/(x-2)^2$]
         #solution()[
-          La función es una raíz cuadrada desplazada 2 unidades a la izquierda. Su dominio es $x \geq -2$.
 
-          // #plot(
-          //   function: (x) -> sqrt(x + 2),
-          //   range-x: [-3, 5],
-          //   range-y: [0, 5],
-          //   width: 300pt,
-          //   height: 300pt,
-          //   grid: true,
-          //   axes: true,
-          //   title: "$g(x) = \sqrt{x + 2}$",
-          // )
+          *Dominio*
+
+          La función es racional, por lo que está definida para todos los valores reales excepto aquellos que anulan el denominador.
+
+          $ (x-2)^2 != 0 quad arrow.r quad x != 2 $
+
+          Por tanto, el dominio es:
+
+          $ DD(f) = RR \\ {2} $
+
+          *Simetría*
+
+          Calculamos la función en el opuesto:
+
+          $ f(-x) = frac(-x^3, (-x-2)^2) = -frac(x^3, (x+2)^2) $
+
+          Como:
+
+          $ f(-x) != f(x) quad "y" quad f(-x) != -f(x) $
+
+          La función no es par ni impar. Por tanto, no presenta simetría respecto al eje de ordenadas ni respecto al origen.
+
+          *Cortes con los ejes*
+
+          *Eje de abscisas (y=0):*
+
+          Igualamos la función a cero:
+
+          $ frac(x^3, (x-2)^2) = 0 $
+
+          Una fracción es cero cuando su numerador es cero:
+
+          $ x^3 = 0 quad arrow.r quad x = 0 $
+
+          *Eje de ordenadas (x=0):*
+
+          Sustituimos $x=0$:
+
+          $ f(0) = frac(0^3, (0-2)^2) = 0 $
+
+          Por tanto, la función corta ambos ejes en el punto:
+
+          $ (0, 0) $
+
+          *Signo de la función*
+
+          El denominador es siempre positivo, excepto en $x=2$, donde no está definida. Por tanto, el signo depende exclusivamente del numerador $x^3$.
+
+          #table(
+            columns: (1fr, 1fr, 1fr, 1fr),
+            align: center,
+            stroke: 0.5pt,
+
+            [$x$], [$(-oo, 0)$], [$(0, 2)$], [$(2, +oo)$],
+            [$f(x)$], [$minus$], [$plus$], [$plus$],
+          )
+
+          La función se anula en $x=0$ y no tiene más raíces.
+
+          *Asíntotas*
+
+          *Asíntotas verticales*
+
+          Estudiamos los límites en los puntos que no pertenecen al dominio:
+
+          $ limits("lím")_(x -> 2^-) frac(x^3, (x-2)^2) = +oo $
+
+          $ limits("lím")_(x -> 2^+) frac(x^3, (x-2)^2) = +oo $
+
+          Por tanto, existe una asíntota vertical:
+
+          $ x = 2 $
+
+          y la función se acerca a a ella por ambos lados, por la parte superior de la gráfica.
+
+          *Asíntotas horizontales*
+
+          Calculamos los límites en el infinito:
+
+          $ limits("lím")_(x -> oo) frac(x^3, (x-2)^2) = +oo $
+
+          $ limits("lím")_(x -> -oo) frac(x^3, (x-2)^2) = -oo $
+
+          No existen asíntotas horizontales.
+
+          *Asíntotas oblicuas*
+
+          Buscamos una asíntota de la forma $y=m x+n$.
+
+          Calculamos la pendiente:
+
+          $ m = limits("lím")_(x -> +oo) frac(f(x), x) = 1 $
+
+          Calculamos la ordenada en el origen:
+
+          $ n = limits("lím")_(x -> +oo) (f(x)-x) = 4 $
+
+          Por tanto, la asíntota oblicua es:
+
+          $ y = x+4 $
+
+          Igualmente podemos calcular el límite cuando $x -> -oo$:
+
+          $ m = limits("lím")_(x -> -oo) frac(f(x), x) =
+          m = limits("lím")_(x -> +oo) frac(f(-x), x) = 1 $
+
+          $ n = limits("lím")_(x -> -oo) (f(x)-x) = limits("lím")_(x -> +oo) (f(-x)+x) = 4 $
+
+          Esta asíntota se cumple tanto cuando $x -> +oo$ como cuando $x -> -oo$.
+
+          Para ver si la asíntota oblicua queda por encima o por debajo de la función, calculamos el límite:
+
+          $ limits("lím")_(x -> +oo) (f(x)-(x+4)) = limits("lím")_(x -> +oo) frac(12x-16, (x-2)^2) = 0^+ "(Se acerca a la asíntota por encima)" $
+
+          $ limits("lím")_(x -> -oo) (f(x)-(x+4)) = limits("lím")_(x -> -oo) frac(12x-16, (x-2)^2) = 0^- "(se acerca a la asíntota por debajo)" $
+
+
+          *Crecimiento y decrecimiento*
+
+          Calculamos la primera derivada aplicando la regla del cociente:
+
+          $ f'(x) = frac(3x^2 (x-2)^2 - 2x^3(x-2), (x-2)^4) = frac(x^2(x-6), (x-2)^3) $
+
+          *Puntos críticos*
+
+          Igualamos la derivada a cero:
+
+          $ frac(x^2(x-6), (x-2)^3) = 0 $
+
+          Obtenemos:
+
+          $ x^2(x-6) = 0 $
+
+          $ x=0 quad "ó" quad x=6 $
+
+          Además, debemos tener en cuenta que $x=2$ no pertenece al dominio.
+
+          *Tabla de signos de la primera derivada*
+
+          Estudiamos el signo de $f'(x)$ en los intervalos determinados por los puntos críticos:
+
+          #table(
+            columns: (1fr, 1fr, 1fr, 1fr, 1fr),
+            align: center,
+            stroke: 0.5pt,
+
+            [$x$], [$(-oo, 0)$], [$(0, 2)$], [$(2, 6)$], [$(6, +oo)$],
+            [$f'(x)$], [$plus$], [$plus$], [$minus$], [$plus$],
+            [$f(x)$], [Creciente], [Creciente], [Decreciente], [Creciente],
+          )
+
+          Por tanto:
+
+          - La función es creciente en $(-oo,2)$.
+          - La función es decreciente en $(2,6)$.
+          - La función es creciente en $(6,+oo)$.
+
+          *Extremos relativos*
+
+          En $x=0$, la derivada no cambia de signo. Por tanto, no existe un extremo relativo.
+
+          En $x=6$, la derivada cambia de negativa a positiva. Por tanto, existe un mínimo relativo.
+
+          Calculamos su ordenada:
+
+          $ f(6) = frac(6^3, (6-2)^2) = frac(216, 16) = frac(27, 2) $
+
+          El mínimo relativo es:
+
+          $ (6, 27/2) $
+
+          *Curvatura y puntos de inflexión*
+
+          Calculamos la segunda derivada:
+
+          $ f''(x) = frac(24x, (x-2)^4) $
+
+          Estudio del signo de la segunda derivada
+
+          Como el denominador es siempre positivo en el dominio, el signo depende del numerador.
+
+          #table(
+            columns: (1fr, 1fr, 1fr, 1fr),
+            align: center,
+            stroke: 0.5pt,
+
+            [$x$], [$(-oo, 0)$], [$(0, 2)$], [$(2, +oo)$],
+            [$f''(x)$], [$minus$], [$plus$], [$plus$],
+            [$f(x)$], [Convexa], [Cóncava], [Cóncava],
+          )
+
+          *Puntos de inflexión*
+
+          Igualamos la segunda derivada a cero:
+
+          $ frac(24x, (x-2)^4) = 0 $
+
+          $ 24x = 0 quad arrow.r quad x=0 $
+
+          La segunda derivada cambia de signo al pasar por $x=0$, por lo que existe un punto de inflexión.
+
+          Como:
+
+          $ f(0) = 0 $
+
+          El punto de inflexión es:
+
+          $ (0,0) $
+
+          Además, como $f'(0)=0$, se trata de un punto de inflexión con tangente horizontal.
+
+          *Recorrido*
+
+          En el intervalo $(-oo,2)$ la función es continua y estrictamente creciente.
+
+          Además:
+
+          $ lim_(x -> -oo) f(x) = -oo $
+
+          $ lim_(x -> 2^-) f(x) = +oo $
+
+          Por tanto, en ese intervalo la función toma todos los valores reales.
+
+          Así, su recorrido es:
+
+          $ Im(f) = RR $
+
+          *Resumen del estudio*
+
+          #table(
+            columns: (1fr, 2fr),
+            stroke: 0.5pt,
+            inset: 7pt,
+            [*Característica*], [*Resultado*],
+            [Dominio], [$RR \\ {2}$],
+            [Simetría], [Ninguna],
+            [Corte con los ejes], [$(0,0)$],
+            [Asíntota vertical], [$x=2$],
+            [Asíntota horizontal], [No tiene],
+            [Asíntota oblicua], [$y=x+4$],
+            [Crecimiento], [$(-oo,2)$ y $(6,+oo)$],
+            [Decrecimiento], [$(2,6)$],
+            [Máximo relativo], [No tiene],
+            [Mínimo relativo], [$(6,27/2)$],
+            [Convexa], [$(-oo,0)$],
+            [Cóncava], [$(0,2)$ y $(2,+oo)$],
+            [Punto de inflexión], [$(0,0)$, con tangente horizontal],
+            [Recorrido], [$RR$],
+          )
+
+
+          #align(center, cetz.canvas({
+            import cetz.draw: *
+            import cetz-plot: *
+            plot.plot(size: (10, 10), x-tick-step: 5, y-tick-step: 5, axis-style: "school-book", {
+              plot.add(domain: (-10, 1.6), samples: 200, x => x * x * x / ((x - 2) * (x - 2)), style: (stroke: blue))
+              plot.add(domain: (3, 10), samples: 200, x => x * x * x / ((x - 2) * (x - 2)), style: (stroke: blue))
+              plot.add(domain: (-10, 10), samples: 200, x => x + 4, style: (stroke: (paint: green, thickness: 0.8pt, dash: "dashed")))
+
+              plot.add(((2, -10), (2, 27)), style: (stroke: (paint: green, thickness: 0.8pt, dash: "dashed")))
+
+              plot.add(((0, 0),), mark-size: 0.2, mark: "o")
+              plot.add(((6, 27 / 2),), mark-size: 0.2, mark: "o")
+            })
+          }))
         ]
       ],
       [
-        #subquestion()[$f(x) = 1/(x-1)$]
-        #solution()[
-          La función es una función racional con una asíntota vertical en $x = 1$ y una asíntota horizontal en $y = 0$.
+        #subquestion()[$f(x) = sqrt(x + 2)$]
+        // #solution()[
+        //   La función es una raíz cuadrada desplazada 2 unidades a la izquierda. Su dominio es $x \geq -2$.
 
-          // #plot(
-          //   function: (x) -> 1/(x - 1),
-          //   range-x: [-3, 5],
-          //   range-y: [-5, 5],
-          //   width: 300pt,
-          //   height: 300pt,
-          //   grid: true,
-          //   axes: true,
-          //   title: "$h(x) = 1/(x - 1)$",
-          // )
-        ]
+
+        // ]
+      ],
+      [
+        #subquestion()[$f(x) = 1/(x-1)$]
+        // #solution()[
+        //   La función es una función racional con una asíntota vertical en $x = 1$ y una asíntota horizontal en $y = 0$.
+
+
+        // ]
       ],
       [
         #subquestion()[$f(x) = (x^4)/(x^2-1)$]
