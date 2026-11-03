@@ -411,9 +411,9 @@
 
           Además:
 
-          $ lim_(x -> -oo) f(x) = -oo $
+          $ limits("lím")_(x -> -oo) f(x) = -oo $
 
-          $ lim_(x -> 2^-) f(x) = +oo $
+          $ limits("lím")_(x -> 2^-) f(x) = +oo $
 
           Por tanto, en ese intervalo la función toma todos los valores reales.
 
