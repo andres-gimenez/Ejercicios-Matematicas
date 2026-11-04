@@ -591,7 +591,7 @@
 
           $ (-oo,0] union [2,+oo) $
 
-          *Derivabilidad y monotonía*
+          *Monotonía*
 
           Calculamos la primera derivada:
 
@@ -661,8 +661,7 @@
 
           $ R(f) = [0,+oo)) $
 
-
-          = Resumen del estudio
+          *Resumen del estudio*
 
           #table(
             columns: (1fr, 2fr),
@@ -678,7 +677,7 @@
             [Continuidad], [Continua en todo su dominio],
             [Monotonía], [Decreciente en $(-oo,0]$ y creciente en $[2,+oo)$],
             [Extremos], [Mínimos absolutos en $(0,0)$ y $(2,0)$],
-            [Curvatura], [Cóncava hacia abajo en ambos intervalos],
+            [Curvatura], [Convexa en ambos intervalos],
             [Puntos de inflexión], [No tiene],
             [Recorrido], [$[0,+oo)$],
           )
