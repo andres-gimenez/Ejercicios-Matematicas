@@ -445,7 +445,6 @@
             [Recorrido], [$RR$],
           )
 
-
           #align(center, cetz.canvas({
             import cetz.draw: *
             import cetz-plot: *
@@ -464,7 +463,238 @@
       ],
       [
         #subquestion()[$display(f(x) = sqrt(x^2-2x))$]
-        #solution()[]
+        #solution()[
+          *Dominio*
+
+          Para que la función esté definida, el radicando debe ser mayor o igual que cero:
+
+          $ x^2 - 2x >= 0 $
+
+          Factorizamos:
+
+          $ x (x - 2) >= 0 $
+
+          Estudiando el signo del producto:
+
+          $ x <= 0 quad "o" quad x >= 2 $
+
+          Por tanto, el dominio es:
+
+          $ D(f) = (-oo, 0] union [2, +oo) $
+
+          *Simetría*
+
+          Comprobamos si la función presenta simetría respecto al eje de ordenadas:
+
+          $ f(-x) = sqrt(x^2 + 2x) $
+
+          Como $f(-x) != f(x)$, no es par.
+
+          Tampoco es impar, ya que la función no verifica
+          $f(-x) = -f(x)$.
+
+          Sin embargo, podemos expresar la función como:
+
+          $ f(x) = sqrt((x-1)^2 - 1) $
+
+          Por tanto, es simétrica respecto a la recta vertical $x=1$.
+
+          *Puntos de corte con los ejes*
+
+          *Eje X:*
+
+          Igualamos la función a cero:
+
+          $ sqrt(x^2 - 2x) = 0 $
+
+          $ x^2 - 2x = 0 $
+
+          $ x(x-2) = 0 $
+
+          Obtenemos los puntos:
+
+          $ (0,0) quad "y" quad (2,0) $
+
+          *Eje Y:*
+
+          Calculamos el valor de la función en $x=0$:
+
+          $ f(0) = sqrt(0) = 0 $
+
+          El punto de corte es:
+
+          $ (0,0) $
+
+          *Signo de la función*
+
+          Como se trata de una raíz cuadrada, la función nunca puede tomar valores negativos.
+
+          - $f(x) = 0$ para $x=0$ y $x=2$.
+          - $f(x) > 0$ para $x in (-oo,0) union (2,+oo)$.
+
+          *Asíntotas*
+
+          *Asíntotas verticales*
+
+          $ limits("lím")_(x -> 0^-) sqrt(x^2-2x) = 0 $
+
+          $ limits("lím")_(x -> 2^+) sqrt(x^2-2x) = 0 $
+
+          No hay asíntotas verticales.
+
+          *Asíntotas horizontales*
+
+          $ limits("lím")_(x -> -oo) sqrt(x^2-2x) = +oo $
+
+          $ limits("lím")_(x -> +oo) sqrt(x^2-2x) = +oo $
+
+          No hay asíntotas horizontales.
+
+          *Asíntotas oblicuas:*
+
+          Para $x -> +oo$:
+
+          $ m = lim_(x -> +oo) frac(f(x), x) = 1 $
+
+          $ n = lim_(x -> +oo) (f(x)-x) = -1 $
+
+          Por tanto, la asíntota oblicua es:
+
+          $ y = x - 1 $
+
+          Si restamos la función menos la asíntota tenemos:
+          $f(x) - (x-1) = sqrt(x^2-2x) - (x - 1) stretch(->)_(x->+oo) 0^-$
+
+          El valor de la asíntota en mayor, que el de la función, luego se acerca por arriba.
+
+          Para $x -> -oo$:
+
+          $ m = lim_(x -> -oo) frac(f(x), x) = -1 $
+
+          $ n = lim_(x -> -oo) (f(x)+x) = 1 $
+
+          Por tanto, la asíntota oblicua es:
+
+          $ y = -x + 1 $
+
+          Si restamos la función menos la asíntota tenemos:
+
+          $f(x) - (x-1) = sqrt(x^2-2x) - (-x + 1) stretch(->)_(x->-oo) 0^-$
+
+          El valor de la asíntota en mayor, que el de la función, luego se acerca por arriba.
+
+          *Continuidad*
+
+          La función es continua en todo su dominio, puesto que es la composición de funciones continuas donde el radicando es no negativo.
+
+          Por tanto, es continua en:
+
+          $ (-oo,0] union [2,+oo) $
+
+          *Derivabilidad y monotonía*
+
+          Calculamos la primera derivada:
+
+          $ f'(x) = frac(2x-2, 2 sqrt(x^2-2x)) $
+
+          Simplificando:
+
+          $ f'(x) = frac(x-1, sqrt(x^2-2x)) $
+
+          Estudiamos el signo de la derivada:
+
+          - Si $x < 0$, entonces $f'(x) < 0$.
+          - Si $x > 2$, entonces $f'(x) > 0$.
+
+          Por tanto:
+
+          - La función es estrictamente decreciente en $(-oo,0]$.
+          - La función es estrictamente creciente en $[2,+oo)$.
+
+          La derivada no existe en $x=0$ ni en $x=2$, ya que el denominador se anula.
+
+          En ambos puntos la gráfica presenta una tangente vertical por el lado de su dominio.
+
+          *Extremos relativos y absolutos*
+
+          En $x=0$:
+
+          La función es decreciente hasta alcanzar el valor cero.
+
+          Por tanto, presenta un mínimo absoluto en:
+
+          $ (0,0) $
+
+          En $x=2$:
+
+          La función es creciente a partir de este punto.
+
+          Por tanto, también presenta un mínimo absoluto en:
+
+          $ (2,0) $
+
+          No tiene máximos relativos ni absolutos.
+
+          *Curvatura y puntos de inflexión*
+
+          Calculamos la segunda derivada:
+
+          $ f''(x) = -frac(1, (x^2-2x)^(3/2)) $
+
+          Como el denominador es siempre positivo en el interior del dominio:
+
+          $ f''(x) < 0 $
+
+          Por tanto, la función es cóncava hacia abajo en los dos intervalos:
+
+          $ (-oo,0) quad "y" quad (2,+oo) $
+
+          No presenta puntos de inflexión.
+
+          *Recorrido*
+
+          La función es una raíz cuadrada, por lo que sus valores son no negativos.
+
+          Además, alcanza el valor cero en $x=0$ y $x=2$, y tiende a infinito cuando $x$ tiende a cualquiera de los dos infinitos.
+
+          Por tanto, el recorrido es:
+
+          $ R(f) = [0,+oo)) $
+
+
+          = Resumen del estudio
+
+          #table(
+            columns: (1fr, 2fr),
+            stroke: 0.5pt,
+            inset: 7pt,
+            [*Característica*], [*Resultado*],
+
+            [Dominio], [$(-oo,0] union [2,+oo)$],
+            [Simetría], [Respecto a $x=1$],
+            [Cortes con los ejes], [$(0,0)$ y $(2,0)$],
+            [Signo], [No negativa],
+            [Asíntotas], [$y=-x+1$ y $y=x-1$],
+            [Continuidad], [Continua en todo su dominio],
+            [Monotonía], [Decreciente en $(-oo,0]$ y creciente en $[2,+oo)$],
+            [Extremos], [Mínimos absolutos en $(0,0)$ y $(2,0)$],
+            [Curvatura], [Cóncava hacia abajo en ambos intervalos],
+            [Puntos de inflexión], [No tiene],
+            [Recorrido], [$[0,+oo)$],
+          )
+
+          #align(center, cetz.canvas({
+            import cetz.draw: *
+            import cetz-plot: *
+            plot.plot(size: (10, 10), x-tick-step: 5, y-tick-step: 5, axis-style: "school-book", {
+              plot.add(domain: (-5, 0), samples: 200, x => calc.sqrt(x * x - 2 * x), style: (stroke: blue))
+              plot.add(domain: (2, 7), samples: 200, x => calc.sqrt(x * x - 2 * x), style: (stroke: blue))
+              plot.add(domain: (-5, 3), samples: 200, x => -x + 1, style: (stroke: (paint: green, thickness: 0.8pt, dash: "dashed")))
+              plot.add(domain: (-1, 7), samples: 200, x => x - 1, style: (stroke: (paint: green, thickness: 0.8pt, dash: "dashed")))
+            })
+          }))
+
+        ]
       ],
       [
         #subquestion()[$display(f(x) = ln(x^2+1))$]
