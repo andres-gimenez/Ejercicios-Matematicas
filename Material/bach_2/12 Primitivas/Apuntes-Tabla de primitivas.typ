@@ -19,7 +19,7 @@
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas",
     // number: "Versión 1",
-    content: "Tabla de derivadas",
+    content: "Primitivas",
     model: [v1],
   ),
 
