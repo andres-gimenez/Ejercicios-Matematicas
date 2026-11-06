@@ -14,7 +14,7 @@
     logo: image("../../" + config.at("school").at("logo")),
   ),
   exam-info: (
-    // academic-period: "Curso 2025/2026",
+    academic-period: config.at("exam-info").at("academic-period"),
     academic-level: "2º Bachillerato",
     academic-subject: "Matemáticas",
     // number: "1ª evaluación - 1º parcial",
@@ -27,6 +27,7 @@
   date: datetime(year: 2025, month: 9, day: 1),
   show-student-data: false,
   show-grade-table: false,
+  show-solutions: sys.inputs.at("show-solutions", default: config.at("show-solutions")),
   // draft: true,
   question-points-position: right,
   //   question-text-parameters: (size: 14pt, spacing:150%)
