@@ -43,7 +43,7 @@
 
 #show heading: it => {
   if it.level == 1 {
-    text(size: 22pt, weight: "bold")[#it \ ]
+    text(size: 22pt, weight: "bold")[#it #v(5mm)]
   } else if it.level == 2 {
     text(fill: blue, size: 14pt)[#it]
   } else if it.level == 3 {
@@ -77,12 +77,18 @@
   },
 )
 
-#place(
-  top + center,
-  scope: "parent",
-  float: true,
-  [= Tabla de primitivas],
-)
+#align(center)[
+  = Propiedades de las integrales
+]
+
+$ limits(integral) f(x) + g(x) dif x = limits(integral) f(x) dif x + limits(integral) g(x) dif x $
+
+$ limits(integral) c f(x) dif x = c limits(integral) f(x) dif x $
+
+
+#align(center)[
+  = Tabla de primitivas
+]
 
 #align(center)[
   // == Funciones simples
@@ -90,13 +96,17 @@
     columns: (auto, auto),
 
     [$display(limits(integral) k dif x) = k x + C$], [],
-    [$display(limits(integral) x^n u dif x) = x^(n+1)/(n+1) + C "si" n != -1$],
+    [$display(limits(integral) x^n dif x) = x^(n+1)/(n+1) + C "si" n != -1$],
     [$display(limits(integral) f'(x)[f(x)]^n dif x = [f(x)]^(n+1)/(n+1) + C "si" n != -1)$],
     [$display(limits(integral)1/x dif x = ln|x| + C)$], [$display(limits(integral) (f'(x))/f(x) dif x = ln|f(x)| + C)$],
     [$display(limits(integral) e^x dif x = e^x + C)$],
     [$display(limits(integral) f'(x) e^(f(x))) dif x = e^(f(x)) + C)$],
     [$display(limits(integral) a^x dif x = a^x / (ln a) + C) "si" a > 0 "y" a != 1$],
     [$display(limits(integral) f'(x) a^f(x) dif x = a^f(x) / (ln a) + C) "si" a > 0 "y" a != 1$],
+
+    [$display(limits(integral) x ln x dif x = x ln x - x + C) "si" x > 0$],
+    [$display(limits(integral) f'(x) ln f(x) dif x = f(x) ln f(x) - f(x) + C) "si" f(x) > 0$],
+
     table.hline(),
 
     [$display(limits(integral)"sen" x dif x = -"cos" x + C)$],
@@ -104,6 +114,13 @@
 
     [$display(limits(integral)"cos" x dif x = "sen" x + C)$],
     [$display(limits(integral) f'(x) "cos" f(x) dif x = "sen" f(x) + C)$],
+
+    [$display(limits(integral)"tag" x dif x = -ln|"cos" x | + C)$],
+    [$display(limits(integral) f'(x) "tag" f(x) dif x = -ln | "cos" f(x) | + C)$],
+
+    [$display(limits(integral)"cotag" x dif x = -ln|"sen" x | + C)$],
+    [$display(limits(integral) f'(x) "cotag" f(x) dif x = -ln | "sen" f(x) | + C)$],
+
     [$display(limits(integral) 1/sqrt(1-x^2) dif x = "arc sen"(x) + C)$],
     [$display(limits(integral) f'(x) 1/sqrt(1-f(x)^2) dif x = "arc sen"[f(x)] + C)$],
     [$display(limits(integral) (-1)/sqrt(1-x^2) dif x = "arc cos"(x) + C)$],
@@ -112,3 +129,15 @@
     [$display(limits(integral) f'(x) (-1)/(1-f(x)^2) dif x = "arc tan"[f(x)] + C)$],
   )
 ]
+
+#align(center)[
+  = Integración por partes
+]
+
+$ limits(integral) u dif v = u v - limits(integral) v dif u $
+
+#align(center)[
+  = Regla de Barrow
+]
+
+$ ∫_a^b f(x) dif x = F(x)|_a^b = F(b) - F(a) $
