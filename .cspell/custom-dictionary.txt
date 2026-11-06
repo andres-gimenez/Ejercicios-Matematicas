@@ -2,4 +2,5 @@ arccos
 cotg
 derivabilidad
 L'Hôpital
+sumandos
 vline
