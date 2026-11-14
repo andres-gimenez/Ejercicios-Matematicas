@@ -184,6 +184,38 @@
       ],
       [
         #subquestion()[$display(limits(integral) root(3, 2x)/sqrt(3x) dif x)$]
+        #solution[$display(
+          limits(integral) root(3, 2x)/sqrt(3x) dif x =
+          limits(integral) root(6, (2x)^2)/root(6, (3x)^3) dif x =
+          limits(integral) root(6, (2^2x^2)/(3^3x^3)) dif x =
+          limits(integral) root(6, 2^2/(3^3x)) dif x =
+          limits(integral) root(6, 2^2/(3^3)) x^(-1/6) dif x = \ =
+          root(6, 2^3/(3^3)) limits(integral) x^(-1/6) dif x =
+          root(6, 2^2/(3^3)) x^(5/6)/(5/6) dif x =
+          #result($display(6/5 root(6, (4 x^5)/(27)) + C)$)
+        )$]
+      ],
+      [
+        #subquestion()[$display(limits(integral) (dif x)/(4+x^2))$]
+        #solution[$display(
+          limits(integral) (dif x)/(4+x^2) =
+          limits(integral) (1/4)/((4+x^2)/4) dif x =
+          limits(integral) (1/4)/(1+(x/2)^2) dif x =
+          1/2 limits(integral) 1/2/(1+(x/2)^2) dif x =
+          #result($display(1/2 "arctan"(x/2) + C)$)
+        )$]
+      ],
+      [
+        #subquestion()[$display(limits(integral) 1/(1+ e^x) dif x)$]
+        #solution[$display(
+          limits(integral) 1/(1+ e^x) dif x =
+          limits(integral) e^(-x)/(e^(-x)) dot 1/(1+ e^x) dif x =
+          limits(integral) e^(-x) /(e^(-x)(1+ e^x)) dif x =
+          limits(integral) e^(-x) /(e^(-x)(1+ e^x)) dif x = \ =
+          limits(integral) e^(-x) /(e^(-x) + 1) dif x =
+          - limits(integral) (- e^(-x)) /(e^(-x) + 1) dif x =
+          #result($-ln|e^(-x) + 1| + C$)
+        )$]
       ],
     )
   ],
