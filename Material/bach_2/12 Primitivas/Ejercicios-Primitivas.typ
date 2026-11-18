@@ -533,6 +533,12 @@
         // ToDo: Quitar por estar repetida.
         #subquestion()[$display(limits(integral) 1/(x^2 + 4) dif x)$]
         #solution()[
+          $display(
+            limits(integral) 1/(x^2 + 4) dif x =
+            limits(integral) 1/(4(x^2/ 4 + 1)) dif x =
+            1/4 limits(integral) 2 (1/2)/((x/2)^2 + 1) dif x =
+            #result($display(1/2 arctan (x/2) + C)$)
+          )$
         ]
       ],
       [
@@ -656,39 +662,115 @@
         ]
       ],
       [
-        #subquestion()[$display(limits(integral) 1/((x+1)(x+3)) dif x)$]
+        #subquestion()[$display(limits(integral) 1/(x^2+4x+3) dif x)$]
         #solution()[
+
+          $display(limits(integral) 1/(x^2+4x+3) dif x = limits(integral) 1/((x+1)(x+3)) dif x)$
+
+          Ahora descomponemos en fracciones simples:
+
+          $display(
+            1/((x+1)(x+3)) =
+            frac(A, x + 1) + frac(B, x + 3) =
+            (A (x+3) + B (x+1))/((x+1)(x+3)) =
+            (A x + 3A + B x + B)/((x+1)(x+3)) =
+            ((A+B)x + (3A+B))/((x+1)(x+3)) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              &A + B &= 0,
+              &3A + B &= 1
+            ) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              &A &= 1/2,
+              &B &= -1/2
+            )
+          )$
+
+          Sustituimos los valores obtenidos:
+
+          $display(
+            integral frac(1, (x+1)(x+3)) dif x =
+            integral (frac(1/2, x + 1) - frac(1/2, x + 3)) dif x =
+            1/2 ln|x + 1| - 1/2 ln|x + 3| + C = \ =
+            #result($display(1/2 ln abs((x + 1)/(x + 3)) + C)$)
+          )$
+
         ]
       ],
       [
         #subquestion()[$display(limits(integral) (2x-1)/(x(x-2)) dif x)$]
         #solution()[
+
+          $display(
+            limits(integral) (2x-1)/(x^2-2x) dif x =
+            limits(integral) (2x-1)/(x(x-2)) dif x
+          )$
+
+          Ahora descomponemos en fracciones simples:
+
+          $display(
+            (2x-1)/(x(x-2)) =
+            frac(A, x) + frac(B, x-2) =
+            (A(x-2) + B x)/(x(x-2)) =
+            ((A+B)x - 2A)/(x(x-2)) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              &A + B &= 2,
+              &-2A &= -1
+            ) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              &A &= 1/2,
+              &B &= 3/2
+            )
+          )$
+
+          Sustituimos los valores obtenidos:
+
+          $display(
+            integral frac(2x-1, x(x-2)) dif x =
+            integral (frac(1/2, x) + frac(3/2, x-2)) dif x =
+            1/2 ln|x| + 3/2 ln|x-2| + C =
+            #result($display(1/2 ln abs(x) + 3/2 ln abs(x-2) + C)$)
+          )$
         ]
       ],
       [
         #subquestion()[$display(limits(integral) (x^2+1)/(x-1) dif x)$]
         #solution()[
+          $display(
+            limits(integral) (x^2+1)/(x-1) dif x =
+            limits(integral) (x^2- 1 + 2)/(x-1)dif x =
+            limits(integral) (x^2- 1 )/(x-1)dif x + limits(integral) 2/(x-1)dif x =
+            limits(integral) (x^2- 1 )/(x-1)dif x + limits(integral) 2/(x-1)dif x = \ =
+            limits(integral) (x+1) dif x + limits(integral) 2/(x-1)dif x =
+            #result($display(x^2/2 + x + 2 ln |x-1| + C)$)
+          )$
         ]
       ],
       [
         #subquestion()[$display(limits(integral) (3x^2+2)/(x) dif x)$]
         #solution()[
+          $display(
+            limits(integral) (3x^2+2)/(x) dif x =
+            limits(integral) (3x^2)/x+2/x dif x =
+            limits(integral) 3x+2/x dif x = #result($display((3x^2)/2 + 2 ln|x| + C)$)
+          )$
         ]
       ],
       [
-        #subquestion()[$display(limits(integral) x/(x^2 + 1) dif x)$]
-        #solution()[
-        ]
+        #subquestion(
+          solution: $display(= 1/2 limits(integral) (2x)/(x^2 + 1) dif x) = #result($display(1/2) arctan(x^2+1)$)$,
+        )[$display(limits(integral) x/(x^2 + 1) dif x)$]
       ],
       [
-        #subquestion()[$display(limits(integral) 1/(x^2 + 1) dif x)$]
-        #solution()[
-        ]
+        #subquestion(solution: $display(= #result($arctan(x) + C$))$)[$display(limits(integral) 1/(x^2 + 1) dif x)$]
       ],
       [
-        #subquestion()[$display(limits(integral) (x^2 - 1)/(x - 1) dif x)$]
-        #solution()[
-        ]
+        #subquestion(
+          solution: $display(=limits(integral) ((x-1)(x+1))/(x-1) dif x = limits(integral) x+1 dif x = #result($display(x^2/2 + x + C)$))$,
+        )[$display(limits(integral) (x^2 - 1)/(x - 1) dif x)$]
       ],
       [
         #subquestion()[$display(limits(integral)(2x+3)/((x-1)(x^2+1)) dif x)$]
@@ -879,21 +961,94 @@
       [
         #subquestion()[$display(limits(integral) x root(3, x+2) dif x)$ #h(3mm) (haciendo $x+2=t^3$)]
         #solution()[
+          Hacemos el cambio  $x+2=t^3 => dif x = 3t^2 dif t$
+
+          $display(
+            limits(integral) x root(3, x+2) dif x =
+            limits(integral) (t^3 - 2) t dot 3 dot t^2 dif t =
+            limits(integral) 3 (t^6 - 2t^3) dif t =
+            3 [limits(integral) t^6 dif t - limits(integral) 2t^3 dif x] = \ =
+            3 (t^7/7 - (2 t^4) / 4) =
+            3/7 t^7 - 3/2 t^4
+          )$
+
+          Deshacemos el cambio de variable: $t = root(3, x+2)$
+
+          $display(3/7 t^7 - 3/2 t^4 = #result[$display(3/7 (x+2)^(7/3) - 3/2 (x+2)^(4/3))$])$
         ]
       ],
       [
         #subquestion()[$display(limits(integral) 2/(2+e^x)) dif x$ #h(3mm) (haciendo $t=e^x$)]
         #solution()[
+          Hacemos el cambio $t = e^x => dif t = e^x dif t$
+
+          $display(
+            limits(integral) 2/(2 + e^x) dif x =
+            limits(integral) (2e^x)/(e^x (2 + e^x)) dif x =
+            limits(integral) 2/(t (2 + t)) dif x
+          )$
+
+          Ahora tenemos una integral de una fracción algebraica, que hay que descomponer.
+
+          $display(
+            limits(integral) 2/(t (2 + t)) dif x
+            = 2 limits(integral) A/t + B/ (2 + t)
+          ) dif x
+          )$
+
+          Resolvemos:
+
+          $display(2 = A(t+2) + B t => 2 = (A+B) t + 2 A => A=1 "," B= -1)$
+
+          Luego:
+
+          $display(
+            limits(integral) 2/(t (2 + t)) dif x =
+            limits(integral) 1/t + (-1)/ (2 + t) dif x =
+            (ln |t| - ln |2+t| )
+          )$
+
+          Deshacemos el cambio de variable: $t = e^x$
+
+          $display(
+            ln |t| - ln |2+t| = ln |e^x| - ln |2 + e^x| =
+            #result($display(x - ln (2 + e^x) + C)$)
+          )$
         ]
       ],
       [
         #subquestion()[$display(limits(integral) e^x/(1-sqrt(e^x)) dif x)$ #h(3mm) (haciendo $e^x=t^2$)]
         #solution()[
+
+          Hacemos el cambio $e^x = t^2 => e^x dif x = 2t dif t$
+
+          $display(
+            limits(integral) e^x/(1-sqrt(e^x)) dif x =
+            limits(integral) (2t)/(1-t) dif t =
+            2 limits(integral) t/(1-t) dif t =
+            2 limits(integral) -1 + 1/(1-t) dif t =
+            -2t+2 ln|1-t|
+          )$
+
+          Deshacemos el cambio de variable: $t = sqrt(e^x)$
+
+          $display(-2t+2 ln|1-t| = #result($display(-2 sqrt(e^x) - 2 ln |1-sqrt(x) + C)$))$
         ]
       ],
       [
         #subquestion()[$display(limits(integral) 1/(x ln(x)) dif x)$ #h(3mm) (haciendo $t=ln(x)$)]
         #solution()[
+          Hacemos el cambio: $display(t = ln(x) => dif t = 1/x dif x)$
+
+          $display(
+            limits(integral) 1/(x ln(x)) dif x =
+            limits(integral) 1/t dif t =
+            ln |t|
+          )$
+
+          Deshaciendo el cambio: $display(t = ln(x))$
+
+          $display(ln |t| = #result($display(ln |ln(x)| + C)$))$
         ]
       ],
     )
