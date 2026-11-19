@@ -776,7 +776,7 @@
             4/5 limits(integral) frac(1, (3x^2)/5 + 1) dif x =
             4/5 limits(integral) frac(1, (sqrt(3/5x))^2 + 1) dif x = \ =
             4/5 sqrt(5/3) limits(integral) frac(sqrt(3/5), (sqrt(3/5x))^2 + 1) dif x =
-            #result($display(4/sqrt(15)tan (sqrt(3/5) x) + C)$)
+            #result($display(4/sqrt(15)arctan (sqrt(3/5) x) + C)$)
           )$
         ]
       ],
