@@ -217,6 +217,27 @@
           #result($-ln|e^(-x) + 1| + C$)
         )$]
       ],
+      [
+        #subquestion()[$display(limits(integral) x/sqrt(x^2 + 4) dif x)$]
+        #solution()[
+          $display(
+            limits(integral) x/sqrt(x^2 + 4) dif x =
+            limits(integral) x (x^2 + 4)^(-1/2) dif x =
+            1/2 limits(integral) 2x (x^2 + 4)^(-1/2) dif x =
+            #result($ sqrt(x^2 + 4) + C $)
+          )$
+        ]
+      ],
+      [
+        #subquestion()[$display(limits(integral) e^(2x)/(1+e^(2x)) dif x)$]
+        #solution()[
+          $display(
+            limits(integral) e^(2x)/(1+e^(2x)) dif x =
+            1/2 limits(integral) (2e^(2x))/(1+e^(2x)) dif x =
+            #result($ 1/2 ln(1+e^(2x)) + C $)
+          )$
+        ]
+      ],
     )
   ],
   [
@@ -410,73 +431,169 @@
 
         ]
       ],
-      // [
-      //   // ToDo: Mover a otra categoría de integrales.
-      //   #subquestion()[$display(limits(integral) 1/("sen"(x) cos(x)) dif x)$]
-      //   #solution()[
-      //     *1ª Forma:*
-      //     Hacemos el cambio de variable $display(t = "sen"(x) => dif t = cos(x) dif x)$
 
-      //     $display(
-      //       limits(integral) 1/("sen"(x) cos(x)) dif x =
-      //       limits(integral) 1/"sen"(x) dot cos(x)/(cos^2(x)) dif x =
-      //       limits(integral) 1/"sen"(x) dot cos(x)/(1 - "sen"^2(x)) dif x =
-      //       limits(integral) 1/(t (1-t^2)) dif t
-      //     )$
-
-      //     Si tomamos :
-
-      //     $display(A/t + B/(1-t^2) = (A(1-t^2) + B t) / t(1-t^2)) =>
-      //     A(1-t^2) + B t = 1 => A - A t^2 + B t = 1 => A= 1 "y" B = t$
-
-      //     $display(
-      //       limits(integral) 1/(t (1-t^2)) dif t =
-      //       limits(integral) 1/t + t/(1-t^2) dif t =
-      //       limits(integral) 1/t dif t + limits(integral) -1/2 (-2t)/(1-t^2) dif t = \ =
-      //       ln abs(t) - 1/2 ln abs(1-t^2) =
-      //       ln abs("sen"(t)) - 1/2 ln abs(1-"sen"^2(x)) =
-      //       ln abs("sen"(t)) - 1/2 ln abs(cos^2(x)) = \ =
-      //       ln abs("sen"(t)) - ln sqrt(abs(cos^2(x))) =
-      //       ln abs("sen"(t)) - ln abs(cos(x)) =
-      //       ln abs("sen"(t)/cos(x))
-      //       =#result($display(ln abs(tan(x))) + C$)
-      //     )$
-
-      //     *2ª Forma:*
-
-      //     $display(
-      //       limits(integral) 1/("sen"(x) cos(x)) dif x =
-      //       limits(integral) ("sen"^2(x) + cos^2(x))/("sen"(x) cos(x)) dif x =
-      //       limits(integral) ("sen"^2(x)) /("sen"(x) cos(x)) + ("cos"^2(x)) /("sen"(x) cos(x)) dif x = \ =
-      //       - limits(integral) (-"sen"(x)) /cos(x) dif x + limits(integral) ("cos"(x)) /("sen"(x)) dif x =
-      //       - ln|cos(x)| + ln abs("sen"(x)) = ln abs("sen"(x)/cos(x)) =
-      //       #result($display(ln|tg(x)| +C)$)
-      //     )$
-      //   ]
-      // ],
       [
         #subquestion()[$display(limits(integral) e^(3x) cos(2x) dif x)$]
         #solution()[
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              u = e^(3x),
+              dif v = "cos"(2x) dif x,
+            ) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              dif u = 3e^(3x) dif x,
+              v = display(limits(integral) cos(2x) dif x = "sen"(2x)/2),
+            )
+          )$
+
+          $display(
+            limits(integral) e^(3x) cos(2x) dif x =
+            e^(3x) "sen"(2x)/2 - limits(integral) (3e^(3x) "sen"(2x))/2 dif x
+          )$
+
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              u = e^(3x),
+              dif v = "sen"(2x) dif x,
+            ) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              dif u = 3e^(3x) dif x,
+              v = display(limits(integral) "sen"(2x) dif x = -cos(2x)/2),
+            )
+          )$
+
+          $display(
+            limits(integral) e^(3x) "sen"(2x) dif x =
+            -e^(3x) cos(2x)/2 + limits(integral) (3e^(3x) cos(2x))/2 dif x =
+            -e^(3x) cos(2x)/2 + 3/2 limits(integral) e^(3x) cos(2x) dif x
+          )$
+
+          Si llamamos $display(I = limits(integral) e^(3x) cos(2x) dif x)$
+
+          $display(
+            I =
+            e^(3x) "sen"(2x)/2 -
+            3/2 (-e^(3x) cos(2x)/2 +
+              3/2 I) =
+            e^(3x) "sen"(2x)/2 + 3e^(3x) cos(2x)/4 -
+            9/4 I =>
+          )$
+
+          $display(
+            13/4 I =
+            e^(3x) "sen"(2x)/2 + 3e^(3x) cos(2x)/4 =>
+            I = (e^(3x) (3 cos(2x) + 2 "sen"(2x)))/13 =>
+          )$
+
+          $display(
+            #result($ limits(integral) e^(3x) cos(2x) dif x =
+            (e^(3x) (3 cos(2x) + 2 "sen"(2x)))/13 + C $)
+          )$
         ]
       ],
       [
         #subquestion()[$display(limits(integral) ln(x^2 + 1) dif x)$]
         #solution()[
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              u = ln(x^2 + 1),
+              dif v = dif x,
+            ) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              dif u = (2x)/(x^2 + 1) dif x,
+              v = limits(integral) dif x = x,
+            )
+          )$
+
+          $display(
+            limits(integral) ln(x^2 + 1) dif x =
+            x ln(x^2 + 1) - limits(integral) x · (2x)/(x^2 + 1) dif x =
+            x ln(x^2 + 1) - 2 limits(integral) x^2/(x^2 + 1) dif x
+          )$
+
+          $display(
+            limits(integral) x^2/(x^2 + 1) dif x =
+            limits(integral) (1 - 1/(x^2 + 1)) dif x =
+            x - arctan(x)
+          )$
+
+          $display(#result($ x ln(x^2 + 1) - 2x + 2 arctan(x) + C $))$
         ]
       ],
-      [
-        #subquestion()[$display(limits(integral) x/sqrt(x^2 + 4) dif x)$]
-        #solution()[
-        ]
-      ],
-      [
-        #subquestion()[$display(limits(integral) e^(2x)/(1+e^(2x)) dif x)$]
-        #solution()[
-        ]
-      ],
+
       [
         #subquestion()[$display(limits(integral) x sqrt(x + 2) dif x)$]
         #solution()[
+          *Forma 1:*
+
+          $display(
+            limits(integral) x sqrt(x + 2) dif x =
+            limits(integral) x (x + 2)^(1/2) dif x
+          )$
+
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              u = x,
+              dif v = (x + 2)^(1/2) dif x,
+            ) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              dif u = dif x,
+              v = limits(integral) (x + 2)^(1/2) dif x =
+              2/3 (x + 2)^(3/2),
+            )
+          )$
+
+          $display(
+            limits(integral) x (x + 2)^(1/2) dif x =
+            2/3 x (x + 2)^(3/2) -
+            2/3 limits(integral) (x + 2)^(3/2) dif x
+          )$
+
+          $display(
+            limits(integral) (x + 2)^(3/2) dif x =
+            2/5 (x + 2)^(5/2)
+          )$
+
+          $display(
+            #result($ 2/3 x (x + 2)^(3/2) -
+            4/15 (x + 2)^(5/2) + C $)
+          )$
+
+          *Forma 2:*
+
+          $display(
+            limits(integral) x sqrt(x + 2) dif x =
+            limits(integral) ((x + 2) - 2) sqrt(x + 2) dif x
+          )$
+
+          Hacemos el cambio de variable
+          $display(
+            u = x + 2 =>
+            dif u = dif x
+          )$
+
+          $display(
+            limits(integral) ((x + 2) - 2) sqrt(x + 2) dif x =
+            limits(integral) (u - 2) sqrt(u) dif u =
+            limits(integral) (u^(3/2) - 2u^(1/2)) dif u
+          )$
+
+          $display(
+            limits(integral) (u^(3/2) - 2u^(1/2)) dif u =
+            2/5 u^(5/2) - 4/3 u^(3/2)
+          )$
+
+          Deshaciendo el cambio de variable:
+
+          $display(#result($ 2/5 (x + 2)^(5/2) - 4/3 (x + 2)^(3/2) + C $))$
         ]
       ],
     )
@@ -1072,6 +1189,50 @@
           Deshaciendo el cambio: $display(t = ln(x))$
 
           $display(ln |t| = #result($display(ln |ln(x)| + C)$))$
+        ]
+      ],
+      [
+        // ToDo: Mover a otra categoría de integrales.
+        #subquestion()[$display(limits(integral) 1/("sen"(x) cos(x)) dif x)$ (haciendo $t = "sen"(x)$]
+        #solution()[
+          *1ª Forma:*
+          Hacemos el cambio de variable $display(t = "sen"(x) => dif t = cos(x) dif x)$
+
+          $display(
+            limits(integral) 1/("sen"(x) cos(x)) dif x =
+            limits(integral) 1/"sen"(x) dot cos(x)/(cos^2(x)) dif x =
+            limits(integral) 1/"sen"(x) dot cos(x)/(1 - "sen"^2(x)) dif x =
+            limits(integral) 1/(t (1-t^2)) dif t
+          )$
+
+          Si tomamos :
+
+          $display(A/t + B/(1-t^2) = (A(1-t^2) + B t) / t(1-t^2)) =>
+          A(1-t^2) + B t = 1 => A - A t^2 + B t = 1 => A= 1 "y" B = t$
+
+          $display(
+            limits(integral) 1/(t (1-t^2)) dif t =
+            limits(integral) 1/t + t/(1-t^2) dif t =
+            limits(integral) 1/t dif t + limits(integral) -1/2 (-2t)/(1-t^2) dif t = \ =
+            ln abs(t) - 1/2 ln abs(1-t^2) =
+            ln abs("sen"(t)) - 1/2 ln abs(1-"sen"^2(x)) =
+            ln abs("sen"(t)) - 1/2 ln abs(cos^2(x)) = \ =
+            ln abs("sen"(t)) - ln sqrt(abs(cos^2(x))) =
+            ln abs("sen"(t)) - ln abs(cos(x)) =
+            ln abs("sen"(t)/cos(x))
+            =#result($display(ln abs(tan(x))) + C$)
+          )$
+
+          *2ª Forma:*
+
+          $display(
+            limits(integral) 1/("sen"(x) cos(x)) dif x =
+            limits(integral) ("sen"^2(x) + cos^2(x))/("sen"(x) cos(x)) dif x =
+            limits(integral) ("sen"^2(x)) /("sen"(x) cos(x)) + ("cos"^2(x)) /("sen"(x) cos(x)) dif x = \ =
+            - limits(integral) (-"sen"(x)) /cos(x) dif x + limits(integral) ("cos"(x)) /("sen"(x)) dif x =
+            - ln|cos(x)| + ln abs("sen"(x)) = ln abs("sen"(x)/cos(x)) =
+            #result($display(ln|tg(x)| +C)$)
+          )$
         ]
       ],
     )
