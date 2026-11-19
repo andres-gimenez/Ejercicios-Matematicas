@@ -768,6 +768,29 @@
         #subquestion(solution: $display(= #result($arctan(x) + C$))$)[$display(limits(integral) 1/(x^2 + 1) dif x)$]
       ],
       [
+        #subquestion[$display(limits(integral) 4/(3x^2 + 5) dif x)$]
+        #solution[
+          $display(
+            limits(integral) frac(4, 3x^2 + 5) dif x =
+            limits(integral) frac(4/5, (3x^2 + 5)/5) dif x =
+            4/5 limits(integral) frac(1, (3x^2)/5 + 1) dif x =
+            4/5 limits(integral) frac(1, (sqrt(3/5x))^2 + 1) dif x = \ =
+            4/5 sqrt(5/3) limits(integral) frac(sqrt(3/5), (sqrt(3/5x))^2 + 1) dif x =
+            #result($display(4/sqrt(15)tan (sqrt(3/5) x) + C)$)
+          )$
+        ]
+      ],
+      [
+        #subquestion[$display(limits(integral) (4x)/(3x^2 + 5) dif x)$]
+        #solution[
+          $display(
+            limits(integral) (4x)/(3x^2 + 5) dif x =
+            4/6 display(limits(integral) (6x)/(3x^2 + 5) dif x) =
+            #result($display(2/3 ln |3x^2+5| + C)$)
+          )$
+        ]
+      ],
+      [
         #subquestion(
           solution: $display(=limits(integral) ((x-1)(x+1))/(x-1) dif x = limits(integral) x+1 dif x = #result($display(x^2/2 + x + C)$))$,
         )[$display(limits(integral) (x^2 - 1)/(x - 1) dif x)$]
