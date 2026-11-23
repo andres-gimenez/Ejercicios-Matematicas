@@ -1,6 +1,7 @@
 arccos
 arcsen
 arctg
+arctan
 cotg
 derivabilidad
 L'Hôpital
