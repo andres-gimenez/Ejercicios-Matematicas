@@ -47,7 +47,7 @@
         ]
       ],
       [
-        #subquestion()[$display(f(x) = x^3 + 5 x^2 - 3x + pi/2))$]
+        #subquestion()[$display(f(x) = x^3 + 5 x^2 - 3x + pi/2)$]
         #solution()[
           $display(f'(x) = 3 x^2 + 10 x - 3)$
         ]
@@ -366,6 +366,32 @@
       ],
       [
         #subquestion()[$display(f(x) = "arctg"(x/(sqrt(1-x^2))))$]
+        #solution[
+          $display(
+            f'(x) = frac(
+              ( frac(x, sqrt(1-x^2)) )',
+              1 + ( frac(x, sqrt(1-x^2)) )^2
+            ) =
+            frac(
+              sqrt(1-x^2) - frac(x^2, sqrt(1-x^2)),
+              1/(1-x^2)
+            ) =
+            frac(
+              (1-x^2)/sqrt(1-x^2) - frac(x^2, sqrt(1-x^2)),
+              1/(1-x^2)
+            ) =
+            frac(
+              1/sqrt(1-x^2),
+              1/(1-x^2)
+            ) = \ =
+            frac(
+              1-x^2,
+              sqrt(1-x^2)
+            ) =
+            frac(1, (1-x^2)^2)
+          )$
+
+        ]
       ],
       [
         #subquestion()[$display(f(x) = "arcsen"((x-1)/(x+1)))$]

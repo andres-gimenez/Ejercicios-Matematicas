@@ -932,6 +932,27 @@
         #solution()[
         ]
       ],
+      // [
+      //   #subquestion()[$display(limits(integral) sqrt(1 - x^2) dif x)$ #h(3mm) (haciendo $x = "sen"(theta)$)]
+      //   #solution([
+      //     Hacemos el cambio $x = "sen"(theta) => dif x = cos(theta) dif theta$
+
+      //     $display(
+      //       integral sqrt(1 - x^2) dif x
+      //       = integral sqrt(1 - "sen"^2(theta)) "sen" (theta) dif theta
+      //       = integral cos^2(theta) dif theta
+      //       = integral (1 + cos(2 theta)) / 2 dif theta = \
+      //       = theta/2 + sin(2 theta)/4 + C
+      //     )$
+
+      //     Deshaciendo el cambio de variable:
+
+      //     $x = "sen"(theta) => theta = "arcsen" (x)$
+
+      //     $display(theta/2 + sin(2 theta)/4 + C
+      //       = 1/2 "arcsen"(x) + x/2 sqrt(1 - x^2) + C)$
+      //   ])
+      // ],
     )
   ],
 )
