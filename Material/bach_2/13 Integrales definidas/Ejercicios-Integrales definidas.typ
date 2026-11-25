@@ -36,11 +36,50 @@
   [
     #question()[Calcula el valor de las siguientes integrales definidas:]
     #questions-columns(
-      [#subquestion()[$display(∫_0^2 (3x^2 - 4x + 1) dif x)$]],
-      [#subquestion()[$display(∫_(-1)^1 (x^3 + x) dif x)$]],
-      [#subquestion()[$display(∫_1^3 1/x dif x)$]],
-      [#subquestion()[$display(∫_1^2 (2x + 3) dif x)$]],
-      [#subquestion()[$display(∫_(-2)^2 (x^5 - 3x^3) dif x)$]],
+      [#subquestion(
+        solution: $display(
+          =
+          x^3 - 2x^2 + x scripts(|)_0^2 =
+          (2^3 - 2dot 2^2 + 2) - (0^3 - 2 dot 0^2 + 0)
+          = #result[2]
+        )$,
+      )[$display(∫_0^2 (3x^2 - 4x + 1) dif x)$]],
+      [#subquestion[$display(∫_(-1)^1 (x^3 + x) dif x)$]
+        #solution[
+          $display(
+            display(∫_(-1)^1 (x^3 + x) dif x) =
+            x^4/4 + x^2/2 scripts(|)_(-1)^(#hide[+]1) =
+            (1^4/4 + 1^2/2) - ((-1)^4/4 + (-1)^3/2) = \ =
+            (1/4 + 1/2) - (1/4 + 1/2)
+            = #result[0]
+          )$,
+        ]
+      ],
+
+      [#subquestion(
+        solution: $display(
+          = ln(x) scripts(|)_1^e =
+          ln(e) - ln(1)
+          = #result[1]
+        )$,
+      )[$display(∫_1^e 1/x dif x)$]],
+
+      [#subquestion(
+        solution: $display(
+          = (x^2 + 3x) scripts(|)_1^2 =
+          (2^2 + 3 dot 2) - (1^2 + 3 dot 1)
+          = #result(6)
+        )$,
+      )[$display(∫_1^2 (2x + 3) dif x)$]],
+
+      [#subquestion(
+        solution: $display(
+          = (x^6/6 - (3x^4)/4) scripts(|)_(-2)^2 =
+          (2^6/6 - (3 dot 2^4)/4) - ((-2)^6/6 - (3 dot (-2)^4)/4)
+          = 0
+        )$,
+      )[$display(∫_(-2)^2 (x^5 - 3x^3) dif x)$]],
+
       [#subquestion()[$display(∫_(0)^1 x arctan(x) dif x)$]
         #solution()[
           Integramos por partes:
@@ -73,7 +112,7 @@
 
           $display(
             ∫_(0)^1 x arctan(x) dif x =
-            (x^2 + 1) arctan (x) - x/2 limits(])_0^1 = \ =
+            (x^2 + 1) arctan (x) - x/2 scripts(|)_0^1 = \ =
             ((1^2 + 1) arctan (1) - 1/2) - ((0^2 + 1) arctan (0) - 0/2) =
             (2 pi/4 - 1/2) - (1 dot 0 -1 ) =
             #result($display(pi/2 - 1/2)$)
