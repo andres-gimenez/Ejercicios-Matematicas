@@ -350,10 +350,10 @@
       ],
       [
         #subquestion()[Área comprendida entre $y = "sen"(x)$ y el eje $x$ en $[-π, π]$.]
-        #solution[
-          Vamos a aprovechar que la función $f(x) = "sen"(x)$ es impar, ya que $"sen(x)" = -"sen"(-x)$.
+        // #solution[
+        //   Vamos a aprovechar que la función $f(x) = "sen"(x)$ es impar, ya que $"sen(x)" = -"sen"(-x)$.
 
-        ]
+        // ]
       ],
       [
         #subquestion()[Área comprendida entre $y = |sin(x)|$ y el eje $x$ en $[0, 2π]$.]
