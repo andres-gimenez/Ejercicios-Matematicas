@@ -1235,6 +1235,61 @@
           )$
         ]
       ],
+      [
+        #subquestion()[$display(limits(integral) sqrt(1 - x^2) dif x)$ #h(3mm) (haciendo $x = "sen"(theta)$)]
+        #solution[
+          Hacemos el cambio $x = "sen"(theta) => dif x = cos(theta) dif theta$
+
+          Y usaremos que
+          - $"sin"^2(x) + cos^2(x) = 1$
+          - $display("cos"(2 theta) = cos^2(theta) - "sen"^2(theta))$
+          - $display("sen"(2 theta) = 2 "sen"(theta) cos(theta))$
+
+          $display(
+            integral sqrt(1 - x^2) dif x
+            = integral sqrt(1 - "sen"^2(theta)) "sen" (theta) dif theta
+            = integral cos^2(theta) dif theta
+            = integral (1 + cos(2 theta)) / 2 dif theta = \
+            = theta/2 + "sen"(2 theta)/4 + C
+          )$
+
+          Deshaciendo el cambio de variable:
+
+          - $x = "sen"(theta) => theta = "arcsen" (x)$
+          - $"sen"(2 theta) = 2 "sen"(theta) cos(theta) = 2 "sen"(theta) sqrt(1 - "sen"^2 (theta)) = 2 x sqrt(1-x^2)$
+
+          $display(
+            theta/2 + "sen"(2 theta)/4 + C
+            = #result[$display(1/2 "arcsen"(x) + x/2 sqrt(1 - x^2) + C)$]
+          )$
+
+          *Otra forma* de resolver $display(integral cos^2(theta) dif theta)$ por partes:
+
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              u = cos(theta),
+              dif v = cos(theta) dif theta,
+            ) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              dif u = - "sen"(theta) dif theta,
+              v = limits(integral) cos(theta) dif x = "sen"(theta),
+            )
+          )$
+
+          $I = display(
+            integral cos^2(theta) dif theta =
+            cos(theta) "sen"(theta) - integral (-"sen"(theta)) dot "sen"(theta) dif theta = \
+            cos(theta) "sen"(theta) + integral "sen"(theta) dot "sen"(theta) dif theta =
+            cos(theta) "sen"(theta) + integral "sen"^2(theta) dif theta = \ =
+            cos(theta) "sen"(theta) + integral 1 - "cos"^2(theta) dif theta =
+            cos(theta) "sen"(theta) + theta - integral "cos"^2(theta) dif theta = \
+            cos(theta) "sen"(theta) + theta - I =>
+            I = (cos(theta) "sen"(theta) + theta)/2
+          )$
+        ]
+      ],
     )
   ],
   [
@@ -1304,27 +1359,6 @@
           )$
         ]
       ],
-      // [
-      //   #subquestion()[$display(limits(integral) sqrt(1 - x^2) dif x)$ #h(3mm) (haciendo $x = "sen"(theta)$)]
-      //   #solution([
-      //     Hacemos el cambio $x = "sen"(theta) => dif x = cos(theta) dif theta$
-
-      //     $display(
-      //       integral sqrt(1 - x^2) dif x
-      //       = integral sqrt(1 - "sen"^2(theta)) "sen" (theta) dif theta
-      //       = integral cos^2(theta) dif theta
-      //       = integral (1 + cos(2 theta)) / 2 dif theta = \
-      //       = theta/2 + sin(2 theta)/4 + C
-      //     )$
-
-      //     Deshaciendo el cambio de variable:
-
-      //     $x = "sen"(theta) => theta = "arcsen" (x)$
-
-      //     $display(theta/2 + sin(2 theta)/4 + C
-      //       = 1/2 "arcsen"(x) + x/2 sqrt(1 - x^2) + C)$
-      //   ])
-      // ],
     )
   ],
 )
