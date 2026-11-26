@@ -39,7 +39,7 @@
       [#subquestion(
         solution: $display(
           =
-          x^3 - 2x^2 + x scripts(|)_0^2 =
+          [x^3 - 2x^2 + x]_0^2 =
           (2^3 - 2dot 2^2 + 2) - (0^3 - 2 dot 0^2 + 0)
           = #result[2]
         )$,
@@ -48,7 +48,7 @@
         #solution[
           $display(
             display(∫_(-1)^1 (x^3 + x) dif x) =
-            x^4/4 + x^2/2 scripts(|)_(-1)^(#hide[+]1) =
+            [x^4/4 + x^2/2]_(-1)^(1) =
             (1^4/4 + 1^2/2) - ((-1)^4/4 + (-1)^2/2) = \ =
             (1/4 + 1/2) - (1/4 + 1/2)
             = #result[0]
@@ -58,15 +58,17 @@
 
       [#subquestion(
         solution: $display(
-          = ln(x) scripts(|)_1^e =
-          ln(e) - ln(1)
-          = #result[1]
+          =display(
+            [ln(x)]_1^e =
+            ln(e) - ln(1)
+            = #result[1]
+          )
         )$,
       )[$display(∫_1^e 1/x dif x)$]],
 
       [#subquestion(
         solution: $display(
-          = (x^2 + 3x) scripts(|)_1^2 =
+          = [(x^2 + 3x)]_1^2 =
           (2^2 + 3 dot 2) - (1^2 + 3 dot 1)
           = #result(6)
         )$,
@@ -74,7 +76,7 @@
 
       [#subquestion(
         solution: $display(
-          = (x^6/6 - (3x^4)/4) scripts(|)_(-2)^(#hide[+]2) =
+          = [(x^6/6 - (3x^4)/4)]_(-2)^(2) =
           (2^6/6 - (3 dot 2^4)/4) - ((-2)^6/6 - (3 dot (-2)^4)/4)
           = 0
         )$,
@@ -112,7 +114,7 @@
 
           $display(
             ∫_(0)^1 x arctan(x) dif x =
-            1/2 [(x^2 + 1) arctan (x) - x] scripts(|)_0^1 = \ =
+            [1/2 [(x^2 + 1) arctan (x) - x]]_0^1 = \ =
             1/2 [(1^2 + 1) arctan (1) - 1] - 1/2 [(0^2 + 1) arctan (0) - 0] =
             1/2 dot [(2pi)/4-1] - 0 =
             #result($display(pi/4 - 1/2)$)
@@ -151,7 +153,7 @@
 
           $display(
             ∫_(-pi)^pi x^2 "sen"(x) dif x =
-            (2-x^2) cos(x) + 2x "sen"(x) script(|)_(-pi)^(#hide[+]pi) = \ =
+            [(2-x^2) cos(x) + 2x "sen"(x)]_(-pi)^pi = \ =
             [(2-pi^2) cos(pi) + 2pi "sen"(pi)] - [(2-(-pi)^2) cos(-pi) + 2pi "sen"(-pi)] = \ =
             [(2-pi^2) (-1) + 2pi dot 0]- [(2-(-pi)^2) (-1) + 2pi dot 0] =
             [-(2-pi^2)] - [-(2-pi^2)] = #result[0]
@@ -172,7 +174,7 @@
 
           $display(
             ∫_(-1)^1 x e^x dif x =
-            e^x (x-1)script(|)_(-1)^(#hide[+]1) =
+            [e^x (x-1)]_(-1)^(#hide[+]1) =
             0 - (-2/e) =
             #result($display(2/e)$)
           )$
@@ -182,7 +184,7 @@
         #solution[
           $display(
             ∫_(0)^2 (2x+1)/(x^2+x+1)^2 dif x =
-            (-1)/(x^2+x+1)script(|)_0^2 =
+            [(-1)/(x^2+x+1)]_0^2 =
             -1/7 - (-1) =
             #result[$display(6/7)$]
           )$
@@ -381,7 +383,7 @@
       $ F(x)= ∫_0^x f(t) dif t = x^2(1+x) = x^2 + x^3 $
 
       Como f es continua en R, aplicamos el Teorema Fundamental del Cálculo:
-      $ F'(x) = ∫_0^x f(t) dif t = f(x) $
+      $ F'(x) = f(x) $
 
       Derivamos el segundo miembro:
       $ (x^2 + x^3)' = 2x + 3x^2 $
