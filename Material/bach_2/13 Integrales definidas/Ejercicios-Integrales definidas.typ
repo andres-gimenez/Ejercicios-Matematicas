@@ -49,7 +49,7 @@
           $display(
             display(∫_(-1)^1 (x^3 + x) dif x) =
             x^4/4 + x^2/2 scripts(|)_(-1)^(#hide[+]1) =
-            (1^4/4 + 1^2/2) - ((-1)^4/4 + (-1)^3/2) = \ =
+            (1^4/4 + 1^2/2) - ((-1)^4/4 + (-1)^2/2) = \ =
             (1/4 + 1/2) - (1/4 + 1/2)
             = #result[0]
           )$,
@@ -74,7 +74,7 @@
 
       [#subquestion(
         solution: $display(
-          = (x^6/6 - (3x^4)/4) scripts(|)_(-2)^2 =
+          = (x^6/6 - (3x^4)/4) scripts(|)_(-2)^(#hide[+]2) =
           (2^6/6 - (3 dot 2^4)/4) - ((-2)^6/6 - (3 dot (-2)^4)/4)
           = 0
         )$,
@@ -99,39 +99,124 @@
           $display(
             ∫ x arctan(x) dif x =
             arctan(x) dot x^2/2 - ∫ x^2/2 dot 1/(1+x^2) dif x =
-            x^2 arctan (x) - 1/2 ∫ x^2 /(1+x^2) dif x = \ =
-            x^2 arctan (x) - 1/2 ∫ ((1+x^2) - 1)/(1+x^2) dif x =
-            x^2 arctan (x) - 1/2 ∫ 1 - 1/(1+x^2) dif x = \ =
-            x^2 arctan (x) - 1/2 [∫ 1 dif x - ∫ 1/(1+x^2) dif x] =
-            x^2 arctan (x) - 1/2 [x - arctan (x)] = \
-            x^2 arctan (x) - x/2 - (arctan (x))/2 =
-            (x^2 + 1) arctan (x) - x/2 + C
+            x^2/2 arctan (x) - 1/2 ∫ x^2 /(1+x^2) dif x = \ =
+            x^2/2 arctan (x) - 1/2 ∫ ((1+x^2) - 1)/(1+x^2) dif x =
+            x^2/2 arctan (x) - 1/2 ∫ 1 - 1/(1+x^2) dif x = \ =
+            x^2/2 arctan (x) - 1/2 [∫ 1 dif x - ∫ 1/(1+x^2) dif x] =
+            x^2/2 arctan (x) - 1/2 [x - arctan (x)] = \
+            x^2/2 arctan (x) - x/2 - (arctan (x))/2 =
+            1/2 [(x^2 + 1) arctan (x) - x] + C
           )$
 
           Aplicando la regla de Barrow:
 
           $display(
             ∫_(0)^1 x arctan(x) dif x =
-            (x^2 + 1) arctan (x) - x/2 scripts(|)_0^1 = \ =
-            ((1^2 + 1) arctan (1) - 1/2) - ((0^2 + 1) arctan (0) - 0/2) =
-            (2 pi/4 - 1/2) - (1 dot 0 -1 ) =
-            #result($display(pi/2 - 1/2)$)
+            1/2 [(x^2 + 1) arctan (x) - x] scripts(|)_0^1 = \ =
+            1/2 [(1^2 + 1) arctan (1) - 1] - 1/2 [(0^2 + 1) arctan (0) - 0] =
+            1/2 dot [(2pi)/4-1] - 0 =
+            #result($display(pi/4 - 1/2)$)
           )$
         ],
       ],
-      [#subquestion()[$display(∫_(-pi)^pi x^2 "sen"(x) dif x)$]],
-      [#subquestion()[$display(∫_(-1)^1 x e^x dif x)$]],
-      [#subquestion()[$display(∫_(0)^2 (2x+1)/(x^2+x+1)^2 dif x)$]],
+      [#subquestion()[$display(∫_(-pi)^pi x^2 "sen"(x) dif x)$]
+        #solution()[
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              &u = x^2 & => dif u = 2 x dif x,
+              &dif v = "sen"(x) dif x & => v = integral "sen"(x) dif x = -cos(x),
+            )
+          )$
+
+          $display(
+            ∫ x^2 "sen"(x) dif x =
+            -x^2 cos(x) + 2 ∫ x cos(x) dif x
+          )$
+
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              &u = x & => dif u = dif x,
+              &dif v = "cos"(x) dif x & => v = integral "cos"(x) dif x = "sen"(x),
+            )
+          )$
+
+          $display(
+            ∫ x^2 "sen"(x) dif x =
+            -x^2 cos(x) + 2[x "sen"(x) - integral "sen"(x) dif x] =
+            -x^2 cos(x) + 2[x "sen"(x) + cos (x)] = \ =
+            (2-x^2) cos(x) + 2x "sen"(x)
+          )$
+
+          $display(
+            ∫_(-pi)^pi x^2 "sen"(x) dif x =
+            (2-x^2) cos(x) + 2x "sen"(x) script(|)_(-pi)^(#hide[+]pi) = \ =
+            [(2-pi^2) cos(pi) + 2pi "sen"(pi)] - [(2-(-pi)^2) cos(-pi) + 2pi "sen"(-pi)] = \ =
+            [(2-pi^2) (-1) + 2pi dot 0]- [(2-(-pi)^2) (-1) + 2pi dot 0] =
+            [-(2-pi^2)] - [-(2-pi^2)] = #result[0]
+          )$
+        ]
+      ],
+      [#subquestion[$display(∫_(-1)^1 x e^x dif x)$]
+        #solution[
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              &u = x & => dif u = dif x,
+              &dif v = e^x dif x & => v = integral e^x dif x = e^x,
+            )
+          )$
+
+          $display(∫ x e^x dif x) = x e^x - ∫ e^x dif x = x e^x - e^x$
+
+          $display(
+            ∫_(-1)^1 x e^x dif x =
+            e^x (x-1)script(|)_(-1)^(#hide[+]1) =
+            0 - (-2/e) =
+            #result($display(2/e)$)
+          )$
+        ]
+      ],
+      [#subquestion()[$display(∫_(0)^2 (2x+1)/(x^2+x+1)^2 dif x)$]
+        #solution[
+          $display(
+            ∫_(0)^2 (2x+1)/(x^2+x+1)^2 dif x =
+            (-1)/(x^2+x+1)script(|)_0^2 =
+            -1/7 - (-1) =
+            #result[$display(6/7)$]
+          )$
+        ]
+      ],
+      [
+        #subquestion()[$display(∫_(-pi)^pi"sen"(x) dif x)$ ]
+        #solution[
+          Vamos a aprovechar que la función $f(x) = "sen"(x)$ es impar, ya que $-"sen(x)" = "sen"(-x)$.
+
+          $display(
+            ∫_(-pi)^pi"sen"(x) dif x =
+            ∫_(-pi)^0"sen"(x) dif x + ∫_0^pi"sen"(x) dif x =
+            - ∫_0^(-pi)"sen"(x) dif x + ∫_0^pi"sen"(x) dif x = \ =
+            - ∫_0^(pi) -"sen"(-x) dif x + ∫_0^pi"sen"(x) dif x =
+            - ∫_0^(pi) "sen"(x) dif x + ∫_0^pi"sen"(x) dif x =
+            #result(0)
+          )$
+        ]
+      ],
     )
   ],
   [
     #question()[Si $display(∫_1^4 f(x) dif x = 6)$ y $display(∫_4^6 f(x) dif x = -2)$, calcula:]
     #questions-columns(
       [
-        #subquestion()[$display(∫_1^6 f(x) dif x)$]
+        #subquestion(
+          solution: $display(= ∫_1^4 f(x) dif x + ∫_4^6 f(x) dif x = 6 + (-2) = #result[4])$,
+        )[$display(∫_1^6 f(x) dif x)$]
       ],
       [
-        #subquestion()[$display(∫_6^1 f(x) dif x)$]
+        #subquestion(
+          solution: $display(= ∫_6^1 f(x) dif x = -∫_1^6 f(x) dif x = #result[-4])$,
+        )[$display(∫_6^1 f(x) dif x)$]
       ],
     )
   ],
@@ -150,12 +235,40 @@
     #questions-columns(
       [
         #subquestion()[$display(∫_(-2)^1 f(x) dif x)$]
+        #solution()[
+          $display(
+            ∫_(-2)^1 f(x) dif x =
+            ∫_(-2)^0 f(x) dif x + ∫_0^1 f(x) dif x =
+            ∫_(-2)^0 x^2 dif x + ∫_0^1 2x dif x =
+            [x^3/3]_(-2)^0 + [x^2]_(0)^(1) = \ =
+            - (-2)^3/3 + 1^2 = 8/3 +1 = #result[$display(11/3)$]
+          )$
+        ]
       ],
       [
         #subquestion()[$display(∫_(1)^4 f(x) dif x)$]
+        #solution()[
+          $display(
+            ∫_1^4 f(x) dif x =
+            ∫_1^2 f(x) dif x + ∫_2^4 f(x) dif x =
+            ∫_1^2 2x dif x + ∫_2^4 10-3x dif x =
+            [x^2]_(1)^(2) + [10x-(3x^2)/2]_(2)^(4) = \ =
+            2^2 - 1^2 + (10 dot 4 - (3 dot 4^2)/2) - (10 dot 2 - (3 dot 2^2)/2) =
+            4 -1 + 40 - 48/2 - 20 + 12/2 =
+            #result[$display(5)$]
+          )$
+        ]
       ],
       [
         #subquestion()[$display(∫_(-2)^4 f(x) dif x)$]
+        #solution[
+          $display(
+            ∫_(-2)^4 f(x) dif x =
+            ∫_(-2)^1 f(x) dif x + ∫_1^4 f(x) dif x =
+            11/3 + 5 =
+            #result[$display(26/3)$]
+          )$
+        ]
       ],
     )
   ],
@@ -182,10 +295,24 @@
     #question()[Calcula las derivadas de las siguientes funciones utilizando el *teorema fundamental del calculo*:
       \ #clarification()[La (d) es muy fácil]]
     #questions-columns(
-      [#subquestion()[$display(F(x) = ∫_0^x cos(t) dif t)$.]],
-      [#subquestion()[$display(F(x) = ∫_3^x (t^2+1)^4 dif t)$.]],
-      [#subquestion()[$display(F(x) = ∫_0^x e^(-t)^2 dif t)$.]],
-      [#subquestion()[$display(F(x) = ∫_3^5 (t^2+1)^4 dif t)$.]],
+      [#subquestion()[$display(F(x) = ∫_0^x cos(t) dif t)$.]
+        #solution()[$display(F'(x) = cos(x))$]
+      ],
+      [#subquestion()[$display(F(x) = ∫_3^x (t^2+1)^4 dif t)$.]
+        #solution()[$display(F'(x) = (x^2+1)^4)$]
+      ],
+      [#subquestion()[$display(F(x) = ∫_0^x e^(-t)^2 dif t)$.]
+        #solution()[$display(F'(x) = e^(-x)^2)$]
+      ],
+      [
+        #subquestion()[$display(F(x) = ∫_x^5 sqrt(t) dot ln(t^2+1)^4 dif t)$.]
+
+        #solution()[$display(F(x) = ∫_x^5 sqrt(t) dot ln(t^2+1)^4 dif t = -∫_5^x sqrt(t) dot ln(t^2+1)^4 dif t) = \ =∫_5^x -sqrt(t) dot ln(t^2+1)^4 dif t ) =>$
+
+          $display(F'(x) = -sqrt(x) dot ln(x^2+1)^4 dif x) =>$
+        ]
+
+      ],
     )
   ],
   [
@@ -193,6 +320,21 @@
     #questions-columns(
       [
         #subquestion()[Área comprendida entre $y = x^2$ y $y = 2x + 3$.]
+        #solution[
+          Buscamos los puntos de corte entre $x^2$ y $2x+1$
+
+          $x^2 = 2x+3 => x = -1 " y " x = 3$
+
+          Comprobamos que $2x + 3 >= x^2 " " forall x in [-1, 3]$
+
+          Luego el area es
+
+          $display(
+            A = integral_(-1)^3 2x+3 - x^2 dif x = [x^2 + 3x - x^3/3]_(-1)^3 = \ =((3)^2 + 3 (3) - (3)^3/3) - ((-1)^2 + 3 (-1) - (-1)^3/3) =
+            (9 + 9 - 9) - (1 - 3 +1/3) = \ = 9 - (-5/3) =
+            #result[$display(32/6)$]
+          )$
+        ]
       ],
       [
         #subquestion()[Área limitada por $y = √x$ y $y = x$.]
@@ -207,7 +349,11 @@
         #subquestion()[Área entre $y = x^2 - 4$ y el eje $x$.]
       ],
       [
-        #subquestion()[Área comprendida entre $y = sin(x)$ y el eje $x$ en $[-π, π]$.]
+        #subquestion()[Área comprendida entre $y = "sen"(x)$ y el eje $x$ en $[-π, π]$.]
+        #solution[
+          Vamos a aprovechar que la función $f(x) = "sen"(x)$ es impar, ya que $"sen(x)" = -"sen"(-x)$.
+
+        ]
       ],
       [
         #subquestion()[Área comprendida entre $y = |sin(x)|$ y el eje $x$ en $[0, 2π]$.]
