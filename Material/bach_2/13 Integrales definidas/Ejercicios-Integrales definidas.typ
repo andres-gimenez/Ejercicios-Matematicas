@@ -329,7 +329,7 @@
 
           Comprobamos que $2x + 3 >= x^2 " " forall x in [-1, 3]$
 
-          Luego el area es
+          Luego el área es
 
           $display(
             A = integral_(-1)^3 2x+3 - x^2 dif x = [x^2 + 3x - x^3/3]_(-1)^3 = \ =((3)^2 + 3 (3) - (3)^3/3) - ((-1)^2 + 3 (-1) - (-1)^3/3) =
@@ -340,6 +340,27 @@
       ],
       [
         #subquestion()[Área limitada por $y = √x$ y $y = x$.]
+        #solution[
+          Buscamos los puntos de corte entre $sqrt(x)$ y $x$
+
+          $display(sqrt(x) = x) => x = x^2 => x^2 - x = 0 => x(x-1) = 0 => x = 0 " y " x = 1$
+
+          #clarification[Recuerda, que si al resolver una ecuación, hemos elevar al cuadrado en algún paso, debemos comprobar el resultado de la ecuación. En nuestro caso, las dos soluciones son correctas.]
+
+          Luego los límites de integración son $0$ y $1$.
+
+          Como $sqrt(x) >= x " " forall x in [0, 1]$, el área que nos pides es:
+
+          $display(
+            A = integral_(0)^1 sqrt(x) - x dif x =
+            integral_(0)^1 x^(1/2) - x dif x =
+            [x^(3/2)/(3/2) - x^2/2]_0^1 = [(2x^(3/2))/3 - x^2/2]_0^1 = \ =
+            ((2 dot 1^(3/2))/ 3 - 1^2/2) - ((2 dot 0^(3/2))/ 3 - 0/2) =
+            2/3-1/2 =
+            #result($display(1/6)$)
+          )$
+
+        ]
       ],
       [
         #subquestion()[Área encerrada entre $y = x^2$ y $y = 4 - x^2$.]
@@ -372,9 +393,40 @@
   ],
   [
     #question()[Calcula el volumen generado por las siguientes funciones al girar sobre el eje x:]
-    #subquestion()[$f(x) = x^2$, entre $x=0$ y $x=5$.]
+    #questions-columns(
+      [
+        #subquestion()[$f(x) = x^2$, entre $x=0$ y $x=5$.]
 
-    #subquestion()[$f(x) = sqrt(r^2-x^2)$, entre $x=-r$ y $x=r$.]
+
+        #solution[
+          Primero notamos que $f(x) >= 0 " " forall x in [0, 5]$, luego el volumen va a coincidir con el valor de la integral.
+
+          $display(
+            V = ∫_(a)^(b) pi f(x)^2 dif x = ∫_0^5 pi (x^2)^2 dif x =
+            ∫_(a)^(b) pi x^4 dif x =
+            [pi x^5/5]_0^5 = pi 5^5/5 - pi 0^5/5 = pi 5^4 = #result[$625$]
+          )$
+        ]
+      ],
+      [
+        #subquestion()[$f(x) = sqrt(r^2-x^2)$, entre $x=-r$ y $x=r$.]
+        #solution[
+          $display(
+            V = ∫_(a)^(b) pi f(x)^2 dif x =
+            ∫_(-r)^(r) pi (sqrt(r^2-x^2))^2 dif x =
+            pi ∫_(-r)^(r) r^2-x^2 dif x =
+            pi [r^2 x - x^3/3]_(-r)^(r) = \ =
+            pi [(r^2 r - r^3/3) - (r^2 (-r) - (-r)^3/3)] =
+            pi [(r^3- r^3/3) - ((-r^3) + r^3/3) ] = \ =
+            pi [(2 r^3)/3 + (2r^3)/3] =
+            #result[$display(4/3 pi r^3)$]
+          )$
+
+          #clarification[Con esto, hemos demostrado la formula del volumen de una esfera de radio $r$.]
+
+        ]
+      ],
+    )
   ],
   [
     #question()[Sabemos que $display(∫_0^x f(t) dif t = x^2(1+x))$, siendo continua en $RR$. Calcula $f(2)$.]
@@ -397,6 +449,106 @@
       Con lo que:
 
       $ #result($f(2) = 16$) $
+    ]
+  ],
+  [
+    #question()[*PAU Madrid 2026 - ordinaria*
+
+      Sea $f(x) = ln(x)$. Halla el área de la región delimitada por la gráfica de $f(x)$, el eje $x$ y la recta $x = e$
+    ]
+  ],
+  [
+    #question()[*PAU Madrid 2026 - coincidentes, pregunta 2*
+
+      Dada $f(x)=|x^2-6x+5|$, calcula el área delimitada por la gráfica de $f$, el eje $x$ y las rectas $x=3$ y $x=6$.
+    ]
+  ],
+  [
+    #question()[*PAU Madrid 2024 - extraordinaria - pregunta B2*
+
+      Sean $f(x)=x^3-3x$ y $g(x)=x(x-3)$. Calcula el área de la región acotada entre sus gráficas.
+    ]
+  ],
+  [
+    #question()[*PAU Madrid 2023 - extraordinaria, pregunta B2*
+
+      Sean $f(x)=2+2x-2x^2$ y $g(x)=2-6x+4x^2+2x^3$. Calcula el área delimitada por ambas curvas y las rectas $x=0$ y $x=2$.
+    ]
+  ],
+  [
+    #question()[*PAU Madrid 2025 - extraordinaria, pregunta B2*
+      Un muro rectangular de la biblioteca pública del barrio se va a pintar con la ayuda de unos grafiteros. La dimensión del muro es de 3 metros de alto y 12 metros de largo. Colocando la esquina inferior izquierda del muro en el origen de coordenadas, se va a utilizar la curva $display(f(x) = cos((pi x)/9) + 2)$ para diferenciar dos regiones del muro que serán pintadas con dos colores distintos. Se sabe que con un bote de spray se pueden pintar 3 metros cuadrados de superficie.
+
+      #subquestion[Halle el valor máximo y el valor mínimo de la función $f(x)$ en el intervalo $[0, 12]$. ¿Está la curva en este intervalo $[0, 12]$ contenida completamente en el muro?]
+
+      #solution[
+        Para calcular los máximos y mínimos utilizamos la derivada de $f(x)$.
+
+        $display(f'(x) = - pi/9 "sen"((pi x)/9))$
+
+        Igualamos a 0:
+
+        $display(
+          f'(x) = - pi/9 "sen"((pi x)/9) = 0 =>
+          "sen"((pi x)/9) = 0
+        )$
+
+        Como el seno se hace cero en $0$, $pi$, $2 pi$, buscamos los punto donde:
+
+        $display(
+          cases(
+            reverse: #false,
+            (pi x)/9 = 0,
+            (pi x)/9 = pi,
+            (pi x)/9 = 2 pi,
+          ) =>
+          cases(
+            reverse: #false,
+            x= 0,
+            x = 9,
+            x = 18,
+          )
+        )$
+
+        Nos quedamos con $x = 0$ y $x = 9$ que son los valores que están dentro del intervalo $[0, 12]$.
+
+        Para ver si son un máximo y un mínimo, tomamos la segunda derivada.
+
+        $display(f''(x) = - pi^2/81 "cos"((pi x)/9))$
+
+        $display(f''(0) = - pi^2/81 "cos"((pi dot 0)/9)) < 0 =>$ se trata de un máximo relativo.
+
+        $display(f''(9) = - pi^2/81 "cos"((pi dot 9)/9)) = - pi^2 (-1) = pi^2 > 0 =>$ se trata de un mínimo relativo.
+
+        Comprobamos si los máximos y mínimos están dentro del muro.
+
+        $f(0) = "cos"((pi dot 0)/9) + 2 = "cos"(0) + 2 = 3 =>$ Está dentro del muro, justo en la esquina superior izquierda.
+
+        $f(9) = "cos"((pi dot 9)/9) + 2 = "cos"(pi) + 2 = -1 + 2 = 1 > 0 =>$ Está dentro del muro.
+
+        Tenemos que ver el valor de la función en $x=12$, porque, aunque no tenga un máximo, ni mínimo relativo, podría tener un máximo o mínimo absoluto dentro del intervalo, o incluso salirse del muro.
+
+        $f(12) = "cos"((pi dot 12)/9) = 3/2 = 1,5 < 3 =>$ También está dentro del muro
+      ]i
+
+      #subquestion[Halle el área que tienen que pintar de cada color.]
+      #solution[Vamos a calcular el área bajo la curva:
+
+        $display(
+          A_b = ∫_0^12 cos((pi x)/9) + 2 dif x =
+          [9/pi "sen"((pi x)/9) + 2 x]_0^(12) =
+          (9/pi "sen"((pi 12)/9) + 2 dot 12) - (9/pi "sen"((pi 0)/9) + 2 dot 0) = \ =
+          9/pi "sen"((12 pi) /9)
+        ) + 24 - 0 =
+        #result[$display(24 - (9 sqrt(3))/(2pi))$]$
+
+        El área sobre la curva, será el área total de la pared menos el área bajo la curva.
+
+        $A_s = display(3 dot 12 - A_b = 36 - 24 - (9 sqrt(3))/(2pi) = #result[$display(12 + (9 sqrt(3))/(2pi))$])$
+      ]
+
+      #subquestion[¿Cuántos botes de spray se tienen que comprar como mínimo para pintar toda el área bajo la curva $f(x)$?]
+
     ]
   ],
 )
