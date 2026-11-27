@@ -529,7 +529,7 @@
         Tenemos que ver el valor de la función en $x=12$, porque, aunque no tenga un máximo, ni mínimo relativo, podría tener un máximo o mínimo absoluto dentro del intervalo, o incluso salirse del muro.
 
         $f(12) = "cos"((pi dot 12)/9) = 3/2 = 1,5 < 3 =>$ También está dentro del muro
-      ]i
+      ]
 
       #subquestion[Halle el área que tienen que pintar de cada color.]
       #solution[Vamos a calcular el área bajo la curva:
@@ -540,14 +540,26 @@
           (9/pi "sen"((pi 12)/9) + 2 dot 12) - (9/pi "sen"((pi 0)/9) + 2 dot 0) = \ =
           9/pi "sen"((12 pi) /9)
         ) + 24 - 0 =
-        #result[$display(24 - (9 sqrt(3))/(2pi))$]$
+        #result[$display(24 - (9 sqrt(3))/(2pi))$]
+        approx #result[$display(21","51 m^2)$]$
 
         El área sobre la curva, será el área total de la pared menos el área bajo la curva.
 
-        $A_s = display(3 dot 12 - A_b = 36 - 24 - (9 sqrt(3))/(2pi) = #result[$display(12 + (9 sqrt(3))/(2pi))$])$
+        $A_s = display(
+          3 dot 12 - A_b = 36 - 24 - (9i sqrt(3))/(2pi)
+          = #result[$display(12 + (9 sqrt(3))/(2pi))$]
+          approx #result[$display(14","48 m^2)$]
+        )$
       ]
 
       #subquestion[¿Cuántos botes de spray se tienen que comprar como mínimo para pintar toda el área bajo la curva $f(x)$?]
+
+      #solution[Si con cada bote de spray, podemos pintar $3 m^2$
+
+        Para la parte inferior necesitamos $8$ botes, para la parte inferior,
+        ya que $8 dot 3 = 24 > 21","51$
+        y 5 botes para la parte superior, ya que $5 dot 3 = 15 > 14,48$
+        .      ]
 
     ]
   ],
