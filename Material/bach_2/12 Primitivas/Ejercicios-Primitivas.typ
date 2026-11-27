@@ -79,9 +79,9 @@
         #subquestion(solution: $display(=#result($1/6 (x+1)^6 + C$))$)[$display(limits(integral) (x+1)^5 dif x)$]
       ],
       [
-        #subquestion()[$display(limits(integral) 2x e^(x^2) - "sen" x dif x)$]
-        #solution()[
-          $display(limits(integral) 2x e^(x^2) - "sen" x dif x = limits(integral) 2x e^(x^2) dif x - limits(integral) "sen" x dif x) = e^x^2 - (-cos(x)) = #result($e^x^2 + cos(x) + C$)$
+        #subquestion[$display(limits(integral) 2x e^(x^2) - "sen" x dif x)$]
+        #solution[
+          $display(limits(integral) 2x e^(x^2) - "sen" x dif x = limits(integral) 2x e^(x^2) dif x - limits(integral) "sen" x dif x) = e^(x^2) - (-cos(x)) = #result($e^(x^2) + cos(x) + C$)$
         ]
       ],
       [
@@ -118,7 +118,7 @@
 
           $display(limits(integral)1/2 sqrt(1 - (x/2)^2) dif x = #result($"arcsen" (x/2) + C$))$
 
-          Generalizando: $display(limits(integral)1/sqrt(a - x^2) dif x = "arcsen"(x/a))$
+          Generalizando: $display(limits(integral)1/sqrt(a - x^2) dif x = "arcsen"(x/sqrt(a)) + C)$
         ]
       ],
       [
@@ -128,7 +128,10 @@
       ],
       [
         #subquestion(
-          solution: $display(=1/2limits(integral) 2x e^(x^2) dif x = #result($display((e^x^2)/2) + C$))$,
+          solution: $display(
+            =1/2limits(integral) 2x e^(x^2) dif x =
+            #result($display(e^(x^2)/2) + C$)
+          )$,
         )[$display(limits(integral) x e^(x^2) dif x)$]
       ],
       [
@@ -176,7 +179,7 @@
       ],
       [
         #subquestion(
-          solution: $=#result($display(10^x / (ln 10) + 5^x / (ln 5) + C)$)$,
+          solution: $=#result($display(10^x / (ln 10) - 5^x / (ln 5) + C)$)$,
         )[$display(limits(integral) 10^x - 5^x dif x)$]
       ],
       [
@@ -364,7 +367,47 @@
       ],
       [
         #subquestion()[$display(limits(integral) x^2 e^(-x) dif x)$]
-        #solution()[
+        #solution[
+          Integrando por partes:
+
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              u = x^2,
+              dif v = e^(-x) dif x,
+            ) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              dif u = 2x dif x,
+              v = limits(integral) e^(-x) dif x = -e^(-x),
+            )
+          )$
+
+          $display(
+            limits(integral) x^2 e^(-x) dif x =
+            -e^(-x) x^2 + 2 limits(integral) x e^(-x) dif x
+          )$
+
+          $display(
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              u = x,
+              dif v = e^(-x) dif x,
+            ) =>
+            cases(
+              reverse: #false, delim: "{", gap: #1em,
+              dif u = dif x,
+              v = limits(integral) e^(-x) dif x = -e^(-x),
+            )
+          )$
+
+          $display(
+            limits(integral) x^2 e^(-x) dif x =
+            -e^(-x) x^2 + 2 limits(integral) x e^(-x) dif x =
+            -e^(-x) x^2 - 2e^(-x)(x+1) =
+            #result($-e^(-x)(x^2+2x+2)+C$)
+          )$
+
         ]
       ],
       [
@@ -623,7 +666,7 @@
             limits(integral)x(x+1)^2 dif x =
             limits(integral)x(x^2+2x+1) dif x =
             limits(integral)x^3+2x^2+x dif x = \ =
-            #result($display(1/4 x^4 + 2/3 x^3 + x^2/x + C)$)
+            #result($display(1/4 x^4 + 2/3 x^3 + x^2/2 + C)$)
           )$
         ]
       ],
@@ -702,48 +745,12 @@
       ],
       [
         #subquestion()[$display(limits(integral) (2x)/(x^2 - 9) dif x)$]
-        #solution()[
-          *Forma 1:*
-          $display(
-            limits(integral) (2x + 1)/(x^2 - 9) dif x =
-            limits(integral) (2x + 1)/(x^2 - 3^2) dif x =
-            limits(integral) (2x + 1)/((x+3)(x - 3)) dif x =
-          )$
-
-          Tenemos que poner $display((2x + 1)/((x+3)(x - 3)) = A/(x+3) + B/(x-3))$
-
-          $display(
-            A/(x+3) + B/(x-3) = (A(x-3) + B (x+3))/ ((x+3)(x-3)) =
-            (A x - 3 A + B x + 3 B) / ((x+3)(x-3)) = ((A + B) x + (-3 A + 3B)) / ((x+3)(x-3)) =>
-            cases(
-              reverse: #false, delim: "{", gap: #1em,
-              & & &A &+ &B = 2,
-              &-&3 &A &+ 3 &B = 0,
-            ) =>
-            cases(
-              reverse: #false, delim: "{", gap: #1em,
-              A = 1,
-              B = 1,
-            )
-          )$
-
-          $display(
-            limits(integral) (2x)/(x(x + 1)) dif x =
-            limits(integral) 1/(x+3) + 1/(x-3) dif x =
-            ln abs(x+3) + ln abs(x-3) =
-            ln abs((x+3)(x-3)) = \
-            ln abs(x^2+3^2) =
-            #result($display(ln abs(x^2+9) + C)$) =
-            #result($display(ln abs(K(x^2+9)))$)
-          )$
-
-          *Forma 2:*
+        #solution[
           Se puede hacer de forma inmediata teniendo en cuenta que $(x^2-9)' = 2x$
 
           $display(
             limits(integral) (2x)/(x^2 - 9) dif x =
-            #result($display(ln abs(x^2-9) + C)$) =
-            #result($display(ln abs(K(x^2+9)))$)
+            #result($display(ln abs(x^2-9) + C)$)
           )$
         ]
       ],
@@ -876,11 +883,11 @@
           )$
         ]
       ],
-      [
-        #subquestion(
-          solution: $display(= 1/2 limits(integral) (2x)/(x^2 + 1) dif x) = #result($display(1/2) arctan(x^2+1)$)$,
-        )[$display(limits(integral) x/(x^2 + 1) dif x)$]
-      ],
+      // [
+      //   #subquestion(
+      //     solution: $display(= 1/2 limits(integral) (2x)/(x^2 + 1) dif x) = #result($display(1/2 ln(x^2+1)+C)$)$,
+      //   )[$display(limits(integral) x/(x^2 + 1) dif x)$]
+      // ],
       [
         #subquestion(solution: $display(= #result($arctan(x) + C$))$)[$display(limits(integral) 1/(x^2 + 1) dif x)$]
       ],
@@ -913,8 +920,8 @@
         )[$display(limits(integral) (x^2 - 1)/(x - 1) dif x)$]
       ],
       [
-        #subquestion()[$display(limits(integral)(2x+3)/((x-1)(x^2+1)) dif x)$]
-        #solution()[
+        #subquestion[$display(limits(integral)(2x+3)/((x-1)(x^2+1)) dif x)$]
+        #solution[
           Tenemos que poner $display((2x+3)/((x-1)(x^2+1)) = A /(x-1) + (B x + C)/(x^2 + 1))$
 
           $display(
@@ -941,16 +948,16 @@
             limits(integral) 5/2 /(x-1) + (-5/2 x - 1/2)/(x^2 + 1) dif x =
             limits(integral) 5/2 /(x-1) - (5/2 x)/(x^2 + 1) - (1/2)/(x^2 + 1) dif x = \ =
             5/2 limits(integral) 1/(x-1) dif x - 5/4 limits(integral) (2x)/(x^2 + 1) dif x - 1/2 limits(integral) 1/(x^2+1) dif x = \ =
-            #result($display(5/2 ln abs(x) - 5/4 ln abs(x^2+1) -1/2 arctan(x) +C)$)
+            #result($display(5/2 ln abs(x-1) - 5/4 ln abs(x^2+1) -1/2 arctan(x) +C)$)
           )$
         ]
       ],
       [
         #subquestion()[$display(limits(integral)(x^3+22x^2-12x+8)/(x^4-4x^2) dif x)$]
-        #solution()[
-          Dividimos el denominador (por Ruffini):
+        #solution[
+          Factorizamos el denominador:
 
-          $display((x^4-4x^2) = x^2(x-2)(x+2))$
+          $display((x^4-4x^2) = x^2(x^2-4) = x^2(x-2)(x+2))$
 
           Descomponemos la fracción:
 
@@ -991,27 +998,26 @@
           // $ -4A = -12 $
           // $ -4B = 8 $
 
-          // Resolviendo:
+          Resolviendo el sistema obtenemos:
 
-          // $ A = 3 $
-          // $ B = -2 $
-          // $ C = -1 $
-          // $ D = -1 $
+          $ A = 3, quad B = -2, quad C = 5, quad D = -7 $
 
-          // Sustituimos en la descomposición:
+          Sustituimos en la descomposición:
 
-          // $ frac(x^3 + 22x^2 - 12x + 8, x^4 - 4x^2)
-          // = frac(3, x)
-          // - frac(2, x^2)
-          // - frac(1, x - 2)
-          // - frac(1, x + 2) $
+          $
+            frac(x^3 + 22x^2 - 12x + 8, x^4 - 4x^2)
+            = frac(3, x)
+            - frac(2, x^2)
+            + frac(5, x - 2)
+            - frac(7, x + 2)
+          $
 
           Resolvemos la integral:
 
           $display(
             integral frac(x^3 + 22x^2 - 12x + 8, x^4 - 4x^2) dif x =
-            integral (- frac(3, x) - frac(2, x^2) + frac(8, x - 2) - frac(2, x + 2)) dif x = \ =
-            #result($display(-3 ln|x| + frac(2, x) + 8 ln|x - 2| - 2 ln|x + 2| + C)$)
+            integral (frac(3, x) - frac(2, x^2) + frac(5, x - 2) - frac(7, x + 2)) dif x = \ =
+            #result($display(3 ln|x| + frac(2, x) + 5 ln|x - 2| - 7 ln|x + 2| + C)$)
           )$
         ]
       ],
@@ -1035,6 +1041,13 @@
       ],
       [
         #subquestion()[$display(limits(integral) (5x^3+6x^2-sqrt(2)x+sqrt(3))/x dif x)$]
+        #solution[
+          $display(
+            limits(integral) (5x^3+6x^2-sqrt(2)x+sqrt(3))/x dif x =
+            limits(integral) (5x^2+6x-sqrt(2)+sqrt(3)/x) dif x = \ =
+            #result($display(5/3 x^3+3x^2-sqrt(2)x+sqrt(3) ln|x|+C)$)
+          )$
+        ]
       ],
       [
         #subquestion()[$display(limits(integral) (7x^4-5x^2+3x-4)/x^2 dif x)$]
@@ -1158,7 +1171,7 @@
       ],
       [
         #subquestion()[$display(limits(integral) e^x/(1-sqrt(e^x)) dif x)$ #h(3mm) (haciendo $e^x=t^2$)]
-        #solution()[
+        #solution[
 
           Hacemos el cambio $e^x = t^2 => e^x dif x = 2t dif t$
 
@@ -1167,12 +1180,12 @@
             limits(integral) (2t)/(1-t) dif t =
             2 limits(integral) t/(1-t) dif t =
             2 limits(integral) -1 + 1/(1-t) dif t =
-            -2t+2 ln|1-t|
+            -2t-2 ln|1-t|
           )$
 
           Deshacemos el cambio de variable: $t = sqrt(e^x)$
 
-          $display(-2t+2 ln|1-t| = #result($display(-2 sqrt(e^x) - 2 ln |1-sqrt(x) + C)$))$
+          $display(-2t-2 ln|1-t| = #result($display(-2 sqrt(e^x) - 2 ln |1-sqrt(e^x)| + C)$))$
         ]
       ],
       [
@@ -1194,36 +1207,8 @@
       [
         // ToDo: Mover a otra categoría de integrales.
         #subquestion()[$display(limits(integral) 1/("sen"(x) cos(x)) dif x)$ (haciendo $t = "sen"(x)$]
-        #solution()[
-          *1ª Forma:*
-          Hacemos el cambio de variable $display(t = "sen"(x) => dif t = cos(x) dif x)$
-
-          $display(
-            limits(integral) 1/("sen"(x) cos(x)) dif x =
-            limits(integral) 1/"sen"(x) dot cos(x)/(cos^2(x)) dif x =
-            limits(integral) 1/"sen"(x) dot cos(x)/(1 - "sen"^2(x)) dif x =
-            limits(integral) 1/(t (1-t^2)) dif t
-          )$
-
-          Si tomamos :
-
-          $display(A/t + B/(1-t^2) = (A(1-t^2) + B t) / t(1-t^2)) =>
-          A(1-t^2) + B t = 1 => A - A t^2 + B t = 1 => A= 1 "y" B = t$
-
-          $display(
-            limits(integral) 1/(t (1-t^2)) dif t =
-            limits(integral) 1/t + t/(1-t^2) dif t =
-            limits(integral) 1/t dif t + limits(integral) -1/2 (-2t)/(1-t^2) dif t = \ =
-            ln abs(t) - 1/2 ln abs(1-t^2) =
-            ln abs("sen"(t)) - 1/2 ln abs(1-"sen"^2(x)) =
-            ln abs("sen"(t)) - 1/2 ln abs(cos^2(x)) = \ =
-            ln abs("sen"(t)) - ln sqrt(abs(cos^2(x))) =
-            ln abs("sen"(t)) - ln abs(cos(x)) =
-            ln abs("sen"(t)/cos(x))
-            =#result($display(ln abs(tan(x))) + C$)
-          )$
-
-          *2ª Forma:*
+        #solution[
+          Podemos usar la identidad $"sen"^2(x)+cos^2(x)=1$:
 
           $display(
             limits(integral) 1/("sen"(x) cos(x)) dif x =
@@ -1247,7 +1232,7 @@
 
           $display(
             integral sqrt(1 - x^2) dif x
-            = integral sqrt(1 - "sen"^2(theta)) "sen" (theta) dif theta
+            = integral sqrt(1 - "sen"^2(theta)) cos(theta) dif theta
             = integral cos^2(theta) dif theta
             = integral (1 + cos(2 theta)) / 2 dif theta = \
             = theta/2 + "sen"(2 theta)/4 + C
@@ -1297,7 +1282,7 @@
     #questions-columns(
       [
         #subquestion()[$display(limits(integral)(2x^4 - 6x^3 + 5x)/(x+2) dif x)$]
-        #solution()[
+        #solution[
           Dividiendo y utilizando el algoritmo de la división de polinomios, podemos concluir que:
 
           $display(
@@ -1309,8 +1294,8 @@
             limits(integral)(2x^4 - 6x^3 + 5x)/(x+2) dif x = limits(integral)(2x^3-10x^2+20x-35) + 70/(x+2) dif x = \
             = limits(integral)2x^3 dif x - limits(integral) 10x^2 dif x + limits(integral)20x dif x - limits(integral) 35 dif x + limits(integral) 70/(x+2) dif x = \
             = 2 limits(integral)x^3 dif x -10 limits(integral) x^2 dif x + 20 limits(integral)x dif x - 35 limits(integral) dif x + 70 limits(integral) 1/(x+2) dif x = \
-            = 2 x^4/4 -10 x^3/3 + 20 x^2/2 + 70 ln |x+2| \
-            = #result($1/2 x^2 -10/3x^3 + 10x^2 + 70 ln |x+2| + C$)
+            = 2 x^4/4 -10 x^3/3 + 20 x^2/2 -35x + 70 ln |x+2| \
+            = #result($1/2 x^4 -10/3x^3 + 10x^2 -35x + 70 ln |x+2| + C$)
           )$
         ]
       ],

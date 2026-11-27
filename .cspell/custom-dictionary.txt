@@ -1,9 +1,10 @@
 arccos
 arcsen
-arctg
 arctan
+arctg
 cotg
 derivabilidad
 L'Hôpital
+Ruffini
 sumandos
 vline
