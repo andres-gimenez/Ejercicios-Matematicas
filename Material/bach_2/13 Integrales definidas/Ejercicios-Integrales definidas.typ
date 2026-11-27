@@ -282,8 +282,7 @@
           f(x) = cases(
             reverse: #false, delim: "{", gap: #1em,
             & "sen"(x) & "si" & x < pi/2,
-            & e^x & "si" & pi/2<= x < 1,
-            & cos(x) & "si" & x >= 1
+            & cos(x) & "si" & x >= pi/2,
           )
         )
       $
@@ -291,21 +290,19 @@
       Calcula
 
       $ ∫_(-pi)^pi f(x) dif x $
-      #solution(color: red)[
-        En $[-pi, pi]$, la función es $sin(x)$ hasta $x=1$ y $cos(x)$ desde $x=1$.
+    ]
+    #solution[
 
-        $display(
-          ∫_(-pi)^pi f(x) dif x =
-          ∫_(-pi)^1 "sen"(x) dif x +
-          ∫_1^pi cos(x) dif x
-        )$
 
-        $display(
-          = [-cos(x)]_(-pi)^1 + [sin(x)]_1^pi =
-          (-cos(1)+cos(-pi)) + (sin(pi)-sin(1))
-          = #result[$1-cos(1)-sin(1)$]
-        )$
-      ]
+      $display(
+        integral_(-pi)^pi f(x) dif x
+        = integral_(-pi)^(pi/2) "sen"(x) dif x
+        + integral_(pi/2)^pi cos(x) dif x
+        = [-cos(x)]_(-pi)^(pi/2) + ["sen"(x)]_(pi/2)^pi = \ =
+        -cos(pi/2)- (-cos(-pi)) + "sen"(pi) - "sen"(pi/2) =
+        -cos(pi/2) + cos(-pi) + "sen"(pi) - "sen"(pi/2) = \ =
+        = 0 -1 + 0 - 1 = #result[-2]
+      )$
     ]
   ],
   [
@@ -379,33 +376,50 @@
       ],
       [
         #subquestion()[Área encerrada entre $y = x^2$ y $y = 4 - x^2$.]
-        #solution(color: red)[
+        #solution[
           $x^2 = 4-x^2 => x=-sqrt(2)$ o $x=sqrt(2)$.
           En ese intervalo, $4-x^2 >= x^2$:
 
+          Como $4-x^2 > x^2 " " forall x in [-sqrt(2), sqrt(2)]$
+
           $display(
-            A = ∫_(-sqrt(2))^(sqrt(2)) (4-x^2-x^2) dif x =
-            [4x-2x^3/3]_(-sqrt(2))^(sqrt(2)) =
-            #result[$display(16 sqrt(2)/3)$]
+            A = ∫_(-sqrt(2))^(sqrt(2)) (4-x^2)-(x^2) dif x =
+            [4x-(2x^3)/3]_(-sqrt(2))^(sqrt(2)) = \
+            [4 sqrt(2)-(2sqrt(2)^3)/3] - [4(-sqrt(2))-(2(-sqrt(2))^3)/3] = \
+            4 sqrt(2)-(4sqrt(2))/3 + 4sqrt(2)-(4sqrt(2))/3 =
+            #result[$display((16 sqrt(2))/3)$]
           )$
         ]
       ],
       [
         #subquestion()[Área limitada por $y = |x|$ y $y = 5$.]
-        #solution(color: red)[
+        #solution[
+
+          $
+            display(
+              f(x) = |x| = cases(
+                reverse: #false, delim: "{", gap: #1em,
+                & - & x & "si" & x < 0,
+                && x & "si" & x >= 0,
+              )
+            )
+          $
           Los puntos de corte son $x=-5$ y $x=5$.
 
           $display(
             A = ∫_(-5)^5 (5-|x|) dif x =
-            2∫_0^5 (5-x) dif x =
-            2[5x-x^2/2]_0^5 =
-            #result[$25$]
+            ∫_(-5)^0 (5-(-x)) dif x + ∫_(0)^5 (5-x) dif x = \
+            ∫_(-5)^0 (5 + x) dif x + ∫_(0)^5 (5-x) dif x =
+            [5x + x^2/2]_(-5)^0 + [5x - x^2/2]_0^5 = \ =
+            0 -(5(-5) + (-5)^2/2) + (5 dot 5 - 5^2/2) - 0 =
+            -(-25 + 25/2) + (25 -25/2)
+            = #result[$25$]
           )$
         ]
       ],
       [
         #subquestion()[Área entre $y = x^2 - 4$ y el eje $x$.]
-        #solution(color: red)[
+        #solution[
           La curva corta al eje en $x=-2$ y $x=2$. Como $x^2-4<=0$:
 
           $display(
@@ -417,7 +431,7 @@
       ],
       [
         #subquestion()[Área comprendida entre $y = "sen"(x)$ y el eje $x$ en $[-π, π]$.]
-        #solution(color: red)[
+        #solution[
           $display(
             A = ∫_(-π)^0 -"sen"(x) dif x +
             ∫_0^π "sen"(x) dif x =
@@ -429,58 +443,63 @@
       ],
       [
         #subquestion()[Área comprendida entre $y = |sin(x)|$ y el eje $x$ en $[0, 2π]$.]
-        #solution(color: red)[
-          $display(
-            A = ∫_0^(2π) |"sen"(x)| dif x =
-            2∫_0^π "sen"(x) dif x =
-            2[-cos(x)]_0^π =
-            #result[$4$]
-          )$
-        ]
+        // #solution[
+        //   Teniendo en cuenta que
+
+
+        //   $display(
+        //     A = ∫_0^(2π) |"sen"(x)| dif x =
+        //     2∫_0^π "sen"(x) dif x =
+        //     2[-cos(x)]_0^π =
+        //     #result[$4$]
+        //   )$
+        // ]
       ],
       [
         #subquestion()[Región limitada por $y = x^2$, $y = 4$ y el eje $y$.]
-        #solution(color: red)[
-          Para $x in [0,2]$, se cumple $x^2<=4$:
+        // #solution(color: red)[
+        //   Para $x in [0,2]$, se cumple $x^2<=4$:
 
-          $display(
-            A = ∫_0^2 (4-x^2) dif x =
-            [4x-x^3/3]_0^2 =
-            #result[$display(16/3)$]
-          )$
-        ]
+        //   $display(
+        //     A = ∫_0^2 (4-x^2) dif x =
+        //     [4x-x^3/3]_0^2 =
+        //     #result[$display(16/3)$]
+        //   )$
+        // ]
       ],
     )
   ],
   [
     #question()[Calcula los siguientes áreas:]
     #subquestion()[Área entre la curva $f(x) = x^2$, su perpendicular en $x=2$ y el eje de abscisas.]
-    #solution(color: red)[
-      La tangente en $x=2$ es $y=4x-4$, así que la perpendicular tiene pendiente $-1/4$:
+    // #solution(color: red)[
+    //   La tangente en $x=2$ es $y=4x-4$, así que la perpendicular tiene pendiente $-1/4$:
 
-      $y-4=-1/4(x-2) => y=9/2-x/4$
+    //   $y-4=-1/4(x-2) => y=9/2-x/4$
 
-      Esta recta corta al eje $x$ en $x=18$. El área limitada por la parábola, la recta y el eje es:
+    //   Esta recta corta al eje $x$ en $x=18$. El área limitada por la parábola, la recta y el eje es:
 
-      $display(
-        A = ∫_0^2 x^2 dif x +
-        ∫_2^18 (9/2-x/4) dif x =
-        [x^3/3]_0^2 +
-        [9x/2-x^2/8]_2^18 =
-        #result[$display(104/3)$]
-      )$
-    ]
+    //   $display(
+    //     A = ∫_0^2 x^2 dif x +
+    //     ∫_2^18 (9/2-x/4) dif x =
+    //     [x^3/3]_0^2 +
+    //     [9x/2-x^2/8]_2^18 =
+    //     #result[$display(104/3)$]
+    //   )$
+    // ]
+  ],
+  [
     #subquestion()[Área entre la curva $f(x) = x^2$, su tangente en $x=2$ y el eje de abscisas.]
-    #solution(color: red)[
-      La tangente en $x=2$ es $y=4x-4$ y corta al eje $x$ en $x=1$. El área encerrada es:
+    // #solution(color: red)[
+    //   La tangente en $x=2$ es $y=4x-4$ y corta al eje $x$ en $x=1$. El área encerrada es:
 
-      $display(
-        A = ∫_0^1 x^2 dif x +
-        ∫_1^2 (x^2-(4x-4)) dif x =
-        1/3 + 1/3 =
-        #result[$display(2/3)$]
-      )$
-    ]
+    //   $display(
+    //     A = ∫_0^1 x^2 dif x +
+    //     ∫_1^2 (x^2-(4x-4)) dif x =
+    //     1/3 + 1/3 =
+    //     #result[$display(2/3)$]
+    //   )$
+    // ]
   ],
   [
     #question()[Calcula el volumen generado por las siguientes funciones al girar sobre el eje x:]
@@ -547,7 +566,7 @@
 
       Sea $f(x) = ln(x)$. Halla el área de la región delimitada por la gráfica de $f(x)$, el eje $x$ y la recta $x = e$
     ]
-    #solution(color: red)[
+    #solution[
       La gráfica corta al eje $x$ en $ln(x)=0$, es decir, $x=1$, y es positiva en $[1,e]$.
 
       $display(
@@ -563,61 +582,61 @@
 
       Dada $f(x)=|x^2-6x+5|$, calcula el área delimitada por la gráfica de $f$, el eje $x$ y las rectas $x=3$ y $x=6$.
     ]
-    #solution(color: red)[
-      $x^2-6x+5=(x-1)(x-5)$, así que cambia de signo en $x=5$:
-      es negativa en $(3,5)$ y positiva en $(5,6)$.
+    // #solution(color: red)[
+    //   $x^2-6x+5=(x-1)(x-5)$, así que cambia de signo en $x=5$:
+    //   es negativa en $(3,5)$ y positiva en $(5,6)$.
 
-      $display(
-        A = ∫_3^5 -(x^2-6x+5) dif x +
-        ∫_5^6 (x^2-6x+5) dif x =
-        16/3 + 7/3 =
-        #result[$display(23/3)$]
-      )$
-    ]
+    //   $display(
+    //     A = ∫_3^5 -(x^2-6x+5) dif x +
+    //     ∫_5^6 (x^2-6x+5) dif x =
+    //     16/3 + 7/3 =
+    //     #result[$display(23/3)$]
+    //   )$
+    // ]
   ],
   [
     #question()[*PAU Madrid 2024 - extraordinaria - pregunta B2*
 
       Sean $f(x)=x^3-3x$ y $g(x)=x(x-3)$. Calcula el área de la región acotada entre sus gráficas.
     ]
-    #solution(color: red)[
-      $display(f(x)-g(x)=x^3-3x-(x^2-3x)=x^2(x-1))$
+    // #solution(color: red)[
+    //   $display(f(x)-g(x)=x^3-3x-(x^2-3x)=x^2(x-1))$
 
-      Las curvas se cortan en $x=0$ y $x=1$. En $[0,1]$, $f-g<=0$, luego:
+    //   Las curvas se cortan en $x=0$ y $x=1$. En $[0,1]$, $f-g<=0$, luego:
 
-      $display(
-        A = ∫_0^1 -(x^3-x^2) dif x =
-        [-x^4/4+x^3/3]_0^1 =
-        #result[$display(1/12)$]
-      )$
-    ]
+    //   $display(
+    //     A = ∫_0^1 -(x^3-x^2) dif x =
+    //     [-x^4/4+x^3/3]_0^1 =
+    //     #result[$display(1/12)$]
+    //   )$
+    // ]
   ],
   [
     #question()[*PAU Madrid 2023 - extraordinaria, pregunta B2*
 
       Sean $f(x)=2+2x-2x^2$ y $g(x)=2-6x+4x^2+2x^3$. Calcula el área delimitada por ambas curvas y las rectas $x=0$ y $x=2$.
     ]
-    #solution(color: red)[
-      $display(
-        f(x)-g(x)=
-        8x-6x^2-2x^3=
-        -2x(x+4)(x-1)
-      )$
+    // #solution(color: red)[
+    //   $display(
+    //     f(x)-g(x)=
+    //     8x-6x^2-2x^3=
+    //     -2x(x+4)(x-1)
+    //   )$
 
-      Por tanto, cambia de signo en $x=1$ dentro de $[0,2]$:
+    //   Por tanto, cambia de signo en $x=1$ dentro de $[0,2]$:
 
-      $display(
-        A = ∫_0^1 (8x-6x^2-2x^3) dif x +
-        ∫_1^2 -(8x-6x^2-2x^3) dif x =
-        [4x^2-2x^3-x^4/2]_0^1 +
-        [-4x^2+2x^3+x^4/2]_1^2
-      )$
+    //   $display(
+    //     A = ∫_0^1 (8x-6x^2-2x^3) dif x +
+    //     ∫_1^2 -(8x-6x^2-2x^3) dif x =
+    //     [4x^2-2x^3-x^4/2]_0^1 +
+    //     [-4x^2+2x^3+x^4/2]_1^2
+    //   )$
 
-      $display(
-        = 3/2 + (19/2) =
-        #result[$11$]
-      )$
-    ]
+    //   $display(
+    //     = 3/2 + (19/2) =
+    //     #result[$11$]
+    //   )$
+    // ]
   ],
   [
     #question()[*PAU Madrid 2025 - extraordinaria, pregunta B2*
